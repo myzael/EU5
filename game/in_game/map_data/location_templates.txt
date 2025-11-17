@@ -3723,7 +3723,7 @@ czestochowa = { topography = flatland vegetation = woods climate = continental r
 lelow = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = fiber_crops}
 mstow = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = millet}
 krakow = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = salt}
-chrzanow = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = lead}
+chrzanow = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = silver}
 ksiaz_wielki = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = horses}
 proszowice = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = clay}
 lublin = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = wool}
