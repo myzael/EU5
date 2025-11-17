@@ -91452,6 +91452,7 @@ adm = 31 dip = 34 mil = 24
 	#Ruler
 	pol_casimir_iii_piast = { #https://en.wikipedia.org/wiki/Casimir_III_the_Great
 		first_name = { name = name_casimir }
+		ruler_trait = lawgiver
 		culture = lesser_polish
 		religion = catholic
 		adm = 91 dip = 88 mil = 89
