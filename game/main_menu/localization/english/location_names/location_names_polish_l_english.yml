@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_english: 
 
  ### Region 'baltic_region' (Poland) ###
 
@@ -131,14 +131,14 @@
  dobrzyn.west_slavic_language: "Dobrzyń" # Dobrzyń
  dobrzyn.west_slavic_language.genitive: "Dobrzyński"
  lipno.west_slavic_language: "Lipno"
- lipno.west_slavic_language.genitive: "Lipnski"
+ lipno.west_slavic_language.genitive: "Lipieński"
  rypin.west_slavic_language: "Rypin"
  rypin.west_slavic_language.genitive: "Rypiński"
  # Province 'kuyavia_province' (Kuyavia) #
  wloclawek.west_slavic_language: "Włocławek" # Włocławek
  wloclawek.west_slavic_language.genitive: "Włocławski"
  bydgoszcz.west_slavic_language: "Bydgoszcz"
- bydgoszcz.west_slavic_language.genitive: "Bydgoszczski"
+ bydgoszcz.west_slavic_language.genitive: "Bydgoski"
  inowroclaw.west_slavic_language: "Inowrocław" # Inowrocław
  inowroclaw.west_slavic_language.genitive: "Inowrocławski"
  kowal.west_slavic_language: "Kowal"
@@ -153,16 +153,16 @@
  orlow.west_slavic_language: "Orłów" # Orłów
  orlow.west_slavic_language.genitive: "Orłowski"
  zgierz.west_slavic_language: "Zgierz"
- zgierz.west_slavic_language.genitive: "Zgierzski"
+ zgierz.west_slavic_language.genitive: "Zgierski"
  # Province 'sieradz_province' (Sieradz) #
  sieradz.west_slavic_language: "Sieradz"
  sieradz.west_slavic_language.genitive: "Sieradzki"
  brzeznica.west_slavic_language: "Brzeźnica" # Brzeźnica
- brzeznica.west_slavic_language.genitive: "Brzeźnicski"
+ brzeznica.west_slavic_language.genitive: "Brzeźnicki"
  piotrkow_trybunalski.west_slavic_language: "Piotrków" # Piotrków
  piotrkow_trybunalski.west_slavic_language.genitive: "Piotrkowski"
  radomsko.west_slavic_language: "Radomsko"
- radomsko.west_slavic_language.genitive: "Radomski"
+ radomsko.west_slavic_language.genitive: "Radomszczański"
  szadek.west_slavic_language: "Szadek"
  szadek.west_slavic_language.genitive: "Szadecki"
  turek.west_slavic_language: "Turek"
@@ -184,9 +184,9 @@
  gniezno.west_slavic_language: "Gniezno"
  gniezno.west_slavic_language.genitive: "Gnieźnieński"
  mogilno.west_slavic_language: "Mogilno"
- mogilno.west_slavic_language.genitive: "Mogilnski"
+ mogilno.west_slavic_language.genitive: "Mogileński"
  trzemeszno.west_slavic_language: "Trzemeszno"
- trzemeszno.west_slavic_language.genitive: "Trzemesznski"
+ trzemeszno.west_slavic_language.genitive: "Trzemeszeński"
  # Province 'kalisz_province' (Kalisz) #
  kalisz.west_slavic_language: "Kalisz"
  kalisz.west_slavic_language.genitive: "Kaliski"
@@ -198,25 +198,25 @@
  konin.west_slavic_language: "Konin"
  konin.west_slavic_language.genitive: "Koniński"
  kolo.west_slavic_language: "Koło" # Koło
- kolo.west_slavic_language.genitive: "Kołski"
+ kolo.west_slavic_language.genitive: "Kolski"
  lad_konin.west_slavic_language: "Ląd" # Ląd
- lad_konin.west_slavic_language.genitive: "Lądski"
+ lad_konin.west_slavic_language.genitive: "Lądowski"
  # Province 'koscian_province' (Kościan) #
  koscian.west_slavic_language: "Kościan" # Kościan
  koscian.west_slavic_language.genitive: "Kościanski"
  babimost.west_slavic_language: "Babimost"
- babimost.west_slavic_language.genitive: "Babimostski"
+ babimost.west_slavic_language.genitive: "Babimojski"
  grodzisk_wielkopolski.west_slavic_language: "Grodzisk" # Grodzisk
  grodzisk_wielkopolski.west_slavic_language.genitive: "Grodziski"
  rawicz.west_slavic_language: "Rawicz"
- rawicz.west_slavic_language.genitive: "Rawiczski"
+ rawicz.west_slavic_language.genitive: "Rawicki"
  srem.west_slavic_language: "Śrem" # Śrem
  srem.west_slavic_language.genitive: "Śremski"
  wschowa.west_slavic_language: "Wschowa"
  wschowa.west_slavic_language.genitive: "Wschowski"
  # Province 'naklo_province' (Nakło) #
  naklo.west_slavic_language: "Nakło nad Notecią" # Nakło nad Notecią
- naklo.west_slavic_language.genitive: "Noteciąski"
+ naklo.west_slavic_language.genitive: "Nakielski"
  wyrzysk.west_slavic_language: "Wyrzysk"
  wyrzysk.west_slavic_language.genitive: "Wyrzyski"
  zlotow.west_slavic_language: "Złotów" # Złotów
@@ -225,26 +225,26 @@
  poznan.west_slavic_language: "Poznań" # Poznań
  poznan.west_slavic_language.genitive: "Poznański"
  buk.west_slavic_language: "Buk"
- buk.west_slavic_language.genitive: "Bucki"
+ buk.west_slavic_language.genitive: "Bukowski"
  czarnkow.west_slavic_language: "Czarnków" # Czarnków
  czarnkow.west_slavic_language.genitive: "Czarnkowski"
  miedzyrzecz.west_slavic_language: "Międzyrzecz" # Międzyrzecz
- miedzyrzecz.west_slavic_language.genitive: "Międzyrzeczski"
+ miedzyrzecz.west_slavic_language.genitive: "Międzyrzecki"
  oborniki.west_slavic_language: "Oborniki"
- oborniki.west_slavic_language.genitive: "Obornikiski"
+ oborniki.west_slavic_language.genitive: "Obornicki"
  skwierzyna.west_slavic_language: "Skwierzyna"
- skwierzyna.west_slavic_language.genitive: "Skwierzynski"
+ skwierzyna.west_slavic_language.genitive: "Skwierzyński"
  szamotuly.west_slavic_language: "Szamotuły" # Szamotuły
  szamotuly.west_slavic_language.genitive: "Szamotulski"
  wielen.west_slavic_language: "Wieleń" # Wieleń
  wielen.west_slavic_language.genitive: "Wieleński"
  # Province 'pyzdry_province' (Pyzdry) #
  pyzdry.west_slavic_language: "Pyzdry"
- pyzdry.west_slavic_language.genitive: "Pyzdryski"
+ pyzdry.west_slavic_language.genitive: "Pyzdrski"
  kozmin.west_slavic_language: "Koźmin" # Koźmin
  kozmin.west_slavic_language.genitive: "Koźmiński"
  sroda_wielkopolska.west_slavic_language: "Środa Wielkopolska" # Środa Wielkopolska
- sroda_wielkopolska.west_slavic_language.genitive: "Wielkopolski"
+ sroda_wielkopolska.west_slavic_language.genitive: "Średzki"
  # Province 'arnskrone_province' (Arnskrone) #
  walcz.west_slavic_language: "Wałcz" # Wałcz
  walcz.west_slavic_language.genitive: "Wałecki"
@@ -263,11 +263,11 @@
  ## Area 'lesser_poland_area' (Lesser Poland) ##
  # Province 'checiny_province' (Chęciny) #
  kielce.west_slavic_language: "Kielce"
- kielce.west_slavic_language.genitive: "Kielceski"
+ kielce.west_slavic_language.genitive: "Kielecki"
  opoczno.west_slavic_language: "Opoczno"
- opoczno.west_slavic_language.genitive: "Opocznski"
+ opoczno.west_slavic_language.genitive: "Opoczyński"
  przedborz.west_slavic_language: "Przedbórz" # Przedbórz
- przedborz.west_slavic_language.genitive: "Przedbórzski"
+ przedborz.west_slavic_language.genitive: "Przedborski"
  zarnow.west_slavic_language: "Żarnów" # Żarnów
  zarnow.west_slavic_language.genitive: "Żarnowski"
  # Province 'czestochowa_province' (Częstochowa) #
@@ -283,14 +283,14 @@
  chrzanow.west_slavic_language: "Chrzanów" # Chrzanów
  chrzanow.west_slavic_language.genitive: "Chrzanowski"
  ksiaz_wielki.west_slavic_language: "Książ Wielki" # Książ Wielki
- ksiaz_wielki.west_slavic_language.genitive: "Wielkiski"
+ ksiaz_wielki.west_slavic_language.genitive: "Ksiąski"
  proszowice.west_slavic_language: "Proszowice"
  proszowice.west_slavic_language.genitive: "Proszowicki"
  # Province 'lublin_province' (Lublin) #
  lublin.west_slavic_language: "Lublin"
  lublin.west_slavic_language.genitive: "Lubelski"
  janow_lubelski.west_slavic_language: "Janów Lubelski" # Janów Lubelski
- janow_lubelski.west_slavic_language.genitive: "Lubelskiski"
+ janow_lubelski.west_slavic_language.genitive: "Janowski"
  kazimierz.west_slavic_language: "Kazimierz"
  kazimierz.west_slavic_language.genitive: "Kazimierski"
  lukow.west_slavic_language: "Łuków" # Łuków
@@ -301,40 +301,40 @@
  urzedow.west_slavic_language.genitive: "Urzędowski"
  # Province 'nowy_sacz_province' (Nowy Sącz) #
  nowy_sacz.west_slavic_language: "Nowy Sącz" # Nowy Sącz
- nowy_sacz.west_slavic_language.genitive: "Nowosączi"
+ nowy_sacz.west_slavic_language.genitive: "Nowosądecki"
  biecz.west_slavic_language: "Biecz"
- biecz.west_slavic_language.genitive: "Bieczski"
+ biecz.west_slavic_language.genitive: "Biecki"
  czchow.west_slavic_language: "Czchów" # Czchów
  czchow.west_slavic_language.genitive: "Czchowski"
  jaslo.west_slavic_language: "Jasło" # Jasło
  jaslo.west_slavic_language.genitive: "Jasielski"
  nowy_targ.west_slavic_language: "Nowy Targ" # Nowy Targ
- nowy_targ.west_slavic_language.genitive: "Nowotargi"
+ nowy_targ.west_slavic_language.genitive: "Nowotarski"
  # Province 'pilzno_province' (Pilzno) #
  pilzno.west_slavic_language: "Pilzno"
- pilzno.west_slavic_language.genitive: "Pilznski"
+ pilzno.west_slavic_language.genitive: "Pilzeński"
  busko_zdroj.west_slavic_language: "Busko-Zdrój" # Busko-Zdrój
- busko_zdroj.west_slavic_language.genitive: "Busko-Zdrójski"
+ busko_zdroj.west_slavic_language.genitive: "Buski"
  debica.west_slavic_language: "Dębica" # Dębica
- debica.west_slavic_language.genitive: "Dębicski"
+ debica.west_slavic_language.genitive: "Dębicki"
  tarnow.west_slavic_language: "Tarnów" # Tarnów
  tarnow.west_slavic_language.genitive: "Tarnowski"
  wislica.west_slavic_language: "Wiślica" # Wiślica
- wislica.west_slavic_language.genitive: "Wiślicski"
+ wislica.west_slavic_language.genitive: "Wiślicki"
  # Province 'radom_province' (Radom) #
  radom.west_slavic_language: "Radom"
  radom.west_slavic_language.genitive: "Radomski"
  ilza.west_slavic_language: "Iłża" # Iłża
- ilza.west_slavic_language.genitive: "Iłżski"
+ ilza.west_slavic_language.genitive: "Iłżecki"
  stezyca.west_slavic_language: "Stężyca" # Stężyca
- stezyca.west_slavic_language.genitive: "Stężycski"
+ stezyca.west_slavic_language.genitive: "Stężycki"
  szydlowiec.west_slavic_language: "Szydłowiec" # Szydłowiec
  szydlowiec.west_slavic_language.genitive: "Szydłowiecki"
  zwolen.west_slavic_language: "Zwoleń" # Zwoleń
  zwolen.west_slavic_language.genitive: "Zwoleński"
  # Province 'sandomierz_province' (Sandomierz) #
  sandomierz.west_slavic_language: "Sandomierz"
- sandomierz.west_slavic_language.genitive: "Sandomierzski"
+ sandomierz.west_slavic_language.genitive: "Sandomierski"
  kunow.west_slavic_language: "Kunów" # Kunów
  kunow.west_slavic_language.genitive: "Kunowski"
  opatow.west_slavic_language: "Opatów" # Opatów
@@ -343,13 +343,13 @@
  rudnik_poland.west_slavic_language.genitive: "Rudnicki"
  # Province 'szczyrzyc_province' (Szczyrzyc) #
  wieliczka.west_slavic_language: "Wieliczka"
- wieliczka.west_slavic_language.genitive: "Wieliczkski"
+ wieliczka.west_slavic_language.genitive: "Wielicki"
  myslenice.west_slavic_language: "Myślenice" # Myślenice
  myslenice.west_slavic_language.genitive: "Myślenicki"
  oswiecim.west_slavic_language: "Oświęcim" # Oświęcim
  oswiecim.west_slavic_language.genitive: "Oświęcimski"
- zywiec.west_slavic_language: "Zywiec"
- zywiec.west_slavic_language.genitive: "Zywiecki"
+ zywiec.west_slavic_language: "Żywiec"
+ zywiec.west_slavic_language.genitive: "Żywiecki"
 
  ## Area 'lithuania_area' (Lithuania) ##
  # Province 'ashmyany_province' (Ashmyany) #
@@ -394,16 +394,16 @@
  lipsk.west_slavic_language: "Lipsk"
  lipsk.west_slavic_language.genitive: "Lipski"
  veisiejai.west_slavic_language: "Wiejsieje"
- veisiejai.west_slavic_language.genitive: "Wiejsiejeski"
+ veisiejai.west_slavic_language.genitive: "Wiejsiejski"
  # Province 'trakai_province' (Trakai) #
  trakai.west_slavic_language: "Troki"
- trakai.west_slavic_language.genitive: "Trokiski"
+ trakai.west_slavic_language.genitive: "Trocki"
  lazdijai.west_slavic_language: "Łoździeje"
- lazdijai.west_slavic_language.genitive: "Łoździejeski"
+ lazdijai.west_slavic_language.genitive: "Łoździejecki"
  onushkis.west_slavic_language: "Hanuszyszki" # Onuškis
- onushkis.west_slavic_language.genitive: "Hanuszyszkiski"
+ onushkis.west_slavic_language.genitive: "Hanuszyski"
  merkine.west_slavic_language: "Merecz" # Merkinė
- merkine.west_slavic_language.genitive: "Mereczski"
+ merkine.west_slavic_language.genitive: "Merecki"
  # Province 'svir_province' (Svir) #
  svir.west_slavic_language: "Świr"
  svir.west_slavic_language.genitive: "Świrski"
@@ -454,7 +454,7 @@
  ciechanow.west_slavic_language: "Ciechanów" # Ciechanów
  ciechanow.west_slavic_language.genitive: "Ciechanowski"
  przasnysz.west_slavic_language: "Przasnysz"
- przasnysz.west_slavic_language.genitive: "Przasnyszski"
+ przasnysz.west_slavic_language.genitive: "Przasnyski"
  rozan.west_slavic_language: "Różan" # Różan
  rozan.west_slavic_language.genitive: "Różanski"
  zakroczym.west_slavic_language: "Zakroczym"
@@ -465,18 +465,18 @@
  garwolin.west_slavic_language: "Garwolin"
  garwolin.west_slavic_language.genitive: "Garwoliński"
  grojec.west_slavic_language: "Grójec" # Grójec
- grojec.west_slavic_language.genitive: "Grójecski"
+ grojec.west_slavic_language.genitive: "Grójecki"
  liw.west_slavic_language: "Liw"
  liw.west_slavic_language.genitive: "Liwski"
  # Province 'lomza_province' (Łomża) #
  lomza.west_slavic_language: "Łomża" # Łomża
  lomza.west_slavic_language.genitive: "Łomżyński"
  kolno.west_slavic_language: "Kolno"
- kolno.west_slavic_language.genitive: "Kolnski"
+ kolno.west_slavic_language.genitive: "Kolneński"
  ostroleka.west_slavic_language: "Ostrołęka" # Ostrołęka
- ostroleka.west_slavic_language.genitive: "Ostrołękski"
+ ostroleka.west_slavic_language.genitive: "Ostrołęcki"
  wizna.west_slavic_language: "Wizna"
- wizna.west_slavic_language.genitive: "Wiznski"
+ wizna.west_slavic_language.genitive: "Wiźniański"
  zambrow.west_slavic_language: "Zambrów" # Zambrów
  zambrow.west_slavic_language.genitive: "Zambrowski"
  # Province 'plock_province' (Płock) #
@@ -485,29 +485,29 @@
  plonsk.west_slavic_language: "Płońsk" # Płońsk
  plonsk.west_slavic_language.genitive: "Płoński"
  sierpc.west_slavic_language: "Sierpc"
- sierpc.west_slavic_language.genitive: "Sierpcski"
+ sierpc.west_slavic_language.genitive: "Sierpski"
  szrensk.west_slavic_language: "Szreńsk" # Szreńsk
  szrensk.west_slavic_language.genitive: "Szreński"
  # Province 'podlasie_province' (Podlasie) #
  drohiczyn.west_slavic_language: "Drohiczyn"
  drohiczyn.west_slavic_language.genitive: "Drohiczyński"
  bielsk_podlaski.west_slavic_language: "Bielsk Podlaski" # Bielsk Podlaski
- bielsk_podlaski.west_slavic_language.genitive: "Podlaskiski"
+ bielsk_podlaski.west_slavic_language.genitive: "Bielski"
  goniadz.west_slavic_language: "Goniądz" # Goniądz
- goniadz.west_slavic_language.genitive: "Goniądzski"
+ goniadz.west_slavic_language.genitive: "Goniądzki"
  mielnik.west_slavic_language: "Mielnik"
  mielnik.west_slavic_language.genitive: "Mielnicki"
  sokolow.west_slavic_language: "Sokołów" # Sokołów
  sokolow.west_slavic_language.genitive: "Sokołowski"
  suraz.west_slavic_language: "Suraż" # Suraż
- suraz.west_slavic_language.genitive: "Surażski"
+ suraz.west_slavic_language.genitive: "Suraski"
  tykocin.west_slavic_language: "Tykocin"
  tykocin.west_slavic_language.genitive: "Tykociński"
  # Province 'rawa_province' (Rawa) #
  rawa.west_slavic_language: "Rawa"
  rawa.west_slavic_language.genitive: "Rawski"
  biala_rawska.west_slavic_language: "Biała Rawska" # Biała Rawska
- biala_rawska.west_slavic_language.genitive: "Rawski"
+ biala_rawska.west_slavic_language.genitive: "Bielski"
  gabin.west_slavic_language: "Gąbin" # Gąbin
  gabin.west_slavic_language.genitive: "Gąbiński"
  gostynin.west_slavic_language: "Gostynin"
@@ -542,16 +542,16 @@
  gniew.west_slavic_language: "Gniew"
  gniew.west_slavic_language.genitive: "Gniewski"
  koscierzyna.west_slavic_language: "Kościerzyna" # Kościerzyna
- koscierzyna.west_slavic_language.genitive: "Kościerzynski"
+ koscierzyna.west_slavic_language.genitive: "Kościerzyński"
  mirochowo.west_slavic_language: "Mirachowo" # Mirachowo
  mirochowo.west_slavic_language.genitive: "Mirachowski"
  puck.west_slavic_language: "Puck"
- puck.west_slavic_language.genitive: "Puccki"
+ puck.west_slavic_language.genitive: "Pucki"
  tczew.west_slavic_language: "Tczew"
  tczew.west_slavic_language.genitive: "Tczewski"
  # Province 'lithuania_minor_province' (Lithuania Minor) #
  tilsit.west_slavic_language: "Tylża"
- tilsit.west_slavic_language.genitive: "Tylżski"
+ tilsit.west_slavic_language.genitive: "Tylski"
  gumbinnen.west_slavic_language: "Gabin"
  gumbinnen.west_slavic_language.genitive: "Gabiński"
  labiau.west_slavic_language: "Labiawa"
@@ -570,11 +570,11 @@
  brandenburg_prussia.west_slavic_language: "Pokarmin" # Brandenburg
  brandenburg_prussia.west_slavic_language.genitive: "Pokarmiński"
  fischhausen.west_slavic_language: "Rybaki"
- fischhausen.west_slavic_language.genitive: "Rybakiski"
+ fischhausen.west_slavic_language.genitive: "Rybacki"
  gerdauen.west_slavic_language: "Gierdawy"
- gerdauen.west_slavic_language.genitive: "Gierdawyski"
+ gerdauen.west_slavic_language.genitive: "Gierdawski"
  insterburg.west_slavic_language: "Wystruć"
- insterburg.west_slavic_language.genitive: "Wystrućski"
+ insterburg.west_slavic_language.genitive: "Wystrucki"
  wehlau.west_slavic_language: "Welawa"
  wehlau.west_slavic_language.genitive: "Welawski"
  # Province 'masuria_province' (Masuria) #
@@ -589,23 +589,23 @@
  ryn_poland.west_slavic_language: "Ryn" # Ryn
  ryn_poland.west_slavic_language.genitive: "Ryński"
  szczytno.west_slavic_language: "Szczytno"
- szczytno.west_slavic_language.genitive: "Szczytnski"
+ szczytno.west_slavic_language.genitive: "Szczycieński"
  wegorzewo.west_slavic_language: "Węgorzewo" # Węgorzewo
  wegorzewo.west_slavic_language.genitive: "Węgorzewski"
  # Province 'tuchola_province' (Tuchola) #
  tuchola.west_slavic_language: "Tuchola"
  tuchola.west_slavic_language.genitive: "Tucholski"
  bialobork.west_slavic_language: "Białobork" # Białobork
- bialobork.west_slavic_language.genitive: "Białoborcki"
+ bialobork.west_slavic_language.genitive: "Białoborski"
  czluchow.west_slavic_language: "Człuchów" # Człuchów
  czluchow.west_slavic_language.genitive: "Człuchowski"
  nowe.west_slavic_language: "Nowe"
- nowe.west_slavic_language.genitive: "Noweski"
+ nowe.west_slavic_language.genitive: "Nowski"
  swiecie.west_slavic_language: "Świecie" # Świecie
- swiecie.west_slavic_language.genitive: "Świecieski"
+ swiecie.west_slavic_language.genitive: "Świecki"
  # Province 'upper_prussia_province' (Upper Prussia) #
  malbork.west_slavic_language: "Malbork"
- malbork.west_slavic_language.genitive: "Malborcki"
+ malbork.west_slavic_language.genitive: "Malborski"
  dzierzgon.west_slavic_language: "Dzierzgoń" # Dzierzgoń
  dzierzgon.west_slavic_language.genitive: "Dzierzgoński"
  elblag.west_slavic_language: "Elbląg" # Elbląg
@@ -616,9 +616,9 @@
  morag.west_slavic_language.genitive: "Morąski"
  # Province 'warmia_province' (Warmia) #
  lidzbark.west_slavic_language: "Lidzbark"
- lidzbark.west_slavic_language.genitive: "Lidzbarcki"
+ lidzbark.west_slavic_language.genitive: "Lidzbarski"
  frombork.west_slavic_language: "Frombork"
- frombork.west_slavic_language.genitive: "Fromborcki"
+ frombork.west_slavic_language.genitive: "Fromborski"
  olsztyn.west_slavic_language: "Olsztyn"
  olsztyn.west_slavic_language.genitive: "Olsztyński"
 
@@ -670,7 +670,7 @@
  szprotawa.west_slavic_language: "Szprotawa"
  szprotawa.west_slavic_language.genitive: "Szprotawski"
  zielona_gora.west_slavic_language: "Zielona Góra" # Zielona Góra
- zielona_gora.west_slavic_language.genitive: "Górski"
+ zielona_gora.west_slavic_language.genitive: "Zielonogórski"
  # Province 'legnica_province' (Legnica) #
  legnica.west_slavic_language: "Legnica"
  legnica.west_slavic_language.genitive: "Legnicki"
@@ -684,22 +684,22 @@
  zlotoryja.west_slavic_language.genitive: "Złotoryjski"
  # Province 'olesnica_province' (Oleśnica) #
  olesnica.west_slavic_language: "Oleśnica" # Oleśnica
- olesnica.west_slavic_language.genitive: "Oleśnicski"
+ olesnica.west_slavic_language.genitive: "Oleśnicki"
  milicz.west_slavic_language: "Milicz"
- milicz.west_slavic_language.genitive: "Miliczski"
+ milicz.west_slavic_language.genitive: "Milicki"
  namyslow.west_slavic_language: "Namysłów" # Namysłów
  namyslow.west_slavic_language.genitive: "Namysłowski"
  sycow.west_slavic_language: "Syców" # Syców
  sycow.west_slavic_language.genitive: "Sycowski"
  trzebnica.west_slavic_language: "Trzebnica"
- trzebnica.west_slavic_language.genitive: "Trzebnicski"
+ trzebnica.west_slavic_language.genitive: "Trzebnicki"
  # Province 'opavsko_province' (Opavsko) #
  opava.west_slavic_language: "Opawa"
  opava.west_slavic_language.genitive: "Opawski"
  fryvaldov.west_slavic_language: "Frywałdów" # Frývaldov
  fryvaldov.west_slavic_language.genitive: "Frywałdowski"
  glubczyce.west_slavic_language: "Głubczyce" # Głubczyce
- glubczyce.west_slavic_language.genitive: "Głubczyceski"
+ glubczyce.west_slavic_language.genitive: "Głubczycki"
  hlucin.west_slavic_language: "Hulczyn" # Hlučín
  hlucin.west_slavic_language.genitive: "Hulczyński"
  krnov.west_slavic_language: "Krnów"
@@ -708,24 +708,24 @@
  opole.west_slavic_language: "Opole"
  opole.west_slavic_language.genitive: "Opolski"
  kluczbork.west_slavic_language: "Kluczbork"
- kluczbork.west_slavic_language.genitive: "Kluczborcki"
+ kluczbork.west_slavic_language.genitive: "Kluczborski"
  lubliniec.west_slavic_language: "Lubliniec"
  lubliniec.west_slavic_language.genitive: "Lubliniecki"
  olesno.west_slavic_language: "Olesno"
- olesno.west_slavic_language.genitive: "Olesnski"
+ olesno.west_slavic_language.genitive: "Olesieński"
  prudnik.west_slavic_language: "Prudnik"
  prudnik.west_slavic_language.genitive: "Prudnicki"
  strzelce_opolskie.west_slavic_language: "Strzelce Opolskie" # Strzelce Opolskie
- strzelce_opolskie.west_slavic_language.genitive: "Opolskieski"
+ strzelce_opolskie.west_slavic_language.genitive: "Strzelecki"
  # Province 'swidnica_province' (Świdnica) #
  swidnica.west_slavic_language: "Świdnica" # Świdnica
  swidnica.west_slavic_language.genitive: "Świdnicki"
  kamienna_gora.west_slavic_language: "Kamienna Góra" # Kamienna Góra
- kamienna_gora.west_slavic_language.genitive: "Górski"
+ kamienna_gora.west_slavic_language.genitive: "Kamiennogórski"
  rychbach.west_slavic_language: "Rychbach"
- rychbach.west_slavic_language.genitive: "Rychbachski"
+ rychbach.west_slavic_language.genitive: "Rychbacki"
  niemcza.west_slavic_language: "Niemcza"
- niemcza.west_slavic_language.genitive: "Niemczski"
+ niemcza.west_slavic_language.genitive: "Niemczański"
  ziebice.west_slavic_language: "Ziębice" # Ziębice
  ziebice.west_slavic_language.genitive: "Ziębicki"
  # Province 'tesin_province' (Těšín) #
@@ -736,13 +736,13 @@
  bytom.west_slavic_language: "Bytom"
  bytom.west_slavic_language.genitive: "Bytomski"
  kozle.west_slavic_language: "Koźle" # Koźle
- kozle.west_slavic_language.genitive: "Koźleski"
+ kozle.west_slavic_language.genitive: "Kozielski"
  pszczyna.west_slavic_language: "Pszczyna"
- pszczyna.west_slavic_language.genitive: "Pszczynski"
+ pszczyna.west_slavic_language.genitive: "Pszczyński"
  raciborz.west_slavic_language: "Racibórz" # Racibórz
  raciborz.west_slavic_language.genitive: "Raciborski"
  siewierz.west_slavic_language: "Siewierz"
- siewierz.west_slavic_language.genitive: "Siewierzski"
+ siewierz.west_slavic_language.genitive: "Siewierski"
  toszek.west_slavic_language: "Toszek"
  toszek.west_slavic_language.genitive: "Toszecki"
  # Province 'wroclaw_province' (Wrocław) #
@@ -753,18 +753,18 @@
  grodkow.west_slavic_language: "Grodków" # Grodków
  grodkow.west_slavic_language.genitive: "Grodkowski"
  nysa.west_slavic_language: "Nysa"
- nysa.west_slavic_language.genitive: "Nysski"
+ nysa.west_slavic_language.genitive: "Nyski"
  niemodlin.west_slavic_language: "Niemodlin"
  niemodlin.west_slavic_language.genitive: "Niemodliński"
  olawa.west_slavic_language: "Oława" # Oława
  olawa.west_slavic_language.genitive: "Oławski"
  sroda_slaska.west_slavic_language: "Środa Śląska" # Środa Śląska
- sroda_slaska.west_slavic_language.genitive: "Śląski"
+ sroda_slaska.west_slavic_language.genitive: "Średzki"
  # Province 'zagan_province' (Żagań) #
  zagan.west_slavic_language: "Żagań" # Żagań
  zagan.west_slavic_language.genitive: "Żagański"
  krosno_odrzanskie.west_slavic_language: "Krosno Odrzańskie" # Krosno Odrzańskie
- krosno_odrzanskie.west_slavic_language.genitive: "Odrzańskieski"
+ krosno_odrzanskie.west_slavic_language.genitive: "Krośnieński"
  sulechow.west_slavic_language: "Sulechów" # Sulechów
  sulechow.west_slavic_language.genitive: "Sulechowski"
  zary.west_slavic_language: "Żary" # Żary
