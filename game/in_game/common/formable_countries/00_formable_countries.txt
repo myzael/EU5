@@ -1043,6 +1043,7 @@ PRU_f = { #Prussia
 		if = {
 			limit = {
 				NOT = { is_member_of_international_organization = international_organization:hre }
+				is_subject = no
 			}
 			set_country_rank_effect = { rank = country_rank:rank_kingdom }
 		}
