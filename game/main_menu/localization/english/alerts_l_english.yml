@@ -176,7 +176,7 @@
  ALERT_HAS_LOW_FOOD_STOCKPILE_MARKET_ENTRY: "@market! [Market.GetName]: [Market.GetFoodStockpile|2Y]@food! ([Market.GetMonthlyFoodWithLabel])"
  ALERT_NO_PARLIAMENT_DEBATE: "#T No Parliament Debate#!\nThe [COUNTRY.GetGovernment.GetParliament.GetName] is active, but they are not debating any [parliament_issues|e].\n\nWe had better give them something to do!\n\n"
  ALERT_DEPOPULATING_LOCATIONS_TT: "#T Locations depopulating#!"
- ALERT_DEPOPULATING_LOCATIONS: "Some [locations|e] are losing their [population|e] rapidly!\n\n"
+ ALERT_DEPOPULATING_LOCATIONS: "Some [locations|e] are losing their [population|e] rapidly!"
  ALERT_DEPOPULATING_LOCATIONS_ENTRY: "@location! [LOCATION.GetName]: [LOCATION.GetPopulationChangeLabel]@population!"
  ALERT_DEPOPULATING_LOCATIONS_LARGE: "From $NUM$ more locations: $VAL$@population!"
  ALERT_TRUCE_EXPIRES: "#T We have truces that are expiring soon#!\nWhen [truce|e] ends, the war may be declared once again!\n$COUNTRIES$\n\n"

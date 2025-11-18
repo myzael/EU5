@@ -354,7 +354,8 @@ lateralview = {
 						margin = { 10 0 }
 						vbox = {
 							layoutpolicy_horizontal = expanding
-							spacing = 10
+							spacing = 4
+							margin = { 0 2 }
 
 							icon_text_2rows = {
 								# blockoverride "background_animation"{
