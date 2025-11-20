@@ -1,7 +1,7 @@
 ﻿# Unique Levies
 
 levy_a_late_longbowmen = {
-	size = 0.03
+	size = levy_generic_infantry_size
 	
 	allowed_pop_type = peasants
 
@@ -13,7 +13,7 @@ levy_a_late_longbowmen = {
 }
 
 levy_a_late_gallowglass = {
-	size = 0.02
+	size = levy_generic_infantry_size
 	
 	allow = {
 		unit_gallowglass_pop_trigger = yes
@@ -23,7 +23,7 @@ levy_a_late_gallowglass = {
 }
 
 levy_a_paik = {
-	size = 0.05
+	size = levy_generic_infantry_size
 	allow = {
 		unit_indian_paik_location_levy_trigger = yes
 	}
@@ -33,16 +33,18 @@ levy_a_paik = {
 # Unlockable Levies
 
 levy_a_matchlock_levy = {
-	size = 0.01
+	size = levy_generic_infantry_size
 	unit = a_matchlock_levy
 	
 	allowed_pop_type = peasants
 	allowed_pop_type = laborers
+	allowed_pop_type = soldiers
+	allowed_pop_type = burghers
 
 }
 
 levy_cavaliers = {
-	size = 0.1
+	size = levy_generic_noble_cavalry_size
 	
 	allowed_pop_type = nobles
 	

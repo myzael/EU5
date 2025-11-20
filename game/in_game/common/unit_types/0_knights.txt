@@ -1,4 +1,70 @@
-﻿
+﻿a_gendarmerie = {
+	category = army_cavalry
+	
+	copy_from = a_age_6_revolutions_cavalry
+
+	strength_damage_taken = -0.25
+	morale_damage_taken = -0.25
+	
+	buildable = no
+	levy = yes
+
+	maintenance_demand =  heavy_cavalry_maintenance
+	construction_demand = heavy_cavalry_construction
+	
+	combat = { 
+		grasslands = 0.10
+		wetlands = -0.10
+	}
+
+	gfx_tags = { heavy_tag }
+}
+
+a_provincial_cavalry = {
+	category = army_cavalry
+	
+	copy_from = a_age_5_absolutism_cavalry
+
+	strength_damage_taken = -0.25
+	morale_damage_taken = -0.25
+	
+	buildable = no
+	levy = yes
+
+	maintenance_demand =  heavy_cavalry_maintenance
+	construction_demand = heavy_cavalry_construction
+	
+	combat = { 
+		grasslands = 0.10
+		wetlands = -0.10
+	}
+
+	gfx_tags = { heavy_tag }
+}
+
+
+a_late_cavaliers = {
+	category = army_cavalry
+	
+	copy_from = a_age_4_reformation_cavalry
+
+	strength_damage_taken = -0.25
+	morale_damage_taken = -0.25
+	
+	buildable = no
+	levy = yes
+
+	maintenance_demand =  heavy_cavalry_maintenance
+	construction_demand = heavy_cavalry_construction
+	
+	combat = { 
+		grasslands = 0.10
+		wetlands = -0.10
+	}
+
+	gfx_tags = { heavy_tag }
+}
+
 a_cavaliers = {
 	category = army_cavalry
 	

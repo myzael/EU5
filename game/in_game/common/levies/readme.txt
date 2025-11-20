@@ -1,6 +1,6 @@
 ﻿#<levy_id> = {
 #	unit = <unit_type>
-#	size = <int>
+#	size = <scriptvalue>
 #   country_allow = { <triggers> } #Scope: country
 #	allow = { <triggers> }	#Scope: pops
 #	allow_as_crew = {

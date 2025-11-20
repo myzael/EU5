@@ -94,8 +94,8 @@ cloth = {		#Daily clothing, Canvas, Uniforms, Course table cloth, etc
 		soldiers = 0.001
 		laborers = 0.0005
 		slaves = 0.0002
-		burghers = 0.025
-		clergy = 0.05
+		burghers = 0.01
+		clergy = 0.02
 	}
 	
 	wealth_impact_threshold = {
@@ -171,7 +171,7 @@ paper = {		#Paper
 	demand_add = {
 		nobles = 0.01
 		burghers = 0.02
-		clergy = 0.1
+		clergy = 0.04
 	}	
 	
 	development_threshold = 20
@@ -189,7 +189,7 @@ books = { #books, newspapers, booklets, pamphlets, etc
 	demand_add = {
 		nobles = 0.01
 		burghers = 0.02
-		clergy = 0.1
+		clergy = 0.04
 	}	
 	
 	development_threshold = 30

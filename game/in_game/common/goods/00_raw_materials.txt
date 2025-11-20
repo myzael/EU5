@@ -250,6 +250,11 @@ ivory = {
 	}
 	
 	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+
 }
 
 
@@ -281,8 +286,8 @@ salt = {
 	default_market_price = 4
 	
 	demand_add = {
-		nobles = 0.2
-		burghers = 0.02
+		nobles = 0.05
+		burghers = 0.004
 	}
 }
 
@@ -480,7 +485,7 @@ pepper = {
 	transport_cost = 0.5
 	
 	demand_add = {
-		nobles = 0.1
+		nobles = 0.05
 		burghers = 0.0025
 		clergy = 0.005
 	}
@@ -499,7 +504,7 @@ cloves = {
 	transport_cost = 0.5
 	
 	demand_add = {
-		nobles = 0.1
+		nobles = 0.05
 		burghers = 0.0025
 		clergy = 0.005
 	}
@@ -520,7 +525,7 @@ chili = {
 	transport_cost = 0.5
 	
 	demand_add = {
-		nobles = 0.1
+		nobles = 0.05
 		burghers = 0.0025
 		clergy = 0.005
 	}

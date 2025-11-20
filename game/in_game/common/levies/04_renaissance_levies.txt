@@ -1,7 +1,7 @@
 ﻿# Unique Levies
 
 levy_a_longbowmen = {
-	size = 0.03
+	size = levy_generic_infantry_size
 
 	allowed_pop_type = peasants
 
@@ -13,7 +13,7 @@ levy_a_longbowmen = {
 }
 
 levy_a_reformed_gallowglass = {
-	size = 0.02
+	size = levy_generic_infantry_size
 	
 	allow = {
 		unit_gallowglass_pop_trigger = yes
@@ -23,7 +23,7 @@ levy_a_reformed_gallowglass = {
 }
 
 levy_a_late_almogavars = {
-	size = 0.02
+	size = levy_generic_infantry_size
 	
 	allow = {
 		unit_almogavars_pop_trigger = yes
@@ -33,7 +33,7 @@ levy_a_late_almogavars = {
 }
 
 levy_a_florentine_citizen_militia = {
-	size = 0.02
+	size = levy_generic_infantry_size
 	
 	allowed_pop_type = peasants
 	allowed_pop_type = laborers
@@ -47,7 +47,7 @@ levy_a_florentine_citizen_militia = {
 
 
 levy_late_crusader_knights = {
-	size = 0.1
+	size = levy_generic_noble_cavalry_size
 	
 	allowed_pop_type = clergy
 
@@ -62,7 +62,7 @@ levy_late_crusader_knights = {
 # Unlockable Levies
 
 levy_plated_knights = {
-	size = 0.1
+	size = levy_generic_noble_cavalry_size
 	
 	allowed_pop_type = nobles
 	
@@ -70,7 +70,7 @@ levy_plated_knights = {
 }
 
 levy_a_men_at_arms = {
-	size = 0.05
+	size = levy_generic_infantry_size
 
 	allowed_pop_type = soldiers
 
@@ -78,7 +78,7 @@ levy_a_men_at_arms = {
 }
 
 levy_a_peasant_levy = {
-	size = 0.02
+	size = levy_generic_infantry_size
 
 	allowed_pop_type = peasants
 	allowed_pop_type = laborers

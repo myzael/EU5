@@ -1015,6 +1015,21 @@ ship_large_maritime = 0.30
 ship_very_large_maritime = 0.32
 ship_giant_maritime = 0.4
 
+
+############################
+# Levy Scales
+############################
+levy_generic_infantry_size = 0.02
+levy_generic_noble_cavalry_size = 0.1
+
+
+
+
+levy_ship_size = 0.005
+levy_ship_size_special = 0.1
+
+
+
 ############################
 #Unit Build Times
 ############################

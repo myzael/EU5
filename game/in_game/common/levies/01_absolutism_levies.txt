@@ -1,7 +1,7 @@
 ﻿# Unique Levies
 
 levy_a_scottish_highlander = {
-	size = 0.1
+	size = levy_generic_infantry_size
 	unit = a_scottish_highlander
 	
 	allowed_pop_type = peasants
@@ -13,7 +13,7 @@ levy_a_scottish_highlander = {
 }
 
 levy_a_late_paik = {
-	size = 0.05
+	size = levy_generic_infantry_size
 	allow = {
 		unit_indian_paik_location_levy_trigger = yes
 	}
@@ -23,9 +23,19 @@ levy_a_late_paik = {
 # Unlockable Levies
 
 levy_a_militiamen = {
-	size = 0.01
+	size = levy_generic_infantry_size
 	unit = a_militiamen
 	
 	allowed_pop_type = peasants
 	allowed_pop_type = laborers
+	allowed_pop_type = soldiers
+	allowed_pop_type = burghers
+}
+
+levy_provincial_cavalry = {
+	size = levy_generic_noble_cavalry_size
+	
+	allowed_pop_type = nobles
+	
+	unit = a_provincial_cavalry
 }

@@ -96,6 +96,8 @@ age_3_discovery = {
 		lack_of_control_impact_on_warscore = -0.4
 		
 		global_navy_levy_size_modifier = -0.75
+		
+		levy_combat_efficiency_modifier = -0.1
 
 		antagonism_religion_influence = 0.15
 	}
@@ -140,6 +142,8 @@ age_4_reformation = {
 		lack_of_control_impact_on_warscore = -0.6
 		
 		global_navy_levy_size_modifier = -1.0
+		
+		levy_combat_efficiency_modifier = -0.2
 
 		antagonism_religion_influence = 0.2
 		antagonism_culture_influence = 0.1
@@ -195,6 +199,7 @@ age_5_absolutism = {
 		subject_loyalty = -10
 		
 		global_navy_levy_size_modifier = -2.0
+		levy_combat_efficiency_modifier = -0.4
 
 		antagonism_religion_influence = 0.1
 		antagonism_culture_influence = 0.2
@@ -248,6 +253,8 @@ age_6_revolutions = {
 		construction_center_max_level = 5
 		
 		global_navy_levy_size_modifier = -2.0
+		
+		levy_combat_efficiency_modifier = -0.6
 		
 		subject_pays_colonial_cost_modifier = 1.0
 		

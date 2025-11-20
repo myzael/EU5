@@ -100,6 +100,8 @@ noble_officers = {
 
 	army_tradition_decay = -0.001
 	navy_tradition_decay = -0.001
+	
+	unlock_levy = levy_late_cavaliers
 }
 ############################
 # age_5_absolutism 1/2
@@ -109,6 +111,8 @@ noble_resilience = {
 	government = monarchy
 	
 	global_mercenaries_modifier = 0.25
+	
+	unlock_levy = levy_provincial_cavalry
 }
 
 ############################
@@ -120,5 +124,7 @@ international_nobility = {
 
 	max_diplomats = 1
 	monthly_diplomats = 0.1
+	
+	unlock_levy = levy_gendarmerie
 }
 

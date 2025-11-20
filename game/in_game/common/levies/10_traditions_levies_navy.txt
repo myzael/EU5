@@ -1,5 +1,5 @@
 ﻿levy_fishing_boat = {
-	size = 0.005
+	size = levy_ship_size
 	
 	#these guys own the boats. 1 burgher per boat
 	allow = {
@@ -15,7 +15,7 @@
 }
 
 levy_birlinn = {
-	size = 0.1
+	size = levy_ship_size_special
 	
 	#these guys own the boats. 1 noble per boat
 	allow = {

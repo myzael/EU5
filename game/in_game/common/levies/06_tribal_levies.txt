@@ -9,7 +9,7 @@
 
 
 levy_tribal_cavalry= {
-	size = 0.02
+	size = levy_generic_infantry_size		#yes, its infantry, as it scales
 
 	allowed_pop_type = tribesmen
 	
@@ -33,7 +33,7 @@ levy_tribal_cavalry= {
 
 
 levy_moa_hunters = {
-	size = 0.1
+	size = levy_generic_infantry_size
 	
 	allowed_pop_type = peasants
 	allowed_pop_type = tribesmen
@@ -48,7 +48,7 @@ levy_moa_hunters = {
 # default one..
 
 levy_tribesmen = {
-	size = 0.02
+	size = levy_generic_infantry_size
 	
 	allowed_pop_type = peasants
 	allowed_pop_type = tribesmen
