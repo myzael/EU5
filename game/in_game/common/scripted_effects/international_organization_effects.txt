@@ -613,9 +613,12 @@ apply_pu_supporters_estate_satisfaction_hit = {
 		value = $value$
 		save_scope_as = target_io
 		if = {
-			limit = { resolution_is_active = resolution:policy_vote }
+			limit = {
+				resolution_is_active = resolution:policy_vote
+				has_variable = io_law_target
+			}
 			every_international_organization_member = {
-				limit = { scope:target_io = { has_voted_for = { voter = prev resolution = resolution:policy_vote vote = scope:vote } } }
+				limit = { scope:target_io = { has_voted_for = { voter = prev resolution = resolution:policy_vote vote = var:io_law_target } } }
 				add_estate_satisfaction = { type = estate_type:nobles_estate value = $value$ }
 				add_estate_satisfaction = { type = estate_type:clergy_estate value = $value$ }
 				add_estate_satisfaction = { type = estate_type:burghers_estate value = $value$ }
@@ -629,9 +632,12 @@ apply_pu_opponents_estate_satisfaction_hit = {
 		value = $value$
 		save_scope_as = target_io
 		if = {
-			limit = { resolution_is_active = resolution:policy_vote }
+			limit = {
+				resolution_is_active = resolution:policy_vote
+				has_variable = io_current_law
+			}
 			every_international_organization_member = {
-				limit = { scope:target_io = { NOT = { has_voted_for = { voter = prev resolution = resolution:policy_vote vote = scope:vote } } } }
+				limit = { scope:target_io = { has_voted_for = { voter = prev resolution = resolution:policy_vote vote = var:io_current_law } } }
 				add_estate_satisfaction = { type = estate_type:nobles_estate value = $value$ }
 				add_estate_satisfaction = { type = estate_type:clergy_estate value = $value$ }
 				add_estate_satisfaction = { type = estate_type:burghers_estate value = $value$ }

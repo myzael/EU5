@@ -1311,6 +1311,42 @@ sponsor_a_merchant_expedition = {
 				years = 10
 				mode = add_and_extend
 			}
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+					NOT = {
+						has_building = building_type:market_village
+					}
+				}
+				construct_building = {
+					building_type = building_type:market_village
+					cost_multiplier = 0.5
+					cost_multiplier_reason = "game_concept_parliament_issue"
+					instant = yes
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						location_rank = location_rank:town
+						location_rank = location_rank:city
+					}
+					NOT = {
+						OR = {
+							has_building = building_type:marketplace
+							has_building = building_type:merchants_quarters
+							has_building = building_type:grand_marketplace
+							has_building = building_type:commerce_center
+						}
+					}
+				}
+				construct_building = {
+					building_type = building_type:marketplace
+					cost_multiplier = 0.5
+					cost_multiplier_reason = "game_concept_parliament_issue"
+					instant = yes
+				}
+			}
 		}
 	}
 	

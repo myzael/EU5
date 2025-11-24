@@ -2,7 +2,6 @@
 	is_foreign = yes
 	stronger_power_projection = no
 	max_levels = 10
-	need_good_relation = no
 	pop_type = peasants
 	
 	category = trade_category

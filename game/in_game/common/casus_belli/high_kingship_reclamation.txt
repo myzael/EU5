@@ -3,10 +3,6 @@
 
 
 cb_high_kingship_reclamation = {
-
-	province = {
-	
-	}
 	ai_selection_desire = 100
 
 	visible = {

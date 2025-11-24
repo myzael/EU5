@@ -251,7 +251,7 @@ template IO_Law_context_tooltip {
 					text = "LAW_TOOLTIP_POSSIBLE_POLICIES"
 				}
 
-				textcontext = "[Law.GetTooltip]"
+				textcontext = "[Law.GetTooltipWithIOContext(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('recipient').GetInternationalOrganization.Self)]"
 			}
 
 			TooltipFlavorTextBlock = {

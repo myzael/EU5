@@ -600,8 +600,10 @@ parliaments.10 = {
 			}
 		}
 		
+		scope:target_location ?= {
+			event_illustration_estate_in_location_effect = { estate_type = estate_type:peasants_estate }
+		}
 				
-		event_illustration_estate_in_location_effect = { estate_type = estate_type:peasants_estate }
 	}
 
 	option = {

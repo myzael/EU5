@@ -1,8 +1,6 @@
 ﻿inti = {
 	color = color_inti
 	group = folk_peruvian_group
-
-	religious_aspects = 1
 	
 	tags = { andean_coa_gfx }		
 	has_yanantin = yes
@@ -226,8 +224,6 @@ chincha_religion = {
     group = folk_peruvian_group
 
 	tags = { andean_coa_gfx }
-	
-	religious_aspects = 1
 	religious_aspects = 1
     
     definition_modifier = {

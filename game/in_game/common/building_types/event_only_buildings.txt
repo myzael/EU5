@@ -133,6 +133,7 @@ great_madrasa = {
 		local_clergy_estate_power = 0.25
 		local_clergy_max_literacy = 10
 		local_pop_conversion_speed = 0.02
+		local_tribal_promotion = 0.1
 	}
 }
 
@@ -2343,8 +2344,6 @@ husuni_kubwa = {
 	allow = { always = no }
 
 	expensive = yes
-
-	build_time = market_build_time
 	
 	capital_modifier = {
 		merchant_capacity_from_building = 5

@@ -19,51 +19,6 @@
 # 	}
 # }
 
-template bg_sortby_group {
-	using = color_black_texture
-	alpha = 0.2
-
-	modify_texture = {
-		using = overlay_cloth_texture
-		blend_mode = overlay
-		alpha = 0.2
-	}
-
-	modify_texture = {
-		texture = "gfx/interface/component_masks/mask_edge_3px.dds"
-		blend_mode = alphamultiply
-		spriteType = corneredstretched
-		spriteborder = {20 35}
-		alpha = 0.3
-	}
-}
-
-template bg_sortby_texture {
-	using = color_black_texture
-	alpha = 0.4
-
-	# block "sortbys_bckg" {
-	# 	modify_texture = {
-	# 		using = color_dark_blue_texture
-	# 		blend_mode = multiply
-	# 	}
-	# }
-
-	modify_texture = {
-		using = overlay_cloth_texture
-		blend_mode = overlay
-		alpha = 0.2
-	}
-
-	modify_texture = {
-		texture = "gfx/interface/component_masks/mask_edge_3px.dds"
-		blend_mode = alphamultiply
-		spriteType = corneredstretched
-		spriteborder = {20 35}
-		alpha = 0.3
-	}
-}
-
 # types Lists
 # {
 # 	type contextmenu_default = contextmenu

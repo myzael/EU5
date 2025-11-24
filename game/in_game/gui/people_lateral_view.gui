@@ -17,7 +17,7 @@ types SocietyView
 
 			# raw_text = "#prefix_name [Character.GetCharacterPrefixWithNoTooltip]#! #character_name [Character.GetFirstNameWithNoTooltip]#! #regnal_name [Character.GetCharacterRegnalNumWithNoTooltip]#! #nickname [Character.GetAdultNicknameWithNoTooltip]#! #lastname [Character.GetLastNameWithNoTooltip]#!#suffix_name , [Character.GetAge]#!"
 			block "character_name_text" {
-				text = "[Character.GetNameToFit('(int32)-1', '(bool)yes')|U]"
+				text = "[Character.GetNameToFit('(int32)-1', '(bool)yes')|U], [Character.GetAge|T]"
 			}
 			block "name_highlight" {
 				sort_by_left_fade_highlight = {
@@ -448,57 +448,61 @@ society_view = {
 				layoutpolicy_horizontal = expanding
 				size = { -1 45 }
 				hbox = {
-					subheader_unified_icon = {
-						datacontext = "[Player]"
-						margin = { 0 0 }
-						margin_left = 10
-						tooltipwidget = {
-							using = PopPromotionTooltip
+					datacontext = "[Player]"
+					hbox = {
+						spacing = 5
+						subheader_unified_icon = {
+							margin = { 0 0 }
+							margin_left = 10
+							tooltipwidget = {
+								using = PopPromotionTooltip
+							}
+							blockoverride "subheader_unified_icon_texture" {
+								texture = "gfx/interface/icons/location_icons/promotion.dds"
+							}
+							blockoverride "subheader_unified_top_text" {
+								text = "game_concept_promotion"
+								align = nobaseline
+							}
+							blockoverride "subheader_unified_bottom_text" {
+								raw_text = "[Player.GetModifierValueNoFormat('global_pop_promotion_speed_modifier')]"
+								align = nobaseline
+							}
 						}
-						blockoverride "subheader_unified_icon_texture" {
-							texture = "gfx/interface/icons/location_icons/promotion.dds"
+						divider_flavor_03 = {
+							size = { 8 -1 }
 						}
-						blockoverride "subheader_unified_top_text" {
-							text = "game_concept_promotion"
-							align = nobaseline
-							# parentanchor = center
-						}
-						blockoverride "subheader_unified_bottom_text" {
-							raw_text = "[Player.GetModifierValueNoFormat('global_pop_promotion_speed_modifier')]"
-							align = nobaseline
-							# parentanchor = center
-						}
-					}
-					subheader_unified_icon = {
-						datacontext = "[Player]"
-						tooltipwidget = {
-							using = PopPromotionTooltip
-						}
-						margin = { 0 0 }
-						margin_left = 5
-						blockoverride "subheader_unified_icon_texture" {
-							visible = no
-						}
-						blockoverride "subheader_unified_top_text" {
-							text = "PROMOTION_DEMOTION_CONCEPT"
-							align = nobaseline|left
-						}
-						blockoverride "subheader_unified_bottom_text" {
-							raw_text = "| [Player.GetModifierValueNoFormat('global_pop_demotion_speed_modifier')]"
-							align = nobaseline
+						subheader_unified_icon = {
+							tooltipwidget = {
+								using = PopPromotionTooltip
+							}
+							margin = { 0 0 }
+							margin_left = 2
+							blockoverride "subheader_unified_icon_texture" {
+								visible = no
+							}
+							blockoverride "subheader_unified_top_text" {
+								text = "game_concept_demotion"
+								align = nobaseline
+							}
+							blockoverride "subheader_unified_bottom_text" {
+								raw_text = "[Player.GetModifierValueNoFormat('global_pop_demotion_speed_modifier')]"
+								align = nobaseline
+							}
 						}
 					}
 					
 					expand = {}
 					
 					subheader_unified_icon = {
+						tooltip = "[Player.GetTotalPopulation]"
+						tagtooltip_enabled = yes
 						blockoverride "mirror_layout" { righttoleft = yes }
-						datacontext = "[Player]"
 						blockoverride "subheader_unified_icon_texture" {
 							texture = "gfx/interface/icons/location_icons/new/population.dds"
 						}
 						blockoverride "subheader_unified_top_text" {
-							text = "[population|e]"
+							text = "game_concept_population"
 							align = nobaseline
 						}
 						blockoverride "subheader_unified_bottom_text" {
@@ -1713,7 +1717,7 @@ template character_entry {
 						hbox = {
 							text_single = {
 								default_format = "#yellow_titles"
-								raw_text = "[Character.GetNameToFitWithNoTooltip('(int32)30', '(bool)yes')], [Character.GetAgeInYears]"
+								raw_text = "[Character.GetNameToFitWithNoTooltip('(int32)30', '(bool)yes')]#Y ,#! [Character.GetAgeInYears|T]"
 							}
 							block "character_entry_name_sort_by_highlight" {
 								sort_by_highlight = {
@@ -1736,7 +1740,7 @@ template character_entry {
 							tooltipwidget = { 
 								LeftClickButtonTooltip = {
 									blockoverride "onclick_text" { 
-										text = "[SelectLocalization(IsCharacterFaved(Character.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+										text = "[SelectLocalization(IsCharacterFaved(Character.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 									}
 								}
 							}

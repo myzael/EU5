@@ -272,6 +272,7 @@ situation_panel = {
 						widget = {
 									size = {100% 82}
 							vbox = {
+								margin_right = 10
 								layoutpolicy_horizontal = expanding
 								situation_character_card = {
 									datacontext = "[Scope.GetCharacter]"

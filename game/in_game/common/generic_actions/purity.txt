@@ -88,8 +88,10 @@ pilgrimage_purity = {
 					exists = scope:target
 				}
 				scope:target.location.owner = {
-					value = scope:actor.prev_opinion_of_this
-					divide = -400
+					scope:actor = {
+						value = prev_opinion_of_this
+						divide = -400
+					}
 				}
 			}
 		}

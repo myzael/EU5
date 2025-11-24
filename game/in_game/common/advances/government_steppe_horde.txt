@@ -121,7 +121,7 @@ horde_loyalty = {
 	age = age_3_discovery
 	government = steppe_horde
 	
-	subject_loyalty = 10
+	subject_loyalty = 5
 	requires = formalized_relations
 }
 

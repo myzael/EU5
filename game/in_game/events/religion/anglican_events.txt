@@ -345,11 +345,11 @@ anglican_events.9 = {
 	option = {
 		name = anglican_events.9.a
 		add_religious_influence = religious_influence_severe_penalty
-		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_mild_bonus }
+		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_extreme_penalty }
 	}
 	option = {
 		name = anglican_events.9.b
-		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_extreme_penalty }
+		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_mild_bonus }
 	}
 }
 

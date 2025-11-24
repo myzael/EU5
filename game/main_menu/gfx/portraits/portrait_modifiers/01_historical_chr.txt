@@ -2,7 +2,7 @@
 
 	usage = game
 	selection_behavior = max
-	priority = 2
+	priority = 99
 	
 	# Special modifiers
 
@@ -155,6 +155,60 @@
 				this = character:swe_magnus_eriksson
 				portrait_wear_armor_trigger = yes
 				any_ruling_countries = { country_rank_level = 3 }
+			}
+		}
+	}
+
+	swe_birger_jarl = {
+		dna_modifiers = {
+			# Default
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_short
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:swe_birger_jarl
+				this = character:swe_birger_jarl
+			}
+		}
+	}
+
+	swe_axel_oxenstierna = {
+		dna_modifiers = {
+			# Default
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair_balding
+				accessory = male_north_german_hair_crown_long_bald
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_goatee_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:swe_axel_oxenstierna
+				this = character:swe_axel_oxenstierna
 			}
 		}
 	}
@@ -350,6 +404,58 @@
 				exists = this
 				exists = character:dan_valdemar_iii
 				this = character:dan_valdemar_iii
+			}
+		}
+	}
+
+	dan_brahe = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_asian_full_manchu
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:dan_brahe
+				this = character:dan_brahe
+			}
+		}
+	}
+
+	corfitz_ulfeldt_script = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hat_hair_a_03
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = short_beards
+				accessory = beard_german_handlebar_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:corfitz_ulfeldt_script
+				this = character:corfitz_ulfeldt_script
 			}
 		}
 	}
@@ -600,6 +706,32 @@
 				exists = character:ara_peter_iv_arago
 				this = character:ara_peter_iv_arago
 				age_in_years < 22
+			}
+		}
+	}
+
+	ara_vincent_ferrer = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = catholic_religious_hair
+				accessory = male_catholic_hair_monk_bob
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:ara_vincent_ferrer
+				this = character:ara_vincent_ferrer
 			}
 		}
 	}
@@ -1006,6 +1138,32 @@
 				exists = this
 				exists = character:boh_charles_iv_luxembourg
 				this = character:boh_charles_iv_luxembourg
+			}
+		}
+	}
+
+	boh_jiri_z_podebrad = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_mustaches
+				accessory = beard_german_mustache_01
+			}
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_short
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:boh_jiri_z_podebrad
+				this = character:boh_jiri_z_podebrad
 			}
 		}
 	}
@@ -1455,6 +1613,32 @@
 				exists = character:por_afonso_iv_portugal
 				this = character:por_afonso_iv_portugal
 				any_ruling_countries = { country_rank_level = 3 }
+			}
+		}
+	}
+
+	por_magellan = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = no_hair
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = replace
+				gene = beards
+				template = european_beards
+				accessory = beard_german_long_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:por_magellan
+				this = character:por_magellan
 			}
 		}
 	}
@@ -2024,6 +2208,32 @@
 		}
 	}
 
+	eng_hobbes = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair_balding
+				accessory = male_north_german_hair_crown_long_bald
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_handlebar_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:eng_hobbes
+				this = character:eng_hobbes
+			}
+		}
+	}
+
 	hab_mozart_script = {
 		dna_modifiers = {
 			accessory = {
@@ -2149,6 +2359,96 @@
 				exists = this
 				exists = character:spa_miguel_de_cervantes
 				this = character:spa_miguel_de_cervantes
+			}
+		}
+	}
+
+	spa_velazquez_script = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_short
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_handlebar_01
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:spa_velazquez_script
+				this = character:spa_velazquez_script
+			}
+		}
+	}
+
+	spa_blas_de_lezo = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_straight_pomp
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:spa_blas_de_lezo
+				this = character:spa_blas_de_lezo
+			}
+		}
+	}
+
+	spa_ignatius_of_loyola = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_mustache_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:spa_ignatius_of_loyola
+				this = character:spa_ignatius_of_loyola
 			}
 		}
 	}
@@ -2564,6 +2864,32 @@
 		}
 	}
 
+	pap_bernini_script = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_mustaches
+				accessory = beard_german_mustache_02
+			}
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_long_back
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:pap_bernini_script
+				this = character:pap_bernini_script
+			}
+		}
+	}
+
 	flo_donatello_script = {
 		dna_modifiers = {
 			accessory = {
@@ -2630,6 +2956,12 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 		}
 		weight = {
 			base = 0
@@ -2656,6 +2988,12 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 			morph = {
 				mode = modify_multiply
 				gene = gene_body_weight
@@ -2677,6 +3015,38 @@
 				exists = character:mei_bach
 				this = character:mei_bach
 				age_in_years >= 50
+			}
+		}
+	}
+
+	mei_johann_wolfgang_goethe = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly # Messy hair
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:mei_johann_wolfgang_goethe
+				this = character:mei_johann_wolfgang_goethe
 			}
 		}
 	}
@@ -2773,6 +3143,12 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 		}
 		weight = {
 			base = 0
@@ -2851,6 +3227,12 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 		}
 		weight = {
 			base = 0
@@ -2877,6 +3259,12 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
 		}
 		weight = {
 			base = 0
@@ -2895,12 +3283,18 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_north_german_hair_short_curly # White wig
 			}
 			accessory = {
 				mode = add
 				gene = beards
 				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
 				range = { 0 1 } # For the randomness to work correctly
 			}
 		}
@@ -2921,7 +3315,219 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_german_hat_hair_b_01
+				accessory = male_german_hat_hair_b_01 # White wig
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:fra_francois_marie_voltaire
+				this = character:fra_francois_marie_voltaire
+			}
+		}
+	}
+
+	fra_jean_jacques_rousseau = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly # White wig
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:fra_jean_jacques_rousseau
+				this = character:fra_jean_jacques_rousseau
+			}
+		}
+	}
+
+	fra_rene_descartes = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_long
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = short_beards
+				accessory = beard_german_goatee_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:fra_rene_descartes
+				this = character:fra_rene_descartes
+			}
+		}
+	}
+
+	fra_robespierre = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly # White wig
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:fra_robespierre
+				this = character:fra_robespierre
+			}
+		}
+	}
+
+	hab_ludwig_van_beethoven = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_crown_short # Messy hair
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:hab_ludwig_van_beethoven
+				this = character:hab_ludwig_van_beethoven
+			}
+		}
+	}
+
+	ned_michiel_de_ruyter = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair_balding
+				accessory = male_north_german_hair_crown_long_bald
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_handlebar_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:ned_michiel_de_ruyter
+				this = character:ned_michiel_de_ruyter
+			}
+		}
+	}
+
+	gbr_adam_smith = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hat_hair_a_01
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:gbr_adam_smith
+				this = character:gbr_adam_smith
+			}
+		}
+	}
+
+	erasmus = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hat_hair_a_03
 			}
 			accessory = {
 				mode = add
@@ -2933,10 +3539,166 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 600
+				add = 500
 				exists = this
-				exists = character:fra_francois_marie_voltaire
-				this = character:fra_francois_marie_voltaire
+				exists = character:erasmus
+				this = character:erasmus
+			}
+		}
+	}
+
+	mos_ivan_i_danilovich_kalita_rurik = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hat_hair_a_01
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_long_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:mos_ivan_i_danilovich_kalita_rurik
+				this = character:mos_ivan_i_danilovich_kalita_rurik
+			}
+		}
+	}
+
+	chi_zheng_he = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = chinese_hair
+				accessory = male_han_chinese_hair_bun_tie
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = asian_beards
+				accessory = beard_asian_full_manchu
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:chi_zheng_he
+				this = character:chi_zheng_he
+			}
+		}
+	}
+
+	maj_hayam_wuruk = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = chinese_hair
+				accessory = male_han_chinese_hair_bun_tie
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:maj_hayam_wuruk
+				this = character:maj_hayam_wuruk
+			}
+		}
+	}
+
+	azt_tenoch = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = aztec_hair
+				accessory = male_hair_aztec_hair_bob_long
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:azt_tenoch
+				this = character:azt_tenoch
+			}
+		}
+	}
+
+	azt_tlacaelel = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = aztec_hair
+				accessory = male_hair_aztec_hair_bob_long
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:azt_tlacaelel
+				this = character:azt_tlacaelel
+			}
+		}
+	}
+
+	jap_kusunoki_masashige = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = chinese_hair
+				accessory = male_han_chinese_hair_bun_tie
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = asian_beards
+				accessory = beard_german_goatee_05
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:jap_kusunoki_masashige
+				this = character:jap_kusunoki_masashige
 			}
 		}
 	}

@@ -34,7 +34,6 @@ rebel.1 = {
 			mil = 75
 			culture = culture:median
 			birth_location = location:rome
-			script = cola_di_rienzo
 			estate = estate_type:burghers_estate
 			save_scope_as = target_character
 			script = cola_di_rienzo

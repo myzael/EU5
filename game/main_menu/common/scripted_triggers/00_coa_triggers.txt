@@ -416,6 +416,12 @@ coa_def_peasant_republic_trigger = { # TODO (not working)
 		has_reform = government_reform:peasant_republic_reform
 	}
 }
+coa_def_theocracy_military_order_trigger = {
+	scope:actor ?= { 
+		coa_theocracy_trigger = yes
+		has_reform = government_reform:military_order_reform
+	}
+}
 
 # Country Ranks
 

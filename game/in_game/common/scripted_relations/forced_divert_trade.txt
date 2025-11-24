@@ -33,8 +33,8 @@
     }
 	
 
-	request_visible = no
-	break_visible = no
+	request_visible = { always = no }
+	break_visible = { always = no }
 
 	wants_to_give = {
 		#should generally want to do this

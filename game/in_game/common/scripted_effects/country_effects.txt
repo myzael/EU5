@@ -1363,7 +1363,7 @@ set_ended_disaster_flag_effect = {
 make_regent_to_ruler = {
 	if = {
 		limit = { has_regent = yes }
-		regent ?= {
+		regent ?= {			
 			if = {
 				limit = { NOT = { has_estate = estate_type:nobles_estate } }
 				change_character_estate = estate_type:nobles_estate
@@ -1371,15 +1371,17 @@ make_regent_to_ruler = {
 			if = {
 				limit  = { 
 					has_dynasty = no
-					exists = location.owner
 				}
 				custom_tooltip = regencies.1.founds_dynasty_tt
 				hidden_effect = {
-					location = { 
+					owner.capital ?= { 
 						create_dynasty_from_location = random
 						last_dynasty_in_location = { save_scope_as = target_dynasty }
+					}					
+					if = {
+						limit = { exists = scope:target_dynasty }
+						change_dynasty = scope:target_dynasty
 					}
-					change_dynasty = scope:target_dynasty
 				}
 			}
 			every_descendant = {
@@ -1394,7 +1396,10 @@ make_regent_to_ruler = {
 				}
 				hidden_effect = {
 					if = {
-						limit = { has_dynasty = no }
+						limit = { 
+							has_dynasty = no
+							exists = scope:target_dynasty 
+						}
 						change_dynasty = scope:target_dynasty
 					}
 				}
@@ -2147,21 +2152,6 @@ set_revolution_target_effect = {
 			limit = { is_revolutionary = no }
 			set_revolution_effect = yes
 		}
-		capital ?= {
-			while =  {
-				count = 2
-				create_sub_unit_of_category = sub_unit_category:army_infantry
-			}
-			while =  {
-				count = 1
-				create_sub_unit_of_category = sub_unit_category:army_cavalry
-			}
-			while =  {
-				count = 1
-				create_sub_unit_of_category = sub_unit_category:army_artillery
-				create_sub_unit_of_category = sub_unit_category:army_auxiliary
-			}
-		}
 	}
 }
 
@@ -2401,5 +2391,41 @@ cc_setup_new_town = {
 			instant = yes
 			price_modifier = 0
 		}	
+	}
+}
+
+adopt_compatible_heir_religion_law = {
+	$country$ = { save_temporary_scope_as = temp_actor }
+	if = {
+		limit = {
+			exists = scope:temp_actor
+			OR = {
+				NOT = { has_law = heir_religion_law }
+				"law_policy(law:heir_religion_law)" = { NOT = { is_locked_for = prev } }
+			}
+		}
+		if = {
+			limit = {
+				religion = scope:temp_actor.religion
+				policy:heir_same_religion = { is_available_for = prev }
+			}
+			add_policy = policy:heir_same_religion
+		}
+		else_if = {
+			limit = {
+				religion.group = scope:temp_actor.religion.group
+				policy:heir_same_religion_group = { is_available_for = prev }
+			}
+			add_policy = policy:heir_same_religion_group
+		}
+		else_if = {
+			limit = {
+				policy:heir_any_religion = { is_available_for = prev }
+			}
+			add_policy = policy:heir_any_religion
+		}
+	}
+	else = {
+		custom_tooltip = negotiate_succession_law_et
 	}
 }

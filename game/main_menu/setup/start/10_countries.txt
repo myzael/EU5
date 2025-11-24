@@ -11775,7 +11775,7 @@ countries = {
 				name_albert = 1
 				Aldrighetto = 1
 				name_bartholomew = 1
-				Bernhard = 1
+				name_bernard = 1
 				Egno = 1
 				name_philip = 1
 				name_frederick = 1
@@ -16978,10 +16978,10 @@ countries = {
 	TOU = {
 		our_cores_conquered_by_others = {
 			toulouse lisle_jourdain narbonne lavaur castelnaudary saint_pons beziers agde lodeve melgueil
-			nimes uzes ales castres rodez villefranche figeac cahors agen peyrusse entraigues peyre mende
+			nimes uzes french_ales castres rodez villefranche figeac cahors agen peyrusse entraigues peyre mende
 			lectoure montauban albi villemur lautrec verdun_sur_garonne montflanquin gourdon pamiers foix
 			mirepoix limoux carcassonne fenouillet montpellier chateauneuf_de_randon st_affrique millau 
-			florac ales st_ambroix
+			florac st_ambroix
 		}
 
 		starting_technology_level = 3
@@ -17432,7 +17432,7 @@ countries = {
 				name_john = 3
 			}
 
-			heir = brb_johanna_van_brabant
+			heir = brb_hendrik_van_brabant
 
 			aristocracy_vs_plutocracy = -20
 			land_vs_naval = -20
@@ -37242,7 +37242,7 @@ countries = {
 			ruler_term = {	character = bnb_bernhard_iii_bernburg start_date = 1323.12.26 regnal_number = 3	}
 
 			regnal_numbers = {
-				Bernhard = 3
+				name_bernard = 3
 			}
 		}
 
@@ -37272,7 +37272,7 @@ countries = {
 			ruler_term = {	character = bnb_bernhard_iii_bernburg start_date = 1323.12.26 regnal_number = 3	}
 
 			regnal_numbers = {
-				Bernhard = 3
+				name_bernard = 3
 			}
 		}
 
@@ -38317,7 +38317,7 @@ countries = {
 			ruler_term = {	character = lpp_simon_i_lippe start_date = 1275.6.1 regnal_number = 1	}
 
 			regnal_numbers = {
-				Bernhard = 4
+				name_bernard = 4
 				name_simeon = 1
 				name_herman = 2
 			}

@@ -254,7 +254,7 @@ age_6_revolutions = {
 		
 		global_navy_levy_size_modifier = -2.0
 		
-		levy_combat_efficiency_modifier = -0.6
+		levy_combat_efficiency_modifier = -0.5
 		
 		subject_pays_colonial_cost_modifier = 1.0
 		

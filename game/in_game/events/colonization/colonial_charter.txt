@@ -788,7 +788,17 @@ colonial_charter.100 = {
 			}
 		}
 
-		scope:target = { change_province_integration = integrated }
+		scope:target = { 
+			every_location_in_province = {
+				limit = {
+					NOR = {
+						integration_level = core
+						integration_level = integrated
+					}
+				}
+				change_integration_level = integrated
+			}
+		}
 	}
 
 	after = {

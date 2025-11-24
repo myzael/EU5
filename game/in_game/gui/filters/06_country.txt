@@ -8,7 +8,10 @@ country_only_within_diplomatic_range = {
 	enabled_at_start = yes
 	group = 1
 	trigger = {
-		within_diplomatic_range = scope:target
+		exists = scope:target
+		scope:target = {
+			within_diplomatic_range = root
+		}
 	}
 }
 
@@ -17,6 +20,7 @@ country_only_relevant_countries = {
 	tag = diplomacy
 	group = 2
 	trigger = {
+		exists = scope:target
 		relevant_countries = scope:target
 	}
 }
@@ -26,6 +30,7 @@ country_only_neighbors = {
 	tag = diplomacy
 	group = 3
 	trigger = {
+		exists = scope:target
 		is_neighbor_of = scope:target
 	}
 }
@@ -46,6 +51,7 @@ country_only_rivals = {
 	tag = diplomacy
 	group = 4
 	trigger = {
+		exists = scope:target
 		is_rival_of = scope:target
 	}
 }
@@ -55,6 +61,7 @@ country_only_enemies = {
 	tag = diplomacy
 	group = 4
 	trigger = {
+		exists = scope:target
 		is_enemy_of = scope:target
 	}
 }
@@ -64,6 +71,7 @@ country_only_positive_opinion = {
 	tag = diplomacy
 	group = 4
 	trigger = {
+		exists = scope:target
 		has_positive_opinion = scope:target
 	}
 }
@@ -73,6 +81,7 @@ country_only_negative_opinion = {
 	tag = diplomacy
 	group = 4
 	trigger = {
+		exists = scope:target
 		not = {has_positive_opinion = scope:target}
 	}
 }

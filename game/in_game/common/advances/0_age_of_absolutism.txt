@@ -269,7 +269,7 @@ subject_loyalty_absolutism = {
 	icon = diplomatic_range_age_1
 	requires = spy_construction_absolutism
 	
-	subject_loyalty = 10
+	subject_loyalty = 5
 }
 
 improve_relation_impact_absolutism = {

@@ -139,7 +139,7 @@ western_schism.5 = { #Erosion of Faith
 				integration_level = core
 				dominant_religion = religion:catholic
 			}
-			save_scope_as = unrest_province
+			save_scope_as = unrest_location_scope
 		}
 	}
 
@@ -163,7 +163,7 @@ western_schism.5 = { #Erosion of Faith
 					societal_value:spiritualist_vs_humanist > 90
 				}
 			}
-			scope:unrest_province = {
+			scope:unrest_location_scope = {
 				create_some_heretics = yes
 			}
 		}
@@ -242,7 +242,7 @@ western_schism.6 = { #Clash between
 			international_organization:catholic_church = {
 				"active_resolution(resolution:western_schism_resolution)" = {
 					save_temporary_scope_as = resolution
-					scope:target_schism_opponent_cardinal = {
+					scope:target_schism_opponent_cardinal ?= {
 						save_temporary_scope_as = voter
 						scope:resolution = {
 							"vote_in_active_resolution(scope:voter)" ?= {
@@ -297,7 +297,7 @@ western_schism.6 = { #Clash between
 			international_organization:catholic_church = {
 				"active_resolution(resolution:western_schism_resolution)" = {
 					save_temporary_scope_as = resolution
-					scope:target_schism_pope_cardinal = {
+					scope:target_schism_pope_cardinal ?= {
 						save_temporary_scope_as = voter
 						scope:resolution = {
 							"vote_in_active_resolution(scope:voter)" ?= {
@@ -1024,6 +1024,12 @@ western_schism.15 = { #A Traveling Preacher
 
 	image = "gfx/interface/illustrations/situation/western_schism.dds"
 
+	trigger = {
+		any_owned_location = {			
+			integration_level = core
+			dominant_religion = religion:catholic
+		}
+	}
 
 	immediate = {
 		save_cardinal_scope = yes
@@ -1041,7 +1047,7 @@ western_schism.15 = { #A Traveling Preacher
 				integration_level = core
 				dominant_religion = religion:catholic
 			}
-			save_scope_as = unrest_province
+			save_scope_as = unrest_location_scope
 		}
 	}
 
@@ -1049,7 +1055,7 @@ western_schism.15 = { #A Traveling Preacher
 		name = western_schism.15.a
 
 		add_stability = stability_mild_penalty
-		scope:unrest_province = {
+		scope:unrest_location_scope = {
 			create_some_heretics = yes
 		}
 		scope:target_character = {

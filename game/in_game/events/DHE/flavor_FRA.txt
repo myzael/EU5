@@ -2189,6 +2189,7 @@ flavor_fra.1015 = { # Jacquerie
 	}
 
 	trigger = {
+		in_civil_war = no
 		#Regular triggers - hard
 		trigger_if = {
 			limit = {

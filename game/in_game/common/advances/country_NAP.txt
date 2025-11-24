@@ -67,6 +67,7 @@ crush_the_barons = {
 	potential = {
 		OR = {
 			has_or_had_tag = NAP
+			has_or_had_tag = TWS
 			culture = culture:neapolitan
 		}
 	}
@@ -105,6 +106,7 @@ institutional_reorganization = {
 	potential = {
 		OR = {
 			has_or_had_tag = NAP
+			has_or_had_tag = TWS
 			culture = culture:neapolitan
 		}
 	}

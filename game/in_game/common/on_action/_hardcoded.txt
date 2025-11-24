@@ -1302,6 +1302,9 @@ on_join_war = {
 			}
 			international_organization:hre = {
 				every_international_organization_member = {
+					limit = {
+						this != root
+					}
 					add_opinion = {
 						modifier = hre_emperor_defends_empire
 						target = root
@@ -1509,9 +1512,10 @@ on_ending_war = {
 			}
 			if = {
 				limit = {
-					scope:war.defender_leader = scope:winner 
+					scope:loser = c:PAP
+					scope:winner = c:TUR
 				}
-				scope:winner = {
+				scope:winner ?= {
 					trigger_event_non_silently = flavor_pap_holy_league.9 #Ottoman event if they win
 				}
 				scope:war = {
@@ -1520,8 +1524,12 @@ on_ending_war = {
 					}
 				}
 			}
-			else = {
-				scope:loser = {
+			else_if = {
+				limit = {
+					scope:loser = c:TUR
+					scope:winner = c:PAP
+				}
+				scope:loser ?= {
 					trigger_event_non_silently = flavor_pap_holy_league.10 #Ottoman event if they lose
 				}
 				scope:war = {
@@ -2829,6 +2837,13 @@ on_character_estate_change = {
 #root = country, scope:old_religion = old religion
 on_religion_changed = {
 	effect = {
+		#get rid of the excommunication if you have any
+		if = {
+			limit = { is_excommunicated = yes }
+			ruler = {
+				remove_character_modifier = excommunicated
+			}
+		}
 		#miaphysite
 		if = {
 			limit = {
@@ -3360,12 +3375,12 @@ on_location_changed_owner = {
 	effect = {
 		if = {
 			limit = {
-				country_exists = c:PAP
 				scope:loser ?= c:PAP
 				this = location:rome
 				scope:winner.religion = religion:catholic
+				scope:winner != c:ITA
 			}
-			scope:winner = { trigger_event_non_silently = flavor_pap.9000 }
+			scope:winner = { trigger_event_non_silently = flavor_pap.9002 }
 		}
 		if = {
 			limit = {
@@ -4346,4 +4361,8 @@ on_policy_changed = {
 
 #root = international_organization
 on_international_organization_policy_changed = {
+}
+
+#root = country, scope:old_rank = country's old rank
+on_country_rank_change = {
 }

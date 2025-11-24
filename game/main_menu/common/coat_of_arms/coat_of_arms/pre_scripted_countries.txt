@@ -343,29 +343,35 @@ ACX = { # Acaxee
 }
 
 ADA = { # Adal
-	pattern = "pattern_solid.dds"
+	pattern = "pattern_vertical_bar_01.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
 	colored_emblem = {
 		texture = "ce_solid.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 0.33 1.0 } }			
-	}	
+		instance = { position = { 0.5 0.5 } scale = { 0.33 1.0 } }
+	}
 	colored_emblem = {
-		texture = "ce_crescent_decrescent_thin.dds"
-		color1 = color1
-		color2 = color1
-		instance = { position = { 0.53 0.5 } scale = { 0.75 0.8 } }			
-	}		
-	colored_emblem = {
-		texture = "ce_crescent_decrescent_thin.dds"
+		texture = "ce_crescent_triple_fess_large.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.195 0.5 } scale = { 0.75 0.8 } }		
-		instance = { position = { 0.865 0.5 } scale = { 0.75 0.8 } }				
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 1.125 1.0 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_triple_fess_large.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.125 1.0 } }
+		mask = { 2 }
+	}
 }
 
 ADH = { # Ayodhya
@@ -557,7 +563,7 @@ AHO = { # Tai-Ahom
 	color2 = "white"
 
 	colored_emblem = {
-		texture = "ce_ahom_winged_lion02.dds"
+		texture = "ce_ahom_winged_lion_framed.dds"
 		color1 = color2
 		color2 = color2
 		color3 = color1			
@@ -1559,13 +1565,13 @@ ANZ = { # Anizah
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
-		texture = "ce_crescent_triple_fess.dds"
+		texture = "ce_crescent_triple_fess_large.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.1 1.1 } }	
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.9 } }
+	}
 }
 
 AOS = { # Aosta (Savoy, 14th c.)
@@ -2165,6 +2171,26 @@ ARS_three_fleurs = { # Artois - modern (Artois-Eu)
 		instance = { position = { 0.790 0.455 }  scale = { 0.16 0.16 } }
 		instance = { position = { 0.790 0.595 }  scale = { 0.16 0.16 } }				
 	}	
+}
+
+ART = { # Arlat clan
+	pattern = "pattern_solid.dds"
+	color1 = "yellow_mid"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 } scale = { 0.54 0.76 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_altai_03.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.35 0.49 } scale = { 0.75 0.8 } }
+	}
 }
 
 ARU = { # Aru
@@ -3748,6 +3774,19 @@ BLD = { # Barlad
 	}
 }
 
+BLE = { # Bale
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.625 } }
+	}
+}
+
 BLG = { # Bologna - Republic per pale capitano del popolo (simple, no chief)
 	pattern = "pattern_solid.dds"
 	color1 = "white"
@@ -4658,7 +4697,27 @@ BQA = { # Barqa - Variant of Tripolitania
 		color2 = color2		
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }					
 	}			
-} 
+}
+
+BQL = { # Baqlin
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_arabic_shahada_02.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.16 } scale = { 1.0 0.08 } }
+		instance = { position = { 0.5 0.84 } scale = { 1.0 0.08 } }
+	}
+}
 
 BRA = { # Brandenburg
 	pattern = "pattern_solid.dds"
@@ -5222,22 +5281,32 @@ BRI_cross = { # 15th c. naval ensign
 BRL = { # Barlas
 	pattern = "pattern_solid.dds"
 	color1 = "white"
-	color2 = "yellow_mid"
-	color3 = "black"
+	color2 = "black"
+	color3 = "yellow_mid"
 
 	colored_emblem = {
-		texture = "ce_border_large_triple.dds"
-		color1 = color1
-		color2 = "blue_sky"
-		color3 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
-	}	
-	colored_emblem = {
-		texture = "ce_square.dds"
+		texture = "ce_frame_circle.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.0 0.65 } }				
+		instance = { position = { 0.35 0.5 } scale = { 0.65 0.65 } }
 	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.35 0.5 } scale = { 0.525 0.525 } }
+	}	
+	colored_emblem = {
+		texture = "ce_tamgha_barlas.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 } scale = { 0.55 0.55 } }
+	}	
+	colored_emblem = {
+		texture = "ce_border_of_3_thin.dds"
+		color1 = color3
+		color2 = color3
+	}	
 }
 
 BRM = { # Bremen (Town)
@@ -6162,7 +6231,6 @@ BYZ_cross_cypher_komnenos = { # Byzantium - Tetragrammatic cross & Komnenos cyph
 	}		
 }
 
-
 BZH = { # Beisheng
 	pattern = "pattern_solid.dds"
 	color1 = "white_secondary"
@@ -6183,6 +6251,21 @@ BZH = { # Beisheng
 		color1 = color4
 		color2 = color5			
 	}		
+}
+
+BZN = { # Bazin
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.465 0.2 } scale = { 0.95 0.225 } }
+		instance = { position = { 0.465 0.5 } scale = { 0.95 0.225 } }
+		instance = { position = { 0.465 0.8 } scale = { 0.95 0.225 } }
+	}
 }
 
 CAB = { # Chamba
@@ -9978,6 +10061,24 @@ DAU_france = { # Viennois qtly France (modern)
     }	
 }
 
+DAW = { # Dawaro
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_star_06_mena.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.45 0.5 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_03.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
 DBD = { # Dambadeniya
 	pattern = "pattern_solid.dds"
 	color1 = "red"
@@ -12021,8 +12122,8 @@ FAE_ghibellines = { # Faenza - Ghibelline (plausible variant, switching chief to
 
 FAL = { # Fal
 	pattern = "pattern_solid.dds"
-	color1 = hsv360 	{	90	70	32	}
-	color2 = "red_secondary"
+	color1 = hsv360 	{	90	70	36	}
+	color2 = "red_scarlet"
 	color3 = "yellow"
 
 	colored_emblem = {
@@ -15550,7 +15651,24 @@ HDH = { # Hildesheim - Diapering for difference with the Raugrafen
 	}	
 }
 
-# HDY Hadiya
+HDY = { # Hadiya
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_crescent_increscent.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.215 0.5 } scale = { -0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.7 0.5 } scale = { 0.6 1.0 } }
+	}
+}
 
 HEH = { # Heidenheim
 	pattern = "pattern_solid.dds"
@@ -16382,21 +16500,21 @@ HRE = { # Holy Roman Empire - Nimbus variant
 
 HRL = { # Harla
 	pattern = "pattern_solid.dds"
-	color1 = hsv360 	{	320	50	35	} 
+	color1 = "red"
 	color2 = "white"
 
 	colored_emblem = {
-		texture = "ce_border.dds"
+		texture = "ce_border_03.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 	colored_emblem = {
-		texture = "ce_crescent_decrescent.dds"
+		texture = "ce_crescent_increscent.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 0.675 0.675 } }						
-	}		
+		instance = { position = { 0.25 0.5 } scale = { -0.75 0.75 } }
+	}
 }
 
 HRN = { # Horne
@@ -17576,15 +17694,13 @@ IFA = { # Ifat
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-			
+
 	colored_emblem = {
-		texture = "ce_crescent_decrescent_thin.dds"
+		texture = "ce_crescent_triple_fess_large.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.52 0.5 } scale = { 0.75 0.8 } }				
-		instance = { position = { 0.245 0.5 } scale = { 0.75 0.8 } }		
-		instance = { position = { 0.795 0.5 } scale = { 0.75 0.8 } }				
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.9 } }
+	}
 }
 
 # IHK Ishak
@@ -18537,7 +18653,7 @@ JLY = { # Jalayirs
 		instance = { position = { 0.5 0.5 } scale = { 1.2 1.2 } }				
 	}
 	colored_emblem = {
-		texture = "ce_tamgha_chagatai_02.dds"
+		texture = "ce_tamgha_jalayir.dds"
 		color1 = color3
 		color2 = color3
 		instance = { position = { 0.5 0.5 } scale = { 0.7 0.7 } }		
@@ -18600,36 +18716,15 @@ JNT = { # Jaintiapur
 		texture = "ce_border_thin_dotted_small_crescent.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
 	}
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color2
-		color2 = color2	
-		#instance = { position = { 0.5 0.15 } scale = { 0.23 0.265 } }				
-		instance = { position = { 1.5 0.125 } scale = { 0.34 0.42 } }				
-	}		
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color1
-		color2 = color1	
-		#instance = { position = { 0.5 0.125 } scale = { 0.24 0.24 } }			
-		instance = { position = { 1.5 0.10 } scale = { 0.36 0.36 } }				
-	}	
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color2
-		color2 = color2	
-		instance = { position = { 1.5 0.18 } scale = { 0.11 0.11 } }				
-		#instance = { position = { 0.5 0.15 } scale = { 0.07 0.07 } }			
-	}		
 	colored_emblem = {
 		texture = "ce_sun_small_india.dds"
 		color1 = color2
 		color2 = color2
-		color3 = color1				
-		instance = { position = { 0.5 0.5 } scale = { 0.775 0.775 } }				
-	}			
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.775 0.775 } }
+	}
 }
 
 JOE = { # Joseon Korea
@@ -18857,35 +18952,29 @@ JUL_late = { # Bicolor with escutcheon (Plausible design)
 	}
 }
 
-JUR = { # Jurmanids
+JUR = { # Jurma/Jurmanid clan
 	pattern = "pattern_solid.dds"
-	color1 = hsv360 	{	90	70	32	}
+	color1 = hsv360 	{	90	70	36	}
 	color2 = "white"
 	color3 = "black"
+	color4 = "red_scarlet"
 
 	colored_emblem = {
 		texture = "ce_frame_circle.dds"
-		color1 = "yellow"
-		color2 = "yellow"
-		instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
-	}
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
-	}
-	colored_emblem = {
-		texture = "ce_mongol_round_frame_03.dds"
-		color1 = "red_secondary"
-		color2 = "red_secondary"
-		instance = { position = { 0.5 0.5 } scale = { 0.775 0.775 } }
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.3 0.5 } scale = { 0.50 0.50 } }
 	}
 	colored_emblem = {
 		texture = "ce_tamgha_ozbeg_02.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.52 } scale = { 0.6 0.6 } }
+		instance = { position = { 0.3 0.5 } scale = { 0.525 0.525 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_thin.dds"
+		color1 = color4
+		color2 = color4
 	}
 }
 
@@ -20211,12 +20300,6 @@ KOL_revolutionary = { # Simplified napoleonic design
 	color1 = "white"
 	color2 = "red"
 
-	colored_emblem = {
-		texture = "ce_solid.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 1.5 0.9 }  scale = { 1.0 0.2 } }
-	}
 	colored_emblem = {
 		texture = "ce_per_fess_indented.dds"
 		color1 = color1
@@ -22372,27 +22455,6 @@ LUR = { # Laur/Khasi
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
 	}
 	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color2
-		color2 = color2
-		#instance = { position = { 0.5 0.15 } scale = { 0.23 0.265 } }
-		instance = { position = { 1.5 0.125 } scale = { 0.34 0.42 } }
-	}
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color1
-		color2 = color1
-		#instance = { position = { 0.5 0.125 } scale = { 0.24 0.24 } }
-		instance = { position = { 1.5 0.10 } scale = { 0.36 0.36 } }
-	}
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 1.5 0.18 } scale = { 0.11 0.11 } }
-		#instance = { position = { 0.5 0.15 } scale = { 0.07 0.07 } }
-	}
-	colored_emblem = {
 		texture = "ce_khasi_shield_bow.dds"
 		color1 = color2
 		color2 = color2
@@ -22530,6 +22592,43 @@ LVA = { # Livonia
 		color2 = color3	
 		color3 = color2
 	}	
+}
+
+LVA_pagan = { # Baltic formable
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_baltic_star_auseklis.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+LVA_cross = { # United Baltic Duchy nordic cross
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_cross_scandinavian.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+LVA_republic = { # Baltic tricolor
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "green"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
 }
 
 LWA = { # Limbuwan
@@ -22809,7 +22908,7 @@ MAR = { # Maryul
 	pattern = "pattern_solid.dds"
 	color1 = hsv360 	{	205	70	45	}
 	color2 = hsv360 	{	40	75	88	}
-	color3 = hsv360 	{	356	85	45	}
+	color3 = hsv360 	{	08	80	60	}
 	color4 = hsv360 	{	205	70	55	}
 	
 	colored_emblem = {
@@ -26922,9 +27021,8 @@ NEY = { # Neyen
 
 NGD = { # Neguderi
 	pattern = "pattern_solid.dds"
-	color1 = "yellow_mid"
+	color1 = "black_secondary"
 	color2 = "white"
-	color3 = "black"
 
 	colored_emblem = {
 		texture = "ce_crescent_increscent.dds"
@@ -28691,7 +28789,7 @@ OLD_delmenhorst  = { # Historical Quarterly design as counts of Oldenburg & Delm
 OMA = { # Oman
 	pattern = "pattern_solid.dds"
 	color1 = "red"
-	color2 = "green"	
+	color2 = "green_secondary"	
 
 	colored_emblem = {
 		texture = "ce_border_orle.dds" # Rather than plain red
@@ -31952,17 +32050,17 @@ QBY = { # Quimbaya
 
 QCH = { # Qocho
 	pattern = "pattern_solid.dds"
-	color1 = hsv360 	{	216	55	65	} 
+	color1 = hsv360 	{	216	55	55	}
 	color2 = "white"
 	color3 = "yellow"
 
 	colored_emblem = {
 		texture = "ce_dharma_wheel_tibet.dds"
 		color1 = color3
-		color2 = color2
+		color2 = hsv360 	{	216	30	80	}
 		color3 = color2
-		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }
+	}
 }
 
 QHT = { # Qahtan
@@ -32094,6 +32192,43 @@ QUL = { # Qulla
 	}	
 }
 
+QUN = { # Qara'unas
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 } scale = { 0.65 0.65 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.35 0.625 } scale = { 0.3 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.625 } scale = { 0.185 0.185 } }
+	}	
+	colored_emblem = {
+		texture = "ce_mena_crescent.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.35 0.32 } scale = { 0.4 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_thin.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
 QYN = { # Qingyuan
 	pattern = "pattern_solid.dds"
 	color1 = hsv360 	{	08 	80	50	}
@@ -32130,15 +32265,15 @@ RAG = { # Ragusa
 
 RAN = { # Rano/Dutse
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
+	color1 = "white"
+	color2 = "green"
 
 	colored_emblem = {
-		texture = "ce_border.dds"
+		texture = "ce_solid.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.625 } }
+	}
 }
 
 RAP = { # Rapuwai
@@ -34753,46 +34888,23 @@ SKK = { # Sikkim
 	}	
 }
 
-TRK_dynastic = { # Shamkhalate of Tarki - Shamkal dynasty
+SKN = { # Suakin
 	pattern = "pattern_solid.dds"
-	color1 = "black_secondary"
+	color1 = "green"
 	color2 = "white"
-	color3 = "yellow"
-	color4 = hsv360 	{	200	65	60	} 	
-	
-	colored_emblem = {
-		texture = "ce_mountains_sky_kumyk.dds"
-		color1 = hsv360 	{	0		0		80	} 
-		color2 = color3
-		color3 = color4
-		instance = { position = { 0.5 0.51 } scale = { 0.85 0.85 } }		
-	}	
-	colored_emblem = {
-		texture = "ce_border_thin.dds"
-		color1 = "red_scarlet"
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
-	}	
-	colored_emblem = {
-		texture = "ce_border_orle_thin.dds"
-		color1 = "yellow"
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.925 0.925 } }				
-	}		
-}
+	color3 = hsv360 	{	04	80	64	}
 
-TRK = { # Shamkhalate of Tarki - 19th c. tricolour
-	pattern = "pattern_solid.dds"
-	color1 = "yellow"
-	color2 = "red"
-	color3 = hsv360 	{	200	65	60	} 	
-	
 	colored_emblem = {
-		texture = "ce_tricolor_horizontal.dds"
-		color1 = color1
+		texture = "ce_crescent_triple_fess.dds"
+		color1 = color2
 		color2 = color2
-		color3 = color3	
-	}	
+		instance = { position = { 0.45 0.5 } scale = { 0.95 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_03.dds"
+		color1 = color3
+		color2 = color3
+	}
 }
 
 SKO = { # Sokoto
@@ -35462,7 +35574,26 @@ SOB = { # Sobaipuri
 	}			
 }
 
-SOI = { # Somalia - Modern flag (ancient would be plain red) TODO some early design
+SOI = { # Somalia - Early would be plain red so adding elements from modern (border color) and precussor states (shahada)
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	04	80	58	}
+	color2 = "white"
+	color3 = "blue_sky"
+
+	colored_emblem = {
+		texture = "ce_arabic_shahada_02.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.84 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_orle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+SOI_modern = { # Somalia - Modern flag
 	pattern = "pattern_solid.dds"
 	color1 = "blue_light"	
 	color2 = "white"
@@ -36508,26 +36639,20 @@ SUT = { # Sutayids
 		color1 = color2
 		color2 = color1
 		color3 = color4
-		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }				
-	}	
-	colored_emblem = {
-		texture = "ce_frame_circle.dds"
-		color1 = color1
-		color2 = color1
-		instance = { position = { 1.5 0.5 } scale = { 0.6 0.6 } }				
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle.dds"
 		color1 = color3
 		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }				
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }
+	}
 	colored_emblem = {
 		texture = "ce_eternal_knot.dds"
 		color1 = color4
 		color2 = color4
-		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }				
-	}	
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }
+	}
 }
 
 SVA = { # Sosvans
@@ -37373,22 +37498,21 @@ TCY = { # Tlapacoyan
 
 TDE = { # Tanade
 	pattern = "pattern_solid.dds"
-	color1 = "green"
-	color2 = "white"
-	color3 = "red_secondary"
-	
+	color1 = "white"
+	color2 = "red"
+
 	colored_emblem = {
 		texture = "ce_crescent_triple_fess.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.515 0.5 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.515 0.5 } scale = { 1.0 1.0 } }
+	}
 	colored_emblem = {
-		texture = "ce_border_thin.dds"
-		color1 = color3
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}		
+		texture = "ce_border.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 TDG = { # Tidung
@@ -39081,6 +39205,47 @@ TRF = { # Taraf
 	}	
 }
 
+TRK_dynastic = { # Shamkhalate of Tarki - Shamkal dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = hsv360 	{	200	65	60	} 	
+	
+	colored_emblem = {
+		texture = "ce_mountains_sky_kumyk.dds"
+		color1 = hsv360 	{	0		0		80	} 
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.51 } scale = { 0.85 0.85 } }		
+	}	
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = "red_scarlet"
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}	
+	colored_emblem = {
+		texture = "ce_border_orle_thin.dds"
+		color1 = "yellow"
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.925 0.925 } }				
+	}		
+}
+TRK = { # Shamkhalate of Tarki - 19th c. tricolour
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = hsv360 	{	200	65	60	} 	
+	
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3	
+	}	
+}
+
 TRI = { # Trier - Diapering for difference
 	pattern = "pattern_solid.dds"
 	color1 = "white"
@@ -40242,6 +40407,19 @@ UFF = { # Uffenheim/Hohenlohe
 		color3 = color1
 		instance = { position = { 0.5 0.275 } scale = { 1.0 1.0 } }
 		instance = { position = { 0.5 0.725 } scale = { 1.0 1.0 } }	
+	}
+}
+
+UGH = { # Oghan/Ughanid clan
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_tamgha_jalayir_02.dds" # Probably would have used a Jalayir derived tamgha
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.22 0.30 } scale = { 0.55 0.55 } }
 	}
 }
 
@@ -43246,6 +43424,25 @@ YRV = { # Yuryev-Polsky
 		color3 = color2
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
 	}		
+}
+
+YSU = { # Yasaur/Yasa'uri clan
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_mid"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_tamgha_qazan_temur.dds" # Qazan Khan ibn Yasaur
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.3 0.5 } scale = { 0.725 0.725 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_03.dds"
+		color1 = color2
+		color2 = color2	
+	}
 }
 
 ZAB = { # Zab

@@ -14,7 +14,7 @@ template multiple_constructions_list {
 					TooltipTableColumn = {
 						blockoverride "column_title" {}
 						blockoverride "column_title_text" { text = "[constructions|e]" }
-
+						blockoverride "column_title_right" { expand = {} }
 						blockoverride "field_left" {
 							datacontext = "[Construction.GetBuilding.GetType]"
 							datacontext = "[Construction.GetLocation.GetRawMaterial]"
@@ -51,7 +51,16 @@ template multiple_constructions_list {
 						blockoverride "column_title" {}
 						blockoverride "column_title_text" { text = "CONSTRUCTIONS_DAYS_LEFT" }
 						
-						blockoverride "field_text" { text = "SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE" }
+						blockoverride "tooltip_table_text_single" {
+							text_single = {
+								visible = "[Not(Or(Construction.IsStalled, Construction.GetLocation.HasStalledConstruction))]"
+								text = "SPECIFIC_CONSTRUCTION_DURATION_DAYS_PLUS_QUEUE"
+							}
+							text_single = {
+								visible = "[Or(Construction.IsStalled, Construction.GetLocation.HasStalledConstruction)]"
+								text = "CONSTRUCTION_INFO_STALLED"
+							}
+						}
 					}
 
 					blockoverride "column_datamodel"  { 

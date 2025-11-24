@@ -403,6 +403,7 @@ basic_priority_dialog = {
 								margin = { 20 10 }
 								layoutpolicy_horizontal = expanding
 								autoresize = yes
+								fontsize = 16
 								text = "[Player.GetHistoryDesc]"
 							}
 						}

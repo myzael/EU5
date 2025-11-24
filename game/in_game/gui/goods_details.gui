@@ -36,7 +36,7 @@ lateralview = {
 						tooltipwidget = { 
 							LeftClickButtonTooltip = {
 								blockoverride "onclick_text" { 
-									text = "[SelectLocalization(IsGoodsFaved(Goods.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+									text = "[SelectLocalization(IsGoodsFaved(Goods.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 								}
 							}
 						}

@@ -1697,7 +1697,7 @@ cirencester = { topography = flatland vegetation = forest climate = oceanic reli
 inverness = { topography = hills vegetation = woods climate = oceanic religion = catholic culture = highland raw_material = millet natural_harbor_suitability = 0.40}
 urquhart = { topography = hills vegetation = woods climate = oceanic religion = catholic culture = highland raw_material = millet natural_harbor_suitability = 0.40}
 elgin = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = scottish raw_material = millet natural_harbor_suitability = 0.00}
-badenoch = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = wild_game}
+badenoch = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = lumber}
 loch_ness = { topography = lakes climate = continental}
 cairngorm = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 dingwall = { topography = hills vegetation = sparse climate = oceanic religion = catholic culture = highland raw_material = wild_game natural_harbor_suitability = 0.00}
@@ -1709,9 +1709,9 @@ durness = { topography = wetlands vegetation = sparse climate = oceanic religion
 tongue = { topography = wetlands vegetation = sparse climate = oceanic religion = catholic culture = highland raw_material = clay natural_harbor_suitability = 0.00}
 thurso = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = norwegian raw_material = fish natural_harbor_suitability = 0.00}
 ben_klibreck = { topography = mountain_wasteland vegetation = sparse climate = oceanic}
-inverary = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = salt natural_harbor_suitability = 0.00}
+inverary = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = lumber natural_harbor_suitability = 0.00}
 oban = { topography = mountains vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = clay natural_harbor_suitability = 0.00}
-cowal = { topography = mountains vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = clay natural_harbor_suitability = 0.00}
+cowal = { topography = mountains vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = lumber natural_harbor_suitability = 0.00}
 lochaber = { topography = mountains vegetation = forest climate = oceanic religion = catholic culture = highland raw_material = alum natural_harbor_suitability = 0.00}
 ardtornish = { topography = mountains vegetation = woods climate = oceanic religion = catholic culture = highland raw_material = salt natural_harbor_suitability = 0.00}
 kintyre = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = fish natural_harbor_suitability = 0.00}
@@ -1730,7 +1730,7 @@ dunbar = { topography = flatland vegetation = grasslands climate = oceanic relig
 linlithgow = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = scottish raw_material = livestock natural_harbor_suitability = 0.00}
 stirling = { topography = hills vegetation = grasslands climate = oceanic religion = catholic culture = scottish raw_material = wool natural_harbor_suitability = 0.00}
 stranraer = { topography = flatland vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = livestock natural_harbor_suitability = 0.00}
-ayr = { topography = flatland vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = livestock natural_harbor_suitability = 0.00}
+ayr = { topography = flatland vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = lumber natural_harbor_suitability = 0.00}
 kirkcudbright = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = wool natural_harbor_suitability = 0.00}
 irvine = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = norse_gael raw_material = livestock natural_harbor_suitability = 0.00}
 kenmure = { topography = hills vegetation = forest climate = oceanic religion = catholic culture = norse_gael raw_material = wool}

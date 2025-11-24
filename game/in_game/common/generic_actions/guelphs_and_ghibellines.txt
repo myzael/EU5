@@ -496,7 +496,11 @@ guelphs_sanction_emperor = {
 	}
 	allow = {
 		scope:actor = { is_leader_of_international_organization = international_organization:guelphs_io }
-		international_organization:guelphs_io = { NOT = { has_cooldown = recently_sanctioned } }
+	}
+
+	cooldown = {
+		type = recently_sanctioned
+		years = 10
 	}
 
 	select_trigger = {
@@ -514,55 +518,16 @@ guelphs_sanction_emperor = {
 
 	effect = {
 		international_organization:guelphs_io ?= {
-			hidden_effect = {
-				if = {
-					limit = { has_variable = sanction_counter }
-					change_variable = {
-						name = sanction_counter
-						add = 1
-					}
-				}
-				else = {
-					set_variable = {
-						name = sanction_counter
-						value = 0
-					}
-				}
-				add_cooldown = {
-					type = recently_sanctioned
-					years = 10
-				}			
-			}
 			add_international_organization_modifier = {
 				modifier = guelphs_sanction_emperor_own_modifier
 				mode = extend
-				size = {
-					if = {
-						limit = { has_variable = sanction_counter }
-						if = {
-							limit = {
-								var:sanction_counter < 6
-							}
-							value = var:sanction_counter
-						}
-						else = {
-							value = 6
-						}
-					}
-					add = 1
-				}
+				years = modifier_duration_years_normal
 			}
 			international_organization:ghibellines_io ?= {
 				add_international_organization_modifier = {
 					modifier = guelphs_sanction_emperor_modifier
 					mode = extend
-					size = {
-						if = {
-							limit = { international_organization:guelphs_io = { has_variable = sanction_counter } }
-							value = international_organization:guelphs_io.var:sanction_counter
-						}
-						add = 1
-					}
+					years = modifier_duration_years_normal
 				}
 			}
 		}
@@ -656,7 +621,7 @@ guelphs_support_imperial_rivals = {
 				ruler ?= {
 					add_character_modifier = {
 						modifier = guelphs_support_imperial_rivals_modifier
-						mode = add_and_extend
+						mode = replace
 						days = -1
 					}
 				}
@@ -701,7 +666,12 @@ ghibellines_sanction_pope = {
 	}
 	allow = {
 		scope:actor = { is_leader_of_international_organization = international_organization:ghibellines_io }
-		international_organization:ghibellines_io = { NOT = { has_cooldown = recently_sanctioned } }
+		
+	}
+
+	cooldown = {
+		type = recently_sanctioned
+		years = 10
 	}
 
 	select_trigger = {
@@ -719,55 +689,17 @@ ghibellines_sanction_pope = {
 
 	effect = {
 		international_organization:ghibellines_io ?= {
-			hidden_effect = {
-				if = {
-					limit = { has_variable = sanction_counter }
-					change_variable = {
-						name = sanction_counter
-						add = 1
-					}
-				}
-				else = {
-					set_variable = {
-						name = sanction_counter
-						value = 0
-					}
-				}
-				add_cooldown = {
-					type = recently_sanctioned
-					years = 10
-				}
-			}
+			
 			add_international_organization_modifier = {
 				modifier = ghibellines_sanction_pope_own_modifier
-				mode = add_and_extend
-				size = {
-					if = {
-						limit = { has_variable = sanction_counter }
-						if = {
-							limit = {
-								var:sanction_counter < 6
-							}
-							value = var:sanction_counter
-						}
-						else = {
-							value = 6
-						}
-					}
-					add = 1
-				}
+				mode = replace
+				years = modifier_duration_years_normal
 			}
 			international_organization:guelphs_io ?= {
 				add_international_organization_modifier = {
 					modifier = ghibellines_sanction_pope_modifier
-					mode = add_and_extend
-					size = {
-						if = {
-							limit = { international_organization:ghibellines_io = { has_variable = sanction_counter } }
-							value = international_organization:ghibellines_io.var:sanction_counter
-						}
-						add = 1
-					}
+					mode = replace
+					years = modifier_duration_years_normal
 				}
 			}
 		}

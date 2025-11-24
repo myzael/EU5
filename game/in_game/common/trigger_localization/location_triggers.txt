@@ -711,6 +711,18 @@ goods_output = {
 	third = THIRD_GOODS_OUTPUT_TRIGGER
 }
 
+local_estate_power = {
+	none = LOCAL_ESTATE_POWER_TRIGGER
+	global = LOCAL_ESTATE_POWER_TRIGGER
+	third = LOCAL_ESTATE_POWER_TRIGGER
+}
+
+local_relative_estate_power = {
+	none = LOCAL_RELATIVE_ESTATE_POWER_TRIGGER
+	global = LOCAL_RELATIVE_ESTATE_POWER_TRIGGER
+	third = LOCAL_RELATIVE_ESTATE_POWER_TRIGGER
+}
+
 garrison_percentage = {
 	none = GARRISON_PERCENTAGE_TRIGGER
 	global = GARRISON_PERCENTAGE_TRIGGER

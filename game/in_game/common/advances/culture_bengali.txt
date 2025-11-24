@@ -4,7 +4,7 @@
 bng_bengali_vassal_system = {
 	age = age_1_traditions
 	potential = { culture.language = language:bengali_language }
-	subject_loyalty = 10
+	subject_loyalty = 5
 	requires = subjects_advance
 }
 bng_bengali_paik = {

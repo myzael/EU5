@@ -91,6 +91,12 @@ protestant_union = {
 		is_member_of_international_organization = international_organization:hre
 		is_subject = no
 		is_protestant = yes
+		trigger_if = {
+			limit = { exists = union }
+			any_union_partner = {
+				NOT = { is_member_of_international_organization = international_organization:catholic_league }
+			}
+		}
 	}
 	auto_leave_trigger = {
 		NOR = {
@@ -212,7 +218,30 @@ protestant_union = {
 				value = scope:recipient.var:io_join_stagger
 			}
 		}
-
+		if = {
+			limit = {
+				exists = scope:recipient
+				any_union_partner = {
+					is_member_of_international_organization = scope:recipient
+				}
+			}
+			add = {
+				desc = "DIPLOREASON_UNION_SUPPORTS_ORGANIZATION"
+				value = 500
+			}
+		}
+		if = {
+			limit = {
+				exists = international_organization:catholic_league
+				any_union_partner = {
+					is_member_of_international_organization = international_organization:catholic_league
+				}
+			}
+			subtract = {
+				desc = "DIPLOREASON_UNION_OPPOSES_ORGANIZATION"
+				value = 1000
+			}
+		}
 	}
 	ai_desire_to_allow_new_member = {
 		add = {
@@ -315,6 +344,12 @@ catholic_league = {
 		is_member_of_international_organization = international_organization:hre
 		is_subject = no
 		religion = religion:catholic
+		trigger_if = {
+			limit = { exists = union }
+			any_union_partner = {
+				NOT = { is_member_of_international_organization = international_organization:protestant_union }
+			}
+		}
 	}
 	auto_leave_trigger = {
 		NOR = {
@@ -434,6 +469,30 @@ catholic_league = {
 			multiply = {
 				desc = "ESTIMATE_IO_SITUATION_FIRST"
 				value = scope:recipient.var:io_join_stagger
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:recipient
+				any_union_partner = {
+					is_member_of_international_organization = scope:recipient
+				}
+			}
+			add = {
+				desc = "DIPLOREASON_UNION_SUPPORTS_ORGANIZATION"
+				value = 500
+			}
+		}
+		if = {
+			limit = {
+				exists = international_organization:protestant_union
+				any_union_partner = {
+					is_member_of_international_organization = international_organization:protestant_union
+				}
+			}
+			subtract = {
+				desc = "DIPLOREASON_UNION_OPPOSES_ORGANIZATION"
+				value = 1000
 			}
 		}
 	}

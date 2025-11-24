@@ -183,7 +183,7 @@ khedivates = {
 	potential = {
 		has_or_had_tag = TUR
 	}
-	subject_loyalty = 10
+	subject_loyalty = 5
 }
 
 ayans = {

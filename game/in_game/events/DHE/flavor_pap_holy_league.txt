@@ -79,7 +79,10 @@ flavor_pap_holy_league.1 = {
 	option = {
 		name = flavor_pap_holy_league.1.a
 		historical_option = yes
-		
+		set_global_variable = {
+			name = crusade_location_target
+			value = location:constantinople
+		}
 		create_international_organization = {
 			type = international_organization_type:crusade
 			target = scope:crusade_target

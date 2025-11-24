@@ -60,23 +60,24 @@
 		}
 		enabled = {
 			trigger_if = {
-				limit = { exists = scope:actor }
-				trigger_if = {
-					limit = { NOT = { resolution_is_active = resolution:policy_vote } }
-					#proposal check
-					can_initiate_policy_votes = scope:actor
+				limit = {
+					is_proposal = { international_organization = scope:recipient resolution = resolution:policy_vote }
 				}
-				trigger_else = {
-					#vote check
-					OR = {
-						can_initiate_policy_votes = scope:actor
-						has_member = scope:actor
-					}
+				#proposal check
+				can_initiate_policy_votes = scope:actor
+			}
+			trigger_else_if = {
+				limit = {
+					is_vote = { international_organization = scope:recipient resolution = resolution:policy_vote }
+				}
+				#vote check
+				OR = {
+					can_initiate_policy_votes = scope:actor
+					has_member = scope:actor
 				}
 			}
 			trigger_else = {
-				#we check for a scope:actor because when the resolution finalizes there is no actor anymore
-				#in other words: remove this part of the script and suddenly your policies will NEVER get enacted
+				#finalising check
 				hidden_trigger = { always = yes }
 			}
 
@@ -115,56 +116,102 @@
 		enabled = {
 			scope:recipient ?= {
 				trigger_if = {
-					limit = { international_organization_has_leader = yes }
-					OR = {
-						AND = {
-							OR = {
-								leader_country = scope:actor
-								root = { law_can_be_initiated_by_members = yes }
+					limit = {
+						international_organization_has_leader = yes
+					}
+
+					trigger_if = {
+						limit = {
+							is_proposal = { international_organization = scope:recipient resolution = resolution:policy_vote }
+						}
+						#proposal check
+						OR = {
+							leader_country = scope:actor
+							root = { law_can_be_initiated_by_members = yes }
+						}
+					}
+					trigger_else_if = {
+						limit = {
+							is_vote = { international_organization = scope:recipient resolution = resolution:policy_vote }
+						}
+						#vote check
+						or = {
+							#for predictions
+							not = { resolution_is_active = resolution:policy_vote }
+							#for actual votes
+							"active_resolution(resolution:policy_vote)" ?= {
+								"resolution_target(target)" ?= root
 							}
-							can_initiate_policy_votes = scope:actor
-							NOT = { resolution_is_active = resolution:policy_vote }
 						}
-						not = { resolution_is_active = resolution:policy_vote }
-						"active_resolution(resolution:policy_vote)" ?= {
-							"resolution_target(target)" ?= root
-						}
+					}
+					trigger_else = {
+						#finalising check
+						hidden_trigger = { always = yes }
 					}
 				}
 				trigger_else_if = {
 					limit = {
 						international_organization_type = international_organization_type:union
 						international_organization_has_policy = policy:union_establish_seniority_policy
-						exists = scope:actor
 					}
-					OR = {
-						AND = {
-							OR = {
-								country_has_special_status = {
-									type = special_status:senior_partner
-									country = scope:actor
-								}
-								root = { law_can_be_initiated_by_members = yes }
+
+					trigger_if = {
+						limit = {
+							is_proposal = { international_organization = scope:recipient resolution = resolution:policy_vote }
+						}
+						#proposal check
+						OR = {
+							country_has_special_status = {
+								type = special_status:senior_partner
+								country = scope:actor
 							}
-							can_initiate_policy_votes = scope:actor
-							NOT = { resolution_is_active = resolution:policy_vote }
+							root = { law_can_be_initiated_by_members = yes }
 						}
-						not = { resolution_is_active = resolution:policy_vote }
-						"active_resolution(resolution:policy_vote)" ?= {
-							"resolution_target(target)" ?= root
+					}
+					trigger_else_if = {
+						limit = {
+							is_vote = { international_organization = scope:recipient resolution = resolution:policy_vote }
 						}
+						#vote check
+						or = {
+							#for predictions
+							not = { resolution_is_active = resolution:policy_vote }
+							#for actual votes
+							"active_resolution(resolution:policy_vote)" ?= {
+								"resolution_target(target)" ?= root
+							}
+						}
+					}
+					trigger_else = {
+						#finalising check
+						hidden_trigger = { always = yes }
 					}
 				}
 				trigger_else = {
-					OR = {
-						AND = {
-							can_initiate_policy_votes = scope:actor
-							NOT = { resolution_is_active = resolution:policy_vote }
+					trigger_if = {
+						limit = {
+							is_proposal = { international_organization = scope:recipient resolution = resolution:policy_vote }
 						}
-						not = { resolution_is_active = resolution:policy_vote }
-						"active_resolution(resolution:policy_vote)" ?= {
-							"resolution_target(target)" ?= root
+						#proposal check
+						always = yes
+					}
+					trigger_else_if = {
+						limit = {
+							is_vote = { international_organization = scope:recipient resolution = resolution:policy_vote }
 						}
+						#vote check
+						or = {
+							#for predictions
+							not = { resolution_is_active = resolution:policy_vote }
+							#for actual votes
+							"active_resolution(resolution:policy_vote)" ?= {
+								"resolution_target(target)" ?= root
+							}
+						}
+					}
+					trigger_else = {
+						#finalising check
+						hidden_trigger = { always = yes }
 					}
 				}
 			}
@@ -339,9 +386,18 @@
 			if = {
 				limit = { scope:recipient = { international_organization_type = international_organization_type:union } }
 				scope:recipient = {
-					apply_pu_estate_satisfaction_hit = {
-						target = opponents
-						value = estate_satisfaction_severe_penalty
+					if = {
+						limit = { var:io_current_law = scope:vote }
+						apply_pu_estate_satisfaction_hit = {
+							target = supporters
+							value = estate_satisfaction_severe_penalty
+						}
+					}
+					else = {
+						apply_pu_estate_satisfaction_hit = {
+							target = opponents
+							value = estate_satisfaction_severe_penalty
+						}
 					}
 				}
 			}

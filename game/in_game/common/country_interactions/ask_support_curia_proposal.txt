@@ -77,7 +77,9 @@
 					limit = {
 						not = { resolution_proposer ?= scope:actor }
 					}
-					value = resolution_proposer.prev_opinion_of_this
+					resolution_proposer = {
+						value = prev_opinion_of_this
+					}
 					multiply = -1
 				}
 			}

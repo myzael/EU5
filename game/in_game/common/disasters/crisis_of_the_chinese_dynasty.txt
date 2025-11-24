@@ -31,6 +31,10 @@
 		trigger_event_non_silently = crisis_of_the_chinese_dynasty.1
 	}
 	on_end = {
+		remove_variable = reformed_the_cabinet_variable
+		remove_variable = completed_tax_revision_variable
+		remove_variable = cmd_restored_stability_variable
+		remove_variable = cmd_strengthened_crown_variable
 		if = {
 			limit = {
 				NOT = { is_leader_of_international_organization = international_organization:middle_kingdom }

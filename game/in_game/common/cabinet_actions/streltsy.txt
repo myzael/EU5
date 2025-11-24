@@ -2,7 +2,7 @@
 	ability = mil
 	icon = byz_extensive_conscription
 	potential = {
-		has_reform = government_reform:prikazi_reform
+		modifier:unlock_prikazi_reform_cabinet_actions = yes
 	}
 	
 	country_modifier = {

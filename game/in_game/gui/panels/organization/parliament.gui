@@ -154,12 +154,14 @@ types OrganizationPanel
 											datacontext = "[InternationalOrganizationsView.GetInternationalOrganization]"
 											default_format = "#yellow_titles"
 											fontsize = 16
+											maximumsize = { 200 22 }
 										}
 
 										text_single = {
 											visible = "[UseDynamicParliamentName]"
 											raw_text = "([Localize('game_concept_parliament')])"
 											fontsize = 16
+											maximumsize = { 60 22 }
 										}
 										expand = {}
 									}

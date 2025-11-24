@@ -1028,12 +1028,42 @@ PRU_f = { #Prussia
 	}
 }
 
-LVA_f = { 
+LIV_f = {
 	required_locations_fraction = 0.75
-	level = 2
+	level = 1
 	rule = plausible
 	potential = {
+		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:german_group }
+	}
+
+	allow = {
 		culture = { has_culture_group = culture_group:german_group }
+	}
+	
+	name = LIV
+	flag = LIV
+	adjective = LIV_ADJ
+	tag = LIV
+	color = map_livonian_order
+
+	areas = {
+		baltic_area
+	}
+	form_effect = {
+	}
+}
+
+LVA_f = { # Baltic
+	level = 2
+	required_locations_fraction = 0.75
+	rule = fantasy
+	 
+	potential = {	
+		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:baltic_group }
+	}
+
+	allow = {
+		culture = { has_culture_group = culture_group:baltic_group }
 	}
 	
 	name = LVA
@@ -1041,10 +1071,15 @@ LVA_f = {
 	adjective = LVA_ADJ
 	tag = LVA
 	color = map_LVA
-	
+
 	areas = {
 		baltic_area
+		lithuania_area
+		prussia_area
+		samogitia_area
+		west_novgorod_area
 	}
+	
 	form_effect = {
 	}
 }
@@ -1108,8 +1143,8 @@ HRE_f = {
 }
 
 MOL_f = {
-	required_locations_fraction = 0.9
-	level = 2
+	required_locations_fraction = 0.8
+	level = 1
 	rule = historical
 	potential = {
 		culture = culture:moldovan
@@ -3332,7 +3367,7 @@ PUE_f = { # United Pueblo
 }
 
 RMN_f = {
-	level = 2
+	level = 3
 	required_locations_fraction = 0.5
 	rule = plausible
 

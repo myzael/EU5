@@ -432,6 +432,11 @@ flavor_hab_tir.1000 = { #Tirols Troubled Marriage
 
 		scope:target_ruler = {
 			divorce_character = scope:target_spouse
+			add_character_modifier = {
+				modifier = block_marriage
+				months = 6
+				mode = add_and_extend
+			}
 		}
 		scope:target_spouse = {
 			move_country = c:BOH

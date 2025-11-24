@@ -96,8 +96,10 @@
             }
             scope:target_province.owner = {
                 subtract = {	#Better opinion with the province_owner reduces the chances of pressing this button
-                    value = scope:actor.this_opinion_of_prev
-                    multiply = 0.1
+                    scope:actor = {
+                        value = this_opinion_of_prev
+                        multiply = 0.1
+                    }
                 }
             }
             multiply = {
@@ -197,8 +199,10 @@ overthrow_high_king = {
             }
             scope:target_country = {
                 subtract = {	#Better opinion with the province_owner reduces the chances of pressing this button
-                    value = scope:actor.this_opinion_of_prev
-                    multiply = 0.1
+                    scope:actor = {
+                        value = this_opinion_of_prev
+                        multiply = 0.1
+                    }
                 }
             }
             multiply = {
@@ -300,8 +304,10 @@ subjugate_high_kingship_member = {
             }
             scope:target_country = {
                 subtract = {	#Better opinion with the province_owner reduces the chances of pressing this button
-                    value = scope:actor.this_opinion_of_prev
-                    multiply = 0.1
+                    scope:actor = {
+                        value = this_opinion_of_prev
+                        multiply = 0.1
+                    }
                 }
             }
             multiply = {

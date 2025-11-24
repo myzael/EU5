@@ -43,8 +43,8 @@
         alliance_can_exist = yes
 	}
 
-	request_visible = no
-	break_visible = no
+	request_visible = { always = no }
+	break_visible = { always = no }
 
     cancel_enabled = {
         scope:actor = {
@@ -203,7 +203,14 @@
                             value = country_strength
                         }
                     }
-                    divide = country_strength
+                    if = {
+                        limit = {
+                            NOT = {
+                                country_strength <= 0 
+                            }
+                        }
+                        divide = country_strength
+                    } 
                     multiply = 10
                 }
             }
@@ -247,7 +254,12 @@
             value = scope:recipient.diplomatic_capacity_without_maintenance
             subtract = scope:recipient.used_diplomatic_capacity
             subtract = "scope:recipient.diplomatic_capacity_of_new_relation(scope:actor|scope:scripted_relation_type)"
-            divide = scope:recipient.diplomatic_capacity_without_maintenance 
+            if = {
+                limit = {
+                    NOT = { scope:recipient.diplomatic_capacity_without_maintenance <= 0 }
+                }
+                divide = scope:recipient.diplomatic_capacity_without_maintenance
+            }
             max = 0
             multiply = 100
         }
@@ -334,7 +346,14 @@
                             value = country_strength
                         }
                     }
-                    divide = country_strength
+                    if = {
+                        limit = {
+                            NOT = {
+                                country_strength <= 0 
+                            }
+                        }
+                        divide = country_strength
+                    } 
                     multiply = 10
                 }
             }
@@ -343,8 +362,13 @@
         add = {
             desc = "ACTOR_WOULD_NEED_TO_PAY_FOR_DIPLOMACY"
             value = scope:actor.diplomatic_capacity_without_maintenance
-            subtract = scope:actor.used_diplomatic_capacity  
-            divide = scope:actor.diplomatic_capacity_without_maintenance
+            subtract = scope:actor.used_diplomatic_capacity
+            if = {
+                limit = {
+                    NOT = { scope:actor.diplomatic_capacity_without_maintenance <= 0 }
+                }
+                divide = scope:actor.diplomatic_capacity_without_maintenance
+            }
             max = 0
             multiply = 100
         }

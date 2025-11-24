@@ -520,22 +520,28 @@ procure_remedies = {
 				limit = {
 					NOT = { religion.group = religion_group:muslim }
 				}
-				every_market_present_in_country = {
-					add_temporary_demand = {
-						type = demand:procure_remedies
-						scale_with_pop = 0.002
-						years = -1
+				#custom_tooltip = {
+					#text = procure_remedies_tt
+					every_market_present_in_country = {
+						add_temporary_demand = {
+							type = demand:procure_remedies
+							scale_with_pop = 0.002
+							years = -1
+						}
 					}
-				}
+				#}
 			}
 			else = {
-				every_market_present_in_country = {
-					add_temporary_demand = {
-						type = demand:procure_remedies_no_liquor
-						scale_with_pop = 0.002
-						years = -1
+				#custom_tooltip = {
+					#text = procure_remedies_no_liquor_tt
+					every_market_present_in_country = {
+						add_temporary_demand = {
+							type = demand:procure_remedies_no_liquor
+							scale_with_pop = 0.002
+							years = -1
+						}
 					}
-				}
+				#}
 			}
 			add_stability = stability_mild_bonus
 			add_government_power = government_power_weak_bonus
@@ -837,13 +843,18 @@ strict_quarantines = {
 		add = "scope:actor.add_static_modifier_utility(strict_quarantines)"
 
 		#add if we have money to build any pest houses (we probably won't)
-		add = {
-			desc = "Available profit margin to build pest houses"
-			value = {
-				value = scope:actor.monthly_balance
-				divide = scope:actor.monthly_income_total
-				multiply = 20 # <- score for building pest houses with our profit margin
-			} 
+		if = {
+			limit = {
+				scope:actor.monthly_income_total > 0
+			}
+			add = {
+				desc = "Available profit margin to build pest houses"
+				value = {
+					value = scope:actor.monthly_balance
+					divide = scope:actor.monthly_income_total
+					multiply = 20 # <- score for building pest houses with our profit margin
+				} 
+			}
 		}
 	}
 }

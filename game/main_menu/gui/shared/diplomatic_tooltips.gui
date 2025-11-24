@@ -316,7 +316,15 @@ template great_power_info_tooltip {
 				blockoverride "country_rank_banner_size" {
 					size = {34 42}
 				}
-				blockoverride "great_power_tooltip" {}
+				blockoverride "great_power_tooltip" {
+					background = {
+						texture = "gfx/interface/great_powers/greatpower_0.dds"
+						texture_density = 2
+						spriteType = Corneredstretched
+						spriteborder = {20 20}
+						margin = {2 0}
+					}
+				}
 			}
 		}
 		blockoverride "concept_link" {
@@ -347,6 +355,11 @@ template great_power_info_tooltip {
 				visible = "[Country.IsLosingGreatPowerStatus]"
 				blockoverride "text" {
 					text = "[Country.GetLosingGreatPowerScoreInfo]"
+				}
+			}
+			TooltipTextBlock = { 
+				blockoverride "text" {
+					text = "[GetRankComparisonForCountryInfo(Country.Self)]"
 				}
 			}
 		}
@@ -388,6 +401,11 @@ template non_great_power_info_tooltip {
 					text = "GREATPOWER_SCORE_TITLE"
 				}
 				textcontext = "[Country.GetGreatPowerScoreInfo]"
+			}
+			TooltipTextBlock = { 
+				blockoverride "text" {
+					text = "[GetRankComparisonForCountryInfo(Country.Self)]"
+				}
 			}
 		}
 	}
@@ -721,9 +739,79 @@ template AntagonismBombSpec_tooltip {
 				texture = "[GetConceptTexture('antagonism')]"
 				game_concept = "[antagonism|e]"
 			}
-			TooltipStringPairList = { 
-				visible = "[Not(StringIsEmpty(AntagonismBombSpecWrap.GetBreakdown))]"
-				textcontext = "[AntagonismBombSpecWrap.GetBreakdown]"
+
+			TooltipTextBlock = {
+				visible = "[Not(AntagonismBombSpecWrap.AreEffectsCalculated)]"
+				blockoverride "text" { text = "CALCULATING" }
+			}
+
+			TooltipListBase = {
+				visible = "[Not(IsDataModelEmpty(AntagonismBombSpecWrap.GetAntagonismList))]"
+				blockoverride "block_title" {
+					text = "PEACE_TREATY_ANTAGONISM_ANTAGONISER_ENTRY"
+				}
+				
+				TooltipListScrollArea = {
+					blockoverride "block_scrollarea" {
+						maximumsize = { -1 400 }
+					}
+					blockoverride "scrollarea_content" {
+						fixedgridbox = {
+							addcolumn = 420
+							addrow = 30
+							setitemsizefromcell = yes
+		
+							datamodel = "[AntagonismBombSpecWrap.GetAntagonismList]"
+							item = {
+								widget = {
+									background = {
+										visible = "[IsOdd_int32(PdxGuiWidget.GetIndexInDataModel)]"
+										using = tooltip_table_field_texture
+									}
+
+									hbox = {
+										using = layoutpolicy_expanding
+										margin = { 5 0 }
+										spacing = 2
+										datacontext = "[AntagonismWrapper.GetCountry]"
+
+										country_flag_small = {}
+
+										text_single = {
+											align = nobaseline
+											text = "[Country.GetName]"
+										}
+										expand = {}
+
+										text_single = {
+											text = "[AntagonismWrapper.GetGained|2-=]"
+											tooltipwidget = {
+												SimpleContextualStringPairTooltipType = {
+													blockoverride "tooltip_title_text" {
+														text = "ANTAGONISM_TT_TITLE"
+													}
+													blockoverride "title_icon" {
+														icon = {
+															using = tooltip_title_icon_size
+															texture = "[GetConceptTexture('antagonism')]"
+														}
+													}
+													blockoverride "concept_link" {
+														text = "[antagonism|e]"
+													}
+													lowpriotextcontext = "[AntagonismWrapper.GetGainedBreakdown]"
+												}
+											}
+										}
+										text_single = {
+											raw_text = "(#R [AntagonismWrapper.GetNewTotal|2]#!)"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

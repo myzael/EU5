@@ -1170,3 +1170,55 @@ colonial_nation_can_declare_wars_trigger = {
 		}
 	}
 }
+
+has_compatible_heir_religion_law_with = {
+	custom_description = {
+		text = has_compatible_heir_religion_law_with_text
+		object = $country$
+		has_law = heir_religion_law
+		NOT = { has_policy = heir_special_succession }
+		"law_policy(law:heir_religion_law)" ?= { NOT = { is_locked_for = prev } }
+		trigger_if = {
+			limit = { religion = $country$.religion }
+			has_policy = heir_same_religion
+		}
+		trigger_else_if = {
+			limit = { religion.group = $country$.religion.group }
+			has_policy = heir_same_religion_group
+		}
+		trigger_else = {
+			has_policy = heir_any_religion
+		}
+	}
+}
+
+can_adopt_compatible_religion_law = {
+	custom_description = {
+		text = can_adopt_compatible_religion_law_text
+		object = $country$
+		OR = {
+			NOT = { has_law = heir_religion_law }
+			"law_policy(law:heir_religion_law)" = { NOT = { is_locked_for = prev } }
+		}
+		trigger_if = {
+			limit = { religion = $country$.religion }
+			OR = {
+				has_policy = heir_same_religion
+				policy:heir_same_religion = { is_available_for = prev }
+			}
+		}
+		trigger_else_if = {
+			limit = { religion.group = $country$.religion.group }
+			OR = {
+				has_policy = heir_same_religion_group
+				policy:heir_same_religion_group = { is_available_for = prev }
+			}
+		}
+		trigger_else = {
+			OR = {
+				has_policy = heir_any_religion
+				policy:heir_any_religion = { is_available_for = prev }
+			}
+		}
+	}
+}

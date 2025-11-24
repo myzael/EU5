@@ -63,9 +63,12 @@
 				limit = { scope:actor ?= { has_variable = supports_northern_court } }
 				tag = NTC
 			}
-			trigger_else = {
+			trigger_else_if = {
 				limit = { scope:actor ?= { has_variable = supports_southern_court } }
 				tag = STC
+			}
+			trigger_else = {
+				always = no
 			}
 		}
 	}

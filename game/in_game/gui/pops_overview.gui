@@ -785,7 +785,7 @@ lateralview_full = {
 													size = { 100% 100% }
 													text = "LOYAL_POP"
 													visible = "[Not(Pop.HasRebel)]"
-													default_format = "#subtle_name"
+													default_format = "#color_green"
 													align = center|nobaseline
 
 													sort_by_small_highlight = {

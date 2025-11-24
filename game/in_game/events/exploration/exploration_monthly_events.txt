@@ -814,7 +814,7 @@ exploration_monthly.21 = {
 	option = { #Invite them to court
 		name = exploration_monthly.21.c
 
-		scope:translator = { move_country = root }
+		scope:translator = { move_country = ROOT.owner }
 		owner = {
 			add_gold = { value = ROOT.exploration_monthly_cost multiply = -1 }
 			custom_tooltip = exploration_monthly.21.b.tt

@@ -173,7 +173,7 @@ situation_panel = {
 			blockoverride "left_bottom_text" {
 				layoutpolicy_horizontal = expanding
 				align = left|nobaseline
-				text = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('original_outbreak').GetDiseaseOutbreak.GetNumLocationsAffectedForCountry(Player.Self)]"
+				text = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('original_outbreak').GetDiseaseOutbreak.GetNumLocationsForSituationView(Player.Self)]"
 				tooltipwidget = {
 					ContextualTooltipType = {
 						blockoverride "title_text" {

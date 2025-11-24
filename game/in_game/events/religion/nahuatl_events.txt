@@ -1569,7 +1569,7 @@ nahuatl_events.310 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate}
-		ruler = {
+		ruler_or_regent = {
 			save_scope_as = target_character
 		}
 

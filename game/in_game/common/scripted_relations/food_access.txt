@@ -51,6 +51,7 @@
                 }
             }
             not = { receives_food_access_from = scope:recipient }
+            not = { is_fighting_war_together_with = scope:recipient }
         }
 	}
 

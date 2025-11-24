@@ -80,10 +80,10 @@ lateralview = {
 						blockoverride "button_setup" {
 							datacontext = "[SelectLoanLateralView.GetDeclareBankruptcyUIAction]"
 							using = button_action_provider
-							blockoverride "button_action_provider_tooltipwidget" {
-								tooltipwidget = { using = loan_action_tooltip }
-							}
-							# tooltipwidget = { using = action_tooltip_pop_out }
+		#					blockoverride "button_action_provider_tooltipwidget" {
+		#						tooltipwidget = { using = loan_action_tooltip }
+		#					}
+							 tooltipwidget = { using = action_tooltip_pop_out }
 						}
 
 						blockoverride "button_icon_obj" {}

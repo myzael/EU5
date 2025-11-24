@@ -1789,24 +1789,24 @@ lateralview = {
 	
 										# Antagonism
 										widget = {
-											size = { 100 35 }
+											size = { 110 35 }
 	
 											hbox = {
 												margin = {5 0}
 												spacing = 5
 	
 												tagtooltip_enabled = yes
-												tooltip = "[PeaceOfferLateralView.GetBaseAntagonism]"
+												tooltip = "[PeaceOfferLateralView.GetMaxAntagonism]"
 		
 												using = bg_text_mask_container_dark_red
-												
-												expand = {}
 												text_single = {
 													visible = "[PeaceOfferLateralView.IsAntagonismCalculationDone]"
 													text = "[PeaceOfferLateralView.GetMinAntagonism]-[PeaceOfferLateralView.GetMaxAntagonism]"
-													maximumsize = { 90 20 }
+													layoutpolicy_horizontal = expanding
+													autoresize = no
+													size = { -1 20 }
 													fontsize = 13
-													align = nobaseline
+													align = center
 												}
 												icon = {
 													size = {25 25}
@@ -1818,7 +1818,6 @@ lateralview = {
 														alpha = 0.6
 													}
 												}
-												expand = {}
 											}
 										}
 	

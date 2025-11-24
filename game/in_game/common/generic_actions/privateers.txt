@@ -18,7 +18,7 @@
 		scope:actor = {
 			modifier:can_hire_privateers = yes
 		}
-		scope:target = {
+		scope:target ?= {
 			not = {
 				has_privateers_from = scope:actor
 			}

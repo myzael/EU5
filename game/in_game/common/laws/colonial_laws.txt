@@ -7,7 +7,6 @@
 	colonial_representation_law_no = { #Colonial Nation has no representation
 		country_modifier = {
 			parliament_abolished = yes
-			loyalty_to_overlord = -20
 		}
 		on_activate = {
 			set_parliament_active = no
@@ -25,7 +24,7 @@
 			overlord_blocked_from_building_rgos = yes
 			overlord_blocked_from_building_roads = yes
 			overlord_blocked_from_building_buildings = yes
-			loyalty_to_overlord = 20
+			loyalty_to_overlord = 10
 		}
 		years = 2
 	}

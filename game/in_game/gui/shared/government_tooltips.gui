@@ -148,7 +148,7 @@ template Law_tooltip {
 					text = "LAW_TOOLTIP_POSSIBLE_POLICIES"
 				}
 
-				textcontext = "[Law.GetTooltip]"
+				textcontext = "[Law.GetTooltipWithCountryContext(Player.Self)]"
 			}
 
 			TooltipFlavorTextBlock = {
@@ -318,7 +318,7 @@ template IO_Law_tooltip {
 					text = "LAW_TOOLTIP_POSSIBLE_POLICIES"
 				}
 
-				textcontext = "[Law.GetTooltip]"
+				textcontext = "[Law.GetTooltipWithIOContext(ResolutionGlue.GetOwner.Self)]"
 			}
 
 			#show potential voting here
@@ -426,7 +426,7 @@ template Policy_tooltip {
 				textcontext = "[Policy.GetEffectOnlyText]"
 			}
 
-			TooltipTextBlock = {
+			TooltipStringPairList = {
 				visible = "[Not(StringIsEmpty(Policy.GetRuleChanges))]"
 				blockoverride "block_title" {
 					text = "RULE_CHANGES"
@@ -1582,25 +1582,25 @@ template SocietalValueItem_tooltip {
 						textcontext = "[SocietalValueItem.GetDirectionInfo]"
 					}
 
-					TooltipTutorialStringPairList = {
-						visible = "[SocietalValueItem.ShowLeftHint]"
-						blockoverride "block_title" {
-							text = "TO_MOVE_FURTHER_TO_LEFT"
-							default_format = "#help"
-						}
+					# TooltipTutorialStringPairList = {
+					# 	visible = "[SocietalValueItem.ShowLeftHint]"
+					# 	blockoverride "block_title" {
+					# 		text = "TO_MOVE_FURTHER_TO_LEFT"
+					# 		default_format = "#help"
+					# 	}
 
-						textcontext = "[SocietalValueItem.GetLeftHint]"
-					}
+					# 	textcontext = "[SocietalValueItem.GetLeftHint]"
+					# }
 
-					TooltipTutorialStringPairList = {
-						visible = "[SocietalValueItem.ShowRightHint]"
-						blockoverride "block_title" {
-							text = "TO_MOVE_FURTHER_TO_RIGHT"
-							default_format = "#help"
-						}
+					# TooltipTutorialStringPairList = {
+					# 	visible = "[SocietalValueItem.ShowRightHint]"
+					# 	blockoverride "block_title" {
+					# 		text = "TO_MOVE_FURTHER_TO_RIGHT"
+					# 		default_format = "#help"
+					# 	}
 
-						textcontext = "[SocietalValueItem.GetRightHint]"
-					}
+					# 	textcontext = "[SocietalValueItem.GetRightHint]"
+					# }
 
 					TooltipFlavorTextBlock = {
 						blockoverride "text" {
@@ -1637,6 +1637,16 @@ template SocietalValueItemLeft_tooltip {
 				textcontext = "[SocietalValueItem.GetType.GetLeftTooltip]"
 			}
 
+			TooltipTutorialStringPairList = {
+				# visible = "[SocietalValueItem.ShowRightHint]"
+				blockoverride "block_title" {
+					text = "TO_MOVE_FURTHER_TO_LEFT"
+					default_format = "#help"
+				}
+
+				textcontext = "[SocietalValueItem.GetLeftHint]"
+			}
+
 			TooltipFlavorTextBlock = {
 				blockoverride "text" {
 					text = "[SocietalValueItem.GetType.GetDesc]"
@@ -1668,6 +1678,16 @@ template SocietalValueItemRight_tooltip {
 
 			TooltipStringPairList = {
 				textcontext = "[SocietalValueItem.GetType.GetRightTooltip]"
+			}
+
+			TooltipTutorialStringPairList = {
+				# visible = "[SocietalValueItem.ShowRightHint]"
+				blockoverride "block_title" {
+					text = "TO_MOVE_FURTHER_TO_RIGHT"
+					default_format = "#help"
+				}
+
+				textcontext = "[SocietalValueItem.GetRightHint]"
 			}
 
 			TooltipFlavorTextBlock = {
@@ -2283,6 +2303,18 @@ template Estate_tooltip {
 			}
 
 			TooltipListBase = {
+			
+				TooltipManualTableField = {
+					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
+					text_single = {
+						text = "[gold|e]"
+					}
+					expand = {}
+					text_single = {
+						raw_text = "[Estate.GetGold|2]([Estate.GetBalance|+=2])@gold!"
+					}
+				}
+			
 				TooltipManualTableField = {
 					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
 					text_single = {
@@ -2291,10 +2323,6 @@ template Estate_tooltip {
 					expand = {}
 					text_single = {
 						raw_text = "[Estate.GetLastMonthsIncomeAfterTaxWithTooltip]@gold!"
-					}
-
-					tooltipwidget = {
-						using = estate_expense_tooltip
 					}
 				}
 
@@ -2328,6 +2356,11 @@ template Estate_tooltip {
 					text_single = {
 						raw_text = "#R -[Estate.GetLastMonthsExpense|2]@gold!#!"
 					}
+					
+					tooltipwidget = {
+						using = estate_expense_tooltip
+					}
+
 				}
 			}
 	

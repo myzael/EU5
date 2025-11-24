@@ -79,9 +79,7 @@ declare_independence_war = {
 		scope:actor ?= {
 			at_war = no
 			subject_loyalty < 50
-			NOT = {
-				has_truce_with = scope:actor.overlord
-			}
+			NOT = { has_truce_with = overlord }
 		}
 	}
 
@@ -116,14 +114,11 @@ declare_independence_war = {
 			subtract = scope:actor.subject_loyalty
 			multiply = 2
 		}
-		scope:actor = {
-			#Do it depending on opinion
-			add = {
-				value = -1
-				overlord ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.025
-				}
+
+		add = {
+			scope:actor = {
+				value = "opinion(overlord)"
+				multiply = -0.025
 			}
 		}
 	}
@@ -189,16 +184,14 @@ create_colonial_federation = {
 	ai_will_do = {
 		#Base value
 		add = {
+			desc = BASE_VALUE
 			value = -10
 		}
-		scope:actor = {
-			#Do it depending on opinion
-			add = {
-				value = -1
-				overlord ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.2
-				}
+
+		add = {
+			scope:actor = {
+				value = "opinion(overlord)"
+				multiply = -0.2
 			}
 		}
 	}
@@ -665,19 +658,20 @@ give_colony_rebellion_support = {
 		
 	}
 	ai_will_do = {
-		#Base value
+		#We need some base weight because price of action reduces ai_will_do
 		add = {
-			value = 1
+			desc = BASE_VALUE
+			value = 15
 		}
-		scope:actor ?= {
+
+		#scope:target_country = colony to receive aid, scope:actor = who sends the aid, overlord = overlord of scope:target_country
+		if = {
+			limit = { exists = scope:target_country }
 			#Do it depending on opinion
 			add = {
-				value = -1
-				scope:target ?= {
-					overlord ?= {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
-					}
+				scope:actor = {
+					value = "opinion(scope:target_country.overlord)"
+					multiply = -0.1
 				}
 			}
 		}

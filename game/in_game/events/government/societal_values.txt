@@ -10224,6 +10224,9 @@ societal_values.2305 = {	#Sinicization Backlash
 		has_societal_value = societal_value_type:sinicized_vs_unsinicized
 		societal_value:sinicized_vs_unsinicized < -25	#Too sinicized
 		modifier:monthly_towards_sinicized > modifier:monthly_towards_unsinicized
+		any_province = {
+			province_capital = { proximity > 50 }
+		}
 	}
 
 	immediate = {
@@ -10692,6 +10695,7 @@ societal_values.2318 = {	#Chinese Merchants settle <place>
 	}
 
 	trigger = {
+		num_of_non_rural > 0
 		has_societal_value = societal_value_type:sinicized_vs_unsinicized
 		societal_value:sinicized_vs_unsinicized < -50
 		is_member_of_international_organization = international_organization:middle_kingdom
@@ -10720,7 +10724,7 @@ societal_values.2318 = {	#Chinese Merchants settle <place>
 			max = 8
 			check_range_bounds = no
 			add_to_list = 2318_destination_list
-			#Above we take a locations and not province definitions. This is because the central chosen location
+			#Above we take a location and not a province definition. This is because the central chosen location
 			#is needed to calculate the distance between itself and the location origin of the migrants in scope:target_country
 		}
 		random_in_list = { 

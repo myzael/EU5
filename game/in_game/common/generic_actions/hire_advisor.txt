@@ -48,6 +48,7 @@
 							value = yes
 						}
 					}
+					not = { estate_type = estate_type:crown_estate }
 				}
 				estate_type = {
 					save_scope_as = target_estate_type

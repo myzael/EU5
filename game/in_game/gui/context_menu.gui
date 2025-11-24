@@ -98,7 +98,7 @@
 				tooltipwidget = { 
 					LeftClickButtonTooltip = {
 						blockoverride "onclick_text" { 
-							text = "[SelectLocalization(IsCountryFaved(Country.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+							text = "[SelectLocalization(IsCountryFaved(Country.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 						}
 					}
 				}
@@ -533,10 +533,10 @@
 							tooltipwidget = {BasicFunctionalTooltip = {}}
 						}
 
-						button_pin = {
-							size = { 23 23 }
-							checked = yes
-						}
+						# button_pin = {
+						# 	size = { 23 23 }
+						# 	checked = yes
+						# }
 					}
 				}
 
@@ -595,15 +595,15 @@
 					text = "[UnitActionItem.GetName]"
 				}
 
-				blockoverride "entry_right" {
-					hbox = {
-						button_pin = {
-							size = { 23 23 }
-							checked = yes
-							onclick = "[PinCollection.Toggle( UnitActionItem.GetKey )]"
-						}
-					}
-				}
+				# blockoverride "entry_right" {
+				# 	hbox = {
+				# 		button_pin = {
+				# 			size = { 23 23 }
+				# 			checked = yes
+				# 			onclick = "[PinCollection.Toggle( UnitActionItem.GetKey )]"
+				# 		}
+				# 	}
+				# }
 
 				tooltipwidget = {
 					using = UnitAction_tooltip
@@ -698,7 +698,7 @@
 						tooltipwidget = { 
 							LeftClickButtonTooltip = {
 								blockoverride "onclick_text" { 
-									text = "[SelectLocalization(IsSeazoneFaved(Location.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+									text = "[SelectLocalization(IsSeazoneFaved(Location.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 								}
 							}
 						}
@@ -768,7 +768,7 @@
 						tooltipwidget = { 
 							LeftClickButtonTooltip = {
 								blockoverride "onclick_text" { 
-									text = "[SelectLocalization(IsLocationFaved(Location.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+									text = "[SelectLocalization(IsLocationFaved(Location.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 								}
 							}
 						}
@@ -1401,7 +1401,7 @@
 				tooltipwidget = { 
 					LeftClickButtonTooltip = {
 						blockoverride "onclick_text" { 
-							text = "[SelectLocalization(IsCharacterFaved(Character.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+							text = "[SelectLocalization(IsCharacterFaved(Character.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 						}
 					}
 				}
@@ -1469,13 +1469,13 @@
 									text = "[UIActionProvider.GetTitle]"
 								}
 
-								blockoverride "entry_right" {
-									button_pin = {
-										size = { 23 23 }
-										checked = yes
-										tooltip_enabled = no
-									}
-								}
+								# blockoverride "entry_right" {
+								# 	button_pin = {
+								# 		size = { 23 23 }
+								# 		checked = yes
+								# 		tooltip_enabled = no
+								# 	}
+								# }
 							}
 
 							button = {
@@ -1522,13 +1522,13 @@
 									text = "[UIActionProvider.GetTitle]"
 								}
 
-								blockoverride "entry_right" {
-									button_pin = {
-										size = { 23 23 }
-										checked = yes
-										tooltip_enabled = no
-									}
-								}
+								# blockoverride "entry_right" {
+								# 	button_pin = {
+								# 		size = { 23 23 }
+								# 		checked = yes
+								# 		tooltip_enabled = no
+								# 	}
+								# }
 							}
 						}
 					}
@@ -1567,7 +1567,7 @@
 				tooltipwidget = { 
 					LeftClickButtonTooltip = {
 						blockoverride "onclick_text" { 
-							text = "[SelectLocalization(IsMarketFaved(Market.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+							text = "[SelectLocalization(IsMarketFaved(Market.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 						}
 					}
 				}

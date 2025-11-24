@@ -1115,7 +1115,8 @@ sco_authority_over_the_clergy = {
 	potential = {
 		has_unlocked_law_trigger = {
 			type = sco_authority_over_the_clergy
-		}	
+		}
+		religion = religion:catholic	
 	}
 
 	crown_religious_jurisdiction = {
@@ -1124,7 +1125,10 @@ sco_authority_over_the_clergy = {
 			monthly_religious_influence = -1
 			cultural_tradition = 0.2
 			court_spending_cost = -0.01
-			global_clergy_estate_power = -0.2
+			global_clergy_estate_power = -0.15
+			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
+			clergy_estate_min_tax = 0.05
+			papal_relations = -50
 		}
 		estate_preferences = {
 			crown_estate
@@ -1135,13 +1139,16 @@ sco_authority_over_the_clergy = {
 
 	limited_curia_oversight = {
 		country_modifier = {
-			global_crown_estate_power = 0.1
+			global_crown_estate_power = 0.05
 			monthly_religious_influence = -0.33
-			global_clergy_estate_power = -0.1
+			global_clergy_estate_power = -0.10
+			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
+			stability_cost = -0.15
+			clergy_estate_min_tax = 0.025
+			papal_relations = -20
 		}
 		estate_preferences = {
-			crown_estate
-			nobles_estate
+			clergy_estate
 		}
 		months = 12
 	}	

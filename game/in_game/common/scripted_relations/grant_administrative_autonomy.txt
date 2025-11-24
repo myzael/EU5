@@ -25,7 +25,6 @@
 		}		
 	}	
 	
-	request_visible = no
 	offer_effect = {
 		scope:actor = {
 			add_prestige = prestige_mild_penalty
@@ -47,6 +46,6 @@
 			}	
 		}	
 	}
-	request_visible = no
-	break_visible = no	
+	request_visible = { always = no }
+	break_visible = { always = no }	
 }	

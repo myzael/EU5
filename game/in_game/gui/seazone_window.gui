@@ -47,7 +47,7 @@ lateralview = {
 						tooltipwidget = { 
 							LeftClickButtonTooltip = {
 								blockoverride "onclick_text" { 
-									text = "[SelectLocalization(IsSeazoneFaved(Location.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+									text = "[SelectLocalization(IsSeazoneFaved(Location.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 								}
 							}
 						}

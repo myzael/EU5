@@ -232,6 +232,16 @@ template international_organization_resolution_voting_tooltip {
 			}
 			
 			TooltipTextBlock = {
+				visible = "[Not(ResolutionGlue.HasHighestVote)]"
+				tooltipmeta = {
+					texture = "gfx/interface/icons/laws/resolutions/law_voting.dds"
+					game_concept = "[resolution|e]"
+				}
+				textcontext = "RESOLUTION_PREDICTED_VOTE_OUTCOME_NONE"
+			}
+			
+			TooltipTextBlock = {
+				visible = "[ResolutionGlue.HasHighestVote]"
 				tooltipmeta = {
 					texture = "gfx/interface/icons/laws/resolutions/law_voting.dds"
 					game_concept = "[resolution|e]"

@@ -88,6 +88,7 @@
 		visible = {
 			trigger_if = {
 				limit = {
+					country_exists = c:DLH
 					this ?= c:DLH
 					exists = scope:actor
 				}
@@ -139,7 +140,7 @@
 					value = yes 
 				}
 			}
-			scope:actor = {
+			scope:proposer = {
 				if = {
 					limit = {
 						has_opinion = {
@@ -168,7 +169,7 @@
 					value = yes 
 				}
 			}
-			scope:actor = {
+			scope:proposer = {
 				if = {
 					limit = { 
 						has_opinion = {
@@ -192,6 +193,7 @@
 	ai_will_do = {
         if = {
             limit = {
+				country_exists = c:DLH
                 scope:vote = c:DLH
             }
             #if we like the pope 20 more than the opponent, do it

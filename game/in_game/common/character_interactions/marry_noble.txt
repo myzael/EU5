@@ -84,34 +84,7 @@
 		}
 
 		enabled = {
-			OR = {
-				AND = {
-					NOT = {
-						OR = {
-							scope:actor ?= { modifier:country_celtic_marriage_banned = yes }
-							scope:target = { owner ?= { modifier:country_celtic_marriage_banned = yes } }
-						}
-					}
-					OR = {
-						AND = {
-							NOT = { scope:target ?= { culture = { has_culture_group = culture_group:celtic_group } } }
-							scope:recipient ?= { culture = { has_culture_group = culture_group:celtic_group } }
-						}
-						AND = {
-							scope:target ?= { culture = { has_culture_group = culture_group:celtic_group } }
-							NOT = { scope:recipient ?= { culture = { has_culture_group = culture_group:celtic_group } } }
-						}
-					}
-				}
-				AND = {
-					scope:target ?= { culture = { has_culture_group = culture_group:celtic_group } }
-					scope:recipient ?= { culture = { has_culture_group = culture_group:celtic_group } }
-				}
-				AND = {
-					NOT = { scope:target ?= { culture = { has_culture_group = culture_group:celtic_group } } }
-					NOT = { scope:recipient ?= { culture = { has_culture_group = culture_group:celtic_group } } }
-				}
-			}
+			character_can_marry_recipient_trigger = yes
 		}
 	}
 	

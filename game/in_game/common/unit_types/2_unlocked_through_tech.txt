@@ -718,8 +718,6 @@ a_light_dragoons = {
 	morale_damage_taken = 0.20
 	initiative = 5
 	
-	light = yes
-	
 	gfx_tags = { heavy_tag }
 }
 

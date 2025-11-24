@@ -116,7 +116,7 @@ por_colonial_governors = {
 			is_portuguese_spain = yes
 		}
 	}
-	subject_loyalty = 10
+	subject_loyalty = 5
 	
 	requires = maritime_advance_age_5
 }

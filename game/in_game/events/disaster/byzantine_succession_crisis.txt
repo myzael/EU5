@@ -250,6 +250,7 @@ byzantine_succ_crisis.4 = { #Mariners Guild Rises Up
 					AND = {
 						exists = root.var:succession_crisis_pretender_variable
 						has_rebel = root.var:succession_crisis_pretender_variable
+							has_rebel = yes
 					}
 					pop_satisfaction < 0.4
 				}

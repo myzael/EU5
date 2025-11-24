@@ -1829,6 +1829,7 @@ hook_and_cod_wars.1200 = {
 			limit = { any_owned_location = { any_pop = { has_rebel = var:hacw_cod_faction } } }
 			destroy_rebel = var:hacw_cod_faction
 		}
+		disable_disaster_effect = { type = hook_and_cod_wars }
 		hidden_effect = {
 			destroy_variable = { variable = hook_claimant_ally_alive }
 			destroy_variable = { variable = hook_claimant_enemy_alive }
@@ -1981,12 +1982,14 @@ hook_and_cod_wars.1202 = {
 					name = hacw_hook_contender
 					value = scope:new_claimant
 				}
+				set_variable = { name = hacw_contender_variable_1 value = scope:new_claimant_character }
 			}
 			else = {
 				set_variable = {
 					name = hacw_cod_contender
 					value = scope:new_claimant
 				}
+				set_variable = { name = hacw_contender_variable_2 value = scope:new_claimant_character }
 			}
 			destroy_variable = { variable = hook_claimant_ally_alive }
 			destroy_variable = { variable = hook_claimant_enemy_alive }

@@ -901,7 +901,6 @@ ues_eastern_power = {
 }
 
 utn_mediator_of_kanto = {
-	icon = isk_sanindo_gate
 	icon = ues_eastern_power
 	age = age_3_discovery
 	potential = {

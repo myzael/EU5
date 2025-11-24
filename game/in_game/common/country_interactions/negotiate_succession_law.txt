@@ -49,16 +49,20 @@
 				has_heir = no
 			}
 			OR = {
-				AND = {
-					has_law = heir_religion_law
-					"law_policy(law:heir_religion_law)" = {
-						this != "scope:actor.law_policy(law:heir_religion_law)"
-						NOT = { is_locked_for = root }
+				custom_tooltip = {
+					text = negotiate_succession_law_at
+					AND = {
+						can_adopt_compatible_religion_law = { country = scope:actor }
+						NOT = { has_compatible_heir_religion_law_with = { country = scope:actor } }
 					}
 				}
-				succession_law = {
-					this != scope:actor.succession_law
-					NOT = { is_locked_for = root }
+				custom_tooltip = {
+					text = negotiate_succession_law_ct
+					scope:actor.succession_law = { NOT = { has_tag = cannot_be_transferred } }
+					succession_law = {
+						this != scope:actor.succession_law
+						NOT = { is_locked_for = root }
+					}
 				}
 			}
 		}
@@ -70,6 +74,7 @@
 			scope:actor = {
 				if = {
 					limit = {
+						succession_law = { NOT = { has_tag = cannot_be_transferred } }
 						scope:recipient = {
 							succession_law = {
 								this != scope:actor.succession_law
@@ -81,29 +86,23 @@
 						save_scope_as = target_heir_selection
 					}
 				}
-				if = {
-					limit = {
-						has_law = heir_religion_law
-						scope:recipient = {
-							"law_policy(law:heir_religion_law)" = {
-								this != "scope:actor.law_policy(law:heir_religion_law)"
-								NOT = { is_locked_for = prev }
-							}
-						}
-					}
-					"law_policy(law:heir_religion_law)" = {
-						save_scope_as = target_policy
-					}
-				}
 			}
 			scope:recipient = {
 				if = {
 					limit = { exists = scope:target_heir_selection }
 					change_heir_selection = scope:target_heir_selection
 				}
+				else = {
+					custom_tooltip = negotiate_succession_law_dt
+				}
 				if = {
-					limit = { exists = scope:target_policy }
-					add_policy = scope:target_policy
+					limit = {
+						AND = {
+							can_adopt_compatible_religion_law = { country = scope:actor }
+							NOT = { has_compatible_heir_religion_law_with = { country = scope:actor } }
+						}
+					}
+					adopt_compatible_heir_religion_law = { country = scope:actor }
 				}
 				add_opinion = {
 					target = scope:actor
@@ -132,6 +131,10 @@
 	}
 
 	accept = {
+		subtract = {
+			desc = "DIPLOREASON_BASE"
+			value = 50
+		}
 		add = {
 			desc = "THEIR_OPINION_TOOLTIP"
 			value = "scope:recipient.opinion(scope:actor)"
@@ -148,31 +151,35 @@
 			}
 		}
 		if = {
-			limit = {
-				scope:recipient = {
-					government_type = government_type:theocracy
-				}
+			limit = { scope:recipient = { government_type = government_type:theocracy } }
+			subtract = {
+				desc = "is_theocracy"
+				value = 100
 			}
-			subtract = 100
 		}
 		if = {
-			limit = {
-				scope:recipient = {
-					government_type = government_type:monarchy
-				}
-			}
-			subtract = 50
-		}
-		add = {
-			scope:actor = {
-				value = modifier:diplomatic_reputation
-				multiply = 3
+			limit = { scope:recipient = { government_type = government_type:republic } }
+			subtract = {
+				desc = "is_republic"
+				value = 50
 			}
 		}
 		add = {
-			scope:recipient = {
-				value = "trust(scope:actor)"
-				divide = 5
+			desc = "[diplomatic_reputation|e]"
+			value = scope:actor.modifier:diplomatic_reputation
+			multiply = 3
+		}
+		add = {
+			desc = "DIPLOREASON_TRUST"
+			value = "scope:recipient.trust(scope:actor)"
+			divide = 5
+		}
+		if = {
+			limit = { exists = scope:actor.union }
+			add = {
+				desc = "DIPLOREASON_YEARS_IN_UNION"
+				value = "scope:recipient.years_in_international_organization(scope:actor.union)"
+				divide = 4
 			}
 		}
 	}

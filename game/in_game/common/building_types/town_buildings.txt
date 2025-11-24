@@ -361,7 +361,6 @@ wharf = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = burghers
-	max_levels = 1
 
 	employment_size = small_burgher_employment
 

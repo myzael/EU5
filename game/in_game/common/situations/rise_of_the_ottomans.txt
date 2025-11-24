@@ -13,8 +13,15 @@
 	
 	visible = {
 		OR = {
-			tag = TUR
-			is_neighbor_of = c:TUR
+			trigger_if = {
+				limit = { country_exists = situation:rise_of_the_ottomans.var:strongest_beylik_variable }
+				OR = {
+					is_neighbor_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable
+					is_rival_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable
+					is_enemy_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable
+					is_subject_or_below_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable
+				}
+			}
 			has_presence_in = region:balkan_region
 			has_presence_in = region:anatolia_region
 			has_reform = government_reform:anatolian_beylik
@@ -38,6 +45,7 @@
 		}
 		ordered_in_global_list = {  
 			variable = eligible_beylik_list
+			limit = { is_subject = no }
 			order_by = {
 				
 				add = {
@@ -45,10 +53,6 @@
 				}
 				add = {
 					value = monthly_income_trade_and_tax
-				}
-				if = {	#If they are a subject, they receive a -25% penalty to their score 
-					limit = { is_subject = yes }
-					multiply = 0.75
 				}
 			} 
 			max = 1
@@ -63,12 +67,6 @@
 					value = {
 						add = var:strongest_beylik_variable.military_strength
 						add = var:strongest_beylik_variable.monthly_income_trade_and_tax 
-						if = {
-							limit = {	#If they are a subject, they receive a -25% penalty to their score 
-								var:strongest_beylik_variable ?= { is_subject = yes }
-							}
-							multiply = 0.75
-						}
 					}
 				}
 			}
@@ -76,7 +74,10 @@
 		}
 		ordered_in_global_list = {  
 			variable = eligible_beylik_list
-			limit = { this != situation:rise_of_the_ottomans.var:strongest_beylik_variable }
+			limit = { 
+				this != situation:rise_of_the_ottomans.var:strongest_beylik_variable 
+				is_subject = no
+			}
 			order_by = {
 					
 				add = {
@@ -84,11 +85,6 @@
 				}
 				add = {
 					value = monthly_income_trade_and_tax
-				}
-
-				if = {	#If they are a subject, they receive a -25% penalty to their score 
-					limit = { is_subject = yes }
-					multiply = 0.75
 				}
 			} 
 			max = 1
@@ -103,12 +99,6 @@
 					value = {
 						add = var:second_strongest_strongest_beylik_variable.military_strength
 						add = var:second_strongest_strongest_beylik_variable.monthly_income_trade_and_tax
-						if = {
-							limit = {	#If they are a subject, they receive a -25% penalty to their score 
-								var:second_strongest_strongest_beylik_variable ?= { is_subject = yes }
-							}
-							multiply = 0.75
-						}
 					}
 				}
 			}
@@ -118,6 +108,7 @@
 			limit = {
 				this != situation:rise_of_the_ottomans.var:strongest_beylik_variable 
 				this != situation:rise_of_the_ottomans.var:second_strongest_strongest_beylik_variable 
+				is_subject = no
 			}
 			order_by = {
 					
@@ -126,11 +117,6 @@
 				}
 				add = {
 					value = monthly_income_trade_and_tax
-				}
-
-				if = {	#If they are a subject, they receive a -25% penalty to their score 
-					limit = { is_subject = yes }
-					multiply = 0.75
 				}
 			} 
 			max = 1
@@ -145,12 +131,6 @@
 					value = {
 						add = var:third_strongest_strongest_beylik_variable.military_strength
 						add = var:third_strongest_strongest_beylik_variable.monthly_income_trade_and_tax
-						if = {
-							limit = {	#If they are a subject, they receive a -25% penalty to their score 
-								var:third_strongest_strongest_beylik_variable ?= { is_subject = yes }
-							}
-							multiply = 0.75
-						}
 					}
 				}
 			}
@@ -199,8 +179,7 @@
 				trigger = {
 					var:strongest_beylik_variable ?= {
 						any_owned_location = {
-							integration_level = conquered
-							integration_progress > 0
+							is_currently_being_integrated = yes
 						}
 					}
 				}
@@ -305,38 +284,63 @@
 	}
 
 
-	on_ended = {
-		#if = {
-		#	limit = {
-		#		var:rot_timer > 600
-		#	}
-		#	every_country = {
-		#		limit = {
-		#			capital = {
-		#				OR = {
-		#					region = region:balkan_region
-		#					region = region:anatolia_region
-		#				}
-		#			}
-		#		}
-		#		trigger_event_non_silently = rise_of_the_ottomans.3
-		#	}
-		#}
-		#else =  {
+	on_ending = {
+		if = {
+			limit = {
+				OR = {
+					global_variable_list_size = {
+						name = eligible_beylik_list
+						value < 1
+					}
+					AND = {
+						current_year > 1400
+						NOT = {
+							any_in_global_list = {
+								variable = eligible_beylik_list
+								is_subject = no
+								num_locations >= 100
+							}
+						}
+					}
+					AND = {
+						current_year > 1565
+						var:strongest_beylik_variable ?= { 
+							num_locations < 500
+							num_of_non_rural < 50
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					global_variable_list_size = {
+						name = eligible_beylik_list
+						value > 0
+					}
+				}
+				every_in_global_list = {
+					variable = eligible_beylik_list
+					trigger_event_non_silently = rise_of_the_ottomans.500
+				}
+			}
+			every_country = {
+				limit = {
+					any_in_global_list = {
+						variable = eligible_beylik_list
+						this != prev
+					}
+					can_see_situation = situation:rise_of_the_ottomans
+				}
+				trigger_event_non_silently = rise_of_the_ottomans.3
+			}
+		}
+		else =  {
 			every_country = {
 				remove_country_modifier = ai_force_annexation  
 
 				limit = {
 					NOT = { situation:rise_of_the_ottomans.var:strongest_beylik_variable = this }
-					OR = {
-						has_reform = government_reform:anatolian_beylik
-						capital = {
-							OR = {
-								region = region:balkan_region
-								region = region:anatolia_region
-							}
-						}
-					}
+					can_see_situation = situation:rise_of_the_ottomans
 				}
 				trigger_event_non_silently = rise_of_the_ottomans.4
 			}
@@ -371,27 +375,8 @@
 			remove_variable = strongest_strongest_beylik_total_score_variable
 			remove_variable = second_strongest_strongest_beylik_total_score_variable
 			remove_variable = third_strongest_strongest_beylik_total_score_variable
-			if = {
-				limit = {
-					current_year > 1400
-					NOT = {
-						any_in_global_list = {
-							variable = eligible_beylik_list
-							num_locations >= 100
-						}
-					}
-					global_variable_list_size = {
-						name = eligible_beylik_list
-						value >= 1
-					}
-				}
-				every_in_global_list = {
-					variable = eligible_beylik_list
-					trigger_event_non_silently = rise_of_the_ottomans.500
-				}
-			}
 		}
-	#}
+	}
 
 	tooltip = {
 		if = { #Stronghold City
@@ -512,7 +497,13 @@
 			}
 			value = situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable.country_color
 		}
-		else_if = {
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+
+	secondary_map_color = {
+		if = {
 			limit = {
 				owner ?= { is_subject_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable }
 			}
@@ -529,9 +520,6 @@
 				owner ?= { is_subject_of = situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable }
 			}
 			value = situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable.country_color
-		}
-		else = {
-			value = define:NMapColors|DEFAULT_COLOR
 		}
 	}
 	

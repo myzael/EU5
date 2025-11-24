@@ -306,6 +306,9 @@ periphora = {
 canonize = {
 	religious_influence = 150
 }
+invite_foreign_cleric = {
+	religious_influence = 100
+}
 
 change_parliament_type = {
 	government_power = 50

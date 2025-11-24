@@ -253,6 +253,22 @@ dynastic.5 = {
 	}
 }
 
+scripted_trigger male_eligible_for_hookup = {
+	is_alive = yes
+	has_estate = estate_type:nobles_estate
+	character_can_marry_trigger = yes
+	is_adult = yes
+	is_female = no
+}
+
+scripted_trigger female_eligible_for_hookup = {
+	is_alive = yes
+	has_estate = estate_type:nobles_estate
+	character_can_marry_trigger = yes
+	is_adult = yes
+	is_female = yes
+}
+
 dynastic.6 = {
 	hide_portraits = yes
 	type = country_event
@@ -285,15 +301,51 @@ dynastic.6 = {
 				ruler ?= { is_female = no }
 			}
 
-			create_character = {
-				estate = estate_type:nobles_estate
-				age = { 18 30 }
-				female = yes
-				create_in_limbo = yes
-				save_scope_as = hookup_char
+			if = {
+				limit = {
+					any_character = { male_eligible_for_hookup = yes }
+				}
+				
+				random_character = {
+					limit = { male_eligible_for_hookup = yes }
+					save_scope_as = hookup_char
+				}
 			}
+
+			else = {	
+				create_character = {
+					estate = estate_type:nobles_estate
+					age = { 18 30 }
+					female = yes
+					create_in_limbo = yes
+					save_scope_as = hookup_char
+				}
+			}
+
 		}
 		else = {
+
+			if = {
+				limit = {
+					any_character = { female_eligible_for_hookup = yes }
+				}
+				
+				random_character = {
+					limit = { female_eligible_for_hookup = yes }
+					save_scope_as = hookup_char
+				}
+			}
+
+			else = {	
+				create_character = {
+					estate = estate_type:nobles_estate
+					age = { 18 30 }
+					female = no
+					create_in_limbo = yes
+					save_scope_as = hookup_char
+				}
+			}
+
 			create_character = {
 				estate = estate_type:nobles_estate
 				age = { 18 30 }
@@ -310,6 +362,10 @@ dynastic.6 = {
 			has_ruler_in_country = yes
 			ruler ?= { is_female = no }
 		}
+
+		hidden_effect = {
+			scope:hookup_char = { move_country = root }
+		}
 		trigger_event_silently = { id = dynastic.6001 months = 9 }
 		add_prestige = prestige_weak_bonus
 	}
@@ -319,12 +375,32 @@ dynastic.6 = {
 			has_ruler_in_country = yes
 			ruler ?= { is_female = yes }
 		}
+		
+		hidden_effect = {
+			scope:hookup_char = { move_country = root }
+		}
 		trigger_event_silently = { id = dynastic.6001 months = 9 }
 		add_prestige = prestige_weak_bonus
 	}
 	option = {
 		name = dynastic.6.c
 		add_legitimacy = legitimacy_weak_bonus
+
+		hidden_effect = {
+			scope:hookup_char = {
+				if = {
+					limit = { 
+						owner ?= {
+							NOT = { this = root }
+						}
+					}
+					kill_character_silently = scope:hookup_char
+				}
+				else = {
+					scope:hookup_char = { banish_character = yes }
+				}
+			}
+		}
 	}
 }
 
@@ -369,6 +445,7 @@ dynastic.6001 = {
 				female = scope:char_sex
 				no_stats = yes
 				trait_category = none
+				add_character_modifier = { modifier = bastard years = -1 mode = add_and_extend }
 				save_scope_as = target_child
 			}
 		}
@@ -383,6 +460,7 @@ dynastic.6001 = {
 				female = scope:char_sex
 				no_stats = yes
 				trait_category = none
+				add_character_modifier = { modifier = bastard years = -1 mode = add_and_extend }
 				save_scope_as = target_child
 			}
 		}

@@ -101,7 +101,7 @@ joint_ruling.100 = {
 					is_alive = yes	#Check necessary in case the brother dies somehow
 				}
 			}
-			set_new_ruler_with_union = { character = scope:jealous_brother }
+			set_new_ruler_with_union = { character = scope:pretender_brother }
 		}
 		add_prestige = prestige_weak_bonus
 		add_stability = stability_weak_bonus

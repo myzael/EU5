@@ -13,8 +13,10 @@
 	food_storage_per_strength = 2
 	food_consumption_per_strength = 2
 	
-	damage_taken = 0.25		#artillery vs infantry in size
-
+	
+	morale_damage_taken = 0.25
+	strength_damage_taken = 0.5
+	
 	
 	frontage = 1
 	initiative = 1

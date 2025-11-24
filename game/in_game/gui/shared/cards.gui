@@ -1181,8 +1181,9 @@ types Cards
 								raw_text = "IOs Card important title header"
 							}
 						}
-						# block "card_header_content_extra" {}
-						expand = {}
+						block "card_header_content_extra" {
+							expand = {}
+						}
 					# }
 				}
 			}

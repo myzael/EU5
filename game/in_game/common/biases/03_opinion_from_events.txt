@@ -816,6 +816,16 @@ accepted_supremacy_of_rome = {
 	yearly_decay = 1
 }
 
+returned_rome = {
+	value = 10
+	yearly_decay = 2
+}
+
+declined_return_rome = {
+	value = -30
+	yearly_decay = -2
+}
+
 
 
 eng_tolerates_religious_freedom = {

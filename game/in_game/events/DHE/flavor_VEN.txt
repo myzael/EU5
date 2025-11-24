@@ -585,7 +585,12 @@ flavor_ven.14 = {
 		owns = location:venice
 		"culture_percentage_in_country(culture:greek_culture)" > 0
 		location:constantinople = {
-			NOT = {	owner = c:BYZ }
+			trigger_if = {
+				limit = {
+					country_exists = c:BYZ
+				}
+				NOT = {	owner = c:BYZ }
+			}
 			NOT = { owner = c:VEN }
 		}
 	}

@@ -1,4 +1,5 @@
 ﻿cb_fabricated_conquer_province = {
+	visible = { always = no }
 	allow_creation = {
 		scope:target = {
 			any_owned_location = {

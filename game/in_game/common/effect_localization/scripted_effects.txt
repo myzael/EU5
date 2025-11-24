@@ -938,7 +938,7 @@ set_senior_partner_text = {
 	first_past = PAST_WE_SET_SENIOR_PARTNER_EFFECT
 	third_past = PAST_THIRD_SET_SENIOR_PARTNER_EFFECT
 }
-cast_vote_text_text = {
+cast_vote_text = {
 	global = CAST_VOTE_EFFECT
 	first = FIRST_CAST_VOTE_EFFECT
 	third = THIRD_CAST_VOTE_EFFECT

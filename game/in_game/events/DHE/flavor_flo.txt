@@ -1923,6 +1923,10 @@ flavor_flo.49 = { # The Consolidation of Power
 		}
 		government_type = government_type:republic
 		NOT = { has_reform = government_reform:dynastic_signoria_reform }
+
+		NOT = {
+			any_current_reforms = { is_major_reform = yes }
+		}
 	}
 
 	illustration_tags = {
@@ -2504,6 +2508,7 @@ flavor_flo.57 = { # Formation of the Medici Bank https://en.wikipedia.org/wiki/M
 	major = yes
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1390.1.1
 		to = 1410.1.1
 		monthly_chance = 10

@@ -22,6 +22,7 @@ opinion_forced_succession_law_on_partner = {
 opinion_tried_to_excommunicate_us = {
 	value = -50
 	yearly_decay = 5
+	min = -200
 }
 
 opinion_receiving_deny_market_access = {
@@ -43,6 +44,7 @@ opinion_receiving_trade_access = {
 opinion_excommunicated = {
 	value = -100
 	yearly_decay = 5
+	min = -200
 }
 
 opinion_broke_trade_access = {
@@ -565,5 +567,10 @@ schism_called_council = {
 
 opinion_denied_sinicization_modifier = {
 	value = -100
+	yearly_decay = 5
+}
+
+opinion_released_from_unlawful_territory = {
+	value = 100
 	yearly_decay = 5
 }

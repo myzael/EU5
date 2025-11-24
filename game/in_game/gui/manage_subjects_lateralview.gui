@@ -522,7 +522,8 @@ types Subject_Types {
 												size = {-1 30}
 												autoresize = no
 												align = center
-												raw_text = "[Multiply_CFixedPoint(Country.GetMilitaryStrength, '(CFixedPoint)1000')|L0] @army_strength!"
+												#raw_text = "[Multiply_CFixedPoint(Country.GetMilitaryStrength, '(CFixedPoint)1000')|L0] @army_strength!"
+												raw_text = "[Country.GetTotalArmyStrengthAndPotentialLevies|L0] @army_strength!"
 												datacontext = "[SubjectItem.GetCountry]"
 												tooltipwidget = {
 													using = Army_size_tooltip
@@ -542,6 +543,7 @@ types Subject_Types {
 			}
 		}
 	}
+	
 	
 	type subject_type_small = fixedgridbox {
 		addcolumn = 100%

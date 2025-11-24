@@ -108,19 +108,35 @@
 					scope:target = c:PAP
 				}
 				c:PAP = {
-					add = { value = scope:actor.this_opinion_of_prev }
+					add = {
+						scope:actor = {
+							value = this_opinion_of_prev
+						}
+					}
 				}
 				situation:western_schism.var:schism_opponent_country = {
-					subtract = { value = scope:actor.this_opinion_of_prev }
+					subtract = {
+						scope:actor = {
+							value = this_opinion_of_prev
+						}
+					}
 				}
 				add = -20
 			}
 			else = {
 				c:PAP = {
-					subtract = { value = scope:actor.this_opinion_of_prev }
+					subtract = {
+						scope:actor = {
+							value = this_opinion_of_prev
+						}
+					}
 				}
 				situation:western_schism.var:schism_opponent_country = {
-					add = { value = scope:actor.this_opinion_of_prev }
+					add = {
+						scope:actor = {
+							value = this_opinion_of_prev
+						}
+					}
 				}
 				add = -20
 			}

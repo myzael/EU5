@@ -94,11 +94,9 @@
 				limit = { is_leader_of_international_organization = international_organization:italian_league_1 }
 				destroy_international_organization = { target = international_organization:italian_league_1 }
 				hidden_effect = {
-					situation:italian_wars = {
-						set_variable = {
-							name = recently_destroyed_a_league_variable
-							years = 2
-						}
+					set_global_variable = {
+						name = recently_destroyed_a_league_variable
+						years = 2
 					}
 				}
 			}
@@ -106,11 +104,9 @@
 				limit = { is_leader_of_international_organization = international_organization:italian_league_2 }
 				destroy_international_organization = { target = international_organization:italian_league_2 }
 				hidden_effect = {
-					situation:italian_wars = {
-						set_variable = {
-							name = recently_destroyed_a_league_variable
-							years = 2
-						}
+					set_global_variable = {
+						name = recently_destroyed_a_league_variable
+						years = 2
 					}
 				}
 			}
@@ -118,11 +114,9 @@
 				limit = { is_leader_of_international_organization = international_organization:italian_league_3 }
 				destroy_international_organization = { target = international_organization:italian_league_3 }
 				hidden_effect = {
-					situation:italian_wars = {
-						set_variable = {
-							name = recently_destroyed_a_league_variable
-							years = 2
-						}
+					set_global_variable = {
+						name = recently_destroyed_a_league_variable
+						years = 2
 					}
 				}
 			}

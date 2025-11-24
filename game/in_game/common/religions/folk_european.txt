@@ -24,7 +24,7 @@ hellenism_religion = { #https://en.wikipedia.org/wiki/Hellenism_(modern_religion
 	religious_aspects = 1
     enable = 9999.1.1 #Activated by flavor_byz
     definition_modifier = {
-        levy_combat_efficiency_modifier = 0.05
+        army_infantry_power = 0.05
         skill_of_new_artists = 0.1
     }
     

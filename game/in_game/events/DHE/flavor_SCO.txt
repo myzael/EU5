@@ -2303,8 +2303,14 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
  	option = { # The jurisdiction of the <scots> belongs solely to <king>!
 		name = flavor_sco.200.a
 		historical_option = yes
+		show_as_tooltip = {
+			unlock_law_effect = {
+				type = sco_authority_over_the_clergy
+			}
+		}
 		add_religious_influence = religious_influence_severe_penalty
 		add_policy = policy:crown_religious_jurisdiction
+		custom_tooltip = sco_retain_clergy_jurisdiction_requirements
 		ai_chance = {
 			factor = 0.50
 		}
@@ -2312,8 +2318,14 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
 
  	option = { # Limit papal oversight, but allow prelates free access to the Curia.
 		name = flavor_sco.200.b
+		show_as_tooltip = {
+			unlock_law_effect = {
+				type = sco_authority_over_the_clergy
+			}
+		}
 		add_religious_influence = religious_influence_mild_penalty
 		add_policy = policy:limited_curia_oversight
+		custom_tooltip = sco_retain_clergy_jurisdiction_requirements
 		ai_chance = {
 			factor = 0.25
 		}

@@ -43,6 +43,14 @@ allow_mysticism_vs_jurisprudence={
 	}
 }
 
+shared_border_impact = {
+	percent = yes
+	game_data={
+		category=country
+	}
+}
+
+
 army_logistics_distance={
 	game_data={
 		category=unit
@@ -2541,6 +2549,14 @@ train_general_cost_modifier={
 }
 
 train_admiral_cost_modifier={
+	color=bad
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+invite_foreign_cleric_cost_modifier={
 	color=bad
 	percent=yes
 	game_data={
@@ -5318,14 +5334,14 @@ country_cabinet_efficiency={
 }
 
 subject_loyalty={
-	decimals=0
+	decimals=2
 	game_data={
 		category=country
 	}
 }
 
 loyalty_to_overlord={
-	decimals=0
+	decimals=2
 	game_data={
 		category=country
 	}
@@ -9409,6 +9425,23 @@ local_disease_resistance={
 global_disease_resistance={
 	decimals=0
 	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+local_prosperity_decay={
+	percent=yes
+	color=bad
+
+	game_data={
+		category=location
+	}
+}
+
+global_prosperity_decay={
+	percent=yes
+	color = bad
 	game_data={
 		category=country
 	}
@@ -13739,4 +13772,18 @@ forbid_multiple_policies_vote = {
 	}
 	color = neutral
 	boolean = yes
+}
+
+union_allowed_enforce_peace={
+	boolean=yes
+	game_data={
+		category=internationalorganization
+	}
+}
+
+unlock_prikazi_reform_cabinet_actions = {
+	boolean=yes
+	game_data={
+		category=country
+	}
 }

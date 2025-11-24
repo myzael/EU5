@@ -941,9 +941,6 @@ galley_barracks = {
 	rural_settlement = no
 	town = no
 	city = yes
-	
-	
-	build_time = large_port_building_time
 
 	
 	location_potential = {
@@ -2125,6 +2122,7 @@ gosho = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		any_foreign_building_countries_in_location = { this = scope:actor }
 	}
 
 
@@ -2224,6 +2222,7 @@ yakata = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		any_foreign_building_countries_in_location = { this = scope:actor }
 	}
 
 	modifier = {
@@ -2272,6 +2271,29 @@ shoen = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		custom_tooltip = {
+			text = we_are_shugo_tt
+			OR = {
+				any_foreign_building_countries_in_location = { this = scope:actor }
+				AND = {
+					NOR = {
+						this = location:izumi
+						this = location:iga
+						this = location:awa
+						this = location:oki
+						this = location:awaji
+					}
+					province_definition = {
+						any_location_in_province_definition = {
+							any_foreign_buildings_in_location = {
+								owner ?= scope:actor
+								building_type = building_type:kokufu
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	modifier = {
@@ -2356,6 +2378,7 @@ tatara = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		any_foreign_building_countries_in_location = { this = scope:actor }
 	}
 
 	unique_production_methods = {
@@ -2412,6 +2435,7 @@ clan_shipyards = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		any_foreign_building_countries_in_location = { this = scope:actor }
 	}
 
 	possible_production_methods = {
@@ -2463,6 +2487,7 @@ clan_family_shrine = {
 	
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
+		any_foreign_building_countries_in_location = { this = scope:actor }
 	}
 
 	possible_production_methods = {
@@ -4326,9 +4351,6 @@ sufi_mosque = {
 	can_close = no
 	
 	country_potential = {
-		always = no
-	}
-	allow = {
 		always = no
 	}
 

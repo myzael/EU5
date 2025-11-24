@@ -943,7 +943,6 @@
 			remove_variable = mission_task_total_goods_value_increase
 			set_variable = {
 				name = mission_task_num_of_markets
-				value = 3
 				value = {
 					value = num_of_markets_with_merchants
 					add = 3

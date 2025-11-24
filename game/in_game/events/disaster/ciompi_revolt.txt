@@ -576,7 +576,8 @@ ciompi_revolt.7 = { #Pressure and Reform
 		trigger = {
 			dynasty_exists = medici_dynasty
 			ruler ?= {
-				dynasty = dynasty:medici_dynasty
+				has_dynasty = yes
+				dynasty ?= dynasty:medici_dynasty
 				total_abilities >= 210
 			}
 		}
@@ -606,7 +607,8 @@ ciompi_revolt.8 = { #Crisis and Change
 		ordered_character = {
 			order_by = total_abilities
 			limit = {
-				dynasty = dynasty:medici_dynasty
+				has_dynasty = yes
+				dynasty ?= dynasty:medici_dynasty
 				is_ruler = no
 			}
 			max = 1

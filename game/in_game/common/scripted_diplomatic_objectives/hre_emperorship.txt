@@ -40,7 +40,8 @@
 
             #Somebody is voting for us     
             international_organization:hre = {
-                "active_resolution(resolution:hre_election)" = {
+			    has_active_resolution = yes
+                "active_resolution(resolution:hre_election)" ?= {
                     save_temporary_scope_as = election
                 }
                 OR = {
@@ -69,7 +70,8 @@
                 is_rival_of = scope:recipient
             }
             international_organization:hre = {
-                "active_resolution(resolution:hre_election)" = {
+			    has_active_resolution = yes
+                "active_resolution(resolution:hre_election)" ?= {
                     "cast_vote_in_active_resolution(scope:recipient)" ?= scope:actor 
                 }
             }
@@ -96,9 +98,10 @@
             at_war = yes
         }
     }
-    cancel_trigger = { 
+    cancel_trigger = {
         international_organization:hre = {
-            "active_resolution(resolution:hre_election)" = {
+			has_active_resolution = yes
+            "active_resolution(resolution:hre_election)" ?= {
                 "cast_vote_in_active_resolution(scope:recipient)" ?= scope:actor 
             }
         }

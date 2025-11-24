@@ -3,7 +3,6 @@
 	category = CATEGORY_SUBJECT_ACTIONS
 
 	ai_tick = never
-	ai_tick = never
 	
 	use_enroute = no
 

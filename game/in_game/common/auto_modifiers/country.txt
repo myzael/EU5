@@ -23,6 +23,8 @@ country_base_values = {
 	navy_tradition_decay = 0.005
 	global_maritime_presence_decay = 0.005
 	monthly_karma_decay = 0.01
+	
+	global_prosperity_decay = 0.01
 
 	monthly_rebel_growth = 0.001
 	
@@ -730,7 +732,7 @@ positive_harmony = {
 		multiply = 0.01
 	}
 	global_estate_target_satisfaction = tiny_satisfaction_scaled_down
-	global_monthly_prosperity = -0.002
+	global_prosperity_decay = 0.02
 	monthly_harmony = -0.1
 }
 balanced_harmony = {
@@ -994,8 +996,9 @@ lack_of_rivals = {
 		min = 0
 	}
 
+
+	monthly_prestige = -0.1
 	antagonism_received_modifier = 0.1
-	monthly_towards_conciliatory = societal_value_monthly_move
 	counter_espionage = -0.1
 	spy_network_construction = -0.1
 }

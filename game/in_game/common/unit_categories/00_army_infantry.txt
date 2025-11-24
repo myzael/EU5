@@ -23,7 +23,7 @@
 	combat_speed = 2
 	
 	flanking_ability = 1.0
-	secure_flanks_defense = 1.0 # +100% defense with one secure flank (= -50% damage taken). +200% defense with both flanks secure (= -67% damage taken). Compared with isolated box.
+	secure_flanks_defense = 0.25
 
 	maintenance_demand =  infantry_maintenance
 	construction_demand = infantry_construction

@@ -2788,7 +2788,7 @@ widget = {
 							blockoverride "item_unit_text_object" {
 								hbox = {
 									# margin_left = @[unit_marker_morale_progressbar_size * 0.6]
-									margin = {2 0}
+									margin_left = 4
 									margin_right = 8
 									vbox = {
 										using = layoutpolicy_expanding
@@ -2807,6 +2807,7 @@ widget = {
 											layoutpolicy_horizontal = expanding
 											size = { -1 5 }
 											progressbar = {
+												parentanchor = right
 												visible = "[Unit.HasMaximumMaintenance]"
 												size = { 100% 5 }
 												using = progress_bar_green_alt
@@ -2816,6 +2817,7 @@ widget = {
 												}
 											}
 											progressbar = {
+												parentanchor = right
 												visible = "[Not(Unit.HasMaximumMaintenance)]"
 												size = { 100% 5 }
 												using = progress_bar_goldish
@@ -2886,7 +2888,7 @@ widget = {
 									
 									blockoverride "item_unit_text_object" {
 										hbox = {
-											margin_left = 2
+											margin_left = 4
 											margin_right = 7
 
 											vbox = {
@@ -2909,6 +2911,7 @@ widget = {
 													size = { -1 5 }
 													progressbar = {
 														visible = "[Unit.HasMaximumMaintenance]"
+														parentanchor = right
 														size = { 100% 5 }
 														using = progress_bar_green_alt
 														value = "[UnitMarkerItem.GetAverageMoralePercent]"
@@ -2918,6 +2921,7 @@ widget = {
 													}
 													progressbar = {
 														visible = "[Not(Unit.HasMaximumMaintenance)]"
+														parentanchor = right
 														size = { 100% 5 }
 														using = progress_bar_goldish
 														value = "[UnitMarkerItem.GetAverageMoralePercent]"
@@ -3487,7 +3491,7 @@ widget = {
 	}
 }
 
-### FORT ICON
+### FORT ICON (and province capitals) in tactical map mode
 container = {
 	name = "fort_marker"
 	allow_outside = yes
@@ -3503,6 +3507,7 @@ container = {
 			}
 		}
 		icon = {
+			visible = "[Location.HasAnyFort]"
 			parentanchor = center
 			texture = "[GetBuildingIcon(Location.GetBestFortBuilding.GetType)]"
 			size = { 30 30 }

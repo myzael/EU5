@@ -18,7 +18,7 @@
 		}
 	}
 
-	request_visible = no
+	request_visible = { always = no }
 
 	offer_enabled = {
 		scope:recipient = { has_markets = yes }

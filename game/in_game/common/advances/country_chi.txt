@@ -65,7 +65,7 @@ tributary_system = {
 		has_or_had_tag = CHI
 	}
 
-	subject_loyalty = 10
+	subject_loyalty = 5
 
 	requires = diplomatic_range_age_1
 }

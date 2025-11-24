@@ -39,8 +39,8 @@ subject_pays_pradhana_maha_samanta = {
 
 hanseatic_member_cost = {
 	scaled_gold = 0.05
-	scaled_sailors = 0.1
-	scaled_manpower = 0.1
+	scaled_sailors = 0.01
+	scaled_manpower = 0.01
 	ignore_inflation = yes
 }
 

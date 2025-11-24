@@ -605,10 +605,12 @@ template round_advance_icon {
 	}
 
 	widget = {
-		parentanchor = center
+		block "round_advance_icon_army_position" {
+			parentanchor = center
+			position = { 8 -1 }
+		}
 		size = { 112% 112% }
 		visible = "[And(Advance.GetDefinition.HasSubunitUnlocks, Not(Advance.GetDefinition.HasNavyUnlocks))]"
-		position = { 8 -1 }
 		background = {
 			texture = "[GetSubunitTypeIllustration(Advance.GetDefinition.GetFirstSubunitUnlock, Player.GetCulture)]"
 			fittype = center
@@ -625,9 +627,11 @@ template round_advance_icon {
 	}
 
 	widget = {
-		parentanchor = center
+		block "round_advance_icon_navy_position" {
+			parentanchor = center
+			position = { 0 -6}
+		}
 		size = { 115% 115% }
-		position = { 0 -6}
 		visible = "[And(Advance.GetDefinition.HasSubunitUnlocks, Advance.GetDefinition.HasNavyUnlocks)]"
 		background = {
 			texture = "[GetSubunitTypeIllustration(Advance.GetDefinition.GetFirstSubunitUnlock, Player.GetCulture)]"

@@ -2,7 +2,7 @@
 	ability = dip
 	icon = diplomatic_endeavors
 	potential = {
-		has_reform = government_reform:prikazi_reform
+		modifier:unlock_prikazi_reform_cabinet_actions = yes
 		has_variable = posolsky_prikaz_established
 	}
 	

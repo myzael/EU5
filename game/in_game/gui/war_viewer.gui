@@ -612,7 +612,7 @@ window = {
 								downpressedframe = 3
 								disableframe = 4
 
-								text = "[WarGlue.GetWar.GetName]"
+								text = "[WarGlue.GetName]"
 								onclick = "[WarViewer.OpenWarView(WarGlue.AccessSelf)]"
 								down = "[WarViewer.IsWarViewOpen(WarGlue.Self)]"
 								tooltipwidget = { LeftClickButtonTooltip = { blockoverride "onclick_text" { text = "WAR_VIEWER_OPEN_VIEW" } } }

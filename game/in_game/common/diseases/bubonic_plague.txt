@@ -331,7 +331,7 @@
 		local_pop_promotion_speed_modifier = -2.0
 		local_pop_demotion_speed_modifier = 0.5
 		
-		local_monthly_prosperity = -0.1
+		local_prosperity_decay = 0.1
 		local_monthly_control = -0.002
 
 		local_monthly_development = -0.01
@@ -370,6 +370,15 @@
 		}
 	}
 	
+	secondary_map_color = {
+		if = {
+			limit = {
+				disease_affects_pops_here = scope:disease
+			}
+			value = rgb { 100  120  188 }
+		}
+	}
+
 	# script value for the minimum percentage there has to be in a location before it will start spreading
 	# to new locations. 
 	#(root is the location, scope:disease is the disease, 

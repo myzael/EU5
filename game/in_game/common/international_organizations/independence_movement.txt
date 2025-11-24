@@ -98,7 +98,7 @@
 		leader_country = {
 			or = {
 				subject_loyalty > 80
-				not = { overlord = scope:target }
+				not = { overlord ?= scope:target }
 				is_allied_with = { target = scope:target }
 				has_truce_with = scope:target
 				is_fighting_war_together_with = scope:target
@@ -115,7 +115,7 @@
 			}
 			add_casus_belli = { 
 				type = casus_belli:cb_independence_war
-				province = scope:target.capital.province
+				province = scope:actor.capital.province
 				target = scope:target
 			}
 		}
@@ -277,7 +277,10 @@
 				value = 100
 				multiply = {
 					value = scope:relative_strength_of_io
-					divide = scope:relative_strength_of_target
+					divide = {
+						value = scope:relative_strength_of_target
+						add = scope:relative_strength_of_io
+					}
 				}
 				subtract = 50
 			}

@@ -779,8 +779,10 @@ betray_our_allegiance = {	#Betray our Allegiance
 					}
 					scope:target_defender_scope = {
 						subtract = {	#Better opinion with the defender reduces the chances of pressing this button
-							value = scope:actor.this_opinion_of_prev
-							multiply = 0.1
+							scope:actor = {
+								value = this_opinion_of_prev
+								multiply = 0.1
+							}
 						}
 					}
 				}
@@ -796,8 +798,10 @@ betray_our_allegiance = {	#Betray our Allegiance
 					}
 					scope:target_attacker_scope = {
 						add = {	#Better opinion with the attacker increases the chances of pressing this button
-							value = scope:actor.this_opinion_of_prev
-							multiply = 0.2
+							scope:actor = {
+								value = this_opinion_of_prev
+								multiply = 0.2
+							}
 						}
 					}
 				}
@@ -836,8 +840,10 @@ betray_our_allegiance = {	#Betray our Allegiance
 					}
 					scope:target_defender_scope = {
 						add = {	#Better opinion with the defender increases the chances of pressing this button
-							value = scope:actor.this_opinion_of_prev
-							multiply = 0.2
+							scope:actor = {
+								value = this_opinion_of_prev
+								multiply = 0.2
+							}
 						}
 					}
 				}
@@ -853,8 +859,10 @@ betray_our_allegiance = {	#Betray our Allegiance
 					}
 					scope:target_attacker_scope = {
 						subtract = {	#Better opinion with the attacker increases the chances of pressing this button
-							value = scope:actor.this_opinion_of_prev
-							multiply = 0.1
+							scope:actor = {
+								value = this_opinion_of_prev
+								multiply = 0.1
+							}
 						}
 					}
 				}

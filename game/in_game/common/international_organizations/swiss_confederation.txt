@@ -227,8 +227,10 @@
 						else = {
 							value = -1
 						}
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1 
+						multiply = {
+							value = "scope:actor.opinion(scope:recipient.leader_country)"
+							multiply = 0.1
+						}
 					}
 				}
 			}

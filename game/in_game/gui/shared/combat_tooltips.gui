@@ -3111,23 +3111,12 @@ template SubunitInCombat_tooltip {
 				}
 				textcontext = "[SubUnitType.GetPowerDescriptionCombat]"
 			}
-
+			
+			
 			TooltipStringPairList = {
-				# visible = "[AndSubUnit.HasTarget]"
-				visible = "[Not(StringIsEmpty(SubUnit.GetTargetDetails))]"
-				blockoverride "block_title" {
-					text = "[SubUnit.GetTargetInfo]"
-				}
-				textcontext = "[SubUnit.GetTargetDetails]"
+				textcontext = "[SubUnit.GetCombatDetails]"
 			}
 
-			TooltipTextBlock = {
-				# visible = "[Not(SubUnit.HasTarget)]"
-				visible = "[StringIsEmpty(SubUnit.GetTargetDetails)]"
-				blockoverride "text" {
-					text = "COMBATTOOLTIP_NO_TARGET"
-				}
-			}
 		}
 	}
 }

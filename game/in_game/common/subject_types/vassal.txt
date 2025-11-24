@@ -98,8 +98,10 @@
 	institution_spread_to_subject = monthly_institution_spread_mild
 	
 	overlord_modifier = {
-		monthly_prestige = 0.01
+		monthly_towards_decentralization = societal_value_tiny_monthly_move
 	}
+
+	
 	subject_modifier = {
 		country_cabinet_efficiency = 0.05
 	}

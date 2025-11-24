@@ -51,7 +51,7 @@
 
 	diplomatic_capacity_cost_scale = 0.5
 
-	strength_vs_overlord = -0.1
+	strength_vs_overlord = -0.05
 
 
 	subject_can_cancel = no
@@ -89,6 +89,7 @@
 	subject_modifier = {
 		global_population_capacity_modifier = 0.10
 		allow_rgo_slave_demand = yes
+		loyalty_to_overlord = 20
 	}
 
 	creation_visible = {

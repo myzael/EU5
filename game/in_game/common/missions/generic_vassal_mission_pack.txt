@@ -82,8 +82,10 @@
 			value = {
 				scope:mission_target_subject = {
 					add = {
-						value = root.this_opinion_of_prev
-						multiply = 1.25
+						root = {
+							value = this_opinion_of_prev
+							multiply = 1.25
+						}
 					}
 				}
 				max = 175

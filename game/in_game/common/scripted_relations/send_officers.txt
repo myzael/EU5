@@ -13,18 +13,15 @@
 
 	visible = {
 		scope:recipient = { country_type = location }			
-		scope:actor = {
-			overlord ?= scope:recipient
-		}
 	}
 
-	offer_enabled = {
+	offer_visible = {
 		scope:recipient = {
 			overlord ?= scope:actor
 		}
 	}
 
-	request_enabled = {
+	request_visible = {
 		scope:actor = {
 			overlord ?= scope:recipient
 		}

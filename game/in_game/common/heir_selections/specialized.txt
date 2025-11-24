@@ -315,6 +315,18 @@ matrilineal_non_exclusive = {
 			limit = {
 				exists = root
 			}
+			add = {
+				desc = "HEIR_SELECTION_ADM_DESC"
+				value = root.adm
+			}
+			add = {
+				desc = "HEIR_SELECTION_DIP_DESC"
+				value = root.dip
+			}
+			add = {
+				desc = "HEIR_SELECTION_MIL_DESC"
+				value = root.mil
+			}
 			if = {
 				limit = { 
 					OR = {

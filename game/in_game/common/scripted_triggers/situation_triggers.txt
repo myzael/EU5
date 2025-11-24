@@ -568,34 +568,40 @@ rise_of_timur_end_conditions = {
 rise_of_the_ottomans_end_trigger = {
 	OR = {
 		current_year > 1565
-		trigger_if = {
-			limit = { 
-				country_exists = c:TUR
-				var:strongest_beylik_variable = c:TUR
-			}
-			custom_tooltip = {
-				text = strongest_beylik_has_over_75_locations
-				var:strongest_beylik_variable = { 
-					num_locations > 500 
-					num_of_non_rural >= 50
-				}	
-			}
-		}
-		trigger_else = {
-			custom_tooltip = {
-				text = strongest_beylik_has_over_75_locations
-				var:strongest_beylik_variable = { 
-					num_locations > 500
-					num_of_non_rural >= 50
-				}
-			}
-			NOT = { country_exists = c:TUR }
-		}
 		custom_tooltip = {
 			text = no_beyliks_left_tt
 			global_variable_list_size = {
 				name = eligible_beylik_list
 				value < 1
+			}
+		}
+		trigger_if = {
+			limit = { 
+				country_exists = c:TUR
+				var:strongest_beylik_variable = c:TUR
+			}
+			AND = {
+				custom_tooltip = {
+					text = strongest_beylik_has_over_75_locations
+					var:strongest_beylik_variable = { 
+						num_locations > 500 
+						num_of_non_rural >= 50
+					}	
+				}
+				var:strongest_beylik_variable = { is_subject = no }
+			}
+		}
+		trigger_else = {
+			AND = {
+				custom_tooltip = {
+					text = strongest_beylik_has_over_75_locations
+					var:strongest_beylik_variable = { 
+						num_locations > 500
+						num_of_non_rural >= 50
+					}
+				}
+				NOT = { country_exists = c:TUR }
+				var:strongest_beylik_variable = { is_subject = no }
 			}
 		}
 		AND = {
@@ -1036,16 +1042,6 @@ is_location_claimed_or_owned_by_country = {
 		AND = {
 			has_owner = yes
 			top_owner ?= scope:owner_country_scope
-		}
-	}
-}
-
-#root = actor country
-pope_has_better_or_equal_opinion_of_root_than = {
-	value = c:PAP.this_opinion_of_prev
-	compare_value >= {
-		$other_country$ = {
-			value = c:PAP.this_opinion_of_prev
 		}
 	}
 }

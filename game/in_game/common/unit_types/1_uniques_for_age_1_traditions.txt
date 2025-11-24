@@ -518,12 +518,12 @@ a_byzantine_cataphracts = {
 
 	build_time_modifier = 0.50
 	
-	construction_demand = heavy_cavalry_construction
-	maintenance_demand =  heavy_cavalry_maintenance
+	construction_demand = expensive_heavy_cavalry_construction
+	maintenance_demand =  expensive_heavy_cavalry_maintenance
 	
 	buildable = yes
 
-	movement_speed = 1
+	movement_speed = -0.5
 	strength_damage_taken = -0.25
 	morale_damage_done = 0.33
 	initiative = 4

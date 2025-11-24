@@ -190,5 +190,6 @@ german_baltic = { #Baltic https://en.wikipedia.org/wiki/Baltic_Germans
 
 	culture_groups = {
 		german_group
+		baltic_group
 	}
 }

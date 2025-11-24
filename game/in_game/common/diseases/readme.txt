@@ -15,6 +15,7 @@
 # location_infection_spread_threshold: script value for the minimum percentage there has to be in a location before it will start spreading to new locations (0..1). (root is the character's location, scope:disease is the disease, scope:disease_outbreak is the specific outbreak, scope:current_presence is the current disease presence in the location)
 # on_spread_to_country: event sent when the disease spreads to a country (root is the country, scope:disease is the disease)
 # map_color: map color for the disease (root is the location, scope:disease is the disease)
+# secondary_map_color: secondary map color (stripes) for the disease (root is the location, scope:disease is the disease)
 # specific_pop_type_effect: by default, diseases spread to all pop types equally. This can be adjusted here.
 #    e.g. specific_pop_type_effect = { pop_type = nobles multiplier = 0 } if you want the disease to leave all nobles alone
 #

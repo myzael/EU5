@@ -53,6 +53,7 @@
 	ai_will_do = {
 		#Base value
 		add = {
+			desc = BASE_VALUE
 			value = 10
 		}
 		scope:actor = {
@@ -73,7 +74,10 @@
 						}
 					}
 				}
-				add = 100
+				add = {
+					value = 100
+					desc = "We hate our current side"
+				}
 			}
 			#Don't do it if they hate the other side
 			if = {
@@ -92,44 +96,48 @@
 						}
 					}
 				}
-				add = -100
+				add = {
+					value = -100
+					desc = "We have the other side"
+				}
 			}
 			#Do it depending on opinion
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_northern_court
-					}
-					value = -1
+			if = {
+				limit = {
+					has_variable = supports_northern_court
+				}
+				add = {
+					desc = "Our opinion of $JAP$"
 					c:JAP = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
+						scope:actor = {
+							value = this_opinion_of_prev
+							multiply = -0.1
+						}
 					}
-				}
+					add = {
+						desc = "Our opinion of $NTC$"
+						c:NTC = {
+							scope:actor = {
+								value = this_opinion_of_prev
+								multiply = -0.1
+							}
+						}
+					}
+				} 
 			}
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_northern_court
-					}
-					value = -1
-					c:NTC = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
-					}
+			else_if = {
+				limit = {
+					has_variable = supports_southern_court
 				}
-			}
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_southern_court
-					}
-					value = -1
+				add = {
+					desc = "Our opinion of $STC$"
 					c:STC = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
+						scope:actor = {
+							value = this_opinion_of_prev
+							multiply = -0.1
+						}
 					}
-				}
+				} 
 			}
 		}
 	}
@@ -193,44 +201,39 @@ nanbokuchou_declare_neutrality = {
 						}
 					}
 				}
-				add = 100
+				add = {
+					value = 100
+					desc = "We hate both sides"
+				}
 			}
 			#Do it depending on opinion
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_northern_court
-					}
-					value = -1
+			if = {
+				limit = {
+					has_variable = supports_northern_court
+				}
+				add = {
+					desc = "Our opinion of $JAP$"
 					c:JAP = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
+						scope:actor = {
+							value = this_opinion_of_prev
+							multiply = -0.1
+						}
 					}
-				}
+				} 
 			}
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_northern_court
-					}
-					value = -1
-					c:NTC = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
-					}
+			if = {
+				limit = {
+					has_variable = supports_southern_court
 				}
-			}
-			add = {
-				if = {
-					limit = {
-						has_variable = supports_southern_court
-					}
-					value = -1
+				add = {
+					desc = "Our opinion of $STC$"
 					c:STC = {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.1
+						scope:actor = {
+							value = this_opinion_of_prev
+							multiply = -0.1
+						}
 					}
-				}
+				} 
 			}
 		}
 	}

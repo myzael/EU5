@@ -340,7 +340,7 @@ military_contribution = {
 		on_activate = {
 			custom_tooltip = manpower_from_cities_tt
 			hre_on_reform_level_passed_effect = { law = military_contribution level = 1 law_imperial_authority_cost = imperial_authority_standard_law }
-			hre_on_reform_level_passed_opinion_effect_free_cities = { strength = controversial } # free cities loose opinion
+			hre_on_reform_level_passed_opinion_effect_free_cities = { strength = controversial } # free cities lose opinion
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -366,7 +366,7 @@ military_contribution = {
 		on_activate = {
 			custom_tooltip = manpower_from_electors_tt
 			hre_on_reform_level_passed_effect = { law = military_contribution level = 2 law_imperial_authority_cost = imperial_authority_standard_law }
-			hre_on_reform_level_passed_opinion_effect_electors = { strength = controversial } # free cities loose opinion
+			hre_on_reform_level_passed_opinion_effect_electors = { strength = controversial } # free cities lose opinion
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -396,7 +396,7 @@ military_contribution = {
 		on_activate = {
 			custom_tooltip = manpower_from_princes_tt
 			hre_on_reform_level_passed_effect = { law = military_contribution level = 3 law_imperial_authority_cost = imperial_authority_controversial_law }
-			hre_on_reform_level_passed_opinion_effect_all_members = { strength = controversial } # all members loose opinion
+			hre_on_reform_level_passed_opinion_effect_all_members = { strength = controversial } # all members lose opinion
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -423,7 +423,7 @@ military_contribution = {
 		on_activate = {
 			custom_tooltip = great_imperial_army_tt
 			hre_on_reform_level_passed_effect = { law = military_contribution level = 4 law_imperial_authority_cost = imperial_authority_opposed_law }
-			hre_on_reform_level_passed_opinion_effect_all_members = { strength = opposed } # all members loose opinion
+			hre_on_reform_level_passed_opinion_effect_all_members = { strength = opposed } # all members lose opinion
 		}
 		international_organization_modifier = {
 			hre_emperor_comfort_policies_counter = 1

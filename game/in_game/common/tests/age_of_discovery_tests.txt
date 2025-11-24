@@ -15,7 +15,8 @@ british_families_fight_war_of_the_roses = {
         }
     }
 
-    year = 1530
+    end_year = 1530
+    fail_on_end_year = yes
 } 
 
 european_historical_colonizers = {

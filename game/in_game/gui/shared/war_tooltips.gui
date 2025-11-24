@@ -60,7 +60,7 @@ template War_tooltip {
 							text_single = {
 								layoutpolicy_horizontal = expanding
 								visible = "[GreaterThan_int32(War.GetExtraAttackers, '(int32)0')]"
-								raw_text = "+[War.GetExtraAttackers]"
+								raw_text = "+[War.GetExtraAttackers][war_allies_icon]"
 								using = Font_Size_Medium
 
 								tooltipwidget = {
@@ -120,7 +120,7 @@ template War_tooltip {
 								layoutpolicy_horizontal = expanding
 								align = right
 								visible = "[GreaterThan_int32(War.GetExtraDefenders, '(int32)0')]"
-								raw_text = "+[War.GetExtraDefenders]"
+								raw_text = "[war_allies_icon]+[War.GetExtraDefenders]"
 								using = Font_Size_Medium
 
 								tooltipwidget = {
@@ -633,11 +633,38 @@ template war_ally_participation_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
-			pie_chart_legend = {
+			icon_pie = {
+				blockoverride "PieSize" { size = { 150 150 } }
+				blockoverride "pie_datamodel" {	datamodel = "[WarLateralView.GetFriendlyParticipantsSorted]" }
+
+				###Slices and Icon
+				blockoverride "SliceTooltip" { tooltip = "[WarLateralViewParticipant.GetCountry.GetName]" }
+				blockoverride "SliceValue" { value = "[WarLateralViewParticipant.GetWarParticipation]" }
+				blockoverride "SliceColor" { color = "[WarLateralViewParticipant.GetCountry.GetMapColor]" }
+				blockoverride "Icon" {
+					texture = "gfx/interface/icons/flat_icons/war_view/participation.dds"
+					texture_density = 2
+					modify_texture = {
+						using = overlay_stone_texture
+						blend_mode = overlay
+						alpha = 1
+					}
+					modify_texture = {
+						using = overlay_window_texture
+						blend_mode = overlay
+						alpha = 1
+					}
+					glow = {
+						name = "drop_shadow"
+						glow_radius = 3
+						color = {0.0 0.0 0.0 1.0}
+						alpha = 0.3
+					}
+				}
 				blockoverride "datamodel" {	datamodel = "[WarLateralView.GetFriendlyParticipantsSorted]" }
 				blockoverride "color" { color = "[WarLateralViewParticipant.GetCountry.GetMapColor]" }
 				blockoverride "leftside_info" {text = "[WarLateralViewParticipant.GetCountry.GetName]"}
-				blockoverride "rightside_info" {text = "[WarLateralViewParticipant.GetWarParticipation|%2]"}
+				blockoverride "rightside_info" {raw_text = "[WarLateralViewParticipant.GetWarParticipation|%2]" }
 			}
 		}
 	}
@@ -659,11 +686,38 @@ template war_enemy_participation_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
-			pie_chart_legend = {
+			icon_pie = {
+				blockoverride "PieSize" { size = { 150 150 } }
+				blockoverride "pie_datamodel" {	datamodel = "[WarLateralView.GetEnemyParticipantsSorted]" }
+
+				###Slices and Icon
+				blockoverride "SliceTooltip" { tooltip = "[WarLateralViewParticipant.GetCountry.GetName]" }
+				blockoverride "SliceValue" { value = "[WarLateralViewParticipant.GetWarParticipation]" }
+				blockoverride "SliceColor" { color = "[WarLateralViewParticipant.GetCountry.GetMapColor]" }
+				blockoverride "Icon" {
+					texture = "gfx/interface/icons/flat_icons/war_view/participation.dds"
+					texture_density = 2
+					modify_texture = {
+						using = overlay_stone_texture
+						blend_mode = overlay
+						alpha = 1
+					}
+					modify_texture = {
+						using = overlay_window_texture
+						blend_mode = overlay
+						alpha = 1
+					}
+					glow = {
+						name = "drop_shadow"
+						glow_radius = 3
+						color = {0.0 0.0 0.0 1.0}
+						alpha = 0.3
+					}
+				}
 				blockoverride "datamodel" {	datamodel = "[WarLateralView.GetEnemyParticipantsSorted]" }
 				blockoverride "color" { color = "[WarLateralViewParticipant.GetCountry.GetMapColor]" }
 				blockoverride "leftside_info" {text = "[WarLateralViewParticipant.GetCountry.GetName]"}
-				blockoverride "rightside_info" {text = "[WarLateralViewParticipant.GetWarParticipation|%2]"}
+				blockoverride "rightside_info" {raw_text = "[WarLateralViewParticipant.GetWarParticipation|%2]" }
 			}
 		}
 	}

@@ -16,7 +16,10 @@ get_claim_from_imperial_court = {
 	}
 
 	allow = {
-		scope:actor ?= { at_war = no }
+		scope:actor ?= { 
+			at_war = no
+			NOT = { is_leader_of_international_organization = international_organization:japanese_shogunate }
+		}
 	}
 
 	automation_tick = never
@@ -44,6 +47,13 @@ get_claim_from_imperial_court = {
 		none_available_msg_key = "no_valid_countries"
 		column = { data = name }
 		column = { data = population }
+		interaction_source_list = {
+			religion:shinto = {
+				every_country_in_religion = {
+					add_to_list = source
+				}
+			}
+		}
 		visible = {
 			exists = scope:actor
 			custom_tooltip = {
@@ -54,10 +64,6 @@ get_claim_from_imperial_court = {
 					overlord ?= { this != scope:actor }
 				}
 				NOT = { is_allied_with = { target = scope:actor } }
-				scope:actor ?= { 
-					opinion = { target = prev value <= 50 }
-					NOT = { has_casus_belli_of_type_on = { type = casus_belli:cb_japanese_clan_expand_authority target = prev } }
-				}
 				OR = {
 					AND = {
 						scope:actor = { country_type = location }
@@ -75,6 +81,17 @@ get_claim_from_imperial_court = {
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		enabled = {
+			OR = {
+				NOT = { exists = scope:target }
+				scope:target ?= {
+					scope:actor ?= { 
+						opinion = { target = scope:target value <= 50 }
+						NOT = { has_casus_belli_of_type_on = { type = casus_belli:cb_japanese_clan_expand_authority target = scope:target } }
 					}
 				}
 			}

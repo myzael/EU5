@@ -136,13 +136,68 @@
 			if = {
 				limit = { 
 					scope:target.owner = {
-						top_overlord = scope:actor
+						is_subject = yes
+						top_overlord ?= scope:actor
 					}
 				}
 
 				add = {
 					value = -1000
 					desc = "our subject"
+				}
+			}
+
+			if = {
+				limit = { 
+					scope:actor = { is_during_bankruptcy = yes }
+				}
+				subtract = {
+					desc = "[bankruptcy|e]"
+					value = 1000
+				}
+			}
+
+			if = {
+				limit = { 
+					scope:actor = { num_loans > 0 }
+				}
+				subtract = {
+					desc = "loans"
+					value = 1000
+				}
+			}
+
+			if = {
+				limit = { 
+					scope:actor = { stability < 0 }
+				}
+				subtract = {
+					desc = "low stability"
+					value = 1000
+				}
+			}
+
+			if = {
+				limit = {
+					scope:actor = {
+						has_truce_with = scope:target.owner
+					}
+				}
+				add = {
+					value = -1000
+					desc = "truce"
+				}
+			}
+
+			if = {
+				limit = {
+					scope:actor = {
+						wants_to_subjugate = scope:target.owner
+					}
+				}
+				add = {
+					value = -1000
+					desc = "wants to subjugate"
 				}
 			}
 
@@ -158,15 +213,24 @@
 
 			add = {
 				desc = "RELATIVE_STRENGTH"
-				value = "scope:actor.relative_strength(scope:target.owner)"
+				value = "scope:actor.relative_defensive_alliance_strength(scope:target.owner)"
 				multiply = 100
-				subtract = 50
+				subtract = 60
 			}
 
 			add = {
 				desc = "we want their land"
 				value = "scope:actor.conquer_desire(scope:target.owner)"
 				divide = 5
+			}
+
+			if = {
+				limit = {
+					scope:target = location:constantinople.province
+				}
+
+				add = -1
+				desc = "Though to siege constantinople"
 			}
 
 			if = {
@@ -195,28 +259,6 @@
 			add = {
 				value = 25
 				desc = BASE_VALUE
-			}
-		}
-
-		if = {
-			limit = { 
-				scope:actor = { is_during_bankruptcy = yes }
-			}
-			subtract = {
-				desc = "[bankruptcy|e]"
-				value = 1000
-			}
-		}
-
-		if = {
-			limit = {
-				scope:actor = {
-					has_truce_with = scope:target.owner
-				}
-			}
-			add = {
-				value = -1000
-				desc = "truce"
 			}
 		}
 	}

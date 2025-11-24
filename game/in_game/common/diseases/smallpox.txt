@@ -152,6 +152,16 @@
 			factor = "disease_presence(scope:disease)"
 		}
 	}
+	
+	secondary_map_color = {
+		if = {
+			limit = {
+				disease_affects_pops_here = scope:disease
+			}
+			value = rgb { 100  120  188 }
+		}
+	}
+
 	#by default, diseases spread to all pop types equally. This can be adjusted here.
 	#    e.g. specific_pop_type_effect = { pop_type = nobles multiplier = 0 } if you want the disease to leave all nobles alone
 	#specific_pop_type_effect = {}

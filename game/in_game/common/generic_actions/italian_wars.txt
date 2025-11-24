@@ -495,6 +495,10 @@ create_italian_league = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			text = league_was_not_destroyed_in_the_last_2_years_tt
+			NOT = { has_global_variable = recently_destroyed_a_league_variable }
+		}
 		scope:actor ?= {
 			at_war = no
 			is_during_bankruptcy = no
@@ -549,12 +553,6 @@ create_italian_league = {
 		visible = {
 			situation:italian_wars = this
 			situation_is_active = yes
-		}
-		enabled = {
-			custom_tooltip = {
-				text = league_was_not_destroyed_in_the_last_2_years_tt
-				NOT = { has_variable = recently_destroyed_a_league_variable }
-			}
 		}
 	}
 
@@ -668,8 +666,10 @@ create_italian_league = {
 			}
 			add = {	#From +20 to -20 based on member's opinion of Leader
 				international_organization:italian_league_1.leader_country = {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = -0.1
+					scope:actor = {
+						value = this_opinion_of_prev
+						multiply = -0.1
+					}
 				}
 			}
 		}
@@ -683,8 +683,10 @@ create_italian_league = {
 			}
 			add = {
 				international_organization:italian_league_2.leader_country = {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = -0.1
+					scope:actor = {
+						value = this_opinion_of_prev
+						multiply = -0.1
+					}
 				}
 			}
 		}
@@ -695,8 +697,10 @@ create_italian_league = {
 			}
 			add = {
 				international_organization:italian_league_3.leader_country = {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = -0.1
+					scope:actor = {
+						value = this_opinion_of_prev
+						multiply = -0.1
+					}
 				}
 			}
 		}
@@ -868,6 +872,7 @@ plan_campaign_in_italy = {
 	allow = {
 		scope:actor ?= {
 			at_war = no
+			has_raised_levies = no
 		}
 	}
 
@@ -923,18 +928,6 @@ plan_campaign_in_italy = {
 		column = { data = population }
 		visible = {
 			region = region:italy_region
-			owner = {
-				NOT = {
-					any_international_organizations_member_of = {
-						leader_country ?= scope:actor
-						OR = {
-							this = international_organization:foreign_league_france
-							this = international_organization:foreign_league_iberia
-							this = international_organization:foreign_league_hre
-						}
-					}
-				}
-			}
 		}
 		enabled = {
 			scope:actor = { can_declare_war_on = root.owner }

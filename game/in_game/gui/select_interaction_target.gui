@@ -5,24 +5,21 @@ template flexible_interaction_target_entry_setup {
 }
 
 template select_interaction_target_map_tooltip {
-	container = {
-		visible = "[IsSelectInteractionTargetValid]"
-		ContextualTooltipType = {
-			datacontext = "[GetLastSelectInteractionTargetGlue(Location.Self)]"
-			blockoverride "title_text" { text = "[SelectInteractionTargetGlue.GetTitle]" }
-			blockoverride "title_icon_texture" { texture = "[SelectInteractionTargetGlue.GetObject.GetGameConceptTexture]" }
-			blockoverride "concept_link" { text = "[SelectInteractionTargetGlue.GetObject.GetGameConceptName|e]" }
-			blockoverride "tooltip_content" { 
-				TooltipContentSection = {
-					visible = "[LastSelectInteractionTargetGlueWasTarget(Location.Self)]"
-					using = action_tooltip_inner_content
-				}
+	datacontext = "[GetLastSelectInteractionTargetGlue(Location.Self)]"
+	ContextualTooltipType = {
+		blockoverride "title_text" { text = "[SelectInteractionTargetGlue.GetTitle]" }
+		blockoverride "title_icon_texture" { texture = "[SelectInteractionTargetGlue.GetObject.GetGameConceptTexture]" }
+		blockoverride "concept_link" { text = "[SelectInteractionTargetGlue.GetObject.GetGameConceptName|e]" }
+		blockoverride "tooltip_content" { 
+			TooltipContentSection = {
+				visible = "[LastSelectInteractionTargetGlueWasTarget(Location.Self)]"
+				using = action_tooltip_inner_content
 			}
+		}
 
-			blockoverride "tooltip_ui_action_block" {
-				TooltipUIActionBlockOld = {
-					visible = "[PdxGuiWidget.HasUIAction]"
-				}
+		blockoverride "tooltip_ui_action_block" {
+			TooltipUIActionBlockOld = {
+				visible = "[PdxGuiWidget.HasUIAction]"
 			}
 		}
 	}
@@ -66,6 +63,12 @@ types SelectInteractionTargetTypes
 				size =  { 100% 100% }
 				using = color_black_texture
 				alpha = 0.2
+			}
+			icon = {
+				visible = "[SelectInteractionTargetGlue.IsSelected]"
+				size =  { 100% 100% }
+				using = color_black_texture
+				alpha = 0.5
 			}
 		}
 	}
@@ -197,22 +200,6 @@ template select_interaction_target {
 			name = "top_widget_container"
 		}
 
-		# cannot select anything
-		widget = {
-			layoutpolicy_vertical = fixed
-			layoutpolicy_horizontal = expanding
-			visible = "[Not(GreaterThan_int32(GetDataModelSize(SelectInteractionTargetView.GetTargetObjects), '(int32)0'))]"
-			size = { -1 28 }
-
-			text_single = {
-				size = { 80% 20 }
-				autoresize = no
-				align = center
-				parentanchor = center
-				text = "[SelectInteractionTargetView.GetNoneAvailableText]"
-			}
-		}
-
 		# select a number
 		vbox = {
 			layoutpolicy_vertical = expanding
@@ -328,6 +315,14 @@ template select_interaction_target {
 				allow_outside = yes
 				margin = { -10 0 }
 				margin_bottom = 5
+			}
+
+			blockoverride "scroll_list_is_empty" {
+				visible = "[Not(GreaterThan_int32(GetDataModelSize(SelectInteractionTargetView.GetTargetObjects), '(int32)0'))]"
+			}
+
+			blockoverride "scroll_list_is_empty_text" {
+				text = "[SelectInteractionTargetView.GetNoneAvailableTextOnlyHeader]"
 			}
 
 			blockoverride "sort_buttons_filtered_list" {

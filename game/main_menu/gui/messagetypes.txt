@@ -2156,6 +2156,16 @@ option=yes
 pausepopup=no
 message_category = economy
 }
+OTHER_TAKE_ON_DEBT= {
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = economy
+}
+
 
 DEBT_TOOK_FROM_US = {
 log=yes
@@ -6078,6 +6088,17 @@ option=yes
 pausepopup=no
 sound=yes
 message_category = economy
+}
+
+WE_PERFORM_invite_foreign_cleric_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+sound=yes
+message_category = government
 }
 
 WE_PERFORM_get_claim_from_imperial_court_ACTION={

@@ -67,152 +67,188 @@
 			}
 		}
 	}
+
+	type country_heir_status_icon = widget {
+		size = { 32 32 }
+		hbox = {
+			datacontext = "[InteractionTarget.GetCountry]"
+			widget = {
+				size = { 28 28 }
+				visible = "[Country.CountryIsHeir(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)]"
+
+				tagtooltip_enabled = yes
+				tooltip = "[heir|e]"
+
+				icon = {
+					size = { 100% 100% }
+					texture = "gfx/interface/icons/character_roles/heir.dds"
+				}
+			}
+
+			widget = {
+				size = { 28 28 }
+				visible = "[Country.CountryIsInLineOfSuccessionNotHeir(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)]"
+
+				tagtooltip_enabled = yes
+				tooltip = "[succession_law|e]"
+
+				icon = {
+					size = { 100% 100% }
+					texture = "gfx/interface/icons/modifier_types/is_appointed_as_heir.dds"
+				}
+			}
+		}
+	}
 	
-	type country_characters_eligible_for_royal_marriage = hbox {
+	type country_characters_eligible_for_royal_marriage = widget {
 		size = { 175 60 }
-		dynasty_shield_mid = {
-			visible = "[InteractionTarget.GetCountry.GetGovernment.GetRuler.HasDynasty]"
-			datacontext = "[InteractionTarget.GetCountry.GetGovernment.GetRuler.GetDynasty]"
-		}
-
-		flowcontainer = {
-			direction = horizontal
-			visible = "[LessThanOrEqualTo_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
-			ignoreinvisible = yes
-			spacing = -1
-			datamodel = "[InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)]"
-			item = {
-				container = {
-					vbox = {
-						size = { -1 60 }
-
-						portrait_standard_head_button = {
-							size = { 32 32 }
-							name = "portraits"
-						}
-							
-						widget = {
-							size = { 32 20 }
-
-							using = bg_number_container_bckg
-							blockoverride "number_container_extra" {
-								margin = { -2 -4 }
-								margin_top = 4
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			dynasty_shield_mid = {
+				visible = "[InteractionTarget.GetCountry.GetGovernment.GetRuler.HasDynasty]"
+				datacontext = "[InteractionTarget.GetCountry.GetGovernment.GetRuler.GetDynasty]"
+			}
+	
+			flowcontainer = {
+				direction = horizontal
+				visible = "[LessThanOrEqualTo_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
+				ignoreinvisible = yes
+				spacing = -1
+				datamodel = "[InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)]"
+				item = {
+					container = {
+						visible = "[CharactersCanMarry(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter, Character.Self)]"
+						vbox = {
+							size = { -1 60 }
+	
+							portrait_standard_head_button = {
+								size = { 32 32 }
+								name = "portraits"
 							}
-
-							tooltipwidget = {
-								using = AgeAndSex_tooltip
-							}
-
-							text_single = {
-								position = { -2 -4 }
-								parentanchor = center
-								autoresize = yes
-								align = center|nobaseline
-								using = Font_Size_Very_Small
-								raw_text = " [Character.GetAge|Y]"
+								
+							widget = {
+								size = { 32 20 }
+	
+								using = bg_number_container_bckg
+								blockoverride "number_container_extra" {
+									margin = { -2 -4 }
+									margin_top = 4
+								}
+	
+								tooltipwidget = {
+									using = AgeAndSex_tooltip
+								}
+	
+								text_single = {
+									position = { -2 -4 }
+									parentanchor = center
+									autoresize = yes
+									align = center|nobaseline
+									using = Font_Size_Very_Small
+									raw_text = " [Character.GetAge|Y]"
+								}
 							}
 						}
 					}
 				}
 			}
-		}
-
-		flowcontainer = {
-			visible = "[GreaterThan_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
-			direction = horizontal
-			ignoreinvisible = yes
-			spacing = -1
-			datamodel = "[DataModelFirst(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter), '(int32)3')]"
-			item = {
-				container = {
-					vbox = {
-						size = { -1 60 }
-
-						portrait_standard_head_button = {
-							size = { 32 32 }
-							name = "portraits"
-						}
-							
-						widget = {
-							size = { 32 20 }
-
-							using = bg_number_container_bckg
-							blockoverride "number_container_extra" {
-								margin = { -2 -4 }
-								margin_top = 4
+	
+			flowcontainer = {
+				visible = "[GreaterThan_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
+				direction = horizontal
+				ignoreinvisible = yes
+				spacing = -1
+				datamodel = "[DataModelFirst(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter), '(int32)3')]"
+				item = {
+					container = {
+						vbox = {
+							size = { -1 60 }
+	
+							portrait_standard_head_button = {
+								size = { 32 32 }
+								name = "portraits"
 							}
-
-							tooltipwidget = {
-								using = AgeAndSex_tooltip
-							}
-
-							text_single = {
-								position = { -2 -4 }
-								parentanchor = center
-								autoresize = yes
-								align = center|nobaseline
-								using = Font_Size_Very_Small
-								raw_text = " [Character.GetAge|Y]"
+								
+							widget = {
+								size = { 32 20 }
+	
+								using = bg_number_container_bckg
+								blockoverride "number_container_extra" {
+									margin = { -2 -4 }
+									margin_top = 4
+								}
+	
+								tooltipwidget = {
+									using = AgeAndSex_tooltip
+								}
+	
+								text_single = {
+									position = { -2 -4 }
+									parentanchor = center
+									autoresize = yes
+									align = center|nobaseline
+									using = Font_Size_Very_Small
+									raw_text = " [Character.GetAge|Y]"
+								}
 							}
 						}
 					}
 				}
 			}
-		}
-
-		container = {
-			visible = "[GreaterThan_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
-			vbox = {
-				size = { -1 60 }
-				margin_left = -2
-				margin_top = 8
-				
-				tooltipwidget = {
-					LeftClickButtonTooltip = {
-						blockoverride "onclick_text" {
-							text = "MARRIAGE_FINDER_EXTRA_CHARACTERS"						
-						}
-					}					
-				}
-
-				hbox = {
-					icon = {
-						size = { 24 24 }
-						# parentanchor = center
-						texture = "gfx/portraits/example_portraits/unknown_unclickable_head.dds"
-
-						glow = {
-							name = "drop_shadow"
-							glow_radius = 1
-							color = {0.0 0.0 0.0 1.0}
-							alpha = 0.3
-						}
-					}
-				}
+	
+			container = {
+				visible = "[GreaterThan_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)4')]"
+				vbox = {
+					size = { -1 60 }
+					margin_left = -2
+					margin_top = 8
 					
-				widget = {
-					size = { 32 20 }
-
-					using = bg_number_container_bckg
-					blockoverride "number_container_extra" {
-						margin = { -2 -4 }
-						margin_top = 4
+					tooltipwidget = {
+						LeftClickButtonTooltip = {
+							blockoverride "onclick_text" {
+								text = "MARRIAGE_FINDER_EXTRA_CHARACTERS"						
+							}
+						}					
 					}
-
-					text_single = {
-						position = { -2 -4 }
-						parentanchor = center
-						autoresize = yes
-						align = center|nobaseline
-						using = Font_Size_Very_Small
-						raw_text = "+[Subtract_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)3')]"
+	
+					hbox = {
+						icon = {
+							size = { 24 24 }
+							# parentanchor = center
+							texture = "gfx/portraits/example_portraits/unknown_unclickable_head.dds"
+	
+							glow = {
+								name = "drop_shadow"
+								glow_radius = 1
+								color = {0.0 0.0 0.0 1.0}
+								alpha = 0.3
+							}
+						}
+					}
+						
+					widget = {
+						size = { 32 20 }
+	
+						using = bg_number_container_bckg
+						blockoverride "number_container_extra" {
+							margin = { -2 -4 }
+							margin_top = 4
+						}
+	
+						text_single = {
+							position = { -2 -4 }
+							parentanchor = center
+							autoresize = yes
+							align = center|nobaseline
+							using = Font_Size_Very_Small
+							raw_text = "+[Subtract_int32(GetDataModelSize(InteractionTarget.GetCountry.GetEligibleForRoyalMarriage(SelectInteractionTargetView.GetCurrentParams.GetTargetObjectFromFlag('from').GetCharacter)), '(int32)3')]"
+						}
 					}
 				}
 			}
+	
+			expand = {}
 		}
-
-		expand = {}
 	}
 
 	type country_ruler = hbox {

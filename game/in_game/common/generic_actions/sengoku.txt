@@ -59,18 +59,18 @@ sengoku_attempt_imperial_restoration = {
 		}
 	}
 	ai_will_do = {
-		#Base value (generally reluctant)
+
 		add = {
-			value = -10
+			value = -5
+			desc = BASE_VALUE
 		}
-		scope:actor = {
-			#Do it depending on opinion
+
+		if = {
+			limit = { country_exists = international_organization:japanese_shogunate.leader_country }
 			add = {
-				value = -1
-				international_organization:japanese_shogunate.leader_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
-				}
+				value = "scope:actor.opinion(international_organization:japanese_shogunate.leader_country)"
+				multiply = -0.1
+				desc = "Our opinion of the Shogunate leader"
 			}
 		}
 	}
@@ -156,14 +156,19 @@ sengoku_force_end_war = {
 	}
 
 	ai_will_do = {
-		scope:actor = {
-			#Do it depending on opinion
+
+		#Base value added because price of action is somewhat high
+		#Otherwise it defaults to always negative
+		add = {
+			value = 20
+			desc = BASE_VALUE
+		}
+
+		if = {
+			limit = { exists = scope:target_country }
 			add = {
-				value = -1
-				scope:target_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
-				}
+				value = "scope:actor.opinion(scope:target_country)"
+				multiply = -0.1
 			}
 		}
 	}
@@ -275,14 +280,18 @@ sengoku_revoke_clans_land = {
 	}
 
 	ai_will_do = {
-		scope:actor = {
-			#Do it depending on opinion
+		#Base value added because price of action is somewhat high
+		#Otherwise it defaults to always negative
+		add = {
+			value = 20
+			desc = BASE_VALUE
+		}
+
+		if = {
+			limit = { exists = scope:target_country }
 			add = {
-				value = -1
-				scope:target_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
-				}
+				value = "scope:actor.opinion(scope:target_country)"
+				multiply = -0.1
 			}
 		}
 	}
@@ -353,14 +362,18 @@ sengoku_limit_clans_autonomy = {
 	}
 
 	ai_will_do = {
-		scope:actor = {
-			#Do it depending on opinion
+		#Base value added because price of action is somewhat high
+		#Otherwise it defaults to always negative
+		add = {
+			value = 20
+			desc = BASE_VALUE
+		}
+
+		if = {
+			limit = { exists = scope:target_country }
 			add = {
-				value = -1
-				scope:target_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
-				}
+				value = "scope:actor.opinion(scope:target_country)"
+				multiply = -0.1
 			}
 		}
 	}
@@ -436,14 +449,18 @@ sengoku_summon_to_court = {
 	}
 
 	ai_will_do = {
-		scope:actor = {
-			#Do it depending on opinion
+		#Base value added because price of action is somewhat high
+		#Otherwise it defaults to always negative
+		add = {
+			value = 20
+			desc = BASE_VALUE
+		}
+
+		if = {
+			limit = { exists = scope:target_country }
 			add = {
-				value = -1
-				scope:target_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
-				}
+				value = "scope:actor.opinion(scope:target_country)"
+				multiply = -0.1
 			}
 		}
 	}
@@ -503,13 +520,12 @@ sengoku_proclaim_clan_independence = {
 		add = {
 			value = -10
 		}
-		scope:actor = {
-			#Do it depending on opinion
-			add = {
-				value = -1
-				international_organization:japanese_shogunate.leader_country ?= {
-					multiply = scope:actor.this_opinion_of_prev
-					multiply = 0.1
+		#Do it depending on opinion
+		international_organization:japanese_shogunate.leader_country ?= {
+			scope:actor = {
+				add = {
+					value = this_opinion_of_prev
+					multiply = -0.1
 				}
 			}
 		}

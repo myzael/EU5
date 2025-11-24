@@ -3798,6 +3798,27 @@ LIT = { # Lithuania
 	}
 }
 
+LIV = { # Livonia
+	flag_definition = {
+		coa = LVA
+		priority = 1
+	}
+	flag_definition = {
+		coa = LIV
+		priority = 10
+		trigger = {
+			coa_def_theocracy_military_order_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = LVA_republic
+		priority = 10
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}
+
 LON = { # Leon
 
 	flag_definition = {
@@ -3929,6 +3950,27 @@ LUX = { # Luxembourg
 	}	
 	# TODO
 }
+
+LVA = { # Baltic formable
+	flag_definition = {
+		coa = LVA_pagan
+		priority = 1
+	}
+	flag_definition = {
+		coa = LVA_cross
+		priority = 10
+		trigger = {
+			coa_def_christian_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = LVA_republic
+		priority = 50
+		trigger = {
+			coa_def_revolutionary_republic_trigger = yes
+		}
+	}
+}	
 
 MAK = { # Makuria
 	flag_definition = {
@@ -6500,7 +6542,7 @@ SPA = { # Spain
 		trigger = {
 			coa_def_SPA_castile_trigger = yes
 			coa_def_aragon_ownership_trigger = no
-			coa_def_navarre_ownership_full_trigger = yes
+			coa_def_navarre_ownership_trigger = yes
 			coa_def_granada_ownership_trigger = yes
 			coa_def_portugal_ownership_trigger = yes
 		}

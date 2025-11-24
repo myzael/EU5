@@ -45,10 +45,12 @@ fiefdom = { # like a personal union except the subject has much less power
 	institution_spread_to_subject = monthly_institution_spread_severe
 	
 	overlord_modifier = {
+		monthly_towards_decentralization = societal_value_tiny_monthly_move
 	}
 
 	subject_modifier = {
 		country_cabinet_efficiency = 0.05
+		loyalty_to_overlord = 10
 	}
 
 	creation_visible = {

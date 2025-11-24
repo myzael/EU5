@@ -812,11 +812,11 @@ lateralview = {
 
 								blockoverride "scroll_list_content" {
 									addcolumn = 100%
-									addrow = 101
+									addrow = 125
 									datamodel = "[AdvancesLateralView.GetAllAdvances]"
 									item = {
 										widget = {
-											size = { 100% 101 }
+											size = { 100% 125 }
 											using = advance_item
 										}
 									}
@@ -843,7 +843,7 @@ lateralview = {
 template advance_item {
     widget = {
         parentanchor = center
-        size = { 98% 100 }
+        size = { 98% 125 }
 
 		background = {#shadow
 			texture = "gfx/interface/component_tiles/square_tile.dds"
@@ -932,10 +932,11 @@ template advance_item {
 
 						text_multi = {
 							minimumsize = { 70 20 }
-							maximumsize = { 400 40 }
+							maximumsize = { 400 55 }
 							align = left|nobaseline
 							autoresize = yes
-							fontsize_min = 8
+							fontsize_min = 14
+							margin_top = -5
 							text = "[AdvanceNode.GetItem.GetEffects]"
 						}
 
@@ -993,7 +994,7 @@ template advance_item {
 						# PERCENTAGE CONTAINER
 						widget = {
                             visible = "[AdvanceNode.GetItem.IsInResearchQueue]"
-                            size = {40 18}
+                            size = {45 23}
                             using = bg_square_tile
                             using = bg_age_event_frame
                             blockoverride "container_color"{
@@ -1008,7 +1009,7 @@ template advance_item {
                                 parentanchor = center
                                 align = center|nobaseline
                                 autoresize = yes
-                                fontsize = 11
+                                fontsize = 14
                                 text = "[AdvanceNode.GetItem.GetResearchQueueSlot]"
                             }
                         }
@@ -1026,10 +1027,11 @@ template advance_item {
 
 						text_multi = {
 							minimumsize = { 70 20 }
-							maximumsize = { -1 40 }
+							maximumsize = { -1 55 }
 							align = left|nobaseline
 							autoresize = yes
-							fontsize_min = 8
+							fontsize_min = 14
+							margin_top = -5
 							text = "[AdvanceNode.GetItem.GetEffects]"
 						}
 
@@ -1085,7 +1087,7 @@ template advance_item {
 
 						# percentage container
 						widget = {
-                            size = {40 18}
+                            size = {45 23}
                             visible = "[AdvanceNode.GetItem.IsInResearchQueue]"
                             using = bg_square_tile
                             using = bg_age_event_frame
@@ -1101,7 +1103,7 @@ template advance_item {
                                 minimumsize = { -1 20 }
                                 align = center|nobaseline
                                 autoresize = yes
-                                fontsize = 11
+                                fontsize = 14
                                 text = "[Player.GetCurrentResearch.GetProgress|2Y%]"
                             }
                             text_single = {
@@ -1129,11 +1131,12 @@ template advance_item {
 
 						text_multi = {
 							minimumsize = { 70 20 }
-							maximumsize = { -1 40 }
+							maximumsize = { -1 55 }
 							align = left|nobaseline
 							autoresize = yes
 							margin_left = 8
-							fontsize_min = 8
+							fontsize_min = 14
+							margin_top = -5
 							text = "[AdvanceNode.GetItem.GetEffects]"
 						}
 

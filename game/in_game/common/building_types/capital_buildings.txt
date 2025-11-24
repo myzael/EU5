@@ -65,7 +65,7 @@ house_of_parliament = {
 	
 	category = government_category
 	
-	employment_size = large_capital_employment
+	employment_size = huge_noble_employment
 	
 	rural_settlement = yes
 	town = yes

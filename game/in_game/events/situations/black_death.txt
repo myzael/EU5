@@ -468,7 +468,7 @@ black_death.1003 = { # Black Death Claims The Throne
 	option = {
 		name = black_death.1003.a
 		kill_character = {
-			target = scope:target_portrait_character
+			target = ruler
 			reason = disease
 		}
 	}
@@ -491,7 +491,7 @@ black_death.1003 = { # Black Death Claims The Throne
 		random = {
 			chance = 45
 			kill_character = {
-				target = scope:target_portrait_character
+				target = ruler
 				reason = disease
 			}
 		}
@@ -951,7 +951,7 @@ black_death.1010 = { # Armenian Mud
 		exists = capital.market
 		any_market_with_merchants = {
 			location.region = region:caucasus_region
-			NOT = { this = capital.market }
+			NOT = { this = root.capital.market }
 			"stockpile_in_market(goods:clay)" > 15
 		}
 	}
@@ -962,7 +962,7 @@ black_death.1010 = { # Armenian Mud
 			limit = {
 				location.region = region:caucasus_region
 				"stockpile_in_market(goods:clay)" > 15
-				NOT = { this = capital.market }
+				NOT = { this = root.capital.market }
 			}
 			save_scope_as = target_market
 		}
@@ -970,9 +970,10 @@ black_death.1010 = { # Armenian Mud
 			limit = {
 				market_possible_goods_trade_surplus = {
 					goods = goods:clay
+					country = root
 					value >= 15
 				}
-				NOT = { this = capital.market }
+				NOT = { this = root.capital.market }
 			}
 			save_scope_as = target_market2
 		}

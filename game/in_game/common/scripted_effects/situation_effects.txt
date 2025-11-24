@@ -339,6 +339,7 @@ on_timurid_occupy_location_effect = {
 rise_of_the_ottomans_recalculate_top_3 = {
 	ordered_in_global_list = {  
 		variable = eligible_beylik_list
+		limit = { is_subject = no }
 		order_by = {
 			
 			add = {
@@ -364,12 +365,6 @@ rise_of_the_ottomans_recalculate_top_3 = {
 				value = {
 					add = var:strongest_beylik_variable.military_strength
 					add = var:strongest_beylik_variable.monthly_income_trade_and_tax 
-					if = {
-						limit = {	#If they are a subject, they receive a -25% penalty to their score 
-							var:strongest_beylik_variable ?= { is_subject = yes }
-						}
-						multiply = 0.75
-					}
 				}
 			}
 		}
@@ -384,7 +379,10 @@ rise_of_the_ottomans_recalculate_top_3 = {
 		}
 		ordered_in_global_list = {	#2nd strongest  
 			variable = eligible_beylik_list
-			limit = { this != situation:rise_of_the_ottomans.var:strongest_beylik_variable }
+			limit = { 
+				this != situation:rise_of_the_ottomans.var:strongest_beylik_variable 
+				is_subject = no
+			}
 			order_by = {
 				
 				add = {
@@ -392,10 +390,6 @@ rise_of_the_ottomans_recalculate_top_3 = {
 				}
 				add = {
 					value = monthly_income_trade_and_tax
-				}
-				if = {
-					limit = { is_subject = yes }
-					multiply = 0.75
 				}
 			} 
 			max = 1
@@ -410,12 +404,6 @@ rise_of_the_ottomans_recalculate_top_3 = {
 					value = {
 						add = var:second_strongest_strongest_beylik_variable.military_strength
 						add = var:second_strongest_strongest_beylik_variable.monthly_income_trade_and_tax 
-						if = {
-							limit = {	#If they are a subject, they receive a -25% penalty to their score 
-								var:second_strongest_strongest_beylik_variable ?= { is_subject = yes }
-							}
-							multiply = 0.75
-						}
 					}
 				}
 			}
@@ -440,6 +428,7 @@ rise_of_the_ottomans_recalculate_top_3 = {
 			limit = { 
 				this != situation:rise_of_the_ottomans.var:strongest_beylik_variable 
 				this != situation:rise_of_the_ottomans.var:second_strongest_strongest_beylik_variable 
+				is_subject = no
 			}
 			order_by = {
 				
@@ -448,10 +437,6 @@ rise_of_the_ottomans_recalculate_top_3 = {
 				}
 				add = {
 					value = monthly_income_trade_and_tax
-				}
-				if = {
-					limit = { is_subject = yes }
-					multiply = 0.75
 				}
 			} 
 			max = 1
@@ -465,13 +450,7 @@ rise_of_the_ottomans_recalculate_top_3 = {
 					name = third_strongest_strongest_beylik_total_score_variable
 					value = {
 						add = var:third_strongest_strongest_beylik_variable.military_strength
-						add = var:third_strongest_strongest_beylik_variable.monthly_income_trade_and_tax 
-						if = {
-							limit = {	#If they are a subject, they receive a -25% penalty to their score 
-								var:third_strongest_strongest_beylik_variable ?= { is_subject = yes }
-							}
-							multiply = 0.75
-						}
+						add = var:third_strongest_strongest_beylik_variable.monthly_income_trade_and_tax
 					}
 				}
 			}
@@ -1043,10 +1022,10 @@ sengoku_reevaluate_strongest_daimyos = {
 					value = prev
 				}
 			}
-		}
-		add_to_global_variable_list = {
-			name = sengoku_strong_daimyo_list
-			target = this
+			add_to_global_variable_list = {
+				name = sengoku_strong_daimyo_list
+				target = this
+			}
 		}
 	}
 }

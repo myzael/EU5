@@ -323,6 +323,9 @@ lateralview = {
 								blockoverride "declare_war_comparison_text" {
 									text = "DECLARE_WAR_TOTAL_COMPARISON_WEAKER"
 								}
+								blockoverride "declare_war_comparison_banner"{
+									texture = "gfx/interface/component_tiles/war_predition_banner_color_red.dds"
+								}
 							}
 
 							declare_war_comparisson = {
@@ -331,6 +334,9 @@ lateralview = {
 								}
 								blockoverride "declare_war_comparison_text" {
 									text = "DECLARE_WAR_TOTAL_COMPARISON_SLIGHTLY_WEAKER"
+								}
+								blockoverride "declare_war_comparison_banner"{
+									texture = "gfx/interface/component_tiles/war_predition_banner_color_red.dds"
 								}
 							}
 
@@ -350,6 +356,9 @@ lateralview = {
 								blockoverride "declare_war_comparison_text" {
 									text = "DECLARE_WAR_TOTAL_COMPARISON_SLIGHTLY_STRONGER"
 								}
+								blockoverride "declare_war_comparison_banner"{
+									texture = "gfx/interface/component_tiles/war_predition_banner_color_green.dds"
+								}
 							}
 
 							declare_war_comparisson = {
@@ -358,6 +367,9 @@ lateralview = {
 								}
 								blockoverride "declare_war_comparison_text" {
 									text = "DECLARE_WAR_TOTAL_COMPARISON_STRONGER"
+								}
+								blockoverride "declare_war_comparison_banner"{
+									texture = "gfx/interface/component_tiles/war_predition_banner_color_green.dds"
 								}
 							}
 						}
@@ -1369,7 +1381,7 @@ types WarGoals {
 							size = {70 20}
 							autoresize = no
 							align = center|nobaseline
-							raw_text = "[DeclareWarAlly.GetLandStrength]@army_strength!"
+							raw_text = "[DeclareWarAlly.GetCountry.GetTotalArmyStrengthAndPotentialLevies]@army_strength!"
 						}
 
 						divider_flavor_01 = { 
@@ -1501,7 +1513,7 @@ types WarGoals {
 						size = {70 20}
 						autoresize = no
 						align = center|nobaseline
-						raw_text = "[DeclareWarAlly.GetLandStrength]@army_strength!"
+						raw_text = "[DeclareWarAlly.GetCountry.GetTotalArmyStrengthAndPotentialLevies]@army_strength!"
 					}
 
 					divider_flavor_01 = { 
@@ -1591,29 +1603,19 @@ types WarGoals {
 
 	type declare_war_comparisson = text_single {
 		block "declare_war_comparison_visible" {}
-		margin = {15 5}
-		background = {
-			texture = "gfx/interface/component_tiles/circle_container_flat.dds"
-			mirror = horizontal
-			texture_density = 2
-			spriteType = corneredstretched
-			spriteBorder = { 16 0 }
-			alpha = 1
-
-			modify_texture = {
-				using = color_bg_brown_texture
-			}
-			modify_texture = {
-				using = overlay_striped_texture
-				blend_mode = overlay
-				alpha = 0.2
-			}
-			modify_texture = {
-				texture = "gfx/interface/component_masks/mask_fade_horizontal_middle_solid.dds"
-				blend_mode = multiply
-				alpha = 0.4
+		margin = {20}
+		margin_top = 8
+		margin_bottom = 14
+		block "declare_war_comparison_banner" {
+			background = {
+				texture = "gfx/interface/component_tiles/war_predition_banner_brown.dds"
 			}
 		}
+		mirror = horizontal
+		texture_density = 2
+		spriteType = corneredstretched
+		spriteBorder = { 16 0 }
+		alpha = 1
 		default_format = "#yellow_titles"
 		align = nobaseline
 		fontsize = 14
@@ -1621,12 +1623,7 @@ types WarGoals {
 		block "declare_war_comparison_text" {
 			raw_text = " "
 		}
-		icon = {
-			parentanchor = center
-			position = {0 -3}
-			size = {107% 100%}
-			using = baroque_corner_flavor_01
-		}
+	
 	}
 
 	type joining_countries_button_header = button {
@@ -2405,15 +2402,34 @@ types WarGoals {
 # }
 
 template joining_countries_declare_war {
+	widget = {
+		size = {263 100%}
+		parentanchor = hcenter|top
+		position  = {0 34}
+		allow_outside = yes
+		ignore_layout = yes
+		widget = {
+			size = {263 80%}
+			parentanchor = hcenter|top
+			allow_outside = yes
+			ignore_layout = yes
+			icon = {
+				size = {100% 100%}
+				alwaystransparent = yes
+				using = bg_declare_war_header_sides
+				texture_density = 2
+				spriteType = corneredstretched
+				parentanchor = hcenter|top
+			}
+		}
+	}
+	
 	vbox = {
 		using = layoutpolicy_expanding
-		using = bg_declare_war_header_sides
-		
 		widget = {
 			layoutpolicy_horizontal = expanding
 			size = { -1 40 }
 			using = bg_declare_war_header_flag_01
-
 			hbox = {
 				ignoreinvisible = yes
 				margin_top = -9
@@ -2425,9 +2441,7 @@ template joining_countries_declare_war {
 						spacing = 5
 						maximumsize = {100 38}
 						parentanchor = center
-
 						expand = {}
-
 						text_single = {
 							block "joining_countries_declare_war_amount" {}
 							using = Font_Size_Small

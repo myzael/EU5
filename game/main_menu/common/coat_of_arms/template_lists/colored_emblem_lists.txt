@@ -9737,8 +9737,22 @@ colored_emblem_texture_lists = {
 			100 = "ce_tamgha_chagatai.dds"
 			100 = "ce_tamgha_chagatai_02.dds"
 			100 = "ce_tamgha_chagatai_03.dds"
-			100 = "ce_tamgha_chagatai_04.dds"	
+			100 = "ce_tamgha_chagatai_04.dds"
 			
+			# Ancient Altai tamghas
+			special_selection = {
+				trigger = {
+					coa_def_turkic_trigger = yes
+				}			
+				100 = "ce_tamgha_altai_01.dds"
+				100 = "ce_tamgha_altai_02.dds"
+				100 = "ce_tamgha_altai_03.dds"
+				100 = "ce_tamgha_altai_04.dds"
+				100 = "ce_tamgha_altai_05.dds"
+				100 = "ce_tamgha_altai_06.dds"
+				100 = "ce_tamgha_altai_07.dds"
+				100 = "ce_tamgha_altai_08.dds"			
+			}
 			special_selection = { # Nogay/Kazan/Crimean
 				trigger = {
 					coa_def_tatar_trigger = yes

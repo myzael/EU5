@@ -54,14 +54,9 @@ scripted_trigger has_correct_dominant_culture = {
     }
 }
 scripted_trigger is_province_german_and_in_bad_shape = {
-	exists = owner #Check that it's not a wasteland or sea
-	province = {
-		NOT = {
-			any_location_in_province = {
-				population < 0.5
-			}
-		}
+	province ?= {
 		has_correct_dominant_culture = yes
+		population >= 20
 		privilege_events_100_is_in_bad_shape = yes
 	}
 }
@@ -104,6 +99,7 @@ scripted_effect start_german_migration = {
                 floor = yes
             }
             divide = 1000
+			max = 0.05
         }
         months = 48
     }
@@ -198,9 +194,11 @@ privilege_events.100 = {
                 is_correct_region = yes
                 any_area_in_region = {
                     is_valid_for_immigration = yes
+                    is_correct_area = yes
                     any_province_definition_in_area = {
                         any_location_in_province_definition = {
                             is_province_german_and_in_bad_shape = yes
+                            population > 2
                         }
                     }
                 }
@@ -233,7 +231,7 @@ privilege_events.100 = {
                         }
                         random_location_in_province_definition = {
                             limit = {
-                                is_province_german_and_in_bad_shape = yes
+								population > 2
                             }
                             save_scope_as = scope_german_location
                             owner ?= {

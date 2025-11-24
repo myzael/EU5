@@ -368,7 +368,6 @@ veche_republic = {
 }
 
 sovet_gospod = {
-	major = yes
 	unique = yes
 	government = republic
 
@@ -850,9 +849,9 @@ ancient_french_taxation = {
 	}
 
 	locked = {
-		is_locked_mechanic = {
-			mechanic = government_reform
-			type = ancient_french_taxation
+		custom_tooltip = {
+			text = fra_ancient_french_taxation_removal_conditions
+			societal_value:centralization_vs_decentralization >= -50
 		}
 	}
 
@@ -2148,6 +2147,7 @@ kor_daedongbeob = {
 	country_modifier = {
 		peasants_estate_target_satisfaction = medium_permanent_target_satisfaction
 		global_estate_max_tax = 0.05
+		government_reform_slots = 1
 		trade_efficiency = large_trade_efficiency_bonus
 	}
 }
@@ -2233,6 +2233,9 @@ kor_sadae_reform = {
 				divide = 100
 			}
 		}
+	}
+	country_modifier = {
+		government_reform_slots = 1
 	}
 }
 
@@ -2320,6 +2323,7 @@ prikazi_reform = {
 		legislative_efficiency = 0.1
 		country_cabinet_efficiency = 0.15
 		monthly_towards_centralization = societal_value_minor_monthly_move
+		unlock_prikazi_reform_cabinet_actions = yes
 	}
 	years = 1
 }
@@ -3464,6 +3468,7 @@ powerful_vizierships_reform = {
 		monthly_towards_aristocracy = societal_value_monthly_move
 		replace_cabinet_member_cost_modifier = 1
 		clergy_estate_blocked_from_cabinet = yes
+		government_reform_slots = 1
 		burghers_estate_blocked_from_cabinet = yes
 	}
 

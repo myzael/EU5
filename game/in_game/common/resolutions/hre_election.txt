@@ -303,6 +303,7 @@
 						value = 100000
 					}
 				}
+				#voting for themselves?
 				if = {
 					limit = {
 						this = scope:actor
@@ -337,6 +338,7 @@
 					}
 				}
 
+				#rival?
 				if = {
 					limit = { is_rival_of = scope:actor }
 					add = {
@@ -344,6 +346,8 @@
 						value = -1000
 					}
 				}
+
+				#at war?
 				if = {
 					limit = { is_at_war_with = scope:actor }
 					add = {
@@ -351,6 +355,8 @@
 						value = -200
 					}
 				}
+
+				#wrong religion?
 				if = {
 					limit = {
 						hre_voting_bound_to_religion = yes
@@ -361,6 +367,8 @@
 						value = -1000
 					}
 				}
+
+				#wrong religion group?
 				if = {
 					limit = {
 						hre_voting_bound_to_religion_group = yes
@@ -371,6 +379,8 @@
 						value = -1000
 					}
 				}
+
+				#diplomacy
 				if = {
 					limit = { NOT = { this = scope:actor } }
 					if = {
@@ -395,6 +405,8 @@
 						}
 					}
 				}
+
+				#great power score
 				add = {
 					desc = "game_concept_great_power_score"
 					value = great_power_score
@@ -433,6 +445,8 @@
 						}
 					}
 				}
+
+				#misc diplo reasons
 				if = {
 					limit = { not = { this = scope:actor } }
 					add = {
@@ -485,6 +499,8 @@
 						}
 					}
 				}
+
+				#legitimacy
 				if = {
 					limit = { uses_government_power = legitimacy }
 					add = {
@@ -494,18 +510,24 @@
 						subtract = 25
 					}
 				}
+
+				#prestige
 				add = {
 					desc = "game_concept_prestige"
 					value = prestige
 					subtract = 50
 					divide = 2
 				}
+
+				#dynastic power
 				add = {
 					desc = "game_concept_dynastic_power"
 					value = "dynastic_power(scope:recipient)"
 					multiply = 3
 					max = 200
 				}
+
+				#court language
 				if = {
 					limit = { court_language = language:german_language }
 					add = {

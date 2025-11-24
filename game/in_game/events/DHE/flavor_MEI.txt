@@ -838,6 +838,7 @@ flavor_mei.120 = { #The Acquisition of Landsberg
 		historical_option = yes
 		if = {
 			limit = {
+				country_exists = c:LDB
 				c:LDB = {
 					is_human = no
 				}

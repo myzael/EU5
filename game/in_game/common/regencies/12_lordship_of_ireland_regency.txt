@@ -15,6 +15,7 @@
 	}
 	
 	start_effect = {
-		#The effects of this regency is handled via the lordship_of_ireland_assert_regency country_interaction
+
+		set_regent = international_organization:lordship_of_ireland.leader_country.ruler 
 	}	
 }

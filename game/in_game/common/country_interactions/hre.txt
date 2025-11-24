@@ -1672,6 +1672,44 @@ demand_unlawful_territory = {
 					}
 					else = {
 						change_location_owner = scope:actor
+						add_to_list = hre_locations_to_give_away
+					}
+				}
+			}
+			if = {
+				limit = { list_size = { name = hre_locations_to_give_away value > 0 } }
+				ordered_in_list = {
+					list = hre_locations_to_give_away
+					order_by = {
+						value = population
+						if = {
+							limit = { location_rank = location_rank:city }
+							multiply = 5
+						}
+						else_if = {
+							limit = { location_rank = location_rank:town }
+							multiply = 2
+						}
+					}
+					max = 1
+					check_range_bounds = no
+					save_scope_as = target_location
+					create_country_from_location = {
+						save_scope_as = target_country
+						set_capital = scope:target_location
+					}
+				}
+				if = {
+					limit = { exists = scope:target_country }
+					every_in_list = {
+						list = hre_locations_to_give_away
+						change_location_owner = scope:target_country
+					}
+					scope:target_country = {
+						add_opinion = {
+							modifier = opinion_released_from_unlawful_territory
+							target = scope:actor
+						}
 					}
 				}
 			}
@@ -1870,7 +1908,7 @@ ask_to_vote_for_me_as_emperor = {
 					NOT = { scope:actor = international_organization:hre.leader_country }
 				}
 				international_organization:hre.leader_country  = {
-					value = scope:actor.this_opinion_of_prev
+					scope:actor = { value = this_opinion_of_prev }
 				}
 			}
 		}

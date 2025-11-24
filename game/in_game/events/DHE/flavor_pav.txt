@@ -16,6 +16,7 @@ flavor_pav.1 = {
 
 	trigger = {
 		has_ruler = yes
+		government_type = c:MLO.government_type
 		ruler = { has_dynasty = yes }
 		ruler.dynasty = dynasty:beccaria_dynasty
 	}

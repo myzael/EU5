@@ -584,3 +584,33 @@ did_not_vote_for = {
 	first = DID_NOT_VOTE_FOR
 	third = DID_NOT_VOTE_FOR
 }
+
+has_compatible_heir_religion_law_with_text = {
+	none = HAS_COMPATIBLE_HEIR_RELIGION_LAW_WITH
+	global = HAS_COMPATIBLE_HEIR_RELIGION_LAW_WITH
+	first = FIRST_HAS_COMPATIBLE_HEIR_RELIGION_LAW_WITH
+	third = THIRD_HAS_COMPATIBLE_HEIR_RELIGION_LAW_WITH
+}
+
+can_adopt_compatible_religion_law_text = {
+	none = CAN_ADOPT_COMPATIBLE_RELIGION_LAW
+	global = CAN_ADOPT_COMPATIBLE_RELIGION_LAW
+	first = FIRST_CAN_ADOPT_COMPATIBLE_RELIGION_LAW
+	third = THIRD_CAN_ADOPT_COMPATIBLE_RELIGION_LAW
+}
+
+is_proposal_text = {
+	none = IS_PROPOSAL
+	global = IS_PROPOSAL
+	third = THIRD_IS_PROPOSAL
+}
+is_vote_text = {
+	none = IS_VOTE
+	global = IS_VOTE
+	third = THIRD_IS_VOTE
+}
+is_finalising_text = {
+	none = IS_FINALISING
+	global = IS_FINALISING
+	third = THIRD_IS_FINALISING
+}

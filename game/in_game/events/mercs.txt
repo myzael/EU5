@@ -148,7 +148,7 @@ mercs.3 = {
 		at_war = yes
 		any_hired_mercenary ?= {
 			count > 0
-			mercenary_home ?= {	NOT = { owner = root }	}
+			mercenary_home ?= {	NOT = { owner ?= root }	}
 			NOT = { has_mercenary_modifier = mercs_allowed_to_loot }
 		}
 		any_country = {
@@ -338,7 +338,7 @@ mercs.10 = {
 	type = country_event
 	title = mercs.10.title
 	desc = mercs.10.desc
-		 illustration_tags = {
+	illustration_tags = {
         10 = armed
         10 = interior
     }

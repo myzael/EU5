@@ -45,6 +45,12 @@
 		}
 	}
 
+	heir_status_icon = {
+		widget = country_heir_status_icon
+		width = 32
+		fixed_height = 32
+	}
+
 	characters_eligible_for_royal_marriage = {
 		widget = country_characters_eligible_for_royal_marriage
 		width = 175

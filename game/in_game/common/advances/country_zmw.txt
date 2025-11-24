@@ -30,7 +30,7 @@ zmw_rekindling_the_royal_fires = {
 	potential = {
 		culture = culture:shona_culture
 	}
-	subject_loyalty = 10
+	subject_loyalty = 5
 
 	requires = vibrant_court_advance
 }

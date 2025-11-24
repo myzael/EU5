@@ -355,7 +355,9 @@ unit_akritai_location_trigger = {
 }
 
 sub_unit_called_knights_trigger = {
-	owner.religion.group = religion_group:christian 
+	owner ?= {
+		religion ?= { group = religion_group:christian  }
+	}
 	OR = {
 		sub_unit_type = unit_type:a_order_knights
 		sub_unit_type = unit_type:a_crusader_knights

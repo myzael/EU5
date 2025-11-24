@@ -11,8 +11,8 @@
 	
     institution_spread_to_second = monthly_institution_spread_weak
 
-	request_visible = no
-	break_visible = no
+	request_visible = { always = no }
+	break_visible = { always = no }
 
 	visible = {
 		scope:recipient = { country_type = location }			

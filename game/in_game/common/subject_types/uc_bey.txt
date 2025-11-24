@@ -65,6 +65,8 @@
 		}
 	}
 	#on_monthly = { }
+
+	strength_vs_overlord = -0.5
 	
 	diplo_chance_accept_subject = {
 		base = -90

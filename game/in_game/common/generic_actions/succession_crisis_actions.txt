@@ -159,15 +159,15 @@
 						}
 					}
 				}
-				subtract = -1000
+				subtract = {
+					value = -1000
+					desc = "[target_country.GetName] is a rival or enemy"
+				}
 			}
 			else = {
 				add = {
-					value = 1
-					scope:target_country ?= {
-						multiply = scope:actor.this_opinion_of_prev
-						multiply = 0.2
-					}
+					value = "scope:actor.opinion(scope:target_country)"
+					multiply = 0.2
 				}
 			}
 			add = {	#Check each other's antagonism towards the other

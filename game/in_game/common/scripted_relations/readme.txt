@@ -44,10 +44,10 @@
 #	receiving_color = <color definition> for the diplomacy map mode
 #
 #	visible = <trigger> should the relationship to be visible in the first place
-#   offer_visible = <yes/no> is offering this relationship available
-#   request_visible = <yes/no> is requesting this relationship available
-#   cancel_visible = <yes/no> is cancelling this relationship available
-#   break_visible = <yes/no> is breaking this relationship available
+#   offer_visible = <trigger> is offering this relationship available
+#   request_visible = <trigger> is requesting this relationship available
+#   cancel_visible = <trigger> is cancelling this relationship available
+#   break_visible = <trigger> is breaking this relationship available
 #	offer_enabled = <triggers> can we offer to establish this relationship (i.e. offer to give the one way relationship) (mutual counts here)
 #	request_enabled = <triggers> can we request the relationship (i.e. request to receive the one way relationship)
 #	cancel_enabled = <triggers> can we cancel a relationship that is either mutual or is one way that we are giving
@@ -60,6 +60,7 @@
 #	wants_to_receive_diplo_chance = <diplo evaluation> - one way relations only. Calculation when an offer is being evaluated.
 #   wants_to_keep = <ai evaluation> - use this for both mutual and one way relations. If evaluation results in values below or equal 0 ai will try to cancel/break relation
 #   wants_to_keep_diplo_chance = <diplo evaluation> - use this for both mutual and one way relations.
+#   show_break_alert = <yes/no> - whether the relation should be shown in alert when AI is about to break it
 #
 #	offer_effect = <effects> what happens when an offer is accepted
 #	request_effect = <effects> what happens when a request is accepted

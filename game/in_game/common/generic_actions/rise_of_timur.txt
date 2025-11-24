@@ -167,7 +167,7 @@ rot_select_core_region = {
 							}
 						}
 						every_location_in_region = {
-							limit = { owner = scope:actor }
+							limit = { owner ?= scope:actor }
 							change_integration_level = core
 							add_location_modifier = {
 								modifier = rot_timurs_core_region

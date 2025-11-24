@@ -1658,6 +1658,7 @@ types BattleTypes
 
 		hbox = {
 			layoutpolicy_horizontal = expanding
+			spacing = -6
 			block "combat_ruler_rightleft" {
 				righttoleft = yes
 			}
@@ -1668,7 +1669,7 @@ types BattleTypes
 				vbox = {
 					margin = {3 0}
 					spacing = 8
-					visible = "[And(CombatSide.GetCommander.IsValid, CombatSide.GetCommander.CanGiveUnitBonus)]"
+					visible = "[CombatSide.GetCommander.IsValid]"
 					datacontext = "[CombatSide.GetCommander]"
 					tagtooltip_enabled = yes
 					tooltip = "[Character.GetAbilityTooltipAsGeneral]"
@@ -1682,12 +1683,28 @@ types BattleTypes
 						}
 	
 						text_single = {
+							visible = "[CombatSide.GetCommander.CanGiveUnitBonus]"
 							layoutpolicy_horizontal = expanding
 							size = { -1 17 }
 							autoresize = no
 							using = abilities_text_props
 							text = "[Character.GetAbility('adm')]"
 							fontsize = 12
+						}
+
+						text_single = {
+							visible = "[Not(CombatSide.GetCommander.CanGiveUnitBonus)]"
+							layoutpolicy_horizontal = expanding
+							size = { 20 17 }
+							text = "[Character.GetAbility('adm')]"
+							
+							fontsize = 12
+
+							layoutpolicy_vertical = expanding
+							autoresize = no
+							align = center|nobaseline
+							using = Font_Size_Small
+							default_format = "#S"
 						}
 					}
 	
@@ -1699,12 +1716,28 @@ types BattleTypes
 						}
 	
 						text_single = {
+							visible = "[CombatSide.GetCommander.CanGiveUnitBonus]"
 							layoutpolicy_horizontal = expanding
 							size = { -1 17 }
 							autoresize = no
 							using = abilities_text_props
 							text = "[Character.GetAbility('dip')]"
 							fontsize = 12
+						}
+
+						text_single = {
+							visible = "[Not(CombatSide.GetCommander.CanGiveUnitBonus)]"
+							layoutpolicy_horizontal = expanding
+							size = { 20 17 }
+							text = "[Character.GetAbility('dip')]"
+							
+							fontsize = 12
+
+							layoutpolicy_vertical = expanding
+							autoresize = no
+							align = center|nobaseline
+							using = Font_Size_Small
+							default_format = "#S"
 						}
 					}
 					
@@ -1716,12 +1749,28 @@ types BattleTypes
 						}
 	
 						text_single = {
+							visible = "[CombatSide.GetCommander.CanGiveUnitBonus]"
 							layoutpolicy_horizontal = expanding
 							size = { -1 17 }
 							autoresize = no
 							using = abilities_text_props
 							text = "[Character.GetAbility('mil')]"
 							fontsize = 12
+						}
+
+						text_single = {
+							visible = "[Not(CombatSide.GetCommander.CanGiveUnitBonus)]"
+							layoutpolicy_horizontal = expanding
+							size = { 20 17 }
+							text = "[Character.GetAbility('mil')]"
+							
+							fontsize = 12
+
+							layoutpolicy_vertical = expanding
+							autoresize = no
+							align = center|nobaseline
+							using = Font_Size_Small
+							default_format = "#S"
 						}
 					}
 	
@@ -1731,6 +1780,7 @@ types BattleTypes
 			
 			# CHARACTER
 			character_frame_medium = {
+				enabled = "[CombatSide.GetCommander.CanGiveUnitBonus]"
 				visible = "[CombatSide.GetCommander.IsValid]"
 				datacontext = "[CombatSide.GetCommander]"
 				blockoverride "character_frame_texture_color" {
@@ -2132,11 +2182,11 @@ types BattleTypes
 	}
 
 	type combat_side_modifiers = hbox {
-		spacing = 3
+		spacing = 8
 
 		hbox = {
 			layoutpolicy_horizontal = expanding
-			spacing = 5
+			spacing = 2
 			icon = {
 				size = { 17 17 }
 				texture = "gfx/interface/icons/military_army/army_morale.dds"
@@ -2172,7 +2222,7 @@ types BattleTypes
 		}
 
 		hbox = {
-			spacing = 3
+			spacing = 2
 			icon = {
 				size = { 17 17 }
 				texture = "gfx/interface/icons/military_army/military_tactics.dds"
@@ -2196,7 +2246,8 @@ types BattleTypes
 		}
 
 		hbox = {
-			spacing = 3
+			visible = "[Not(Combat.IsNavalCombat)]"
+			spacing = 2
 			icon = {
 				size = { 17 17 }
 				texture = "gfx/interface/icons/military_army/discipline.dds"
@@ -2209,7 +2260,6 @@ types BattleTypes
 			}
 
 			text_single = {
-				visible = "[Not(Combat.IsNavalCombat)]"
 				autoresize = no
 				size = {40 17}
 				align = center

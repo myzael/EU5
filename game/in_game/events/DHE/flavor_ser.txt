@@ -736,6 +736,7 @@ flavor_ser.40 = { #The Flight of [target_character.GetNameWithNoTooltip]
 	}
 
 	trigger = {
+		country_exists = c:BYZ
 		is_at_war_with = c:BYZ
 		character:byz_john_kantakouzenos = {
 			is_alive = yes

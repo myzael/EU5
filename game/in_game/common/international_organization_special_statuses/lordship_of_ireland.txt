@@ -20,7 +20,6 @@
 	special_status_power = {
 		value = 100
 	}
-	map_color = hsv{ 0.49 1.0 1.0 }
 }
 
 lieutenant = {

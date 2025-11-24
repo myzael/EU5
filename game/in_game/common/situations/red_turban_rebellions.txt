@@ -78,74 +78,80 @@
 		}
 	}
 	on_monthly = {
-		c:CHI = {
-			#The Song rebellion should ALWAYS happen
-			trigger_event_non_silently = { id = red_turban_rebellions.3 days = { 5 15 } }
-			if = {
-				limit = {
-					has_variable = rtr_historical_countries_to_release
-					var:rtr_historical_countries_to_release > 0
-				}
-				random = {
-					chance = 20
-					switch = {
-						trigger = has_variable
-						rtr_release_jurchen_culture = { trigger_event_non_silently = { id = red_turban_rebellions.4 days = { 5 15 } } }
-						rtr_release_tag_CTW = { trigger_event_non_silently = { id = red_turban_rebellions.5 days = { 5 15 } } }
-						rtr_release_tag_CHE = { trigger_event_non_silently = { id = red_turban_rebellions.6 days = { 5 15 } } }
-						rtr_release_tag_WUU = { trigger_event_non_silently = { id = red_turban_rebellions.7 days = { 5 15 } } }
-						rtr_release_tag_CFN = { trigger_event_non_silently = { id = red_turban_rebellions.8 days = { 5 15 } } }
-						rtr_release_tag_CMO = { trigger_event_non_silently = { id = red_turban_rebellions.9 days = { 5 15 } } }
-						rtr_release_tag_CXI = { trigger_event_non_silently = { id = red_turban_rebellions.10 days = { 5 15 } } }
-						rtr_release_tag_CGU = { trigger_event_non_silently = { id = red_turban_rebellions.11 days = { 5 15 } } }
-						rtr_release_tag_MNG = { trigger_event_non_silently = { id = red_turban_rebellions.12 days = { 5 15 } } }
-						rtr_release_tag_CNP = { trigger_event_non_silently = { id = red_turban_rebellions.13 days = { 5 15 } } }
-						rtr_release_tag_CDN = { trigger_event_non_silently = { id = red_turban_rebellions.14 days = { 5 15 } } }
-						rtr_release_tag_CSI = { trigger_event_non_silently = { id = red_turban_rebellions.15 days = { 5 15 } } }
-						rtr_release_tag_CKO = { trigger_event_non_silently = { id = red_turban_rebellions.16 days = { 5 15 } } }
-						rtr_release_tag_CNA = { trigger_event_non_silently = { id = red_turban_rebellions.17 days = { 5 15 } } }
-					}
-				}
+		if = {
+			limit = {
+				country_exists = c:CHI
 			}
-			#Releasing a generic culture tag should happen very rarely
-			if = {
-				limit = {
-					has_variable = rtr_historical_countries_to_release
-					var:rtr_historical_countries_to_release < 4
-					var:rtr_country_additional_releaser_counter > 0
+			c:CHI = {
+				#The Song rebellion should ALWAYS happen
+				trigger_event_non_silently = { id = red_turban_rebellions.3 days = { 5 15 } }
+				if = {
+					limit = {
+						has_variable = rtr_historical_countries_to_release
+						var:rtr_historical_countries_to_release > 0
+					}
+					random = {
+						chance = 20
+						switch = {
+							trigger = has_variable
+							rtr_release_jurchen_culture = { trigger_event_non_silently = { id = red_turban_rebellions.4 days = { 5 15 } } }
+							rtr_release_tag_CTW = { trigger_event_non_silently = { id = red_turban_rebellions.5 days = { 5 15 } } }
+							rtr_release_tag_CHE = { trigger_event_non_silently = { id = red_turban_rebellions.6 days = { 5 15 } } }
+							rtr_release_tag_WUU = { trigger_event_non_silently = { id = red_turban_rebellions.7 days = { 5 15 } } }
+							rtr_release_tag_CFN = { trigger_event_non_silently = { id = red_turban_rebellions.8 days = { 5 15 } } }
+							rtr_release_tag_CMO = { trigger_event_non_silently = { id = red_turban_rebellions.9 days = { 5 15 } } }
+							rtr_release_tag_CXI = { trigger_event_non_silently = { id = red_turban_rebellions.10 days = { 5 15 } } }
+							rtr_release_tag_CGU = { trigger_event_non_silently = { id = red_turban_rebellions.11 days = { 5 15 } } }
+							rtr_release_tag_MNG = { trigger_event_non_silently = { id = red_turban_rebellions.12 days = { 5 15 } } }
+							rtr_release_tag_CNP = { trigger_event_non_silently = { id = red_turban_rebellions.13 days = { 5 15 } } }
+							rtr_release_tag_CDN = { trigger_event_non_silently = { id = red_turban_rebellions.14 days = { 5 15 } } }
+							rtr_release_tag_CSI = { trigger_event_non_silently = { id = red_turban_rebellions.15 days = { 5 15 } } }
+							rtr_release_tag_CKO = { trigger_event_non_silently = { id = red_turban_rebellions.16 days = { 5 15 } } }
+							rtr_release_tag_CNA = { trigger_event_non_silently = { id = red_turban_rebellions.17 days = { 5 15 } } }
+						}
+					}
 				}
-				random = {
-					chance = 1
-					modifier = {
-						var:rtr_historical_countries_to_release < 3
-						add = 1
+				#Releasing a generic culture tag should happen very rarely
+				if = {
+					limit = {
+						has_variable = rtr_historical_countries_to_release
+						var:rtr_historical_countries_to_release < 4
+						var:rtr_country_additional_releaser_counter > 0
 					}
-					modifier = {
-						var:rtr_historical_countries_to_release < 2
-						add = 1
+					random = {
+						chance = 1
+						modifier = {
+							var:rtr_historical_countries_to_release < 3
+							add = 1
+						}
+						modifier = {
+							var:rtr_historical_countries_to_release < 2
+							add = 1
+						}
+						modifier = {
+							var:rtr_historical_countries_to_release < 1
+							add = 1
+						}
+						trigger_event_non_silently = { id = red_turban_rebellions.18 days = { 20 50 } }
 					}
-					modifier = {
-						var:rtr_historical_countries_to_release < 1
-						add = 1
-					}
-					trigger_event_non_silently = { id = red_turban_rebellions.18 days = { 20 50 } }
 				}
-			}
-			random_list = {
-				10 = { trigger_event_non_silently = red_turban_rebellions.20 }
-				10 = { trigger_event_non_silently = red_turban_rebellions.21 }
-				500 = {}
-			}
+				random_list = {
+					10 = { trigger_event_non_silently = red_turban_rebellions.20 }
+					10 = { trigger_event_non_silently = red_turban_rebellions.21 }
+					500 = {}
+				}
 
-			random = { chance = 5 trigger_event_non_silently = red_turban_rebellions.40 }
-			random = { chance = 5 trigger_event_non_silently = red_turban_rebellions.41 }
-			random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.42 }
-			random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.43 }
-			random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.44 }
-		}
-		random = {
-			chance = 2
-			c:KOR = { trigger_event_non_silently = red_turban_rebellions.1000 }
+				random = { chance = 5 trigger_event_non_silently = red_turban_rebellions.40 }
+				random = { chance = 5 trigger_event_non_silently = red_turban_rebellions.41 }
+				random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.42 }
+				random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.43 }
+				random = { chance = 10 trigger_event_non_silently = red_turban_rebellions.44 }
+			}
+		
+			random = {
+				chance = 2
+				c:KOR = { trigger_event_non_silently = red_turban_rebellions.1000 }
+			}
 		}
 	}
 	on_ended = {

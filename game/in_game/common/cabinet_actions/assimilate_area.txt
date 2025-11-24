@@ -39,7 +39,7 @@
 			lerp = {
 				min_color = define:NMapColors|MAP_COLOR_LOW
 				max_color = define:NMapColors|MAP_COLOR_HIGH
-				factor = "province.culture_percentage(scope:actor.dominant_culture)"
+				factor = "area.culture_percentage(scope:actor.dominant_culture)"
 			}
 		}
 	}

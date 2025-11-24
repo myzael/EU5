@@ -7,9 +7,9 @@
 	relation_type_for_ai = friendly
 	uses_diplo_capacity = giving
 	diplomatic_capacity_cost = support_heir_upkeep_cost
-	offer_visible = no	#We do not want the diplo actions from that relation as they are done in country_interactions/support_heir.txt
-	request_visible = no
-	break_visible = no
+	offer_visible = { always = no }	#We do not want the diplo actions from that relation as they are done in country_interactions/support_heir.txt
+	request_visible = { always = no }
+	break_visible = { always = no }
 	category = {
 		offer = CATEGORY_FRIENDLY_ACTIONS
 		cancellation = CATEGORY_HOSTILE_ACTIONS

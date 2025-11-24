@@ -597,7 +597,7 @@ types DiplomaticActions {
 								tooltipwidget = { 
 									LeftClickButtonTooltip = {
 										blockoverride "onclick_text" { 
-											text = "[SelectLocalization(IsCountryFaved(Country.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+											text = "[SelectLocalization(IsCountryFaved(Country.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 										}
 									}
 								}
@@ -1469,13 +1469,45 @@ type country_rank_banner = widget {
 
         widget = {
             size = {100% 100%}
-            background = {
-                texture = "gfx/interface/great_powers/greatpower_0.dds"
-                texture_density = 2
-                spriteType = Corneredstretched
-                spriteborder = {20 20}
-                margin = {2 0}
-            }
+			allow_outside = yes
+			block "great_power_tooltip" {
+				button = {
+					size = {105% 100%} 
+					visible = "[Country.IsGreatPower]"
+					texture = "gfx/interface/great_powers/greatpower_0.dds"
+					texture_density = 2
+					parentanchor = center
+					spriteType = Corneredstretched
+					spriteborder = {20 20}
+					action_tooltip = {
+						click_type = left
+						click_mode = single
+						title = "OPEN_KNOWN_COUNTRIES_TAB"
+						on_action = "[OpenLateralViewWithParams('diplomacy', 'subtab = known_countries')]"
+					}
+					tooltipwidget = {
+						using = great_power_info_tooltip
+					}
+				}
+				button = {
+					size = {105% 100%} 
+					visible = "[Not(Country.IsGreatPower)]"
+					texture = "gfx/interface/great_powers/greatpower_0.dds"
+					texture_density = 2
+					parentanchor = center
+					spriteType = Corneredstretched
+					spriteborder = {20 20}
+					action_tooltip = {
+						click_type = left
+						click_mode = single
+						title = "OPEN_KNOWN_COUNTRIES_TAB"
+						on_action = "[OpenLateralViewWithParams('diplomacy', 'subtab = known_countries')]"
+					}
+					tooltipwidget = {
+						using = non_great_power_info_tooltip
+					}
+				}
+			}
             widget = {
                 size = {100% 100%}
                 icon = {
@@ -1499,7 +1531,6 @@ type country_rank_banner = widget {
 					visible = "[Country.IsGreatPower]"
                     frame = "[Country.GetGreatPowerRank]"
                 }
-
             }
             text_single = {
                 parentanchor = center
@@ -1509,24 +1540,6 @@ type country_rank_banner = widget {
                 text = "[Country.GetGreatPowerRank]"
                 block "great_power_sort_highlight" {}
             }
-
-			block "great_power_tooltip" {
-				widget = { 
-					visible = "[Country.IsGreatPower]"
-					size = { 100% 100% }
-					tooltipwidget = {
-						using = great_power_info_tooltip
-					}
-				}
-
-				widget = { 
-					visible = "[Not(Country.IsGreatPower)]"
-					size = { 100% 100% }
-					tooltipwidget = {
-						using = non_great_power_info_tooltip
-					}
-				}
-			}
 
         }
     }

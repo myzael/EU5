@@ -122,7 +122,10 @@ recruitment_law = {
 		allow = {
 			NOT = { current_age = age_1_traditions }
 			NOT = { current_age = age_2_renaissance }
-			NOT = { has_variable = devshirme_abolished }
+			custom_tooltip = {
+				text = devshirme_system_policy_why_tt
+				NOT = { has_variable = devshirme_abolished }
+			}
 		}
 		country_modifier = {
 			wrong_culture_levy_size = 0.25

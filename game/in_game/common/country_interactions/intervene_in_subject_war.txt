@@ -117,23 +117,20 @@
 				}
 			}
 		}
-		scope:recipient = {
-
-		}
 	}
 
 	ai_will_do = {
 		add = {
 			desc = "game_concept_opinion"
 			scope:actor = {
-				value = "opinion(scope:side)"
+				value = "opinion(scope:recipient)"
 				divide = 5
 			}
 		}
 		add = {
 			desc = "game_concept_trust"
 			scope:actor = {
-				value = "trust(scope:side)"
+				value = "trust(scope:recipient)"
 				divide = 5
 			}
 		}
@@ -147,11 +144,9 @@
 		add = {
 			desc = "LENGTH_OF_WAR_TOOLTIP"
 			scope:target = {
-				civil_war = {
-					value = war_length_in_years
-					add = -4
-					multiply = 10
-				}
+				value = war_length_in_years
+				add = -4
+				multiply = 10
 			}
 		}
 		add = {

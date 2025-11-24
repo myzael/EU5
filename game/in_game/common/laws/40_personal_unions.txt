@@ -130,6 +130,13 @@ union_foundation_law = {
 		on_activate = {
 			on_union_policy_change_effect = yes
 		}
+		wants_propose_policy = {
+			#we give it -100 because the AI should not really care - Unions already start with that law, and it would be unenjoyable when there is a senior partner already established
+			add = {
+				desc = "VOTE_BASE_VALUE"
+				value = -100
+			}
+		}
 		wants_this_policy_bias = {
 			#AI is always in favor of not being anyone's puppet
 			add = {
@@ -346,6 +353,7 @@ union_diplomatic_law = {
 		}
 		international_organization_modifier = {
 			union_integration_level = 1
+			union_allowed_enforce_peace = yes
 		}
 		has_limited_diplomacy = {
 			NOT = {
@@ -354,6 +362,19 @@ union_diplomatic_law = {
 					international_organization = scope:recipient
 				}
 			}
+		}
+		country_modifier = {
+			potential_trigger = {
+				NOT = {
+					has_special_status_in_international_organization = {
+						type = special_status:senior_partner
+						international_organization = union
+					}
+				}
+			}
+			war_no_cb_cost_modifier = 0.25
+			aggressiveness_modifier = -0.75
+			carefulness_modifier = 0.5
 		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization

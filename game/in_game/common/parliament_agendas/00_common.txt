@@ -65,6 +65,9 @@ pa_change_policy = {
 	potential = {
 		any_possible_policy = {
 			any_estate_type_preferring = { this = scope:target }
+			law = {
+				NOT = { is_locked_for = root }
+			}
 		}
 	}
 
@@ -72,6 +75,9 @@ pa_change_policy = {
 		random_possible_policy = {
 			limit = {
 				any_estate_type_preferring = { this = scope:target }
+				law = {
+					NOT = { is_locked_for = root }
+				}
 			}
 			root = {
 				add_policy = prev

@@ -259,13 +259,9 @@ mercantilism_events.6 = {
 	desc = mercantilism_events.6.desc
 	trigger = {
 		has_embraced_institution = institution:banking
-		trigger_if = {
-			limit = {
-				current_age_or_later = { age = age_4_reformation }
-			}
-			societal_value:mercantilism_vs_free_trade > -40
-			societal_value:mercantilism_vs_free_trade < 40
-		}
+		current_age_or_later = { age = age_4_reformation }
+		societal_value:mercantilism_vs_free_trade > -40
+		societal_value:mercantilism_vs_free_trade < 40
 	}
 
 	illustration_tags = {

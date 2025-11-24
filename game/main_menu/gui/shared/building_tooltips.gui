@@ -697,18 +697,20 @@ template BuildingType_production_tooltip {
 
 			TooltipListColumnContent = {
 				TooltipTableColumn = {
-					blockoverride "field_left" { expand = {} }
+					#blockoverride "field_left" { expand = {} }
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { text = "[location|e]" }
 					blockoverride "field_text" { text = "[ConstructScoreItem.GetLocation.GetName]" }
 					blockoverride "field_right" { expand = {} }
+					blockoverride "column_title_right" { expand = {} }
 				}
 
 				TooltipTableColumn = {
 					layoutpolicy_horizontal = fixed
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { text = "[control|e]" }
-					#blockoverride "field_left" { expand = {} }
+					blockoverride "field_left" { expand = {} }
+					blockoverride "column_title_left" { expand = {} }
 					blockoverride "field_text" { text = "[ConstructScoreItem.GetLocation.GetControl|%1]" }
 				}
 
@@ -716,7 +718,8 @@ template BuildingType_production_tooltip {
 					layoutpolicy_horizontal = fixed
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { text = "[market_access|e]" }
-					#blockoverride "field_left" { expand = {} }
+					blockoverride "field_left" { expand = {} }
+					blockoverride "column_title_left" { expand = {} }
 					blockoverride "field_text" { text = "[ConstructScoreItem.GetLocation.GetMarketAccess|%1]" }
 				}
 
@@ -725,7 +728,8 @@ template BuildingType_production_tooltip {
 					visible = "[ConstructScoreRanking.HasProfit]"
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { text = "EXPAND_RGO_IN_BEST_LOCATION_PROFIT_LABEL" }
-					#blockoverride "field_left" { expand = {} }
+					blockoverride "field_left" { expand = {} }
+					blockoverride "column_title_left" { expand = {} }
 					blockoverride "field_text" { raw_text = "[ConstructScoreItem.GetNetProfitValue|+=<2]@gold!" }
 				}
 
@@ -733,7 +737,8 @@ template BuildingType_production_tooltip {
 					layoutpolicy_horizontal = fixed
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { text = "left_click_cost" }
-					#blockoverride "field_left" { expand = {} }
+					blockoverride "field_left" { expand = {} }
+					blockoverride "column_title_left" { expand = {} }
 					blockoverride "field_text" { raw_text = "[ConstructScoreItem.GetCostValue|2]@gold!" }
 				}
 
@@ -743,7 +748,8 @@ template BuildingType_production_tooltip {
 					visible = "[IsBuildDebug]"
 					blockoverride "column_title" {}
 					blockoverride "column_title_text" { raw_text = "[employment|e]" }
-					#blockoverride "field_left" { expand = {} }
+					blockoverride "field_left" { expand = {} }
+					blockoverride "column_title_left" { expand = {} }
 					blockoverride "field_text" { raw_text = "[ConstructScoreItem.GetEmployabilityStr]@laborers!" }
 				}
 
@@ -1483,6 +1489,29 @@ template construct_building_in_location_tt {
 
 		blockoverride "tooltip_content" {
 			block "construct_building_in_location_tt_extra"{}
+
+            TooltipTextBlock = {
+				visible = "[And(CanBuildOrExpandBuilding(BuildingType.Self, Location.Self), Location.HasTooManyBuildingLevel)]"
+				blockoverride "text" {
+					text = "LOCATION_TOO_MANY_BUILD_LEVELS_LABEL"
+				}
+				blockoverride "textblock_background_tint" {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
+
+				TooltipStringPairList = {
+					datacontext = "[Location]"
+
+					modify_texture = {
+						using = color_red_texture
+					}
+
+					textcontext = "[Location.GetTooManyBuildingInfo]"
+				}
+            }
+
 			TooltipBlockList = {
 				visible = "[CanBuildOrExpandBuilding(BuildingType.Self, Location.Self)]"
 				textcontext = "[CanBuildOrExpandBuildingInfo(BuildingType.Self, Location.Self)]"

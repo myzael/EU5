@@ -141,7 +141,6 @@ types Standard_Types
 	type pie_chart_legend = fixedgridbox {
 		addrow = 23
 		minimumsize = { -1 69 } #nice
-		maxverticalslots = 5
 
 		# block "columnsize" {
 			addcolumn = 290

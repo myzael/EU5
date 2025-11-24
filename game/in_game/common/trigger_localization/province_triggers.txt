@@ -113,6 +113,14 @@ province_rebel_progress = {
 	third = THIRD_HAS_REBEL_PRESENCE_TRIGGER
 }
 
+province_population= {
+	none = NONE_HAS_PROVINCE_POPULATION_TRIGGER
+	global = HAS_HAS_PROVINCE_POPULATION_TRIGGER
+	third = THIRD_HAS_PROVINCE_POPULATION_TRIGGER
+}
+
+
+
 num_pop_type_in_province = {
 	none = NUM_POP_TYPE_IN_PROVINCE_TRIGGER_GLOBAL
 	global = NUM_POP_TYPE_IN_PROVINCE_TRIGGER_GLOBAL

@@ -376,7 +376,7 @@ has_child_education = {
 has_child_education_selected = {
 	none = TRIGGER_HAS_CHILD_EDUCATION_SELECTED
 	global = TRIGGER_HAS_CHILD_EDUCATION_SELECTED
-	third = TRIGGER_HAS_CHILD_EDUCATION_THIRD_SELECTED
+	third = TRIGGER_HAS_CHILD_EDUCATION_SELECTED_THIRD
 }
 
 has_estate = {

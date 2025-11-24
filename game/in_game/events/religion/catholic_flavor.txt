@@ -385,7 +385,7 @@ catholic_flavor.8 = { #Doctrine of Particular Judgement
 			limit = {
 				location_catholic_flavor_8_trigger = yes
 			}
-			save_scope_as = unrest_province
+			save_scope_as = unrest_location_scope
 		}
 	}
 
@@ -397,7 +397,7 @@ catholic_flavor.8 = { #Doctrine of Particular Judgement
 	option = {
 		name = catholic_flavor.8.b
 
-		scope:unrest_province = {
+		scope:unrest_location_scope = {
 			every_pop = {
 				limit = {
 					owner = root
@@ -441,7 +441,7 @@ catholic_flavor.9 = { #A New Confession of Faith
 			limit = {
 				location_catholic_flavor_9_trigger = yes
 			}
-			save_scope_as = unrest_province
+			save_scope_as = unrest_location_scope
 		}
 	}
 
@@ -449,7 +449,7 @@ catholic_flavor.9 = { #A New Confession of Faith
 		name = catholic_flavor.9.a
 
 		add_government_power = government_power_weak_bonus
-		scope:unrest_province = {
+		scope:unrest_location_scope = {
 			create_some_heretics = yes
 		}
 	}

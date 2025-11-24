@@ -42,7 +42,18 @@ flavor_dit.1 = {
 		name = flavor_dit.1.a
 		
 		historical_option = yes
-		
+		if = {
+			limit = {
+				any_current_reforms = { is_major_reform = yes }
+				NOT = {
+					has_reform = government_reform:peasant_republic_reform
+				}
+			}
+			random_current_reforms = {
+				limit = { is_major_reform = yes }
+				root = { remove_reform = prev }
+			}
+		}
 		if = {
 			limit = {
 				NOT = {

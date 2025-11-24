@@ -20,7 +20,7 @@ Code
 		#else
 			float Factor = CalcRandom( NoiseCoordinate );
 		#endif
-
-		clip( Opacity - Factor * sign( Opacity )  - 0.0001 );
+		clip( Opacity - Factor * sign( Opacity ));
+		clip( 0.5 - (Opacity == 0.0) ); //ensure that with sign 0 we also clip the opacity
 	}
 ]]

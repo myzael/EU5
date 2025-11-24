@@ -234,6 +234,7 @@ conquistador.11 = {
 		scope:conquistador_country = {
 			remove_reform = government_reform:conquistador_country
 			make_subject_of = { target = root type = subject_type:colonial_nation }
+			change_country_type = location
 		}
 		
 		historical_option = yes

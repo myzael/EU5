@@ -29,6 +29,7 @@ ruler_dip = {
 	global_estate_target_satisfaction = 0.001
 	diplomatic_reputation = 0.05
 	diplomatic_capacity_modifier = 0.01
+	subject_loyalty = 0.1
 	
 	peace_offer_fairness = 0.002
 	peace_offer_negotiation_power = 0.001

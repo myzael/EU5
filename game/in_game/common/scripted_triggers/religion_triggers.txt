@@ -11,6 +11,9 @@ excommunicate_allow_trigger = {
 		current_age = age_1_traditions
 		current_age = age_2_renaissance
 	}
+	religion:catholic = {
+		modifier:curia_actions_blocked = no
+	}
 }
 excommunicate_target_trigger = {
 	religion ?= religion:catholic
@@ -315,7 +318,7 @@ country_can_pay_tithe = {
 			prev_opinion_of_this >= 0
 		}
 	}
-	trigger_else = {
+	trigger_else_if = {
 		limit = {
 			exists = root.leader_country
 		}
@@ -325,6 +328,7 @@ country_can_pay_tithe = {
 			value >= 0
 		}
 	}
+	trigger_else = { always = no }
 	modifier:excluded_from_paying_tithe = no
 }
 

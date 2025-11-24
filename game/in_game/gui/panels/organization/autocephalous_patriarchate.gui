@@ -38,30 +38,6 @@ organization_religious_theme = {
     }
 
 	blockoverride "organization_main_actions_extra" {
-        #Join io
-        action_button_diamond = {
-            #parentanchor = center
-            size = { 470 30 }
-            title = "INT_ORG_MEMBERSHIP_TITLE"
-            actor = "[InternationalOrganizationsView.GetPlayer]"
-            text = "ASK_FOR_IO_MEMBERSHIP"
-            parameter = {
-                parameter_name = "recipient"
-                parameter_value = "[InternationalOrganizationsView.GetInternationalOrganization.GetLeaderCountry]"
-            }
-            left_action = {
-                action_name = "ask_to_join_international_organization"
-                action_direction = "request"
-                parameter = {
-                    parameter_name = "international_organization"
-                    parameter_value = "[InternationalOrganizationsView.GetInternationalOrganization]"
-                }
-            }
-            tooltipwidget = {
-                using = io_join_button_tooltip
-            }
-            visible = "[Not(Player.IsMemberOfInternationalOrganization(InternationalOrganizationsView.GetInternationalOrganization))]"
-        }
         #invite people
         action_button_diamond = {
             size = { 470 30 }

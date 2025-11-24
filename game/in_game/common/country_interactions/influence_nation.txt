@@ -47,7 +47,7 @@
 					target = scope:actor
 					value = 5
 				}
-				add_location_modifier = {
+				add_country_modifier = {
 					modifier = excellent_diplomacy
 					years = 10
 					mode = replace

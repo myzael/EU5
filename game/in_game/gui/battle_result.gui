@@ -344,69 +344,77 @@ window = {
 	parentanchor = center
 	size = { 860 550 }
 
-
 	widget = {
 		size = { 100% 100% }
-		
-		allow_outside = yes
-		
+		allow_outside = yes		
 
 		vbox = { #WINDOW DATA SPACE
 			bottomtotop = yes
 			
 			widget = {
 				layoutpolicy_horizontal = expanding
-				layoutpolicy_vertical = expanding
-
+				layoutpolicy_vertical = expanding				
 				widget = {
 					size = { 100% 100% }
+					visible = "[Not(BattleResultMessage.IsPlayerWinner)]"
+										
 					using = bg_age_event_inner
 					using = bg_age_event_frame
-					using = bg_declare_war_header_sides
-					visible = "[Not(BattleResultMessage.IsPlayerWinner)]"
-					blockoverride "header_color" {
-						modify_texture = {
-							using = color_light_red_texture
-							blend_mode = multiply
-						}
-						modify_texture = {
-							using = color_whiteish_texture
-							blend_mode = overlay
-						}
-						modify_texture = {
-							using = color_whiteish_texture
-							blend_mode = overlay
-							alpha = 0.5
+					widget = {
+						size = { 100% 90% }
+						parentanchor = hcenter|top
+						position = {0 38}
+						using = bg_declare_war_header_sides
+						blockoverride "header_color" {
+							modify_texture = {
+								using = color_light_red_texture
+								blend_mode = multiply
+							}
+							modify_texture = {
+								using = color_whiteish_texture
+								blend_mode = overlay
+							}
+							modify_texture = {
+								using = color_whiteish_texture
+								blend_mode = overlay
+								alpha = 0.5
+							}
 						}
 					}
 				}
 
 				widget = {
 					size = { 100% 100% }
+					visible = "[BattleResultMessage.IsPlayerWinner]"
 					using = bg_age_event_inner
 					using = bg_age_event_frame
-					using = bg_declare_war_header_sides
-					visible = "[BattleResultMessage.IsPlayerWinner]"
-					blockoverride "header_color" {
-						modify_texture = {
-							using = color_mid_green_texture
-							blend_mode = multiply
+					widget = {
+						size = { 100% 90% }
+						parentanchor = hcenter|top
+						position = {0 38}
+						using = bg_declare_war_header_sides
+						blockoverride "header_color" {
+							modify_texture = {
+								using = color_mid_green_texture
+								blend_mode = multiply
+							}
+							modify_texture = {
+								using = color_blue_texture
+								blend_mode = overlay
+							}	
+							modify_texture = {
+								using = color_bone_texture
+								blend_mode = overlay
+							}	
+							modify_texture = {
+								using = overlay_cloth_texture
+								blend_mode = overlay
+								alpha = 0.2
+							}
+							
 						}
-						modify_texture = {
-							using = color_blue_texture
-							blend_mode = overlay
-						}	
-						modify_texture = {
-							using = color_bone_texture
-							blend_mode = overlay
-						}	
-						modify_texture = {
-							using = overlay_cloth_texture
-							blend_mode = overlay
-							alpha = 0.2
-						}
-						
 					}
+
 				}
 				
 				vbox = {

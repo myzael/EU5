@@ -228,7 +228,7 @@
 					var:union_senior_partner = { has_heir = yes }
 					OR = {
 						NOT = { has_variable = union_heir_character }
-						NOT = { var:union_heir_character = var:union_senior_partner.heir }
+						NOT = { var:union_heir_character ?= var:union_senior_partner.heir }
 					}
 				}
 				set_variable = {

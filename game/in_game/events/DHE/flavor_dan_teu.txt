@@ -23,6 +23,11 @@ flavor_dan_teu.1 = {
 		}
 	}
 
+	illustration_tags = {
+		10 = armed
+		10 = exterior
+	}
+
 	immediate = {
 		save_scope_as = TEU_denmark_from
 		create_rebel = {
@@ -60,14 +65,8 @@ flavor_dan_teu.1 = {
 		}
 	}
 
-	illustration_tags = {
-		10 = armed
-		10 = exterior
-	}
-
 	option = {
-		name = flavor_dan_teu.1.a
-		
+		name = flavor_dan_teu.1.a		
 		historical_option = yes
 		
 		custom_tooltip = TEU_st_georges_uprising
@@ -96,17 +95,40 @@ flavor_dan_teu.2 = {
 	desc = flavor_dan_teu.2.desc
 	historical_info = flavor_dan_teu.1.historical_info
 	
+	trigger = {
+		c:DAN = {
+			any_current_war	= {
+				#Is Denmark defending from an Estonian Country?
+				any_attacker = {
+					culture = culture:estonian
+				}
+				#The Teutons are not already participating in that same war
+				NOT = {
+					any_war_participant = {
+						this = ROOT
+					}
+				}
+			}
+		}
+	}
+
 	illustration_tags = {
         10 = armed
         10 = exterior
     }
 
 	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		c:DAN = {
 			random_war = {
 				limit = {
 					any_attacker = {
 						culture = culture:estonian
+					}
+					NOT = {
+						any_war_participant = {
+							this = ROOT
+						}
 					}
 				}
 				save_scope_as = TEU_independence_war_estonian
@@ -119,7 +141,6 @@ flavor_dan_teu.2 = {
 						name = estonian_rebellion_flag
 						years = 10
 					}		
-					event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 				}
 			}
 		}
@@ -134,15 +155,6 @@ flavor_dan_teu.2 = {
 		}
 	}
 
-	trigger = {
-		NOT = {
-			scope:TEU_independence_war_estonian = {
-				any_war_participant = {
-					this = ROOT
-				}
-			}
-		}
-	}
 
 	option = {
 		name = flavor_dan_teu.2.a

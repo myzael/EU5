@@ -202,24 +202,23 @@ wokou_events.2 = {
 		}
 		custom_tooltip = {
 			text = wokou_amount_of_slaves_gained
-			capital ?= {
-				every_in_list = {
-					list = raided_pop
-					prev = {
-						add_pop = {
-							culture = prev.culture
-							religion = prev.religion
-							size = {
-								value = prev.pop_size
-								multiply = 0.004
-							}
-							type = pop_type:slaves
+			every_in_list = {
+				list = raided_pop
+				save_temporary_scope_as = raided_pop_scope
+				root.capital = {
+					add_pop = {
+						culture = scope:raided_pop_scope.culture
+						religion = scope:raided_pop_scope.religion
+						size = {
+							value = scope:raided_pop_scope.pop_size
+							multiply = 0.004
 						}
+						type = pop_type:slaves
 					}
-					add_pop_size = {
-						value = pop_size
-						multiply = -0.01
-					}
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = -0.01
 				}
 			}
 		}
@@ -271,6 +270,11 @@ wokou_events.3 = {
 					}
 					prosperity <= -0.25
 				}
+				any_pop = {
+					owner = root
+					pop_type = pop_type:peasants
+					pop_size >= 0.5
+				}
 			}
 			save_scope_as = target_location
 			ordered_pop = {
@@ -302,7 +306,7 @@ wokou_events.3 = {
 	option = {
 		name = wokou_events.3.a
 		
-		scope:target_pop = {
+		scope:target_pop ?= {
 			add_pop_size = {
 				value = local_var:pops_migrated_amount
 				multiply = -1

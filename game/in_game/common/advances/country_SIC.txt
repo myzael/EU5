@@ -17,6 +17,7 @@ sic_constitions_of_melfi = {
 	potential = {
 		OR = {
 			has_or_had_tag = SIC
+			has_or_had_tag = TWS
 			culture = culture:sicilian
 		}
 	}
@@ -26,7 +27,6 @@ sic_constitions_of_melfi = {
 }
 
 sic_studium_generale = {
-	age = age_2_renaissance
 	age = age_2_renaissance
 	potential = {
 		OR = {
@@ -59,6 +59,7 @@ sic_sicilian_silk = {
 	potential = {
 		OR = {
 			has_or_had_tag = SIC
+			has_or_had_tag = TWS
 			culture = culture:sicilian
 		}
 	}

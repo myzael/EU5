@@ -17008,6 +17008,7 @@ flavor_tur.211 = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = TUR
 		location:belgrad = {
 			controller = root
 			owner = {
@@ -17052,6 +17053,7 @@ flavor_tur.212 = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = TUR
 		location:buda = {
 			controller = root
 			owner = {
@@ -17103,6 +17105,7 @@ flavor_tur.213 = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = TUR
 		religion.group = religion_group:muslim
 		location:cairo = {
 			controller = root
@@ -17156,6 +17159,7 @@ flavor_tur.214 = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = TUR
 		religion.group = religion_group:muslim
 		location:vienna = {
 			controller = root
@@ -17257,6 +17261,7 @@ flavor_tur.216 = {
 	fire_only_once = yes
 
 	trigger = {
+		tag = TUR
 		location:malta = {
 			controller = root
 			owner = {

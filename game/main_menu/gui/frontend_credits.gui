@@ -11,10 +11,14 @@ widget = {
 
     background = {
         using = FrontEndBackgroundTexture
+        size = { 100% 100% }
+        fittype = centercrop
     }
     background = {
 		using = color_bg_blue_texture
 		alpha = 0.3
+        size = { 100% 100% }
+        fittype = centercrop
 	}
 
     widget = {

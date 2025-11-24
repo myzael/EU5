@@ -60,57 +60,63 @@
 	}
 
     monthly_effect = {
-        clear_global_variable_list = rtr_loyal_faction
-        clear_global_variable_list = rtr_neutral_faction
-        add_to_global_variable_list = {
-            name = rtr_loyal_faction
-            target = c:CHI
-        }
-        every_country = {
-            limit = {
-                has_variable = rtr_yuan_allegiance
-                has_reform = government_reform:warring_state
+		if = {
+			limit = {
+				country_exists = c:CHI
+			}
+
+            clear_global_variable_list = rtr_loyal_faction
+            clear_global_variable_list = rtr_neutral_faction
+            add_to_global_variable_list = {
+                name = rtr_loyal_faction
+                target = c:CHI
             }
-            change_variable = {
-                name = rtr_yuan_allegiance
-                add = {
-                    value = {
-                        value = "opinion(c:CHI)"
-                        divide = 100
+            every_country = {
+                limit = {
+                    has_variable = rtr_yuan_allegiance
+                    has_reform = government_reform:warring_state
+                }
+                change_variable = {
+                    name = rtr_yuan_allegiance
+                    add = {
+                        value = {
+                            value = "opinion(c:CHI)"
+                            divide = 100
+                        }
+                        subtract = 1
                     }
-                    subtract = 1
                 }
-            }
-            if = {
-                limit = { var:rtr_yuan_allegiance < -100 }
-                set_variable = { name = rtr_yuan_allegiance value = -100 }
-            }
-            if = {
-                limit = { var:rtr_yuan_allegiance > 100 }
-                set_variable = { name = rtr_yuan_allegiance value = 100 }
-            }
-            if = {
-                limit = {
-                    NOT = { is_member_of_international_organization = root }
-                    var:rtr_yuan_allegiance < 0
+                if = {
+                    limit = { var:rtr_yuan_allegiance < -100 }
+                    set_variable = { name = rtr_yuan_allegiance value = -100 }
                 }
-                root = {
-                    add_country_to_international_organization = prev
+                if = {
+                    limit = { var:rtr_yuan_allegiance > 100 }
+                    set_variable = { name = rtr_yuan_allegiance value = 100 }
                 }
-            }
-            if = {
-                limit = {
-                    var:rtr_yuan_allegiance >= 0
-                    var:rtr_yuan_allegiance < 50
-                    NOT = { is_member_of_international_organization = international_organization:red_turban_rebels }
+                if = {
+                    limit = {
+                        NOT = { is_member_of_international_organization = root }
+                        var:rtr_yuan_allegiance < 0
+                    }
+                    root = {
+                        add_country_to_international_organization = prev
+                    }
                 }
-                add_to_global_variable_list = { name = rtr_neutral_faction target = this }
-            }
-            if = {
-                limit = {
-                    var:rtr_yuan_allegiance >= 50
+                if = {
+                    limit = {
+                        var:rtr_yuan_allegiance >= 0
+                        var:rtr_yuan_allegiance < 50
+                        NOT = { is_member_of_international_organization = international_organization:red_turban_rebels }
+                    }
+                    add_to_global_variable_list = { name = rtr_neutral_faction target = this }
                 }
-                add_to_global_variable_list = { name = rtr_loyal_faction target = this }
+                if = {
+                    limit = {
+                        var:rtr_yuan_allegiance >= 50
+                    }
+                    add_to_global_variable_list = { name = rtr_loyal_faction target = this }
+                }
             }
         }
     }

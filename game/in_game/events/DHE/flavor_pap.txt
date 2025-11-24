@@ -3892,3 +3892,87 @@ flavor_pap.9001 = {
 		add_prestige = prestige_ultimate_penalty
 	}
 }
+
+flavor_pap.9002 = {
+	type = country_event
+	title = flavor_pap.9002.title
+	desc = flavor_pap.9002.desc
+
+	trigger = {
+		exists = international_organization:catholic_church
+		country_exists = c:PAP
+	}
+
+	illustration_tags = {
+        10 = angry
+        10 = exterior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
+		location:rome = { save_scope_as = target_location }
+	}
+
+	option = {
+		name = flavor_pap.9002.a
+
+		ai_will_select = {
+			value = 1
+
+			add = {
+				value = modifier:tolerance_own
+				multiply = 2
+			}
+
+			add = {
+				value = num_cardinals
+			}
+
+			add = {
+				value = societal_value:spiritualist_vs_humanist
+				multiply = -0.1
+			}
+		}
+
+		if = {
+			limit = { country_exists = c:PAP }
+		}
+		location:rome = {
+			change_location_owner = c:PAP
+		}
+
+		custom_tooltip = {
+			text = accepted_to_return_rome_tt
+			religion:catholic = {
+				every_country_in_religion = {
+					limit = { this != root }
+					add_opinion = {
+						target = ROOT
+						modifier = returned_rome
+					}
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = flavor_pap.9002.b
+
+		ai_will_select = {		#AI can have a little bit of opportunism as a treat
+			value = 5
+		}
+		
+		custom_tooltip = {
+			text = declined_to_return_rome_tt
+			religion:catholic = {
+				every_country_in_religion = {
+					limit = { this != root }
+					add_opinion = {
+						target = ROOT
+						modifier = declined_return_rome
+					}
+				}
+			}
+		}
+	}
+}

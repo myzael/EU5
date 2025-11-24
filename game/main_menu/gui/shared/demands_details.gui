@@ -8,9 +8,10 @@ template demands_details {
 			TooltipTableColumn = {
 				blockoverride "column_title" {}
 				blockoverride "column_title_text" { text = "[goods|e]" }
+				blockoverride "column_title_right" { expand = {} }
 
 				blockoverride "field_left" {
-					expand = {}
+					#expand = {}
 					datacontext = "[GoodsDemandEntry.GetGoods]"
 					datacontext = "[Location.GetMarket]"
 					tooltipwidget = {
@@ -34,15 +35,16 @@ template demands_details {
 				blockoverride "column_title" {}
 				blockoverride "column_title_text" { text = "GOODS_REQUIRED" }
 
-				#blockoverride "field_left" { expand = {} }
+				blockoverride "field_left" { expand = {} }
+				blockoverride "column_title_left" { expand = {} }
 				blockoverride "field_text" { text = "[GoodsDemandEntry.GetValue]" }
 			}
 
 			TooltipTableColumn = {
 				blockoverride "column_title" {}
 				blockoverride "column_title_text" { text = "GOODS_IN_SURPLUS" }
-				
-				#blockoverride "field_left" { expand = {} }
+				blockoverride "column_title_left" { expand = {} }
+				blockoverride "field_left" { expand = {} }
 				blockoverride "field_text" { 
 					datacontext = "[GoodsDemandEntry.GetGoods]"
 					datacontext = "[Location.GetMarket]"

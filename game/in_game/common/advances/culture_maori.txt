@@ -50,5 +50,5 @@ maori_he_whakaputanga_advance = {
 	}
 	requires = legalism_advance
 	
-	subject_loyalty = 10
+	subject_loyalty = 5
 }

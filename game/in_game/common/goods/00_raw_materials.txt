@@ -106,6 +106,8 @@ silver = {
 		nobles = 0.025
 	}
 	
+
+	
 	wealth_impact_threshold = {
 		all = 1.05
 	}
@@ -185,7 +187,7 @@ tea = {
 		burghers = 0.01
 		clergy = 0.01
 	}
-	
+		
 	wealth_impact_threshold = {
 		all = 0.75
 	}
@@ -254,7 +256,6 @@ ivory = {
 	wealth_impact_threshold = {
 		all = 1.1
 	}
-
 }
 
 
@@ -272,6 +273,8 @@ lumber  = {
 	demand_add = {
 		all = 0.00025
 	}
+	
+
 	
 	demand_multiply = {
 		upper = 5
@@ -404,6 +407,9 @@ wine = {
 	demand_multiply = {
 		upper = 10
 		nobles = 1.5
+		
+		slaves = 0
+		tribesmen = 0
 	}
 	custom_tags = { old_world_goods }
 }

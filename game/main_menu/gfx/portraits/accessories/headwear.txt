@@ -497,6 +497,7 @@ female_headwear_aztec_royal_golden_crown = {
 
 #	  DECCAN		#
 female_headwear_deccan_low_veil = {
+	set_tags = "no_hair"
 	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headwear_deccan_low_veil_entity   }
 }
 

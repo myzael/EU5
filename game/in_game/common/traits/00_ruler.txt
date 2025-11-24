@@ -68,7 +68,7 @@ tolerant = {
 		owner ?= {
 			OR = {
 				NOT = { any_owned_location = { dominant_religion = owner.religion } }
-				any_neighbor_country = { NOT = { dominant_religion = root.owner.religion } }
+				any_neighbor_country = { NOT = { religion = root.owner.religion } }
 			}
 		}
 	}

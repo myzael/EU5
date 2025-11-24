@@ -15,7 +15,7 @@
 		always = yes
 	}
 
-	request_visible = no
+	request_visible = { always = no }
 
 	offer_enabled = {
 		NOT = { scope:actor = { is_allied_with = { target = scope:recipient } } }

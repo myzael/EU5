@@ -8,7 +8,7 @@
 ## Size
 
 template Font_Size_Very_Small {
-	font = SimpleFont
+	#font = SimpleFont
 	fontsize = 12
 	size = { 0 23 }
 }

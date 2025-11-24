@@ -5,7 +5,7 @@ renaissance_advance = {
 	age = age_2_renaissance
 	icon = renaissance_advance
 	
-	cultural_influence = 0.05
+	cultural_influence_modifier = 0.05
 
 	depth = 0
 	
@@ -335,7 +335,7 @@ late_feudal_relations = {
 
 	requires = improve_relation_impact_renaissance
 	
-	subject_loyalty = 10
+	subject_loyalty = 5
 
 	ai_weight = {
 		if = {

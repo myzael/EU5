@@ -301,7 +301,7 @@ types CultureOverview {
 						align = right|nobaseline
 					}
 					blockoverride "bottom_text_setup" {
-						raw_text = "[CountryCultureLateralView.GetCountry.GetModifierCappedValueWithNoTooltip('num_possible_artists')|G]"
+						raw_text = "[CountryCultureLateralView.GetCountry.GetCharacterArtistsAmount|W]/[CountryCultureLateralView.GetCountry.GetModifierCappedValueWithNoTooltip('num_possible_artists')]"
 					}
 					datacontext = "[CountryCultureLateralView.GetCountry]"
 					tooltipwidget = {

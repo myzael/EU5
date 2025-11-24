@@ -20,8 +20,8 @@
 		}
 	}
 
-	offer_visible = no
-	cancel_visible = no
+	offer_visible = { always = no }
+	cancel_visible = { always = no }
 
 	request_enabled = {
 		scope:actor = {

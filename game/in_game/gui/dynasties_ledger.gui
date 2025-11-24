@@ -48,14 +48,14 @@ lateralview_full = {
 						}
 
 						sort_by_key_button = {
+							name = "characters"
+							using = layoutpolicy_expanding
+						}
+						sort_by_key_button = {
 							name = "power"
 							using = layoutpolicy_expanding
 						}
 
-						sort_by_key_button = {
-							name = "characters"
-							using = layoutpolicy_expanding
-						}
 						sort_by_key_button = {
 							name = "countries"
 							using = layoutpolicy_expanding

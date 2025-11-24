@@ -235,7 +235,7 @@ insult_against_habsburg = {
 			government_type = government_type:monarchy
 		}
 		scope:recipient = {
-			ruler ?= { dynasty = { dynasty_name = habsburg } }
+			ruler ?= { dynasty = { dynasty_name = habsburg_dynasty } }
 		}
 	}
 }

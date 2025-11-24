@@ -114,6 +114,7 @@ template government_reforms_item {
 					datacontext = "[GovernmentReformItem.GetReform]"
 					size = { 52 75 }
 					blockoverride "reform_action" {
+						alwaystransparent = yes
 						datacontext = "[GovernmentReformItem.GetUIAction]"
 						tooltip_enabled = no
 					}

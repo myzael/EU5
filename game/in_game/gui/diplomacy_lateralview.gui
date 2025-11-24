@@ -52,17 +52,8 @@ template relation_list_tooltip {
 										country_flag_small = {
 											datacontext = "[RelationDescItem.GetCountry]"
 										}
-
-										text_single = {
-											align = nobaseline
-											text = "[RelationDescItem.GetCountry.GetLongNameWithNoTooltip]"
-											tooltipwidget = {												
-												using = SubjectType2_Tooltip
-											}
-										}
-
 										widget = {
-											size = {32 32}
+											size = {20 20}
 											visible = "[And(RelationDescItem.HasProgress, RelationTypeItem.IsRelationType('truce'))]"
 											tooltipwidget = {
 												ContextualTooltipType = {
@@ -121,7 +112,6 @@ template relation_list_tooltip {
 											}
 
 											icon = {
-												using = bg_circle_piechart
 												texture = "gfx/interface/icons/diplomatic_status/truce.dds"
 												blockoverride "frame_color" {
 													modify_texture = {
@@ -134,10 +124,20 @@ template relation_list_tooltip {
 														alpha = 0.5
 													}
 												}
-												size = { 75% 75% }
+												size = { 60% 60% }
 												parentanchor = center
 											}
+											using = bg_circle_piechart
 										}
+
+										text_single = {
+											align = nobaseline
+											text = "[RelationDescItem.GetCountry.GetLongNameWithNoTooltip]"
+											tooltipwidget = {												
+												using = SubjectType2_Tooltip
+											}
+										}
+
 										expand = {}
 
 										text_single = {
@@ -528,7 +528,7 @@ template organization_entry {
 								tooltipwidget = { 
 									LeftClickButtonTooltip = {
 										blockoverride "onclick_text" { 
-											text = "[SelectLocalization(IsIOFaved(InternationalOrganization.Self), 'UNPIN_ACTION', 'PIN_ACTION')]"
+											text = "[SelectLocalization(IsIOFaved(InternationalOrganization.Self), 'UNPIN_OUTLINER', 'PIN_OUTLINER')]"
 										}
 									}
 								}
@@ -1337,34 +1337,6 @@ lateralview = {
 											# RELATIONS
 											vbox = {
 												layoutpolicy_horizontal = expanding
-												# ORGS
-												vbox = {
-													margin_bottom = 10
-													layoutpolicy_horizontal = expanding
-													visible = "[Not(IsDataModelEmpty(Player.GetDiplomacy.GetInternationalOrganizations))]"
-													membership_ios_item = {}
-												}
-
-												# OVERLORD; SUBJECTS
-												vbox = {
-													layoutpolicy_horizontal = expanding
-													datamodel = "[DiplomacyLateralView.GetDiplomaticRelations]"
-													item = {
-														vbox = {
-															layoutpolicy_horizontal = expanding
-															datacontext = "[GetPlayer]"
-															margin_bottom = 10
-															visible = "[Or(RelationTypeItem.IsRelationType('vassalizing'), RelationTypeItem.IsRelationType('vassalized'))]"
-															relation_type_item_subject = {
-																visible = "[RelationTypeItem.IsRelationType('vassalizing')]"
-															}
-															relation_type_item = {
-																visible = "[RelationTypeItem.IsRelationType('vassalized')]"
-															}
-														}
-													}
-												}
-
 												# ONGOING DIPLOMACY
 												vbox = {
 													layoutpolicy_horizontal = expanding
@@ -1384,22 +1356,25 @@ lateralview = {
 													}
 												}
 
-												# RIVALS; ENEMIES; ALLIES; TRUCE; ANNUL_TREATIES; CBs; ANNEX
+												# ORGS
+												vbox = {
+													margin_bottom = 10
+													layoutpolicy_horizontal = expanding
+													visible = "[Not(IsDataModelEmpty(Player.GetDiplomacy.GetInternationalOrganizations))]"
+													membership_ios_item = {}
+												}
+
 												vbox = {
 													layoutpolicy_horizontal = expanding
+													spacing = 10
 													datamodel = "[DiplomacyLateralView.GetDiplomaticRelations]"
 													item = {
 														vbox = {
 															layoutpolicy_horizontal = expanding
 															datacontext = "[GetPlayer]"
-															margin_bottom = 10
-															visible = "[Or( 
-															Or4( RelationTypeItem.IsRelationType('annex_target'), RelationTypeItem.IsRelationType('annex'),
-															RelationTypeItem.IsRelationType('war'), RelationTypeItem.IsRelationType('civil_war')),
-															Or4( RelationTypeItem.IsRelationType('truce'),
-															RelationTypeItem.IsRelationType('casus_belli'), RelationTypeItem.IsRelationType('casus_belli_target'),
-															RelationTypeItem.IsRelationType('annul_treaties'))
-															)]"
+															relation_type_item_subject = {
+																visible = "[RelationTypeItem.IsRelationType('vassalizing')]"
+															}
 															relation_type_item_war = {
 																visible = "[Or(RelationTypeItem.IsRelationType('war'), RelationTypeItem.IsRelationType('civil_war'))]"
 															}
@@ -1418,28 +1393,15 @@ lateralview = {
 															relation_type_item_annexation_target = {
 																visible = "[RelationTypeItem.IsRelationType('annex_target')]"
 															}
-														}
-													}
-												}
-
-												# REMMAINING OF RELATIONS
-												vbox = {
-													layoutpolicy_horizontal = expanding
-													spacing = 10
-													datamodel = "[DiplomacyLateralView.GetDiplomaticRelations]"
-													item = {
-														vbox = {
-															layoutpolicy_horizontal = expanding
-															datacontext = "[GetPlayer]"
-															visible = "[Not( Or( 
-															Or5( RelationTypeItem.IsRelationType('annex_target'), RelationTypeItem.IsRelationType('annex'),
-															RelationTypeItem.IsRelationType('war'), RelationTypeItem.IsRelationType('civil_war'),
-															RelationTypeItem.IsRelationType('vassalizing')),
-															Or5( RelationTypeItem.IsRelationType('truce'),
-															RelationTypeItem.IsRelationType('casus_belli'), RelationTypeItem.IsRelationType('casus_belli_target'),
-															RelationTypeItem.IsRelationType('annul_treaties'), RelationTypeItem.IsRelationType('vassalized'))
-															))]"
-															relation_type_item = {}
+															relation_type_item = {
+																visible = "[Not( Or( 
+																Or5( RelationTypeItem.IsRelationType('annex_target'), RelationTypeItem.IsRelationType('annex'),
+																RelationTypeItem.IsRelationType('war'), RelationTypeItem.IsRelationType('civil_war'), RelationTypeItem.IsRelationType('vassalizing')),
+																Or4( RelationTypeItem.IsRelationType('truce'),
+																RelationTypeItem.IsRelationType('casus_belli'), RelationTypeItem.IsRelationType('casus_belli_target'),
+																RelationTypeItem.IsRelationType('annul_treaties'))
+																))]"
+															}
 														}
 													}
 												}
@@ -2123,6 +2085,7 @@ types diplomacy_cards {
 					}
 
 					hbox = {
+						spacing = 4
 						block "small_relations_datamodel" {
 							datamodel = "[DataModelFirst(RelationTypeItem.GetRelations, '(int32)11')]"
 						}
@@ -2170,7 +2133,7 @@ types diplomacy_cards {
 								}
 
 								widget = {
-									size = {32 32}
+									size = {30 30}
 									visible = "[RelationDescItem.HasProgress]"
 									
 									piechart = {
@@ -2212,6 +2175,7 @@ types diplomacy_cards {
 										}
 										blockoverride "rightclick" {}
 									}
+									using = bg_circle_piechart
 								}
 							}
 						}
@@ -2317,60 +2281,46 @@ types diplomacy_cards {
 									title = "OPEN_WAR"
 									on_action = "[WarsOverviewWar.OnClick]"
 								}
-																
+
 								vbox = {
-									spacing = 2
-									expand = {}
-									piechart = {
-										size = { 27 27 }
-										using = piechart_angles
-				
-										pieslice_no_highlight = {
-											texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
-											value = "[Add_float('(float)100.0', FixedPointToFloat(WarsOverviewWar.GetWarScore))]"
-											color = { 1 1 1 1 }
+									margin_top = 4
+									margin_bottom = 10
+
+									vbox = {
+										spacing = 2
+										country_flag_very_small = {
+											datacontext = "[WarsOverviewWar.GetMainEnemy]"
+											filter_mouse = none
 											alwaystransparent = yes
+											blockoverride "tooltip" {}
+											blockoverride "contextmenu" {}
+											blockoverride "click" {}
+											blockoverride "double_click" {}
+											blockoverride "show_as_button" { visible = no }
+											blockoverride "show_as_icon" { visible = yes }
 										}
-				
-										pieslice_no_highlight = {
-											texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
-											value = "[Subtract_float('(float)200.0', Add_float('(float)100.0', FixedPointToFloat(WarsOverviewWar.GetWarScore)))]"
-											color = { 1 1 1 1 }
-											alwaystransparent = yes
-										}
-				
-										widget = {
-											size = {36 24}
-											parentanchor = center
-										
-											circular_country_flag_small = {
-												size = {100% 100%}
-												position = {0 0}
-												parentanchor = center
-												datacontext = "[WarsOverviewWar.GetMainEnemy]"
-												blockoverride "click" {
-													onclick = "[WarsOverviewWar.OnClick]"
-												}
-												tooltip_enabled = no
-												contextmenu_enabled = no
+
+										icon = {
+											size = { 18 18 }
+											texture = "[GetConceptTexture('war')]"
+
+											glow = {
+												name = "drop_shadow"
+												glow_radius = 3
+												color = {0.0 0.0 0.0 1.0}
+												alpha = 0.3
 											}
 										}
-										
-										using = bg_circle_piechart
 									}
-	
-									icon = {
-										size = { 23 23 }
-										texture = "gfx/interface/icons/map_modes/war.dds"
-	
-										glow = {
-											name = "drop_shadow"
-											glow_radius = 3
-											color = {0.0 0.0 0.0 1.0}
-											alpha = 0.3
-										}
+
+									text_single = {
+										autoresize = no
+										size = { 35 20 }
+										fontsize = 14
+										align = center
+										visible = "[Not(War.IsCivilWar)]"
+										raw_text = "[War.GetWarScore|+=0%/]"
 									}
-									expand = {}
 								}
 							}
 						}
@@ -2910,6 +2860,25 @@ types diplomacy_cards {
 												size = {32 32}
 												visible = "[RelationDescItem.HasProgress]"
 												
+												icon = {
+													using = bg_circle_piechart
+													texture = "gfx/interface/icons/diplomatic_status/truce.dds"
+													visible = "[RelationTypeItem.IsRelationType('truce')]"
+													size = { 75% 75% }
+													parentanchor = center
+													blockoverride "frame_color" {
+														modify_texture = {
+															using = color_new_gold_texture
+															blend_mode = multiply
+														}
+														modify_texture = {
+															using = color_gold_texture
+															# blend_mode = multiply
+															alpha = 0.5
+														}
+													}
+												}
+
 												piechart = {
 													visible = "[RelationDescItem.HasProgress]"
 													parentanchor = center
@@ -2939,25 +2908,7 @@ types diplomacy_cards {
 													}
 												}
 				
-												icon = {
-													using = bg_circle_piechart
-													texture = "gfx/interface/icons/diplomatic_status/truce.dds"
-													visible = "[RelationTypeItem.IsRelationType('truce')]"
-													size = { 75% 75% }
-													parentanchor = center
-													blockoverride "frame_color" {
-														modify_texture = {
-															using = color_new_gold_texture
-															blend_mode = multiply
-														}
-														modify_texture = {
-															using = color_gold_texture
-															# blend_mode = multiply
-															alpha = 0.5
-														}
-													}
-			
-												}
+
 
 												icon = {
 													texture = "gfx/interface/icons/diplomatic_status/annul_treaties.dds"

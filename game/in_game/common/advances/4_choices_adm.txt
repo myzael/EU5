@@ -83,7 +83,6 @@ church_attendance_duty = {
 	
 	requires = global_clergy_max_literacy_advance
 	
-	ai_weight = { add = 5 }
 	stability_investment = small_stability_investment
 }
 
@@ -93,6 +92,7 @@ deus_vult = {
 	for = adm
 	
 	requires = church_attendance_duty
+	ai_weight = { add = 20 }
 
 	unlock_casus_belli = cb_deus_vult
 }

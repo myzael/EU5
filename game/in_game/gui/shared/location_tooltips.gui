@@ -2758,19 +2758,10 @@ template location_prosperity_tooltip {
                     text = "PROSP_CHANGE_DUE_TO"
 
                 }
-                textcontext = "[Location.GetDescriptionWithCountryFor('local_monthly_prosperity','global_monthly_prosperity')]"
+                textcontext = "[Location.GetProsperityChangeInfo]"
             }
 
-            TooltipStringPairList = {
-                visible = "[LessThan_CFixedPoint(Location.GetProsperity, '(CFixedPoint)0.0')]"
-                blockoverride "block_title" {
-                    datacontext = "[Location]"
 
-                    text = "LOCATION_DEVASTATION_UI_TOOLTIP"
-
-                }
-                textcontext = "[Location.GetDescriptionWithCountryFor('local_devastation_recovery','global_devastation_recovery')]"
-            }
 
             TooltipStringPairList = {
                 blockoverride "block_title" {
@@ -4638,13 +4629,12 @@ template location_disease_tooltip {
                 datamodel = "[GetDiseases]"
                 item = {
                     hbox = {
-                        datacontext = "[Location.GetDiseaseOutbreak(Disease.Self)]"
-                        visible = "[Location.HasDiseaseOutbreak(Disease.Self)]"
+                        visible = "[Location.HasAnyPresence(Disease.Self)]"
                         icon = {
                             using = tooltip_title_icon_size
                             texture = "[GetDiseaseIcon(Disease.Self)]"
                             tooltipwidget = {
-                                using = DiseaseOutbreak_tooltip
+                                using = Disease_tooltip
                             }
                         }
                         TooltipStringPairList = {

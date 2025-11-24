@@ -78,6 +78,7 @@ opinion_negative_societal_values = {
 opinion_promised_land_unfulfilled = {
 	# scales with how far from the expected warscore it was
 	value = -100
+	yearly_decay = 1
 }
 
 
@@ -179,6 +180,10 @@ opinion_defending_our_rival = {
 
 opinion_enemy_of_my_enemy = {
 	value = 50
+}
+
+opinion_border_percentage = {
+	value = -100
 }
 
 ########################################

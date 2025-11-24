@@ -61,7 +61,7 @@ locations={
 	sligo = { rank = town 			town_setup = british_town_port}
 	
 	# greece
-	athens  = { rank = city			town_setup = greek_town_port }
+	athens = { rank = city			town_setup = greek_town_port }
 	thessaloniki = { rank = city 	town_setup = greek_town_port }
 	candia = { rank = town 			town_setup = greek_town_port }
 	corinth = { rank = town 		town_setup = greek_town_port }

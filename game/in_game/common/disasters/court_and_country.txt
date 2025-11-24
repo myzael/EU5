@@ -27,7 +27,7 @@
 		court_and_country_end_trigger = yes
 	}
 	modifier = {
-		global_estate_target_satisfaction = big_permanent_target_satisfaction_penalty
+		global_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
 		pop_join_rebel_threshold = 0.1
 	}
 	

@@ -153,8 +153,8 @@ lordship_of_ireland_invite_planters = {
 		}
 		enabled = {
 			any_location_in_area = {
-				dominant_language = scope:actor.language
-				dominant_religion = scope:actor.religion
+				dominant_language ?= scope:actor.language
+				dominant_religion ?= scope:actor.religion
 			}
 		}
 	}
@@ -200,7 +200,6 @@ lordship_of_ireland_invite_planters = {
 				scope:origin_area = {
 					every_province_definition_in_area = {
 						add_migration = {
-							owner = scope:actor
 							from = this
 							to = scope:target_province
 							religion = scope:actor.religion

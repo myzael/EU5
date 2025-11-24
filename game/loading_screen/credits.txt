@@ -202,6 +202,7 @@ Lia Schüler
 Alejandro Arfini
 Luis Vizán
 Anne Björnsdotter
+Jon Olsson
 
 $ROLE_ADDITIONAL_QA$
 Arnau Casellas
@@ -1192,12 +1193,14 @@ María Bazo
 $DISCIPLINE_FRENCH_TEAM$
 
 $ROLE_FR_REVIEWER$
-Alvina Veillon 
+Alvina Veillon
+Hélène Roland
 Philippe Colin
+
 
 $ROLE_FR_TRANSLATOR$
 Marie-Noelle Wolffer
-Pierre Gehenne 
+Pierre Gehenne
 Julien Meunier-Sanquer
 Luc Gonachon
 Baptiste Almasio
@@ -1211,16 +1214,16 @@ Violaine Sauze
 $DISCIPLINE_SPANISH_TEAM$
 
 $ROLE_SP_REVIEWER$
-Manuel Mata Álvarez-Santullanor
+Manuel Mata Álvarez-Santullano
 Sebastián Sorroche Jurado
-Paula Osorio Pomares
 
 $ROLE_SP_TRANSLATOR$
+Paula Osorio Pomares
 Mizar Becerril Bustos
 Alejandro Gómez de la Muñoza
 Carlos Lacasa Martín
 Ángela Fernández Pérez
-Eduard Roig Quincoces
+Eduard Roig Quincoces 
 Laia Fàbregas
 
 
@@ -1539,6 +1542,54 @@ Yoon Tak
 
 
 
+$STUDIO_QUANTIC_LAB$
+
+$ROLE_QUANTIC_LAB_CEO$
+Stefan Seicarescu
+ 
+$ROLE_QUANTIC_LAB_HEAD_BUSINNES$
+Marius Popa
+ 
+$ROLE_QUANTIC_LAB_INTERNATIONAL_BUSINESS$
+Neil Soane
+
+$ROLE_QUANTIC_LAB_BUSINESS_DEVELOPMENT$
+Alexandra Nitescu
+
+$ROLE_QUANTIC_LAB_OPERATIONAL_SALES_LEAD$
+Raluca Cozma
+
+$ROLE_QUANTIC_LAB_OPERATIONAL_SALES$
+Anamaria Adriana Oprea
+
+$ROLE_QUANTIC_LAB_TECHNICAL_DIRECTOR$
+Szilveszter Pap
+ 
+$ROLE_QUANTIC_LAB_PROJECT_MANAGER$
+Calin Mihai Marincas
+
+$ROLE_QUANTIC_LAB_QC_MANAGER$
+Gizella Varga
+
+$ROLE_QUANTIC_LAB_QA_MANAGER$
+Paul Cristian Colceriu
+Raluca Maria Buzdug
+
+$ROLE_QUANTIC_LAB_PERFORMANCE_LEAD$
+Razvan Ionut Covaci
+
+$ROLE_QUANTIC_LAB_PERFORMANCE_TESTER$
+Alexandru Joltan
+Dragos Cristian Pacurariu
+Marius Ioan Miclos
+Nicolae Razvan Trif
+Zsolt Kovacs
+
+$ROLE_QUANTIC_LAB_IT$
+Ionel Aurelian Rau
+
+
+
 $STUDIO_COMMUNITY_TEAM$
 
 
@@ -1653,7 +1704,7 @@ Janek Eisinger  - Greeny
 Gary E. Baugher Jr.  - Coggies
 Ricardo Squires  - Verenity Void
 Carl Taylor  - Viking_Nephilim
-Manuel Küting  - YetiBandito
+Manuel Küting 
 Ricky Hsu  - thelostnyx 
 Kalafina - Aimer_rythem
 Sealand
@@ -1683,7 +1734,7 @@ Cong Haoyuan  - Shrimpal
 Junge Cao  - Lin Xueshan
 Gao Jiayu  - Andraste
 Anon Barcelona - Saltfish
-XuRenMeng - 虚人梦 
+虚人梦 - XuRenMeng
 Marsary
 Sam Emerson  - _Mercy
 Matthias Lamerz  - Grotaclas
@@ -1706,6 +1757,7 @@ Gaétan Cautain – DaftDef
 Anders Lohde Mikkelsen - Rule Britannia
 Roger Weber - Sir Rogers
 Marcel Duda - Madaszo
+John Mowery - goodlookin
 
 
 

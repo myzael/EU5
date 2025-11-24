@@ -398,10 +398,16 @@ prepare_for_war = {
 					value = 100
 				}
 			}
-			subtract = {
-				desc = "OUR_OPINION_TOOLTIP"
-				value = "scope:actor.opinion(scope:target)"
-				divide = 10
+			if = {
+				limit = {
+					exists = scope:actor
+					exists = scope:target
+				}
+				subtract = {
+					desc = "OUR_OPINION_TOOLTIP"
+					value = "scope:actor.opinion(scope:target)"
+					divide = 10
+				}
 			}
 			if = {
 				limit = {

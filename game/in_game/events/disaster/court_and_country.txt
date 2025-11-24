@@ -16,23 +16,34 @@ court_and_country.1 = {
 
 	option = {
 		name = court_and_country.1.a
-
+		
+		add_country_modifier = {
+			modifier = absolutist_influences_government_modifier
+			years = modifier_duration_years_long
+			mode = replace
+		}
 		change_societal_value = {
 			type = absolutism_vs_liberalism 
 			value = societal_value_large_move_to_left
 		}
-		add_all_estate_satisfaction = { value = estate_satisfaction_weak_penalty }
+
 		add_stability = stability_ultimate_penalty
 	}
 
 	option = {
 		name = court_and_country.1.b
-		
-		add_all_estate_satisfaction = { value = estate_satisfaction_weak_bonus }
+
+		add_country_modifier = {
+			modifier = liberal_influences_government_modifier
+			years = modifier_duration_years_long
+			mode = replace
+		}
+
 		change_societal_value = {
 			type = absolutism_vs_liberalism 
 			value = societal_value_large_move_to_right
 		}
+
 		add_government_power = government_power_ultimate_penalty
 	}
 }
@@ -68,6 +79,15 @@ court_and_country.2 = {
 				text = legitimacy_yields_more_crown_power_tt
 				set_variable = successful_court_and_country_variable
 			}
+		}
+
+		if = {
+			limit = { has_country_modifier = absolutist_influences_government_modifier }
+			remove_country_modifier = absolutist_influences_government_modifier
+		}
+		if = {
+			limit = { has_country_modifier = liberal_influences_government_modifier }
+			remove_country_modifier = liberal_influences_government_modifier
 		}
 	}
 

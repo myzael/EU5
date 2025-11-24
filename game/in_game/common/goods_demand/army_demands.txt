@@ -63,6 +63,14 @@ heavy_cavalry_construction = {
 	tools = 0.2
 	category = regiment_construction
 }
+expensive_heavy_cavalry_construction = {
+	leather = 0.3
+	cloth = 0.2
+	horses = 1.2
+	weaponry = 0.5
+	tools = 0.4
+	category = regiment_construction
+}
 
 steppe_horse_archers_construction = {
 	leather = 0.1
@@ -227,6 +235,14 @@ heavy_cavalry_maintenance = {
 	cloth = 0.05
 	horses = 0.2
 	tools = 0.1
+	category = regiment_maintenance
+}
+expensive_heavy_cavalry_maintenance = {
+	leather = 0.1
+	weaponry = 0.2
+	cloth = 0.1
+	horses = 0.2
+	tools = 0.2
 	category = regiment_maintenance
 }
 

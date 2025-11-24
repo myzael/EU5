@@ -49,4 +49,13 @@
 			factor = "disease_presence(scope:disease)"
 		}
 	}
+
+	secondary_map_color = {
+		if = {
+			limit = {
+				disease_has_outbreak_here = scope:disease
+			}
+			value = rgb { 100  120  188 }
+		}
+	}
 }

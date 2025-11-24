@@ -69,7 +69,7 @@
 
 	cooldown = {
 		type = convert_religion
-		years = 10
+		years = 25
 	}
 
 	select_trigger = {
@@ -173,8 +173,23 @@
 	ai_will_do = {
 		#add = -150
 		if = {
+			limit = { 
+				scope:actor = {
+					has_or_had_tag = TUR
+				}
+				has_game_rule = historical_ai_choices
+			}
+
+			add = {
+				value = -10000
+				desc = "Historical Ottomans"
+			}
+		}
+
+		if = {
 			limit = { scope:actor.dominant_religion = scope:target }
 			add = {
+				desc = "dominant religion"
 				value = 250
 				multiply = "scope:actor.religion_percentage_in_country(scope:target)"
 			}
@@ -187,7 +202,10 @@
 				scope:actor.dominant_religion = scope:target	
 				scope:actor.ruler ?= { religion != scope:target }
 			}
-			subtract = 1000
+			subtract = {
+				desc = "Ruler religion"
+				value = 1000
+			}
 		}
 		if = {
 			limit = {
@@ -203,6 +221,7 @@
 				}
 			}
 			add = {
+				desc = "Percentage of new religion"
 				value = 600
 				multiply = "scope:actor.religion_percentage_in_country(scope:target)"
 			}

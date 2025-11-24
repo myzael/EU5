@@ -9,8 +9,8 @@
 		always = no
 	}
 	
-	offer_visible = no
-	request_visible = no
-	cancel_visible = no
-	break_visible = no
+	offer_visible = { always = no }
+	request_visible = { always = no }
+	cancel_visible = { always = no }
+	break_visible = { always = no }
 }	

@@ -35,6 +35,9 @@
 						value > 0
 					}
 				}
+				NOT = {
+					has_cooldown = convert_religion
+				}
 			}
 		}
 		trigger_else = {
@@ -48,6 +51,9 @@
 						religion = religion:calvinist
 						value > 0
 					}
+				}
+				NOT = {
+					has_cooldown = convert_religion
 				}
 			}
 		}
@@ -103,6 +109,10 @@
 					change_government_type = government_type:monarchy
 				}
 				ruler ?= { remove_character_modifier = enacted_placitum_regium }
+				add_cooldown = {
+					type = convert_religion
+					years = 10
+				}
 			}
 		}
 		else = {

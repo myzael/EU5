@@ -1528,7 +1528,10 @@ marriage_law = {
 	}
 	adamite_marriage = {
 		potential = {
-			has_religious_aspect = religious_aspect:adamite_services
+			AND = {
+				religion = religion:hussite
+				has_religious_aspect = religious_aspect:adamite_services
+			}
 		}
 		country_modifier = {
 			female_spouses = 10
@@ -1629,6 +1632,7 @@ heir_religion_law = {
 				ruler_or_heir_if_regent = {
 					religion = root.religion
 				}
+				exists = union
 			}
 		}
 		country_modifier = {

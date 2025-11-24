@@ -580,6 +580,15 @@ country_needs_allies_value = {
 	save_temporary_scope_as = root_country
 
 	subtract = defensive_alliance_strength
+
+	if = {
+		limit = {
+			exists = scope:scripted_relation_type
+			exists = scope:recipient
+		}
+		add = scope:recipient.country_strength
+	}
+
 	every_neighbor_country = {
 		limit = {
 			nor = { 
@@ -703,7 +712,7 @@ union_member_opinion_on_maintain = {
 	}
 	if = {
 		limit = {
-			scope:recipient = {
+			scope:recipient ?= {
 				country_has_special_status = {
 					type = special_status:senior_partner
 					country = scope:actor

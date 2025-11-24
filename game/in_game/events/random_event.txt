@@ -4550,6 +4550,7 @@ random_event.91 = {
 		capital ?= {
 			area = {
 				every_province_in_area = {
+					limit = { owner ?= root }
 					add_province_modifier = {
 						modifier = bountiful_harvest
 						years = 1

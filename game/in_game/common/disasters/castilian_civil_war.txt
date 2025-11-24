@@ -2,13 +2,14 @@
 
 	image = "gfx/interface/illustrations/disaster/castilian_civil_war.dds"
 	
-	monthly_spawn_chance = monthly_spawn_chance_very_low
+	monthly_spawn_chance = monthly_spawn_chance_ultimate_high
 	can_start = {
 		tag = CAS
 		has_any_active_disaster = no
 		government_type = government_type:monarchy
 		in_civil_war = no
 		ruler_or_regent ?= {
+			this != character:cas_alfonso_xi_burgundy
 			OR = {
 				this = character:cas_pedro_i_burgundy
 				dynasty ?= dynasty:ivree_dynasty

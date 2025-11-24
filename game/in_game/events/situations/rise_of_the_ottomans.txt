@@ -124,27 +124,27 @@ rise_of_the_ottomans.2 = {
 ######################################
 # The end of the situation events
 ######################################
-#rise_of_the_ottomans.3 = {
-#	type = country_event
-#
-#	title = rise_of_the_ottomans.3.title
-#	desc = rise_of_the_ottomans.3.desc
-#
-#
-#
-#	option = {
-#		name = rise_of_the_ottomans.3.a
-#
-#		if = {
-#			limit = {
-#				has_reform = government_reform:legacy_of_osman
-#			}
-#			remove_reform = government_reform:legacy_of_osman
-#			add_government_power = government_power_extreme_penalty
-#		}
-#	}
-#
-#}
+rise_of_the_ottomans.3 = {
+	type = country_event
+
+	title = rise_of_the_ottomans.3.title
+	desc = rise_of_the_ottomans.3.desc
+
+
+
+	option = {
+		name = rise_of_the_ottomans.3.a
+
+		if = {
+			limit = {
+				has_reform = government_reform:legacy_of_osman
+			}
+			remove_reform = government_reform:legacy_of_osman
+			add_government_power = government_power_extreme_penalty
+		}
+	}
+
+}
 
 rise_of_the_ottomans.4 = {
 	type = country_event
@@ -897,6 +897,10 @@ rise_of_the_ottomans.111 = {
 		10 = interior
 	}
 
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	}
+
 	option = {	#Yes
 		name = rise_of_the_ottomans.109.a
 
@@ -1018,6 +1022,10 @@ rise_of_the_ottomans.113 = {
 	illustration_tags = {
 		10 = regular
 		10 = interior
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 	}
 
 	option = {	#Yes

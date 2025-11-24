@@ -2841,7 +2841,7 @@ flavor_hab.48 = { #Bernhard von Cles
 
 	immediate = {
 		create_character = {
-			first_name = Bernhard
+			first_name = name_bernard
 			last_name = von_Cles
 			birth_date = 1485.3.11
 			birth_location = location:cles

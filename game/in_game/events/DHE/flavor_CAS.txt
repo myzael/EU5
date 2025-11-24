@@ -5813,7 +5813,7 @@ flavor_cas.94 = { #A Clash of Culteranismo and Conceptismo
 	
 	fire_only_once = yes
 
-	historical_info = flavor_cas.90.historical_info
+	historical_info = flavor_cas.94.historical_info
 
 	dynamic_historical_event = {
 		tag = CAS

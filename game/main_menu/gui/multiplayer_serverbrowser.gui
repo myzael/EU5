@@ -1,3 +1,73 @@
+template bg_sortby_texture {
+	using = color_black_texture
+	alpha = 0.4
+
+	# block "sortbys_bckg" {
+	# 	modify_texture = {
+	# 		using = color_dark_blue_texture
+	# 		blend_mode = multiply
+	# 	}
+	# }
+
+	modify_texture = {
+		using = overlay_cloth_texture
+		blend_mode = overlay
+		alpha = 0.2
+	}
+
+	modify_texture = {
+		texture = "gfx/interface/component_masks/mask_edge_3px.dds"
+		blend_mode = alphamultiply
+		spriteType = corneredstretched
+		spriteborder = {20 35}
+		alpha = 0.3
+	}
+}
+
+template bg_sortby_group {
+	using = color_black_texture
+	alpha = 0.2
+
+	modify_texture = {
+		using = overlay_cloth_texture
+		blend_mode = overlay
+		alpha = 0.2
+	}
+
+	modify_texture = {
+		texture = "gfx/interface/component_masks/mask_edge_3px.dds"
+		blend_mode = alphamultiply
+		spriteType = corneredstretched
+		spriteborder = {20 35}
+		alpha = 0.3
+	}
+}
+
+types ServerBrowserTypes {
+	type serverbrowser_list_header_button = button {
+		layoutpolicy_horizontal = expanding
+		size = { -1 40 }
+
+		background = {
+			using = bg_sortby_group
+		}
+
+		using = bg_sortby_texture
+
+		block "onclick_text" {}
+
+		buttonText = {
+			textbox = {
+				using = button_common_textobj_font
+
+				size = { 100% 100% }
+				autoresize = no
+				align = center|nobaseline
+			}
+		}
+	}
+}	
+
 JominiServerBrowserWindow = {
 	size = { 100% 100% }
 	position = { 430 0 }
@@ -205,6 +275,95 @@ JominiServerBrowserWindow = {
 		}
 	}
 
+	blockoverride "serverbrowser_list_header" {
+		hbox = {
+			layoutpolicy_horizontal = expanding
+
+			block "serverbrowser_list_row_properties" {
+				using = serverbrowser_list_row_properties_default
+			}
+
+			serverbrowser_list_header_button = {
+				onclick = "[JominiServerBrowserGui.Sort( 'has_password' )]"
+				text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_PASSWORD"
+
+				tooltipwidget = {
+					LeftClickButtonTooltip = {
+						blockoverride "onclick_text" { text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_PASSWORD_DESC" } 
+					}
+				}
+
+				using = serverbrowser_haspassword_column_size_default
+			}
+
+			block "serverbrowser_spacer_widget" {}
+
+			serverbrowser_list_header_button = {
+				onclick = "[JominiServerBrowserGui.Sort( 'name' )]"
+				text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_SERVER_NAME"
+
+				tooltipwidget = {
+					LeftClickButtonTooltip = {
+						blockoverride "onclick_text" { text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_SERVER_NAME_DESC" } 
+					}
+				}
+
+				using = serverbrowser_servername_column_size_default
+			}
+
+			block "serverbrowser_spacer_widget" {}
+
+			serverbrowser_list_header_button = {
+				onclick = "[JominiServerBrowserGui.Sort( 'version' )]"
+				text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_VERSION"
+				
+				tooltipwidget = {
+					LeftClickButtonTooltip = {
+						blockoverride "onclick_text" { text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_VERSION_DESC" } 
+					}
+				}
+
+				using = serverbrowser_version_column_size_default
+			}
+
+			block "serverbrowser_spacer_widget" {}
+
+			serverbrowser_list_header_button = {
+				onclick = "[JominiServerBrowserGui.Sort( 'players_count' )]"
+				text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_PLAYERS"
+				
+				tooltipwidget = {
+					LeftClickButtonTooltip = {
+						blockoverride "onclick_text" { text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_PLAYERS_DESC" } 
+					}
+				}
+
+				using = serverbrowser_numplayers_column_size_default
+			}
+
+			block "serverbrowser_spacer_widget" {}
+
+			serverbrowser_list_header_button = {
+				onclick = "[JominiServerBrowserGui.Sort( 'status' )]"
+				text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_STATUS"
+
+				tooltipwidget = {
+					LeftClickButtonTooltip = {
+						blockoverride "onclick_text" { text = "JOMINI_MULTIPLAYER_GUI_SERVER_SORT_LABEL_STATUS_DESC" } 
+					}
+				}
+
+				using = serverbrowser_status_column_size_default
+			}
+
+			block "serverbrowser_spacer_widget" {}
+
+			widget = {
+				using = serverbrowser_joinbutton_column_size_default
+			}
+		}
+	}
+
 	blockoverride "jomini_multiplayer_push_button" {
 		using = button_default_template
 	}
@@ -272,7 +431,7 @@ JominiServerBrowserWindow = {
 	blockoverride "serverbrowser_spacer_widget" {
 		widget = {
 			layoutpolicy_vertical = expanding
-			size = { 20 -1 }
+			size = { 0 -1 }
 		}
 	}
 

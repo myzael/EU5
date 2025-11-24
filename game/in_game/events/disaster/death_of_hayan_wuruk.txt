@@ -374,9 +374,11 @@ death_of_hayan_wuruk.6 = {	#Spread of Islam in [target_province.GetName]
 					limit = {
 						NOT = { has_building = building_type:sufi_mosque }
 					}
-					change_building_level_in_location = {
-						building = building_type:sufi_mosque
-						value = 1
+					construct_building = {
+						building_type = building_type:sufi_mosque
+						cost_multiplier = 0
+						cost_multiplier_reason = "clergy_expensive_sponsorship"
+						instant = yes
 					}
 				}
 			}

@@ -85,6 +85,17 @@ flavor_gen.1 = {
 		historical_option = yes
 		add_government_power = government_power_mild_bonus
 		remove_reform = government_reform:diarchy_republic
+		hidden_effect = {
+			if = {
+				limit = {
+					any_current_reforms = { is_major_reform = yes }
+				}
+				random_current_reforms = {
+					limit = { is_major_reform = yes }
+					root = { remove_reform = prev }
+				}
+			}
+		}
 		add_reform = government_reform:merchant_republic
 		change_heir_selection = heir_selection:doge_election
 		set_new_ruler = scope:target_character

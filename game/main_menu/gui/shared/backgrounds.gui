@@ -4365,16 +4365,16 @@ template wood_frame_thin {
 # 	}
 # }
 
-template baroque_corner_flavor_01 {
-	background = {
-		# block "flavor_full" {
-			texture = "gfx/interface/component_tiles/baroque_corner_flavor_01.dds"
-		# }
-		spriteType = Corneredstretched
-		spriteborder = { 22 0 }
-		texture_density = 2
-	}
-}
+# template baroque_corner_flavor_01 {
+# 	background = {
+# 		# block "flavor_full" {
+# 			texture = "gfx/interface/component_tiles/baroque_corner_flavor_01.dds"
+# 		# }
+# 		spriteType = Corneredstretched
+# 		spriteborder = { 22 0 }
+# 		texture_density = 2
+# 	}
+# }
 
 # template flag_folds_01 {
 # 	background = {

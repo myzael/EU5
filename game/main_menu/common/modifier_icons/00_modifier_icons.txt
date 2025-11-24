@@ -2096,6 +2096,10 @@ train_admiral_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/train_admiral_cost_modifier.dds" 
 }
 
+invite_foreign_cleric_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/clergy_estate_max_tax.dds" 
+}
+
 destroy_market_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/create_market_cost_modifier.dds" 
 }
@@ -7156,16 +7160,28 @@ remove_panaqa_early_cost_modifier = {
 }
 
 
+local_prosperity_decay = {
+	positive = "gfx/interface/icons/modifier_types/global_prosperity_decay.dds"
+}
+
+global_prosperity_decay = {
+	positive = "gfx/interface/icons/modifier_types/global_prosperity_decay.dds"
+}
+
+shared_border_impact = {
+	positive = "gfx/interface/icons/modifier_types/shared_border_impact.dds"
+}
+
 blocked_from_peace = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+	positive = "gfx/interface/icons/modifier_types/blocked_from_peace.dds"
 }
 
 diplomatic_upkeep_modifier = {
-	positive = "gfx/interface/icons/modifier_types/diplomatic_upkeep_modifier.dds" #  Placeholder
+	positive = "gfx/interface/icons/modifier_types/diplomatic_upkeep_modifier.dds"
 }
 
 building_upkeep_costs = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+	positive = "gfx/interface/icons/modifier_types/free_building_cost_modifier.dds"
 }
 
 building_owner_overlord_maritime_presence = {
@@ -7225,9 +7241,17 @@ lordship_of_ireland_form_kingdom_cost_modifier = {
 }
 
 change_government_type_price_cost_modifier = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+	positive = "gfx/interface/icons/modifier_types/change_government_type_price_cost.dds"
 }
 
 forbid_multiple_policies_vote = {
 	positive = "gfx/interface/icons/modifier_types/emperor_agenda_impact.dds"
+}
+
+union_allowed_enforce_peace = {
+	positive = "gfx/interface/icons/modifier_types/allowed_enforce_peace.dds" 
+}
+
+unlock_prikazi_reform_cabinet_actions = {
+	positive = "gfx/interface/icons/modifier_types/grant_cabinet_right.dds"
 }

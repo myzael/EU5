@@ -67,17 +67,20 @@
 			}
 			
 			#Disallow wars between members of the same faction while the Nanbokucho situation is not resolved
-			NAND = {
-				scope:attacker = { has_variable = supports_northern_court }
-				scope:defender = { has_variable = supports_northern_court }
-			}
-			NAND = {
-				scope:attacker = { has_variable = supports_southern_court }
-				scope:defender = { has_variable = supports_southern_court }
-			}
-			NAND = {
-				scope:attacker = { has_variable = supports_new_imperial_line }
-				scope:defender = { has_variable = supports_new_imperial_line }
+			custom_tooltip = {
+				text = same_side_in_nanbokucho_tt
+				NAND = {
+					scope:attacker = { has_variable = supports_northern_court }
+					scope:defender = { has_variable = supports_northern_court }
+				}
+				NAND = {
+					scope:attacker = { has_variable = supports_southern_court }
+					scope:defender = { has_variable = supports_southern_court }
+				}
+				NAND = {
+					scope:attacker = { has_variable = supports_new_imperial_line }
+					scope:defender = { has_variable = supports_new_imperial_line }
+				}
 			}
 
 			#Block wars for the emperor except in the nanbokuchou, but only between both ai

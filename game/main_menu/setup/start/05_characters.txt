@@ -77814,7 +77814,7 @@ adm = 31 dip = 34 mil = 24
 	}
 	
 	rvb_bernhard_ravensberg = { #Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = westphalian
 		religion = catholic
 		birth_date = 1290.1.1
@@ -83728,7 +83728,7 @@ adm = 31 dip = 34 mil = 24
 
 	#Bernburg
 	bnb_bernhard_i_bernburg = { #Grandfather of Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = saxon
 		religion = catholic
 		birth_date = 1218.1.1
@@ -83740,7 +83740,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	bnb_bernhard_ii_bernburg = { #Father of Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = saxon
 		religion = catholic
 		birth_date = 1260.1.1
@@ -83752,7 +83752,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	bnb_bernhard_iii_bernburg = { #Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = saxon
 		religion = catholic
 		birth_date = 1290.1.1
@@ -83778,7 +83778,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	bnb_bernhard_iv_bernburg = { #Son of Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = saxon
 		religion = catholic
 		birth_date = 1328.1.1
@@ -83803,7 +83803,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	bnb_heinrich_iv_bernburg = { #Son of Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = saxon
 		religion = catholic
 		birth_date = 1333.1.1
@@ -85773,7 +85773,7 @@ adm = 31 dip = 34 mil = 24
 
 	#Lippe
 	lpp_bernhard_iv_lippe = { #Father of Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = lower_saxon
 		religion = catholic
 		birth_date = 1230.1.1
@@ -85804,17 +85804,6 @@ adm = 31 dip = 34 mil = 24
 		father = wde_henry_iii_von_waldeck
 		tag = LPP
 	}
-	lpp_berhard_v_lippe = { #Son of Ruler
-		first_name = { name = Bernhard }
-		culture = lower_saxon
-		religion = catholic
-		birth_date = 1277.1.1
-		birth = lippstadt
-		dynasty = lippe_dynasty
-		father = lpp_simon_i_lippe
-		mother = lpp_adelheid_von_waldeck
-		tag = LPP
-	}
 	lpp_otto_i_lippe = { #Son of Ruler
 		first_name = { name = name_otto }
 		culture = lower_saxon
@@ -85829,9 +85818,10 @@ adm = 31 dip = 34 mil = 24
 
 	#Paderborn
 	pdb_bernhard_v = { #Ruler
-		first_name = { name = Bernhard }
+		first_name = { name = name_bernard }
 		culture = lower_saxon
 		religion = catholic
+		estate = clergy_estate
 		birth_date = 1277.1.1
 		birth = lippstadt
 		dynasty = lippe_dynasty
@@ -86588,7 +86578,7 @@ adm = 31 dip = 34 mil = 24
 		culture = westphalian
 		religion = catholic
 		birth_date = 1280.1.1
-		death_date = 1320.11.18
+		death_date = 1331.2.17
 		birth = frankfurt
 		tag = TEU
 	}
@@ -88548,33 +88538,6 @@ adm = 31 dip = 34 mil = 24
 		dynasty = gediminid_dynasty
 		father = lit_gediminas_gediminids
 		mother = lit_vida #Unknown
-		tag = LIT
-	}
-
-	#Son of Ruler
-	lit_karijotas_gediminds = { #https://en.wikipedia.org/wiki/Karijotas
-		first_name = { name = name_karijotas }
-		last_name = { name = name_michael }
-		culture = aukstaitian
-		religion = romuva
-		birth_date = 1305.1.1 #Unknown
-		birth = vilnius #Unknown
-		dynasty = gediminid_dynasty
-		father = lit_gediminas_gediminids
-		mother = lit_jaune_polotsk #Unknown
-		tag = LIT
-	}
-
-	#Grandson of Ruler
-	lit_koriatovich_gediminds = { #https://en.wikipedia.org/wiki/George_Koriatovich
-		first_name = { name = name_george }
-		last_name = { name = karijotaitis }
-		culture = aukstaitian
-		religion = romuva
-		birth_date = 1330.1.1
-		birth = vilnius #Unknown
-		dynasty = gediminid_dynasty
-		father = lit_karijotas_gediminds
 		tag = LIT
 	}
 

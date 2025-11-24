@@ -381,7 +381,7 @@ non_accepted_culture = {
 foreign_culture = {
 	alias = { foreign_culture_short }
 	family = culture
-	texture = "gfx/interface/icons/flat_icons/culture/foreign_culture.dds"
+	texture = "gfx/interface/icons/culture/foreign_culture.dds"
 }
 
 cultural_status = {
@@ -1697,25 +1697,42 @@ war = {
 	texture = "gfx/interface/icons/diplomatic_actions/war.dds"
 }
 
+war_attacker = {
+	family = war
+	alias = { war_attackers }
+	texture = "gfx/interface/icons/flat_icons/attacker.dds"
+}
+
+war_defender = {
+	family = war
+	alias = { war_defenders }
+	texture = "gfx/interface/icons/flat_icons/defender.dds"
+}
+
 war_participation = {
+	family = war
 	texture = "gfx/interface/icons/flat_icons/war_view/participation.dds" #doubt
 }
 
 war_score = {
+	family = war
 	texture = "gfx/interface/icons/location_icons/war_score.dds"
 }
 
 war_goal = {
+	family = war
 	alias = { war_goals }
 	texture = "gfx/interface/icons/location_icons/war_score.dds"
 }
 
 cobelligerent = {
+	family = war
 	alias = { cobelligerents }
 	texture = "gfx/interface/icons/flat_icons/war_view/participation.dds" #doubt
 }
 
 casus_belli = {
+	family = war
 	alias = { casus_bellis }
 	texture = "gfx/interface/icons/flat_icons/declare_war/casus_belli.dds"
 }
@@ -3019,7 +3036,7 @@ legislative_efficiency = {
 
 isolate = {
 	alias = { isolated isolation }
-	texture = "gfx/interface/icons/generic_actions/isolate_cities_black_death.dds" #doubt
+	texture = "gfx/interface/icons/modifier_types/trade_isolation.dds"
 }
 
 score = {

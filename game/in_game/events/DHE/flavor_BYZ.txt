@@ -1538,6 +1538,12 @@ flavor_byz.25 = { #https://en.wikipedia.org/wiki/Gemistos_Plethon May God have m
 			killer = ruler
 		}
 	}
+
+	after = {
+		religion:hellenism_religion = {
+			enable_religion = yes
+		}
+	}
 }
 
 flavor_byz.26 = { #Alt-History, Byzantium never really reclaimed the Asia Minor coast
@@ -1769,7 +1775,7 @@ flavor_byz.29 = { #There isn't a wikipedia link about the Katholikon Mouseion sa
 
 	trigger = {
 		has_variable = byz_continued_byzantine_renaissance_event
-		location:constantinople.owner = root
+		location:constantinople.owner ?= root
 	}
 
 	illustration_tags = {
@@ -1806,7 +1812,10 @@ flavor_byz.29 = { #There isn't a wikipedia link about the Katholikon Mouseion sa
 				}
 			}
 			else = {
-				add_research_progress = research_progress_mild_bonus
+				owner ?= {
+					add_research_progress = research_progress_mild_bonus
+					change_gold_effect = { scale = -1 }
+				}
 			}
 		}
 
@@ -5044,7 +5053,7 @@ flavor_byz.1201 = { #
 		character:byz_theodora_kantakouzene ?= {
 			save_scope_as = theodora_scope
 		}
-		character:tur_orhan ?= {
+		c:TUR.ruler_or_regent ?= {
 			save_scope_as = orhan_scope
 		}
 	}
@@ -5284,7 +5293,7 @@ flavor_byz.1301 = { #Invitation event for the Italian Republics
 				}
 			}
 		}
-		else = {
+		else_if = {
 			limit = {
 				this = c:GEN
 			}

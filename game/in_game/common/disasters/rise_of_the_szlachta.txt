@@ -10,7 +10,7 @@
 			tag = PLC
 		}
 		in_civil_war = no
-		ruler != character:pol_casimir_iii_piast
+		ruler_or_regent != character:pol_casimir_iii_piast
 		current_year > 1380
 		custom_tooltip = { 
 			text = had_csd_disaster_variable_tt 

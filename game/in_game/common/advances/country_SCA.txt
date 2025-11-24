@@ -16,7 +16,7 @@ sca_legacy_kalmar_union = {
 	requires = government_size_renaissance
 	icon = crown_power_advance_renaissance
 
-	subject_loyalty = 20
+	subject_loyalty = 5
 }
 
 sca_sound_toll = {
