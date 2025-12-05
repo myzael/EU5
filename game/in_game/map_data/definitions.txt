@@ -1331,7 +1331,7 @@
 			}
 			lesser_poland_area = {
 				checiny_province = { kielce opoczno przedborz zarnow }
-				czestochowa_province = { czestochowa lelow mstow }
+				czestochowa_province = { czestochowa lelow mstow siewierz }
 				krakow_province = { krakow chrzanow ksiaz_wielki proszowice }
 				lublin_province = { lublin janow_lubelski kazimierz lukow lubartow urzedow }
 				nowy_sacz_province = { nowy_sacz biecz czchow jaslo nowy_targ }
@@ -1383,7 +1383,7 @@
 				opavsko_province = { opava fryvaldov glubczyce hlucin krnov }
 				opole_province = { opole kluczbork lubliniec olesno prudnik strzelce_opolskie }
 				swidnica_province = { swidnica kamienna_gora rychbach niemcza ziebice }
-				tesin_province = { tesin bielsko bytom kozle pszczyna raciborz siewierz toszek }
+				tesin_province = { tesin bielsko bytom kozle pszczyna raciborz toszek }
 				wroclaw_province = { wroclaw brzeg grodkow nysa niemodlin olawa sroda_slaska }
 				zagan_province = { zagan krosno_odrzanskie sulechow zary }
 			}
