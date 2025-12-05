@@ -40152,6 +40152,7 @@ countries = {
 		accepted_cultures = {
 			greater_polish
 			silesian
+			mazovian
 		}
 
 		tolerated_cultures = {
