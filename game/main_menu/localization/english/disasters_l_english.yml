@@ -271,6 +271,7 @@
  decline_of_empire: "Decline of the Empire"
  decline_of_empire_desc: "Once mighty and unshakable, our empire now teeters on the brink of collapse. Corruption festers within our institutions, our provinces grow restless under the weight of neglect, and foreign powers circle like vultures, eager to carve up what remains of our glory. The golden age that once defined us has faded into memory, and the cracks in our foundation grow wider with each passing day. If we do not act swiftly to address the rot within and restore control, our empire will crumble, leaving only ruins and regret, a shadow of our former glory..."
  has_not_had_decline_of_empire_last_25_years: "Has not had this [disaster|e] in the last #Y 25#! years"
+ not_recently_become_empire_tt: "Has had the [ShowCountryRankName('rank_empire')] [country_rank|e] for at least #Y 15#! years"
 
 #Decline of Mali
  #Disaster

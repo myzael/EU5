@@ -484,6 +484,7 @@ flavor_hol.9 = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		set_variable = { name = ned_shipbuilding_industry value = 1 }
 		random_current_reforms = {
+			limit = { is_major_reform = no }
 			save_scope_as = target_reform
 		}
 		create_character = {
@@ -514,6 +515,11 @@ flavor_hol.9 = {
 	}
 	option = {
 		name = flavor_hol.9.b
+		add_navy_tradition = navy_tradition_weak_bonus
+		scope:target_character = { move_country = root }
+	}
+	option = {
+		name = flavor_hol.9.c
 		add_prestige = prestige_weak_penalty
 		scope:target_character = { banish_character = yes }
 	}

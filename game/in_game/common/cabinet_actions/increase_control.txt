@@ -52,15 +52,7 @@
 		}
 		visible = {
 			province_average_control < 0.95
-			scope:actor = {
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action ?= cabinet_action:increase_control_province
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = increase_control_province interaction_target = selected_province } }
 		}
 		map_color = {
 			lerp = {

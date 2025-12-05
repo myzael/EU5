@@ -74,7 +74,7 @@ swiss_recovery_and_prosperity = {
 	potential = {
 		is_swiss_for_advances = yes
 	}
-	global_monthly_development = 0.002
+	global_monthly_development = 0.001
 	global_monthly_prosperity = 0.001
 
 	requires = formalized_relations

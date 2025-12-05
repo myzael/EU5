@@ -66,7 +66,7 @@ flavor_dan.1 = { #Bruchardi Flood
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { catastrophic_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -94,7 +94,7 @@ flavor_dan.1 = { #Bruchardi Flood
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { catastrophic_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -122,7 +122,7 @@ flavor_dan.1 = { #Bruchardi Flood
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { catastrophic_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -641,7 +641,7 @@ flavor_dan.10 = { #Great Fire of Copenhagen of 1728 #DEVASTATION
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -672,7 +672,7 @@ flavor_dan.10 = { #Great Fire of Copenhagen of 1728 #DEVASTATION
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 			}
 		}

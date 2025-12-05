@@ -110,6 +110,71 @@ types SelectionCardsTypes
 		}
 	}
 
+	type card_block_list = card_list {
+		ontextcontextchanged = "[SetBlockListWithTitleFromTextContext(PdxGuiWidget.AccessSelf)]"
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			datamodel = "[BlockList.GetBlocks]"
+			item = {
+				vbox = {
+					layoutpolicy_horizontal = expanding
+
+					card_column = {
+						visible = "[BlockListBlock.IsSingle]"
+
+						blockoverride "column_datamodel" { datamodel = "[BlockListBlock.GetSingleRows]" }
+						blockoverride "field_text" {
+							layoutpolicy_horizontal = expanding
+							minimumsize = { -1 30 }
+							autoresize = yes
+							multiline = yes
+							align = left|nobaseline
+							text = "[CString.GetString]"
+						}
+
+						blockoverride "field_left" {}	
+						blockoverride "field_right" { expand = {} }
+					}
+
+					hbox = {
+						visible = "[BlockListBlock.IsPair]"
+						layoutpolicy_horizontal = expanding
+						margin = { 0 2 }
+
+						card_column = {
+							blockoverride "column_datamodel" { datamodel = "[BlockListBlock.GetPairRows]" }
+							blockoverride "field_text" {
+								maximumsize = { 440 30 }
+								minimumsize = { -1 30 }
+								autoresize = yes
+								align = left|nobaseline
+								text = "[StringPair.GetLeft][AddTextIf(StringIsEmpty(StringPair.GetLeft), ' ')]"
+							}
+
+							blockoverride "field_left" {}	
+							blockoverride "field_right" { expand = {} }
+						}
+
+						card_column = {
+							blockoverride "column_datamodel" { datamodel = "[BlockListBlock.GetPairRows]" }
+							blockoverride "field_text" {
+								maximumsize = { 70 30 }
+								minimumsize = { -1 30 }
+								autoresize = yes
+								align = right|nobaseline
+								text = "[StringPair.GetRight][AddTextIf(StringIsEmpty(StringPair.GetRight), ' ')]"
+							}
+
+							blockoverride "field_left" { expand = {} }	
+							blockoverride "field_right" {}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	type card_stringpair_list = card_list {
 		ontextcontextchanged = "[SetStringPairListFromTextContext(PdxGuiWidget.AccessSelf)]"
 

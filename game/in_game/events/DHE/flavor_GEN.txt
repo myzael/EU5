@@ -84,18 +84,7 @@ flavor_gen.1 = {
 		name = flavor_gen.1.a
 		historical_option = yes
 		add_government_power = government_power_mild_bonus
-		remove_reform = government_reform:diarchy_republic
-		hidden_effect = {
-			if = {
-				limit = {
-					any_current_reforms = { is_major_reform = yes }
-				}
-				random_current_reforms = {
-					limit = { is_major_reform = yes }
-					root = { remove_reform = prev }
-				}
-			}
-		}
+		remove_current_major_government_reform = yes
 		add_reform = government_reform:merchant_republic
 		change_heir_selection = heir_selection:doge_election
 		set_new_ruler = scope:target_character
@@ -783,6 +772,11 @@ flavor_gen.16 = {
 			owns = location:chios
 			has_any_active_disaster = yes
 		}
+	}
+
+	major = yes
+	major_trigger = {
+		tag = BYZ
 	}
 	illustration_tags = {
 		10 = armed

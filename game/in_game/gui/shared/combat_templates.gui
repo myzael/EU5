@@ -514,6 +514,10 @@ template Combat_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
+			TooltipDebugTextBlock = {
+				textcontext = "[Combat.GetDebugText]"
+			}
+			
 			TooltipStringPairList = {
 				blockoverride "block_title" {
 					raw_text = "[Combat.GetAttacker.GetCountry.GetLongNameWithFlag]"

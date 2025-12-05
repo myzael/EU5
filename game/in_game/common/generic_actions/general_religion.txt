@@ -150,19 +150,19 @@
 	}
 
 	effect = {
-		every_country = {
-			limit = {
-				this != scope:actor
-				religion = scope:actor.religion
-				is_allied_with = { target = scope:actor }
-			}
-			remove_relation = {
-				type = relation_type:alliance
-				first = this
-				second = scope:actor
-			}
-		}
 		scope:actor = {
+			every_related_country = {
+				type = alliance
+				limit = {
+					this != scope:actor
+					religion = scope:actor.religion
+				}
+				remove_relation = {
+					type = relation_type:alliance
+					first = this
+					second = scope:actor
+				}
+			}
 			change_religion = scope:target
 			change_religion_for_ruler_and_family = { country = scope:actor religion = scope:target }
 			
@@ -179,17 +179,31 @@
 				}
 				has_game_rule = historical_ai_choices
 			}
+			subtract = {
+				value = 10000
+				desc = "DIPLOREASON_HISTORICAL_DECISION"
+			}
+		}
 
-			add = {
-				value = -10000
-				desc = "Historical Ottomans"
+		if = {
+			limit = {
+				has_game_rule = only_within_religion_group
+				scope:actor.religion.group != scope:target.group
+				trigger_if = {
+					limit = { scope:actor = { tag = LIT } }	#Lithuania's conversion to Christianity should be still happening
+					scope:target.group = religion_group:christian
+				}
+			}
+			subtract = {
+				value = 10000
+				desc = "ANTAGONISM_OTHERRELIGION_GROUP"
 			}
 		}
 
 		if = {
 			limit = { scope:actor.dominant_religion = scope:target }
 			add = {
-				desc = "dominant religion"
+				desc = "[dominant_religion|e]"
 				value = 250
 				multiply = "scope:actor.religion_percentage_in_country(scope:target)"
 			}
@@ -203,7 +217,7 @@
 				scope:actor.ruler ?= { religion != scope:target }
 			}
 			subtract = {
-				desc = "Ruler religion"
+				desc = "DIPLOREASON_RULER_RELIGION"
 				value = 1000
 			}
 		}
@@ -221,7 +235,7 @@
 				}
 			}
 			add = {
-				desc = "Percentage of new religion"
+				desc = "DIPLOREASON_TARGET_RELIGION_PERCENTAGE"
 				value = 600
 				multiply = "scope:actor.religion_percentage_in_country(scope:target)"
 			}
@@ -231,7 +245,10 @@
 				scope:actor = { is_subject = yes }
 				scope:target != scope:actor.overlord.religion
 			}
-			subtract = 1000
+			subtract = {
+				desc = "DIPLOREASON_OVERLORD_RELIGION"
+				value = 1000
+			}
 		}		
 	}
 }

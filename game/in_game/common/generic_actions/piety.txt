@@ -43,7 +43,7 @@ call_upon_the_faithful = {
 				mode = replace
 			}
 			
-			change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_minor_move_to_right }
+			change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_large_move_to_right }
 		}
 	}
 	
@@ -96,7 +96,7 @@ study_islamic_texts = {
 				mode = replace
 			}
 			
-			change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_minor_move_to_right }
+			change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_large_move_to_left }
 		}
 	}
 

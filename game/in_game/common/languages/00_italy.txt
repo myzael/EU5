@@ -14,20 +14,20 @@
 		Tiberia Tulla Vibia Volusa Vopisca
 	}
 	dynasty_names = {
-		name_helios name_anthony name_cassius	name_claude name_cornelius Fabius Flavius name_julius name_livius	name_marius name_octavius	Pompeius Sempronius Valerius
+		name_helios name_anthony name_cassius name_claude name_cornelius Fabius Flavius name_julius name_livius name_marius name_octavius Pompeius Sempronius Valerius
 	}
 	lowborn = {
 		Vorenius Pullo
-		Aburius	Accius Acilius Acutius Aebutius Aemilius Alienus Anicius Annius
-		Antius Antistius Appuleius Apronius Aquillius name_attilio Atius	Aufidius Aulius
-		Blossius name_aurelius Caecinus Caecilius Calavius Calpurnius Cantius Carvilius Catius Centenius	Cilnius	Cispius	Cloelius Cominius
-		Coruncanius Curiatius Curtius Curius Decius Domitius name_fabrice Foslius Fulcinius Fulvius Furius	Funius
-		Gabinius Galerius Gracchus Geganius Gellius	Herminius Horatius Hortensius Hostilius
+		Aburius Accius Acilius Acutius Aebutius Aemilius Alienus Anicius Annius
+		Antius Antistius Appuleius Apronius Aquillius name_attilio Atius Aufidius Aulius
+		Blossius name_aurelius Caecinus Caecilius Calavius Calpurnius Cantius Carvilius Catius Centenius Cilnius Cispius Cloelius Cominius
+		Coruncanius Curiatius Curtius Curius Decius Domitius name_fabrice Foslius Fulcinius Fulvius Furius Funius
+		Gabinius Galerius Gracchus Geganius Gellius Herminius Horatius Hortensius Hostilius
 		Junius Juventius Laetorius Lartius Licinius name_lucius Lucretius Maelius Maenius Mamilius Manlius Marcius
 		Memmius Messius Metilius Minucius Mummius Nigidius Ninnius Nonius Numicius Numisius
-		Ofilius	Ogulnius Opimius Oppius Octacilius Ovidius Papirius Pinarius Plautius Plinius Postumius Pompilius 	
+		Ofilius Ogulnius Opimius Oppius Octacilius Ovidius Papirius Pinarius Plautius Plinius Postumius Pompilius 	
 		Pomponius Popillius Porcius Publilius Pupius Quintilius Quinctius Rabirius Resius Romilius Salonius Salvius Scribonius
-		Sergius	Sertorius Servilius	Sestius Sextius Sextilius Sicinius Silius Sulpicius Titius Tremulus Tullius Ulpius
+		Sergius Sertorius Servilius Sestius Sextius Sextilius Sicinius Silius Sulpicius Titius Tremulus Tullius Ulpius
 		Verginius Veturius Vesuvius Villius Viridius Volumnius
 	}
 

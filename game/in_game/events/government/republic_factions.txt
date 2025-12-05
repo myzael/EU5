@@ -170,7 +170,7 @@ republic_factions.3 = { #Merchants Call for Increased Imports
 				country = root
 				key = allowed_imports
 				years = 3
-				power = 10.00
+				power = merchant_power_weak_bonus
 			}
 		}
 		if = {
@@ -625,7 +625,7 @@ republic_factions.10 = { #Trade between Rivals
 					country = root
 					key = enemy_allowed_trade
 					years = 3
-					power = 10.00
+					power = merchant_power_weak_bonus
 				}
 			}
 		}
@@ -634,7 +634,7 @@ republic_factions.10 = { #Trade between Rivals
 				country = scope:target_rival
 				key = enemy_allowed_trade
 				years = 3
-				power = 10.00
+				power = merchant_power_weak_bonus
 			}
 		}
 		add_prestige = prestige_mild_bonus
@@ -669,7 +669,7 @@ republic_factions.11 = { #[target_country.GetNameWithNoTooltip] Open for Trade
 						country = root
 						key = enemy_allowed_trade
 						years = 3
-						power = 10.00
+						power = merchant_power_weak_bonus
 					}
 				}
 			}
@@ -680,7 +680,7 @@ republic_factions.11 = { #[target_country.GetNameWithNoTooltip] Open for Trade
 					country = scope:target_country
 					key = enemy_allowed_trade
 					years = 3
-					power = 10.00
+					power = merchant_power_weak_bonus
 				}
 			}
 		}
@@ -1092,7 +1092,7 @@ republic_factions.20 = { #Traders Refuse to Serve
 				country = root
 				key = uncooperative_trader
 				years = 3
-				power = -15.00
+				power = merchant_power_weak_penalty
 			}
 		}
 	}

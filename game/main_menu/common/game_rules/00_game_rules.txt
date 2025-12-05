@@ -171,6 +171,18 @@ ai_exploration_rule = {
 
 }
 
+ai_religious_conversion_rule = {
+	default = only_within_religion_group
+	
+	only_within_religion_group = {
+		flag = flavour_rule
+	}
+	free_conversion = {
+		flag = flavour_rule
+	}
+
+}
+
 culture_conversions_rule = {
 	default = dynamic_culture
 	dynamic_culture = {

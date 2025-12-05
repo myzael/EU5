@@ -42,7 +42,7 @@ chukotko_kamchatkan_language = {
 	}
 }
 
-yukaghir_language = {	#https://en.wikipedia.org/wiki/Yukaghir_languages
+yukaghir_language = { #https://en.wikipedia.org/wiki/Yukaghir_languages
 	color = map_yukaghir
 
 	male_names = {

@@ -121,7 +121,7 @@ a_new_dawn = {
 			}
 		}
 	}
-	global_monthly_development = 0.002
+	global_monthly_development = 0.001
 	global_monthly_food_modifier = 0.1
 	
 	requires = urbanization

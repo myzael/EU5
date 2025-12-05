@@ -1047,7 +1047,7 @@ kno_murakami_suigun = {
 	requires = imperial_ambitions
 
 	privateer_durability = 0.2
-	ship_capture_chance = 0.1
+	ship_capture_chance = 0.025
 }
 
 mri_munakata_three_goddesses = {

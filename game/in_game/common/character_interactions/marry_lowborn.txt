@@ -39,10 +39,12 @@
 			is_female = no
 		}
 		enabled = {
-			character_can_marry_trigger = yes
+			is_eligible_for_royal_marriage = yes
 			modifier:block_marrying_lowborn = no
 			NOT = { has_trait = eunuch }
-			
+			scope:actor.ruler_or_heir_if_regent ?= {
+				is_close_relative = root
+			}
 		}
 	}
 

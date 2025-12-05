@@ -279,7 +279,7 @@ flavor_mor.5 = {
 	}
 
 	trigger = {
-		ruler_or_regent ?= { dynasty ?= { NOT = { dynasty_name = wattasid } } }
+		ruler_or_regent ?= { dynasty ?= { NOT = { dynasty_name = wattasid_dynasty } } }
 		"estate_power(estate_type:crown_estate)" < 0.5
 	}
 
@@ -337,12 +337,12 @@ flavor_mor.6 = { #CONSPIRATION
 
 	trigger = {
 		"estate_power(estate_type:crown_estate)" < 0.5
-		ruler_or_regent ?= { dynasty ?= { NOT = { dynasty_name = wattasid } } }
+		ruler_or_regent ?= { dynasty ?= { NOT = { dynasty_name = wattasid_dynasty } } }
 		any_character = {
 			count > 1
 			exists = dynasty
 			is_adult = yes
-			dynasty = { dynasty_name = wattasid }
+			dynasty = { dynasty_name = wattasid_dynasty }
 		}
 	}
 
@@ -1015,7 +1015,7 @@ flavor_mor.18 = {
 		has_presence_in = area:atlas_high_plateau
 		has_ruler = yes
 		ruler = {
-			dynasty = { dynasty_name = wattasid  }
+			dynasty = { dynasty_name = wattasid_dynasty  }
 			any_child = {
 				OR = {
 					father = root.ruler

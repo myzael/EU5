@@ -15,8 +15,8 @@
 	food_consumption_per_strength = 1
 	
 	
-	morale_damage_taken = 0.25
-	strength_damage_taken = 0.25
+	damage_taken = 1.25
+
 	
 	frontage = 1
 	initiative = 1

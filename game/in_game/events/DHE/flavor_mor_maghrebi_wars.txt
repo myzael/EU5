@@ -75,6 +75,7 @@ flavor_mor_maghrebi_wars.1000 = { #The Ambitious Brother #GRAVEYARD
 				add_casus_belli =  { 
 					type = casus_belli:cb_annex
 					target = c:TUN
+					years = 10
 				}
 			}
 			trigger_event_non_silently = {
@@ -95,6 +96,7 @@ flavor_mor_maghrebi_wars.1000 = { #The Ambitious Brother #GRAVEYARD
 				add_casus_belli =  { 
 					type = casus_belli:cb_annex
 					target = c:TUN
+					years = 10
 				}
 			}
 			trigger_event_non_silently = {
@@ -146,6 +148,7 @@ flavor_mor_maghrebi_wars.1001 = { #"The [ROOT.GetCountry.GetAdjectiveWithNoToolt
 			add_casus_belli =  { 
 				type = casus_belli:cb_annex
 				target = c:TUN
+				years = 10
 			}
 		}
 		
@@ -297,6 +300,7 @@ flavor_mor_maghrebi_wars.1004 = {
 			add_casus_belli =  { 
 				type = casus_belli:cb_annex
 				target = c:TUN
+				years = 10
 			}
 		}
 		#If Morocco is an ally of Tunis

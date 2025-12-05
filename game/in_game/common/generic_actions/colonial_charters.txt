@@ -62,40 +62,13 @@ create_colonial_charter = {
 		}
 	}
 
-	select_trigger = {
-		default_sort = population
-		top_widget = colony_item_card_at_province_select
-		looking_for_a = province
-		source = actor
-		target_flag = source
-		cache_targets = yes #always the same set
-		pre_evaluation_sort_value = {
-			value = population
-		}
-		pre_evaluation_number_to_evaluate_fully = 5
-		max_targets_for_ui = 100 #big countries really punish the UI
-		name = "create_colonial_charter_select_province"
-		none_available_msg_key = "create_colonial_charter_select_province_none"
-		column = {
-			data = create_colonial_charter_column
-		}
-		column = {
-			data = population
-		}
-		enabled = {
-			population > 1
-		}
-	}
- 
 	effect = {
 		scope:actor = {
 			if = {
 				limit = {
-					exists = scope:source
 					exists = scope:target
 				}
 				create_colonial_charter = {
-					source = scope:source
 					target = scope:target
 				}
 			}
@@ -109,13 +82,13 @@ create_colonial_charter = {
 					OR = {
 						country_tax_base > 100
 						is_subject_type = colonial_nation
-						tag = SWE
-						tag = POR
-						tag = KUR
+						has_or_had_tag = SWE
+						has_or_had_tag = POR
+						has_or_had_tag = KUR
 					}
 				}
 			}
-			add = "scope:actor.colonial_charter_utility(scope:target|scope:source)"
+			add = "scope:actor.colonial_charter_utility(scope:target)"
 		}
 		else = {
 			add = -1000
@@ -168,9 +141,8 @@ abandon_colonial_charter = {
 		if = {
 			limit = {
 				exists = scope:target.province_definition
-				exists = scope:target.source_province
 			}
-			subtract = "scope:actor.colonial_charter_utility(scope:target.province_definition|scope:target.source_province)"
+			subtract = "scope:actor.colonial_charter_utility(scope:target.province_definition)"
 		}
 		else = {
 			subtract = 1000

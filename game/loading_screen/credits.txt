@@ -284,6 +284,7 @@ Ján Takáč
 Yurii Denis
 Konrad Magnusson
 Marcus Holmberg
+Björn Persson Mattsson
 Jesús Viveros
 
 $ROLE_CONTRIBUTION_CONTENT_DESIGN$
@@ -298,6 +299,7 @@ Verónica Pazos
 Peter Nicholson
 Kuba Gabryel
 George Fournaris
+Fernando Arias Guillén
 Álvaro García Hernández
 Ignacio Vielba González
 Anna Merchant
@@ -329,6 +331,7 @@ Nathan Collado
 $ROLE_CONTRIBUTION_ASSOCIATE_PRODUCER$
 Rodrigo Moltó
 Jesús Escribano
+Martin Svenblad
 
 $ROLE_CONTRIBUTION_AS_LOCALIZATION_REVIEWER_EDITOR$
 Cy Joseph Pabis
@@ -566,6 +569,12 @@ Roman Baev
 Sean Wenström
 Siarhei Harelyshau
 Trevin Sorenson
+Mikael Holmström
+Pavel Šmejkal
+Tomasz Kowalczyk
+
+$ROLE_CLAUSEWITZ_QA_ANALYST$
+Melissa Corboz
 
 $ROLE_PLATFORM_SERVICES_MANAGER$
 David Drake

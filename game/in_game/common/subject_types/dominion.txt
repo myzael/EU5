@@ -51,6 +51,7 @@ dominion = { # like a personal union except the subject has much less power
 	}
 	subject_modifier = {
 		legislative_efficiency = 0.1
+		blocked_from_conversion = yes
 	}
 
 	creation_visible = {

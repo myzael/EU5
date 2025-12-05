@@ -329,7 +329,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 500
+				add = 1000
 				exists = this
 				exists = character:dan_valdemar_atterdag
 				this = character:dan_valdemar_atterdag
@@ -361,7 +361,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 600
+				add = 1000
 				exists = this
 				exists = character:dan_valdemar_atterdag
 				this = character:dan_valdemar_atterdag

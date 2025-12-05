@@ -315,8 +315,8 @@ liberum_veto = {
 		
 	potential = {
 		OR = {
-			tag = POL
-			tag = PLC
+			has_or_had_tag = POL
+			has_or_had_tag = PLC
 		}
 		has_variable = unlock_liberum_veto_variable
 	}
@@ -350,7 +350,7 @@ liberum_veto = {
 visconti_city_states = {
 	estate = nobles_estate
 
-	potential = { tag = MLO }
+	potential = { has_or_had_tag = MLO }
 	
 	can_revoke = {
 		average_control_in_home_region >= 0.5
@@ -370,7 +370,7 @@ visconti_city_states = {
 general_privilege = { 
 	estate = nobles_estate
 
-	potential = { tag = ARA }
+	potential = { has_or_had_tag = ARA }
 	
 	allow = {
 		
@@ -414,7 +414,7 @@ union_privilege = {
 signoria_council = {
 	estate = nobles_estate
 
-	potential = { tag = FLO }
+	potential = { has_or_had_tag = FLO }
 
 	allow = {
 		has_reform = government_reform:signoria_reform
@@ -483,7 +483,7 @@ the_ryad_privilege = {
 kbo_kaigama = {
 	estate = nobles_estate
 
-	potential = { tag = KBO }
+	potential = { has_or_had_tag = KBO }
 	
 	can_revoke = {
 		stability > 50
@@ -500,7 +500,7 @@ kbo_kaigama = {
 kbo_yerima = {
 	estate = nobles_estate
 
-	potential = { tag = KBO }
+	potential = { has_or_had_tag = KBO }
 	
 	can_revoke = {
 		stability > 50
@@ -515,7 +515,7 @@ kbo_yerima = {
 kbo_cima = {
 	estate = nobles_estate
 
-	potential = { tag = KBO }
+	potential = { has_or_had_tag = KBO }
 	
 	can_revoke = {
 		
@@ -532,7 +532,7 @@ office_of_the_farima_soura_privilege = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = MAL 
+		has_or_had_tag = MAL 
 	}
 	allow = {
 		has_unlocked_estate_privilege_trigger = {
@@ -557,7 +557,7 @@ office_of_the_sankar_zouma_privilege = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = MAL 
+		has_or_had_tag = MAL 
 	}
 	allow = {
 		has_unlocked_estate_privilege_trigger = {
@@ -580,8 +580,8 @@ golden_liberty = {
 
 	potential = {
 		OR = {
-			tag = POL
-			tag = PLC
+			has_or_had_tag = POL
+			has_or_had_tag = PLC
 		}
 		OR = {
 			has_variable = rise_of_szlachta_szlachta_outcome_variable
@@ -613,8 +613,8 @@ nieszawa_privileges = {
 
 	potential = {
 		OR = {
-			tag = POL
-			tag = PLC
+			has_or_had_tag = POL
+			has_or_had_tag = PLC
 			has_variable = rise_of_szlachta_szlachta_outcome_variable
 		}
 	}
@@ -644,8 +644,8 @@ pacta_conventa = {
 
 	potential = {
 		OR = {
-			tag = POL
-			tag = PLC
+			has_or_had_tag = POL
+			has_or_had_tag = PLC
 			has_variable = rise_of_szlachta_szlachta_outcome_variable
 		}
 	}
@@ -675,8 +675,8 @@ noble_armies = {
 
 	potential = {
 		OR = {
-			tag = FRA
-			tag = KOR
+			has_or_had_tag = FRA
+			has_or_had_tag = KOR
 		}
 	}
 
@@ -694,7 +694,7 @@ chancellor_nobles = {
 	estate = nobles_estate
 
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
@@ -708,7 +708,7 @@ great_offices_of_the_crown_of_france = {
 	estate = nobles_estate
 
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
@@ -723,7 +723,7 @@ residence_in_versailles = {
 	estate = nobles_estate
 
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		NOT = { has_estate_privilege = estate_privilege:permanent_residence_in_versailles }
 		has_variable = enable_residence_in_versailles
 	}
@@ -740,7 +740,7 @@ permanent_residence_in_versailles = {
 	estate = nobles_estate
 
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		NOT = { has_estate_privilege = estate_privilege:residence_in_versailles }
 		has_variable = enable_permanent_residence_in_versailles
 	}
@@ -777,7 +777,7 @@ inaugural_diplomas = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = BOH
+		has_or_had_tag = BOH
 	}
 	
 	country_modifier = {
@@ -841,7 +841,7 @@ ordinance_of_laborers = {
 	estate = nobles_estate
 
 	potential = {
-		tag = ENG
+		has_or_had_tag = ENG
 		has_variable = eng_ordinance_of_laborers_flag
 	}
 	allow = {
@@ -863,7 +863,7 @@ autonomous_local_commanders = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = KNI
+		has_or_had_tag = KNI
 		government_type = government_type:theocracy
 	}
 	
@@ -879,7 +879,7 @@ bashtinas_and_pronijas_grants = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = SER
+		has_or_had_tag = SER
 	}
 	
 	country_modifier = {
@@ -894,7 +894,7 @@ zupa_districts = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = SER
+		has_or_had_tag = SER
 	}
 	
 	country_modifier = {
@@ -908,7 +908,7 @@ vlastele_krayishnik = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = SER
+		has_or_had_tag = SER
 	}
 	
 	country_modifier = {
@@ -921,7 +921,7 @@ vlastele_krayishnik = {
 golden_bull_of_1222 = {
 	estate = nobles_estate
 	potential = {
-		tag = HUN
+		has_or_had_tag = HUN
 	}
 	country_modifier = {
 		nobles_estate_target_satisfaction = large_privilege_target_satisfaction
@@ -1201,9 +1201,9 @@ libro_d_oro = { #https://en.wikipedia.org/wiki/Libro_d%27Oro
 
 	potential = {
 		OR = {
-			tag = VEN			
+			has_or_had_tag = VEN			
 			any_overlord_or_above = {
-				tag = VEN
+				has_or_had_tag = VEN
 			}
 		}
 	}
@@ -1236,9 +1236,9 @@ avogadoria_de_comun = {
 	estate = nobles_estate
 	potential = {
 		OR = {
-			tag = VEN			
+			has_or_had_tag = VEN			
 			any_overlord_or_above = {
-				tag = VEN
+				has_or_had_tag = VEN
 			}
 		}
 	}
@@ -1256,9 +1256,9 @@ zontas = {
 	estate = nobles_estate
 	potential = {
 		OR = {
-			tag = VEN			
+			has_or_had_tag = VEN			
 			any_overlord_or_above = {
-				tag = VEN
+				has_or_had_tag = VEN
 			}
 		}
 	}
@@ -1296,12 +1296,15 @@ rajput_society = {
 	country_modifier = {
 		discipline = 0.05
 		scale = {
-			value = "culture_percentage_in_country(culture:mewari)"
-			add = "culture_percentage_in_country(culture:harauti)"
-			add = "culture_percentage_in_country(culture:dhundhari)"
-			add = "culture_percentage_in_country(culture:shekhawati)"
-			add = "culture_percentage_in_country(culture:mewati)"
-			add = 1
+			add = {
+				desc = "relevant_culture_percentage_in_country"
+				value = "culture_percentage_in_country(culture:mewari)"
+				add = "culture_percentage_in_country(culture:harauti)"
+				add = "culture_percentage_in_country(culture:dhundhari)"
+				add = "culture_percentage_in_country(culture:shekhawati)"
+				add = "culture_percentage_in_country(culture:mewati)"
+				add = 1
+			}
 		}
 	}
 	country_modifier = {
@@ -1420,7 +1423,7 @@ charter_of_the_nobility = {
 	estate = nobles_estate
 
 	potential = {
-		tag = RUS
+		has_or_had_tag = RUS
 		has_variable = rus_pugachev_uprising
 	}
 	
@@ -1483,7 +1486,7 @@ manifesto_of_freedom = {
 	estate = nobles_estate
 
 	potential = {
-		tag = RUS
+		has_or_had_tag = RUS
 		ruler ?= {
 			has_variable = rus_manifesto_of_freedom
 		}
@@ -1536,7 +1539,7 @@ bavarian_share_of_land = { #Bavarian Inheritance
 cas_fuero_viejo = {
 	estate = nobles_estate
 
-	potential = { tag = CAS }
+	potential = { has_or_had_tag = CAS }
 	
 	allow = {
 		has_unlocked_estate_privilege_trigger = {
@@ -1555,7 +1558,7 @@ cas_fuero_viejo = {
 justicia_de_aragon = {
 	estate = nobles_estate
 	
-	potential = { tag = ARA }
+	potential = { has_or_had_tag = ARA }
 	
 	allow = {
 		has_unlocked_estate_privilege_trigger = {
@@ -1586,7 +1589,7 @@ justicia_de_aragon = {
 formalized_oath = {
 	estate = nobles_estate
 	
-	potential = { tag = ARA }
+	potential = { has_or_had_tag = ARA }
 	
 	allow = {
 		has_unlocked_estate_privilege_trigger = {
@@ -1620,7 +1623,7 @@ ayans_privilege = {
 	
 	
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 	}
 	allow = {
 		#Unlocked by the Ayans Advance
@@ -1642,8 +1645,8 @@ cas_regimiento = {
 	
 	potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 	}
 	allow = {
@@ -1705,7 +1708,7 @@ mam_refined_furusiyya = {
 	estate = nobles_estate
 		
 	potential = {
-		tag = MAM
+		has_or_had_tag = MAM
 		has_unlocked_estate_privilege_trigger = {
 			type = mam_refined_furusiyya
 		}

@@ -71,6 +71,7 @@ scripted_effect ibn_battuta_second_round_travels_effect = {
 						NOT = { root = { has_embraced_institution = prev } }
 					}
 				}
+				NOT = { tag = MOR }
 			}
 			c:CHI ?= {
 				random_institutions_embraced = {
@@ -79,7 +80,31 @@ scripted_effect ibn_battuta_second_round_travels_effect = {
 					}			
 					scope:target_location_5 = {
 						change_institution_progress = {
-							type = institution:professional_armies
+							type = prev
+							value = institution_progress_extreme_bonus
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				c:CHI ?= {
+					any_institutions_embraced = {
+						NOT = { root = { has_embraced_institution = prev } }
+					}
+				}
+				exists = scope:target_location_8
+				tag = MOR
+			}
+			c:CHI ?= {
+				random_institutions_embraced = {
+					limit = {
+						NOT = { root = { has_embraced_institution = prev } }
+					}			
+					scope:target_location_8 = {
+						change_institution_progress = {
+							type = prev
 							value = institution_progress_extreme_bonus
 						}
 					}

@@ -38,6 +38,10 @@ peasant_backpacks = {
     10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_backpack_shield_viking_round_d_mesh" required_tags = "not(shield)" } }
 	default = {}
 }
+age_3_discovery:peasant_backpacks = {
+
+	1 = {}
+}
 
 age_1_traditions:heavy_tag:backpacks = {
 	1 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_backpack_shield_traditions_heavy_mesh"  required_tags = "not(shield)"  required_tags = "not(UnitWeapon_bow)" } }
@@ -110,6 +114,17 @@ south_american_gfx:age_1_traditions:heavy_tag:backpacks  = {
 	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_banner_plume_mesh" required_tags = "not(torso_has_backpack)" } }
 	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_banner_mesh" required_tags = "not(torso_has_backpack)" } }
 }
+
+aztec_cavalry_backpacks	= {
+	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_backpack_feather_mesh" required_tags = "not(torso_has_backpack)" required_tags = "cavalry" } }
+	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_standard_feathers_basket_mesh" required_tags = "not(torso_has_backpack)" required_tags = "cavalry" } }	
+	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_cloth_cover_mesh"  required_tags = "not(torso_has_backpack)" required_tags = "cavalry" } }
+	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_banner_plume_mesh" required_tags = "not(torso_has_backpack)" required_tags = "cavalry" } }
+	10 = { add_entity = { node = Unit_Base_Rig_Spine2		mesh_name = "unit_accessories_banner_mesh" required_tags = "not(torso_has_backpack)" required_tags = "cavalry" } }
+ 		default = {}
+}
+
+
 south_american_gfx:age_5_absolutism:heavy_tag:back = {
 	10 = {}
 }

@@ -20,6 +20,12 @@
 	ai_tick_frequency = 45
 
 	allow = {
+		scope:actor = {
+			prestige >= {
+				value = prestige_mild_penalty
+				multiply = -1
+			}
+		}
 	}
 	
 	select_trigger = {

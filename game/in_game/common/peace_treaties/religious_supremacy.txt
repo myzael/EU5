@@ -5,6 +5,7 @@
 			value = 50
 		}
 	}
+
 	
 	potential = {
         exists = international_organization:hre

@@ -91,7 +91,7 @@
 			}
 			scope:recipient = {
 				culture = {
-					add_cultural_influence = 10
+					add_cultural_influence = cultural_influence_mild_bonus
 				}
 			}
 		}

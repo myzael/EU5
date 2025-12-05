@@ -162,7 +162,7 @@ total_goods_value_traded = {
 }
 
 merchant_capacity = {
-	none  = NONE_MARKET_MERCHANT_CAPACITY_TRIGGER
+	none  = MARKET_MERCHANT_CAPACITY_TRIGGER
 	global  = MARKET_MERCHANT_CAPACITY_TRIGGER
 	third  = THIRD_MARKET_MERCHANT_CAPACITY_TRIGGER
 }

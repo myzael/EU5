@@ -6,7 +6,7 @@ recruitment_law = {
 	#Age of Traditions
 	expanded_levies_policy = {
 		country_modifier = {
-			peasants_estate_levy_size = 0.02
+			peasants_estate_levy_size = 0.05
 			monthly_towards_free_subjects = societal_value_monthly_move
 		}
 		estate_preferences = {
@@ -227,8 +227,8 @@ recruitment_law = {
 		unique = yes
 		potential = {
 			OR = {
-				tag = PRU
-				tag = BRA
+				has_or_had_tag = PRU
+				has_or_had_tag = BRA
 			}
 			has_unlocked_policy_trigger = { type = canton_system_policy }
 		}
@@ -382,7 +382,7 @@ battle_leadership_law = {
 					religion.group = religion_group:muslim
 					culture.language = language:hindustani_language
 				}
-				tag = MUG
+				has_or_had_tag = MUG
 			}
 		}
 		country_modifier = {
@@ -410,7 +410,7 @@ battle_leadership_law = {
 	noble_cadets_policy = {
 		unique = yes
 		potential = {
-			tag = PRU
+			has_or_had_tag = PRU
 		}
 		allow = {
 			OR = {

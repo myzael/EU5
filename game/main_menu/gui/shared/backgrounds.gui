@@ -2577,11 +2577,11 @@ template bg_black_fade_horizontal {
 
 template bg_combat_map_unit {
 	background = {
-		block "texture_shape" {
-			texture = "gfx/interface/component_tiles/round_card_alt.dds"
-			spriteType = corneredstretched
-			spriteBorder = { 20 20 }
-		}
+		#block "texture_shape" {
+		texture = "gfx/interface/component_tiles/round_card_alt.dds"
+		spriteType = corneredstretched
+		spriteBorder = { 20 20 }
+		#}
 		texture_density = 2
 		block "texture_color" {
 			modify_texture = {

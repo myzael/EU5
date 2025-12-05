@@ -339,7 +339,7 @@ flavor_mam.10 = {
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { major_destroy_building_levels_in_location = yes }
 			}
 		}
 	}
@@ -500,7 +500,7 @@ flavor_mam.15 = {
 				country = root
 				key = surrender_the_trade
 				months = 120
-				power = -20
+				power = merchant_power_mild_penalty
 			}
 		}
 	}
@@ -4426,7 +4426,7 @@ flavor_mam.70 = {
 				country = root
 				key = bolstered_capital_trade
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 		add_gold = {

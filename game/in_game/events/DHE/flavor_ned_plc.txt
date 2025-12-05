@@ -68,7 +68,7 @@ flavor_ned_plc.1 = {
 				add_merchant_power = {
 					country = scope:target_country
 					key =  plc_dutch_ships
-					power = 25 
+					power = merchant_power_mild_bonus
 					years = 25
 				}
 			}
@@ -114,7 +114,7 @@ flavor_ned_plc.2 = {
 			add_merchant_power = {
 				country = scope:target_country
 				key =  plc_dutch_ships
-				power = 25
+				power = merchant_power_mild_bonus
 				years = 25
 			}
 		}
@@ -127,7 +127,7 @@ flavor_ned_plc.2 = {
 			add_merchant_power = {
 				country = scope:target_country
 				key =  plc_dutch_ships
-				power = 25
+				power = merchant_power_mild_bonus
 				years = 25
 			}
 		}

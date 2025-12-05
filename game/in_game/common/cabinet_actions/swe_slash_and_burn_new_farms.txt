@@ -5,8 +5,8 @@
 	
 	potential = {
 		OR = {
-			tag = SWE
-			tag = FIN
+			has_or_had_tag = SWE
+			has_or_had_tag = FIN
 		}
 	}
 	
@@ -33,15 +33,7 @@
 			province_definition != province_definition:finland_province
 			province_definition != province_definition:nyland_province
 			
-			scope:actor = {
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action = cabinet_action:swe_slash_and_burn_new_farms
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = swe_slash_and_burn_new_farms interaction_target = target } }
 		}
 		map_color = {
 			lerp = {

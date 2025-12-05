@@ -8595,7 +8595,7 @@ character_db={
 		tag = FRA
 		ruler_trait = righteous
 		ruler_trait = just
-		ruler_trait = zealor
+		ruler_trait = zealot
 		ruler_trait = expansionist
 	}
 
@@ -10771,7 +10771,6 @@ character_db={
 		#mother = eng_beatrix_plantagenet
 		dynasty = dreux_dynasty # Should be dynasty = dreux_bretagne_dynasty
 		tag = BRI
-		ruler_trait = claim
 	}
 
 	# Duke of Brittany
@@ -12197,7 +12196,7 @@ character_db={
 		dynasty = ivree_dynasty
 		tag = FCB
 		ruler_trait = bold_fighter
-		ruler_trait = babbling_buffon
+		ruler_trait = babbling_buffoon
 		ruler_trait = craven
 	}
 
@@ -12970,7 +12969,7 @@ character_db={
 
 	cas_juana_nunez_lara = {
 		first_name = { name = name_joanna }
-		last_name = { name Lara }
+		last_name = { name = Lara }
 		nickname = { name = Palomilla }
 		culture = castilian
 		religion = catholic
@@ -26256,7 +26255,7 @@ character_db={
 		#mother = Unknown
 		dynasty = aleramici_dynasty
 		tag = MFA
-		ruler_trait = zealous
+		ruler_trait = zealot
 		ruler_trait = architectural_visionary
 	}
 		
@@ -34302,7 +34301,7 @@ character_db={
 		#mother = Unknown
 		dynasty = morosini_dynasty
 		tag = VEN
-		ruler_trait = bold_figther
+		ruler_trait = bold_fighter
 	}
 
 	ven_marino_morosini_sr = {
@@ -41847,7 +41846,7 @@ adm = 31 dip = 34 mil = 24
 		culture = lombard
 		religion = catholic
 		estate = nobles_estate
-		adm = 29 dip = 41 dip = 69
+		adm = 29 dip = 41 mil = 69
 		birth_date = 1230.1.1
 		death_date = 1276.1.1
 		birth = novara
@@ -44232,7 +44231,7 @@ adm = 31 dip = 34 mil = 24
 	}
 	
 	#Hafsids
-	tun_abu_zakariyya_yahya {
+	tun_abu_zakariyya_yahya = {
 		first_name = { name = name_john }
 		nickname = { name = Abu-Zakariyya }
 		culture = masmuda
@@ -44244,7 +44243,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TUN
 	}
 	
-	tun_abu_l_baqa_khalid_an_nasr {
+	tun_abu_l_baqa_khalid_an_nasr = {
 		first_name = { name = Khalid }
 		nickname = { name = Abu-l-Baqa }
 		last_name = { name = An-Nasr } #'the Victorious'
@@ -44260,7 +44259,7 @@ adm = 31 dip = 34 mil = 24
 	}
 	
 	#Ruler
-	tun_abu_yahya_abu_bakr_ii { #https://en.wikipedia.org/wiki/Abu_Yahya_Abu_Bakr_II
+	tun_abu_yahya_abu_bakr_ii = { #https://en.wikipedia.org/wiki/Abu_Yahya_Abu_Bakr_II
 		first_name = { name = Abu_Bakr }
 		nickname = { name = nick_abu_yahya }
 		culture = masmuda
@@ -44272,7 +44271,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TUN
 	}
 	#Heir
-	tun_abu_l_abbas_ahmad {
+	tun_abu_l_abbas_ahmad = {
 		first_name = { name = name_ahmad }
 		nickname = { name = Abu-l_Abbas }
 		culture = masmuda
@@ -44286,7 +44285,7 @@ adm = 31 dip = 34 mil = 24
 	}
 	
 	#Future Usurper
-	tun_abu_hafs_umar {
+	tun_abu_hafs_umar = {
 		first_name = { name = name_omar }
 		nickname = { name = Abu_Hafs }
 		culture = masmuda
@@ -44299,7 +44298,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TUN
 	}
 	
-	tun_fatimah {
+	tun_fatimah = {
 		first_name = { name = Fatimah }
 		culture = masmuda
 		religion = sunni
@@ -44312,7 +44311,7 @@ adm = 31 dip = 34 mil = 24
 		tag = MOR
 	}
 	
-	tun_al-fadl {
+	tun_al-fadl = {
 		first_name = { name = Al-Fadl }
 		culture = masmuda
 		religion = sunni
@@ -44324,7 +44323,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TUN
 	}
 	
-	tun_abu_ishaq_ibrahim_ii {
+	tun_abu_ishaq_ibrahim_ii = {
 		first_name = { name = name_abraham }
 		nickname = { name = Abu_Ishaq }
 		culture = masmuda
@@ -44338,7 +44337,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Zab
-	zab_al_fadl_bin_ali_bin_ahmed_bin_al_hassan_bin_ali_bin_muzni {
+	zab_al_fadl_bin_ali_bin_ahmed_bin_al_hassan_bin_ali_bin_muzni = {
 		first_name = { name = name_fadl }
 		culture = tunisian
 		religion = sunni
@@ -44349,7 +44348,7 @@ adm = 31 dip = 34 mil = 24
 		tag = ZAB
 	}
 
-	zab_mansur_bin_fadl {
+	zab_mansur_bin_fadl = {
 		first_name = { name = name_mansur }
 		culture = algerian
 		religion = sunni
@@ -44361,7 +44360,7 @@ adm = 31 dip = 34 mil = 24
 		tag = ZAB
 	}
 
-	zab_yusuf_bin_mansur {
+	zab_yusuf_bin_mansur = {
 		first_name = { name = name_joseph }
 		culture = algerian
 		religion = sunni
@@ -44373,7 +44372,7 @@ adm = 31 dip = 34 mil = 24
 		tag = ZAB
 	}
 
-	zab_ahmad_bin_yusuf {
+	zab_ahmad_bin_yusuf = {
 		first_name = { name = name_ahmad }
 		culture = algerian
 		religion = sunni
@@ -44385,7 +44384,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Banū Tellīs
-	btl_ahmad_bin_tellis {
+	btl_ahmad_bin_tellis = {
 		first_name = { name = name_ahmad }
 		culture = libyan_arabic_culture
 		religion = sunni
@@ -44396,7 +44395,7 @@ adm = 31 dip = 34 mil = 24
 		tag = BTL
 	}
 
-	btl_ali_bin_ahmad {
+	btl_ali_bin_ahmad = {
 		first_name = { name = name_ali }
 		culture = libyan_arabic_culture
 		religion = sunni
@@ -44408,7 +44407,7 @@ adm = 31 dip = 34 mil = 24
 		tag = BTL
 	}
 
-	btl_galib_bin_ali {
+	btl_galib_bin_ali = {
 		first_name = { name = name_galib }
 		culture = libyan_arabic_culture
 		religion = sunni
@@ -44420,7 +44419,7 @@ adm = 31 dip = 34 mil = 24
 		tag = BTL
 	}
 
-	btl_ali_bin_galib {
+	btl_ali_bin_galib = {
 		first_name = { name = name_ali }
 		culture = libyan_arabic_culture
 		religion = sunni
@@ -44432,7 +44431,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Gafsa
-	gfs_ahmed_bin_omar_bin_al_abed {
+	gfs_ahmed_bin_omar_bin_al_abed = {
 		first_name = { name = name_ahmad }
 		culture = tunisian
 		religion = sunni
@@ -44442,7 +44441,7 @@ adm = 31 dip = 34 mil = 24
 		tag = GFS
 	}
 	
-	gfs_muhammad_bin_ahmed {
+	gfs_muhammad_bin_ahmed = {
 		first_name = { name = name_muhammad }
 		culture = tunisian
 		religion = sunni
@@ -44454,7 +44453,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Makki
-	gbs_makki {
+	gbs_makki = {
 		first_name = { name = name_makki }
 		culture = eastern_amazigh
 		religion = sunni
@@ -44464,7 +44463,7 @@ adm = 31 dip = 34 mil = 24
 		tag = GBS
 	}
 
-	gbs_ahmed_ibn_makki {
+	gbs_ahmed_ibn_makki = {
 		first_name = { name = name_ahmad }
 		culture = eastern_amazigh
 		religion = sunni
@@ -44476,7 +44475,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Nasurids
-	fza_ali_nasur {
+	fza_ali_nasur = {
 		first_name = { name = name_ali }
 		culture = toubou_culture
 		religion = sunni
@@ -44487,7 +44486,7 @@ adm = 31 dip = 34 mil = 24
 	}
 
 	#Thabitids
-	trp_thabit_ibn_ammar {
+	trp_thabit_ibn_ammar = {
 		first_name = { name = name_thabid }
 		culture = eastern_amazigh
 		religion = sunni
@@ -44498,7 +44497,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TRP
 	}
 
-	trp_muhammad_ibn_thabit {
+	trp_muhammad_ibn_thabit = {
 		first_name = { name = name_muhammad }
 		culture = eastern_amazigh
 		religion = sunni
@@ -44509,7 +44508,7 @@ adm = 31 dip = 34 mil = 24
 		tag = TRP
 	}
 
-	trp_thabit_ibn_muhammad {
+	trp_thabit_ibn_muhammad = {
 		first_name = { name = name_thabid }
 		culture = eastern_amazigh
 		religion = sunni
@@ -44706,7 +44705,7 @@ adm = 31 dip = 34 mil = 24
 		#mother = Jimena Muñoz
 		dynasty = asturleonesa_dynasty
 		tag = LON
-		ruler_trait = obsessive_perfectionistic
+		ruler_trait = obsessive_perfectionist
 	}
 	
 	glc_sancho_ordonez = { #https://en.wikipedia.org/wiki/Sancho_Ord%C3%B3%C3%B1ez
@@ -46205,7 +46204,7 @@ adm = 31 dip = 34 mil = 24
 		birth = villalba # Portugal
 		#father = cas_pedro_fernandez_castro
 		#mother = por_aldonca_lourenco_valadares # Mistress
-		#dynasty = castro_dynasty
+		dynasty = castro_dynasty
 		tag = CAS
 		timed_modifier = {
 			modifier = "bastard"
@@ -49010,7 +49009,7 @@ adm = 31 dip = 34 mil = 24
 		culture = korean_culture
 		religion = mahayana
 		adm = 28 dip = 21 mil = 26
-		birth_date = 1315.2.22
+		birth_date = 1330.5.23
 		birth = kaesong
 		dynasty = wang_dynasty
 		father = kor_chungsuk
@@ -76624,7 +76623,7 @@ adm = 31 dip = 34 mil = 24
 	#Strasbourg	
 	als_berthold_ii_buchegg = { #Ruler
 		first_name = { name = name_berthold }
-		last_name = { name  von_Buchegg }
+		last_name = { name = von_Buchegg }
 		culture = rhine_alemannic
 		religion = catholic
 		estate = clergy_estate
@@ -83025,7 +83024,7 @@ adm = 31 dip = 34 mil = 24
 		culture = danube_bavarian
 		religion = catholic
 		estate = nobles_estate
-		adm = 43 dip = 41 adm = 31
+		adm = 43 dip = 41 mil = 31
 		birth_date = 1274.10.4
 		death_date = 1319.8.12
 		birth = basel
@@ -83216,7 +83215,7 @@ adm = 31 dip = 34 mil = 24
 		mother = ubv_mathilde_von_habsburg
 		dynasty = wittelsbach_dynasty
 		tag = UBV
-		ruler_trait = rightful
+		ruler_trait = righteous
 		ruler_trait = zealot
 		timed_modifier = {
 			modifier = "healthy_character"
@@ -93244,7 +93243,7 @@ adm = 31 dip = 34 mil = 24
 		first_name = { name = Muhammad_Shah }
 		culture = malay_culture
 		religion = sunni
-		adm = 77 mil = 61 mil = 43
+		adm = 77 dip = 61 mil = 43
 		birth_date = 1330.1.1 #Unknown
 		birth = kedah
 		father = ked_ibrahim_shah
@@ -97256,7 +97255,6 @@ adm = 31 dip = 34 mil = 24
 		religion = sunni
 		birth_date = 1270.1.1 #Unknown
 		birth = thiladhunmathi_atoll
-		dynasty = theemuge_dynasty
 		tag = DGL
 	}
 	
@@ -97268,7 +97266,6 @@ adm = 31 dip = 34 mil = 24
 		birth_date = 1305.1.1 #Unknown
 		father = dgl_omar
 		birth = thiladhunmathi_atoll
-		dynasty = theemuge_dynasty
 		tag = DGL
 	}
 
@@ -97281,7 +97278,6 @@ adm = 31 dip = 34 mil = 24
 		birth_date = 1300.1.1 #Unknown
 		father = dgl_omar
 		birth = thiladhunmathi_atoll
-		dynasty = theemuge_dynasty
 		tag = DGL
 	}
 
@@ -97294,7 +97290,6 @@ adm = 31 dip = 34 mil = 24
 		birth_date = 1315.1.1 #Unknown
 		father = dgl_omar
 		birth = thiladhunmathi_atoll
-		dynasty = theemuge_dynasty
 		tag = DGL
 	}
 	

@@ -11,7 +11,7 @@ template PaymentWithContext_tooltip {
 			texture = "gfx/interface/icons/international_organizations/payments.dds"
 		}
 		blockoverride "tooltip_title_size" {
-			size = { @paymentwithcontext_title_wide @tooltip_title_high }
+			minimumsize = { @paymentwithcontext_title_wide -1 }
 		}
 
 		blockoverride "title_text" {
@@ -499,8 +499,9 @@ template ExpenseSettingTooltip {
 				textcontext = "MAINTENANCE_INVESTMENT_MIN_MAX"
 			}
 
-			TooltipScrolledStringPairList = {
+			TooltipFastScrolledStringPairList = {
 				blockoverride "block_scrollarea" { maximumsize = { -1 600 }}
+				blockoverride "fixedgridbox_addcolumn" { addcolumn = 500 }
 				visible = "[MaintenanceSetting.ShowBreakdown]"
 				blockoverride "block_title" {
 					text = "LIST_TITLE_SOURCES"
@@ -512,6 +513,23 @@ template ExpenseSettingTooltip {
 				visible = "[MaintenanceSetting.IsIO]"
 				textcontext = "[MaintenanceSetting.GetExpenseBreakdown]"
 			}
+
+			TooltipScrolledStringPairList = {
+				visible = "[MaintenanceSetting.IsArmy]"
+				blockoverride "block_title" {
+					text = "ARMY_COSTS_GROUPED_BY_SUBUNITDEFINITION_HEADER"
+				}
+				textcontext = "[GetPlayer.GetArmyCostsByDefinition]"				
+			}
+			
+			TooltipScrolledStringPairList = {
+				visible = "[MaintenanceSetting.IsNavy]"
+				blockoverride "block_title" {
+					text = "NAVY_COSTS_GROUPED_BY_SUBUNITDEFINITION_HEADER"
+				}
+				textcontext = "[GetPlayer.GetNavyCostsByDefinition]"				
+			}
+			 
 		}
 	}
 }

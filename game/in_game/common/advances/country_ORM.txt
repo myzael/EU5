@@ -49,7 +49,7 @@ develop_qeshm_and_ormuz = {
 
 	requires = moqarrariya
 
-	global_monthly_development = 0.002
+	global_monthly_development = 0.001
 }
 
 ormuzi_navy = {

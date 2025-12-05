@@ -359,6 +359,9 @@ european_slavic_ethnicity = {
 	}
 
 	gene_eyebrows_inner = {
+		2 =  { name = thinnest_short 		range = { 0.3 0.6 } }
+		2 =  { name = thinnest_medium 		range = { 0.3 0.6 } }
+		0 =  { name = thinnest_long 		range = { 0.3 0.6 } }
 		40 =  { name = thinner_short 		range = { 0.3 0.5 } }
 		20 =  { name = thinner_medium 		range = { 0.3 0.5 } }
 		0 =  { name = thinner_long 		range = { 0.3 0.5 } }

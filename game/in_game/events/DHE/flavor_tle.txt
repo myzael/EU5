@@ -19,6 +19,10 @@ flavor_tle.1 = {
 			is_ruler = yes
 			is_general = no			
 		}
+		scope:target = {
+			NOT = { controller = c:TLE }
+			is_capital = yes
+		}
 	}
 
 	immediate = {

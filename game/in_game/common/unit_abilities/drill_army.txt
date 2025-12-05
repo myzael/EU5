@@ -20,7 +20,8 @@
 	}
 	modifier = {
 		monthly_experience_gain = 2.5
-		army_maintenance_cost = 0.5
+		force_army_maintenance = yes
+		army_maintenance_cost = 0.25
 		land_morale_modifier = -0.9
 	}
 	

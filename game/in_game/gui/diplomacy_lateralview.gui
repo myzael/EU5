@@ -667,9 +667,16 @@ lateralview = {
 
 		vbox = {
 			using = layoutpolicy_expanding
-			using = bg_main_inner_alt
+			using = bg_main_inner_alt 
 			using = window_main_tabs_margin_alt
 
+			AutomatedSection = {
+				datacontext = "[GetAutomatedSystemItem('diplomacy')]"
+				
+				blockoverride "glow_anim_automation_visible" {
+					visible = "[AutomatedSystemsItem.IsEnabled]"
+				}
+			}
 			widget = { ### Supply Limit and Warscore
 				layoutpolicy_horizontal = expanding
 				size = { -1 45 }
@@ -797,14 +804,6 @@ lateralview = {
 							datamodel = "[DataModelLast(DiplomacyLateralView.GetActiveHegemons, '(int32)3')]"
 							item = {
 								using = hegemons_card
-							}
-						}
-
-						AutomatedSection = {
-							datacontext = "[GetAutomatedSystemItem('diplomacy')]"
-							
-							blockoverride "glow_anim_automation_visible" {
-								visible = "[AutomatedSystemsItem.IsEnabled]"
 							}
 						}
 					}
@@ -1160,14 +1159,6 @@ lateralview = {
 							}
 							onclick = "[DiplomacyLateralView.Vars.Set( 'relations_tab', 'current_relations' )]"
 							down = "[DiplomacyLateralView.Vars.NotExistOrHasValue( 'relations_tab', 'current_relations' )]"
-
-							AutomatedSection = {
-								datacontext = "[GetAutomatedSystemItem('diplomacy')]"
-								
-								blockoverride "glow_anim_automation_visible" {
-									visible = "[AutomatedSystemsItem.IsEnabled]"
-								}
-							}
 						}
 
 						### Known Countries
@@ -1411,17 +1402,8 @@ lateralview = {
 									}
 								}
 							}
-
-							AutomatedSection = {
-								datacontext = "[GetAutomatedSystemItem('diplomacy')]"
-								
-								blockoverride "glow_anim_automation_visible" {
-									visible = "[AutomatedSystemsItem.IsEnabled]"
-								}
-							}
 						}
-					}
-
+					}					
 					### KNOWN COUNTRIES & GREAT POWERS CONTENT
 					vbox = {
 						using = layoutpolicy_expanding
@@ -2606,7 +2588,8 @@ types diplomacy_cards {
 					}
 					blockoverride "extra_list_text_content" {
 						block "extra_relations_text" {
-							raw_text = "+[GetDataModelSize(RelationTypeItem.GetRelations)]"
+							raw_text = "+[Subtract_int32(GetDataModelSize(RelationTypeItem.GetRelations), '(int32)8')]"
+							align = center
 						}
 					}
 					

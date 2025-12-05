@@ -442,7 +442,6 @@ template unit_marker_item_unit_strength {
 		margin_left = -3
 		margin_right = -8
 		margin_top = -2
-		margin_bottom = -2
 
 		modify_texture = {
 			using = overlay_striped_texture
@@ -2545,11 +2544,11 @@ widget = {
 							blockoverride "item_unit_text_object" {
 								hbox = {
 									# margin_left = @[unit_marker_morale_progressbar_size * 0.6]
-									margin = {10 0}
+									margin = {8 0}
 									margin_right = 7
 									country_flag_small = {
 										datacontext = "[Unit.GetCountry]"
-										size = { 38 26 }
+										size = { 40 28 }
 	
 										blockoverride "click" {
 											onclick = "[UnitMarkerItem.OnFlagClick]"
@@ -2720,7 +2719,7 @@ widget = {
 						visible = "[Not(UnitMarkerItem.GetUnit.IsArmy)]"
 						allow_outside = yes
 						margin_right = 5
-
+						
 						# Full width
 						unit_marker_item_layout = {
 							using = layoutpolicy_expanding
@@ -2788,7 +2787,7 @@ widget = {
 							blockoverride "item_unit_text_object" {
 								hbox = {
 									# margin_left = @[unit_marker_morale_progressbar_size * 0.6]
-									margin_left = 4
+									margin = {4 0}
 									margin_right = 8
 									vbox = {
 										using = layoutpolicy_expanding
@@ -2831,7 +2830,7 @@ widget = {
 
 									country_flag_small = {
 										datacontext = "[Unit.GetCountry]"
-										size = { 38 26 }
+										size = { 42 29 }
 	
 										blockoverride "click" {
 											onclick = "[UnitMarkerItem.OnFlagClick]"
@@ -4061,10 +4060,6 @@ widget = {
 	using = bg_circle_piechart
 
 	datacontext = "[CabinetActionMarker.GetCabinet]"
-	tooltipwidget = {
-		using = action_progress_tooltip
-	}
-	tooltip_offset = { 20 20 }
 
 	piechart = {
 		parentanchor = center
@@ -4094,15 +4089,39 @@ widget = {
 			size = { 100% 100% }
 		}
 
-		tooltip_enabled = no			
 		size = { 22 22 }
 		align = center|nobaseline
 		texture = "[GetCabinetActionIcon(Cabinet.GetAction)]"
 		texture_density = 2
 
-		onclick = "[OpenLateralViewWithParams('government', 'tabcontent = cabinet')]"
 		onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCabinetActionTarget(CabinetActionMarker.GetCabinet)]"
-	}
+
+		tooltipwidget = {
+			using = action_progress_tooltip
+		}
+
+		tooltip_offset = { 20 20 }
+
+		datacontext = "[CabinetActionMarker.GetCabinet]"
+		
+		action_tooltip = {
+			click_type = left
+			click_mode = single
+
+			title = "CABINET_ACTION_SIDEMENU"
+			on_action = "[SelectCabinetAction(Cabinet.Self, '(bool)no')]"
+		}
+
+		action_tooltip = {
+			click_type = right
+			click_mode = single			
+			conditions = "[MakeItFailIfLoc(Not(IsChangeCabinetActionTargetEnabled(Cabinet.Self)), 'CANNOT_CABINET_ACTION_SIDEMENU_RMB')]"
+			title = "CABINET_ACTION_SIDEMENU_RMB"
+			visible = "[IsChangeCabinetActionTargetVisible(Cabinet.Self)]"
+			enabled = "[IsChangeCabinetActionTargetEnabled(Cabinet.Self)]"
+			on_action = "[ChangeCabinetActionTarget(Cabinet.Self)]"
+		}
+	}	
 }
 
 ### BlockedVision Marker

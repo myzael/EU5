@@ -208,7 +208,7 @@ quality_vs_quantity = {
 		bias_for_militarist_policies = 50
 	}
 	right_modifier = {
-		possible_frontage_modifier = 0.25
+		possible_frontage_modifier = 0.1
 		food_consumption_modifier = -0.1
 		
 		army_initiative = -0.25

@@ -43,7 +43,6 @@ is_civil_war_for = {
 join_war_reason = {
 	none = NONE_JOIN_WAR_REASON_TRIGGER
 	global = JOIN_WAR_REASON_TRIGGER
-	first = FIRST_JOIN_WAR_REASON_TRIGGER
 	third = THIRD_JOIN_WAR_REASON_TRIGGER
 }
 

@@ -163,11 +163,7 @@ situation_panel = {
 					using = piechart_angles
 		
 					pieslice = {
-						datacontext_from_model = {
-							datamodel = "[SituationView.GetVoteTargets]"
-							index = 0
-						}
-						datacontext = "[VoteTargetGlue.GetVoteTarget.GetCountry]"
+						datacontext = "[SituationView.GetVoteTargetLeft]"
 
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -196,7 +192,7 @@ situation_panel = {
 						}
 		
 						texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
-						value = "[Subtract_float('(float)1.0', FixedPointToFloat(VoteTargetGlue.GetVotePercentage))]"
+						value = "[FixedPointToFloat(Divide_CFixedPoint(VoteTargetGlue.GetVotesCount, SituationView.GetAllVoteTargetsVotesCount))]"
 						color = { 1 1 1 1 }
 					}
 		
@@ -230,17 +226,13 @@ situation_panel = {
 							}
 						}
 						texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
-						value = "[Subtract_float('(float)1.0', FixedPointToFloat(VoteTargetGlue.GetVotePercentage))]"
+						value = "[FixedPointToFloat(Divide_CFixedPoint(VoteTargetGlue.GetVotesCount, SituationView.GetAllVoteTargetsVotesCount))]"
 						color = { 0.5 0.5 0.5 1 }
 						alpha = 0.8
 					}
 		
 					pieslice = {
-						datacontext_from_model = {
-							datamodel = "[SituationView.GetVoteTargets]"
-							index = 1
-						}
-						datacontext = "[VoteTargetGlue.GetVoteTarget.GetCountry]"
+						datacontext = "[SituationView.GetVoteTargetRight]"
 
 						tooltipwidget = {
 							ContextualTooltipType = {
@@ -269,7 +261,7 @@ situation_panel = {
 						}
 		
 						texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
-						value = "[Subtract_float('(float)1.0', FixedPointToFloat(VoteTargetGlue.GetVotePercentage))]"
+						value = "[FixedPointToFloat(Divide_CFixedPoint(VoteTargetGlue.GetVotesCount, SituationView.GetAllVoteTargetsVotesCount))]"
 						color = { 1 1 1 1 }
 					}
 		
@@ -328,7 +320,8 @@ situation_panel = {
 							flipdirection = yes
 							datamodel_wrap = 13
 							maxhorizontalslots = 13
-							datamodel = "[GetGlobalList('nanbokuchou_northern_supporters')]"
+							#datamodel = "[GetGlobalList('nanbokuchou_northern_supporters')]"
+							datamodel = "[SituationView.GetVoteTargetLeft.GetVotersDataModel]"
 							item = {
 								country_flag_small = {
 									datacontext = "[Scope.GetCountry]"

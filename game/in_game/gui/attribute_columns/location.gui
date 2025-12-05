@@ -254,6 +254,7 @@
 			text_single = {
 				layoutpolicy_vertical = expanding
 				layoutpolicy_horizontal = expanding
+				align = left|vcenter
 				text = "[InteractionTarget.GetLocation.GetControl|0%]"
 			}
 		}
@@ -321,6 +322,36 @@
 				layoutpolicy_vertical = fixed
 				layoutpolicy_horizontal = expanding
 				text = "[InteractionTarget.GetLocation.GetRawMaterial.GetName]"
+
+				sort_by_highlight = {
+					size = { 22% 150% }
+					position = { -210 0 }
+					name = "name"
+				}
+			}
+		}
+	}
+
+	type location_migration_attraction = select_cell_default {
+		size = { -1 32 }
+		datacontext = "[InteractionTarget.GetLocation]"
+		tooltipwidget = {
+			using = MigrationAttraction_tooltip
+		}
+		hbox = {
+			spacing = 5
+
+			icon = {
+				size = { 20 20 }
+				layoutpolicy_vertical = fixed
+				layoutpolicy_horizontal = fixed
+				texture = "gfx/interface/icons/location_icons/new/migration.dds"
+			}
+
+			text_single = {
+				layoutpolicy_vertical = fixed
+				layoutpolicy_horizontal = expanding
+				text = "[InteractionTarget.GetLocation.GetLocalMigrationAttraction]"
 
 				sort_by_highlight = {
 					size = { 22% 150% }

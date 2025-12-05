@@ -217,6 +217,7 @@ hussite_wars.2 = { #Hussite Protests Turn Violent in [BOH.GetCountry.GetCapital.
 			c:BOH = {
 				every_neighbor_country = {
 					limit = {
+						is_subject = no
 						NOT = { has_variable = pending_relevant_event_variable }
 						religion = religion:catholic
 						trigger_if = {

@@ -164,10 +164,25 @@ sengoku.4 = { #A Moment of Weakness (event that gives cbs)
 	desc = sengoku.4.desc
 	image = "gfx/interface/illustrations/situation/sengoku.dds"
 
+	trigger = {
+		international_organization:japanese_shogunate = {
+			any_international_organization_member = {
+				this != root
+				NOT = { is_at_war_with = root }
+				NOT = { has_truce_with = root }
+				NOT = { 
+					root = { has_casus_belli_on = prev }
+				}
+			}
+		}
+
+	}
+
 	immediate = {
 		international_organization:japanese_shogunate = {
 			random_international_organization_member = {
 				limit = { 
+					this != root
 					NOT = { is_at_war_with = root }
 					NOT = { has_truce_with = root }
 					NOT = { 

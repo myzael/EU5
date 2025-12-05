@@ -80,7 +80,9 @@ template mercenary_item_action {
 	And(MercenaryItem.IsLeftClickAndConfirmEnabled, MercenaryItem.IsLeftClickAndConfirmVisible),
 	And(MercenaryItem.IsRightClickAndConfirmEnabled, MercenaryItem.IsRightClickAndConfirmVisible))]"
 	visible = "[Or3(MercenaryItem.IsLeftClickVisible, MercenaryItem.IsLeftClickAndConfirmVisible, MercenaryItem.IsRightClickAndConfirmVisible)]"
-	tooltipwidget = { using = action_tooltip_pop_out_mercenary blockoverride "conditions_list" {} }
+	tooltipwidget = {
+		BasicFunctionalTooltip = {}
+	}
 
 	action_tooltip = {
 		click_type = left

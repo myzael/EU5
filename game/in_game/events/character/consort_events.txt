@@ -284,9 +284,17 @@ consort_events.51 = {
 		has_ruler_in_country = yes
 		has_consort = yes
 		consort = {
+			has_dynasty = yes
 			birth_location = {
 				exists = owner
-				NOT = { owner ?= root }
+				owner ?= {
+					this != root
+					has_ruler = yes
+					ruler = {
+						has_dynasty = yes
+						dynasty = root.consort.dynasty
+					}
+				}
 			}
 		}
 	}

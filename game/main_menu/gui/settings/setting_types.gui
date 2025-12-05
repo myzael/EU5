@@ -5,7 +5,7 @@ template JominiSettingsEnumDropdown {
 		size = { 200 30 }
 		alwaystransparent = no
 	}
-	enabled = "[JominiGUISetting.IsModificationEnabled]"
+	enabled = "[And(JominiGUISetting.IsModificationEnabled, Not(JominiGUISetting.IsBlocked))]"
 	alwaystransparent = no
 
 	active_item = {
@@ -438,6 +438,12 @@ types Settings
                             text = "[JominiGUISetting.GetRelationDisabledReason]"
                         }
                     }
+					tooltiptextblock = {
+                        visible = "[JominiGUISetting.IsBlocked]"
+                        blockoverride "text" {
+                            text = "[JominiGUISetting.GetBlockedReason]"
+                        }
+                    }
 				}
 			}
 		}
@@ -658,7 +664,8 @@ types Settings
 
 			item = {
 				flowcontainer = {
-					visible = "[And(JominiSettingsWindow.IsInputPopUpEnabled, Not(EqualTo_string(GetInputActionKey(InputActionBinding.Self), 'mapmode_graphical_culture_name')))]"
+					visible = "[JominiSettingsWindow.IsInputPopUpEnabled]"
+					#ignoreinvisible = yes
 					spacing = 20
 
 					text_single = {

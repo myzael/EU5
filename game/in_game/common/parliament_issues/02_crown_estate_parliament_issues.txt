@@ -353,6 +353,8 @@ support_ruler = {
 
 	allow = {
 		has_ruler = yes
+		NOT = { is_subject_type = fiefdom }
+		NOT = { is_subject_type = dominion }
 		OR = {
 			parliament_type = parliament_type:assembly
 			parliament_type = parliament_type:council

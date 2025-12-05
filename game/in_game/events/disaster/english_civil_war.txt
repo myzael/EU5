@@ -406,7 +406,6 @@ english_civil_war.256 = { #New Model Army
 				mil = 88
 				create_in_limbo = yes
 				save_scope_as = target_character_2
-				create_in_limbo = yes
 			}
 		}
 		else = {
@@ -420,7 +419,6 @@ english_civil_war.256 = { #New Model Army
 				age = 30
 				create_in_limbo = yes
 				save_scope_as = target_character_2
-				create_in_limbo = yes
 			}
 		}
 	}

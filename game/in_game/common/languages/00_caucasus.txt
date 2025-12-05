@@ -134,7 +134,7 @@ georgian_language = {
 
 }
 
-circassian_language = {	#Technically split into West and East Circassian, but in favor to keep number of languages low it is combined into one
+circassian_language = { #Technically split into West and East Circassian, but in favor to keep number of languages low it is combined into one
 	color = map_CIR
 
 	male_names = {

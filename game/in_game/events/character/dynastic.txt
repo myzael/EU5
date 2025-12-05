@@ -303,11 +303,11 @@ dynastic.6 = {
 
 			if = {
 				limit = {
-					any_character = { male_eligible_for_hookup = yes }
+					any_character = { female_eligible_for_hookup = yes }
 				}
 				
 				random_character = {
-					limit = { male_eligible_for_hookup = yes }
+					limit = { female_eligible_for_hookup = yes }
 					save_scope_as = hookup_char
 				}
 			}
@@ -327,11 +327,11 @@ dynastic.6 = {
 
 			if = {
 				limit = {
-					any_character = { female_eligible_for_hookup = yes }
+					any_character = { male_eligible_for_hookup = yes }
 				}
 				
 				random_character = {
-					limit = { female_eligible_for_hookup = yes }
+					limit = { male_eligible_for_hookup = yes }
 					save_scope_as = hookup_char
 				}
 			}

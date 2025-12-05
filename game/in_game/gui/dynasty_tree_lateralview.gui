@@ -975,6 +975,14 @@ lateralview_full = {
 											}
 
 											expand = {}
+											hbox = {
+												spacing = 4
+												# DYNASTY MODIFIERS
+												OneOrSeveralTimedModifiers = {
+													datacontext = "[DynastyTreeView.GetDynasty.GetTimedModifierOwner]"
+												}
+											}
+											expand = {}
 
 											flowcontainer = {
 												direction = vertical
@@ -1301,6 +1309,10 @@ lateralview_full = {
 								blockoverride "text" {
 									text = "DYNASTY_VIEW_DYNASTIC_POWER_TOOLTIP"
 								}
+							}
+							TooltipScrolledStringPairList = {
+								blockoverride "block_scrollarea" { maximumsize = { -1 300 }}
+								textcontext = "[DynastyTreeView.GetDynasty.GetDynasticPowerInfo]"
 							}
 						}
 					}

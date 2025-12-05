@@ -1257,3 +1257,151 @@ template ProvinceInfoTable {
 		}
 	}
 }
+
+template province_missing_workers_tooltip {
+    ContextualTooltipType = {
+        blockoverride "title_text" {
+            text = "PROVINCE_MISSING_WORKERS_TT_TITLE"
+        }
+        blockoverride "title_icon" {
+            icon = {
+                using = tooltip_title_icon_size
+                texture = "[GetConceptTexture('employ')]"
+            }
+        }
+#        blockoverride "title_button" {
+#            mapmode_tooltip_button = {
+#                datacontext = "[GetMapMode('employment')]"
+#            }
+#        }		
+        blockoverride "concept_link" {
+            text = [employ|e]
+        }	
+        blockoverride "tooltip_content" {
+            TooltipTextBlock = {
+				blockoverride "text" {
+					text = "PROVINCE_MISSING_WORKERS_TT_TEXT"
+				}
+			}
+
+			TooltipContentSection = {
+				using = ProvinceMissingWorkersInfoTable
+			}
+        }
+    }
+}
+
+template ProvinceMissingWorkersInfoTable {
+	TooltipListBase = {
+		TooltipListColumnContent = {
+			TooltipTableColumn = {
+				blockoverride "column_title" {}
+				blockoverride "column_title_text" { text = "[location|e]" }
+				blockoverride "column_title_right" { expand = {} }
+
+				blockoverride "field_left" {
+					icon = {
+						size = { 25 25 }
+						texture = "[Location.GetRankIcon]"
+					}
+				}
+
+				blockoverride "field_text" {
+					default_format = "#subtle_name"
+					align = left|nobaseline
+					raw_text = "[Location.GetName]"
+				}
+
+				blockoverride "field_right" { expand = {} }
+			}
+
+			TooltipTableColumn = {
+				blockoverride "column_title" {}
+				blockoverride "column_title_left" { expand = {} }
+				blockoverride "column_title_text" { text = "MISSING_WORKERS" }
+
+				blockoverride "field_left" { expand = {} }
+
+				blockoverride "field_text" { 
+					raw_text = "[Location.GetMissingWorkers]@employees!" 
+				}
+			}
+
+			blockoverride "column_datamodel"  {  datamodel = "[Province.GetLocations]" }
+		}
+	}
+}
+
+template province_peasants_tooltip {
+    ContextualTooltipType = {
+        blockoverride "title_text" {
+            text = "PROVINCE_PEASANT_POPULATION_TT_TITLE"
+        }
+        blockoverride "title_icon" {
+            icon = {
+                using = tooltip_title_icon_size
+                texture = "gfx/interface/icons/pops/peasants.dds"
+            }
+        }
+        blockoverride "title_button" {
+            mapmode_tooltip_button = {
+                datacontext = "[GetMapMode('peasants')]"
+            }
+        }
+        blockoverride "concept_link" {
+            text = [pop_type|e]
+        }	
+        blockoverride "tooltip_content" {
+            TooltipTextBlock = {
+				blockoverride "text" {
+					text = "PROVINCE_PEASANT_POPULATION_TT_TEXT"
+				}
+			}
+
+			TooltipContentSection = {
+				using = ProvincePeasantsInfoTable
+			}
+        }
+    }
+}
+
+template ProvincePeasantsInfoTable {
+	TooltipListBase = {
+		TooltipListColumnContent = {
+			TooltipTableColumn = {
+				blockoverride "column_title" {}
+				blockoverride "column_title_text" { text = "[location|e]" }
+				blockoverride "column_title_right" { expand = {} }
+
+				blockoverride "field_left" {
+					icon = {
+						size = { 25 25 }
+						texture = "[Location.GetRankIcon]"
+					}
+				}
+
+				blockoverride "field_text" {
+					default_format = "#subtle_name"
+					align = left|nobaseline
+					raw_text = "[Location.GetName]"
+				}
+
+				blockoverride "field_right" { expand = {} }
+			}
+
+			TooltipTableColumn = {
+				blockoverride "column_title" {}
+				blockoverride "column_title_left" { expand = {} }
+				blockoverride "column_title_text" { text = "[population|e]" }
+
+				blockoverride "field_left" { expand = {} }
+
+				blockoverride "field_text" { 
+					raw_text = "[Location.GetPopTypeInfo('peasants')]@peasants!" 
+				}
+			}
+
+			blockoverride "column_datamodel"  {  datamodel = "[Province.GetLocations]" }
+		}
+	}
+}

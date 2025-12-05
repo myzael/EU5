@@ -32,7 +32,7 @@ flavor_pav.1 = {
 			save_scope_as = expelled_ruler
 		}
 		create_character = {
-			first_name = name_james.north_italian_language.alternate
+			first_name = name_james
 			last_name = Bussolari
 			adm = 67 dip = 94 mil = 53
 			birth_date = 1312.1.1
@@ -63,6 +63,10 @@ flavor_pav.1 = {
 
 		add_stability = stability_extreme_penalty
 		add_legitimacy = legitimacy_severe_penalty
+
+		hidden_effect = {
+			kill_character_silently = scope:pav_iacopo_bussolari_scope
+		}
 	}
 }
 
@@ -99,7 +103,7 @@ flavor_pav.2 = {
 
 		add_casus_belli = {
 			target = scope:target_country
-			type = casus_belli:cb_claim_throne
+			type = casus_belli:cb_subjugation
 		}
 
 		drop_antagonism_bomb = {

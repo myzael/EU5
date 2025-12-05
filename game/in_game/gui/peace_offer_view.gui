@@ -20,7 +20,8 @@ types PeaceTreaties {
 				}
 
 				blockoverride "tooltip_content" {
-					TooltipScrolledStringPairList = {
+					TooltipScrolledBlockList = {
+						ontextcontextchanged = "[SetBlockListFromTextContext(PdxGuiWidget.AccessSelf)]"
 						blockoverride "block_scrollarea" { maximumsize = { -1 420 }}
 						textcontext = "[PeaceTreaty.GetInfo]"
 					}
@@ -1694,12 +1695,14 @@ lateralview = {
 														click_mode = single
 														click_modifier = default
 														title = "PEACEOFFER_GOLD_ACTION_TT_RIGHT"
+														enabled = "[PeaceOfferWarScoreTreatyGlue.IsDecWarScoreEnabled]"
 													}
 													action_tooltip = {
 														click_type = left
 														click_mode = single
 														click_modifier = shift
 														title = "PEACEOFFER_GOLD_ACTION_TT_RIGHT_SHIFT"
+														enabled = "[PeaceOfferWarScoreTreatyGlue.IsDecWarScoreEnabled]"
 													}
 	
 													tooltipwidget = {
@@ -1747,12 +1750,14 @@ lateralview = {
 														click_mode = single
 														click_modifier = default
 														title = "PEACEOFFER_GOLD_ACTION_TT_LEFT"
+														enabled = "[PeaceOfferWarScoreTreatyGlue.IsIncWarScoreEnabled]"
 													}
 													action_tooltip = {
 														click_type = left
 														click_mode = single
 														click_modifier = shift
 														title = "PEACEOFFER_GOLD_ACTION_TT_LEFT_SHIFT"
+														enabled = "[PeaceOfferWarScoreTreatyGlue.IsIncWarScoreEnabled]"
 													}
 	
 													tooltipwidget = {

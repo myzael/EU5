@@ -796,12 +796,7 @@
 		}
 	}
 	
-	ai_issue_voting_bias = {
-		add = {
-			desc = "INERTIA"
-			value = -1
-		}
-		
+	ai_issue_voting_bias = {		
 		#passing policies is what makes the empire great, so if the leader can enact one, they will
 		add = {
 			desc = "POLICY_BIAS_LEADER_ALWAYS_WANTS"

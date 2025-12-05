@@ -1,4 +1,6 @@
-﻿accessory_genes = {
+﻿special_genes = {
+
+accessory_genes = {
 
 	clothes = {
 
@@ -6,11 +8,12 @@
 
 		no_clothes = {
 			index = 0
+			set_tags = "no_clothes"
 			male = {
 				1 = empty
 			}
 			female = {
-				1 = female_no_clothes
+				1 = empty
 			}
 			boy = male
 			girl = male
@@ -1329,5 +1332,7 @@
 		}
 
 	}
+
+}
 
 }

@@ -4,7 +4,7 @@
 	
 	potential = {
 		scope:actor = {
-			tag = FRA
+			has_or_had_tag = FRA
 			custom_tooltip = {
 				text = has_unlocks_formalize_relations_action
 				has_variable = enabled_formalized_relations

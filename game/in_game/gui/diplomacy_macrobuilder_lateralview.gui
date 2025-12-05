@@ -573,8 +573,21 @@ types DiplomaticActions {
 							spacing = 8
 							
 							country_rank_banner = {
+								visible = "[Not(Country.IsGreatPower)]"
 								blockoverride "country_rank_banner_size" {
 									size = {28 32}
+								}
+								tooltipwidget = {
+									using = non_great_power_info_tooltip
+								}
+							}
+							country_rank_banner = {
+								visible = "[Country.IsGreatPower]"
+								blockoverride "country_rank_banner_size" {
+									size = {28 32}
+								}
+								tooltipwidget = {
+									using = great_power_info_tooltip
 								}
 							}
 
@@ -1460,7 +1473,7 @@ types DiplomaticActions {
 		}
 	}
 
-type country_rank_banner = widget {
+	type country_rank_banner = widget {
         block "country_rank_banner_size" {
             size = {28 34}
         }
@@ -1483,7 +1496,7 @@ type country_rank_banner = widget {
 						click_type = left
 						click_mode = single
 						title = "OPEN_KNOWN_COUNTRIES_TAB"
-						on_action = "[OpenLateralViewWithParams('diplomacy', 'subtab = known_countries')]"
+						on_action = "[OpenLateralViewWithParams('diplomacy', 'relations_tab = known_countries')]"
 					}
 					tooltipwidget = {
 						using = great_power_info_tooltip
@@ -1501,7 +1514,7 @@ type country_rank_banner = widget {
 						click_type = left
 						click_mode = single
 						title = "OPEN_KNOWN_COUNTRIES_TAB"
-						on_action = "[OpenLateralViewWithParams('diplomacy', 'subtab = known_countries')]"
+						on_action = "[OpenLateralViewWithParams('diplomacy', 'relations_tab = known_countries')]"
 					}
 					tooltipwidget = {
 						using = non_great_power_info_tooltip
@@ -1533,14 +1546,13 @@ type country_rank_banner = widget {
                 }
             }
             text_single = {
-                parentanchor = center
-                size = { 100% 70% }
-                autoresize = no
-                align = center|nobaseline
+				maximumsize = { 20 -1 }
+                autoresize = yes
                 text = "[Country.GetGreatPowerRank]"
-                block "great_power_sort_highlight" {}
-            }
-
+                parentanchor = center
+                align = center|nobaseline
+             	block "great_power_sort_highlight" {}
+            }			
         }
     }
 
@@ -1887,6 +1899,19 @@ type country_rank_banner = widget {
 										size = { 40 40 }
 										texture = "gfx/interface/icons/diplomatic_actions/influence_actions.dds"
 										visible = "[EqualTo_string(DiplomaticActionCategory.GetNameKey, 'CATEGORY_INFLUENCE_ACTIONS')]"
+				
+										glow = {
+											name = "drop_shadow"
+											glow_radius = 3
+											color = {0.0 0.0 0.0 1.0}
+											alpha = 0.5
+										}
+									}
+
+									icon = {
+										size = { 40 40 }
+										texture = "gfx/interface/icons/diplomatic_actions/union_actions.dds"
+										visible = "[EqualTo_string(DiplomaticActionCategory.GetNameKey, 'CATEGORY_UNION_ACTIONS')]"
 				
 										glow = {
 											name = "drop_shadow"

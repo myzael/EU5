@@ -104,7 +104,25 @@ nobles_estate = {
 			subtract = scope:target.power_projection
 			multiply = 0.1
 		}
-	
+		
+		add = {
+			desc = "aristocracy_vs_plutocracy"
+			value = {
+				value = societal_value:aristocracy_vs_plutocracy
+				multiply = -1
+				divide = 10
+			}
+		}
+		
+		add = {
+			desc = "serfdom_vs_free_subjects"
+			value = {
+				value = societal_value:serfdom_vs_free_subjects
+				multiply = -1
+				divide = 10
+			}
+		}
+
 		if = {
 			
 			limit = {
@@ -121,6 +139,12 @@ nobles_estate = {
 			desc = "ESTATE_OPINION_TARGET_N_ESTATE_POWER"
 			value = "scope:target.estate_power(estate_type:nobles_estate)"
 			multiply = 5
+		}
+		
+		add = {
+			desc = "ESTATE_OPINION_TARGET_DIPLOMATIC_REPUTATION"
+			value = scope:target.modifier:diplomatic_reputation
+			multiply = 0.25
 		}
 		
 		if = {
@@ -170,6 +194,64 @@ nobles_estate = {
 				value = -5
 			}
 		}
+
+		if = {
+			limit = {
+				court_language = scope:target.court_language
+			}
+			add = {
+				desc = "ESTATE_OPINION_SAME_COURT_LANGUAGE"
+				value = 5
+			}
+		}
+
+		if = {
+			limit = {
+				language = scope:target.court_language
+			}
+			add = {
+				desc = "ESTATE_OPINION_COURT_LANGUAGE_IS_OUR_COMMON_LANGUAGE"
+				value = 5
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				is_subject_of = scope:target
+			}
+			if = {
+				limit = { is_disloyal_subject = yes }
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_DISLOYAL"
+					value = -10
+				}
+			}
+			else = {
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_LOYAL"
+					value = 10
+				}
+			}
+		}
+		else_if = {
+			limit = { any_subject = { this = scope:target } }
+			if = {
+				limit = {
+					scope:target = { is_disloyal_subject = yes }
+				}
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_DISLOYAL"
+					value = -10
+				}
+			}
+			else = {
+				add = {
+					desc = "ESTATE_OPINION_SUBJECT_LOYAL"
+					value = 10
+				}
+			}
+		}
 		
 	}
 }
@@ -216,12 +298,24 @@ clergy_estate = {
 
 		if = {
 			limit = {
+				 scope:target.religion = religion
+			}	
+			add = {
+				desc = "ESTATE_OPINION_TRUE_FAITH"
+				value = 10
+				multiply = modifier:tolerance_own
+			}
+		}
+
+		if = {
+			limit = {
 				 scope:target.religion != religion
 				 scope:target.religion.group = religion.group
 			}	
 			add = {
 				desc = "ESTATE_OPINION_HERETIC"
-				value = -10
+				value = 10
+				multiply = modifier:tolerance_heretic
 			}
 		}
 
@@ -232,7 +326,8 @@ clergy_estate = {
 			}	
 			add = {
 				desc = "ESTATE_OPINION_HEATHEN"
-				value = -20
+				value = 10
+				multiply = modifier:tolerance_heathen
 			}
 		}
 
@@ -257,7 +352,19 @@ clergy_estate = {
 				multiply = -10
 			}
 		}
+
+
+		add = {
+			desc = "spiritualist_vs_humanist"
+			value = {
+				value = societal_value:spiritualist_vs_humanist
+				multiply = -1
+				divide = 10
+				multiply = "religion.religious_view_impact(scope:target.religion)"
+			}
+		}
 	
+
 	
 	
 		add = {
@@ -271,15 +378,14 @@ clergy_estate = {
 
 		if = {
 			limit = {
-				government_type = government_type:theocracy
 				scope:target = { 
-					religion = root.religion
 					government_type = government_type:theocracy
 				}
 			}	
 			add = {
 				desc = "ESTATE_OPINION_THEOCRACY"
-				value = 10
+				value = 5
+				multiply = "religion.religious_view_impact(scope:target.religion)"
 			}
 		}
 
@@ -403,6 +509,42 @@ burghers_estate = {
 			min = -5
 		}
 		
+		add = {
+			desc = "capital_economy_vs_traditional_economy"
+			value = {
+				value = societal_value:capital_economy_vs_traditional_economy
+				multiply = -1
+				divide = 10
+			}
+		}
+		
+		add = {
+			desc = "aristocracy_vs_plutocracy"
+			value = {
+				value = societal_value:aristocracy_vs_plutocracy
+				divide = 10
+			}
+		}
+		
+		add = {
+			desc = "mercantilism_vs_free_trade"
+			value = {
+				value = societal_value:mercantilism_vs_free_trade
+				divide = 10
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				capital.market.language = scope:target.capital.market.language
+			}
+			add = {
+				desc = "ESTATE_OPINION_OUR_MARKET_LANGUAGE"
+				value = 10
+			}
+		}
+		
 		
 		if = {
 			limit = {
@@ -411,6 +553,17 @@ burghers_estate = {
 			add = {
 				desc = "ESTATE_OPINION_MERCHANT_IN_CAPITAL"
 				value = -5
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				scope:target.capital.market = { has_merchant = root }
+			}	
+			add = {
+				desc = "ESTATE_OPINION_OUR_MERCHANT_IN_THEIR_CAPITAL"
+				value = 10
 			}
 		}
 
@@ -424,6 +577,17 @@ burghers_estate = {
 			add = {
 				desc = "ESTATE_OPINION_BOTH_REPUBLIC"
 				value = 5
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				is_embargoed_by = scope:target
+			}	
+			add = {
+				desc = "ESTATE_OPINION_EMBARGOING_US"
+				value = -5
 			}
 		}
 
@@ -450,6 +614,7 @@ peasants_estate = {
 	satisfaction = {
 		stability_cost = -0.2
 		global_monthly_food_modifier = 0.25
+		levy_recovery_modifier = 0.2
 	}
 	#multiplied with (relative_power - LOW_POWER_THRESHOLD) if > LOW_POWER_THRESHOLD
 	high_power = {
@@ -544,6 +709,30 @@ peasants_estate = {
 			add = {
 				desc = "ESTATE_OPINION_PEASANT_REPUBLIC"
 				value = 10
+			}
+		}
+		
+		add = {
+			desc = "capital_economy_vs_traditional_economy"
+			value = {
+				value = societal_value:capital_economy_vs_traditional_economy
+				divide = 10
+			}
+		}
+		
+		add = {
+			desc = "spiritualist_vs_humanist"
+			value = {
+				value = societal_value:spiritualist_vs_humanist
+				divide = 10
+			}
+		}
+		
+		add = {
+			desc = "serfdom_vs_free_subjects"
+			value = {
+				value = societal_value:serfdom_vs_free_subjects
+				divide = 10
 			}
 		}
 	}

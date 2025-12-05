@@ -49,8 +49,8 @@ burghers_royal_burgh_commissioners = {
 
 	potential = {
 		OR = {
-			tag = SCO
-			tag = SBL
+			has_or_had_tag = SCO
+			has_or_had_tag = SBL
 		}
 	}
 
@@ -92,7 +92,7 @@ commercial_advisory_council = {
 milanese_cloth_guilds_privileges = {
 	estate = burghers_estate
 
-	potential = { tag = MLO }
+	potential = { has_or_had_tag = MLO }
 
 	allow = {
 		custom_tooltip = {
@@ -116,7 +116,7 @@ milanese_cloth_guilds_privileges = {
 florence_guilds = {
 	estate = burghers_estate
 
-	potential = { tag = FLO }
+	potential = { has_or_had_tag = FLO }
 
 	country_modifier = {
 		global_burghers_estate_power = 0.25
@@ -129,7 +129,7 @@ florence_guilds = {
 
 novgorod_ivans_hundred = {
 	estate = burghers_estate
-	potential = { tag = NOV }
+	potential = { has_or_had_tag = NOV }
 	allow = {}
 	country_modifier = {
 		merchant_maintenance_cost = -0.25
@@ -164,7 +164,7 @@ novgorod_ivans_hundred = {
 kbo_lake_chad_trade_privilege = {
 	estate = burghers_estate
 	potential = { 
-		tag = KBO
+		has_or_had_tag = KBO
 	}
 	allow = {
 		owns = location:gambaru
@@ -183,9 +183,7 @@ kbo_lake_chad_trade_privilege = {
 kbo_serfdom_economy = {
 	estate = burghers_estate
 	potential = { 
-		tag = KBO
-	}
-	allow = {
+		has_or_had_tag = KBO
 		custom_tooltip = {
 			text = gained_access_to_this_privilege_tt
 			has_variable = serfom_improved_goods_variable
@@ -204,7 +202,7 @@ kbo_serfdom_economy = {
 amenokal_salt_traders = {
 	estate = burghers_estate
 	potential = { 
-		tag = KBO
+		has_or_had_tag = KBO
 	}
 	allow = {
 		custom_tooltip = {
@@ -288,7 +286,7 @@ control_over_the_coinage = {
 
 	allow = {
 		trigger_if = {
-			limit = { tag = ZAN }
+			limit = { has_or_had_tag = ZAN }
 			NOT = { has_reform = government_reform:control_of_the_mahdali_coinage_reform }
 		}
 	}
@@ -413,8 +411,8 @@ polish_merchant_seal = {
 
 	potential = {
 		OR = {
-			tag = POL
-			tag = PLC
+			has_or_had_tag = POL
+			has_or_had_tag = PLC
 		}
 	}
 
@@ -508,7 +506,7 @@ villes_franches = {
 	estate = burghers_estate
 
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
@@ -527,12 +525,15 @@ fra_leadership_of_marcel = {
 			is_alive = yes
 			has_variable = is_etienne_marcel
 		}	
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
-		global_burghers_estate_power = 0.10
-		global_peasants_estate_power = 0.10
+		global_burghers_estate_power = 0.50
+		parliament_base_support = -0.20
+		global_max_control = -0.03
+		trade_efficiency = small_trade_efficiency_bonus
+		global_trades_per_burgher = 0.10
 	}
 	can_revoke = {
 		always = no
@@ -544,7 +545,7 @@ fra_marcel_great_ordinance = {
 
 	potential = {
 		has_variable = allowed_marcel_ordinance
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
@@ -564,7 +565,7 @@ fra_marcel_compromise_ordinance = {
 
 	potential = {
 		has_variable = compromise_marcel_ordinance
-		tag = FRA
+		has_or_had_tag = FRA
 	}
 
 	country_modifier = {
@@ -637,9 +638,9 @@ libro_d_argento = { #https://it.wikipedia.org/wiki/Cittadini_(Venezia)
 
 	potential = {
 		OR = {
-			tag = VEN			
+			has_or_had_tag = VEN			
 			any_overlord_or_above = {
-				tag = VEN
+				has_or_had_tag = VEN
 			}
 		}
 	}

@@ -13,6 +13,7 @@ hun_castle_warriors = {
 	age = age_1_traditions
 	
 	requires = hun_composite_light_cavalry
+	levy_recovery_modifier = 0.1
 	global_levy_recruitment_speed_modifier = 0.33
 }
 

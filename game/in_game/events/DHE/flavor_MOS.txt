@@ -1122,7 +1122,7 @@ flavor_mos.10 = {
 			market = {
 				add_merchant_power = {
 					country = root
-					power = 25
+					power = merchant_power_mild_bonus
 					years = 10
 					key = denga_ruble_key
 				}
@@ -3843,12 +3843,12 @@ flavor_mos.37 = { #DEVASTATION
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { major_destroy_building_levels_in_location = yes }
 			}
 			every_pop = {
 				add_pop_size = {
 					value = pop_size
-					multiply = -0.3
+					multiply = -0.03
 				}
 			}
 			while = {
@@ -3898,12 +3898,12 @@ flavor_mos.37 = { #DEVASTATION
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 			every_pop = {
 				add_pop_size = {
 					value = pop_size
-					multiply = -0.1
+					multiply = -0.01
 				}
 			}
 			if = {

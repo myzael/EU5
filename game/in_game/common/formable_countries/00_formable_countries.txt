@@ -94,7 +94,7 @@ DRD_f = {
 	rule = fantasy
 
 	potential = {
-		culture = {
+		any_primary_or_accepted_or_tolerated_culture = {
 			OR = {
 				has_culture_group = culture_group:scottish_group
 				has_culture_group = culture_group:hibernian_group
@@ -104,6 +104,12 @@ DRD_f = {
 	
 	allow = {
 		culture.language = language:gaelic_language
+		culture = {
+			OR = {
+				has_culture_group = culture_group:scottish_group
+				has_culture_group = culture_group:hibernian_group
+			}
+		}
 	}
 	
 	name = DRD
@@ -131,10 +137,11 @@ GBR_f = {
 	rule = historical
 	
 	potential = {
-		culture = { has_culture_group = culture_group:british_group }
+		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:british_group }
 	}
 
 	allow = {
+		culture = { has_culture_group = culture_group:british_group }
 		situation:hundred_years_war = {
 			situation_has_ended = yes
 		}
@@ -341,16 +348,31 @@ IRE_f = {
 	}
 
 	allow = {
-		#allow if they're the leader of a high_kingship in the Ireland region
-		is_member_of_international_organization_of_type = { type = high_kingship }
-		any_international_organizations_member_of = {
-			count = all
-			filter = {
-				international_organization_type = international_organization_type:high_kingship
-				has_variable = high_kingship_region
-				var:high_kingship_region = region:ireland_region
+		OR = {
+			AND = {
+				#allow if they're the leader of a high_kingship in the Ireland region
+				is_member_of_international_organization_of_type = { type = high_kingship }
+				any_international_organizations_member_of = {
+					count = all
+					filter = {
+						international_organization_type = international_organization_type:high_kingship
+						has_variable = high_kingship_region
+						var:high_kingship_region = region:ireland_region
+					}
+					leader_country ?= root
+				}
 			}
-			leader_country ?= root
+			custom_tooltip = {
+				text = neither_highkingship_nor_lordship_exist_tt
+				NOT = {
+					any_international_organization = {
+						OR = {
+							international_organization_type = international_organization_type:lordship_of_ireland
+							international_organization_type = international_organization_type:high_kingship
+						}
+					}
+				}
+			}
 		}
 		custom_tooltip = {
 			text = IRE_f_lordship_tt
@@ -981,7 +1003,6 @@ POM_f = {
 PRU_f = { #Prussia
 	level = 2
 	required_locations_fraction = 0.75
-	capital_required = no
 	rule = historical
 
 	potential = {
@@ -1353,12 +1374,12 @@ ROM_f = {
 	
 	potential = {
 		OR = {
-			tag = c:BYZ
+			has_or_had_tag = BYZ
+			country_rank = country_rank:rank_empire
+			owns = location:constantinople
 			AND = {
 				owns = location:rome
-				NOT = {
-					tag = c:PAP
-				}
+				NOT = { tag = PAP }
 			}
 		}
 	}
@@ -1369,8 +1390,8 @@ ROM_f = {
 		country_rank = country_rank:rank_empire
 		is_hegemon = yes
 
-		trigger_if = {
-			limit = { NOT = { tag = c:BYZ } }
+		OR = {
+			has_or_had_tag = BYZ
 			NOT = { country_exists = c:BYZ }
 		}
 		OR = {
@@ -1453,6 +1474,9 @@ NSE_f = {
 			culture = { has_culture_group = culture_group:british_group }
 			culture = { has_culture_group = culture_group:scandinavian_group }
 		}
+	}
+
+	allow = {
 		any_owned_location = { 
 			OR = {
 				region = region:scandinavian_region 
@@ -1465,9 +1489,6 @@ NSE_f = {
 				region = region:ireland_region 
 			}
 		}
-	}
-
-	allow = {
 	}
 	
 	name = NSE
@@ -1492,7 +1513,7 @@ CEL_f = {
 	rule = fantasy
 	 
 	potential = {
-		culture = { has_culture_group = culture_group:celtic_group }
+		any_primary_or_accepted_or_tolerated_culture = { has_culture_group = culture_group:celtic_group }
 	}
 
 	allow = {
@@ -1557,7 +1578,6 @@ EUR_f = {
 	rule = fantasy	
 
 	potential = {
-		num_locations > 1500
 	}
 
 	allow = {
@@ -1955,6 +1975,8 @@ USA_f = {
 	required_locations_fraction = 0.35
 	rule = historical
 
+	capital_required = yes
+
 	potential = {
 		culture ?= {
 			is_culture_native_american = no
@@ -1982,6 +2004,8 @@ CAN_f = {
 	level = 3
 	required_locations_fraction = 0.35
 	rule = plausible
+	
+	capital_required = yes
 
 	potential = {
 		culture ?= {
@@ -2013,8 +2037,17 @@ MEX_f = {
 	level = 3
 	required_locations_fraction = 0.5
 	rule = historical
+	
+	capital_required = yes
 
 	potential = {
+		OR = {
+			any_primary_or_accepted_or_tolerated_culture ?= { has_culture_group = culture_group:iberian_group }
+			religion.group = religion_group:christian
+		}
+	}
+
+	allow = {
 		OR = {			
 			culture ?= { has_culture_group = culture_group:iberian_group }
 			AND = {
@@ -2022,13 +2055,6 @@ MEX_f = {
 				religion.group = religion_group:christian
 			}
 		}
-		culture ?= {
-			
-			
-		}
-	}
-
-	allow = {
 	}
 	
 	name = MEX
@@ -2049,7 +2075,7 @@ BNG_f = {
 	required_locations_fraction = 0.8
 	rule = historical
 	
-	potential = {
+	allow = {
 		culture = culture:bengali
 	}
 
@@ -2072,6 +2098,8 @@ DLH_f = {
 	rule = historical
 	
 	potential = {
+	}
+	allow = {
 		religion.group = religion_group:muslim
 		OR = {
 			culture = { has_culture_group = culture_group:indian_group }
@@ -2079,8 +2107,6 @@ DLH_f = {
 			culture = { has_culture_group = culture_group:mongolian_group }
 			culture = { has_culture_group = culture_group:turkic_group }
 		}
-	}
-	allow = {
 		owns = location:delhi
 	}
 
@@ -2110,6 +2136,8 @@ NPL_f = {
 	required_locations_fraction = 0.7
 	rule = historical
 	potential = {
+	}
+	allow = {
 		culture = { has_culture_group = culture_group:nepali_group }
 	}
 	name = NPL
@@ -2130,15 +2158,17 @@ MUG_f = {
 	rule = historical
 	
 	potential = {
+
+	}
+
+	allow = {
+
 		religion.group = religion_group:muslim
 		OR = {
 			culture = { has_culture_group = culture_group:iranian_group }
 			culture = { has_culture_group = culture_group:turkic_group }
 			culture.language = language:afghani_language
 		}
-	}
-
-	allow = {
 		owns = location:delhi
 		owns = location:agra
 		owns = location:lahore
@@ -2166,15 +2196,22 @@ DEC_f = {
 	rule = historical
 
 	potential = {
+		any_primary_or_accepted_or_tolerated_culture = {
+			OR = {
+				language = language:marathi_language
+				language = language:kannada_language
+				language = language:telugu_language
+			}
+		}
+	}
+
+	allow = {
 		OR = {
 			culture.language = language:marathi_language
 			culture.language = language:kannada_language
 			culture.language = language:telugu_language
 		}
 		religion = religion:sunni
-	}
-
-	allow = {
 	}
 	
 	name = DEC
@@ -2196,11 +2233,14 @@ MHR_f = {
 	rule = historical
 
 	potential = {
-		culture.language = language:marathi_language
-		NOT = { religion = religion:sunni }
+		any_primary_or_accepted_or_tolerated_culture = {
+			language = language:marathi_language
+		}
 	}
 
 	allow = {
+		culture.language = language:marathi_language
+		NOT = { religion = religion:sunni }
 	}
 	
 	name = MHR
@@ -2469,7 +2509,10 @@ SKO_f = {
 	rule = historical
 
 	potential = {
-		culture = culture:hausa
+		OR = {
+			culture = culture:hausa
+			culture = culture:fulbe
+		}
 		religion = religion:sunni		
 	}
 
@@ -3286,7 +3329,6 @@ IRO_f = { # Haudenosaunee / Iroquois Confederacy
 
 	level = 3
 	required_locations_fraction = 0.80
-	capital_required = no
 	rule = historical
 
 	potential = {
@@ -3320,7 +3362,6 @@ PUE_f = { # United Pueblo
 
 	level = 2
 	required_locations_fraction = 1
-	capital_required = no
 	rule = historical
 
 	potential = {
@@ -3480,8 +3521,9 @@ BEL_f = {
 	color = map_BEL
 
 	areas = {
-		wallonia_area
+		brabant_area
 		flanders_area
+		wallonia_area
 	}
 
 	form_effect = {

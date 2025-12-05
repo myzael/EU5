@@ -27,7 +27,10 @@ bestow_elector_status = {
 			international_organization:hre = {
 				OR = {
 					AND = {
-						"num_countries_with_special_status(special_status:elector)" < "max_countries_with_special_status(special_status:elector)"
+						num_countries_with_special_status = {
+							type = special_status:elector
+							value < "max_countries_with_special_status(special_status:elector)"
+						}
 						NOT = {
 							country_has_special_status = {
 								type = special_status:elector
@@ -36,7 +39,10 @@ bestow_elector_status = {
 						}
 					}
 					AND = {
-						"num_countries_with_special_status(special_status:archbishop_elector)" < "max_countries_with_special_status(special_status:archbishop_elector)"
+						num_countries_with_special_status = {
+							type = special_status:archbishop_elector
+							value < "max_countries_with_special_status(special_status:archbishop_elector)"
+						}
 						NOT = {
 							country_has_special_status = {
 								type = special_status:archbishop_elector
@@ -51,14 +57,20 @@ bestow_elector_status = {
 			international_organization:hre = {
 				OR = {
 					AND = {
-						"num_countries_with_special_status(special_status:elector)" < "max_countries_with_special_status(special_status:elector)"
+						num_countries_with_special_status = {
+							type = special_status:elector
+							value < "max_countries_with_special_status(special_status:elector)"
+						}
 						special_status_can_be_bestowed = {
 							type = special_status:elector
 							country = root
 						}
 					}
 					AND = {
-						"num_countries_with_special_status(special_status:archbishop_elector)" < "max_countries_with_special_status(special_status:archbishop_elector)"
+						num_countries_with_special_status = {
+							type = special_status:archbishop_elector
+							value < "max_countries_with_special_status(special_status:archbishop_elector)"
+						}
 						special_status_can_be_bestowed = {
 							type = special_status:archbishop_elector
 							country = root
@@ -1500,6 +1512,16 @@ enforce_religious_unity = {
 			trigger_if = {
 				limit = { modifier:blocked_from_conversion = yes }
 				always = no
+			}
+			trigger_if = {
+				limit = {
+					is_situation_active = situation:hussite_wars 
+					religion = religion:hussite
+				}
+				custom_tooltip = {
+					text = HUSSITE_WARS_UNRESOLVED
+					always = no
+				}
 			}
 		}
 	}

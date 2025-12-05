@@ -1175,17 +1175,17 @@ template TabDiplomacyTooltip {
 				}
 			}
 
-			TooltipFunctionalBlock = {
-				using = tooltip_left_click_template
+			# TooltipFunctionalBlock = {
+			# 	using = tooltip_left_click_template
 
-				blockoverride "action_left_text" {
-					text = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
-				}
+			# 	blockoverride "action_left_text" {
+			# 		text = "TAB_TOOLTIP_DIPLOMACY_LEFT_CLICK"
+			# 	}
 
-				blockoverride "action_right_text" {
-					text = "TAB_TOOLTIP_DIPLOMACY_RIGHT_CLICK"
-				}
-			}
+			# 	blockoverride "action_right_text" {
+			# 		text = "TAB_TOOLTIP_DIPLOMACY_RIGHT_CLICK"
+			# 	}
+			# }
 		}
 	}
 }

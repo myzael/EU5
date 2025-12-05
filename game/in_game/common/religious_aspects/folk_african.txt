@@ -48,7 +48,7 @@ worship_alwet_god = { #Rain God
     religion = muonyjang_religion
 
     modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -69,7 +69,7 @@ worship_ratovantany_god = { #Earth God, https://en.wikipedia.org/wiki/Ratovantan
 
     modifier = {
 		global_life_expectancy = 2
-        global_population_growth = 0.00025
+        global_population_growth = 0.0001
     }
 }
 
@@ -110,7 +110,7 @@ worship_ngai_god = { #Creator God, https://en.wikipedia.org/wiki/Ngai
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025		  
+      global_population_growth = 0.0001		  
     }
 }
 
@@ -121,7 +121,7 @@ worship_asis_god = { #Creator God
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -163,7 +163,7 @@ worship_hunntuattatteen_god = { #Wife of God
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -215,7 +215,7 @@ worship_asase_ya_god = { #Earth Mother https://en.wikipedia.org/wiki/Asase_Ya/Af
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -266,7 +266,7 @@ worship_lisa_god = { #Creator God, Sun God https://en.wikipedia.org/wiki/Mawu
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -297,7 +297,7 @@ worship_olokun_isese_god = { #god of water and wealth https://en.wikipedia.org/w
     religion = isese_religion
 
     modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -308,7 +308,7 @@ worship_obatala_god = { #creator on mankind https://en.wikipedia.org/wiki/%E1%BB
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -348,7 +348,7 @@ worship_ikenga_god = { #god of fortune https://en.wikipedia.org/wiki/Ikenga
     religion = odinala_religion
 
     modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -359,7 +359,7 @@ worship_agwu_nsi_god = { #God of Divination and healing https://en.wikipedia.org
 
     modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -389,7 +389,7 @@ worship_mindiss_god = { #River Protector
     religion = a_fat_roog_religion
 
     modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 

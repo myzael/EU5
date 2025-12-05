@@ -2506,7 +2506,7 @@ topology = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/topology/hills/hills_metadata_os2654x440_d0x40.dds"
+		texture_file = "gfx/interface/illustrations/location/topology/hills/hills_metadata_os2654x440_d0x15.dds"
 		priority = 10
 		scope = location
 
@@ -2516,7 +2516,7 @@ topology = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/topology/hills/hills_arid_metadata_os2654x440_d0x60.dds"
+		texture_file = "gfx/interface/illustrations/location/topology/hills/hills_arid_metadata_os2654x440_d0x40.dds"
 		priority = 15
 		scope = location
 

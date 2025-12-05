@@ -208,6 +208,7 @@ succession_crisis.1 = {
 
 		every_character = {
 			limit = {
+				is_adult = yes
 				is_alive = yes
 				OR = {
 					is_close_relative = scope:scope_pretender

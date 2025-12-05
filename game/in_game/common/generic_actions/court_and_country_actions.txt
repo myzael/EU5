@@ -122,7 +122,7 @@ reinstate_the_legislative_assembly = {
 				add_policy = policy:colonial_representation_law_yes
 			}
 			add_all_estate_satisfaction = { value = estate_satisfaction_extreme_bonus } 
-			set_parliament_type = parliament_type:assembly
+			set_parliament_type = parliament_type:estate_parliament
 			if = {
 				limit = {
 					any_active_disaster = { disaster_type = disaster_type:aspiration_for_liberty }

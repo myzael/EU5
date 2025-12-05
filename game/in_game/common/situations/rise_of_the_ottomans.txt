@@ -535,7 +535,7 @@
 	}
 	legend_key = { 
 		desc = "STRONGEST_BEYLIK_TOOLTIP"
-		color = situation:rise_of_the_ottomans.var:second_strongest_strongest_beylik_variable.country_color
+		color = situation:rise_of_the_ottomans.var:strongest_beylik_variable.country_color
 		require_color_on_map = yes
 	}
 	legend_key = { 
@@ -546,6 +546,11 @@
 	legend_key = { 
 		desc = "THIRD_STRONGEST_BEYLIK"
 		color = situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable.country_color
+		require_color_on_map = yes
+	}
+	legend_key = { 
+		desc = "[ShowBuildingTypeName('seljuk_mint')]"
+		color = red
 		require_color_on_map = yes
 	}
 

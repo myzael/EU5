@@ -58,3 +58,45 @@ rebel_name_key = {
 	third = THIRD_REBEL_NAME_KEY_TRIGGER
 }
 
+rebel_modifier_equal = {
+	none = REBEL_EQ_MODIFIER_TRIGGER
+	global = REBEL_EQ_MODIFIER_TRIGGER
+	third = THIRD_REBEL_EQ_MODIFIER_TRIGGER
+}
+
+rebel_bool_modifier_equal_yes = {
+	none = REBEL_BOOL_MODIFIER_YES_TRIGGER
+	global = REBEL_BOOL_MODIFIER_YES_TRIGGER
+	third = THIRD_REBEL_BOOL_MODIFIER_YES_TRIGGER
+}
+
+rebel_bool_modifier_equal_no = {
+	none = REBEL_BOOL_MODIFIER_NO_TRIGGER
+	global = REBEL_BOOL_MODIFIER_NO_TRIGGER
+	third = THIRD_REBEL_BOOL_MODIFIER_NO_TRIGGER
+}
+
+rebel_modifier_greater_than = {
+	none = REBEL_GT_MODIFIER_TRIGGER
+	global = REBEL_GT_MODIFIER_TRIGGER
+	third = THIRD_REBEL_GT_MODIFIER_TRIGGER
+}
+
+rebel_modifier_greater_or_equal = {
+	none = REBEL_GE_MODIFIER_TRIGGER
+	global = REBEL_GE_MODIFIER_TRIGGER
+	third = THIRD_REBEL_GE_MODIFIER_TRIGGER
+}
+
+rebel_modifier_lesser_than = {
+	none = REBEL_LT_MODIFIER_TRIGGER
+	global = REBEL_LT_MODIFIER_TRIGGER
+	third = THIRD_REBEL_LT_MODIFIER_TRIGGER
+}
+
+has_rebel_modifier = {
+	none = REBEL_HAS_MODIFIER_TRIGGER
+	global = REBEL_HAS_MODIFIER_TRIGGER
+	first = FIRST_REBEL_HAS_MODIFIER_TRIGGER
+	third = THIRD_REBEL_HAS_MODIFIER_TRIGGER
+}

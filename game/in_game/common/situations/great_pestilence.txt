@@ -96,6 +96,7 @@
 			}
 			remove_country_modifier = no_contact_with_outsiders
 			remove_country_modifier = procure_remedies
+			remove_country_modifier = procure_remedies_cost
 			remove_country_modifier = segregate_the_infected
 			remove_country_modifier = blame_the_minorities
 			remove_country_modifier = sponsor_spiritual_protection_bonus

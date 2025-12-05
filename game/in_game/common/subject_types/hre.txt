@@ -11,7 +11,7 @@
 	join_offensive_wars_always = { always = no }
 	join_defensive_wars_always = { always = no }
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 	diplomatic_capacity_cost_scale = 0
 	strength_vs_overlord = -0.5
 

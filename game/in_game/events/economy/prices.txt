@@ -97,7 +97,7 @@ prices.3 = {
 	title = prices.3.title
 	desc = prices.3.desc
 	trigger = {
-		owns = location:dresden
+		owns = location:meissen
 		has_advance = porcelain_manufactor_advance
 	}
 	
@@ -106,7 +106,7 @@ prices.3 = {
 
 	option = {
 		name = prices.3.a
-		location:dresden = {
+		location:meissen = {
 			change_development  = development_severe_bonus
 			add_location_modifier = {
 				modifier = johan_friedrich_bottger

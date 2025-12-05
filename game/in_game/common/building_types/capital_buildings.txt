@@ -24,11 +24,9 @@
 	
 	
 	remove_if = {
-		location = {
-			OR = {
-				is_capital = no
-				owner ?= { government_type != government_type:monarchy }
-			}
+		OR = {
+			is_no_longer_capital = yes
+			location.owner ?= { government_type != government_type:monarchy }
 		}
 	}
 	
@@ -84,13 +82,11 @@ house_of_parliament = {
 	}
 	
 	remove_if = {
-		location = {
-			OR = {
-				is_capital = no
-				owner = { 
-					NOT = { 
-						modifier:has_a_parliamentary_system = yes
-					}
+		OR = {
+			is_no_longer_capital = yes
+			location.owner = { 
+				NOT = { 
+					modifier:has_a_parliamentary_system = yes
 				}
 			}
 		}
@@ -144,13 +140,11 @@ order_headquarters = {
 	}
 	
 	remove_if = {
-		location = {
-			OR = {
-				is_capital = no
-				owner = { 
-					NOT = { 
-						has_reform = government_reform:military_order_reform
-					}
+		OR = {
+			is_no_longer_capital = yes
+			location.owner ?= { 
+				NOT = { 
+					has_reform = government_reform:military_order_reform
 				}
 			}
 		}
@@ -201,9 +195,7 @@ admiralty = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = {
-			is_capital = no
-		}
+		is_no_longer_capital = yes
 	}
 
 	
@@ -250,9 +242,7 @@ war_college = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = {
-			is_capital = no
-		}
+		is_no_longer_capital = yes
 	}
 
 	capital_modifier = {
@@ -300,7 +290,7 @@ tax_assessor = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	capital_modifier = {
@@ -346,7 +336,7 @@ supreme_court = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	capital_modifier = {
@@ -405,14 +395,12 @@ chancery = {
 	}
 	
 	remove_if = {
-		location = {
-			OR = {
-				is_capital = no
-				owner = {
-					government_type != government_type:monarchy
-					government_type != government_type:theocracy
-					government_type != government_type:republic
-				}
+		OR = {
+			is_no_longer_capital = yes
+			location.owner ?= {
+				government_type != government_type:monarchy
+				government_type != government_type:theocracy
+				government_type != government_type:republic
 			}
 		}
 	}
@@ -470,11 +458,9 @@ republican_assembly = {
 	}
 	
 	remove_if = {
-		location = {
-			OR = {
-				is_capital = no
-				owner.government_type != government_type:republic
-			}
+		OR = {
+			is_no_longer_capital = yes
+			location.owner ?= { government_type != government_type:republic }
 		}
 	}
 

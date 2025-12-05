@@ -536,7 +536,7 @@
 					country = root
 					key = market_dominance_key
 					years = modifier_duration_years_short
-					power = 10
+					power = merchant_power_weak_bonus
 				}
 			}
 		}

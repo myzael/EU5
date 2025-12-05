@@ -7,6 +7,7 @@ scripted_trigger is_valid_neutral_country_for_culture = {
 	NOT = { is_allied_with = { target = root }  }
 	NOT = { is_rival_of = root }
 	NOT = { is_enemy_of = root }
+	NOT = { is_at_war_with = root }
 	within_diplomatic_range = root
 }
 

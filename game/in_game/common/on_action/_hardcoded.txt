@@ -1,6 +1,14 @@
 ﻿on_game_start = {
 	effect = {
 		#catholics
+		if = {
+			limit = { NOT = { has_global_variable_list = pope_countries } }
+			every_country = {
+				limit = { has_reform = government_reform:papacy_reform }
+				add_to_global_variable_list = { name = pope_countries target = this }
+				#In case we need multiple papacies with antipopes and such
+			}
+		}
 		every_country = {
 			limit = {
 				religion = religion:catholic
@@ -1767,6 +1775,23 @@ on_war_declared = {
 				value = scope:war
 			}
 		}
+		if = {
+			limit = {
+				country_exists = c:NAP
+				country_exists = c:SIC
+				OR = {
+					scope:actor = c:NAP
+					scope:actor = c:SIC
+				}
+				OR = {
+					scope:recipient = c:NAP
+					scope:recipient = c:SIC
+				}
+			}
+			c:SIC = {
+				remove_variable = sicily_pays_tribute
+			}
+		}
 	}
 }
 
@@ -2466,6 +2491,19 @@ on_dependency_gained = {
 	}
 }
 
+# root = country, scope:overlord = country which created the subject, scope:subject_type = subject type of the created country
+on_subject_created = {
+	effect = {
+		if = {
+			limit = {
+				religion != scope:overlord.religion
+				scope:overlord.modifier:force_convert_created_subjects = yes
+			}
+			change_religion = scope:overlord.religion
+		}
+	}
+}
+
 
 on_reform_change = {
 	events = {
@@ -2647,6 +2685,13 @@ on_new_ruler = {
 				limit = { has_character_modifier = bra_false_waldemar }
 				remove_character_modifier = bra_false_waldemar
 			}
+		}
+		if = {
+			limit = {
+				has_variable = favored_heir
+				var:favored_heir = scope:new_ruler
+			}
+			remove_variable = favored_heir
 		}
 	}
 }
@@ -3454,12 +3499,18 @@ on_location_changed_owner = {
 		}
 		#Remove Panaqas from foreign locations
 		if = {
-			limit = { has_building = building_type:panaqa_building }
-			destroy_building = "building(building_type:panaqa_building|scope:loser)"
+			limit = { 
+				has_building = building_type:panaqa_building 
+				scope:winner = { modifier:has_panaqas = no }
+			}
+			destroy_building = "building(building_type:panaqa_building|owner)"
 		}
 		if = {
-			limit = { has_building = building_type:bey_fortress }
-			destroy_building = "building(building_type:bey_fortress|scope:loser)"
+			limit = { 
+				has_building = building_type:bey_fortress 
+				scope:winner = { NOT = { culture ?= { has_culture_group = culture_group:turkic_group } } }
+			}
+			destroy_building = "building(building_type:bey_fortress|owner)"
 		}
 		if = {
 			limit = {
@@ -4365,4 +4416,16 @@ on_international_organization_policy_changed = {
 
 #root = country, scope:old_rank = country's old rank
 on_country_rank_change = {
+	effect = {
+		if = {
+			limit = { 
+				country_rank_level = 4 
+				NOT = { has_variable = recently_became_empire_variable }
+			}
+			set_variable = {
+				name = recently_became_empire_variable
+				years = 15
+			}
+		}
+	}
 }

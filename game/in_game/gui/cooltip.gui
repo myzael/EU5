@@ -89,6 +89,16 @@ container = {
 
 container = {
 	alwaystransparent = no
+	name = "GameConceptTooltip_subject_type"
+	using = game_concept_tooltip_with_db_values
+	
+	blockoverride "text" { text = "game_concept_subject_type_desc" }
+	blockoverride "rowlist_datacontext" { textcontext = "[ShowDatabase('subject_type')]" }
+	blockoverride "block_title" { text = "game_concept_subject_types" }
+}
+
+container = {
+	alwaystransparent = no
 	name = "GameConceptTooltip_integration_status"
 
 	ConceptTooltipType = {
@@ -1085,6 +1095,7 @@ container = {
 	alwaystransparent = no
 	name = "EstatePrivilegeTooltip"
 	using = EstatePrivilege_tooltip
+	datacontext = "[GetNullUIAction]"
 }
 
 container = {
@@ -1518,6 +1529,12 @@ container = {
 	alwaystransparent = no
 	name = "CharacterModifierTooltip"
 	using = CharacterModifier_tooltip
+}
+
+container = {
+	alwaystransparent = no
+	name = "DynastyModifierTooltip"
+	using = DynastyModifier_tooltip
 }
 
 container = {

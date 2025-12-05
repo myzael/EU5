@@ -233,7 +233,7 @@
 				scope:conquest_province = {
 					add_province_modifier = {
 						modifier = mission_defensive_fortification_modifier
-						years = modifier_duration_years_normal
+						years = modifier_duration_years_long
 						mode = replace
 					}
 				}

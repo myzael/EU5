@@ -64,7 +64,7 @@ cha_boarding_tactics = {	#https://en.wikipedia.org/wiki/Military_of_Champa#Confl
 	age = age_4_reformation
 	potential = { culture.language = language:cham_language }
 	requires = supply_depot_advance_age_4_reformation
-	ship_capture_chance = 0.1
+	ship_capture_chance = 0.025
 	blockade_efficiency = 0.25
 }
 ############################

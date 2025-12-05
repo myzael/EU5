@@ -1218,12 +1218,20 @@ template HeirSelection_tooltip {
 					text = "HEIR_SELECTION_RULES_TITLE"
 				}
 
+				blockoverride "set_textcontext" {
+					ontextcontextchanged = "[SetStringPairListFromTextContext(PdxGuiWidget.AccessSelf)]"
+				}
+
 				textcontext = "[HeirSelection.GetProperties]"
 			}
 
 			TooltipStringPairList = {
 				blockoverride "block_title" {
 					text = "HEIR_SELECTION_PER_CHARACTER"
+				}
+
+				blockoverride "set_textcontext" {
+					ontextcontextchanged = "[SetStringPairListFromTextContext(PdxGuiWidget.AccessSelf)]"
 				}
 
 				textcontext = "[HeirSelection.GetEffect]"

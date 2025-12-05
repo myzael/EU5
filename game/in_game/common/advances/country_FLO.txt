@@ -65,7 +65,7 @@ birthplace_of_renaissance = {
 florentine_school = {
 	age = age_2_renaissance
 	potential = { 
-		tag = FLO 
+		has_or_had_tag = FLO 
 	}
 
 	num_possible_artists = 1

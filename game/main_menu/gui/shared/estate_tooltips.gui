@@ -91,7 +91,8 @@ template estate_relative_power_tooltip {
 				}
 			}
 
-			TooltipStringPairList = {
+			TooltipScrolledStringPairList = {
+				blockoverride "block_scrollarea" { maximumsize = { -1 320 }}
 				textcontext = "[Estate.GetEstatePowerInfoBreakdown]"
 			}
 			

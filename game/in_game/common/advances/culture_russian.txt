@@ -58,7 +58,7 @@ siberian_frontier = {
 	}
 	requires = pike_and_shot_advance
 	
-	global_population_growth = 0.0005
+	global_population_growth = 0.0002
 	unlock_building = pomor_outpost
 }
 

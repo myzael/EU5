@@ -598,7 +598,7 @@
  allow_hunting_desc: "Allows the [ShowEstateTypeName('peasants_estate')] to hunt and skin game within the legal and physical boundaries of their lord's or township's domain."
 
  no_labor_sunday: "No Labor on Sunday"
- no_labor_sunday_desc: "It would be wise to follow the teachings of the [ShowReligiousGroupName('christian_group')] Church and decree our serfs and peasants may have respite from their work on Sundays, as a sign of piety and compassion."
+ no_labor_sunday_desc: "It would be wise to follow the teachings of the [ShowReligionGroupName('christian')] Church and decree our serfs and peasants may have respite from their work on Sundays, as a sign of piety and compassion."
 
  communal_lands: "Communal Lands"
  communal_lands_desc: "Despite the inherently disadvantaged position of the common people, we must nevertheless dictate that all members of the [ShowEstateTypeName('peasants_estate')] have the right to establish common flocks of animals and to raise crops in shared fields."
@@ -651,8 +651,8 @@
 
 #Teutons
  kulm_law: "Kulm Law"
- kulm_law_desc: "A modified version of the Magdeburg Law, the Kulm Law grants all cities in [GetCountry('PRU').GetAdjective] that have secured the mercantile interests of the city merchant guilds the privilege of significant autonomy from their overlords." 
- invite_german_settlers: "Invite [GetCountry('PRU').GetAdjectiveWithNoTooltip] Settlers"
+ kulm_law_desc: "A modified version of the Magdeburg Law, the Kulm Law grants all cities in [ShowAreaName('prussia_area')] that have secured the mercantile interests of the city merchant guilds the privilege of significant autonomy from their overlords." 
+ invite_german_settlers: "Invite [ShowCultureGroupNameWithNoTooltip('german_group')] Settlers"
  invite_german_settlers_desc: "By welcoming migrants into our nation, we will build a strong country that benefits from population growth and shifting regional dynamics."
  invite_german_settlers.tt: "Waves of German migrants will start to regularly arrive in our country"
 

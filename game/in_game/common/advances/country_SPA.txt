@@ -60,7 +60,7 @@ spa_spanish_enlightenment = {
 		has_or_had_tag = SPA
 	}
 
-	global_monthly_development = 0.005
+	global_monthly_development = 0.001
 
 	requires = enlightened_court
 }

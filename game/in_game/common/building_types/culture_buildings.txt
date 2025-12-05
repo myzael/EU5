@@ -326,7 +326,7 @@ art_school = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	capital_modifier = {
@@ -365,7 +365,7 @@ arts_academy = {
 		is_capital = yes
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	country_potential = {
 

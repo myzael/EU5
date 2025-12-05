@@ -4,7 +4,10 @@
 
 	potential = {
 		scope:actor = {
-			succession_law = heir_selection:veche_selection
+			OR = {
+				succession_law = heir_selection:veche_selection
+				succession_law = heir_selection:podesta_elective
+			}
 		}
 	}
 
@@ -25,6 +28,12 @@
 		visible = {
 			government_type = government_type:monarchy
 			has_ruler = yes
+			trigger_if = {
+				limit = {
+					scope:actor = { succession_law = heir_selection:podesta_elective }
+				}
+				capital ?= { region = scope:actor.capital.region }
+			}
 		}
         enabled = {
 			trigger_if = {

@@ -19,7 +19,7 @@ achagua_culture = { #https://es.wikipedia.org/wiki/Pueblo_achagua
 	
 	color = map_achagua
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -34,7 +34,7 @@ wayuu_culture = { #https://en.wikipedia.org/wiki/Wayuu_people
 
 	color = map_wayuu
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -49,7 +49,7 @@ waunana_culture = { #https://es.wikipedia.org/wiki/Waunana
 
 	color = map_waunana
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -64,7 +64,7 @@ guahibo_culture = { #https://es.wikipedia.org/wiki/Guah%C3%ADbo
 	
 	color = map_guahibo
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -79,7 +79,7 @@ guayupe_culture = { #https://en.wikipedia.org/wiki/Guayupe
 	
 	color = map_guayupe
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -94,7 +94,7 @@ caquetio_culture = { #https://en.wikipedia.org/wiki/Caquetio
 
 	color = map_caquetio
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -111,7 +111,7 @@ cumanagoto_culture = { #https://en.wikipedia.org/wiki/Cumanagoto_people
 	
 	color = map_cumanagoto
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -128,7 +128,7 @@ sinu_culture = { #https://es.wikipedia.org/wiki/Zen%C3%BA
 	
 	color = map_sinu
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -143,7 +143,7 @@ warao_culture = { #https://es.wikipedia.org/wiki/Waraos
 
 	color = map_warao
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -157,7 +157,7 @@ tayrona_culture = { #https://es.wikipedia.org/wiki/Taironas
 	
 	color = map_tayrona
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -172,7 +172,7 @@ pemon_culture = { #https://en.wikipedia.org/wiki/Pemon
 	
 	color = map_pemon
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -188,7 +188,7 @@ karapana_culture = { #https://es.wikipedia.org/wiki/Karapan%C3%A3
 	
 	color = map_karapana
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -204,7 +204,7 @@ cuicas_culture = { #https://es.wikipedia.org/wiki/Timoto-cuicas
 	
 	color = map_cuicas 
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -218,7 +218,7 @@ tatuy_culture = { #http://tatuy.net/web/cultura-tatuy/
 	
 	color = map_timoto
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -234,7 +234,7 @@ muisca_culture = { #https://es.wikipedia.org/wiki/Muiscas
 	
 	color = map_muisca
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -249,7 +249,7 @@ quimbaya_culture = { #https://es.wikipedia.org/wiki/Quimbaya_(etnia)
 	
 	color = map_quimbaya
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -264,7 +264,7 @@ kuiba_culture = { #https://es.wikipedia.org/wiki/Cuiba
 	
 	color = map_kuiba
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -279,7 +279,7 @@ ayamanes_culture = { #https://es.wikipedia.org/wiki/Ayamanes
 	
 	color = map_ayamanes
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -293,7 +293,7 @@ jirajaran_culture = { #https://en.wikipedia.org/wiki/Jirajaran_languages
 	
 	color = map_jirajaran
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -307,7 +307,7 @@ chitarero_culture = { #https://en.wikipedia.org/wiki/Chitarero
 	
 	color = map_chitarero
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -322,7 +322,7 @@ uwa_culture = { #https://es.wikipedia.org/wiki/U%27wa
 	
 	color = map_uwa
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -337,7 +337,7 @@ yarigui_culture = { #https://es.wikipedia.org/wiki/Yarigu%C3%ADes
 	
 	color = map_yarigui
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -352,7 +352,7 @@ panche_culture = { #https://es.wikipedia.org/wiki/Panche
 	
 	color = map_panche
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -366,7 +366,7 @@ muzo_culture = { #https://en.wikipedia.org/wiki/Muzo_people
 	
 	color = map_muzo
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -380,7 +380,7 @@ tahami_culture = { #https://es.wikipedia.org/wiki/Taham%C3%ADes
 	
 	color = map_tahami
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -394,7 +394,7 @@ nutabe_culture = { #https://en.wikipedia.org/wiki/Nutabe
 	
 	color = map_nutabe
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -408,7 +408,7 @@ malibu_culture = { #https://es.wikipedia.org/wiki/Lenguas_malib%C3%BA
 	
 	color = map_malibu
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -422,7 +422,7 @@ pijao_culture = { #https://en.wikipedia.org/wiki/Pijao_people
 	
 	color = map_pijao
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -436,7 +436,7 @@ sutagao_culture = { #https://en.wikipedia.org/wiki/Sutagao_people
 	
 	color = map_sutagao
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -450,7 +450,7 @@ tama_culture = { #https://es.wikipedia.org/wiki/Pueblo_tama
 	
 	color = map_tama
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -464,7 +464,7 @@ timanae_culture = { #https://es.wikipedia.org/wiki/Timanaes
 	
 	color = map_timanae
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -479,7 +479,7 @@ embera_culture = { #https://es.wikipedia.org/wiki/Ember%C3%A1
 	
 	color = map_embera
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -493,7 +493,7 @@ calima_culture = { #https://es.wikipedia.org/wiki/Cultura_calima
 	
 	color = map_calima
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -508,7 +508,7 @@ awa_culture = { #https://es.wikipedia.org/wiki/Aw%C3%A1
 	
 	color = map_awa
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -522,7 +522,7 @@ barbakoan_culture = { #https://es.wikipedia.org/wiki/Lenguas_barbacoanas
 	
 	color = map_barbakoan
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -536,7 +536,7 @@ pasto_culture = { #https://es.wikipedia.org/wiki/Pastos
 	
 	color = map_pasto
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -550,7 +550,7 @@ andaqui_culture = { #https://es.wikipedia.org/wiki/Andaqu%C3%AD
 	
 	color = map_andaqui
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -564,7 +564,7 @@ puben_culture = { #https://www.onic.org.co/pueblos/2221-pubense #https://es.wiki
 	
 	color = map_puben
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -579,7 +579,7 @@ uitoto_culture = { #https://es.wikipedia.org/wiki/Uitoto
 	
 	color = map_uitoto
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -594,7 +594,7 @@ guayabe_culture = { #https://es.wikipedia.org/wiki/Guayabero
 	
 	color = map_guayabe
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -608,7 +608,7 @@ chaima_culture = { #https://es.wikipedia.org/wiki/Chaima
 	
 	color = map_chaima
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -623,7 +623,7 @@ yukpa_culture = { #https://es.wikipedia.org/wiki/Pueblo_yukpa
 	
 	color = map_yukpa
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -638,7 +638,7 @@ ette_ennaka_culture = { #https://es.wikipedia.org/wiki/Chimilas
 	
 	color = map_ette_ennaka
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -653,7 +653,7 @@ wapishana_culture = { #https://en.wikipedia.org/wiki/Wapishana
 	
 	color = map_wapishana
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -668,7 +668,7 @@ guaribes_culture = { #https://es.wikipedia.org/wiki/Guaribes
 	
 	color = map_guaribes
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -682,7 +682,7 @@ tumaco_culture = { #https://es.wikipedia.org/wiki/Cultura_Tumaco-La_Tolita
 	
 	color = map_tumaco
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -697,7 +697,7 @@ pume_culture = { #https://en.wikipedia.org/wiki/Yaruro_people
 	
 	color = map_pume
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}
@@ -712,7 +712,7 @@ enepas_culture = { #https://es.wikipedia.org/wiki/Etnia_E%27%C3%B1ep%C3%A1_o_Pan
 	
 	color = map_enepas
 	
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 	
 	opinions = {
 	}

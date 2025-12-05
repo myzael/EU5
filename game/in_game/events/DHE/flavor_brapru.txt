@@ -1961,12 +1961,12 @@ scripted_trigger is_valid_pomeranian_target = {
 		tag = STE
 		tag = WOL
 		tag = MKL
-		tag = MKK
+		tag = KMM
 		tag = WRN
 		tag = GSW
 		ruler ?= {
 			dynasty ?= {
-				dynasty_name = mecklenburg
+				dynasty_name = mecklenburg_dynasty
 			}
 		}
 	}
@@ -3201,6 +3201,9 @@ flavor_brapru.1201 = { #The Prussian Legal System
 		character:brapru_cocceji_script = { save_scope_as = target_character }
 		set_variable = { name = pru_unified_legal_system value = 1 }
 		random_current_reforms = {
+			limit = {
+				is_major_reform = no
+			}
 			save_scope_as = target_reform
 		}
 	}

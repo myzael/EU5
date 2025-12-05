@@ -26,6 +26,10 @@ template War_tooltip {
 			}
 		}
 		blockoverride "tooltip_content" {
+			TooltipScrolledDebugTextBlock = {
+				blockoverride "block_scrollarea" { maximumsize = { -1 250 }}
+				textcontext = "[War.GetDebugTooltip]"
+			}
 			TooltipListBase = {
 				hbox = {
 					layoutpolicy_horizontal = expanding
@@ -240,10 +244,7 @@ template WarGoal_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
-			# TooltipStringPairList = { # Shown in Casus Belli tooltip
-			# 	textcontext = "[WarGoal.GetEffects]"
-			# }		
-			TooltipFlavorTextBlock = {
+			TooltipTextBlock = {
 				blockoverride "text" {
 					text = "[WarGoal.GetFlavor]"
 				}
@@ -927,4 +928,64 @@ template casus_belli_window_tooltip {
 			}
 		}
 	}	
+}
+
+template call_to_arms_tooltip {
+	SimpleContextualTooltipType = {
+		datacontext = "[DeclareWarAlly.GetCountry]"
+		blockoverride "title_icon" {
+			country_flag_small = {
+				datacontext = "[DeclareWarAlly.GetCountry]"
+			}
+		}
+		blockoverride "title_text" {
+			text = "[DeclareWarAlly.GetCountry.GetLongNameWithNoTooltip]"
+		}
+		blockoverride "concept_link" {
+			text = [call_to_arms|e]
+		}
+		blockoverride "tooltip_content" {
+			TooltipBlockList = {
+				visible = "[Not(DeclareWarAlly.GetCountry.HasHumanController)]"
+				textcontext = "[DeclareWarAlly.GetAreWillingToJoinTooltip]"
+			}
+
+			TooltipTextBlock = {
+				visible = "[DeclareWarAlly.HasTruceWithEnemyLeader]"
+
+				blockoverride "text" {
+					text = "[SelectLocalization(ObjectsEqual(DeclareWarAlly.GetSideLeader, Player.Self), 'CANT_BREAK_COBELLIGERENT_TRUCE', 'BREAKING_COBELLIGERENT_TRUCE')]"
+				}
+
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_dark_red_texture
+						alpha = 0.8
+					}
+				}
+			}
+			TooltipTextBlock = {
+				visible = "[DeclareWarAlly.GetCountry.HasHumanController]"
+				blockoverride "text" {
+					text = "HUMAN_PLAYER_RESPONSE"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_yellow_texture
+					}
+				}
+			}
+			TooltipTextBlock = {
+				visible = "[And3(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.WillJoinBecauseOfLandPromised, Not(DeclareWarAlly.GetCountry.HasHumanController))]"
+				blockoverride "text" {
+					text = "WILL_ACCEPT_PROMISE_LAND"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_light_green_texture
+					}
+				}
+			}
+		}
+	}
 }

@@ -143,6 +143,7 @@ pa_resist_renaissance = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:renaissance
 				value = institution_progress_mild_penalty
@@ -454,6 +455,7 @@ pa_resist_artillery_institution = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:artillery_institution
 				value = institution_progress_mild_penalty

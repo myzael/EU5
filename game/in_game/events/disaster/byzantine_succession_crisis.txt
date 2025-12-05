@@ -1149,7 +1149,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 				country = c:VEN
 				key = italian_merchants_favored_key
 				months = 120
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 		add_country_modifier = {
@@ -1182,7 +1182,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 				country = c:GEN
 				key = italian_merchants_favored_key
 				months = 120
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 		add_country_modifier = {
@@ -1215,7 +1215,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 				country = c:VEN
 				key = italian_merchants_favored_key
 				months = 120
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 		scope:target_location.market = {
@@ -1223,7 +1223,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 				country = c:GEN
 				key = italian_merchants_favored_key
 				months = 120
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 		add_country_modifier = {
@@ -1313,7 +1313,7 @@ byzantine_succ_crisis.12 = {
 					country = ROOT
 					key = italian_merchants_favored_key
 					months = 120
-					power = 50
+					power = merchant_power_severe_bonus
 				}
 			}
 		}

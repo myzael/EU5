@@ -112,6 +112,18 @@
 		}
 	}
 	
+	migration_attraction = {
+		widget = location_migration_attraction
+		width = 100
+		fixed_height = 32
+		sort = {
+			sort_value = {
+				value = migration_attraction
+			}
+			sort_by_tooltip_key = "LOCATION_SORT_BY_MIGRATION_ATTRACTION"
+		}
+	}
+	
 	raw_material = {
 		widget = location_raw_material
 		width = 150

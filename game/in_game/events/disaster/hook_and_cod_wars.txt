@@ -1141,6 +1141,7 @@ scripted_effect hacw_side_with_faction_effect_cod = {
 			list = hacw_burghers_location_list
 			order_by = population
 			max = 4
+			check_range_bounds = no
 			every_pop = {
 				limit = {
 					owner = root
@@ -1982,14 +1983,14 @@ hook_and_cod_wars.1202 = {
 					name = hacw_hook_contender
 					value = scope:new_claimant
 				}
-				set_variable = { name = hacw_contender_variable_1 value = scope:new_claimant_character }
+				set_variable = { name = hacw_contender_variable_1 value = scope:new_claimant }
 			}
 			else = {
 				set_variable = {
 					name = hacw_cod_contender
 					value = scope:new_claimant
 				}
-				set_variable = { name = hacw_contender_variable_2 value = scope:new_claimant_character }
+				set_variable = { name = hacw_contender_variable_2 value = scope:new_claimant }
 			}
 			destroy_variable = { variable = hook_claimant_ally_alive }
 			destroy_variable = { variable = hook_claimant_enemy_alive }
@@ -2026,6 +2027,7 @@ hook_and_cod_wars.1300 = {
 		any_neighbor_country = {
 			NOT = { is_target_in_global_variable_list = { name = hacw_hook_list target = this } }
 			NOT = { is_target_in_global_variable_list = { name = hacw_cod_list target = this } }
+			is_rebel_country = no
 		}
 	}
 	immediate = {
@@ -2034,6 +2036,7 @@ hook_and_cod_wars.1300 = {
 			limit = {
 				NOT = { is_target_in_global_variable_list = { name = hacw_hook_list target = this } }
 				NOT = { is_target_in_global_variable_list = { name = hacw_cod_list target = this } }
+				is_rebel_country = no
 			}
 			save_scope_as = neighbor_country
 		}

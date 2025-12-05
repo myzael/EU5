@@ -215,7 +215,7 @@ scripted_effect minor_volcano_damage = {
 	ordered_buildings_in_location = {
 		order_by = building_level
 		max = 1
-		location = { destroy_building = prev }
+		location = { minor_destroy_building_levels_in_location = yes }
 	}
 	
 	every_unit_in_location = {
@@ -248,7 +248,7 @@ scripted_effect major_volcano_damage = {
 				divide = 8
 			}
 		}
-		location = { destroy_building = prev }
+		location = { major_destroy_building_levels_in_location = yes }
 	}
 	
 	every_unit_in_location = {
@@ -281,7 +281,7 @@ scripted_effect catastrophic_volcano_damage = {
 				divide = 6
 			}
 		}
-		location = { destroy_building = prev }
+		location = { catastrophic_destroy_building_levels_in_location = yes }
 	}
 	
 	every_unit_in_location = {

@@ -42,13 +42,33 @@ lateralview = {
 									using = bg_paper_card_fancy
 									clickable_header_card = {
 										size = { -1 70 }
-										enabled = [CondottieriItem.IsEnabled]
+										enabled = "[Or(CondottieriItem.IsEnabled, CanDelistUnhiredMercenaries(CondottieriItem.GetUnit))]"
 				
 										blockoverride "header_content" {
-											# block "unit_actions" {
-												datacontext = "[CondottieriItem.GetUIHeaderAction]"
-												using = button_action_provider
-											# }
+											datacontext = "[CondottieriItem.GetUIHeaderAction]"
+
+											action_tooltip = {
+												click_type = left
+												click_mode = single
+												enabled = "[CondottieriItem.IsEnabled]"
+												title = "MAKE_CONDOTTIERI"
+												description = "[CondottieriItem.GetBecomeMercText]"
+												on_action = "[CondottieriItem.OnAccept]"
+											}
+
+											action_tooltip = {
+												click_type = right
+												click_mode = confirm
+												visible = "[ShowDelistUnhiredMercenaries(CondottieriItem.GetUnit)]"
+												enabled = "[CanDelistUnhiredMercenaries(CondottieriItem.GetUnit)]"
+												title = "DELIST_UNHIRED_MERCENARIES"
+												description = "[GetDelistUnhiredMercenariesTooltip(CondottieriItem.GetUnit)]"
+												on_action = "[DelistUnhiredMercenaries(CondottieriItem.GetUnit)]"
+											}
+
+											tooltipwidget = {
+												BasicFunctionalTooltip = {}
+											}
 
 											hbox = {
 												using = layoutpolicy_expanding
@@ -62,41 +82,8 @@ lateralview = {
 													}
 													datacontext = "[CondottieriItem.GetUnit.GetCountry]"
 												}
-												
-												tooltipwidget = {
-													ContextualTooltipType = {
-														blockoverride "title_text" {
-															text = "[CondottieriItem.GetUnit.GetName]"
-														}
-														blockoverride "tooltip_content" {
-															TooltipTextBlock = {
-																blockoverride "text" {
-																	text = "[CondottieriItem.GetBecomeMercText]"
-																}
-															}
-														}
-														blockoverride "tooltip_ui_action_block" {
-															TooltipFunctionalBlock = {
-																using = tooltip_left_click_template
-																using = tooltip_right_click_template
-
-																blockoverride "action_text_wide" {
-																	using = tooltip_max_width_title_wide
-																}
-
-																blockoverride "action_left_text" {
-																	text = "MAKE_CONDOTTIERI"
-																}
-																blockoverride "action_right_text" {
-																	text = "[UIActionProvider.GetRightClickTitle]"
-																}
-															}
-														}
-													}
-												}
 
 												text_single = {
-													visible = "[Not(CondottieriItem.IsBeingEdited)]"
 													using = layoutpolicy_expanding
 													autoresize = no
 													align = nobaseline
@@ -109,31 +96,31 @@ lateralview = {
 													}
 												}
 
-												editbox = {
-													using = layoutpolicy_expanding
-													default_format = "#high"
-													using = Font_Size_Medium
-													fontsize_min = 10
-													align = center|nobaseline
-
-													text = "[CondottieriItem.GetUnit.GetNameWithNoTooltip]"
-
-													ontextedited = "[CondottieriItem.OnUnitNameEdited(PdxGuiWidget.AccessSelf)]"
-													oneditingfinished = "[CondottieriItem.RenameUnit(PdxGuiWidget.Self)]"
-													oneditingfinished = "[CondottieriItem.StopEditing]"
-													onfocusout = "[CondottieriItem.StopEditing]"
-
-													focus_on_visible = yes
-													focuspolicy = all
-													alwaystransparent = no
-
-													maxcharacters = 25
-
-													visible = "[CondottieriItem.IsBeingEdited]"
-													multiline = no
-												}
-
 												expand = {}
+
+												icon = {
+													visible = "[CondottieriItem.GetUnit.ContainsMercenaries]"
+													size = { 20 20 }
+													texture = "[GetConceptTexture('mercenaries')]"
+													
+													tooltipwidget = {
+														SimpleContextualTooltipType = {
+															blockoverride "title_icon" {
+																icon = {
+																	using = tooltip_title_icon_size
+																	texture = "[GetConceptTexture('mercenaries')]"
+																}
+															}
+				
+															blockoverride "concept_link" {
+																text = "[mercenary|e]"
+															}
+															
+															lowpriotextcontext = "CONTAINS_MERCENARIES"
+				
+														}
+													}
+												}
 
 												text_single = {
 													layoutpolicy_vertical = expanding

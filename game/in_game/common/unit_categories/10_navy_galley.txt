@@ -8,8 +8,8 @@
 	transport_capacity = 0.025
 
 
-	frontage = 0.75
-	initiative = 1
+	frontage = 0.5
+	initiative = 2
 	combat_speed = 1
 
 	combat = {

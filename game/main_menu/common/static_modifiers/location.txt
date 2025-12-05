@@ -22,7 +22,7 @@ location_base_values = {
 	local_frontage_allowed = 10
 
 	local_migration_attraction = 0.1
-	local_garrison_growth = 0.10
+	local_garrison_growth = 0.01
 	
 	max_attrition = 10
 	supply_limit = 15
@@ -150,7 +150,7 @@ has_ongoing_colonial_charter_migration = {
 	game_data = {
 		category = location
 	}
-	local_monthly_development = 0.01
+	local_monthly_development = 0.0025
 	local_monthly_prosperity = 0.001
 }
 
@@ -232,7 +232,7 @@ is_occupied = {
 	
 	hostile_food_multiplier = -0.5
 	
-	local_garrison_growth = -2.0
+	local_garrison_growth = -1.0
 	
 	local_construction_speed = -0.25
 
@@ -1218,7 +1218,7 @@ roman_garisson = {
 	game_data = {
 		category = location
 	}
-	local_garrison_growth = 0.25
+	local_garrison_growth = 0.01
 	local_defensive = 0.25
 }
 
@@ -3326,4 +3326,21 @@ royal_dowry_modifier = {
 	
 	local_max_control = 0.2
 	local_monthly_control = 0.02
+}
+
+expanded_mines_modifier = {
+	game_data = {
+		category = location
+		decaying = yes
+	}
+
+	local_raw_material_output = 0.2
+}
+
+tur_public_cats = {
+	game_data = {
+		category = location
+	}
+
+	local_disease_resistance = 0.15
 }

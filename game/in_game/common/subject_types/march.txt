@@ -51,7 +51,7 @@
 		always = yes
 	}
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 
 	overlord_can_cancel = yes
 

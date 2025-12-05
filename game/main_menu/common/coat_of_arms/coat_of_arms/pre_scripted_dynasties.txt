@@ -630,6 +630,21 @@ amat_dynasty = {
 	}		
 }
 
+amatuni_dynasty = { # Amaduni
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_holding_cross.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.475 } }
+	}			
+}
+
 andechs_dynasty = { # Andechs
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
@@ -1406,6 +1421,29 @@ ayala_dynasty = { # Lopez de Ayala, condes de Fuensalida
 	}		
 }
 
+lopez_de_ayala_dynasty = { # Lopez de Ayala, condes de Fuensalida (TODO that's a duplicate)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_wolf_passant.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.29 } scale = { 0.525 0.525 } }
+		instance = { position = { 0.5 0.61 } scale = { 0.475 0.475 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_shield_thin_flanchis.dds"
+		color1 = color3
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
 ayasho_dynasty = {
 	pattern = "pattern_solid.dds"
 	color1 = "green"
@@ -1563,6 +1601,80 @@ bagrationi_dynasty = {
 		color2 = color2
 		instance = { position = { 0.5 0.45 }  scale = { 0.90 0.90 } }	
 	}						
+}
+
+bahman_dynasty = {
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	90	70	32	}
+	color2 = hsv360 	{	40	72	95	}
+	color3 = hsv360 	{	10 	80	50	}
+
+	colored_emblem = {
+		texture = "ce_star_04.dds"
+		color1 = hsv360 	{	45	72	66	}
+		color2 = color2
+		instance = { position = { 0.300 0.06 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.400 0.06 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.500 0.06 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.600 0.06 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.700 0.06 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.250 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.350 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.450 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.550 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.650 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.750 0.16 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.300 0.26 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.400 0.26 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.500 0.26 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.600 0.26 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.700 0.26 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.250 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.350 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.450 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.550 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.650 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.750 0.36 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.300 0.46 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.400 0.46 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.500 0.46 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.600 0.46 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.700 0.46 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.250 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.350 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.450 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.550 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.650 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.750 0.56 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.300 0.66 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.400 0.66 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.500 0.66 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.600 0.66 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.700 0.66 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.250 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.350 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.450 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.550 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.650 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.750 0.76 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.300 0.86 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.400 0.86 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.500 0.86 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.600 0.86 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.700 0.86 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.250 0.96 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.350 0.96 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.450 0.96 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.550 0.96 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.650 0.96 } scale = { 0.06 0.06 } }
+		instance = { position = { 0.750 0.96 } scale = { 0.06 0.06 } }
+	}
+	colored_emblem = {
+		texture = "ce_sun_deccan.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.8 0.8 } }
+	}
 }
 
 bahri_dynasty = {
@@ -2496,6 +2608,22 @@ bruce_dynasty = {
 	}
 }
 
+bulduqani_dynasty = { # Bulduqani Egil
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "yellow_light"
+	color4 = "black"
+
+	colored_emblem = {
+		texture = "ce_sun_face_turco_persian_variant.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.825 0.825 } }
+	}
+}
+
 bundela_dynasty = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"
@@ -2655,7 +2783,7 @@ cabrera_dynasty = { # Viscounts of Cabrera
 	}		
 }
 
-caetani_dynasty = { # The eagles aren't crowned until very late (17th c.) # TODO CHECK
+caetani_dynasty = { # The eagles aren't crowned until very late (17th c.)
 	pattern = "pattern_quarterly_shield.dds"
 	color1 = "yellow"
 	color2 = "blue"
@@ -2675,7 +2803,7 @@ caetani_dynasty = { # The eagles aren't crowned until very late (17th c.) # TODO
 		texture = "ce_bend_nebuly_shield.dds"
 		color1 = color2
 		color2 = color2		
-		instance = { position = { 0.730 0.71 } scale = { 0.46 0.46 } }						
+		instance = { position = { 0.730 0.705 } scale = { 0.46 0.46 } }						
 		mask = { 1 }
 	}	
 	colored_emblem = {
@@ -2700,11 +2828,15 @@ caetani_dynasty = { # The eagles aren't crowned until very late (17th c.) # TODO
 		instance = { position = { 0.385 0.662 } scale = { 0.37 0.38 } }
 	}		
 	colored_emblem = {
-		texture = "ce_divider_quarterly.dds"
-		color1 = "blue"
-		color2 = "blue"	
-		instance = { position = { 0.5 0.475 } scale = { 1.0 1.0 } }				
-	}				
+		texture = "ce_divider_quarterly_shield_50.dds"
+		color1 = "blue_dark"
+		color2 = "blue_dark"	
+	}		
+	colored_emblem = {
+		texture = "ce_divider_quarterly_shield_50.dds"
+		color1 = "blue_dark"
+		color2 = "blue_dark"	
+	}		
 }
 
 calderon_dynasty = {
@@ -8565,6 +8697,34 @@ joinville_dynasty = {
 	}			
 }
 
+jolemark_dynasty = { # Jolemark
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white_secondary"
+	color3 = "yellow"
+	color4 = "yellow_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.575 0.575 } }
+	}
+	colored_emblem = {
+		texture = "ce_sun_radiant_random.dds"
+		color1 = color3
+		color2 = color3
+		color3 = hsv360 	{	42	65	30	}
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
+}
+
 joyce_dynasty = { # Joyce, Joise, Jorcy - Arms c. 1300, later per pale & eagle doubleheaded
 	pattern = "pattern_solid.dds"
 	color1 = "white"
@@ -8865,13 +9025,13 @@ kasranid_dynasty = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "yellow_dark"
-	
+		
 	colored_emblem = {
-		texture = "ce_bull_head.dds"
+		texture = "ce_shirvan_bull_face_framed.dds"
 		color1 = color2
-		color2 = color2	
+		color2 = color2
 		color3 = color1
-		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }			
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
 	}	
 }
 
@@ -8983,6 +9143,34 @@ keita_dynasty = {
 		color2 = color2	
 		instance = { position = { 0.5 0.42 } scale = { 0.3 0.45 } }			
 	}	
+}
+
+kelali_dynasty = { # Kelali
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "yellow"
+	color3 = "red_mid"
+	color4 = "white_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.675 0.675 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_persian_star_08_floral_ornament.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
 }
 
 kengtung_dynasty = {
@@ -10783,6 +10971,37 @@ malatesta_dynasty = {
 	}		
 }
 
+malkishi_dynasty = { # Cemisgezek
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_sun_radiant.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.75 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.575 0.575 } }
+	}
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.475 0.475 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}	
+}
+
 malla_nepal_dynasty = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
@@ -11448,6 +11667,38 @@ minami_dynasty = { # Minami
 		color2 = color2		
 		instance = { position = { 0.5 0.455 } scale = { 0.7 0.7 } }					
 	}			
+}
+
+mirwari_dynasty = { # Mirwari Kalat
+	pattern = "pattern_mena_round_frame_shield.dds"
+	color1 = "red_scarlet"
+	color2 = hsv360 	{	90	80	50	}
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white_secondary"
+		color2 = "white_secondary"
+	}
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color2
+		color2 = color1
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_star_06_mena.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.485 }  scale = { 0.55 0.575 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}
 }
 
 mitoya_dynasty = { # Mitoya
@@ -12279,6 +12530,33 @@ naganuma_dynasty = { # Naganuma
 		color2 = color2		
 		instance = { position = { 0.5 0.45 } scale = { 0.725 0.725 } }		
 	}		
+}
+
+nahrui_dynasty = { # Nahrui Kharan
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = hsv360 	{	205	75	45	}
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_rotated.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.495 0.46 }  scale = { 0.575 0.575 } }
+	}
 }
 
 nakajima_dynasty = { # Nakajima
@@ -16018,7 +16296,32 @@ solomonid_dynasty = {
 	}	
 }
 
-# soomra
+soomra_dynasty = { # Soomra
+	pattern = "pattern_mena_round_frame_shield.dds"
+	color1 = hsv360 	{	90	80	50	}
+	color2 = "yellow"
+	color3 = "red_mid"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_star_06_mena.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.485 }  scale = { 0.55 0.575 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}
+}
 
 soranzo_dynasty = {
 	pattern = "pattern_solid.dds"
@@ -17575,6 +17878,32 @@ uesugi_dynasty = {
 		color2 = color1
 		instance = { position = { 0.5 0.46 } scale = { 0.75 0.75 } }		
 	}
+}
+
+ughanid_dynasty = { # Ughanid
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_jalayir_02.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.425 } scale = { 0.475 0.475 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}		
 }
 
 umar_dynasty = { # Mogadishu
@@ -19342,7 +19671,9 @@ zweibrucken_dynasty = {
 
 ######## Everything below here is TODO/TBD/out of alphabetical order ########
 
-lancaster_dynasty_badge = { # Lancaster (badge)
+### Specific ###
+
+lancaster_dynasty_badge = { # Lancaster (badge variant)
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red_mid"
@@ -19358,7 +19689,7 @@ lancaster_dynasty_badge = { # Lancaster (badge)
 	}
 }
 
-york_dynasty = { # York (badge)
+york_dynasty = { # York (badge variant)
 	pattern = "pattern_vertical_split_01.dds"
 	color1 = "blue"
 	color2 = "red"
@@ -19399,7 +19730,5231 @@ andersson_dynasty = {
 	}
 }
 
-sture_dynasty = { # Sten Sture (Sture-Sjobald)
+### Historical characters ###
+
+# Characters from Flavor_FRA events, with dynasties that are not scripted in 04_dynasties (ordered following event file)
+
+du_plessis  = { # Richelieu
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+
+de_Broglie_dynasty = { # Broglie/Broglia
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross_moline_saltire.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.455 } scale = { 0.875 0.875 }  }
+	}
+}
+
+Fleury = { # André-Hercule de Fleury
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cinquefoil.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }	
+	}
+}
+
+turgot  = { # Turgot
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_ermine_fretty.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}		
+}
+
+necker  = { # Jacques Necker
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_swan.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "red_light"
+		instance = { position = { 0.5 0.49 } scale = { 0.95 0.95 } }				
+	}			
+}
+
+Montesquieu = { # Montesquieu (Charles Louis de Secondat)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.665 } scale = { 0.55 0.55 }  }	
+	}	
+}
+
+du_Guesclin = { # Bertrand du Guesclin
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_eagle_double_headed_shield.dds"
+		color1 = color2
+		color2 = "red_secondary"
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }				
+	}
+	colored_emblem = {
+		texture = "ce_bend_bendlet_shield.dds"
+		color1 = color3
+		color2 = color3
+	}	
+}
+
+bureau  = { # Jean Bureau de la Rivière
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+	}			
+}
+
+de_vesc = { # Étienne de Vesc
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color3
+		color2 = color3
+	}	
+}
+
+Trivulzio  = { # Gian Giacomo Trivulzio
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "green"
+
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}			
+}
+
+de_Rochefort  = { # François de Moulins de Rochefort
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_millrind_in_fess.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.295 } rotation = 90 scale = { 0.3 0.45 }  }
+		instance = { position = { 0.625 0.295 } rotation = 90 scale = { 0.3 0.45 }  }
+		instance = { position = { 0.5 0.685 } rotation = 90 scale = { 0.3 0.45 }  }	
+	}		
+}
+
+de_longueil  = { # Christophe de Longueil
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_mid"
+	
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_cinquefoil.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.333 0.205 } scale = { 0.30 0.30 } }			
+		instance = { position = { 0.500 0.205 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.667 0.205 } scale = { 0.30 0.30 } }			
+	}		
+	colored_emblem = {
+		texture = "ce_cinquefoil.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1			
+		instance = { position = { 0.40 0.515 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.60 0.515 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.500 0.765 } scale = { 0.30 0.30 } }	
+	}		
+}
+
+cartier = { # Jacques Cartier
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_lozenge_random.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.36 0.170 } scale = { 0.26 0.22 } }			
+		instance = { position = { 0.500 0.170 } scale = { 0.26 0.22 } }		
+		instance = { position = { 0.64 0.170 } scale = { 0.26 0.22 } }			
+		instance = { position = { 0.36 0.388 } scale = { 0.26 0.22 } }		
+		instance = { position = { 0.500 0.388 } scale = { 0.26 0.22 } }		
+		instance = { position = { 0.64 0.388 } scale = { 0.26 0.22 } }	
+		instance = { position = { 0.36 0.606 } scale = { 0.26 0.22 } }		
+		instance = { position = { 0.500 0.606 } scale = { 0.26 0.22 } }		
+		instance = { position = { 0.64 0.606 } scale = { 0.26 0.22 } }			
+		instance = { position = { 0.500 0.822 } scale = { 0.26 0.22 } }				
+	}			
+}
+
+de_bethune  = { # Maximilen de Bethune
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+de_champlain  = { # Samuel de Champlain (apocryphal arms)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.525 0.5 } scale = { 1.0 1.0 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_star_06.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.63 0.24 } scale = { 0.375 0.375 }  }
+		instance = { position = { 0.39 0.65 } scale = { 0.375 0.375 }  }		
+	}	
+}
+
+la_prestre  = { # Sébastien le Prestre
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_chevron_thin_shield.dds"
+		color1 = color3
+		color2 = color3	
+		instance = { position = { 0.5 0.51 } scale = { 1.0 0.95 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_crescent_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.125 } scale = { 0.275 0.275 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_trefoil.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.345 0.265 } scale = { 0.325 0.325 }  }		
+		instance = { position = { 0.655 0.265 } scale = { 0.325 0.325 }  }
+		instance = { position = { 0.5 0.75 } scale = { 0.325 0.325 }  }		
+	}	
+}
+
+cassini_de_thury  = { # Cassini
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_fess_thin_shield.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.5 0.45 } scale = { 1.0 0.8 }  }			
+	}		
+	colored_emblem = {
+		texture = "ce_star_06.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.333 0.205 } scale = { 0.30 0.30 } }			
+		instance = { position = { 0.500 0.205 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.667 0.205 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.375 0.65 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.625 0.65 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.50 0.80 } scale = { 0.30 0.30 } }			
+	}	
+}
+
+law = { # John Law of Lauriston
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black_secondary"
+	color3 = "red_mid"
+	color4 = "blue_secondary"
+	
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color3
+		color2 = color3	
+		instance = { position = { 0.525 0.5 } scale = { 1.0 1.0 }  }		
+	}		
+	colored_emblem = {
+		texture = "ce_cock.dds"
+		color1 = color4
+		color2 = color4
+		color3 = color1
+		instance = { position = { 0.625 0.23 } scale = { 0.42 0.4 }  }
+		instance = { position = { 0.40 0.670 } scale = { 0.375 0.36 }  }		
+	}	
+	colored_emblem = {
+		texture = "ce_ermine_spot.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.46 0.130 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.52 0.230 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.71 0.350 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.65 0.455 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.71 0.560 } scale = { 0.14 0.14 }  }				
+		instance = { position = { 0.29 0.315 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.36 0.440 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.29 0.540 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.51 0.705 } scale = { 0.14 0.14 }  }		
+		instance = { position = { 0.47 0.850 } scale = { 0.14 0.14 }  }	
+		instance = { position = { 0.57 0.815 } scale = { 0.14 0.14 }  }			
+	}		
+}
+
+### Random historical dynasties by language ###
+
+## French ##
+
+de_la_tour_dynasty = { # La Tour (multiple La Tour dynasties, so just some canting arms)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_tower_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.85 0.85 }  }
+	}
+}
+
+de_Montfort = { # Montfort (normandy)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross_moline_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+de_Penthievre = { # Penthièvre (Breton)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+de_Rohan = { # Rohan (Breton)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_mascle_random.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.34 0.225 } scale = { 0.31 0.29 } }			
+		instance = { position = { 0.500 0.225 } scale = { 0.31 0.29 } }		
+		instance = { position = { 0.66 0.225 } scale = { 0.31 0.29 } }			
+		instance = { position = { 0.34 0.500 } scale = { 0.31 0.29 } }		
+		instance = { position = { 0.500 0.500 } scale = { 0.31 0.29 } }		
+		instance = { position = { 0.66 0.500 } scale = { 0.31 0.29 } }			
+		instance = { position = { 0.500 0.775 } scale = { 0.31 0.29 } }		
+	}
+}
+
+d_Albert = { # Albert (Provence)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }			
+	}
+}
+
+d_Escoubleau = { # Escoubleau
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "blue_mid"
+	color2 = "red_secondary"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_divider_per_pale_50.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+	}
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+de_Castellane_dynasty = { # Castellane (Provence)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }			
+	}
+}
+
+# de_Neufville
+
+de_Montbeliard_dynasty = { # Montbéliard
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }		
+	}
+}
+
+du_Pin_dynasty = { # Dupin
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }	
+	}
+}
+
+de_la_Tremoille_dynasty  = { # La Trémoille
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_chevron_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_eagle.dds"
+		color1 = color3
+		color2 = "red_secondary"
+		color3 = color1
+		instance = { position = { 0.35 0.225 } scale = { 0.38 0.38 } }			
+		instance = { position = { 0.65 0.225 } scale = { 0.38 0.38 } }		
+		instance = { position = { 0.5 0.75 } scale = { 0.38 0.38 } }						
+	}		
+}
+
+de_Crequy_dynasty = { # Créquy
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_crequier_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+de_Montesquiou_dynasty = { # Montesquieu (Occitan)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.285 } scale = { 0.5 0.5 } }		
+		instance = { position = { 0.5 0.69 } scale = { 0.5 0.5 } }			
+	}
+}
+
+de_la_Croix_dynasty = { # Simple random canting arms
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_cross_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+
+de_Metz_dynasty = { # Le Mez-Argentan
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_moline_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+d_Aumont_dynasty = { # Aumont
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevron_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.48 } scale = { 1.0 0.8 } }				
+	}
+	colored_emblem = {
+		texture = "ce_martlet.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.325 0.33 } scale = { 0.23 0.25 } }		
+		instance = { position = { 0.665 0.33 } scale = { 0.23 0.25 } }
+		instance = { position = { 0.325 0.15 } scale = { 0.23 0.25 } }		
+		instance = { position = { 0.495 0.15 } scale = { 0.23 0.25 } }			
+		instance = { position = { 0.665 0.15 } scale = { 0.23 0.25 } }	
+		instance = { position = { 0.44 0.79 } scale = { 0.23 0.25 } }		
+		instance = { position = { 0.58 0.79 } scale = { 0.23 0.25 } }			
+		instance = { position = { 0.5 0.625 } scale = { 0.23 0.25 } }					
+	}	
+}
+
+de_Vergy_dynasty = { # Vergy
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cinquefoil.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }	
+	}
+}
+
+de_Saboulin_dynasty = { # Sebolini (Provence)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_cinquefoil.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }	
+	}
+}
+
+de_Gramont_dynasty = { # Gramont
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bendy_06_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+de_Bissy_dynasty = { # Thiard de Bissy
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_lobster_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.295 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.625 0.295 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.685 } scale = { 0.45 0.45 }  }	
+	}
+}
+
+# de la Fayette TODO
+
+de_Rouge_dynasty = { # Rougé (Breton)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	
+	colored_emblem = {
+		texture = "ce_cross_patty_ordinary_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
+	}
+}
+
+de_Saintignon_dynasty = { # Saintignon
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tower_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }	
+	}
+}
+
+de_Dreux = { # Dreux-Braine
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+## Catalan ##
+
+mataplana_dynasty = { # pallars_mataplana_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"		
+
+	colored_emblem = {
+		texture = "ce_eagle_double_headed_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }				
+	}					
+}
+
+Rocaberti = { # rocaberti_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_pales_03_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
+	}
+	colored_emblem = {
+		texture = "ce_chessrook.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.357 0.19 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.5 0.19 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.643 0.19 } scale = { 0.13 0.16 } }			
+		instance = { position = { 0.357 0.42 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.5 0.42 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.643 0.42 } scale = { 0.13 0.16 } }				
+		instance = { position = { 0.357 0.65 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.50 0.65 } scale = { 0.13 0.16 } }	
+		instance = { position = { 0.643 0.65 } scale = { 0.13 0.16 } }		
+		instance = { position = { 0.50 0.85 } scale = { 0.13 0.16 } }			
+	}	
+}
+
+## English ##
+
+Dudley = { # Dudley
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_lions_02_passant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }				
+	}			
+}
+
+Howard = { # Howard
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
+	}
+	colored_emblem = {
+		texture = "ce_cross_crosslet_fitchy.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.52 0.18 } scale = { 0.27 0.27 }  }
+		instance = { position = { 0.66 0.18 } scale = { 0.27 0.27 }  }
+		instance = { position = { 0.66 0.44 } scale = { 0.27 0.27 }  }	
+		instance = { position = { 0.505 0.81 } scale = { 0.27 0.27 }  }
+		instance = { position = { 0.39 0.70 } scale = { 0.27 0.27 }  }
+		instance = { position = { 0.32 0.49 } scale = { 0.27 0.27 }  }		
+	}	
+}
+
+Seymour = { # St Maur/Seymour
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_02_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
+	}
+}
+
+de_la_Pole = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_leopard_head.dds"
+		color1 = color2
+		color2 = "yellow_mid"
+		color3 = "blue_secondary"
+		instance = { position = { 0.375 0.205 } scale = { 0.375 0.375 } }
+		instance = { position = { 0.625 0.205 } scale = { 0.375 0.375 } }
+		instance = { position = { 0.5 0.76 } scale = { 0.375 0.375 } }
+	}
+	colored_emblem = {
+		texture = "ce_fess_thin_shield.dds"
+		color1 = color2	
+		color2 = color2
+		instance = { position = { 0.5 0.515 } scale = { 1.0 1.0 } }		
+	}
+}
+
+de_Vere = { # Vere
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	
+	colored_emblem = {
+		texture = "ce_quarterly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.375 0.265 } scale = { 0.45 0.45 } }
+	}	
+}
+
+de_Camoys = { # Kemeys/Camoys
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+	
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.333 0.205 } scale = { 0.30 0.30 } }			
+		instance = { position = { 0.500 0.205 } scale = { 0.30 0.30 } }		
+		instance = { position = { 0.667 0.205 } scale = { 0.30 0.30 } }			
+	}	
+}
+
+Hyde = { # atte Hyde
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_chevron_thin_shield.dds"
+		color1 = color2
+		color2 = color2	
+		instance = { position = { 0.5 0.5 } scale = { 0.9 1.0 }  }		
+	}			
+	colored_emblem = {
+		texture = "ce_lozenge_random.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.24 } scale = { 0.325 0.325 }  }		
+		instance = { position = { 0.65 0.24 } scale = { 0.325 0.325 }  }
+		instance = { position = { 0.5 0.75 } scale = { 0.325 0.325 }  }		
+	}
+}
+
+name_mowbray = { # mowbray_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }						
+	}
+}
+
+Talbot = { # talbot_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.48 } scale = { 0.775 0.775 } }				
+	}		
+	colored_emblem = {
+		texture = "ce_border_engrailed_shield.dds"
+		color1 = color2
+		color2 = color1		
+	}	
+}
+
+Courtenay = { # Courtenay of Devon
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue_secondary"
+	
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.375 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.45 0.45 }  }			
+	}		
+	colored_emblem = {
+		texture = "ce_label_03_shield.dds"
+		color1 = color3
+		color2 = color3		
+	}		
+}
+
+Grey = { # grey_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }	
+	}		
+}
+
+le_Despenser = { # despenser_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "black"
+	
+	colored_emblem = {
+		texture = "ce_quarterly_fretty_despenser_shield.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3		
+	}
+	colored_emblem = {
+		texture = "ce_bend_bendlet_shield.dds"
+		color1 = color4
+		color2 = color4
+	}		
+}
+
+## Dutch ##
+
+de_reginar = { # reginar_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red_light"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_breda = { # Breda (ancient)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_flanchis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.375 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }
+	}
+}
+
+van_brederode = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "pearl"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_label_03_shield.dds" # label position for lion rampant
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.675 }  scale = { 1.0 1.0 } }
+	}
+}
+
+van_bronckhorst = { # Bronckhorst
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_diest = { # von_Diest_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_bars_02_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}
+}
+
+van_egmont = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_05_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_geldern = { # wassenberg_dynasty (as an ui cadet)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_label_03_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.675 }  scale = { 1.0 1.0 } }
+	}
+}
+
+van_glymes = { # Glymes
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "red_light"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_grimberghe = { # Aa/Grimbergen
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_saltire_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+van_heemskerk = { # Heemskerk
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red_light"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_heinsberg = { # heinsberg_dynasty (as an ui cadet)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_label_03_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.675 }  scale = { 1.0 1.0 } }
+	}
+}
+
+van_henegouwen = { # Hainaut ancien (does not make much sense)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_chevrons_05_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+van_julich_hengebach = { # julich_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_kamerijk = { # Cambrai (Oisy-Cambrai)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.38 0.28 } scale = { 0.47 0.47 }  }
+		instance = { position = { 0.62 0.28 } scale = { 0.47 0.47 }  }
+		instance = { position = { 0.5 0.70 } scale = { 0.47 0.47 }  }
+	}
+}
+
+van_keppel = { # Keppel
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.38 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.62 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.45 0.45 }  }
+	}
+}
+
+van_leuven = { # Louvain-Perwez/Brabant
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+van_limburg = { # Limbourg
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow_mid"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_loon = { # loon_dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_barry_10_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+van_montfoort = { # Montfoort
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_millrind_montfoort.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.375 0.28 } scale = { 0.475 0.475 }  }
+		instance = { position = { 0.625 0.28 } scale = { 0.475 0.475 }  }
+		instance = { position = { 0.5 0.665 } scale = { 0.475 0.475 }  }
+	}
+}
+
+van_renesse = { # Renesse
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_billet.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.280 0.10 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.415 0.10 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.60 0.10 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.720 0.10 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.30 0.26 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.720 0.31 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.29 0.54 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.395 0.505 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.720 0.52 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.355 0.75 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.43 0.82 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.63 0.77 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.685 0.675 } scale = { 0.12 0.12 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_guardant_shield_semy.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.485 } scale = { 0.9 0.9 } }
+	}
+}
+
+van_voorst_tot_voorst = { # van Voorst
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_03_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+van_wassenaer = { # Wassenaer
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_crescent_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.38 0.29 } scale = { 0.44 0.45 }  }
+		instance = { position = { 0.62 0.29 } scale = { 0.44 0.45 }  }
+		instance = { position = { 0.5 0.675 } scale = { 0.45 0.45 }  }
+	}
+}
+
+van_wassenberg = { # wassenberg_dynasty (as an ui cadet)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_label_03_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.675 }  scale = { 1.0 1.0 } }
+	}
+}
+
+van_wisch = { # Lords of Wisch
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lions_02_passant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+## Geman ###
+
+Echter = { # Echter
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_annulet.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.347 0.206 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.480 0.435 } scale = { 0.27 0.27 } }
+		instance = { position = { 0.614 0.664 } scale = { 0.27 0.27 } }
+	}
+}
+
+Holtzendorff = { # Holtzendorff
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_quarterly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_fess_thin_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+pleskow_dynasty = { # Pleskow (Lübecker dynasty, tinctures unknown)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black_secondary"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bull_head.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Abensberg_dynasty = { # Abensberg
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_per_bend_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Altena_dynasty = { # Altena
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_barbels_addorsed_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Arnim = { # Arnim
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bars_02_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Arstein_dynasty = { # Arnstein
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Attems_dynasty = { # Attems
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_indented_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Bardewik_dynasty = { # Bardewick
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_axes_crossed_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Baudissin = { # Baudissin
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_traby_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Bassenheim_dynasty = { # Walpott
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_gironny_12_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Beichlingen = { # Beichlingen
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bars_02_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Bendeleben = { # Bendeleben
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Beneckendorff = { # Benckendorff
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue_mid"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color3
+		color2 = color1
+		color3 = color1
+		instance = { position = { 0.5 0.21 } scale = { 0.325 0.325 } }
+		instance = { position = { 0.5 0.49 } scale = { 0.325 0.325 } }
+		instance = { position = { 0.5 0.77 } scale = { 0.325 0.325 } }
+	}
+}
+
+von_Berlichingen_dynasty = { # Berlichingen
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_wheel_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Berg_dynasty = { # Berg
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bars_02_counter_embattled_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Bieberstein = { # Biberstein
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_antler_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Bodeck_dynasty = { # Bodecker
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Bogen_dynasty = { # Gf Bogen
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_lozengy_bend_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Bose = { # Bose
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_border_shield_thin.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+von_Breitenbuch = { # Breitenbuch
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "red_light"
+
+	colored_emblem = {
+		texture = "ce_chevrons_02_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Brunshorn_dynasty = { # Braunshorn
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_hunting_horn_simple.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "grey"
+		instance = { position = { 0.375 0.28 } scale = { 0.43 0.45 }  }
+		instance = { position = { 0.625 0.28 } scale = { 0.43 0.45 }  }
+		instance = { position = { 0.5 0.68 } scale = { 0.43 0.45 }  }
+	}
+}
+
+von_Bucheck_dynasty = { # Neuenburg-Buchegg
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color1
+		color2 = "green_light"
+		color3 = color2
+		instance = { position = { 0.5 0.21 } scale = { 0.325 0.325 } }
+		instance = { position = { 0.5 0.49 } scale = { 0.325 0.325 } }
+		instance = { position = { 0.5 0.77 } scale = { 0.325 0.325 } }
+	}
+}
+
+von_Bulow_dynasty = { # Bülow
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_semy_roundels_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Bunau = { # Bünau
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Carlowitz = { # Carlowitz
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_trefoils_conjoined_in_pairle_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.485 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Dassel_dynasty = { # Dassel
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_deer_massacre_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.175 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.45 0.325 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.55 0.325 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.5 0.475 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.5 0.65 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.35 0.725 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.65 0.725 } scale = { 0.12 0.12 } }
+	}
+}
+
+von_Degenberg = { # Degenberg
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_crequier_variant_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Durkheim = { # Dürckheim
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_millrind_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Eberstein_dynasty = { # Eberstein (Franconia)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_fleurs_conjoined_in_pairle_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Eckersberg = { # Eckersberg
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_hunting_horn_shield.dds"
+		color1 = "black_secondary"
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Erdmannsdorff = { # Erdmannsdorf
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Eschenloch_dynasty = { # Gf Eschenlohe
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color1
+		color2 = color1
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale_50.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+	}
+}
+
+von_Etzdorff_dynasty = { # Etzdorff
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_secondary"
+	color3 = "green_light"
+
+	colored_emblem = {
+		texture = "ce_mount_03_in_base_variant.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.50 0.75 } scale = { 0.45 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_stag_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Falkenhayn = { # Falkenhain
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_hunting_horn_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "red_dark"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Fraunberg = { # Fraunberg
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_horse_salient_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Freiberg = { # Freiberg
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		instance = { position = { 0.5 0.17 } scale = { 1.0 0.33 } }
+	}
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.375 0.50 } scale = { 0.36 0.36 }  }
+		instance = { position = { 0.625 0.50 } scale = { 0.36 0.36 }  }
+		instance = { position = { 0.5 0.77 } scale = { 0.36 0.36 }  }
+	}
+}
+
+von_Freundsberg = { # Freundsberg
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_mount_of_six_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Gersdorff = { # Gersdorff
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+von_Guttenberg = { # Guttenberg
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = "white_secondary"
+		color3 = color3
+		instance = { position = { 0.5 0.475 }  scale = { 0.95 0.95 } }
+	}
+}
+
+von_Hachberg_dynasty = { # Baden-Hachberg (identical)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}
+}
+
+von_Hagen_dynasty = { # Hagen
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Hardegg_dynasty = { # Plain/Hardegg
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "red_secondary"
+	color2 = "blue_secondary"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_wings_addorsed_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.495 0.475 } scale = { 0.86 0.9 }  }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_wings_addorsed_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.505 0.475 } scale = { 0.86 0.9 }  }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale_50.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+	}
+}
+
+von_Haslang = { # Haslang
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_pale_urdy.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+von_Helffenstein_dynasty = { # Gf Helfenstein
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_elephant_statant_on_mount_shield.dds"
+		color1 = color2
+		color2 = hsv360 	{	0		0	84	}
+		color3 = color3
+		instance = { position = { 0.5 0.49 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Hessler = { # Hessler
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_pily_barry_shield_02.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}
+}
+
+von_Hohenfels_dynasty = { # Hohenfels
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_wing_fesswise_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Holnstein = { # Holnstein (Bavaria)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_ibex_ram_horn_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Holte_dynasty = { # Holte
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = hsv360 	{	42	60	95	}
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Hornes_dynasty = { # Hoorn/Horne (variant used by cadets)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_hunting_horn_simple.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.375 0.28 } scale = { 0.43 0.45 }  }
+		instance = { position = { 0.625 0.28 } scale = { 0.43 0.45 }  }
+		instance = { position = { 0.5 0.68 } scale = { 0.43 0.45 }  }
+	}
+}
+
+von_Hoym = { # Hoym
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_barry_04_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Kanitz = { # Canitz
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_saltire_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.175 } scale = { 0.3 0.3 } }
+		instance = { position = { 0.5 0.775 } scale = { 0.3 0.3 } }
+		instance = { position = { 0.33 0.46 } scale = { 0.3 0.3 } }
+		instance = { position = { 0.67 0.46 } scale = { 0.3 0.3 } }
+	}
+}
+
+von_Kannewurf = { # Kannewurff
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.52 0.485 } rotation = 357 scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = "yellow_mid"
+		color3 = "red_secondary"
+		instance = { position = { 0.63 0.24 } scale = { 0.36 0.36 }  }
+		instance = { position = { 0.39 0.65 } scale = { 0.36 0.36 }  }
+	}
+}
+
+von_Katzenelnbogen_dynasty = { # Katzenellenbogen
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_guardant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Kerpen_dynasty = { # Kerpen
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_fess_dancetty_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Laiming = { # Laiming
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.475 } scale = { 1.0 0.1 }  }
+	}
+}
+
+von_Logau = { # Logau/Lahov/Logowsky
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_lozengy_bend_shield.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 }  scale = { -1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_bend_bendlet_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+von_Munster_dynasty = { # Münster
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Neitschutz = {
+	pattern = "pattern_per_fess_shield.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_checky_07.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.715 } scale = { 0.725 0.8 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Nellenburg_dynasty = { # Gf Nellenburg
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_antler_fess.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.21 } scale = { 0.76 0.8 } }
+		instance = { position = { 0.5 0.44 } scale = { 0.72 0.8 } }
+		instance = { position = { 0.5 0.65 } scale = { 0.60 0.68 } }
+	}
+}
+
+von_Neuhaus_dynasty = { # Witigonen
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = "yellow_mid"
+		color3 = color3
+		instance = { position = { 0.5 0.475 }  scale = { 0.95 0.95 } }
+	}
+}
+
+von_Osterna_dynasty = { # Osternach
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "white"
+	color2 = "blue_secondary"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color3
+		color2 = color3
+		mask = { 2 }
+	}
+}
+
+von_Pappenheim = { # Pappenheim
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_vairy_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Plain_dynasty = { # Plain (ancient, modern for Hardegg)
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_wings_addorsed_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.495 0.475 } scale = { 0.86 0.9 }  }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_wings_addorsed_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.505 0.475 } scale = { 0.86 0.9 }  }
+		mask = { 2 }
+	}
+}
+
+von_Plessen = { # Plessen
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black_secondary"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bull_passant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Raabs_dynasty = { # Raabs
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "white"
+	color4 = "red"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds" # Eye bg for lion & border
+		color1 = "pearl"
+		color2 = "pearl"
+		instance = { position = { 0.48 0.208 } scale = { 0.02 0.02 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_queue_forchee_crowned_shield.dds"
+		color1 = color2
+		color2 = "red_secondary"
+		color3 = "red_secondary"
+		instance = { position = { 0.5 0.485 } scale = { 0.74 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_shield_compony.dds"
+		color1 = color4
+		color2 = color3
+	}
+}
+
+von_Rechenberg = { # Rechenberg
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_rake_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Regensburg_dynasty = { # Regensberg
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue_secondary"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.495 } scale = { 1.0 0.9 } }
+	}
+}
+
+von_Rheinfelden_dynasty = { # Truchsess von Rheinfelden
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+von_Rohr = { # Rohr
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_pily_barry_shield_02.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}
+}
+
+von_Salza = { # Salza
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_ibex_ram_horn_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Sandizell = { # Gf Sandizell
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black_secondary"
+	color3 = "white"
+	color4 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_bull_head_sandizell.dds"
+		color1 = color2
+		color2 = color4
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+von_Saarbrucken_dynasty = { # commercy_dynasty (without crown for difference)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_crosslet_fitchy.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.285 0.11 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.420 0.11 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.295 0.265 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.30 0.63 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.335 0.515 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.405 0.505 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.390 0.80 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.460 0.77 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.600 0.11 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.715 0.11 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.720 0.30 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.720 0.49 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.598 0.535 } scale = { 0.115 0.115 } }
+		instance = { position = { 0.690 0.66 } scale = { 0.12 0.12 } }
+		instance = { position = { 0.625 0.765 } scale = { 0.12 0.12 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield_semy.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Saffenberg_dynasty = { # Saffenberg (Jülich)
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Sangershausen_dynasty = { # Sangerhausen
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_lions_03_passant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Schoenecken_dynasty = { # Vianden-Schönecken
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_escutcheon_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+von_Schonberg = { # Schönberg (ministeriales, Saxony)
+	pattern = "pattern_per_fess_shield.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 2 }
+	}
+}
+
+von_Schonburg = { # Schönburg/Sumburk (Glauchau)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bendy_04_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }
+	}
+}
+
+von_Signau_dynasty = { # Signau
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue_secondary"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_bars_02_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+von_Stein_dynasty = { # Stein-Liebenstein
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_bends_02_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+von_Sternberg = { # Sternberg
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { -1.0 1.0 } }
+	}
+}
+
+von_Tattenbach = { # Tattenbach
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+von_Thuengen = { # Thüngen
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_pales_03_undy_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.58 } scale = { 1.0 1.35 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.125 } scale = { 1.0 0.4 } }
+		instance = { position = { 0.5 0.825 } scale = { 1.0 0.4 } }
+	}
+}
+
+von_Toerring = { # Törring
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_mid"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = "green_secondary"
+		color3 = color3
+		instance = { position = { 0.380 0.295 } 	scale = { 0.45 0.45 }  }
+		instance = { position = { 0.620 0.295 } 	scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.685 } 	scale = { 0.45 0.45 }  }
+	}
+}
+
+von_Trockau = { # Gross von Trockau
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_per_pale.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.495 } scale = { 1.0 0.9 } }
+	}
+}
+
+von_Wackerbarth = { # Wackerbarth
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_quarterly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Vorrade_dynasty = { # Vorrade (Lübecker dynasty, tinctures unknown)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_head_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "red_secondary"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+## Italian ##
+
+Aldobrandini = { # Aldobrandini
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bend_thin_embattled_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.51 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_08.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.53 0.17 } scale = { 0.225 0.225 }  }
+		instance = { position = { 0.67 0.17 } scale = { 0.225 0.225 }  }
+		instance = { position = { 0.67 0.41 } scale = { 0.225 0.225 }  }
+		instance = { position = { 0.515 0.81 } scale = { 0.225 0.225 }  }
+		instance = { position = { 0.39 0.69 } scale = { 0.225 0.225 }  }
+		instance = { position = { 0.33 0.49 } scale = { 0.225 0.225 }  }
+	}
+}
+
+Allucingolli = { # Allucingolli (Roma)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_lozengy_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Ariosti = { # Ariosti (Bologna)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Bentivoglio = { # Bentivoglio
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_bend_indented_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Borghese = { # Borghese
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_wyvern_displayed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+Borri = { # Borri (Milano)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_bull_passant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 }  }
+	}
+}
+
+Borromeo = { # Borromeo
+	pattern = "pattern_solid.dds"
+	color1 = "red_secondary"
+	color2 = "green_light"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_bend_thin_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+Caccianemici = { # Caccianemici dall'Orso
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_bear_rampant.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.51 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Caetani = { # Caetani
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bends_02_nebuly_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+Campofregoso = { # Campofregoso
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_nebuly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Capponi = { # Capponi
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_bend_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Cenci = { # Cenci (Florence)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_per_fess_crenelated.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.67 0.96 } }
+	}
+}
+
+Colleoni = { # Colleoni
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.51 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_family_jewel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.375 0.26 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.26 } scale = { 0.425 0.425 }  }
+	}
+	colored_emblem = {
+		texture = "ce_family_jewel.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.69 } scale = { 0.425 0.425 }  }
+	}
+}
+
+Colonna = { # Colonna
+	pattern = "pattern_horizontal_split_01.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.07 0.2 } }
+	}
+	colored_emblem = {
+		texture = "ce_crown.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.13 } scale = { 0.28 0.26 } }
+	}
+	colored_emblem = {
+		texture = "ce_column.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.575 } scale = { 0.9 0.95 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_column.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.95 } }
+		mask = { 2 }
+	}
+}
+
+Condulmer = { # Condulmer (Venice)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bend_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Crescenzi = { # Crescenzi (Roma)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_border_thin_indented_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.60 0.32 } scale = { 0.38 0.40 }  }
+		instance = { position = { 0.5 0.66 } scale = { 0.40 0.40 }  }
+		instance = { position = { 0.40 0.32 } scale = { 0.38 0.40 }  }
+	}
+}
+
+Crispo = { # Crispo
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_fess_lozenges_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+da_Romano = { # Ezzelini
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "green"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+di_Bonacolsi = { # Bonacolsi
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bars_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+di_Candia = { # Candie
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue_secondary"
+
+	colored_emblem = {
+		texture = "ce_semis_fleur_lis_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_bend_bendlet_shield.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+di_Castello = { # Castelli
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_castle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+di_Cremona = { # Cremona
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bars_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+di_Ponzone = { # Ponzoni
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_quarterly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+di_Sabran = { # Sabran
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+di_Saluzzo = { # Saluzzo (Aleramici)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+di_Sanseverino = { # Sanseverino
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Farnese = { # Farnese
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.34 0.225 }  scale = { 0.31 0.325 } }
+		instance = { position = { 0.5 0.225 }  scale = { 0.31 0.325 } }
+		instance = { position = { 0.66 0.225 }  scale = { 0.31 0.325 } }
+		instance = { position = { 0.41 0.49 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.59 0.49 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.50 0.755 }  scale = { 0.325 0.325 } }
+	}
+}
+
+Gattilusio = { # Gattilusio
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_papelonny_inverted_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Gozzadini = { # Gozzadini
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_per_bend_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Maggi = { # Maggi
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bars_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Malipiero = { # Malipiero
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_winged_claw_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Mancini = { # Mancini (Florence)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Massimo = { # Massimo (Roma)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_crowned_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
+}
+
+Mazzetti = { # Masseti
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_mallet_random_small.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.375 0.30 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.625 0.30 } scale = { 0.425 0.425 }  }
+		instance = { position = { 0.5 0.70 } scale = { 0.425 0.425 }  }
+	}
+}
+
+Mocenigo = { # Mocenigo
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.5 0.51 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.26 } scale = { 0.475 0.475 }  }
+	}
+	colored_emblem = {
+		texture = "ce_rose_simple.dds"
+		color1 = color1
+		color2 = color1
+		color3 = color2
+		instance = { position = { 0.5 0.69 } scale = { 0.475 0.475 }  }
+	}
+}
+
+Monaldeschi = { # Monaldeschi
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bends_03_embattled_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Montoro = { # Montoro
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.905 } scale = { 1.0 0.3 } }
+	}
+	colored_emblem = {
+		texture = "ce_mount_of_six_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Naro = { # Nari
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_crescent_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.24 } scale = { 0.45 -0.45 }  }
+		instance = { position = { 0.5 0.49 } scale = { 0.45 -0.45 }  }
+		instance = { position = { 0.5 0.74 } scale = { 0.45 -0.45 }  }
+	}
+}
+
+Obertenghi = { # Obertenghi (Attributed from Este)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eagle_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Parentucelli = { # Tommaso Parentucelli, Nicolas V (Attribution)
+	pattern = "pattern_per_bend_shield.dds"
+	color1 = "white"
+	color2 = "blue"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_bends_02_nebuly_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.495 0.5 } scale = { 1.0 1.0 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_bends_02_nebuly_shield.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.495 0.5 } scale = { 1.0 1.0 } }
+		mask = { 2 }
+	}
+}
+
+Patrizi = { # Patrizi
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_barry_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Rangoni = { # Rangoni
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.182 } scale = { 0.36 0.34 } }
+	}
+	colored_emblem = {
+		texture = "ce_barry_06.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.65 } scale = { 1.0 0.65 } }
+	}
+}
+
+Rocchi = { # Rocchi
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_chessrook.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.34 0.21 }  scale = { 0.3 0.325 } }
+		instance = { position = { 0.5 0.21 }  scale = { 0.3 0.325 } }
+		instance = { position = { 0.66 0.21 }  scale = { 0.3 0.325 } }
+		instance = { position = { 0.41 0.49 }  scale = { 0.3 0.325 } }
+		instance = { position = { 0.59 0.49 }  scale = { 0.3 0.325 } }
+		instance = { position = { 0.50 0.78 }  scale = { 0.3 0.325 } }
+	}
+}
+
+Scannabecchi = { # Scannabecchi
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_bendy_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Serlupi = { # Serlupi
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_indented_shield.dds"
+		color1 = color1
+		color2 = color2
+		instance = { position = { 0.44 0.5 } scale = { 0.695 1.2 } }
+	}
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.32 0.21 } scale = { 0.18 0.2 } }
+		instance = { position = { 0.44 0.21 } scale = { 0.18 0.2 } }
+		instance = { position = { 0.56 0.21 } scale = { 0.18 0.2 } }
+		instance = { position = { 0.68 0.21 } scale = { 0.18 0.2 } }
+	}
+}
+
+Serra = { # Serra
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_bars_02_checky_shield.dds"
+		color1 = color3
+		color2 = color2
+		color3 = color1
+	}
+}
+
+Sfondrati = { # Sfondrati (ancient)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bend_thin_embattled_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.52 0.485 } rotation = 357 scale = { 1.0 1.0 }  }
+	}
+	colored_emblem = {
+		texture = "ce_star_08.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.63 0.24 } scale = { 0.36 0.36 }  }
+		instance = { position = { 0.39 0.65 } scale = { 0.36 0.36 }  }
+	}
+}
+
+Sommaripa = { # Sommaripa (Lords of Andros)
+	pattern = "pattern_solid.dds"
+	color1 = "white_secondary"
+	color2 = "blue"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bars_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = "black"
+		color2 = "black"
+		color3 = "black"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color3
+		color2 = color3
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Strozzi = { # Strozzi
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_crescent_charge_random.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.33 0.475 }  rotation = 270 scale = { 0.225 0.45 } }
+		instance = { position = { 0.5 0.475 }  rotation = 270 scale = { 0.225 0.45 } }
+		instance = { position = { 0.67 0.475 }  rotation = 270 scale = { 0.225 0.45 } }
+	}
+}
+
+Theodoli = { # Theodoli
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_wheel_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Tocco = { # Tocco
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bars_03_dancetty_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Ventimiglia = { # Ventimiglia
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_chief_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+Ziani = { # Ziani
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bends_02_shield.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Zoagli = { # Zoagli
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_castle_shield.dds"
+		color1 = "red_mid"
+		color2 = color1
+		color3 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 2 }
+	}
+}
+
+## Polish ##
+
+Branicki = { # Branicki (Korczak)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_korczak_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Chodkiewicz = { # Kosciesza
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_kosciesza_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Czartoryski = { # Czartoryski (Ksiazecy/Pogon)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	textured_emblem = {
+		texture = "te_knight_jagiellon_shield.dds"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Kurnatowski = { # Kurnatowski (Lodzia)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Lanckoronski = { # Lanckoronski (Zadora)
+	pattern = "pattern_solid.dds"
+	color1 = "blue_secondary"
+	color2 = "white"
+	color3 = hsv360 	{	358 	78	72	}
+
+	colored_emblem = {
+		texture = "ce_lion_head_flames_zadora_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Leszczynski = { # Leszczynski (Wieniawa)
+	pattern = "pattern_horizontal_split_01.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "white_secondary"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_bull_head_ringed.dds"
+		color1 = color2
+		color2 = hsv360 	{	42	60	95	}	# crown gold
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 2 }
+	}
+}
+
+Lubomirski = { # Lubomirski (Druzyna)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_druzyna_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Mielzynski = { # Mielzynski
+	pattern = "pattern_solid.dds"
+	color1 = "blue_secondary"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_mielzynski_shield.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Opalinski = { # Opalinski (Lodzia)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_boat_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Ossolinski = { # Ossolinski (Topor)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_topor_shield.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Pac = { # Pac (Gozdawa)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_gozdawa_shield.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Poniatowski = { # Poniatowski (Ciolek)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bull_passant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Potocki = { # Potocki (Pilawa)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_pilawa_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Prendota = { # Prandota (Odrowaz)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_odrowacz_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Raczynski = { # Raczynski (Nalecz)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_nalecz_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Sapieha = { # Sapieha (Lis)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_lis_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Sanguszko = { # Sanguszko (Ksiazecy/Pogon)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	textured_emblem = {
+		texture = "te_knight_jagiellon_shield.dds"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Strasz = { # Strasz (Odrowaz)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_szlachta_odrowacz_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Taczanowski = { # Taczanowski (Jastrzebiec)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_jastrzebiec_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Tarnowski = { # Tarnowski (Leliwa)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_leliwa_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Teczynski = { # Teczynski (Topor)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_topor_shield.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Tyszkiewicz = { # Tyszkiewicz (Leliwa)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_leliwa_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Wisniowiecki = { # Wisniowiecki (Korybut)
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_szlachta_korybut_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+## Czech ##
+
+dynasty_kinsky = { # Kinsky
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_wolf_teeth_issant_sinister_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+dynasty_kolowrat = { # Kolovraty
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "blue"
+	color2 = "red_secondary"
+	color3 = "white"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+	}
+	colored_emblem = {
+		texture = "ce_eagle_boned_crescent_trefly_shield.dds"
+		color1 = color2
+		color2 = color4
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 1 }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_boned_crescent_trefly_shield.dds"
+		color1 = color3
+		color2 = color4
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+		mask = { 2 }
+	}
+	colored_emblem = {
+		texture = "ce_crown_head_bold.dds"
+		color1 = color4
+		color2 = color4
+		color3 = color4
+		instance = { position = { 0.5 0.265 } scale = { 0.21 0.22 } }
+	}
+}
+
+dynasty_lobkowicz = { # Lobkovice
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+dynasty_forgach = { # Forgach (Hungarian)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_increscent_shield_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+dynasty_csaky = { # Csak (Hungarian)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+## Hungarian ##
+
+Bathory = { # Bathory
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_pily_barry_shield_03.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+Csaky = { # Csak (dynasty_csaky)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Derencsenyi = { # Derencsenyi (Balogh)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_eagle_double_headed_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = "white_secondary"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Forgach = { # Forgach (dynasty_forgach)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_crescent_increscent_shield_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Szecsi = { # Szecsi  (Balogh)
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	color3 = "red_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white_secondary"
+		color2 = "white_secondary"
+		instance = { position = { 0.428 0.122 } scale = { 0.03 0.03 } }
+		instance = { position = { 0.572 0.122 } scale = { 0.03 0.03 } }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_double_headed_crowned_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = hsv360 	{	42	60	65	}
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+Zichy = { # Zichy
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_deer_massacre_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.875 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_crown_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.75 } scale = { 0.6 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_cross_patty_random.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.38 } scale = { 0.35 0.35 } }
+	}
+}
+
+## Balkans ##
+
+Kosaca = { # Kosaca
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_bends_03_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+}
+
+Zrinski = { # Zrinski (also in hungarian list)
+	pattern = "pattern_solid.dds"
+	color1 = "red_light"
+	color2 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_wings_addorsed_in_pale_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+## Mongolian ##
+
+Toluid = {
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_tolui.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.75 0.75 } }
+	}
+}
+
+Jalair = {
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "white"
+	color3 = "yellow"
+	color4 = "red_scarlet"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_jalayir.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.45 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.75 0.75 } }
+	}
+}
+
+Chagatayid = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow_mid"
+	color2 = "white"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_chagatai_02.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+}
+
+Jochid = {
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "white"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_jochi.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = "blue_light"
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.725 0.725 } }
+	}	
+}
+
+Injuid = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_sky"
+	color2 = "white"
+	color3 = "red_scarlet"
+	
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_eternal_knot.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+}
+
+Mengu_Timur = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_sky"
+	color2 = "yellow"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow_pale"
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow_dark"
+		color2 = "yellow_dark"
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.46 } scale = { 0.48 0.48 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_ozbeg.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.45 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_02.dds"
+		color1 = "yellow_mid"
+		color2 = "yellow_mid"
+		instance = { position = { 0.5 0.46 } scale = { 0.68 0.68 } }
+	}
+}
+
+Chupanid = {
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "yellow"
+	color3 = "white"
+	color4 = "red_scarlet"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.425 0.425 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_chupan.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.425 0.425 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_03.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.68 0.68 } }
+	}
+}
+
+Onggirat = { # Onggirat clan - Buyl tamgha
+	pattern = "pattern_solid.dds"
+	color1 = "blue_light"
+	color2 = "red_scarlet"
+	color3 = "white"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_mongol_buyl.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.475 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.725 0.725 } }
+	}
+}
+
+Naiman = { # Naiman clan - Holog tamgha
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.425 0.425 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_holog.dds"
+		color1 = "white"
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_02.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.68 0.68 } }
+	}
+}
+
+Kereyid = { # Kereyid clan - Four directions tamgha
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "yellow"
+	color3 = "black_secondary"
+	color4 = "red_scarlet"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_dorvon_zug.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_05.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.68 0.68 } }
+	}
+}
+
+Besud = { # Besud clan - Buyl or Seree tamgha
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "yellow"
+	color3 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.425 0.425 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_seree.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.725 0.725 } }
+	}
+}
+
+Khatagin = { # Khatagin clan - Ongi type tamgha
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_scarlet"
+	color3 = "blue_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.635 0.635 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.425 0.425 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_ongi_khatagin.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.5 0.485 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.725 0.725 } }
+	}
+}
+
+Iljigin = { # Iljigin clan - Unknown but would probably have used a seree type
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "blue_light"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.625 0.625 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_seree_iljigin.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.48 } scale = { 0.65 0.65 } }
+	}
+}
+
+Sartuul = { # Sartuul clan - Unknown, possibly holog derived
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_scarlet"
+	color3 = "blue_mid"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.625 0.625 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_holog_sartuul.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+}
+
+Tsookhor = { # Tsookhor - Possibly a seree/buyl tamghas type
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red_mid"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.625 0.625 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_seree_tsookhor.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.55 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.725 0.725 } }
+	}
+}
+
+Olkhunut = { # Olkhonud - Another plausible seree variant
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.70 0.70 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow_dark"
+		color2 = "yellow_dark"
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.48 0.48 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_seree_olkhonud.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.45 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_02.dds"
+		color1 = "yellow_mid"
+		color2 = "yellow_mid"
+		instance = { position = { 0.5 0.46 } scale = { 0.715 0.715 } }
+	}
+}
+
+name_sartaq = { # Sartaq - Plausible holog type
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "white"
+	color3 = "red_mid"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.70 0.70 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_tamgha_holog_sartaq.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.46 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_mongol_round_frame_02.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.46 } scale = { 0.715 0.715 } }
+	}
+}
+
+### Location random dynasties ###
+
+amboise = { # Amboise
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}	
+}
+
+bapaume = { # Castellans of Bapaume (Beaumetz)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_engrailed_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+belleme = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_bendy_06_shield.dds"
+		color1 = color1
+		color2 = color2				
+	}		
+}
+
+boulogne_sur_mer = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }			
+	}
+}
+
+cambrai = { # Castellans of Cambrai (Oisy)
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+dax = { # Dax
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}	
+}
+
+faucigny = { # Faucigny
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_paly_06_shield.dds"
+		color1 = color1
+		color2 = color2
+	}	
+}
+
+joigny = { # Joigny
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }			
+	}	
+}
+
+laval = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_cross_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+lens = { # Castellans of Lens
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	
+	colored_emblem = {
+		texture = "ce_quarterly_shield.dds"
+		color1 = color1
+		color2 = color2
+	}	
+}
+
+mayenne = {
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_escutcheon_charge.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.34 0.21 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.5 0.21 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.66 0.21 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.41 0.5 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.59 0.5 }  scale = { 0.325 0.325 } }
+		instance = { position = { 0.50 0.79 }  scale = { 0.325 0.325 } }
+	}
+}
+
+mons = { # Castellans of Mons
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_scallop.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.38 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.62 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.45 0.45 }  }		
+	}	
+}
+
+mortagne = { # Castellans of Mortagne
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_cross_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+
+passavant = { # Lords of Passavant
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2		
+		instance = { position = { 0.5 0.315 } scale = { 1.0 0.12 } }		
+		instance = { position = { 0.5 0.635 } scale = { 1.0 0.12 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_martlet.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.31 0.485 } scale = { 0.25 0.28 } }		
+		instance = { position = { 0.67 0.485 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.31 0.155 } scale = { 0.25 0.28 } }		
+		instance = { position = { 0.495 0.155 } scale = { 0.25 0.28 } }		
+		instance = { position = { 0.67 0.155 } scale = { 0.25 0.28 } }	
+		instance = { position = { 0.375 0.785 } scale = { 0.22 0.25 } }		
+		instance = { position = { 0.60 0.785 } scale = { 0.22 0.25 } }			
+		instance = { position = { 0.5 0.88 } scale = { 0.22 0.25 } }					
+	}		
+}
+
+perche_province = { # Château-Gontier
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+ponthieu_province = {
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_bendy_06_shield.dds"
+		color1 = color1
+		color2 = color2				
+	}		
+}
+
+saint_omer = { # St Omer
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_fess_shield.dds"
+		color1 = color2
+		color2 = color2
+	}		
+}
+
+saint_pol = { # St Pol
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_wheat_garb.dds"
+		color1 = color2
+		color2 = hsv360 	{	42	80	78	}
+		color3 = color1
+		instance = { position = { 0.375 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.625 0.29 } scale = { 0.45 0.45 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.45 0.45 }  }		
+	}
+}
+
+tarascon = { # Raimond
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.40 0.185 } scale = { 0.32 0.32 } }			
+		instance = { position = { 0.60 0.185 } scale = { 0.32 0.32 } }			
+		instance = { position = { 0.40 0.44 } scale = { 0.32 0.32 } }			
+		instance = { position = { 0.60 0.44 } scale = { 0.32 0.32 } }				
+		instance = { position = { 0.40 0.695 } scale = { 0.32 0.32 } }			
+		instance = { position = { 0.60 0.695 } scale = { 0.32 0.32 } }				
+	}		
+}
+
+valenciennes = { # Castellans of  Valenciennes
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	
+	colored_emblem = {
+		texture = "ce_cross_engrailed_shield.dds"
+		color1 = color2
+		color2 = color2
+	}	
+}
+
+## Britain ##
+
+aberavon = { # Aberavon (Morgan Fychan)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_chevrons_03_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+brecknock = { # Devereux
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_fess_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_roundel.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.333 0.205 } scale = { 0.30 0.30 } }
+		instance = { position = { 0.500 0.205 } scale = { 0.30 0.30 } }
+		instance = { position = { 0.667 0.205 } scale = { 0.30 0.30 } }
+	}
+}
+
+dinevor  = { # Dinevor (Rhys ap Thomas)
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_chevron_thin_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.505 } scale = { 1.0 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_martlet.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.345 0.225 } scale = { 0.36 0.38 } }
+		instance = { position = { 0.625 0.225 } scale = { 0.36 0.38 } }
+		instance = { position = { 0.5 0.75 } scale = { 0.36 0.38 } }
+	}
+}
+
+dumfries = { # Lindesey
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "purple_mid"
+
+	colored_emblem = {
+		texture = "ce_eagle_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+hendwr = { # Hendwr
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+kidwelly = { # Chaworth
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_barry_12_shield.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_martlet.dds"
+		color1 = color3
+		color2 = color3
+		color3 = "white"
+		instance = { position = { 0.32 0.155 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.495 0.155 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.67 0.155 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.32 0.44 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.67 0.44 } scale = { 0.25 0.28 } }
+		instance = { position = { 0.35 0.71 } scale = { 0.22 0.25 } }
+		instance = { position = { 0.64 0.71 } scale = { 0.22 0.25 } }
+		instance = { position = { 0.49 0.86 } scale = { 0.22 0.25 } }
+	}
+}
+
+ludlow = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield.dds"
+		color1 = color2
+		color2 = color2
+		color3 = "white"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+minehead = { # Mohun
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_cross_engrailed_shield.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+newport = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_chevron_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.51 } scale = { 0.85 0.85 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_shield_thin.dds"
+		color1 = color3
+		color2 = color3
+	}
+}
+
+norwich = { # Norwich
+	pattern = "pattern_vertical_split_01.dds"
+	color1 = "red_secondary"
+	color2 = "blue_mid"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_rampant_shield_ermine.dds"
+		color1 = color3
+		color2 = color3
+		color3 = "black_secondary"
+		instance = { position = { 0.5 0.475 } scale = { 0.9 0.9 } }
+	}
+}
+
+reigate = { # Reigate
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_bend_lozenges_shield.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
+urquhart = { # Urquhart
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_boar_head.dds"
+		color1 = color2
+		color2 = "red_mid"
+		color3 = "white"
+		instance = { position = { 0.38 0.29 } scale = { 0.475 0.475 }  }
+		instance = { position = { 0.62 0.29 } scale = { 0.475 0.475 }  }
+		instance = { position = { 0.5 0.69 } scale = { 0.475 0.475 }  }
+	}
+}
+
+wigmore = { # Boys
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_barry_escutcheon_mortimer_shield.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
+}
+
+wycombe = { # Basset
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_piles_conjoined_inverted.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
+## MENA ##
+
+khunj = { # Khunj rulers
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eternal_knot_06.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.6 0.6 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}
+}
+
+hashatjin = { # Khalkhal rulers
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "yellow"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.46 } scale = { 0.65 0.65 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_rasulid_central_rosette_08.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.60 0.60 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_shield_top_frame.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.46 } scale = { 0.775 0.775 } }
+	}	
+}
+
+
+
+
+### Misc ###
+
+sjoblad = { # Sten Sture (Sture-Sjobald)
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
@@ -19412,7 +24967,7 @@ sture_dynasty = { # Sten Sture (Sture-Sjobald)
 	}	
 }
 
-finsta_dynasty = { # Family of St Bridget of Sweden
+finsta_dynasty = { # Family of St Bridget of Sweden (she's not lowborn at all)
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
@@ -19426,25 +24981,3 @@ finsta_dynasty = { # Family of St Bridget of Sweden
 	}
 }
 
-lopez_de_ayala_dynasty = { # Lopez de Ayala, condes de Fuensalida - duplicate of Ayala really (same dynasty as Ayala, same arms)
-	pattern = "pattern_solid.dds"
-	color1 = "white"
-	color2 = "black"
-	color3 = "red"
-	color4 = "yellow"
-
-	colored_emblem = {
-		texture = "ce_wolf_passant.dds"
-		color1 = color2
-		color2 = color3
-		color3 = color1
-		instance = { position = { 0.5 0.29 } scale = { 0.525 0.525 } }
-		instance = { position = { 0.5 0.61 } scale = { 0.475 0.475 } }
-	}
-	colored_emblem = {
-		texture = "ce_border_shield_thin_flanchis.dds"
-		color1 = color3
-		color2 = color4
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
-	}
-}

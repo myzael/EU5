@@ -165,7 +165,7 @@ change_explorer = {
 	potential = {
 		scope:actor = {
 			modifier:may_explore = yes
-			num_explorations > 0
+			num_explorations_including_in_construction > 0
 		}
 	}
 	

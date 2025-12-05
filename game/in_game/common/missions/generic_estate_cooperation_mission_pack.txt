@@ -17,6 +17,9 @@
 			country_type = building
 			country_type = pop
 		}
+		any_estate = {
+			count > 2
+		}
 	}
 	select_trigger = {
 		looking_for_a = estate
@@ -28,6 +31,7 @@
 			data = name
 		}
 		visible = {
+			scope:actor = { country_has_estate = root.estate_type }
 			OR = {
 				estate_type = estate_type:nobles_estate
 				estate_type = estate_type:burghers_estate

@@ -650,7 +650,7 @@ nav_adaptability = {
 	law_country_group = NAV
 
 	potential = {
-		tag = NAV
+		has_or_had_tag = NAV
 	}
 
 	belligerent_stance = {
@@ -918,8 +918,8 @@ mesta_council_law = {
 	law_category = administrative
 	potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 		not = { has_variable = abolish_mesta}
 	}
@@ -1051,8 +1051,8 @@ sco_clan_holdings = {
 	
 	potential = {
 		OR = {
-			tag = SCO
-			tag = SBL
+			has_or_had_tag = SCO
+			has_or_had_tag = SBL
 		}
 	}
 

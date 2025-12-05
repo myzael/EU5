@@ -10,7 +10,7 @@
 	join_defensive_wars_always = {
 		always = no
 	}
-	annexation_speed = 0
+	can_be_annexed = no
 	subject_can_cancel = no
 	overlord_can_cancel = yes
 	
@@ -36,6 +36,7 @@
 
 	subject_modifier = {
 		diplomatic_reputation = 2
+		blocked_from_conversion = yes
 	}
 	
 	creation_visible = {

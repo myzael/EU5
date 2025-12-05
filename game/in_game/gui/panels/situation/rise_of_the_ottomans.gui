@@ -126,6 +126,12 @@ situation_panel = {
 								}
 							}
 						}
+						blockoverride "tooltip_ui_action_block" {
+							TooltipUIActionBlock = {
+								visible = no
+								datacontext = "[ExtraTooltipInfo.GetUIAction]"
+							}
+						}
 					}
 				}
 			}

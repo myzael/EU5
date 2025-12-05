@@ -921,7 +921,7 @@ flavor_plc.14 = {
 		country_has_estate = estate_type:cossacks_estate
 		OR = {
 			"estate_power(estate_type:cossacks_estate)" >= 0.25
-			num_estate_privileges:cossacks_estate > 5
+			num_estate_privileges:cossacks_estate > 3
 		}
 		any_owned_location = {
 			plc_cossack_interest_location_trigger = yes
@@ -2059,8 +2059,9 @@ flavor_plc.2004 = {
 	}
 
 	trigger = {
+		exists = c:KUR
 		OR = {
-			c:KUR ?= {
+			c:KUR = {
 				is_ai = yes
 				is_subject_of = ROOT
 			}
@@ -2086,9 +2087,7 @@ flavor_plc.2004 = {
 			every_province_in_province_definition = {
 				limit = {
 					is_owned_by_target_or_subject = { owner = ROOT }
-					c:KUR ?= {
-						prev.owner = this
-					}
+					owner != c:KUR
 				}
 				add_to_list = provinces_to_cede_to_KUR
 			}
@@ -2097,9 +2096,7 @@ flavor_plc.2004 = {
 			every_province_in_province_definition = {
 				limit = {
 					is_owned_by_target_or_subject = { owner = ROOT }
-					c:KUR ?= {
-						prev.owner = this
-					}
+					owner != c:KUR
 				}
 				add_to_list = provinces_to_cede_to_KUR
 			}

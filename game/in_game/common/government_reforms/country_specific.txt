@@ -3,7 +3,7 @@ papacy_reform = {
 	major = yes
 	unique = yes
 	potential = {
-		has_or_had_tag = PAP
+		tag = PAP
 	}
 	allow = {
 	}
@@ -203,6 +203,7 @@ magna_carta_reform = {
 		global_nobles_estate_power = 0.2
 		monthly_towards_free_subjects = societal_value_monthly_move
 		monthly_towards_individualism = societal_value_monthly_move
+		levy_combat_efficiency_modifier = 0.1
 		parliament_base_support = 0.1
 	}
 	years = 2
@@ -336,7 +337,7 @@ tsardom = {
 		religion = religion:orthodox
 	}
 	country_modifier = {
-		global_distance_from_capital_cost_modifier = -0.025
+		global_distance_from_capital_cost_modifier = -0.05
 		peasants_estate_target_satisfaction = large_permanent_target_satisfaction
 	}
 	years = 2
@@ -431,7 +432,10 @@ joint_ruling_monarchy = {
 	potential = {
 		#All Germans
 		culture = { has_culture_group = culture_group:german_group }
+		#Blocked for Fiefdoms
+		NOT = {is_subject_type = fiefdom}
 	}
+	block_for_rebel = yes
 
 	allow = {
 		#All Germans
@@ -1135,7 +1139,7 @@ ottoman_malikane_tax_reform = {
 		has_variable = tur_malikane
 	}
 	country_modifier = {
-		global_monthly_development = 0.003
+		global_monthly_development = 0.001
 		global_production_efficiency = small_production_efficiency_bonus
 		stability_investment = tiny_stability_investment
 		monthly_towards_free_subjects = societal_value_monthly_move
@@ -1374,10 +1378,9 @@ kbo_clan_heads_reform = {
 	}
 
 	country_modifier = {
-		stability_decay = -0.00025
-		global_max_control = -0.05
 		global_crown_estate_power = -0.05
-		nobles_estate_max_tax = 0.15
+		stability_cost = -0.1
+		country_cabinet_efficiency = 0.1
 	}
 	years = 2
 }
@@ -1644,7 +1647,7 @@ tawantinsuyu_monarchy = {
 		has_panaqas = yes
 		can_use_nustas_marriages = yes
 		can_use_aclla_distribution = yes
-		global_monthly_development = 0.002
+		global_monthly_development = 0.001
 		legislative_efficiency = 0.05
 		government_reform_slots = 1
 	}
@@ -1674,7 +1677,7 @@ reformed_tawantinsuyu_government = {
 	country_modifier = {
 		can_use_nustas_marriages = yes
 		can_use_aclla_distribution = yes
-		global_monthly_development = 0.003
+		global_monthly_development = 0.001
 		legislative_efficiency = 0.1
 	}
 }
@@ -1995,7 +1998,7 @@ shogunate = {
 	country_modifier = {
 		court_spending_cost = -0.01
 		appease_nobles_estate_from_shogun_court_cost_modifier = -0.3
-		cultural_influence = 0.2
+		cultural_influence_modifier = 0.2
 		government_reform_slots = 1
 	}
 	years = 2
@@ -2370,10 +2373,9 @@ voivode_reform = {
 		has_advance = voivode_advance
 	}
 	country_modifier = {
-		monthly_towards_plutocracy = societal_value_monthly_move
-		global_monthly_control = 0.001
-		global_distance_from_capital_cost_modifier = -0.10
-		global_manpower_modifier = -0.10
+		monthly_towards_serfdom = societal_value_monthly_move
+		monthly_towards_decentralization = societal_value_monthly_move
+		global_distance_from_capital_cost_modifier = -0.05
 	}
 	years = 2
 }
@@ -2432,6 +2434,7 @@ council_of_ten = {
 		monthly_republican_tradition = 0.05
 		stability_investment = small_stability_investment
 		court_spending_cost = 0.01
+		government_reform_slots = 1
 	}
 	years = 2
 }
@@ -2455,7 +2458,6 @@ full_college = {
 }
 
 signoria_of_venice = {
-	major = yes
 	unique = yes
 	government = republic
 	potential = {
@@ -2677,8 +2679,8 @@ modern_imperial_army = {
 	}
 	country_modifier = {
 		government_reform_slots = 1
-		army_infantry_power = 0.05
-		global_crown_estate_power = 0.15
+		army_maintenance_cost = -0.1
+		monthly_army_tradition = 0.1
 	}
 	years = 2
 }
@@ -2736,7 +2738,7 @@ collegium_reform = {
 		has_variable = collegium
 	}
 	country_modifier = {
-		global_distance_from_capital_cost_modifier = -0.1
+		global_distance_from_capital_cost_modifier = -0.025
 		country_cabinet_efficiency = 0.2
 		legislative_efficiency = 0.2
 	}
@@ -3284,13 +3286,24 @@ anatolian_beylik = {
 		}
 	}
 	locked = {
-		country_rank_level < 3
+		current_year > 1337
+		NOT = { is_situation_active = situation:rise_of_the_ottomans }
 	}
 	country_modifier = {
 		war_on_same_religion_no_cb_cost_modifier = -0.25
 		wrong_culture_levy_size = 0.25
 		government_size = 1
 		government_reform_slots = 1
+	}
+
+	on_activate = {
+		if = {
+			limit = { 
+				is_situation_active = situation:rise_of_the_ottomans 
+				NOT = { has_global_variable_list = eligible_beylik_list }
+			}
+			add_to_global_variable_list = { name = eligible_beylik_list target = root }
+		}
 	}
 	years = 2
 }
@@ -3685,7 +3698,6 @@ mandala_system = {
 }
 
 malian_tribute_system = {
-	major = yes
 	potential = {
 		has_unlocked_government_reform_trigger = { type = malian_tribute_system }
 	}
@@ -3695,6 +3707,8 @@ malian_tribute_system = {
 	country_modifier = {
 		allow_tributary_subject = yes
 		subject_pays_vassal_cost_modifier = 0.3
+		government_size = 1
+		monthly_towards_decentralization = societal_value_minor_monthly_move
 	}
 
 	years = 4
@@ -3865,7 +3879,7 @@ soyurghal_governor_reform = {
 	}
 	country_modifier = {
 		court_spending_cost = 0.02
-		global_monthly_prosperity = 0.005
+		global_monthly_prosperity = 0.002
 	}
 }
 
@@ -3903,7 +3917,7 @@ soyurghal_governor_effective_governor_reform = {
 	}
 	country_modifier = {
 		legislative_efficiency = 0.15
-		global_monthly_prosperity = 0.005
+		global_monthly_prosperity = 0.002
 	}
 }
 
@@ -4180,6 +4194,35 @@ guru_granth_sahib_reform = {
 		army_initiative = 0.1
 		cultural_influence_modifier = 0.05
 		blocked_from_conversion = yes
+	}
+	years = 2
+}
+
+
+alsno_stadga = {
+	age = age_1_traditions
+	government = monarchy
+	potential = {
+		has_or_had_tag = SWE
+	}
+	allow = {
+		has_embraced_institution = institution:legalism
+	}
+	country_modifier = {
+		monthly_towards_free_subjects = societal_value_monthly_move
+		global_nobles_estate_power = 0.1
+		global_estate_target_satisfaction = tiny_permanent_target_satisfaction
+		nobles_estate_levy_size = 0.5
+	}
+	years = 2
+}
+
+shahbandariyya_reform = {
+	unique = yes
+	country_modifier = {
+		global_trade_center_power = 0.1
+		global_merchant_capacity_modifier = 0.2
+		monthly_towards_free_trade = societal_value_monthly_move
 	}
 	years = 2
 }

@@ -108,17 +108,17 @@ mande_language = {
 	male_names = {
 		Faony Gao Kamadia name_maghan Mamadi Mari-Djata name_moses Siara name_salomon name_sundiata Tabon Tiramakhan name_wali name_wati
 		Diara Djamere Dyabe Goleh Kamo Khine Maadi Mayan Soumaba Tunka name_sakura
-		Birama Bubu	Gane Kambine Majan Soumaoro
+		Birama Bubu Gane Kambine Majan Soumaoro
 
 	}
 	female_names = {
 		Amie Birta Fatou name_eve Isatou Kabir Kaddy Makuto Ramata Sogolon
-		Gundo Henda	Kansoleh Siya		
+		Gundo Henda Kansoleh Siya		
 
 	}
 	dynasty_names = {
 		Conde Dembele Diarra Kamara Konate Kone Koulibaly Toure Traore Wana
-		Cisse Kante	Soukhounou Yatabare
+		Cisse Kante Soukhounou Yatabare
 
 	}
 	lowborn = {
@@ -133,16 +133,16 @@ gur_language = {
 	family = north_volta_language_family
 
 	male_names = {
-		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka	Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
+		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
 	}
 	female_names = {
-		Awa	Djeneba	Fatou Guessrima	Kenga Poko Relwende	Sanpoko	Wenkouni Yennega
+		Awa Djeneba Fatou Guessrima Kenga Poko Relwende Sanpoko Wenkouni Yennega
 	}
 	dynasty_names = {
-		Dyan Iisa Kougri Lompo Outtara Moru	Nung Saalu Seydu Sori
+		Dyan Iisa Kougri Lompo Outtara Moru Nung Saalu Seydu Sori
 	}
 	lowborn = {
-		Ablasse	Baaga Boukare Gnounga Karim Kouka Nonraogo Raissa Salam	Tiiga
+		Ablasse Baaga Boukare Gnounga Karim Kouka Nonraogo Raissa Salam Tiiga
 	}
 }
 
@@ -171,7 +171,7 @@ hausa_language = {
 		Hadadangi Hankali Kyaun Sadau Shanono Tijani       
 	}
 	dynasty_names = {
-		Bagauda	Dabo Daura Fulani Gobir Habe Kano Katsina Rano Zango Zaria
+		Bagauda Dabo Daura Fulani Gobir Habe Kano Katsina Rano Zango Zaria
 	}
 	lowborn = {
 		Abashe Alkali Audu Babangida Bakano Barmani Bature Junaidu Madaki Muhktar
@@ -187,7 +187,7 @@ adamawa_language = {
 	male_names = {
 		Yamsay Nyamsi Pambah Chamba
 		#Gur
-		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka	Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
+		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
 	}
 	female_names = {
 		Nahbom Nabong Bingham Bigam Somtoh Samtoh Sumah Sama Assaine Yammah Nyama Onyema Yammoday Nyamoda Yammosoo Nyamusoh
@@ -208,7 +208,7 @@ bua_language = { #https://en.wikipedia.org/wiki/Bua_languages
 	male_names = {
 		Yamsay Nyamsi Pambah Chamba
 		#Gur
-		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka	Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
+		Ablasse Baaga Boukare Diaba Gnounga Karim Kouka Nonraogo Oubri Raissa Rawa Salam Wedraogo Zougrana
 	}
 	female_names = {
 		Nahbom Nabong Bingham Bigam Somtoh Samtoh Sumah Sama Assaine Yammah Nyama Onyema Yammoday Nyamoda Yammosoo Nyamusoh

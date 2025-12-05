@@ -533,7 +533,7 @@ north_german_regular = {
 
 	###SAILORS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/north_german/north_german_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/sailors/north_german_sailors.dds"
 		priority = 6
 		scope = country
 		trigger = {
@@ -545,10 +545,14 @@ north_german_regular = {
 					this = pop_type:peasants
 					AND = {
 						this = pop_type:soldiers
-						modifier:local_sailors >= modifier:local_manpower
+						scope:target_pop ?= {
+							location ?= { modifier:local_sailors >= modifier:local_manpower }
+						}
 					}
 				}
-				location = { 
+			}
+			scope:target_pop ?= {
+				location ?= { 
 					is_port = yes
 					modifier:local_sailors >= 0.01
 				}

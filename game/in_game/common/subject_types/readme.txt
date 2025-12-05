@@ -20,7 +20,8 @@
 # on_disable = <effect> what happens when the subject type is broken. root = subject, former_overlord = overlord
 # on_monthly = <effect> what happens to the subject each month. root = subject
 # level = <int> what level this subject type has. Generally, subjects of lower levels have more autonomy than subjects of higher level; rule of thumb: level 3 is subjects for annexation, level 0 subjects are subjects in name
-# annexation_speed = <float> how fast annexation progresses per month  if 0, it can't be annexed
+# can_be_annexed = <yes/no> mark if the subject type can be annexed in the first place. default: yes
+# annexation_speed = <float script value> how fast annexation progresses per month. root/scope:actor = annexer, scope:target = country to be annexed, default: 1
 # annexation_min_years_before = <int> how many years the subject must have had this relation before they can be annexed
 # annexation_min_opinion = <int> how good the subject's opinion of the overlord must be before annexation can take place
 # annexation_stall_opinion = <int> how good the subject's opinion of the overlord must be before the annexation process is halted
@@ -43,6 +44,7 @@
 # fleet_basing_rights = <yes/no> whether or not the subject gives fleet basing rights to the overlord
 # food_access = <yes/no> whether or not the subject gives food access to the overlord
 # use_overlord_laws = <yes/no> whether or not the subject gives uses the same set of laws and policies as the overlord
+# annulled_by_peace_treaty = <yes/no> whether this subject type gets broken / becomes unavailable when treaties get annulled, default: yes
 # allow_declaring_wars = <trigger> whether or not the subject can declare their own wars. (root = subject type, scope:attacker = subject trying to declare war, scope:defender = country they are trying to declare war on)
 # use_overlord_map_color = <yes/no> whether the subject shows in the same color as the overlord on the map
 # use_overlord_map_name = <yes/no> whether the subject shows in the same name as the overlord on the map

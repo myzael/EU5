@@ -258,6 +258,7 @@
 			}
 		}
 		enabled = {
+			law ?= scope:target
 			scope:recipient = {
 				policy_enabled_to_international_organization = root
 				#if we're proposing a policy, make sure we can't propose what's already implemented
@@ -325,6 +326,10 @@
 							name = io_law_target
 							value = scope:vote
 						}
+						set_variable = {
+							name = ai_io_law_target
+							value = scope:vote
+						}
 					}
 					if = {
 						limit = {
@@ -386,18 +391,30 @@
 			if = {
 				limit = { scope:recipient = { international_organization_type = international_organization_type:union } }
 				scope:recipient = {
+					hidden_effect = { remove_variable = ai_io_law_target }
 					if = {
-						limit = { var:io_current_law = scope:vote }
+						limit = {
+							exists = scope:vote
+							has_variable = io_current_law
+							var:io_current_law = scope:vote
+						}
 						apply_pu_estate_satisfaction_hit = {
 							target = supporters
 							value = estate_satisfaction_severe_penalty
 						}
 					}
-					else = {
+					else_if = {
+						limit = {
+							exists = scope:vote
+							has_variable = io_current_law
+						}
 						apply_pu_estate_satisfaction_hit = {
 							target = opponents
 							value = estate_satisfaction_severe_penalty
 						}
+					}
+					else = {
+						custom_tooltip = apply_pu_estate_satisfaction_hit_tt
 					}
 				}
 			}
@@ -457,6 +474,7 @@
 		}
 		hidden_effect = {
 			scope:recipient = {
+				remove_variable = ai_io_law_target
 				if = {
 					limit = {
 						uses_parliament_for_law_votes_trigger = yes
@@ -632,8 +650,7 @@
 		min = 0
 	}
 
-	ai_will_do = {
-		#add on voting bias from the international organization
+	ai_will_select = {
 		if = {
 			limit = {
 				exists = scope:vote
@@ -642,54 +659,115 @@
 					NOT = { has_cooldown = ai_policy_vote_cooldown }
 				}
 			}
-			add = {
-				desc = "IO_BIAS"
-				value = "ai_issue_voting_bias(scope:actor|scope:recipient|scope:vote)"
-			}
 			#add on voting bias from the policy itself
 			if = {
-				limit = {
-					scope:vote = { policy_has_ai_propose_value = yes }
-					scope:recipient = {
-						OR = {
-							not = { exists = scope:proposer }
-							AND = {
-								has_variable = io_law_proposer
-								var:io_law_proposer = scope:actor
-							}
-						}
-					}
-				}
-				#the proposer should stick with the original reason they proposed it in the first place
+				limit = { scope:vote = { policy_has_ai_propose_value = yes } }
 				add = {
 					desc = "POLICY_PROPOSE_BIAS"
 					value = "scope:vote.ai_policy_resolution_propose_bias(scope:actor|scope:recipient)"
-					if = {
-						limit = {
-							scope:recipient = {
-								international_organization_has_law = scope:target
-								"law_policy(scope:target)" != scope:vote
-							}
-						}
-						subtract = "scope:recipient.law_policy(scope:target).ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
-					}
 				}
 			}
 			else = {
 				add = {
 					desc = "POLICY_VOTE_BIAS"
 					value = "scope:vote.ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
-					if = {
-						limit = {
-							scope:recipient = {
-								international_organization_has_law = scope:target
-								"law_policy(scope:target)" = {
-									this != scope:vote
-								}
-							}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:recipient
+				scope:recipient = { has_cooldown = ai_policy_vote_cooldown }
+			}
+			subtract = {
+				desc = "INERTIA"
+				value = 10000
+			}
+		}
+	}
+
+	ai_will_do = {
+		#add on voting bias from the international organization
+		if = {
+			limit = {
+				exists = scope:vote
+				exists = scope:recipient
+			}
+			add = {
+				desc = "IO_BIAS"
+				value = "ai_issue_voting_bias(scope:actor|scope:recipient|scope:vote)"
+			}
+			#add on voting bias from the policy itself
+			add = {
+				#desc = "POLICY_VOTE_BIAS"
+				value = 0
+				if = {
+					limit = {
+						scope:vote = { policy_has_ai_keep_value = yes }
+						scope:recipient = {
+							international_organization_has_law = scope:target
+							"law_policy(scope:target)" = scope:vote
 						}
-						subtract = "scope:recipient.law_policy(scope:target).ai_policy_resolution_keep_bias(scope:actor|scope:recipient)"
 					}
+					add = "scope:vote.ai_policy_resolution_keep_bias(scope:actor|scope:recipient)"
+				}
+				else = {
+					add = "scope:vote.ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
+				}
+			}
+
+			#Subtract the "we want to keep the current policy" value
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_law = scope:target
+						"law_policy(scope:target)" != scope:vote
+					}
+				}
+				if = {
+					limit = { "scope:recipient.law_policy(scope:target)" = { policy_has_ai_keep_value = yes } }
+					save_temporary_value_as = {
+						name = policy_vote_keep_value
+						value = "scope:recipient.law_policy(scope:target).ai_policy_resolution_keep_bias(scope:actor|scope:recipient)"
+					}
+				}
+				else = {
+					save_temporary_value_as = {
+						name = policy_vote_keep_value
+						value = "scope:recipient.law_policy(scope:target).ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
+					}
+				}
+				if = {
+					limit = { exists = scope:policy_vote_keep_value }
+					if = {
+						limit = { scope:policy_vote_keep_value > 0 }
+						subtract = {
+							desc = "POLICY_WANTS_TO_KEEP_CURRENT_POLICY"
+							value = scope:policy_vote_keep_value
+						}
+					}
+					else = {
+						subtract = {
+							desc = "POLICY_WANTS_TO_REMOVE_CURRENT_POLICY"
+							value = scope:policy_vote_keep_value
+						}
+					}
+				}
+			}
+
+			#Subtract the "we want to vote for the proposed policy" value in case scope:vote = current_policy
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_law = scope:target
+						"law_policy(scope:target)" = scope:vote
+						has_variable = ai_io_law_target
+						var:ai_io_law_target != scope:vote
+					}
+				}
+				subtract = {
+					desc = "POLICY_REASON_TO_VOTE_FOR_PROPOSED_POLICY"
+					value = "scope:recipient.var:ai_io_law_target.ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
 				}
 			}
 
@@ -698,16 +776,6 @@
 				desc = "POLICY_MODIFIER_UTILITY"
 				value = "scope:vote.modifier_utility(scope:actor)"
 				multiply = 4
-			}
-		}
-		if = {
-			limit = {
-				exists = scope:recipient
-				scope:recipient = { has_cooldown = ai_policy_vote_cooldown }
-			}
-			multiply = {
-				desc = "INERTIA"
-				value = 0
 			}
 		}
 	}

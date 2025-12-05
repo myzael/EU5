@@ -739,6 +739,7 @@ flavor_mlo.16 = { #Lodrisio Visconti Approaches a Rival Court
 		add_casus_belli = {
 			target = c:MLO
 			type = casus_belli:cb_claim_throne
+			character = scope:target_character
 		}
 		hidden_effect = {
 			trigger_event_silently = {
@@ -1303,6 +1304,7 @@ flavor_mlo.24 = { #Duomo di Milano
 		location:milano = {
 			has_building_with_at_least_one_level = cathedral
 		}
+		peaceful_and_rich = yes
 	}
 
 	illustration_tags = {
@@ -1619,13 +1621,13 @@ flavor_mlo.29 = { #Petrarch visits Milano
 	}
 
 	trigger = {
-		exists = character:pap_francesco_petrarca
-		character:pap_francesco_petrarca  = {
-			NOT = { owner = ROOT }
+		peaceful_and_rich = yes
+		character:pap_francesco_petrarca = {
 			is_alive = yes
+			NOT = { owner = ROOT }
 		}
 		character:pap_francesco_petrarca.owner = {
-			NOT = {
+			NOR = {
 				is_rival_of = ROOT
 				is_enemy_of = ROOT
 				opinion = {
@@ -1635,8 +1637,8 @@ flavor_mlo.29 = { #Petrarch visits Milano
 			}
 		}
 		has_ruler = yes
-		NOT = {
-			ruler = { has_character_modifier = excommunicated }
+		ruler = {
+			NOT = { has_character_modifier = excommunicated }
 		}
 		owns = location:milano
 	}
@@ -1688,9 +1690,10 @@ flavor_mlo.30 = { #The Metallurgical Center of Milano
 
 	trigger = {
 		owns = location:milano
-		at_war = no
-		any_owned_location = {
-			has_good_mining_raw_material = yes
+		peaceful_and_rich = yes
+		OR = {
+			produced_in_country:iron > 0
+			produced_in_country:copper > 0
 		}
 	}
 
@@ -1702,9 +1705,7 @@ flavor_mlo.30 = { #The Metallurgical Center of Milano
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		random_owned_location = {
-			limit = {
-				has_good_mining_raw_material = yes
-			}
+			limit = { has_good_mining_raw_material = yes }
 			save_scope_as = target_location
 		}
 	}
@@ -1999,6 +2000,7 @@ flavor_mlo.36 = { ##The Palazzo Reale di Milano
 	}
 
 	trigger = {
+		peaceful_and_rich = yes
 		owns = location:milano #If you are Milan and don't own Milano, you have problems
 		location:milano = {
 			OR = {
@@ -2072,8 +2074,11 @@ flavor_mlo.37 = {
 		}
 		ruler = {
 			any_child = {
+				is_alive = yes
+				is_adult = yes
 				is_female = yes
 				is_married = no
+				character_age <= 40
 			}
 		}
 	}
@@ -2088,8 +2093,11 @@ flavor_mlo.37 = {
 		ruler = {
 			random_child = {
 				limit = {
+					is_alive = yes
+					is_adult = yes
 					is_female = yes
 					is_married = no
+					character_age <= 40
 				}
 				save_scope_as = target_spouse
 			}
@@ -2141,6 +2149,7 @@ flavor_mlo.40 = {
 
 	trigger = {
 		has_ruler = yes
+		at_war = no
 		ruler = { has_dynasty = yes }
 		prestige >= 40
 		location:alessandria = {
@@ -2209,6 +2218,7 @@ flavor_mlo.41 = {
 	}
 
 	trigger = {
+		peaceful_and_rich = yes
 		owns = location:milano
 		owns = location:pavia
 	}
@@ -2284,6 +2294,7 @@ flavor_mlo.42 = {
 
 	trigger = {
 		owns = location:pavia
+		peaceful_and_rich = yes
 		location:pavia = {
 			any_work_of_art_in_location = { this = work_of_art:visconti_palace }
 		}
@@ -2397,6 +2408,8 @@ flavor_mlo.44 = {
         10 = regular
         10 = interior
     }
+
+	trigger = { peaceful_and_rich = yes }
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
@@ -2845,6 +2858,7 @@ flavor_mlo.51 = {
 	}
 
 	trigger = {
+		peaceful_and_rich = yes
 		owns = location:pavia
 		has_ruler = yes
 	}
@@ -2865,7 +2879,7 @@ flavor_mlo.51 = {
 	option = {
 		name = flavor_mlo.51.a
 
-		change_gold_effect = { scale = -12 }
+		change_gold_effect = { scale = -2 }
 
 		scope:target_location = {
 			create_art = {

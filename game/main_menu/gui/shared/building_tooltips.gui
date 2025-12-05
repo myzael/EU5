@@ -886,20 +886,9 @@ template building_tooltip_detail {
 								text_single = {
 									raw_text = "[Building.GetBuildingProductionEfficiency(ActiveProductionMethod.GetMethod)|+=2%]"
 									default_format = "@bold!"
-									tooltipwidget = {
-										SimpleContextualStringPairTooltipType = {
-											blockoverride "title_icon" {
-												icon = {
-													using = tooltip_title_icon_size
-													texture = "gfx/interface/icons/flat_icons/building_panel/production_efficiency.dds"
-												}
-											}
-											blockoverride "concept_link" {
-												text = "[production_efficiency|e]"
-											}
-											lowpriotextcontext = "[Building.GetBuildingProductionEfficiencyInfo(ActiveProductionMethod.GetMethod)]"
-										}
-									}
+								}
+								tooltipwidget = {
+									using = building_production_efficiency_tooltip
 								}
 							}
 						}
@@ -915,26 +904,20 @@ template building_tooltip_detail {
                         }
                         expand = {}
                         text_single = {
-                            raw_text = "[Building.GetUpkeep|-=2]@gold!"
+							visible = "[Not(Building.GetType.IsFort)]"
+                            raw_text = "#R [Building.GetUpkeep|2]#!@gold!"
+							default_format = "#bold"
+                        }
+						text_single = {
+							visible = "[Building.GetType.IsFort]"
+                            raw_text = "#R [Building.GetFortMaintenanceValue|2]#!@gold!"
+							default_format = "#bold"
                         }
 						tooltipwidget = {
-							SimpleContextualStringPairTooltipType = {
-								blockoverride "title_icon" {
-									icon = {
-										using = tooltip_title_icon_size
-										texture = "gfx/interface/icons/outliner/categories/buildings.dds"
-									}
-								}
-
-								blockoverride "concept_link" {
-									text = "[building_maintenance|e]"
-								}
-								lowpriotextcontext = "[Building.GetUpkeepInfo]"
-							}
+							using = Building_upkeep_tooltip
 						}
                     }
                 }
-
             }
         }
 	}
@@ -1557,6 +1540,8 @@ template destroy_building_in_location_tt {
 		}
 
 		blockoverride "title_text" {
+			datacontext = "[Building.GetType]"
+			datacontext = "[Building.GetLocation]"
 			text = "BUILDING_IN_LOCATION_TITLE"
 		}
 

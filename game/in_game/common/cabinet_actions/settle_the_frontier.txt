@@ -20,16 +20,7 @@
 		column = { data = name }
 		column = { data = population }
 		visible = {
-			scope:actor = {
-				is_valid_colonial_charter = root
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action ?= cabinet_action:settle_the_frontier
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = settle_the_frontier interaction_target = target } }
 		}
 		enabled = {
 		}

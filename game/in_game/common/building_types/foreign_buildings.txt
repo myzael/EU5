@@ -57,7 +57,7 @@ embassy = {
 		scope:actor.country_rank_level <= owner.country_rank_level
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	

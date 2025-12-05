@@ -116,6 +116,10 @@ countries = {
 				heir_religion_law = heir_same_religion
 			}
 
+			reforms = {
+				alsno_stadga
+			}
+
 
 			centralization_vs_decentralization = 25
 			traditionalist_vs_innovative = 30
@@ -262,7 +266,7 @@ countries = {
 				name_olaf = 1
 				name_eric = 6
 				name_nicholas = 1
-				name_valdemar = 3
+				name_waldemar = 3
 				name_abel = 1
 				name_christopher = 2
 			}
@@ -279,6 +283,7 @@ countries = {
 			laws = {
 				legal_code_law = dan_regional_law
 			}
+			
 
 			#Societal Values
 			centralization_vs_decentralization = 100
@@ -407,9 +412,9 @@ countries = {
 			individualism_vs_communalism = 20
 			outward_vs_inward = -50
 
-		reforms = {
-			harbor_administration
-		}
+			reforms = {
+				harbor_administration
+			}
 
 			privilege = {
 				sponsor_maritime_contracts
@@ -1797,7 +1802,7 @@ countries = {
 				name_olaf = 1
 				name_canute = 2
 				name_magnus = 1
-				name_valdemar = 5
+				name_waldemar = 5
 				name_boris = 1
 				name_christopher = 1
 				name_eric = 2
@@ -1838,7 +1843,7 @@ countries = {
 				name_rudolf = 1
 				name_henry = 1
 				name_john = 1
-				name_charles = 4
+				name_vladislav = 1
 			}
 
 			ruler = boh_john_luxembourg
@@ -3182,7 +3187,6 @@ countries = {
 		}
 
 		starting_technology_level = 3
-		country_rank = rank_duchy
 
 		government = {
 			type = monarchy
@@ -4415,10 +4419,12 @@ countries = {
 				noble_marriage_rights
 				noble_fortification_licenses
 				manorial_courts
+				primacy_of_nobility
 
 				#burghers
 				formal_guilds
 				market_fairs
+				shipwright_contracts
 
 				#clergy
 				clergy_literacy_rights
@@ -4427,6 +4433,7 @@ countries = {
 				#peasants
 				peasants_yeomanry
 				access_to_royal_and_ecclesiastical_courts
+				peasants_allowed_weapons_privilege
 			}
 			laws = {
 				distribution_of_power_law = dop_law_english_parliament
@@ -4830,7 +4837,6 @@ countries = {
 		capital = mann
 
 		tolerated_cultures = { english }
-		country_rank = rank_county
 	}
 
 	MOY = { # Moray
@@ -9803,7 +9809,7 @@ countries = {
 
 		government = {
 			type = republic
-			heir_selection = republic_2_year_terms
+			heir_selection = podesta_elective
 
 			reforms = {
 				signoria_reform
@@ -13944,8 +13950,6 @@ countries = {
 
 			ruler_term = { character = cas_alfonso_vii_burgundy start_date = 1111.9.17 end_date = 1111.11.1 regnal_number = 7 }
 		}
-
-		country_rank = rank_kingdom
 		capital = santiago_compostela
 	}
 
@@ -18139,6 +18143,8 @@ countries = {
 
 		capital = rodos
 		dynasty = villeneuve_dynasty
+
+		country_rank = rank_duchy
 	}
 
 	NEG = { #Negroponte https://en.wikipedia.org/wiki/Triarchy_of_Negroponte

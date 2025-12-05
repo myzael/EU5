@@ -364,6 +364,9 @@ organization_war_theme = {
         }
         #Declare coalition war
         button_regular_diamond = {
+            block "button_regular_diamond_texture" {
+			    texture = "gfx/interface/buttons/button_diamond_red.dds"
+		    }
             size = { 470 30 }
             visible = "[And(Player.IsMemberOfInternationalOrganization(InternationalOrganizationsView.GetInternationalOrganization), InternationalOrganizationsView.GetInternationalOrganization.GetType.HasDeclareWarOnTargetCasusBelli)]"
             enabled = "[InternationalOrganizationsView.CanDeclareWar]"
@@ -376,7 +379,7 @@ organization_war_theme = {
             }
             action_tooltip = {
 				click_type = left
-				title = "WAR_COALITION"
+				title = "RALLY_MOVEMENT_ACTION_TT"
 				on_action = "[InternationalOrganizationsView.DeclareWar]"
 			}
         }

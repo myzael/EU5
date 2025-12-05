@@ -3308,6 +3308,7 @@ flavor_eng.29 = {
 			province ?= {
 				culture_percentage = {
 					culture = culture:highland
+					value > 0.5
 				}
 			}
 		}
@@ -4325,13 +4326,13 @@ flavor_eng.45 = {
         tag = GBR
 		from = 1300.1.1
 		to = 1500.1.1
-		monthly_chance = 20
+		monthly_chance = 33
 	}
 
 
 	trigger = {
 		has_ruler = yes
-		owns = location:york
+		owns_or_non_sovereign_subject_owns = location:york
 		OR = {
 			ruler ?= character:eng_edward_iii
 			ruler.father ?= character:eng_edward_iii
@@ -4372,9 +4373,12 @@ flavor_eng.45 = {
 					father ?= character:eng_edward_iii
 				}
 				save_scope_as = target_character
-				found_dynasty = york_dynasty
-				dynasty = { save_scope_as = target_dynasty }
+				change_dynasty = dynasty:york_dynasty
+				every_descendant = {
+					change_dynasty = dynasty:york_dynasty
+				}				
 			}
+			scope:target_character.dynasty = { save_scope_as = target_dynasty }
 		}
 	}
 
@@ -4382,7 +4386,10 @@ flavor_eng.45 = {
 		name = flavor_eng.45.a
 		show_as_tooltip = {
 			scope:target_character = {
-				found_dynasty = york_dynasty
+				change_dynasty = dynasty:york_dynasty
+				every_descendant = {
+					change_dynasty = dynasty:york_dynasty
+				}				
 			}
 		}
 		add_prestige = prestige_extreme_bonus
@@ -4405,13 +4412,13 @@ flavor_eng.46 = {
         tag = GBR
 		from = 1300.1.1
 		to = 1500.1.1
-		monthly_chance = 20
+		monthly_chance = 33
 	}
 
 
 	trigger = {
 		has_ruler = yes
-		owns = location:lancaster
+		owns_or_non_sovereign_subject_owns = location:lancaster
 		OR = {
 			ruler = character:eng_edward_iii
 			ruler.father ?= character:eng_edward_iii
@@ -4422,6 +4429,7 @@ flavor_eng.46 = {
 				is_ruler = no
 				is_female = no
 				is_adult = yes
+				is_married = no
 				age_in_years < 40
 				is_alive = yes
 			}
@@ -4715,6 +4723,7 @@ flavor_eng.48 = {
 		add_casus_belli = {
 			type = casus_belli:cb_claim_throne
 			target = scope:target_country
+			character = scope:target_head
 		}
 	}
 }
@@ -12878,7 +12887,7 @@ flavor_eng.137 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
-						owner = {
+						owner ?= {
 							OR = {
 								is_subject_type = colonial_nation
 								is_enemy_of = root
@@ -12893,7 +12902,7 @@ flavor_eng.137 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
-						owner = {
+						owner ?= {
 							OR = {
 								is_subject_type = colonial_nation
 								is_enemy_of = root
@@ -12908,7 +12917,7 @@ flavor_eng.137 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
-						owner = {
+						owner ?= {
 							OR = {
 								is_subject_type = colonial_nation
 								is_enemy_of = root
@@ -12923,7 +12932,7 @@ flavor_eng.137 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
-						owner = {
+						owner ?= {
 							OR = {
 								is_subject_type = colonial_nation
 								is_enemy_of = root
@@ -15775,7 +15784,7 @@ flavor_eng.161 = {
 						}
 					}
 					add_migration = {
-						owner = prev
+						owner = ROOT
 						from = this.province_definition
 						to = province_definition:coruna_province
 						culture = culture:irish
@@ -16357,7 +16366,7 @@ flavor_eng.166 = {
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 
 			if = {
@@ -16419,7 +16428,7 @@ flavor_eng.166 = {
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 
 			destroy_building = "building(building_type:globe_theatre|owner)"
@@ -17354,7 +17363,7 @@ flavor_eng.176 = {
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { minor_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -17374,7 +17383,7 @@ flavor_eng.176 = {
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { minor_destroy_building_levels_in_location = yes }
 				}
 			}
 		}

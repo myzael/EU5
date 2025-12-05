@@ -7,5 +7,6 @@
 		join_religious_league
 		leave_religious_league
 		demand_member_removal
+		join_the_league_war
 	}
 }

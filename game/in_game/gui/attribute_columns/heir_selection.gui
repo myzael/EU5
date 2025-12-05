@@ -1,7 +1,7 @@
 types HeirSelectionColumns
 {
 	type heir_selection_succession_info = character_info {
-		size = "[Select_CVector2f(GreaterThan_int32(Player.GetGovernment.GetHeirCandidatesCountFor(InteractionTarget.GetHeirSelection), '(int32)0'), '(CVector2f)-1,115', '(CVector2f)-1,65')]"
+		size = "[Select_CVector2f(Or(GreaterThan_int32(Player.GetGovernment.GetHeirCandidatesCountFor(InteractionTarget.GetHeirSelection), '(int32)0'), EqualTo_string(InteractionTarget.GetHeirSelection.GetKey, 'fratricide_succesion')), '(CVector2f)-1,120', '(CVector2f)-1,65')]"
 
 		blockoverride "ui_action_setup" {
 			using = select_interaction_target_action_provider
@@ -204,7 +204,7 @@ types HeirSelectionColumns
 				}
 
 				text_multi = {
-					margin = { 7 5 }
+					margin = { 7 10 }
 					visible = "[Not(InteractionTarget.GetHeirSelection.ShouldShowCandidates)]"
 					layoutpolicy_horizontal = expanding
 					using = Font_Size_Small
@@ -222,6 +222,9 @@ types HeirSelectionColumns
 					spacing = 10
 
 					character_frame_small = {
+						blockoverride "character_portrait_visible" {
+							visible = "[GreaterThan_int32(Player.GetGovernment.GetHeirCandidatesCountFor(InteractionTarget.GetHeirSelection), '(int32)0')]"
+						}
 						datacontext = "[Player.GetGovernment.GetBestHeirCandidateFor(InteractionTarget.GetHeirSelection)]"
 						blockoverride "character_frame_texture" {
 							texture = "gfx/interface/component_decoration/character_frames/character_non_stretchable_frame_2.dds"

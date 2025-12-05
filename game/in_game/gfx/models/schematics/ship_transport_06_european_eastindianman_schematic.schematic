@@ -8,17 +8,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=48
+					linked_node=53
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=57
+					linked_node=62
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=50
+					linked_node=55
 					linked_pin="value"
 				}
 			}
@@ -30,17 +30,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=56
+					linked_node=61
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=46
+					linked_node=51
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=55
+					linked_node=60
 					linked_pin="value"
 				}
 			}
@@ -52,17 +52,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=58
+					linked_node=63
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=59
+					linked_node=64
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=53
+					linked_node=58
 					linked_pin="value"
 				}
 			}
@@ -74,17 +74,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=61
+					linked_node=66
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=47
+					linked_node=52
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=45
+					linked_node=50
 					linked_pin="value"
 				}
 			}
@@ -96,17 +96,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=65
+					linked_node=70
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=63
+					linked_node=68
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=52
+					linked_node=57
 					linked_pin="value"
 				}
 			}
@@ -118,17 +118,17 @@ graph={
 			inputs={
 				link={
 					pin_id="yaw"
-					linked_node=67
+					linked_node=72
 					linked_pin="value"
 				}
 				link={
 					pin_id="pitch"
-					linked_node=66
+					linked_node=71
 					linked_pin="value"
 				}
 				link={
 					pin_id="roll"
-					linked_node=51
+					linked_node=56
 					linked_pin="value"
 				}
 			}
@@ -140,12 +140,12 @@ graph={
 			inputs={
 				link={
 					pin_id="audio_switch_name"
-					linked_node=72
+					linked_node=78
 					linked_pin="value"
 				}
 				link={
 					pin_id="audio_switch_state"
-					linked_node=73
+					linked_node=79
 					linked_pin="value"
 				}
 			}
@@ -158,27 +158,27 @@ graph={
 			inputs={
 				link={
 					pin_id="is_multi_directions_emitter"
-					linked_node=38
+					linked_node=41
 					linked_pin="value"
 				}
 				link={
 					pin_id="is_multi_sources_emitter"
-					linked_node=37
+					linked_node=40
 					linked_pin="value"
 				}
 				link={
 					pin_id="is_dynamic_multi_position_emitter_group"
-					linked_node=36
+					linked_node=39
 					linked_pin="value"
 				}
 				link={
 					pin_id="dynamic_multi_position_grouping_radius"
-					linked_node=69
+					linked_node=74
 					linked_pin="value"
 				}
 				link={
 					pin_id="dynamic_multi_position_grouping_size"
-					linked_node=71
+					linked_node=77
 					linked_pin="value"
 				}
 				link={
@@ -192,7 +192,7 @@ graph={
 			id=8
 			node={
 				mesh_name="ship_transport_06_european_eastindianman_mesh"
-				inputs={ "Lod_Override_0" }
+				inputs={ "Lod_Override_0" "Lod_Override_1" "Lod_Override_2" }
 			}
 			inputs={
 			}
@@ -227,7 +227,7 @@ graph={
 		pdxns:ecs:animation_state_machine={
 			id=12
 			node={
-				state_machine_name="ship_with_cannons_unit_state_machine"
+				state_machine_name="ship_with_3_cannons_unit_state_machine"
 			}
 			inputs={
 			}
@@ -292,12 +292,12 @@ graph={
 				}
 				link={
 					pin_id="children"
-					linked_node=76
+					linked_node=24
 					linked_pin="child_attachment"
 				}
 				link={
 					pin_id="components"
-					linked_node=31
+					linked_node=34
 					linked_pin="skeleton"
 				}
 				link={
@@ -307,13 +307,13 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=12
-					linked_pin="state_machine_components"
+					linked_node=7
+					linked_pin="emitter_instance"
 				}
 				link={
 					pin_id="components"
-					linked_node=7
-					linked_pin="emitter_instance"
+					linked_node=12
+					linked_pin="state_machine_components"
 				}
 			}
 		}
@@ -332,7 +332,7 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=33
+					linked_node=36
 					linked_pin="unit_coa_component"
 				}
 			}
@@ -352,7 +352,7 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=33
+					linked_node=36
 					linked_pin="unit_coa_component"
 				}
 			}
@@ -372,7 +372,7 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=33
+					linked_node=36
 					linked_pin="unit_coa_component"
 				}
 			}
@@ -393,12 +393,12 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=29
+					linked_node=30
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 			}
@@ -419,12 +419,12 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=28
+					linked_node=29
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 			}
@@ -445,12 +445,12 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=27
+					linked_node=28
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 			}
@@ -471,17 +471,17 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=26
+					linked_node=27
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=30
+					linked_node=32
 					linked_pin="particle_emitter"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 				link={
@@ -507,17 +507,17 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=25
+					linked_node=26
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=30
+					linked_node=32
 					linked_pin="particle_emitter"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 				link={
@@ -548,23 +548,23 @@ graph={
 				}
 				link={
 					pin_id="components"
-					linked_node=30
+					linked_node=32
 					linked_pin="particle_emitter"
 				}
 				link={
 					pin_id="components"
-					linked_node=32
+					linked_node=35
 					linked_pin="skeleton"
 				}
 				link={
 					pin_id="components"
-					linked_node=24
+					linked_node=25
 					linked_pin="local_transform"
 				}
 			}
 		}
 		pdxns:ecs:child_assemble_entity={
-			id=76
+			id=24
 			node={
 				attachto="ship_transport_06_european_eastindianman_mesh"
 				key="PTG|ship_transport_06_european_eastindianman_mesh"
@@ -574,18 +574,35 @@ graph={
 			inputs={
 				link={
 					pin_id="components"
-					linked_node=74
+					linked_node=31
 					linked_pin="local_transform"
 				}
 				link={
 					pin_id="components"
-					linked_node=75
+					linked_node=33
 					linked_pin="particle_emitter"
 				}
 			}
 		}
 		pdxns:ecs:create_local_transform={
-			id=24
+			id=25
+			node={
+			}
+			inputs={
+				link={
+					pin_id="translation"
+					linked_node=48
+					linked_pin="value"
+				}
+				link={
+					pin_id="scale"
+					linked_node=59
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:ecs:create_local_transform={
+			id=26
 			node={
 			}
 			inputs={
@@ -602,52 +619,18 @@ graph={
 			}
 		}
 		pdxns:ecs:create_local_transform={
-			id=25
-			node={
-			}
-			inputs={
-				link={
-					pin_id="translation"
-					linked_node=40
-					linked_pin="value"
-				}
-				link={
-					pin_id="scale"
-					linked_node=49
-					linked_pin="value"
-				}
-			}
-		}
-		pdxns:ecs:create_local_transform={
-			id=26
-			node={
-			}
-			inputs={
-				link={
-					pin_id="translation"
-					linked_node=42
-					linked_pin="value"
-				}
-				link={
-					pin_id="scale"
-					linked_node=60
-					linked_pin="value"
-				}
-			}
-		}
-		pdxns:ecs:create_local_transform={
 			id=27
 			node={
 			}
 			inputs={
 				link={
 					pin_id="translation"
-					linked_node=41
+					linked_node=46
 					linked_pin="value"
 				}
 				link={
 					pin_id="scale"
-					linked_node=68
+					linked_node=65
 					linked_pin="value"
 				}
 			}
@@ -659,12 +642,12 @@ graph={
 			inputs={
 				link={
 					pin_id="translation"
-					linked_node=43
+					linked_node=45
 					linked_pin="value"
 				}
 				link={
 					pin_id="scale"
-					linked_node=62
+					linked_node=73
 					linked_pin="value"
 				}
 			}
@@ -676,61 +659,78 @@ graph={
 			inputs={
 				link={
 					pin_id="translation"
-					linked_node=39
+					linked_node=47
 					linked_pin="value"
 				}
 				link={
 					pin_id="scale"
-					linked_node=64
+					linked_node=67
 					linked_pin="value"
 				}
 			}
 		}
 		pdxns:ecs:create_local_transform={
-			id=74
+			id=30
 			node={
 			}
 			inputs={
 				link={
 					pin_id="translation"
-					linked_node=77
+					linked_node=43
 					linked_pin="value"
 				}
 				link={
 					pin_id="scale"
-					linked_node=78
+					linked_node=69
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:ecs:create_local_transform={
+			id=31
+			node={
+			}
+			inputs={
+				link={
+					pin_id="translation"
+					linked_node=49
+					linked_pin="value"
+				}
+				link={
+					pin_id="scale"
+					linked_node=75
 					linked_pin="value"
 				}
 			}
 		}
 		pdxns:ecs:create_particle_component={
-			id=30
+			id=32
 			node={
 				value="cannon_explosion_v3"
 			}
 			inputs={
 				link={
 					pin_id="enabled"
-					linked_node=35
+					linked_node=38
 					linked_pin="value"
 				}
 			}
 		}
 		pdxns:ecs:create_particle_component={
-			id=75
+			id=33
 			node={
 				value="ships/early_carrack_waves_moving"
 			}
 			inputs={
 				link={
 					pin_id="enabled"
-					linked_node=79
+					linked_node=42
 					linked_pin="value"
 				}
 			}
 		}
 		pdxns:ecs:create_skeleton_component={
-			id=31
+			id=34
 			node={
 				value="ship_transport_06_european_eastindianman_mesh"
 			}
@@ -738,7 +738,7 @@ graph={
 			}
 		}
 		pdxns:ecs:create_skeleton_component={
-			id=32
+			id=35
 			node={
 				value="cannon_door_mesh"
 			}
@@ -746,51 +746,27 @@ graph={
 			}
 		}
 		pdxns:ecs:create_unitcoa_component={
-			id=33
+			id=36
 			node={
 				value="-- SELECT FROM PIN --"
 			}
 			inputs={
 				link={
 					pin_id="Country Index"
-					linked_node=70
+					linked_node=76
 					linked_pin="value"
 				}
 				link={
 					pin_id="Use for units"
-					linked_node=34
+					linked_node=37
 					linked_pin="value"
 				}
-			}
-		}
-		pdxns:values:Bool={
-			id=34
-			node={
-				value=yes
-			}
-			inputs={
-			}
-		}
-		pdxns:values:Bool={
-			id=35
-			node={
-				value=no
-			}
-			inputs={
-			}
-		}
-		pdxns:values:Bool={
-			id=36
-			node={
-				value=no
-			}
-			inputs={
 			}
 		}
 		pdxns:values:Bool={
 			id=37
 			node={
-				value=no
+				value=yes
 			}
 			inputs={
 			}
@@ -804,41 +780,33 @@ graph={
 			}
 		}
 		pdxns:values:Bool={
-			id=79
+			id=39
 			node={
 				value=no
 			}
 			inputs={
 			}
 		}
-		pdxns:values:ConstVector3f={
-			id=39
-			node={
-				value={ 0.000000 -0.150000 0.000000 }
-			}
-			inputs={
-			}
-		}
-		pdxns:values:ConstVector3f={
+		pdxns:values:Bool={
 			id=40
 			node={
-				value={ 0.000000 -0.150000 0.000000 }
+				value=no
 			}
 			inputs={
 			}
 		}
-		pdxns:values:ConstVector3f={
+		pdxns:values:Bool={
 			id=41
 			node={
-				value={ 0.000000 -0.150000 0.000000 }
+				value=no
 			}
 			inputs={
 			}
 		}
-		pdxns:values:ConstVector3f={
+		pdxns:values:Bool={
 			id=42
 			node={
-				value={ 0.000000 -0.150000 0.000000 }
+				value=no
 			}
 			inputs={
 			}
@@ -860,49 +828,41 @@ graph={
 			}
 		}
 		pdxns:values:ConstVector3f={
-			id=77
-			node={
-				value={ 0.000000 0.050000 -3.700000 }
-			}
-			inputs={
-			}
-		}
-		pdxns:values:Float={
 			id=45
 			node={
-				value=0.000000
+				value={ 0.000000 -0.150000 0.000000 }
 			}
 			inputs={
 			}
 		}
-		pdxns:values:Float={
+		pdxns:values:ConstVector3f={
 			id=46
 			node={
-				value=0.000000
+				value={ 0.000000 -0.150000 0.000000 }
 			}
 			inputs={
 			}
 		}
-		pdxns:values:Float={
+		pdxns:values:ConstVector3f={
 			id=47
 			node={
-				value=0.000000
+				value={ 0.000000 -0.150000 0.000000 }
 			}
 			inputs={
 			}
 		}
-		pdxns:values:Float={
+		pdxns:values:ConstVector3f={
 			id=48
 			node={
-				value=180.000000
+				value={ 0.000000 -0.150000 0.000000 }
 			}
 			inputs={
 			}
 		}
-		pdxns:values:Float={
+		pdxns:values:ConstVector3f={
 			id=49
 			node={
-				value=1.000000
+				value={ 0.000000 0.050000 -3.700000 }
 			}
 			inputs={
 			}
@@ -934,7 +894,7 @@ graph={
 		pdxns:values:Float={
 			id=53
 			node={
-				value=0.000000
+				value=180.000000
 			}
 			inputs={
 			}
@@ -958,7 +918,7 @@ graph={
 		pdxns:values:Float={
 			id=56
 			node={
-				value=180.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -974,7 +934,7 @@ graph={
 		pdxns:values:Float={
 			id=58
 			node={
-				value=180.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -982,7 +942,7 @@ graph={
 		pdxns:values:Float={
 			id=59
 			node={
-				value=0.000000
+				value=1.000000
 			}
 			inputs={
 			}
@@ -990,7 +950,7 @@ graph={
 		pdxns:values:Float={
 			id=60
 			node={
-				value=1.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -1006,7 +966,7 @@ graph={
 		pdxns:values:Float={
 			id=62
 			node={
-				value=1.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -1014,7 +974,7 @@ graph={
 		pdxns:values:Float={
 			id=63
 			node={
-				value=0.000000
+				value=180.000000
 			}
 			inputs={
 			}
@@ -1022,7 +982,7 @@ graph={
 		pdxns:values:Float={
 			id=64
 			node={
-				value=1.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -1030,7 +990,7 @@ graph={
 		pdxns:values:Float={
 			id=65
 			node={
-				value=180.000000
+				value=1.000000
 			}
 			inputs={
 			}
@@ -1038,7 +998,7 @@ graph={
 		pdxns:values:Float={
 			id=66
 			node={
-				value=0.000000
+				value=180.000000
 			}
 			inputs={
 			}
@@ -1046,7 +1006,7 @@ graph={
 		pdxns:values:Float={
 			id=67
 			node={
-				value=180.000000
+				value=1.000000
 			}
 			inputs={
 			}
@@ -1054,7 +1014,7 @@ graph={
 		pdxns:values:Float={
 			id=68
 			node={
-				value=1.000000
+				value=0.000000
 			}
 			inputs={
 			}
@@ -1062,13 +1022,53 @@ graph={
 		pdxns:values:Float={
 			id=69
 			node={
+				value=1.000000
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=70
+			node={
+				value=180.000000
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=71
+			node={
 				value=0.000000
 			}
 			inputs={
 			}
 		}
 		pdxns:values:Float={
-			id=78
+			id=72
+			node={
+				value=180.000000
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=73
+			node={
+				value=1.000000
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=74
+			node={
+				value=0.000000
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=75
 			node={
 				value=1.200000
 			}
@@ -1076,7 +1076,7 @@ graph={
 			}
 		}
 		pdxns:values:Int32={
-			id=70
+			id=76
 			node={
 				value=1
 			}
@@ -1084,7 +1084,7 @@ graph={
 			}
 		}
 		pdxns:values:Int32={
-			id=71
+			id=77
 			node={
 				value=0
 			}
@@ -1092,7 +1092,7 @@ graph={
 			}
 		}
 		pdxns:values:String={
-			id=72
+			id=78
 			node={
 				value=NavyShipType
 			}
@@ -1100,7 +1100,7 @@ graph={
 			}
 		}
 		pdxns:values:String={
-			id=73
+			id=79
 			node={
 				value=Transport
 			}

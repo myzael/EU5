@@ -23,6 +23,8 @@ seat_of_metropolitan_bishop = {
 	}
 	global_pop_conversion_speed_modifier = 0.1
 	tolerance_own = 1
+
+	requires = renaissance_city_rights
 }
 pomestnoe_voisko = {
 	age = age_3_discovery

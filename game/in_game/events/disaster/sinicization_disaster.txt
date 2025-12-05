@@ -88,8 +88,9 @@ sinicization_disaster.2 = { #Cabinet Member Holds Chinese Sympathies
 	image = "gfx/interface/illustrations/disaster/sinicization_disaster.dds"
 
 	trigger = {
-		any_cabinet_character = {
-			not = { culture = scope:target_emperor_scope.culture }
+		exists = scope:target_emperor_scope.culture
+		any_cabinet_character ?= {
+			not = { culture ?= scope:target_emperor_scope.culture }
 			not = { has_variable = character_cooldown_variable }
 		}
 	}
@@ -98,7 +99,7 @@ sinicization_disaster.2 = { #Cabinet Member Holds Chinese Sympathies
 		chi_scopes = yes
 		random_cabinet_character = {
 			limit = { 
-				not = { culture = scope:target_emperor_scope.culture }
+				not = { culture ?= scope:target_emperor_scope.culture }
 				not = { has_variable = character_cooldown_variable }
 			}
 			save_scope_as = target_character

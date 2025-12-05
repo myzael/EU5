@@ -7,7 +7,7 @@ baronial_burghs_rights = {
 	}
 	allow = {
 		OR = {
-			tag = SCO
+			has_or_had_tag = SCO
 			culture = culture:scottish
 		}
 		NOR = {
@@ -62,7 +62,7 @@ ecclesiastical_burghs_rights = {
 	}
 	allow = {
 		OR = {
-			tag = SCO
+			has_or_had_tag = SCO
 			culture = culture:scottish
 		}
 		NOR = {
@@ -107,7 +107,7 @@ compulsory_education_nobles = {
 	}
 	allow = {
 		OR = {
-			tag = SCO
+			has_or_had_tag = SCO
 			culture = culture:scottish
 		}
 		has_advance = university_advance
@@ -139,7 +139,7 @@ presbyterian_education = {
 	}
 	allow = {
 		OR = {
-			tag = SCO
+			has_or_had_tag = SCO
 			culture = culture:scottish
 		}
 		religion = religion:calvinist
@@ -171,7 +171,7 @@ found_college_of_justice = {
 	}
 	allow = {
 		OR = {
-			tag = SCO
+			has_or_had_tag = SCO
 			culture = culture:scottish
 		}
 		NOR = {
@@ -201,7 +201,7 @@ establish_the_signoria_of_venice = {
 
 	}
 	allow = {
-		tag = VEN
+		has_or_had_tag = VEN
 		has_reform = government_reform:council_of_forty
 		NOT = { has_unlocked_government_reform_trigger = { type = signoria_of_venice } }
 		has_unlocked_parliament_issue_trigger = { type = establish_the_signoria_of_venice }
@@ -228,7 +228,7 @@ appease_english_population = {
 		diplomatic_capacity = 1
 	}
 	allow = {
-		tag = NED
+		has_or_had_tag = NED
 		has_unlocked_parliament_issue_trigger = {
 			type = appease_english_population
 		}
@@ -292,7 +292,7 @@ increase_control_in_britain = {
 		global_monthly_control = 0.001
 	}
 	allow = {
-		tag = NED
+		has_or_had_tag = NED
 		has_unlocked_parliament_issue_trigger = {
 			type = increase_control_in_britain
 		}

@@ -132,7 +132,7 @@ hunhunahpu_god = { #god of fertility and the ballgame
 
 	country_modifier = {
 		global_life_expectancy = 3
-		global_population_growth = 0.0005
+		global_population_growth = 0.0002
 	}
 }
 

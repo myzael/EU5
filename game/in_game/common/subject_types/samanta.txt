@@ -26,7 +26,7 @@ samanta = {
 		always = yes
 	}
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 	subject_can_cancel = yes
 	overlord_can_cancel = yes
 	has_limited_diplomacy = yes
@@ -230,7 +230,7 @@ pradhana_maha_samanta = {
 		always = yes
 	}
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 
 	war_score_cost = 0.5
 

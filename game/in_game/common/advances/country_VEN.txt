@@ -61,7 +61,8 @@ ven_printing_industry = {
 	potential = {
 		has_or_had_tag = VEN
 	}
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	global_books_output_modifier = 0.1
+	global_paper_output_modifier = 0.1
 	requires = diplomatic_training
 }
 

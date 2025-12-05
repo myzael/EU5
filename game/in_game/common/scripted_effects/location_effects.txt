@@ -307,6 +307,7 @@ create_some_heretics = {
 				}
 				order_by = pop_size
 				max = 2
+				check_range_bounds = no
 				split_pop = {
 					fraction = { 0.04 0.07 }
 					religion = religion:lollardy
@@ -324,6 +325,43 @@ create_some_heretics = {
 					religion = religion:waldensian
 				}
 			}
+		}
+	}
+}
+
+
+#To be used inside location - > building calculations
+#Root = location
+#Prev = building
+minor_destroy_building_levels_in_location = {
+	change_building_level_in_location = {
+		building = prev
+		value = {
+			add = prev.building_level
+			multiply = { -0.1 -0.2 }
+			floor = yes
+		}
+	}
+}
+
+major_destroy_building_levels_in_location = {
+	change_building_level_in_location = {
+		building = prev
+		value = {
+			add = prev.building_level
+			multiply = { -0.2 -0.3 }
+			floor = yes
+		}
+	}
+}
+
+catastrophic_destroy_building_levels_in_location = {
+	change_building_level_in_location = {
+		building = prev.building_type
+		value = {
+			add = prev.building_level
+			multiply = { -0.3 -0.4 }
+			floor = yes
 		}
 	}
 }

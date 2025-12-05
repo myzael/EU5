@@ -227,17 +227,7 @@ theocratic_flavor.9 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-	}
 	
-	option = {
-		name = theocratic_flavor.9.a
-		if = {
-			limit = {
-				religion = religion:catholic
-			}
-			add_religious_influence = religious_influence_mild_bonus
-		}
-		
 		ordered_owned_location = {
 			order_by = population
 			limit = {
@@ -253,9 +243,37 @@ theocratic_flavor.9 = {
 				}
 			}
 			check_range_bounds = no
+
+			add_to_list = theocratic_flavor_9_list
 			every_pop = {
+				limit = {}
 				split_pop = {
 					fraction = 0.10
+					religion = root.religion
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = theocratic_flavor.9.a
+		if = {
+			limit = {
+				religion = religion:catholic
+			}
+			add_religious_influence = religious_influence_mild_bonus
+		}
+		
+		random_in_list = {
+			list = theocratic_flavor_9_list
+
+			ordered_pop = {
+				limit = { religion != root.religion }
+				order_by = pop_size
+				max = 4
+				check_range_bounds = no
+				split_pop = {
+					fraction = { 0.08 0.12 }
 					religion = root.religion
 				}
 			}

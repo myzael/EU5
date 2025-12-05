@@ -676,6 +676,7 @@ red_turban_rebellions.2 = {
 ##########################
 #Han Shantong Rebellion (rtr_release_tag_CSO)
 red_turban_rebellions.3 = {
+	randomlog = yes # Tracking Desync 20251120
 	type = country_event
 	category = situation_event
 	title = red_turban_rebellions.release_tag.title
@@ -1213,6 +1214,7 @@ red_turban_rebellions.6 = {
 
 #The bandit Zhang Shicheng (rtr_release_tag_WUU)
 red_turban_rebellions.7 = {
+	randomlog = yes # Tracking Desync 20251120
 	type = country_event
 	category = situation_event
 	title = red_turban_rebellions.release_tag.title
@@ -3099,6 +3101,7 @@ scripted_trigger rtr_manchu_to_release_trigger = {
 
 }
 red_turban_rebellions.42 = {
+	randomlog = yes # Tracking Desync 20251120
 	type = country_event
 	category = situation_event
 	title = red_turban_rebellions.42.title

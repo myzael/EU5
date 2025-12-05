@@ -44,16 +44,21 @@ flavor_dan_teu.1 = {
 					limit = {
 						owner = root
 						culture = culture:estonian
-
+					}
+					split_pop = {
+						fraction = 0.75
+						religion = religion:muinaisusko
+					}
+				}
+				every_pop = {
+					limit = {
+						owner = root
+						culture = culture:estonian
 					}
 					save_scope_as = target_pop
 					save_scope_as = target_pop_bckg
 					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 					change_pop_allegiance = scope:estonian_uprising
-					split_pop = {
-						fraction = 0.75
-						religion = religion:muinaisusko
-					}
 				}
 			}
 		}

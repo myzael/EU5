@@ -144,7 +144,7 @@ overextension.6 = {
 				country = root
 				key = merchant_recalled
 				months = 120
-				power = -10.00
+				power = merchant_power_weak_penalty
 			}
 		}
 	}
@@ -189,7 +189,7 @@ overextension.7 = {
 				country = root
 				key = merchant_recalled
 				months = 24
-				power = -50.00
+				power = merchant_power_severe_penalty
 			}
 		}
 	}

@@ -632,10 +632,17 @@ template subjects_header_content {
 		}
 
 		icon = {
-			visible = "[SubjectItem.IsCountry]"
+			visible = "[And(SubjectItem.IsCountry, Not(Player.HasModifier('force_convert_created_subjects')))]"
 			align = left|nobaseline
 			size = { 30 30 }
 			texture = "[GetReligionIcon(Country.GetReligion)]"
+		}
+
+		icon = {
+			visible = "[And(SubjectItem.IsCountry, Player.HasModifier('force_convert_created_subjects'))]"
+			align = left|nobaseline
+			size = { 30 30 }
+			texture = "[GetReligionIcon(Player.GetReligion)]"
 		}
 
 		text_single = {

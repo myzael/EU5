@@ -735,118 +735,7 @@ pausepopup=no
 message_category = diplomacy
 }
 
-MILALLACCEPT={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
 
-MILALLWEACCEPT={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-
-MILLALLINVACCEPTOTHER={
-log=yes
-onmap=no
-popup=no
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-
-MILALLWEBAN={
-log=yes
-onmap=no
-popup=no
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-MILALLBAN={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-MILALLBANOTHER={
-log=no
-onmap=no
-popup=no
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-
-GUARATOUS={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-GUARATOOTHER={
-log=yes
-onmap=no
-popup=no
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-WEGUARAT={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-REVOKEGUARATOUS={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-REVOKEGUARATOOTHER={
-log=yes
-onmap=no
-popup=no
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
-WEREVOKEGUARAT={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
 
 DECLWAR={
 log=yes
@@ -1265,15 +1154,7 @@ option=yes
 pausepopup=no
 message_category = diplomacy
 }
-GUAREJECT={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=yes
-pausepopup=no
-message_category = diplomacy
-}
+
 
 WEINSULT={
 log=yes
@@ -5333,6 +5214,37 @@ option=yes
 pausepopup=no
 message_category = geopolitics
 }
+
+PERFORM_remove_cardinal_seat_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = geopolitics
+}
+
+WE_PERFORM_remove_cardinal_seat_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = geopolitics
+}
+
+WE_PERFORM_remove_cardinal_seat_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = geopolitics
+}
+
 
 PERFORM_periphora_ACTION={
 log=yes
@@ -10137,24 +10049,8 @@ option=no
 pausepopup=no
 message_category = diplomacy
 }
-PERFORM_expand_own_treasury_ACTION={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=no
-pausepopup=no
-message_category = diplomacy
-}
-PERFORM_recruit_organization_manpower_ACTION={
-log=yes
-onmap=no
-popup=yes
-idle=no
-option=no
-pausepopup=no
-message_category = diplomacy
-}
+
+
 
 WE_PERFORM_join_religious_league_ACTION={
 log=yes
@@ -10204,6 +10100,25 @@ pausepopup=no
 message_category = diplomacy
 }
 OTHER_PERFORMS_demand_member_removal_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+
+WE_PERFORM_join_the_league_war_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = diplomacy
+}
+OTHER_PERFORMS_join_the_league_war_ACTION={
 log=yes
 onmap=no
 popup=no
@@ -10957,6 +10872,17 @@ option = yes
 pausepopup = no
 message_category = diplomacy
 }
+
+PERFORM_hyw_defect_action_ACTION = {
+log = yes
+onmap = no
+popup = no
+idle = no
+option = yes
+pausepopup = no
+message_category = diplomacy
+}
+
 
 
 PERFORM_spread_revolutionary_sentiment_ACTION = {

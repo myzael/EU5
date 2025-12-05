@@ -330,7 +330,7 @@ flavor_kbo.9 = { #Trade Through the Sahel
 			market = {
 				add_merchant_power = {
 					country = c:KBO
-					power = 32
+					power = merchant_power_mild_bonus
 					months = 24
 					key = kanem_presence_key
 				}

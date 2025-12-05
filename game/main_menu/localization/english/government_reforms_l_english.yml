@@ -216,6 +216,8 @@
  #
  # Specific ones
  #
+ alsno_stadga: "Alsnö Stadga"
+ alsno_stadga_desc: "This set of rules was set up by [GetCharacter('swe_magnus_ladulas').GetName] in 1280 at Alsnö Hus to regulate and formalize the benefits of the [ShowEstateTypeName('nobles_estate')], while also protecting the [ShowPopTypeName('peasants')] from their exploits. This is why he was nicknamed 'Ladulås', or "Barn-Lock" in English by the commoners."
  papacy_reform: "Holy See"
  papacy_reform_desc: "The Holy See is the jurisdiction of the Bishop of [ShowLocationName('rome')], the #italic Pontifex Maximus#!, head of the [ShowReligionAdjective('catholic')] Church, known as The [GetCountry('PAP').GetGovernment.GetRulerTitle]."
  kingdom_of_god_reform: "Kingdom of God"
@@ -706,3 +708,7 @@
  #Sikhism
  guru_granth_sahib_reform: "$guru_granth_sahib$"
  guru_granth_sahib_reform_desc: "$guru_granth_sahib_desc$"
+
+#Malacca Formable 
+ shahbandariyya_reform: "Shāhbandariyya"
+ shahbandariyya_reform_desc: "$shahbandar_desc$"

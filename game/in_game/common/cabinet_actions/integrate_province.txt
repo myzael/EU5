@@ -33,15 +33,7 @@
 			data = population
 		}
 		visible = {
-			scope:actor = {
-				NOT = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action = cabinet_action:integrate_province
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = integrate_province interaction_target = target } }
 			any_location_in_province = {
 				integration_level = conquered
 			}

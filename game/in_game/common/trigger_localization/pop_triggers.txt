@@ -27,7 +27,7 @@ pop_satisfaction= {
 pop_character_chance= {
 	none = NONE_POP_CHARACTER_CHANCE_TRIGGER
 	global = POP_CHARACTER_CHANCE_TRIGGER
-	third = THIRD_POPCHARACTER_CHANCE_TRIGGER
+	third = THIRD_POP_CHARACTER_CHANCE_TRIGGER
 }
 
 

@@ -18,7 +18,7 @@ flavor_kni_pap.1 = {
 
 	trigger = {
 		location:smyrna = {
-			owner.religion != ROOT.religion
+			owner.religion.group != ROOT.religion.group
 		}
 		religion = religion:catholic
 		country_exists = c:KNI

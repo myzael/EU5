@@ -344,7 +344,7 @@ types OrganizationPanel
 							margin = {10 0 }
 							vbox = {
 								text_single = {
-									text = "[InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetCurrentDebate.GetName]"
+									text = "[InternationalOrganizationsView.GetInternationalOrganization.GetParliament.GetCurrentDebateName]"
 									default_format = "#yellow_titles"
 									fontsize = 16
 									maximumsize = {245 -1}

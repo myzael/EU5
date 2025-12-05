@@ -934,9 +934,11 @@ guesclin_constable_of_france = {
 
 fra_burghers_broken_by_marcel_death = {
 	game_data = {
-		category = character	
+		category = character
+		decaying = yes	
 	}
-	burghers_estate_max_tax	= 0.25 
+	burghers_estate_max_tax	= 0.25
+	global_burghers_estate_power = -0.25
 	burghers_estate_target_satisfaction = medium_permanent_target_satisfaction
 }
 
@@ -947,7 +949,7 @@ modifier_etienne_marcel = {
 	blocked_from_marriage = yes
 	blocked_from_being_leader = yes
 	blocked_from_cabinet = yes	
-	burghers_estate_target_satisfaction = large_permanent_target_satisfaction_penalty	
+	global_crown_estate_power = -0.10
 }
 jean_bureau_artillery_proficiency = {
 	game_data = {
@@ -995,7 +997,7 @@ fra_king_fiscal_prudence = {
 		category = character 
 	}
 	tax_income_efficiency = large_tax_income_efficiency_bonus
-	global_monthly_prosperity = 0.005
+	global_monthly_prosperity = 0.001
 	global_estate_target_satisfaction = medium_permanent_target_satisfaction
 }
 head_of_the_cabinet_modifier = {
@@ -1333,6 +1335,7 @@ bra_false_waldemar = {
 	blocked_from_marriage = yes
 	blocked_from_cabinet = yes
 	character_life_expectancy = 40	#So our guy does not die too fast
+	blocked_from_character_interactions = yes
 }
 
 bra_waldemar_on_the_throne = {
@@ -1660,7 +1663,7 @@ hindu_withdrawn_contemplation = {
 	}
 	global_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
 	monthly_legitimacy = -0.1
-	diplomatic_capacity = -1
+	diplomatic_capacity_modifier = -0.5
 }
 	
 hindu_shaiva = {
@@ -1702,14 +1705,14 @@ vishnu_lakshmi = {
 	game_data = {
 		category = country
 	}
-	global_monthly_prosperity = 0.002
+	global_monthly_prosperity = 0.001
 }
 
 hindu_shakta = {
 	game_data = {
 		category = country
 	}
-	global_monthly_prosperity = 0.002
+	global_monthly_prosperity = 0.001
 }
 hindu_shakta_rejected = {
 	game_data = {

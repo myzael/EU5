@@ -1286,7 +1286,7 @@ flavor_nov.20 = {
 		tag = NOV
 		from = 1337.1.1
 		to = 1500.1.1
-		monthly_chance = 1ºº
+		monthly_chance = 100
 	}
 
 	trigger = {

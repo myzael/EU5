@@ -1,7 +1,7 @@
 diplomacy_manager = {
     #-------England-------
 	#Balliol Backing
-	scripted_oneway = { first = ENG second = SBL type = guarantee }
+	#scripted_oneway = { first = ENG second = SBL type = guarantee }
 	
     dependency = { first = ENG second = WLS subject_type = dominion start_date = 1283.1.1 }
     dependency = { first = ENG second = PLE subject_type = dominion }
@@ -155,7 +155,7 @@ diplomacy_manager = {
 
     #-------France-------
 	#Auld Alliance
-	scripted_oneway = { first = FRA second = SCO type = guarantee }
+	#scripted_oneway = { first = FRA second = SCO type = guarantee }
 	
     #Appanages
     dependency = { first = FRA second = BUR subject_type = appanage }

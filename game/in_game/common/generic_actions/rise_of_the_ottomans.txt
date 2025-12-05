@@ -7,6 +7,7 @@
 	allow = {
 		scope:actor = {
 			at_war = no
+			has_raised_levies = no
 		}
 	}
 
@@ -939,6 +940,11 @@ invite_turkic_migration = {
 				value < 0.5
 			}
 		}
+		enabled = {
+			any_location_in_province = {
+				NOT = { integration_level = core }
+			}
+		}
 	}
 	effect = { 
 		if = {
@@ -957,6 +963,18 @@ invite_turkic_migration = {
 		if = {
 			limit = { exists = scope:target_province_destination }
 			subtract = 35
+
+			scope:target_province_destination = {
+				every_location_in_province = {
+					limit = { integration_level = core }
+
+					subtract = {
+						value = 10
+						desc = "We have a core here"
+					}
+				}
+			}
+				
 			add = {	#More likely to migrate towards high tax base provinces
 				desc = "[target_province_destination.GetName] [tax_base|e]" 
 				value = scope:target_province_destination.province_tax_base

@@ -3267,3 +3267,8 @@ opinion_enforced_succession_law_changes = {
 	value = -75
 	yearly_decay = 2
 }
+
+anatolian_struggle_modifier = {
+	value = -50
+	yearly_decay = 1
+}

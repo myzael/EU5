@@ -17,14 +17,28 @@ on_character_death = {
 					has_variable = home_country
 				}
 			}
-			remove_relation = {
-				type = relation_type:support_heir
-				first = this
-				second = scope:target.var:home_country
+			if = {
+				limit = { 
+					scope:target.var:home_country ?= {
+						NOT = { this = root }
+					}
+				}
+				remove_relation = {
+					type = relation_type:support_heir
+					first = this
+					second = scope:target.var:home_country
+				}
 			}
 			remove_list_variable = {
 				name = supported_heirs
 				target = scope:target
+			}
+			if = {
+				limit = {
+					has_variable = favored_heir
+					var:favored_heir = scope:target
+				}
+				remove_variable = favored_heir
 			}
 		}
 		if = {

@@ -14,7 +14,7 @@ worship_inti_god = {
 
     modifier = {
 		global_life_expectancy = 2
-		global_population_growth = 0.00025
+		global_population_growth = 0.0002
 		monthly_yanantin = -0.5
     }
 }
@@ -41,7 +41,7 @@ worship_pachamama = {
     religion = inti
 
     modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.001
 		monthly_yanantin = 0.5
     }
 }

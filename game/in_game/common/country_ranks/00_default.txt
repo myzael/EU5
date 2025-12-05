@@ -37,10 +37,7 @@
 		can_upgrade_country_rank = { rank = rank_empire }
 		trigger_if = {
 			limit = {
-				OR = {
-					exists = international_organization:hre
-					government_type = government_type:monarchy
-				}
+				exists = international_organization:hre
 			}
 			modifier:block_from_change_to_empire_rank_catholic = no
 		}

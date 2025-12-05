@@ -146,6 +146,8 @@ NCountry = {
 	PREVIOUS_AGE_REDUCTION = -8
 	
 	INSTITUTION_MINIMUM_PERCENT = 0.2
+	
+	INSTITUTION_TRADE_SPREAD_SCALE = 0.0075
 
 	CABINET_ACTION_SKILL_MODIFIER = 0.005
 	
@@ -168,7 +170,7 @@ NCountry = {
 
 	LEVY_RECOVERY_MONTHS = 240
 	
-	LEVY_RECRUIT_THRESHOLD	= 0.50
+	LEVY_RECRUIT_THRESHOLD	= 0.20
 
 	ESTATE_LEVY_SATISFACTION_THRESHOLD = 0.25
 	
@@ -350,9 +352,11 @@ NCombat = {
 	
 	FOOD_PERCENTAGE_LOST_AT_OCCUPATION = 0.9		# lost 90% at occupation..
 	
+	MAX_FRONTAGE_OVERSTACKING = 1.25	#25% overstack in flanks.
+	
 	LAND_LEVY_COMBAT_IMPACT = 0.20
 	LAND_LEVY_COMBAT_AGE_MUL = 0.05
-	DAMAGE_ON_LEVY_FACTOR = 0.2
+	DAMAGE_ON_LEVY_FACTOR = 0.1
 	LEVY_ASSAULT_EFFICIENCY = 0.3
 	
 	INITIATIVE_BASE_CHANCE = 0.1	# base chance each tick
@@ -365,11 +369,17 @@ NCombat = {
 	LAND_EXPERIENCE_DAMAGE_REDUCTION = 0.5
 
 	LAND_STRENGTH_DAMAGE_MODIFIER = 0.2
-	NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.5
+	NAVAL_STRENGTH_DAMAGE_MODIFIER = 0.05
 	LAND_MORALE_DAMAGE_MODIFIER = 1.0
-	NAVAL_MORALE_DAMAGE_MODIFIER = 1.0
+	NAVAL_MORALE_DAMAGE_MODIFIER = 0.2 
 	NOT_ENGAGED_STRENGTH_DAMAGE_MODIFIER = 1.1
 	NOT_ENGAGED_MORALE_DAMAGE_MODIFIER = 1.2
+	
+	NAVY_OVERRUN_EXTRA_CAPTURE_CHANCE = 0.15
+	NAVAL_COMBAT_DAMAGED_SHIP_EXTRA_CAPTURE_SCALE = 0.01
+
+	NAVAL_COMBAT_SHIP_STR_SINK_THRESHOLD = 0.1		#ships below this % have a chance of sinking when retreating.
+	NAVAL_COMBAT_DAMAGED_SHIP_SINK_CHANCE = 10		# chance vs (1-100) dice to sink when retreating at below threshold
 	
 	
 	NAVAL_RETREAT_DAMAGE_THRESHOLD = 0.5		# if below this % strength, check chance to retreat.
@@ -381,9 +391,9 @@ NCombat = {
 
 	EXPERIENCE_GAIN = 30
 
-	LAND_WAR_EXHAUTION_FROM_LOSSES = 100
+	LAND_WAR_EXHAUSTION_FROM_LOSSES = 100
 	
-	NAVAL_WAR_EXHAUTION_FROM_LOSSES = 1.5 #Multiplier on losses
+	NAVAL_WAR_EXHAUSTION_FROM_LOSSES = 1.5 #Multiplier on losses
 	MAX_WAR_EXHAUSTION_FROM_BATTLE = 10.0
 
 
@@ -577,6 +587,7 @@ NAI = {
 	AI_PERFORMANCE_PATHFIND_DISTANCE_THRESHOLD = 100 # distance threshold for less accurate pathfind to save performance for ai, smaller threshold saves more performance
 	// Naval threshold higher as it causes ships to incorrectly sail against the wind accross the atlantic otherwise
 	AI_NAVAL_PERFORMANCE_PATHFIND_DISTANCE_THRESHOLD = 2500 # same as above but for navies
+	AI_TRANSPORT_STRENGTH_THRESHOLD_PER_DISTANCE = 0.0004 # 2500 distance needs to have a 100% strength transport fleet
 
 	AI_PERFORMANCE_NODE_LIMIT_PER_DISTANCE = 4 # AI allowed pathfind node depth based on map distance
 	AI_PERFORMANCE_NAVAL_NODE_LIMIT_PER_DISTANCE = 3 # AI allowed pathfind node depth based on map distance for naval
@@ -685,8 +696,8 @@ NAI = {
 	GRANT_PRIVILEGE_COOLDOWN = 1500 # Cooldown for an individual estate for AI to grand privilege to let the effect of the grant play out
 	GRANT_PRIVILEGE_UNUSED_TAX_COOLDOWN = 180
 	REVOKE_PRIVILEGE_COOLDOWN = 3000 # Cooldown for all estates when AI revokes a privilege 
-	ARMY_LEVY_SIZE_IMPORTANCE = 0.01
-	NAVY_LEVY_SIZE_IMPORTANCE = 0.01
+	ARMY_LEVY_SIZE_IMPORTANCE = 20 # normalized on taxbase
+	NAVY_LEVY_SIZE_IMPORTANCE = 5 # normalized on taxbase
 	POP_SATISFACTION_IMPORTANCE = 60.0
 	OPINION_IMPORTANCE = 0.2
 
@@ -746,6 +757,7 @@ NAI = {
 
 	AI_MAXIMUM_ARMY_VS_NAVY_BUDGET_ALLOCATION = 0.75 # maximum allocation budget for land vs navy based on society value
 	AI_MAINTENANCE_BUDGET_RATIO = 0.2 # How much of monthly income is allocated for maintenance budget of armies and navies
+	AI_MAINTENANCE_BUDGET_RATIO_AGE_INCREASE = 0.025	#how much every age adds.
 
 	SUPPLY_DEPOT_RANGE = 2 #how far away a supply depot can be to be used by a unit
 	NAVAL_SUPPLY_RANGE = 2 #how far away a ship can be to supply an army
@@ -763,8 +775,8 @@ NAI = {
 
 	BUILDING_THRESHOLD_FACTOR = 1.2 # Increase this to make AI more careful with building buildings. Don't make < 1
 	LOCATION_BORDER_DISTANCE_RELEVANCE_THRESHOLD = 20
-	BASE_FORT_LEVEL_BENEFIT_SCALAR = 0.2
-	BASE_ZOC_BENEFIT_SCALAR = 0.15
+	BASE_FORT_LEVEL_BENEFIT_SCALAR = 0.1
+	BASE_ZOC_BENEFIT_SCALAR = 0.1
 	FORT_PROTECTION_BORDER_MULT = 20
 	FORT_PROTECTION_LOCATION_MULT = 1
 	FORT_PROTECTION_CAPITAL_MULT = 0.3
@@ -814,6 +826,9 @@ NAI = {
 	AI_RECOVER_MORALE_THRESHOLD = 66 # AI will stop and rest armies when their morale is below this percentage
 	AI_AWAIT_REINFORCING_ARMY_DISTANCE_MAX = 50 # above this map AI will wait for other collaborating armies before engaging their target
 	AI_AWAIT_REINFORCING_ARMY_DISTANCE_MIN = 35 # below this map distance collaborating armies are considered closed enough to start moving again
+	AI_REINFORCE_ONGOING_BATTLE_DISTANCE = 2 # How many locations away AI will try and look to move their arimes to reinforce ongoing combat
+	AI_STICK_TO_SIEGE_TIME_FACTOR = 0.003 # extra score factor to prevent reassigning away from a sieging per day, 0.003 = 1/365 every year double score
+	AI_WAIT_FOR_JOINING_UNIT_STRENGTH_THRESHOLD = 0.33 # AI will wait for joining units if they are at least this strong of the target
 
 	# Used for AI assignment of units to objectives
 	AI_MILITARY_ARMY_ASSIGNMENT_PROXIMITY_FACTOR = -1 # Negative score for army targets further away
@@ -922,7 +937,7 @@ NAI = {
 	COURT_LANGUAGE_OVERLORDS_COURT_LANGAUGE_MODIFIER = 1.0 #How much more powerful we consider our Overlord's court language when changing it. Scaled by Subject Loyalty
 	COURT_LANGUAGE_NEGATIVE_CULTURE_OPINION_FACTOR = 0.0 # Don't adopt a language of a culture we don't like
 
-	MINIMUM_MONTHS_BETWEEN_EXPANSION = 24
+	MINIMUM_MONTHS_BETWEEN_EXPANSION = 6
 	SUBJUGATION_EXPANSION_FACTOR = 0.75
 
 	DEFAULT_AGGRESSIVENESS = -1.05 #Higher = more aggressive
@@ -945,7 +960,7 @@ NAI = {
 	DISTANT_WAR_SUBJUGATION_FACTOR = 0.33
 
 	NO_CASUS_BELLI_CONQUEST_FACTOR = 0.8
-	NO_CASUS_BELLI_AND_NO_PARLIAMENT_CONQUEST_FACTOR = 0
+	NO_CASUS_BELLI_AND_NO_PARLIAMENT_CONQUEST_FACTOR = 0.25
 
 	EXPANSION_TARGET_SCORE_NEEDED_TO_KEEP = 15
 	EXPANSION_TARGET_SCORE_NEEDED_TO_PICK = 20
@@ -1002,6 +1017,7 @@ NAI = {
 	NO_CASUS_BELLI_SELECTION_PENALTY = -100 #How less likely will Ai be to select this as the best casus belli
 	DEFAULT_CHANCE_OF_EXPANSION = 0.25 #How likely AI is to start a war plan against other nations each month
 	AI_WAR_EXHAUSTION_EXPANSION_PENALTY = 0.1 # Penalty to the chance to start new wars per war exhaustion
+	AI_UNINTEGRATED_LAND_EXPANSION_PENALTY = 2 # e.g. 50% unintegrated land with value 2 = -100% chance to expand
 	RANDOM_RANGE_OF_EXPANSION_SORTING_VALUES = 0.25 # -25% to 25% will be added to the sorting value of expansion targets to make it more varied
 	SAFE_AMOUNT_OF_ANTAGONISM = 30 #Ai will try not to expand above this, it's NOT their target antagonism when peacing out
 	SAFE_AMOUNT_OF_WAR_EXHAUSTION = 5 #Ai will try not to expand above this WE
@@ -1040,6 +1056,7 @@ NAI = {
 	AI_CONQUER_DESIRE_THROUGH_SUBJECT_MULT = 0.5 # Score mult when you have to go through your subject to reach enemy
 	AI_CONQUER_DESIRE_CAPITAL_DISTANCE = 200 # After this map distance locations starts getting a penalty from being too far away from capital
 	AI_CONQUER_DESIRE_CAPITAL_DISTANCE_MIN_FACTOR = 0.5 # Minimum allowed multiplier from distance to capital
+	AI_CALL_ALLY_STRENGTH_BALANCE_THRESHOLD = 0.75 # AI will not call in allies if war balance is over this
 
 	AI_CEDE_TREATY_DISTANCE = 500
 	AI_STABILITY_LOWER_LIMIT = -50
@@ -1068,14 +1085,18 @@ NAI = {
 	AI_MILITARY_TACTICS_UTILITY = 0.01
 	AI_LAND_MORALE_RECOVERY_UTILITY = 0.25
 	AI_ARMY_INITIATIVE_UTILITY = 0.01
-	AI_LEVY_COMBAT_EFFICIENCY_MODIFIER_UTILITY = 0.25
 	AI_SCRIPTED_OBJECTIVE_INTERACTION_SCORE_BONUS = 25
 	AI_IO_RESOLUTION_PROPOSAL_RANDOM_INTERVAL = 250
 	AI_CALL_FOR_PEACE_CHANCE_MULTIPLIER = 0.25
 	AI_CONQUER_TREATY_DESIRE_FROM_WORTH_MULT = 5
 	AI_CONQUER_TREATY_DESIRE_NOT_WARGOAL_MULT = 0.5
 	AI_CHILD_EDUCATION_CHANGE_THRESHOLD = 200
-	AI_CONQUER_TREATY_DESIRE_WARGOAL_BASE = 25
+	AI_CONQUER_TREATY_DESIRE_WARGOAL_BASE = 2
+	AI_CONQUER_TREATY_DESIRE_SAME_PROVINCE = 5
+	AI_CONQUER_LOCATION_TREATY_BASE_SCORE = 3				# base score for AI to pick locations in war goal
+	AI_CONQUER_LOCATION_TREATY_WAR_WORTH_FACTOR = 0.25		# How much AI cares about war worth when picking locations in peace deals
+	AI_CONQUER_TREATY_DESIRE_ADJECENT = 10					# score bonus for picking neighboring locations in peace deal, other locations get 1/bonus penalty
+	AI_CONQUER_TREATY_DESIRE_POTENTIAL_BORDERGORE = 0.1 	# Score penalty for when AI is taking a location that will maybe cause bordergore
 	AI_REVOKE_CORES_DESIRE_MULT = 0.1
 	AI_CONSTRUCTIONS_PREDICTED_INCOME_MONTHS = 24			# How much more months of last median balance does the evaluator add to the utility bias for construction queue
 	AI_CONSTRUCTIONS_EMPTY_QUEUE_UPDATE_MONTHS = 6			# Cooldown for construction queue if the previous recalc resulted in an empty queue
@@ -1093,7 +1114,7 @@ NAI = {
 	AI_MONTHLY_DIPLOMATS_THRESHOLD_TO_BUILD_OPINION = 0.2	# Relevant country relation improvements will try to maintain that many monthly diplomats
 	AI_MAX_BUILD_OPINION_AT_ONCE = 2					
 	AI_BUILD_OPINION_ALLY_BIAS = 3						# Sorting bias for relevant countries if the actor is allied with them
-	AI_BUILD_OPINION_HIGH_ANTAGONISM_BIAS = 2			# Sorting bias for relevant countries if the actor has high antagonism with them
+	AI_BUILD_OPINION_HIGH_ANTAGONISM_BIAS = 5			# Sorting bias for relevant countries if the actor has high antagonism with them
 	AI_BUILD_OPINION_NEIGHBOUR_BIAS = 0.75				# Sorting bias for relevant countries if they are neighbors with the actor
 	AI_BUILD_OPINION_GEOGRAPHY_BIAS = 0.5				# Sorting bias for relevant countries in the same geography depending on country rank (area, region, superregion)
 	AI_BUILD_OPINION_ALREADY_IMPROVED_THRESHOLD = 0.75	# Ai will skip trying to improve relations with relevant countries when the improved opinion modifier is at this fraction of the max value
@@ -1127,9 +1148,17 @@ NAI = {
 	AI_DESIRED_ARMY_MANPOWER_RECOVERY_MONTHS = 48 		# Ai will try to have enough manpower recovery to rebuild their whole current army in that many months
 	AI_INDEPENDENCE_WAR_WIN_CHANCE = 0.25 				# Winchance above which AI will try to fight independence wars
 	AI_ALLIES_SELECTION_NUM_ALLIES_FACTOR = -0.2
+	
 	# AI TECH
+
 	AI_UNLOCK_UNIT_SCORE_PER_AGE = 25 					# AI score to unlock a unit based on age difference in that category
+	AI_UNLOCK_LEVY_SCORE = 20							# AI Score to unlock levies multiplied by size of levy and size of poptype it applies to as % of country multiplied by unlocked unit score
+
+	# END OF AI TECH
+
 	AI_PEACE_CHECK_DAYS = 120
+	AI_REINFORCE_BATTLE_SIEGE_ACCUMULATION_LIMIT = 2	# AI will not leave a siege to reinforce a battle if the accumulation is above that
+	AI_REINFORCE_BATTLE_DISTANCE_LIMIT = 3				# AI will not look for battles to reinforce that are more than that many locations away
 }
 
 
@@ -1732,7 +1761,7 @@ NDiplomacy = {
 	OPINION_GOOD_RELATIONS = 50 #Threshold for good relations -1 stab hit.
 	OPINION_GREAT_RELATIONS = 100 #Threshold for great relations -2 stab hit.
 	OPINION_NO_WAR = 150 #Threshold for AI, being unable to declare war because one's own opinion of enemy is too high.
-	LOYALTY_FROM_OPINION = 0.1 #how much subject loyalty we get from opinion of overlord
+	LOYALTY_FROM_OPINION = 0.15 #how much subject loyalty we get from opinion of overlord
 	
 	IMPROVE_RELATION_SUBJECT_FACTOR = 2 #Subjects have a maximum this times higher.
 	MAX_WARSCORE_REDUCTION = -0.99 # Warscore reduction cannot go below -95%
@@ -1791,6 +1820,9 @@ NDiplomacy = {
 	WAR_REPARATIONS_YEARS = 10
 	PEACE_TREATY_ANNUL_ALL_TREATIES = 10
 	ANNUL_DURATION_MONTHS  = 120
+	
+	PEACE_TREATY_PROVINCE_BONUS = 1.5
+	PEACE_TREATY_AREA_BONUS = 2
 	
 	PEACE_TREATY_ANNEX_REVOLTER_MAX_COST = 70
 	PEACE_TREATY_REVOLTER_SURVIVES_MAX_COST = 70
@@ -1920,6 +1952,10 @@ NDynasty = {
 	NAME_TEMPLATE_KEYS = { SOMEONE_OF_SOMEWHERE SOMEONE_FROM_SOMEWHERE SOMEONE_THE_SOMETHING_OF_SOMEWHERE__TYPE SOMEONE_THE_SOMEDESC_SOMETHING__ADJ_TYPE SOMEONE_THE_SOMELOCALITY_SOMETHING__TYPE SOMEONE_THE_SOMENATIONALITY_SOMETHING__TYPE }
 	NAME_ADJECTIVE_KEYS = { mighty courageous learned expert }
 	NAME_NOUN_KEYS = { scholar executioner warrior knight }
+	
+	
+	LIVING_SIZE_THRESHOLD_FOR_MARRY = 9
+	LIVING_SIZE_THRESHOLD_FOR_MARRY_IMPORTANT = 21
 
 	CALC_DYNASTY_HEAD_SCORE_MALE = 25				# Ignore this if country has Gender Equality
 	CALC_DYNASTY_HEAD_SCORE_RULER = 50				# We also add the Great Power Score of all the countries the character rules

@@ -516,7 +516,9 @@ great_pestilence.7 = { # Forever Lost
 	desc = great_pestilence.7.desc
 	image = "gfx/interface/illustrations/situation/great_pestilence.dds"
 
-	trigger = {
+	trigger = {		
+		culture = { is_culture_native_american = yes }
+		is_country_religion_folk_american = yes
 		any_owned_location = {
 			disease_presence = { disease = disease:great_pestilence value > 0.25 }
 		}

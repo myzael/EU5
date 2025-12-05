@@ -99,6 +99,16 @@ guelphs_io = {
 			limit = { has_variable = gag_blocked_from_leading }
 			remove_variable = gag_blocked_from_leading
 		}
+		if = {
+			limit = { has_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction }
+			remove_all_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction
+		}
+	}
+	on_disband = {
+		every_international_organization_member = {
+			limit = { has_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction }
+			remove_all_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction
+		}
 	}
 	ai_desire_to_join = {
 
@@ -198,6 +208,16 @@ ghibellines_io = {
 		if = {
 			limit = { has_variable = gag_blocked_from_leading }
 			remove_variable = gag_blocked_from_leading
+		}
+		if = {
+			limit = { has_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction }
+			remove_all_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction
+		}
+	}
+	on_disband = {
+		every_international_organization_member = {
+			limit = { has_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction }
+			remove_all_casus_belli_of_type = casus_belli:cb_gag_force_country_into_faction
 		}
 	}
    

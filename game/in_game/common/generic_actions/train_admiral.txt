@@ -124,7 +124,6 @@
 					save_scope_as = new_character
 				}
 			}
-			add_navy_tradition = -5
 		}
 	}
 }

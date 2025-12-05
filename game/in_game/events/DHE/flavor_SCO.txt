@@ -80,9 +80,9 @@ flavor_sco.2 = {
 
 	dynamic_historical_event = {
 		tag = SCO
-		from = 1337.1.1
+		from = 1339.1.1
 		to = 1366.1.1
-		monthly_chance = 60
+		monthly_chance = 40
 	}
 
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
@@ -858,7 +858,12 @@ flavor_sco.14 = { # raising David II
 				change_character_culture = culture:scottish
 			}
 			if = {
-				limit = { NOT = { has_child_education = administrative_education } }
+				limit = {
+					NOR = {
+						has_child_education = administrative_education
+						has_child_education = expensive_in_depth_education
+					}
+				}
 				set_child_education = child_education:administrative_education
 				add_adm = 10
 			}
@@ -874,7 +879,12 @@ flavor_sco.14 = { # raising David II
 				change_character_culture = culture:highland
 			}
 			if = {
-				limit = { NOT = { has_child_education = military_education } }
+				limit = {
+					NOR = {
+						has_child_education = military_education
+						has_child_education = expensive_in_depth_education
+					}
+			}
 				set_child_education = child_education:military_education
 				add_mil = 10
 			}
@@ -890,7 +900,12 @@ flavor_sco.14 = { # raising David II
 				change_character_culture = culture:french
 			}
 			if = {
-				limit = { NOT = { has_child_education = diplomatic_education } }
+				limit = {
+					NOR = {
+						has_child_education = diplomatic_education
+						has_child_education = expensive_in_depth_education
+					}
+				}
 				set_child_education = child_education:diplomatic_education
 			}
 			add_dip = 10
@@ -1580,14 +1595,16 @@ flavor_sco.103 = { # Honoring the Auld Alliance
 	dynamic_historical_event = {
 		tag = SCO
 		from = 1347.1.1
-		to = 1356.1.1
-		monthly_chance = 25
+		to = 1376.1.1
+		monthly_chance = 33
 	}
 
  	trigger = {
 		has_ruler = yes
 		country_exists = c:FRA
 		country_exists = c:ENG
+		in_civil_war = no
+		at_war = no
 		NOT = {	is_at_war_with = c:ENG }
 		NOT = {	has_truce_with = c:ENG }
 		c:FRA = {

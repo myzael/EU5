@@ -31,6 +31,9 @@ marketplace = {
 		local_pop_assimilation_speed_modifier = 0.01
 		local_burghers_estate_power = 0.1
 
+		local_market_access = 0.005
+
+
 		local_merchant_power = 1
 		local_trades_per_burgher = 0.2
 		merchant_capacity_from_building = 1
@@ -69,6 +72,8 @@ merchants_quarters = {
 	modifier = {
 		local_pop_assimilation_speed_modifier = 0.01
 		local_burghers_estate_power = 0.1
+		
+		local_market_access = 0.005
 		
 		local_merchant_power = 1.5
 		local_trades_per_burgher = 0.3
@@ -109,6 +114,8 @@ grand_marketplace = {
 	modifier = {
 		local_pop_assimilation_speed_modifier = 0.01
 		local_burghers_estate_power = 0.1
+		
+		local_market_access = 0.01
 		
 		local_merchant_power = 2.0
 		local_trades_per_burgher = 0.4
@@ -156,6 +163,8 @@ commerce_center = {
 		local_pop_assimilation_speed_modifier = 0.01
 		local_burghers_estate_power = 0.1
 		
+		local_market_access = 0.01
+		
 		local_merchant_power = 4.0
 		local_trades_per_burgher = 0.8
 		merchant_capacity_from_building = 4.0
@@ -197,6 +206,8 @@ port_authority = {
 		merchant_capacity_from_building = 0.5
 		local_trade_protection_factor = 0.10
 		local_trades_per_burgher = 0.10
+		
+		local_market_access = 0.005
 	}
 }
 

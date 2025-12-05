@@ -4,6 +4,7 @@
 	break_on_war = yes
 	uses_diplo_capacity = receiving
 	diplomatic_capacity_cost = guarantee_upkeep_cost
+	break_on_becoming_subject = yes
 	receiving_color = rgb { 60 120 0 }
 	giving_color = rgb { 40 100 0 }
     institution_spread_to_second = monthly_institution_spread_weak
@@ -123,10 +124,12 @@
 					}
 					not = { religion = scope:recipient.religion }
 					modifier:target_of_military_sponsorships = yes
+					has_limited_diplomacy = yes
 				}
 			}
 			scope:recipient = {
 				OR = {
+					has_limited_diplomacy = yes
 					not = { modifier:target_of_military_sponsorships = yes }
 					not = { religion = scope:actor.religion }
 				}

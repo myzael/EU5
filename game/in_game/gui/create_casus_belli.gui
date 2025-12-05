@@ -151,6 +151,7 @@ types CasusBellis {
 								hbox = {
 									spacing = 5
 									margin = { 6 0 }
+									margin_right = 15
 									
 
 									hbox = {
@@ -171,15 +172,39 @@ types CasusBellis {
 										vbox = {
 											using = layoutpolicy_expanding
 											margin = { 0 3 }
-											text_single = {
+											hbox = {
 												using = layoutpolicy_expanding
-												fontsize = 14
-												autoresize = yes
-												align = left|nobaseline
-												text = "[SelectCasusBelli.GetCasusBelli.GetNameWithNoTooltip]"
-												default_format = "#L"
+
+												text_single = {
+													fontsize = 14
+													autoresize = yes
+													align = left|nobaseline
+													text = "[SelectCasusBelli.GetCasusBelli.GetNameWithNoTooltip]"
+													default_format = "#L"
+												}
+
+												text_single = {
+													visible = "[And(SelectCasusBelli.IsExisting, SelectCasusBelli.IsSubjectCB)]"
+													fontsize = 14
+													autoresize = yes
+													align = left|nobaseline
+													raw_text = "@subject!"
+													default_format = "#L"
+
+													tooltipwidget = {
+														BasicFunctionalTooltip = {
+															blockoverride "tooltip_content" {
+																TooltipTextBlock = {
+																	textcontext = "[SelectCasusBelli.GetSubjectTooltip]"
+																}
+															}
+														}
+													}
+												}
+
+												expand = {}
 											}
-			
+
 											hbox = {
 												using = layoutpolicy_expanding
 												spacing = 2

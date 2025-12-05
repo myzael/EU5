@@ -42,6 +42,7 @@ clergy = {
 	pop_food_consumption = 5.0
 	
 	dhimmi_estate = { is_dhimmi = yes }
+	tribes_estate = { is_gaelic_clans = yes }
 	clergy_estate = {}
 	
 	upper = yes
@@ -67,6 +68,7 @@ burghers = {
 	city_graphics = 1.0
 	
 	dhimmi_estate = { is_dhimmi = yes }
+	tribes_estate = { is_gaelic_clans = yes }
 	burghers_estate = {}
 	
 	promotion_factor = 0.5

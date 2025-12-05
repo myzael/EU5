@@ -126,7 +126,7 @@ graph={
 		pdxns:ecs:animation_state_machine={
 			id=10
 			node={
-				state_machine_name="cannon_door_unit_speed_up_full_side"
+				state_machine_name="cannon_door_unit"
 			}
 			inputs={
 			}

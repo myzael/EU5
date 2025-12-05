@@ -5,7 +5,7 @@ kuikuro_culture = {  #https://pib.socioambiental.org/pt/Povo:Kuikuro
 
 	color = map_kuikuro
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -25,7 +25,7 @@ marajo_culture = {  #https://pt.wikipedia.org/wiki/Marajoaras
 
 	color = map_marajo
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -41,7 +41,7 @@ wapaji_culture = {  #Wajãpi https://pib.socioambiental.org/pt/Povo:Waj%C3%A3pi
 
 	color = map_wapaji
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -56,7 +56,7 @@ tupinamba_culture = {  #https://pt.wikipedia.org/wiki/Tupinamb%C3%A1s
 
 	color = map_tupinamba
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -73,7 +73,7 @@ tupiniquim_culture = {  #https://pib.socioambiental.org/pt/Povo:Tupiniquim
 
 	color = map_tupiniquim
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -89,7 +89,7 @@ kanhgag_culture = {  #https://pib.socioambiental.org/pt/Povo:Kaingang
 
 	color = map_kanhgag
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -105,7 +105,7 @@ ava_culture = {  #https://pib.socioambiental.org/pt/Povo:Guarani
 
 	color = map_ava
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -123,7 +123,7 @@ potiguara_culture = {  #https://pib.socioambiental.org/pt/Povo:Potiguara
 
 	color = map_potiguara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -139,7 +139,7 @@ awa_brazil_culture = {  #https://pib.socioambiental.org	/es/Povo:Guaj%C3%A1
 
 	color = map_awa_brazil
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -155,7 +155,7 @@ awa_canoeiro_culture = {  #https://pib.socioambiental.org/es/Povo:Guaj%C3%A1
 
 	color = map_awa_canoeiro
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -172,7 +172,7 @@ kren_culture = {  #https://pib.socioambiental.org/pt/Povo:Krenak
 
 	color = map_kren
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -187,7 +187,7 @@ anambe_culture = {  #https://pib.socioambiental.org/en/Povo:Anamb%C3%A9
 
 	color = map_anambe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -203,7 +203,7 @@ awaete_culture = {  #https://en.wikipedia.org/wiki/Aweti
 
 	color = map_awaete
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -220,7 +220,7 @@ timbira_culture = {  #https://pib.socioambiental.org/es/Povo:Timbira
 
 	color = map_timbira
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -251,7 +251,7 @@ iny_culture = {  #https://pib.socioambiental.org/es/Povo:Karaj%C3%A1
 
 	color = map_iny
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -270,7 +270,7 @@ ukaragma_culture = {  #Ukarãgmã https://pib.socioambiental.org/es/Povo:Arara
 
 	color = map_ukaragma
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -285,7 +285,7 @@ wuyjuyu_culture = {  #https://pib.socioambiental.org/es/Povo:Munduruku https://p
 
 	color = map_wuyjuyu
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -302,7 +302,7 @@ kambeba_culture = {  #https://pib.socioambiental.org/es/Povo:Kambeba
 
 	color = map_kambeba
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -317,7 +317,7 @@ miranha_culture = {  #https://pib.socioambiental.org/es/Povo:Miranha
 
 	color = map_miranha
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -332,7 +332,7 @@ kinja_culture = {  #https://pib.socioambiental.org/es/Povo:Waimiri_Atroari
 
 	color = map_kinja
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -347,7 +347,7 @@ akwe_culture = {  #Akwê https://pib.socioambiental.org/en/Povo:Xerente
 
 	color = map_akwe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -366,7 +366,7 @@ apyawa_culture = {  #Apyãwa https://pib.socioambiental.org/es/Povo:Tapirap%C3%A
 
 	color = map_apyawa
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -381,7 +381,7 @@ panara_culture = {  #https://pib.socioambiental.org/pt/Povo:Panar%C3%A1
 
 	color = map_panara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -396,7 +396,7 @@ kajkwakratxi_culture = {  #https://pib.socioambiental.org/pt/Povo:Tapayuna
 
 	color = map_kajkwakratxi
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -411,7 +411,7 @@ kawaiwete_culture = {  #https://pib.socioambiental.org/es/Povo:Kaiabi
 
 	color = map_kawaiwete
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -426,7 +426,7 @@ ikpeng_culture = {  #https://pib.socioambiental.org/es/Povo:Ikpeng
 
 	color = map_ikpeng
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -440,7 +440,7 @@ rikbaktsa_culture = {  #https://pib.socioambiental.org/es/Povo:Rikbakts%C3%A1
 
 	color = map_rikbaktsa
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -454,7 +454,7 @@ apiaka_culture = {  #https://pib.socioambiental.org/en/Povo:Apiak%C3%A1
 
 	color = map_apiaka
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -469,7 +469,7 @@ haliti_culture = {  #https://pib.socioambiental.org/pt/Povo:Pares%C3%AD
 
 	color = map_haliti
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -484,7 +484,7 @@ balotipone_culture = {  #https://pib.socioambiental.org/es/Povo:Umutina
 
 	color = map_balotipone
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -499,7 +499,7 @@ guato_culture = {  #https://pib.socioambiental.org/pt/Povo:Guat%c3%b3
 
 	color = map_guato
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -515,7 +515,7 @@ boe_culture = {  #https://pib.socioambiental.org/pt/Povo:Bororo
 
 	color = map_boe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -530,7 +530,7 @@ mebengokre_culture = {  #https://pib.socioambiental.org/pt/Povo:Meb%C3%AAng%C3%B
 
 	color = map_mebengokre
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -545,7 +545,7 @@ kaxixo_culture = {  #https://pib.socioambiental.org/pt/Povo:Kaxix%C3%B3
 
 	color = map_kaxixo
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -559,7 +559,7 @@ maxakali_culture = {  #https://pib.socioambiental.org/pt/Povo:Maxakali
 
 	color = map_maxakali
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -580,7 +580,7 @@ kiriri_culture = {  #https://pt.wikipedia.org/wiki/Cariris
 
 	color = map_kiriri
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -598,7 +598,7 @@ xoco_culture = {  #https://pt.wikipedia.org/wiki/Cariris
 
 	color = map_xoco
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -614,7 +614,7 @@ pankararu_culture = {  #https://pib.socioambiental.org/pt/Povo:Pankararu
 
 	color = map_pankararu
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -629,7 +629,7 @@ tumbalala_culture = {  #https://pib.socioambiental.org/pt/Povo:Tumbalal%C3%A1
 
 	color = map_tumbalala
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -644,7 +644,7 @@ pankara_culture = {  #https://pib.socioambiental.org/pt/Povo:Pankar%C3%A1
 
 	color = map_pankara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -659,7 +659,7 @@ atikum_culture = {  #https://pib.socioambiental.org/pt/Povo:Atikum
 
 	color = map_atikum
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -674,7 +674,7 @@ tabajara_culture = {  #https://pt.wikipedia.org/wiki/Tabajaras
 
 	color = map_tabajara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -689,7 +689,7 @@ kaninde_culture = {  #https://pt.wikipedia.org/wiki/Canind%C3%A9s
 
 	color = map_kaninde
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -704,7 +704,7 @@ pitaguary_culture = {  #https://pib.socioambiental.org/pt/Povo:Pitaguary
 
 	color = map_pitaguary
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -720,7 +720,7 @@ ofaie_culture = {  #https://pib.socioambiental.org/pt/Povo:Ofai%C3%A9
 
 	color = map_ofaie
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -735,7 +735,7 @@ terena_culture = {  #https://pib.socioambiental.org/pt/Povo:Terena
 
 	color = map_terena
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -750,7 +750,7 @@ guaikuru_culture = {  #https://pueblosoriginarios.com/sur/chaco/guaikuru/guaikur
 
 	color = map_guaikuru
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -774,7 +774,7 @@ nambikwara_culture = {  #https://pib.socioambiental.org/pt/Povo:Nambikwara
 
 	color = map_nambikwara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -794,7 +794,7 @@ manoki_culture = {  #https://pib.socioambiental.org/pt/Povo:Iranxe_Manoki
 
 	color = map_manoki
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -812,7 +812,7 @@ guarasugwe_culture = {  #https://en.wikipedia.org/wiki/Pauserna
 
 	color = map_guarasugwe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -827,7 +827,7 @@ makurap_culture = {  #https://pib.socioambiental.org/pt/Povo:Makurap
 
 	color = map_makurap
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -842,7 +842,7 @@ purubora_culture = {  #https://pib.socioambiental.org/pt/Povo:Purubor%C3%A1
 
 	color = map_purubora
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -858,7 +858,7 @@ wajuru_culture = {  #https://pib.socioambiental.org/en/Povo:Wajuru
 
 	color = map_wajuru
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -878,7 +878,7 @@ kagwahiva_culture = {  #https://en.wikipedia.org/wiki/Kawahiva
 
 	color = map_kagwahiv
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -902,7 +902,7 @@ txapakura_culture = {  #https://pib.socioambiental.org/pt/Povo:Wari%27
 
 	color = map_txapakura
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -923,7 +923,7 @@ towa_panka_culture = {  #https://pib.socioambiental.org/en/Povo:Kujubim
 
 	color = map_towa_panka
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -943,7 +943,7 @@ kura_culture = {  #https://pib.socioambiental.org/pt/Povo:Bakairi
 
 	color = map_kura
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -960,7 +960,7 @@ djeoromitxi_culture = {  #https://pib.socioambiental.org/pt/Povo:Djeoromitx%C3%A
 
 	color = map_djeoromitxi
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -977,7 +977,7 @@ yjxa_culture = {  #https://pib.socioambiental.org/pt/Povo:Karitiana
 
 	color = map_yjxa
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -993,7 +993,7 @@ kaxarari_culture = {  #https://pib.socioambiental.org/pt/Povo:Kaxarari
 
 	color = map_kaxarari
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1010,7 +1010,7 @@ paiter_culture = {  #https://pib.socioambiental.org/pt/Povo:Surui_Paiter
 
 	color = map_paiter
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1026,7 +1026,7 @@ aikana_culture = {  #https://pib.socioambiental.org/pt/Povo:Aikan%C3%A3
 
 	color = map_aikana
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1043,7 +1043,7 @@ kwaza_culture = {  #https://pib.socioambiental.org/pt/Povo:Kwaz%C3%A1
 
 	color = map_kwaza
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1060,7 +1060,7 @@ enawene_nawe_culture = {  #https://pib.socioambiental.org/pt/Povo:Enawen%C3%AA-n
 
 	color = map_enawene_nawe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1077,7 +1077,7 @@ laklano_culture = {  #https://pib.socioambiental.org/pt/Povo:Xokleng
 
 	color = map_laklano
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1093,7 +1093,7 @@ puri_culture = {  #https://en.wikipedia.org/wiki/Puri_people
 
 	color = map_puri
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1110,7 +1110,7 @@ xeta_culture = {  #https://pib.socioambiental.org/pt/Povo:Xet%C3%A1
 
 	color = map_xeta
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1127,7 +1127,7 @@ kaapor_culture = {  #https://pib.socioambiental.org/pt/Povo:Ka%27apor
 
 	color = map_kaapor
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1144,7 +1144,7 @@ tapajo_culture = {  #https://pt.wikipedia.org/wiki/Tapaj%C3%B3s
 
 	color = map_tapajo
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1161,7 +1161,7 @@ tenetehara_culture = {  #https://pib.socioambiental.org/es/Povo:Guajajara
 
 	color = map_tenetehara
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1178,7 +1178,7 @@ zoe_culture = {  #Zo'é https://pib.socioambiental.org/es/Povo:Zo%27%C3%A9
 
 	color = map_zoe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1193,7 +1193,7 @@ waiwai_culture = {  #https://pib.socioambiental.org/es/Povo:Waiwai
 
 	color = map_waiwai
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1215,7 +1215,7 @@ satere_mawe_culture = {  #https://pib.socioambiental.org/es/Povo:Sater%C3%A9_Maw
 
 	color = map_satere_mawe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1231,7 +1231,7 @@ manaos_culture = {  #https://pt.wikipedia.org/wiki/Mana%C3%B3s
 
 	color = map_manaos
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1247,7 +1247,7 @@ bare_culture = {  #https://pib.socioambiental.org/pt/Povo:Bar%C3%A9
 
 	color = map_bare
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1262,7 +1262,7 @@ mura_culture = {  #https://pib.socioambiental.org/pt/Povo:Mura
 
 	color = map_mura
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1277,7 +1277,7 @@ arua_culture = {  #https://pt.wikipedia.org/wiki/Aru%C3%A1s
 
 	color = map_arua
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1293,7 +1293,7 @@ tremembe_culture = {  #https://pib.socioambiental.org/pt/Povo:Trememb%C3%A9
 
 	color = map_tremembe
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1310,7 +1310,7 @@ tarairiu_culture = {  #https://pt.wikipedia.org/wiki/Arari%C3%BAs
 
 	color = map_tarairiu
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1328,7 +1328,7 @@ kaete_culture = {  #https://pt.wikipedia.org/wiki/Caet%C3%A9s_(tribo)
 
 	color = map_kaete
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1344,7 +1344,7 @@ fulnio_culture = {  #fulni-ô https://pib.socioambiental.org/pt/Povo:Fulni-%C3%B
 
 	color = map_fulnio
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1361,7 +1361,7 @@ kambiwa_culture = {  #https://es.wikipedia.org/wiki/Idioma_kambiw%C3%A1
 
 	color = map_kambiwa
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1377,7 +1377,7 @@ truka_culture = {  #https://pib.socioambiental.org/pt/Povo:Truk%C3%A1
 
 	color = map_truka
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1392,7 +1392,7 @@ coremas_culture = {  #https://pt.wikipedia.org/wiki/Coremas_(tribo)
 
 	color = map_coremas
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1407,7 +1407,7 @@ pegas_culture = {  #https://pt.wikipedia.org/wiki/Pegas
 
 	color = map_pegas 
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1423,7 +1423,7 @@ guaitaka_culture = {  #guaîtaká https://pt.wikipedia.org/wiki/Goitac%C3%A1s
 
 	color = map_guaitaka
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1438,7 +1438,7 @@ charrua_culture = {  #https://pt.wikipedia.org/wiki/Charruas
 
 	color = map_charrua
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}
@@ -1454,7 +1454,7 @@ catagua_culture = {  #https://pt.wikipedia.org/wiki/Catagu%C3%A1s
 
 	color = map_catagua
 
-	tags = { amazonian_gfx native_american_tag south_american_gfx american_gfx }
+	tags = { amazonian_gfx native_american_tag north_american_gfx american_gfx }
 
 	opinions = {
 	}

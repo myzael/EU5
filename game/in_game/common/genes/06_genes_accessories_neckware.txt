@@ -1,4 +1,6 @@
-﻿accessory_genes = {
+﻿special_genes = {
+
+accessory_genes = {
 
 	neckware_neck = {
 
@@ -400,5 +402,7 @@
 		}
 
 	}
+
+}
 
 }

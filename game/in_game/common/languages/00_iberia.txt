@@ -96,7 +96,7 @@
 	lowborn = {
 		de_Abascal Abasolo acuna_dynasty de_Ahumada Albornoz de_Almansa Agualongo Aguirre de_Aguirre Aldama de_Almagro Almagro Alquisiras de_Alvarado Alvarez albornoz_dynasty alvarez_toledo_dynasty Amar Anaya Angulo Aranda Arce de_Arce Armendariz de_Armendariz Arias de_Arredondo Artigas Asensio de_Avellaneda de_Avendano de_Ayala de_Azanza
 		de_Balda Baraya de_la_Barcena Barrada Bayetola Bazan de_Bazan de_Beaumont Becerra Belgrano de_Benavides Berruguete Bolivar Bravo de_Bucareli de_Burgos de_Butron
-		Cabal Caballero Cabeza_Vaca Cagigal_Vega Calderon_Barca Calleja del_Campo Cardenas de_Cardenas Carrillo Carrillo_Mendoza de_las_Casas Castanos del_Castillo castro_dynasty Cebrian de_Cebrian Cervantes de_Cervantes Cevallos de_Cevallos Chaves de_Chaves Chumacero Churruca Clavero de_los_Cobos Colon Colon_Larreategui Colon_Portugal Contreras de_Contreras Cordova Coronel Cortes de_la_Cosa Crespo de_Croix Cuesta de_la_cueva_dynasty
+		Cabal Caballero Cabeza_Vaca Cagigal_Vega Calderon_Barca Calleja del_Campo Cardenas de_Cardenas Carrillo Carrillo_Mendoza de_las_Casas Castanos del_Castillo Cebrian de_Cebrian Cervantes de_Cervantes Cevallos de_Cevallos Chaves de_Chaves Chumacero Churruca Clavero de_los_Cobos Colon Colon_Larreategui Colon_Portugal Contreras de_Contreras Cordova Coronel Cortes de_la_Cosa Crespo de_Croix Cuesta de_la_cueva_dynasty
 		Davila Daza de_Deza Diaz Diez_Aux Dominguez O_Donoju
 		Echevarria Elcano de_Elgueta de_Elio name_stephen de_Emparan Enriquez Enriquez_Acevedo Enriquez_Lacarra Escalante de_Escalante de_Eslava Espinosa de_Ezpeleta
 		fajardo_dynasty Fernandez Fernandez_Cabrera fernandez_cordoba_dynasty Fernandez_Cueva fernandez_manrique manrique_aguilar_dynasty Fernandez_Pino velasco_dynasty Fernandez_Villagarcia Figueroa de_Figueroa Fonseca de_Fonseca
@@ -236,7 +236,7 @@
 			lowborn = {
 				Abad de_Acuna Aguila Allende Aller Alvarez Amieva name_andrew name_angel Antunez Arguelles de_Arguelles Arias de_Aviles
 				Babia Banales Bellido Benavides Berciano name_bernard Bermudez Blanco de_Bonar
-				Cabrera Calderon Campillo del_Campo Campomanes Canga Cangas Candamo Cantero Carantona Carballo Carpintero Carreno Carreno_Miranda Carrizo Casariego Castanon Castillo del_Castillo Castrillo Caveda Cea Cerezal Cienfuegos Cifuentes de_Cifuentes de_la_Concha Corias Coto de_la_Cruz Curiel Curuchet Curueno								Degana Deogracias Diez Dominguez
+				Cabrera Calderon Campillo del_Campo Campomanes Canga Cangas Candamo Cantero Carantona Carballo Carpintero Carreno Carreno_Miranda Carrizo Casariego Castanon Castillo del_Castillo Castrillo Caveda Cea Cerezal Cienfuegos Cifuentes de_Cifuentes de_la_Concha Corias Coto de_la_Cruz Curiel Curuchet Curueno Degana Deogracias Diez Dominguez
 				Fernandez Fernandez_Vega Ferrero Fierro Figaredo Florez Francos Froilan
 				Gallo name_garcia Gonzalez Grado Gutierrez de_Guzman
 				Herrera Herrero Hevia

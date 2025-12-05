@@ -372,6 +372,12 @@ has_fired_unique_event = {
 	third = HAS_FIRED_UNIQUE_EVENT_TRIGGER
 }
 
+bias_value = {
+	none = BIAS_VALUE_TRIGGER
+	global = BIAS_VALUE_TRIGGER
+	third = BIAS_VALUE_TRIGGER
+}
+
 has_tag = {
 	none = HAS_TAG_TRIGGER
 	global = HAS_TAG_TRIGGER

@@ -7,7 +7,7 @@ types DialogTypes
 			set_parent_size_to_minimum = yes
 
 			# block "dialog_size"  {
-				minimumsize = { 600 300 }
+				minimumsize = { 600 200 }
 				maximumsize = { 600 300 }
 			# }
 
@@ -18,7 +18,7 @@ types DialogTypes
 				vbox = {
 					layoutpolicy_horizontal = expanding
 					block "window_outside_margin" {
-						margin = { 25 15 }
+						margin = { 35 15 }
 					}
 
 					spacing = 10
@@ -35,7 +35,8 @@ types DialogTypes
 						hbox = {
 							layoutpolicy_horizontal = expanding
 							# block "window_margin" {
-								margin = { 40 10 }
+								margin = { 10 10 }
+								margin_top = 10
 							# }
 
 							block "dialog_content_bckg" {
@@ -68,7 +69,7 @@ types DialogTypes
 						expand = {}
 						hbox = {
 							layoutpolicy_horizontal = expanding
-							margin = { 0 10 }
+							#margin = { 0 10 }
 							spacing = 10
 
 							block "bottom_buttons" {}
@@ -211,7 +212,8 @@ basic_dialog = {
 		vbox = {
 			set_parent_dimension_to_minimum = height
 			layoutpolicy_horizontal = expanding
-			margin = { 30 5 }
+			margin = { 30 10 }
+			margin_bottom = 0
 			min_width = 500
 
 			# Description
@@ -254,3 +256,4 @@ basic_dialog = {
 		}
 	}
 }
+

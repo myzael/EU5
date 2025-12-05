@@ -320,23 +320,26 @@ request_cardinal_seat = {
 				set_variable = {
 					name = cost_of_cardinal
 					value = {
-						add = 33
-						if = {
-							limit = {
-								scope:actor = { num_cardinals > 0 }
-							}
-							multiply = {
-								value = 1.25
-								multiply = scope:actor.num_cardinals
+						add = {
+							if = {
+								limit = {
+									scope:actor = { num_cardinals > 0 }
+								}
+								value = 33
+								multiply = {
+									value = scope:actor.num_cardinals
+									multiply = 0.25
+								}
 							}
 						}
 						add = {
 							value = 33
 							multiply = {
-								value = 0.2
-								multiply = religion:catholic.total_cardinals
+								value = religion:catholic.total_cardinals
+								multiply = 0.2
 							}
 						}
+						add = 33
 					}
 				}
 			}
@@ -354,6 +357,96 @@ request_cardinal_seat = {
 		if = {
 			limit = { scope:actor = { NOT = { tag = PAP } } }
 			add = "c:PAP.opinion(scope:actor)"
+		}
+	}
+}
+
+remove_cardinal_seat = {
+	ai_tick = never
+
+	type = religious
+
+	sound = UI_action_religion_generic
+
+	potential = {
+		scope:actor.religion = religion:catholic
+	}
+	allow = {
+		papacy_active = yes
+		country_exists = c:PAP
+		scope:actor = {
+			any_owned_location = {
+				has_building = building_type:seat_of_cardinal
+			}
+		}
+		situation:western_schism = {
+			situation_is_active = no
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = religion
+		source = actor
+		target_flag = recipient
+		name = "choose_religion"
+		column = {
+			data = name
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = location
+		interaction_source_list = {
+			scope:actor = {
+				every_owned_location = {
+					limit = {
+						has_building = building_type:seat_of_cardinal
+					}
+					add_to_list = source
+				}
+			}
+		}
+		target_flag = target_location
+		name = "choose_location"
+		none_available_msg_key = "no_locations_available"
+		column = { data = name }
+		column = { data = population }
+		column = { data = rank }
+		visible = {
+			has_owner = yes
+			owner ?= scope:actor
+			has_building = building_type:seat_of_cardinal
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				exists = scope:target_location
+			}
+			scope:target_location = {
+				destroy_building = "building(building_type:seat_of_cardinal|owner)"
+			}
+			scope:actor = {
+				add_estate_satisfaction = { 
+					type = estate_type:clergy_estate
+					value = estate_satisfaction_severe_penalty
+				}
+			}
+		}
+		else = {
+			custom_tooltip = remove_cardinal_tt
+		}
+	}
+
+	ai_will_do = {
+		value = -190
+		if = {
+			limit = { scope:actor = { NOT = { tag = PAP } } }
+			add = {
+				value = "c:PAP.opinion(scope:actor)"
+				multiply = -1
+			}
 		}
 	}
 }

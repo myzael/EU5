@@ -124,6 +124,7 @@ types Frontend
 			spacing = 10
 
 			alwaystransparent = yes
+			ignoreinvisible = yes
 			visible = yes
 			scissor = yes
 
@@ -131,70 +132,29 @@ types Frontend
 				name = "newsfeed_slot_main"
 				size = { 451 230 }
 				align = left
+				datacontext = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main')]"
 
-				blockoverride "start_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').StartAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').ClearStartAnimating]"
-				}
-				blockoverride "delay" {
-					delay = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').GetCarouselDelay]"
-				}
-				blockoverride "cycle_card" {
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').CycleActiveContentCard]"
-				}
-				blockoverride "stop_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').StopAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').ClearStopAnimating]"
-				}
-				blockoverride "current_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('main').GetTexture]"
-					size = { 451 230 }
-				}
-				blockoverride "next_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('main').GetNextTexture]"
-					size = { 451 230 }
-					position = { 451 0 }
-				}
-				blockoverride "onclick" {
-					onclick = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('main').ClickActiveCard]"
-					tooltip_enabled = no
-				}
+				tooltip_enabled = no
 			}
 
 			newsfeed_carousel = {
 				name = "newsfeed_slot_secondary_1"
 				size = { 245 230 }
 				align = left
+				datacontext = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1')]"
 
-				blockoverride "start_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').StartAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').ClearStartAnimating]"
-				}
-				blockoverride "delay" {
-					delay = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').GetCarouselDelay]"
-				}
+				tooltip_enabled = no
+
 				blockoverride "offset_x" {
 					position_x = -245
 				}
-				blockoverride "cycle_card" {
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').CycleActiveContentCard]"
-				}
-				blockoverride "stop_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').StopAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').ClearStopAnimating]"
-				}
-				blockoverride "current_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('secondary-1').GetTexture]"
+
+				blockoverride "current_button_pos" {
 					size = { 245 230 }
 				}
-				blockoverride "next_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('secondary-1').GetNextTexture]"
+				blockoverride "next_button_pos" {
 					size = { 245 230 }
 					position = { 245 0 }
-				}
-				blockoverride "onclick" {
-					onclick = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-1').ClickActiveCard]"
-					tooltip_enabled = no
 				}
 			}
 
@@ -202,37 +162,21 @@ types Frontend
 				name = "newsfeed_slot_secondary_2"
 				size = { 245 230 }
 				align = left
+				datacontext = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2')]"
 
-				blockoverride "start_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').StartAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').ClearStartAnimating]"
-				}
-				blockoverride "delay" {
-					delay = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').GetCarouselDelay]"
-				}
+				tooltip_enabled = no
+
 				blockoverride "offset_x" {
 					position_x = -245
 				}
-				blockoverride "cycle_card" {
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').CycleActiveContentCard]"
-				}
-				blockoverride "stop_animating" {
-					trigger_when = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').StopAnimating]"
-					on_start = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').ClearStopAnimating]"
-				}
-				blockoverride "current_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('secondary-2').GetTexture]"
+				blockoverride "current_button_pos" {
 					size = { 245 230 }
 				}
-				blockoverride "next_texture" {
-					texture = "[FrontEndMainView.AccessMarketingContainer.GetSlotByName('secondary-2').GetNextTexture]"
+				blockoverride "next_button_pos" {
 					size = { 245 230 }
 					position = { 245 0 }
 				}
-				blockoverride "onclick" {
-					onclick = "[FrontEndMainView.AccessMarketingContainer.AccessSlotByName('secondary-2').ClickActiveCard]"
-					tooltip_enabled = no
-				}
+
 			}
 		}
 	}
@@ -709,7 +653,7 @@ widget = {
 					title = "PLAYER_PROFILING_BT"
 					enabled = "[Not(FrontEndMainView.HasUnviewedLegalDocuments)]"
 					conditions = "[MakeItFail(FrontEndMainView.GetUnviewedLegalDocumentsDesc)]"
-					on_action = "[FrontEndMainView.OnSinglePlayer]"
+					on_action = "[FrontEndMainView.CheckPlaysetAndStartNewGame('OnSinglePlayer')]"
 					clicksoundlater = "UI_button_gameNew"
 				}
 
@@ -1012,7 +956,7 @@ widget = {
 
 							action_tooltip = {
 								title = "PLAYER_PROFILING_START_NEW_GAME_BT"
-								on_action = "[FrontEndMainView.StartNewGame]"
+								on_action = "[FrontEndMainView.CheckPlaysetAndStartNewGame('StartNewGame')]"
 							}
 							
 							tooltipwidget = { BasicFunctionalTooltip = {} }
@@ -1026,7 +970,7 @@ widget = {
 
 							action_tooltip = {
 								title = "PLAYER_PROFILING_BT_2"
-								on_action = "[FrontEndMainView.OnSinglePlayer]"
+								on_action = "[FrontEndMainView.CheckPlaysetAndStartNewGame('OnSinglePlayer')]"
 							}
 
 							tooltipwidget = { BasicFunctionalTooltip = {} }

@@ -139,7 +139,6 @@ flavor_byz.3 = {
 
 flavor_byz.4 = {
 	type = country_event
-	fire_only_once = yes
 	title = flavor_byz.4.title
 	desc = flavor_byz.4.desc
 
@@ -183,7 +182,6 @@ flavor_byz.4 = {
 
 flavor_byz.5 = {
 	type = country_event
-	fire_only_once = yes
 	title = flavor_byz.5.title
 	desc = flavor_byz.5.desc
 
@@ -228,7 +226,6 @@ flavor_byz.5 = {
 flavor_byz.6 = {
 	hide_portraits = yes
 	type = country_event
-	fire_only_once = yes
 	title = flavor_byz.6.title
 	desc = flavor_byz.6.desc
 
@@ -314,7 +311,6 @@ flavor_byz.7 = {
 
 flavor_byz.8 = {
 	type = country_event
-	fire_only_once = yes
 	title = flavor_byz.8.title
 	desc = flavor_byz.8.desc
 
@@ -1741,8 +1737,7 @@ flavor_byz.28 = { #New Sparta https://en.wikipedia.org/wiki/Constantine_XI_Palai
 			value = societal_value_move_to_right
 		}
 
-	change_gold_effect = { scale = -1
-		}
+		change_gold_effect = { scale = -1 }
 
 		set_variable = morea_focus_flag
 	}
@@ -1997,6 +1992,8 @@ flavor_byz.31 = { #Alt-history. Byzantium never really reformed their army since
 			type = quality_vs_quantity
 			value = societal_value_move_to_left
 		}
+
+		remove_reform = government_reform:theme_system
 
 		add_reform = government_reform:modern_imperial_army
 
@@ -5418,8 +5415,8 @@ flavor_byz.1400 = { #Inviting the Northmen
 			max = 1
 			save_scope_as = target_country
 			create_character = {
-				mil = { 10 40 }
-				mil = { 10 40 }
+				adm = { 10 40 }
+				dip = { 10 40 }
 				mil = { 40 75 }
 				culture = scope:target_country.culture
 				birth_location = scope:target_country.capital
@@ -5613,7 +5610,7 @@ flavor_byz.1500 = { #Thessaloniki Commune
 	trigger = {
 		location:thessaloniki.owner ?= root
 		any_active_disaster = {
-			disaster_type = disaster_type:succession_crisis
+			disaster_type = disaster_type:byzantine_succession_crisis
 		}
 	}
 

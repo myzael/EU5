@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"idle"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_idle_editor_timeline"
 		}
 		timeline_layer={
@@ -12,7 +12,7 @@ behavioral_states={
 		}
 	}
  	"move2"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move2_editor_timeline"
 		}
 		timeline_layer={
@@ -20,7 +20,7 @@ behavioral_states={
 		}
 	}
  	"move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"attack_r"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_attack_r_editor_timeline"
 		}
 		timeline_layer={
@@ -39,7 +39,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 50"
+		name="Lane 91"
 		behavioral_state="idle"
 		transition_interval=0.000000
 	}
@@ -158,33 +158,33 @@ events={
 		hierarchy_place="arrow_attack_3"
 		type=stop
 	}
- 	particle_action={
-		name="arrow_firing_vfx"
-		trigger_time_absolute=1.652498
-		hierarchy_place="arrow_attack"
-		type=start
-	}
- 	audio_event={
-		name="snd_attack_arrow"
-		trigger_time_absolute=1.562036
-		stop_on_state_change=yes
-		audio_event_name="navy_arrow_fire"
-	}
  	audio_event={
 		name="snd_arrow_fire"
-		trigger_time_absolute=1.386244
+		trigger_time_absolute=2.430950
 		stop_on_state_change=yes
 		audio_event_name="navy_arrow_fire"
 	}
  	particle_action={
 		name="arrow_firing_2_vfx"
-		trigger_time_absolute=1.456560
+		trigger_time_absolute=2.506288
 		hierarchy_place="arrow_attack_2"
+		type=start
+	}
+ 	audio_event={
+		name="snd_attack_arrow"
+		trigger_time_absolute=2.576606
+		stop_on_state_change=yes
+		audio_event_name="navy_arrow_fire"
+	}
+ 	particle_action={
+		name="arrow_firing_vfx"
+		trigger_time_absolute=2.626887
+		hierarchy_place="arrow_attack"
 		type=start
 	}
  	particle_action={
 		name="arrow_firing_3_start"
-		trigger_time_absolute=1.752896
+		trigger_time_absolute=2.707194
 		hierarchy_place="arrow_attack_3"
 		type=start
 	}
@@ -192,50 +192,82 @@ events={
 
 timelines={
 	"L_relative_idle_editor_timeline"={
+		on_enter={
+			"snd_AnimState_idle"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
+			"foam_stop"
 			"Connection 13"
 			"Connection 17"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="idle_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_move2_editor_timeline"={
+		on_enter={
+			"snd_AnimState_move2"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
+			"waves_foam"
 			"Connection 21"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_move_editor_timeline"={
-		boundary_behavior=loop
+		on_enter={
+			"snd_AnimState_move1"
+		}
+		boundary_behavior=clamp
 		duration=4.733565
 		events={
+			"snd_sails"
 			"Connection 19"
 			"Connection 25"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="unfold_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_attack_r_editor_timeline"={
+		on_enter={
+			"snd_AnimState_attack"
+		}
 		boundary_behavior=loop
 		duration=7.433481
 		events={
+			"arrow_firing_vfx_stop"
+			"arrow_firing_2_vfx_stop"
+			"arrow_firing_3_vfx_stop"
+			"snd_arrow_fire"
+			"arrow_firing_2_vfx"
+			"snd_attack_arrow"
+			"arrow_firing_vfx"
+			"arrow_firing_3_start"
 			"Connection 15"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="attack_r_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"idle_time"={
 		on_enter={
@@ -293,10 +325,10 @@ timelines={
 			"arrow_firing_vfx_stop"
 			"arrow_firing_2_vfx_stop"
 			"arrow_firing_3_vfx_stop"
-			"arrow_firing_vfx"
-			"snd_attack_arrow"
 			"snd_arrow_fire"
 			"arrow_firing_2_vfx"
+			"snd_attack_arrow"
+			"arrow_firing_vfx"
 			"arrow_firing_3_start"
 		}
 		starttime_offset=0.000000
@@ -309,7 +341,7 @@ timelines={
 
 starting_timeline={
 	on_enter={
-		"Lane 50"
+		"Lane 91"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

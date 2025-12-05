@@ -351,6 +351,10 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 			save_scope_as = target_ruler
 		}
 		save_scope_as = target_country
+
+		character:lit_liubartas_gediminds ?= {
+			save_scope_as = lit_target_claimant
+		}
 	}
 
 	trigger = {
@@ -409,13 +413,21 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 			}
 			trigger_event_non_silently = flavor_vol.1001
 		}
-		c:LIT = {
-			add_casus_belli = {
-				type = casus_belli:cb_claim_throne
-				target = c:VOL
-				years = 20
+		if = {
+			limit = {
+				scope:lit_target_claimant = {
+					is_alive = yes
+				}
 			}
-			trigger_event_non_silently = flavor_vol.1001
+			c:LIT = {
+				add_casus_belli = {
+					type = casus_belli:cb_claim_throne
+					target = c:VOL
+					character = scope:lit_target_claimant
+					years = 20
+				}
+				trigger_event_non_silently = flavor_vol.1001
+			}
 		}
 	}
 
@@ -447,6 +459,9 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 		character:vol_boleslaw_jerzy_ii_piast = {
 			save_scope_as = target_ruler
 		}
+		character:lit_liubartas_gediminds ?= {
+			save_scope_as = lit_target_claimant
+		}
 		c:VOL = { save_scope_as = target_country }
 		c:HAL = { save_scope_as = target_country_2 }
 	}
@@ -459,6 +474,7 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 				add_casus_belli = {
 					type = casus_belli:cb_claim_throne
 					target = c:VOL
+					character = scope:lit_target_claimant
 					years = 20
 				}
 			}

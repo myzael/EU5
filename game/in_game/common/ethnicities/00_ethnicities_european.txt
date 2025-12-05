@@ -45,6 +45,20 @@ european_ethnicity = {
 		}
 	}
 
+	gene_cheek_def = {
+		5 =  { name = template_1 		range = { 0.0 0.2 } }
+		15 =  { name = template_1 		range = { 0.2 0.4 } }
+		50 =  { name = template_1 		range = { 0.4 0.6 } }
+		20 =  { name = template_1 		range = { 0.6 0.8 } }
+		10 =  { name = template_1 		range = { 0.8 1.0 } }
+
+		5 =  { name = template_2 		range = { 0.0 0.2 } }
+		15 =  { name = template_2 		range = { 0.2 0.4 } }
+		50 =  { name = template_2 		range = { 0.4 0.6 } }
+		20 =  { name = template_2 		range = { 0.6 0.8 } }
+		10 =  { name = template_2 		range = { 0.8 1.0 } }
+	}
+
 	# gene_cheek_fat = {
 	# 	5 =  { name = template_1 		range = { 0.0 0.35 } }
 	# 	25 =  { name = template_1 		range = { 0.45 0.65 } }
@@ -244,10 +258,10 @@ european_ethnicity = {
 	# }
 
 	gene_nose_nostril_width = {
-		2 =  { name = template_1 		range = { 0.05 0.1 } }
-		15 =  { name = template_1 		range = { 0.1 0.17 } }
-		60 =  { name = template_1 		range = { 0.17 0.37 } }
-		15 =  { name = template_1 		range = { 0.37 0.57 } }
+		0 =  { name = template_1 		range = { 0.05 0.12 } }
+		15 =  { name = template_1 		range = { 0.12 0.22 } }
+		60 =  { name = template_1 		range = { 0.22 0.32 } }
+		15 =  { name = template_1 		range = { 0.32 0.57 } }
 		8 =  { name = template_1 		range = { 0.57 0.77 } }
 	}
 
@@ -259,21 +273,43 @@ european_ethnicity = {
 		50 =  { name = template_1 		range = { 0.8 1.0 } }
 	}
 
+	gene_nose_ridge_shape = {
+		0 =  { name = template_1 		range = { 0.0 0.2 } }
+		5 =  { name = template_1 		range = { 0.2 0.4 } }
+		80 =  { name = template_1 		range = { 0.4 0.6 } }
+		15 =  { name = template_1 		range = { 0.6 0.8 } }
+		2 =  { name = template_1 		range = { 0.8 1.0 } }
+	}
+
 	gene_nose_tip_def = {
 		0 =  { name = template_1 		range = { 0.0 0.2 } }
 		15 =  { name = template_1 		range = { 0.2 0.4 } }
 		25 =  { name = template_1 		range = { 0.4 0.6 } }
-		25 =  { name = template_1 		range = { 0.6 0.8 } }
-		50 =  { name = template_1 		range = { 0.8 1.0 } }
+		50 =  { name = template_1 		range = { 0.6 0.8 } }
+		25 =  { name = template_1 		range = { 0.8 1.0 } }
+
+		0 =  { name = template_1 		range = { 0.0 0.2 } }
+		1 =  { name = template_1 		range = { 0.2 0.4 } }
+		2 =  { name = template_1 		range = { 0.4 0.6 } }
+		5 =  { name = template_1 		range = { 0.6 0.8 } }
+		2 =  { name = template_1 		range = { 0.8 1.0 } }
 	}
 
-	# gene_nose_tip_size = {
-	# 	10 =  { name = template_1 		range = { 0.1 0.2 } }
-	# 	40 =  { name = template_1 		range = { 0.2 0.4 } }
-	# 	50 =  { name = template_1 		range = { 0.4 0.6 } }
-	# 	0 =  { name = template_1 		range = { 0.6 0.8 } }
-	# 	0 =  { name = template_1 		range = { 0.8 1.0 } }
-	# }
+	gene_nose_tip_forward = {
+		0 =  { name = template_1 		range = { 0.0 0.2 } }
+		10 =  { name = template_1 		range = { 0.2 0.45 } }
+		90 =  { name = template_1 		range = { 0.45 0.55 } }
+		1 =  { name = template_1 		range = { 0.55 0.8 } }
+		0 =  { name = template_1 		range = { 0.8 1.0 } }
+	}
+
+	gene_nose_tip_size = {
+		0 =  { name = template_1 		range = { 0.1 0.2 } }
+		10 =  { name = template_1 		range = { 0.2 0.3 } }
+		60 =  { name = template_1 		range = { 0.3 0.5 } }
+		30 =  { name = template_1 		range = { 0.5 0.6 } }
+		2 =  { name = template_1 		range = { 0.6 0.8 } }
+	}
 
 	gene_eye_socket_color = {
 		80 =  { name = template_1 		range = { 0.0 0.1 } }

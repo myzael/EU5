@@ -23,7 +23,7 @@
 	dynasty_names = { #From EU4
 		Se Rmu Ldong Stong Dbra Dru Nyang Sbas Gnon Chespong Thonmi Mgar Bri Mong Zhang_tibetan Mchims Bal Lang Cogro Bro Dbas 
 		Shudpu Gnyags Mgus Mjang Snang Sgro Rma Snyiba Khu Khun Mkar Rlangs Rinspungs Zhingshag Phjongsrgjas Nganlam Sba Lig 
-		Khjungpo Mnyammed Gampo Srong Sregs name_thekchen Sonam	name_tashi Tsewang Wangdue Wangdak Phuntsok
+		Khjungpo Mnyammed Gampo Srong Sregs name_thekchen Sonam name_tashi Tsewang Wangdue Wangdak Phuntsok
 	}
 	lowborn = {
 

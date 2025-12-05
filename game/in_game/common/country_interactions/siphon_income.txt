@@ -50,13 +50,13 @@
 			scope:actor = {
 				add_gold = {
 					value = scope:recipient.gold
-					multiply = 0.5
+					multiply = 0.1
 				}
 			}
 			scope:recipient = {
 				add_gold = {
 					value = scope:recipient.gold
-					multiply = -0.5
+					multiply = -0.1
 				}
 				add_liberty_desire = liberty_desire_severe_plus
 			}

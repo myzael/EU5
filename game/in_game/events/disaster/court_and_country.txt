@@ -910,7 +910,10 @@ court_and_country.12 = {
 	trigger = {
 		OR = {
 			government_power < 90
-			manpower_percentage <= 0.5
+			AND = {
+				manpower_percentage <= 0.5
+				monthly_manpower > 0
+			}
 		}
 	}
 

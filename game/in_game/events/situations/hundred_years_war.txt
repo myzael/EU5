@@ -297,7 +297,7 @@ hundred_years_war.101 = {
 	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 
 	immediate = {
-		c:FRA.ruler ?= {
+		c:FRA.ruler_or_regent ?= {
 			save_scope_as = target_char
 		}
 	}
@@ -797,9 +797,6 @@ hundred_years_war.204 = {
 				add_core = c:ENG
 			}				
 		}	
-		ai_chance = {
-			base = 90
-		}		
 	}
 
 	option = { # No... War with France is not ideal
@@ -851,23 +848,8 @@ hundred_years_war.205 = {
 
 	trigger = { #
 		tag = ENG 
-		at_war = no
-		has_variable = robert_provoked_war_flag	
-		OR = {
-			province_definition:lower_artois_province = {
-				any_location_in_province_definition = {
-					controller != root
-					owner != root
-				}
-			}	
-			province_definition:upper_artois_province = {
-				any_location_in_province_definition = {
-					controller != root
-					owner != root
-				}
-			}	
-		}		
-		character:eng_robert_iii_artois ?= {
+		at_war = no		
+		character:eng_robert_iii_artois = {
 			is_alive = yes	
 			owner = ROOT
 		}		
@@ -1297,11 +1279,9 @@ hundred_years_war.209 = {
 	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 	major = yes
 	major_trigger = {
-		this = {
-			OR = {
-				tag = ENG
-				tag = FRA
-			}
+		OR = {
+			tag = ENG
+			tag = FRA
 		}
 	}
 	
@@ -1313,19 +1293,63 @@ hundred_years_war.209 = {
 	
 	option = {
 		name = hundred_years_war.209.a
-		ai_chance = {
-			base = 90
+		ai_will_select = {
+			value = 300
+			if = {
+				limit = { subject_loyalty >= 50 }
+				subtract = subject_loyalty
+			}
+			else = {
+				add = {
+					value = 100
+					subtract = subject_loyalty
+				}
+			}
+			if = {
+				limit = { num_loans > 0 }
+				add = {
+					value = num_loans
+					multiply = 10
+				}
+			}
+			add = {
+				value = {
+					add = "root.opinion(c:ENG)"
+					subtract = "root.opinion(c:FRA)"
+					multiply = 0.25
+				}
+
+				desc = "target subject ENG opinion minus FRA opinion"
+			}
 		}
 
 		scope:actor = {
-			add_gold = -300
+			transfer_yearly_gold = {
+				value = 0.2
+				target = root
+			}
 		}
-		add_gold = 300
 		
 		add_country_modifier = {
 			modifier = appanage_diplomatic_betrayal_modifier
 			years = 5
 			mode = replace
+		}
+
+		if = {
+			limit = { is_at_war_with = scope:actor }
+			random_current_war = {
+				limit = {
+					any_war_participant = { this = root }
+					any_war_participant = { this = scope:actor }
+				}
+				root = {
+					leave_war = {
+						war = prev 
+						actor = scope:actor
+					}
+				}
+			}
 		}
 
 		add_opinion_mutual_effect = {
@@ -1336,14 +1360,55 @@ hundred_years_war.209 = {
 
 	option = {
 		name = hundred_years_war.209.b
-		ai_chance = {
-			base = 10
+		ai_will_select = {
+			value = -175 # baseline: mildly inclined to not select this option
+
+			# Loyalty: loyal subjects are much more likely to decline England's offer
+			if = {
+				limit = { subject_loyalty >= 50 }
+				add = subject_loyalty
+			}
+			else = {
+				# Below 50 loyalty = penalty; the lower it is, the less they want to decline
+				subtract = {
+					value = 50
+					subtract = subject_loyalty
+				}
+			}
+
+			# Debt makes them more desperate, so debt *reduces* the chance of declining
+			if = {
+				limit = { num_loans > 0 }
+				subtract = {
+					value = num_loans
+					multiply = 10
+				}
+			}
+
+			# Opinion comparison: prefers FRA over ENG = more likely to decline
+			add = {
+				value = {
+					add = "root.opinion(c:FRA)"
+					subtract = "root.opinion(c:ENG)"
+				}
+
+				desc = "target subject FRA opinion minus ENG opinion"
+			}
+		}
+
+		custom_tooltip = {
+			text = england_wont_request_for_at_least_x_years_tt
+			set_variable = {
+				name = recently_declined_backstab_variable
+				years = 3
+			}
 		}
 		
 		add_opinion_mutual_effect = {
 			target = c:FRA
 			modifier = successful_diplomacy
 		}
+
 	}
 }
 
@@ -1368,8 +1433,21 @@ hundred_years_war.210 = {
 
 	option = {
 		name = hundred_years_war.210.a
-		ai_chance = {
-			base = 90
+		ai_will_select = {
+			value = 20
+			every_subject = {
+				limit = { is_disloyal_subject = yes }
+				add = 5
+			}
+			add = {
+				value = 100
+				multiply = "scope:actor.relative_strength(root)"
+			}
+
+			if = {
+				limit = { at_war = yes }
+				add = 10
+			}
 		}
 
 		if = {
@@ -1392,6 +1470,7 @@ hundred_years_war.210 = {
 				target = c:FRA
 				modifier = recent_appanage_opinion
 			}
+			add_liberty_desire = liberty_desire_mild_minus
 		}
 
 		custom_tooltip = inherit_in_case_of_no_heir_tt
@@ -1399,14 +1478,14 @@ hundred_years_war.210 = {
 
 	option = {
 		name = hundred_years_war.210.b
-		ai_chance = {
-			base = 10
-		}
+		ai_will_select = { value = 10 }
 		
 		add_opinion_mutual_effect = {
 			target = scope:actor
 			modifier = belligerent_diplomacy
 		}
+
+		scope:actor = { add_liberty_desire = liberty_desire_severe_plus }
 	}
 }
 
@@ -2195,10 +2274,16 @@ hundred_years_war.217 = {
 		name = hundred_years_war.217.b
 
 		ai_chance = {
-			factor = 0
+			factor = 5
 		}
 
-		custom_tooltip = they_will_be_notified_of_our_rejection_tt
+		custom_tooltip = {
+			text = they_will_be_notified_of_our_rejection_tt
+			set_variable = {
+				name = request_war_entry_variable
+				years = 10
+			}
+		}
 	}
 }
 
@@ -2255,19 +2340,19 @@ hundred_years_war.218 = {
 				limit = { 
 					scope:target_asker = { is_in_losing_war = yes }
 				}
-				subtract = 10
+				subtract = 15
 			}
 
 			# More willing if manpower is low! risk-averse
 			if = {
 				limit = { root.manpower_percentage < 0.3 }
-				add = 10
+				add = 5
 			}
 
 			# Less inclined to accept if manpower is high — confident in ability to fight
 			if = {
 				limit = { root.manpower_percentage > 0.7 }
-				subtract = 3
+				subtract = 5
 			}
 
 			# If the proposer is a rival or enemy, we may not trust them
@@ -2278,22 +2363,22 @@ hundred_years_war.218 = {
 						is_enemy_of = scope:target_asker
 					}
 				}
-				subtract = 30
+				subtract = 50
 			}
 
 			# High war exhaustion makes peace more attractive
 			add = {
 				value = war_exhaustion
-				multiply = 2
+				multiply = 10
 			}
 
 			# Slight bonus if we are at war elsewhere — less appetite for additional fronts
 			if = {
 				limit = {
-					any_current_war = { count > 1 }
+					any_current_war = { count > 0 }
 				}
 				every_current_war = {
-					add = 10
+					add = 25
 				}
 			}
 		}
@@ -2305,19 +2390,21 @@ hundred_years_war.218 = {
 
 		add_gold = {
 			value = scope:target_asker.monthly_income_trade_and_tax
-			multiply = 4
+			multiply = 3
 		}
 
 		scope:target_asker = {
 			add_gold = {
 				value = monthly_income_trade_and_tax
-				multiply = -4
+				multiply = -3
 			}
 		}
 	}
 
 	option = {
 		name = hundred_years_war.218.b
+
+		ai_will_select = { value = 30 }
 
 		custom_tooltip = they_will_be_notified_of_our_rejection_tt
 	}
@@ -2460,6 +2547,66 @@ hundred_years_war.220 = { #The Brewer of Ghent
 		kill_character = {
 			target = scope:target_character2
 			reason = execution
+		}
+	}
+}
+
+hundred_years_war.230 = { #Subject Defects!
+	type = country_event
+	title = hundred_years_war.230.title
+	desc = hundred_years_war.230.desc
+
+	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = ENG
+			tag = FRA
+			this = scope:actor
+		}
+	}
+
+	immediate = {
+		scope:actor.overlord = { save_scope_as = target_enemy }
+	}
+
+	option = {	#Side with England
+		name = hundred_years_war.230.a
+
+		ai_will_select = {
+			value = 150
+		}
+		
+
+		scope:actor = {
+			make_subject_of = {
+				target = root
+				type = subject_type:vassal
+			}
+
+			add_liberty_desire = liberty_desire_severe_plus
+			add_truce_with = { target = root }
+			add_cooldown = {
+				type = hyw_defect_action
+				years = 10
+			}
+		}
+
+	}
+
+	option = {
+		name = hundred_years_war.230.b
+
+		ai_will_select = {
+			value = 10
+		}
+
+		if = {
+			limit = { prestige < 10 }
+			custom_tooltip = slightly_discourage_existing_subjects_from_defecting_tt
+	
+			add_prestige = prestige_weak_bonus
 		}
 	}
 }

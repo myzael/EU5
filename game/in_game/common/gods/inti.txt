@@ -17,7 +17,7 @@ inti_god = { #Sun God
 	}
 
     country_modifier = {
-		global_population_growth = 0.00025
+		global_population_growth = 0.0001
 		monthly_yanantin = -0.5
     }
 }
@@ -53,7 +53,7 @@ pachamama = { #Earth Mother
 	}
 
     country_modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.001
 		monthly_yanantin = 0.5
     }
 }

@@ -99,7 +99,7 @@ tributary = {
 		}
 	}
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 	
 	strength_vs_overlord = -0.25
 

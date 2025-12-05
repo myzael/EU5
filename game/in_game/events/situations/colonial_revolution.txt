@@ -580,6 +580,12 @@ colonial_revolution.1000 = {
 	option = { #Ask for manpower
 		name = colonial_revolution.1000.b
 
+		trigger = {
+			scope:target_rival = {
+				monthly_manpower > 0
+			}
+		}
+
 		scope:target_rival = {
 			set_variable = colony_of_rival_requests_manpower_var
 			trigger_event_non_silently = colonial_revolution.1001

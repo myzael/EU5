@@ -10,11 +10,6 @@ dissolution_of_delhi.1 = {
 
 	immediate = {
 		ruler_or_regent ?= { save_scope_as = target_character }
-		set_variable = {
-			name = dissolution_of_delhi_started
-			value = yes
-			years = 1
-		}
 	}
 
 	option = {

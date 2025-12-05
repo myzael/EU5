@@ -44,12 +44,7 @@ sengoku_attempt_imperial_restoration = {
 		scope:actor ?= {
 			custom_tooltip = {
 				text = sengoku_attempt_imperial_restoration.tt
-				change_country_type = location
-				every_owned_foreign_building_location = {
-					change_location_owner = scope:actor
-					add_core = scope:actor
-					change_integration_level = core
-				}
+				turn_japanese_clan_into_normal_tag = yes
 			}
 			reverse_add_opinion = { modifier = opinion_refused_shogunate_authority target = international_organization:japanese_shogunate.leader_country }
 		}

@@ -32,6 +32,9 @@ country_base_values = {
 
 	global_monthly_art_start_chance = 0.1
 	
+	
+	ship_capture_chance = 0.025
+	
 	tolerance_own = 1
 	tolerance_heathen = -5
 	tolerance_heretic = -2.5
@@ -896,7 +899,7 @@ country_control_scaled_population = {
 country_accepted_culture_population = {
 	scales_with = total_accepted_culture_population
 
-	expected_army_size = 0.001
+	expected_army_size = 0.002
 }
 
 
@@ -976,6 +979,7 @@ monthly_income_impact = {
 	scales_with = monthly_income_trade_and_tax
 
 	great_power_score = 0.05
+
 }
 
 num_embraced_institutions = {
@@ -1137,8 +1141,8 @@ ruler_is_not_a_commander_during_war = {
 		at_war = yes
 		modifier:ruler_must_be_commander_during_war = yes
 		ruler ?= {
-			is_general = no
-			is_admiral = no
+			NOT = { is_leading_largest_army_of = root }
+			NOT = { is_leading_largest_navy_of = root }
 		}
 	}
 	

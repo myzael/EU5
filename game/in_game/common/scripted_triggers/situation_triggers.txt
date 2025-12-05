@@ -605,41 +605,12 @@ rise_of_the_ottomans_end_trigger = {
 			}
 		}
 		AND = {
-			current_year > 1400
-			custom_tooltip = {
-				text = no_beylik_has_100_locations_tt
-				NOT = {
-					any_in_global_list = {
-						variable = eligible_beylik_list
-						is_subject = no
-						num_locations >= 100
-					}
-				}
+			current_year >= 1400
+			var:strongest_beylik_variable ?= {
+				num_locations < 100 
+				in_civil_war = no
 			}
 		}
-	}
-}
-
-rise_of_the_ottomans_end_trigger_beylik_victory = {
-	trigger_if = {
-		limit = { var:strongest_beylik_variable = c:TUR }
-		custom_tooltip = {
-			text = strongest_beylik_has_over_75_locations
-			var:strongest_beylik_variable = { 
-				num_locations > 1000 
-				num_of_non_rural >= 75
-			}	
-		}
-	}
-	trigger_else = {
-		custom_tooltip = {
-			text = strongest_beylik_has_over_75_locations
-			var:strongest_beylik_variable = { 
-				num_locations > 1000 
-				num_of_non_rural >= 75
-			}	
-		}
-		NOT = { country_exists = c:TUR }
 	}
 }
 
@@ -785,11 +756,13 @@ fall_of_delhi_end_trigger = {
 		}
 		custom_tooltip = {
 			text = has_decided_to_cede_territories_tt
-			has_variable = dlh_surrendered_territories_var
+			c:DLH = { has_variable = dlh_surrendered_territories_var }
 		}
 		custom_tooltip = {
 			text = dissolution_of_delhi_started_tt
-			has_variable = dissolution_of_delhi_started
+			c:DLH = {
+				any_active_disaster = { disaster_type = disaster_type:dissolution_of_delhi }
+			}
 		}
 		NOT = { country_exists = c:DLH }
 	}

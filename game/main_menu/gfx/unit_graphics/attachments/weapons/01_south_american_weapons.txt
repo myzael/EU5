@@ -9,7 +9,7 @@ south_american_gfx:spear_weapons = {
 	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_spear_rope_schematic" 				add_tags = "one_handed" add_tags = "UnitWeapon_spear" 				animation_state_machine_override = "unit_skeleton_state_machine_one_handed_spear" } }
 }
 south_american_gfx:sword_weapons = {
-	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_sword_wood_rope_schematic" 					add_tags = "one_handed" add_tags = "UnitWeapon_axe" 		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }
+	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_sword_wood_rope_schematic" 					add_tags = "one_handed" add_tags = "UnitWeapon_axe"  add_tags = "UnitWeapon_wooden_club"  		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }
 	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_macuahuitl_twohanded_schematic" 	add_tags = "UnitWeapon_two_handed_axe" 						animation_state_machine_override = "unit_skeleton_state_machine_two_handed_axe" } }
     10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_wood_onehanded_schematic" 					add_tags = "one_handed" add_tags = "UnitWeapon_axe" 		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }
 }
@@ -106,7 +106,6 @@ aztec_base_weapons = {
 }
 
 south_american_gfx:cavalry_weapons = {	
-	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_sword_wood_rope_schematic" 			add_tags = "one_handed" add_tags = "UnitWeapon_wooden_club" 		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }
-    10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_spear_halberd_schematic" 			add_tags = "one_handed" add_tags = "UnitWeapon_wooden_club" 		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }
-	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_wood_onehanded_schematic" 			add_tags = "one_handed"	add_tags = "UnitWeapon_wooden_club" 		animation_state_machine_override = "unit_skeleton_state_machine_one_handed_axe" } }   
-}  
+	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_axe_aztec_stone_schematic" 	add_tags = "one_handed" add_tags = "UnitWeapon_sword" 			animation_state_machine_override = "unit_skeleton_state_machine_one_handed_sword" } } 
+	10 = { add_entity = { node = Unit_Wea_Right_Hand01		schematic_name = "unit_weapon_spear_rope_schematic" 				add_tags = "one_handed" add_tags = "UnitWeapon_spear" 				animation_state_machine_override = "unit_skeleton_state_machine_one_handed_spear" } }
+}

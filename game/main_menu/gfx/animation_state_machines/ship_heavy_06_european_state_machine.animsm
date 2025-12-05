@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"idle"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_idle_editor_timeline"
 		}
 		timeline_layer={
@@ -12,7 +12,7 @@ behavioral_states={
 		}
 	}
  	"move2"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move2_editor_timeline"
 		}
 		timeline_layer={
@@ -20,7 +20,7 @@ behavioral_states={
 		}
 	}
  	"move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"attack_r"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_attack_r_editor_timeline"
 		}
 		timeline_layer={
@@ -39,7 +39,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 114"
+		name="Lane 28"
 		behavioral_state="idle"
 		transition_interval=0.000000
 	}
@@ -240,6 +240,9 @@ events={
 
 timelines={
 	"L_relative_idle_editor_timeline"={
+		on_enter={
+			"snd_AnimState_idle"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
@@ -249,41 +252,79 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="idle_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_move2_editor_timeline"={
+		on_enter={
+			"snd_AnimState_move"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
+			"waves_foam"
 			"Connection 21"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_move_editor_timeline"={
-		boundary_behavior=loop
+		on_enter={
+			"snd_AnimState_move2"
+		}
+		boundary_behavior=clamp
 		duration=4.733565
 		events={
+			"snd_move_sails"
 			"Connection 19"
 			"Connection 25"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="unfold_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_attack_r_editor_timeline"={
+		on_enter={
+			"snd_AnimState_attack"
+		}
 		boundary_behavior=loop
 		duration=7.433481
 		events={
+			"cannon1shot"
+			"cannon2shot"
+			"cannon3shot"
+			"cannon4shot"
+			"cannon5shot"
+			"cannon6shot"
+			"cannon7shot"
+			"cannon8shot"
+			"cannon9shot"
+			"cannon11shot"
+			"cannon12shot"
+			"cannon13shot"
+			"cannon14shot"
+			"cannon15shot"
+			"cannon16shot"
+			"cannon10shot"
+			"snd_cannon_fire"
 			"Connection 15"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
-		duration_source=animation
+		animation="attack_r_animation"
+		generated_timeline=yes
 	}
  	"idle_time"={
 		on_enter={
@@ -359,13 +400,12 @@ timelines={
 		playback_rate=1.000000
 		layer=0
 		animation="attack_r_animation"
-		duration_source=animation
 	}
  }
 
 starting_timeline={
 	on_enter={
-		"Lane 114"
+		"Lane 28"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

@@ -585,10 +585,10 @@ is_same_ruler_personal_union = {
 	custom_description = {
 		text = is_same_ruler_personal_union_text
 		any_international_organization_member = {
-			ruler_or_regent ?= { save_temporary_scope_as = ruler_character }
+			ruler_or_heir_if_regent ?= { save_temporary_scope_as = ruler_character }
 		}
 		any_international_organization_member = {
-			ruler_or_regent ?= scope:ruler_character
+			ruler_or_heir_if_regent ?= scope:ruler_character
 			count > 1
 		}
 	}

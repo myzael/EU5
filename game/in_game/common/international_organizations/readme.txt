@@ -122,7 +122,8 @@
 # - allow_member_annexation = yes/no: whether this IO allows members to diplomatically annex each other regardless of being subjects or not
 # - annexation_min_years_before = <integer script value>: the amount of years a member needs to be in the IO before they can be annexed. root = annexer, scope:target = country to be annexed, scope:recipient = IO
 # - can_annex_members: what conditions must be fulfilled before a member can start diplomatically annex another one. root = annexer, scope:target = country to be annexed, scope:recipient = IO
-# - annexation_speed: defines how long it takes for organization members to annex each other
+# - can_annex_visible: what conditions must be fulfilled before a member can even see the annexation action against other IO members. root = annexer, scope:target = country to be annexed, scope:recipient = IO
+# - annexation_speed = <float script value>: defines how long it takes for organization members to annex each other. root/scope:actor = annexer, scope:target = country to be annexed, scope:recipient = IO; note: use if = { limit = { exists = root } } else = {} definition as the tooltip for it uses none of the scopes
 # - ai_issue_voting_bias = <script value>: script value used as extra reasoning in resolutions, used in conjunction with the ai_issue_voting_bias trigger
 #
 # available scripts for the scope of international organization: 

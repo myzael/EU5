@@ -125,7 +125,6 @@
 					save_scope_as = new_character
 				}
 			}
-			add_army_tradition = -5
 		}
 	}
 }

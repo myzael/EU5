@@ -445,11 +445,11 @@ window = {
 					scrollwidget = {
 						vbox = {
 							set_parent_dimension_to_minimum = height
-							margin = { 13 10 }
-							margin_top = 0
+							margin = { 15 10 }
+							#margin_top = 0
 							#margin_bottom = 13
 							using = bg_age_event_mask
-							spacing = 10
+							#spacing = 10
 
 							hbox = { # Portraits
 								layoutpolicy_horizontal = expanding
@@ -516,6 +516,7 @@ window = {
 								autoresize = yes
 								minimumsize = { 515 -1 }
 								maximumsize = { 515 -1 }
+								margin = { 15 10 }
 								
 								text = "[EventWindow.GetDescription]"
 							}
@@ -589,6 +590,7 @@ window = {
 								maximumsize = { 500 -1 }
 								autoresize = yes
 								fontsize = 13
+								margin = { 10 10 }
 
 								using = Font_Type_Flavor
 								default_format = "#flavor"

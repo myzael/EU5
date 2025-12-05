@@ -4,7 +4,7 @@
 	requires = diplomatic_range_age_1
 	icon = diplomatic_training
 
-	global_distance_from_capital_cost_modifier = -0.1
+	global_distance_from_capital_cost_modifier = -0.05
 }
 
 ilk_ilkhanate_resurgent = {

@@ -204,6 +204,10 @@ opinion_receiving_forced_divert_trade = {
 	value = -40
 }
 
+opinion_receiving_rein_in_junior_diplomacy = {
+	value = -50
+}
+
 opinion_union_of_crowns_pact = {
 	value = 15
 }
@@ -399,8 +403,10 @@ opinion_elevated_country = {
 }
 
 opinion_weakened_our_league = {
-	value = -10
+	value = -2
 	yearly_decay = 1
+
+	min = -100
 }
 
 opinion_strengthened_our_league = {
@@ -573,4 +579,11 @@ opinion_denied_sinicization_modifier = {
 opinion_released_from_unlawful_territory = {
 	value = 100
 	yearly_decay = 5
+}
+
+opinion_donated_gold_to_io = {
+	value = 25
+	yearly_decay = 2
+	max = 100
+	min = 0
 }

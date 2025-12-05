@@ -1,6 +1,8 @@
 ﻿#Schools of Jurisprudence
 
 jafari_school = {
+	color = rgb { 86 0 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -16,13 +18,15 @@ jafari_school = {
 	}
 	
 	modifier = {
-		global_population_growth = 0.0005
+		global_population_growth = 0.00025
 	}
 }
 
 #Schools of both theology and jurisprudence
 
 ismaili_school = {
+	color = rgb { 84 8 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -46,6 +50,8 @@ ismaili_school = {
 }
 
 zaidi_school = {
+	color = rgb { 68 1 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -67,6 +73,8 @@ zaidi_school = {
 #Schools of Theology
 
 imamiya_school = {
+	color = rgb { 72 5 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -86,6 +94,8 @@ imamiya_school = {
 }
 
 nizari_school = {
+	color = rgb { 72 2 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -105,6 +115,8 @@ nizari_school = {
 }
 
 mustali_school = {
+	color = rgb { 44 0 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -124,6 +136,8 @@ mustali_school = {
 }
 
 alevism_school = {
+	color = rgb { 100 9 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -151,6 +165,8 @@ alevism_school = {
 }
 
 alawi_school = {
+	color = rgb { 49 27 2 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi

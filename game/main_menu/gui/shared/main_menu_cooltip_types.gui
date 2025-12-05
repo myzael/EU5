@@ -656,19 +656,19 @@ types ContextualTooltipTypes
 		}
 	}
 
-	type ContextualTooltipHeader = widget {
+	type ContextualTooltipHeader = hbox {
 		block "tooltip_layout_policy" {
 			layoutpolicy_horizontal = expanding
 		}
 
 		block "tooltip_title_size" {
-			size = { @tooltip_title_wide -1 }
+			minimumsize = { @tooltip_title_wide -1 }
 		}
 
 		using = bg_contextual_tooltip_header
 
 		hbox = {
-			resizeparent = yes
+			layoutpolicy_horizontal = expanding
 			ignoreinvisible = yes
 			margin = { @tooltip_inner_margin 4 }
 			spacing = 10
@@ -1353,16 +1353,16 @@ types ContextualTooltipTypes
 		# }
 	}
 
-	type ConceptTooltipHeader = widget {
+	type ConceptTooltipHeader = hbox {
 		layoutpolicy_horizontal = expanding
 
 		block "tooltip_title_size" {
-			size = { @tooltip_title_wide -1 }
+			minimumsize = { @tooltip_title_wide -1 }
 		}
 
 		using = bg_concept_tooltip_header
 		hbox = {
-			resizeparent = yes
+			layoutpolicy_horizontal = expanding
 			ignoreinvisible = yes
 			margin = { @tooltip_inner_margin 5 }
 			spacing = 10
@@ -1428,6 +1428,8 @@ types ContextualTooltipTypes
 
 		vbox = {
 			set_parent_size_to_minimum = yes
+			layoutpolicy_horizontal = shrinking
+			layoutpolicy_vertical = shrinking
 
 			block "tooltip_title" {
 				ContextualTooltipHeader = {}
@@ -2219,6 +2221,10 @@ types ContextualTooltipTypes
 								ContextualTooltipTypeBase = {
 									datacontext = "[StringToRequirementsList(ConditionList.GetCollapsedText)]"
 									TooltipScrolledRequirementsList = {
+										blockoverride "block_title" {
+											text = "LIST_TITLE_REQUIREMENTS"
+										}
+										
 										set_parent_size_to_minimum = yes
 										margin = { 5 5 }
 									}

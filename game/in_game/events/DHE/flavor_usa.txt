@@ -639,7 +639,7 @@ flavor_usa.12 = {
 						}
 					}
 				
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 			}
 		}
@@ -670,7 +670,7 @@ flavor_usa.12 = {
 						}
 					}
 				
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 			}
 		}

@@ -186,7 +186,7 @@ protestant_union = {
 						leader_country = {
 							root = {
 								value = this_opinion_of_prev
-								multiply = 1
+								multiply = 0.2
 							}
 						}
 					}
@@ -200,7 +200,7 @@ protestant_union = {
 					leader_country = {
 						root = {
 							value = this_opinion_of_prev
-							multiply = -1
+							multiply = -0.4
 						}
 					}
 				}
@@ -439,7 +439,7 @@ catholic_league = {
 						leader_country = {
 							root = {
 								value = this_opinion_of_prev
-								multiply = 1
+								multiply = 0.2
 							}
 						}
 					}
@@ -453,7 +453,7 @@ catholic_league = {
 					leader_country = {
 						root = {
 							value = this_opinion_of_prev
-							multiply = -2
+							multiply = -0.4
 						}
 					}
 				}

@@ -228,10 +228,21 @@ missionaries.8 = {
 
 	option = {
 		name = missionaries.8.a
+
+		ai_will_select = {
+			value = 1
+			if = {
+				limit = {num_locations < 5 }
+				subtract = 1
+			}
+		}
 		add_gold = { value = scope:target_location.location_tax_base multiply = -4 max = -10 }
 	}
 	option = {
 		name = missionaries.8.b
+
+		ai_will_select = { value = 0 }
+
 		add_government_power = government_power_weak_penalty
 	}
 }

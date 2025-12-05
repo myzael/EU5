@@ -28,7 +28,11 @@ flavor_ven.1 = {
 		name = flavor_ven.1.a
 		historical_option = yes
 		unlock_government_reform_effect = { type = signoria_of_venice }
-		remove_reform = government_reform:council_of_forty
+		if = {
+			limit = { has_reform = government_reform:council_of_forty }
+			remove_reform = government_reform:council_of_forty
+		}
+		else = { remove_current_major_government_reform = yes }
 		add_reform = government_reform:signoria_of_venice
 		add_stability = stability_weak_bonus
 	}
@@ -1966,7 +1970,7 @@ flavor_ven.40 = { #Fall of Genoa
 			market = {
 				add_merchant_power = {
 					country = root
-					power = 20
+					power = merchant_power_mild_bonus
 					months = 125
 					key = affluent_merchants
 				}
@@ -5518,7 +5522,7 @@ flavor_ven.1001 = {
 				country = root
 				key = venetian_help
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 	}

@@ -323,6 +323,11 @@
 	
 	on_disband = {
 		every_international_organization_member = {
+			limit = {
+				religion = {
+					has_autocephalous_patriarchates = yes
+				}
+			}
 			save_temporary_scope_as = country_to_add
 			if = { #See if we can join an existing AP before creating one
 				limit = {

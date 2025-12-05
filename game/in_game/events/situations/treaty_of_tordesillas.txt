@@ -337,8 +337,20 @@ treaty_of_tordesillas.3 = {
 	category = situation_event
 
 	title = treaty_of_tordesillas.3.title
-	desc = treaty_of_tordesillas.3.desc
-
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					#There is only one signatory left
+					situation:treaty_of_tordesillas.var:var_east_country = situation:treaty_of_tordesillas.var:var_west_country
+				}
+				desc = treaty_of_tordesillas.3.desc_one_signatory
+			}
+			triggered_desc = {
+				desc = treaty_of_tordesillas.3.desc
+			}
+		}
+	}
 	image = "gfx/interface/illustrations/situation/treaty_of_tordesillas.dds"
 
 	immediate = {

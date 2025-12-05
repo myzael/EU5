@@ -61,9 +61,7 @@ grand_palace = {
 	
 	
 	remove_if = {
-		location = {
-			is_capital = no
-		}
+		is_no_longer_capital = yes
 	}
 	
 	modifier = {
@@ -282,7 +280,7 @@ great_temple_of_tenochtitlan = {
 	expensive = yes
 	
 	country_potential = {
-		tag = TNC
+		has_or_had_tag = TNC
 	}
 	allow = {
 		has_unlocked_building_trigger = {
@@ -693,12 +691,12 @@ camara_comptos = {
 	country_potential = {
 		OR = {
 			culture = culture:basque
-			tag = NAV
+			has_or_had_tag = NAV
 		}
 	}
 
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 
 	build_time = government_build_time
@@ -735,8 +733,8 @@ zwinger = {
 	
 	country_potential = {
 		OR = {
-			tag = MEI
-			tag = SAX
+			has_or_had_tag = MEI
+			has_or_had_tag = SAX
 		}
 	}
 
@@ -778,8 +776,8 @@ globe_theatre = {
 	country_potential = {
 		custom_tooltip = globe_theatre_why
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 	}
 	
@@ -1145,8 +1143,8 @@ bolshoi_theater = {
 
 	country_potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 	}
 	
@@ -1202,8 +1200,8 @@ archive_of_the_indies = {
 
 	country_potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 	}
 	
@@ -1443,9 +1441,9 @@ college_of_poets = {
 
 	country_potential = {
 		OR = {
-			tag = HAB
-			tag = TIR
-			tag = STY
+			has_or_had_tag = HAB
+			has_or_had_tag = TIR
+			has_or_had_tag = STY
 		}
 	}
 	
@@ -1965,7 +1963,7 @@ doges_palace = {
 	build_time = large_cultural_building_time
 	
 	modifier = {
-		local_monthly_prosperity = 0.01
+		local_monthly_prosperity = 0.001
 		local_crown_estate_power = 0.25
 	}
 
@@ -2114,7 +2112,7 @@ venkateswara_temple = {
 	modifier = {
 		local_clergy_estate_power = 0.1
 		local_pop_conversion_speed = 0.01
-		local_monthly_development = 0.1
+		local_monthly_development = 0.005
 	}
 }
 
@@ -2203,26 +2201,26 @@ swi_collegium_helveticum = {
 
 	country_potential = {
 		OR = {
-			tag = SWI
-			tag = BCH
-			tag = STG
-			tag = ZUR
-			tag = SYZ
-			tag = GLR
-			tag = URI
-			tag = OBW
-			tag = LCU
-			tag = SIT
-			tag = BRN
-			tag = SLT
-			tag = NEU
-			tag = BAS
-			tag = LSA
-			tag = KYB
-			tag = TRN
-			tag = GNV
-			tag = SCL
-			tag = WER
+			has_or_had_tag = SWI
+			has_or_had_tag = BCH
+			has_or_had_tag = STG
+			has_or_had_tag = ZUR
+			has_or_had_tag = SYZ
+			has_or_had_tag = GLR
+			has_or_had_tag = URI
+			has_or_had_tag = OBW
+			has_or_had_tag = LCU
+			has_or_had_tag = SIT
+			has_or_had_tag = BRN
+			has_or_had_tag = SLT
+			has_or_had_tag = NEU
+			has_or_had_tag = BAS
+			has_or_had_tag = LSA
+			has_or_had_tag = KYB
+			has_or_had_tag = TRN
+			has_or_had_tag = GNV
+			has_or_had_tag = SCL
+			has_or_had_tag = WER
 		}
 	}
 	
@@ -2902,7 +2900,7 @@ belvedere_palace = {
 	
 	
 	capital_modifier = {
-		local_monthly_prosperity = 0.025
+		local_monthly_prosperity = 0.001
 	}
 	capital_country_modifier = {
 		prestige_decay = -0.001
@@ -3032,7 +3030,7 @@ bavarian_academy_of_sciences = {
 	country_potential = {
 		custom_tooltip = {
 			text = bavarian_academy_of_sciences_why
-			tag = BAV
+			has_or_had_tag = BAV
 		}
 	}
 
@@ -3089,9 +3087,9 @@ herrenchiemsee_abbey = {
         custom_tooltip = {
             text = herrenchiemsee_abbey_potential
 			OR = {
-            	tag = BAV
-            	tag = LBV
-            	tag = UBV
+            	has_or_had_tag = BAV
+            	has_or_had_tag = LBV
+            	has_or_had_tag = UBV
 			}
         }
     }
@@ -3152,9 +3150,9 @@ munich_residenz_founding = {
         custom_tooltip = {
             text = munich_residenz_founding_potential
 			OR = {
-            	tag = BAV
-            	tag = LBV
-            	tag = UBV
+            	has_or_had_tag = BAV
+            	has_or_had_tag = LBV
+            	has_or_had_tag = UBV
 			}
         }
     }
@@ -3205,9 +3203,9 @@ munich_residenz_renaissance_expansion = {
         custom_tooltip = {
             text = munich_residenz_renaissance_expansion_potential
 			OR = {
-            	tag = BAV
-            	tag = LBV
-            	tag = UBV
+            	has_or_had_tag = BAV
+            	has_or_had_tag = LBV
+            	has_or_had_tag = UBV
 			}
         }
     }
@@ -3256,9 +3254,9 @@ munich_residenz_baroque_expansion = {
         custom_tooltip = {
             text = munich_residenz_baroque_expansion_potential
 			OR = {
-            	tag = BAV
-            	tag = LBV
-            	tag = UBV
+            	has_or_had_tag = BAV
+            	has_or_had_tag = LBV
+            	has_or_had_tag = UBV
 			}
         }
     }
@@ -3348,7 +3346,7 @@ el_escorial_palace = {
 	
 	modifier = {
 		local_crown_estate_power = 1.0
-		local_monthly_prosperity = 0.025
+		local_monthly_prosperity = 0.001
 		local_cultural_tradition = 0.25
 	}
 

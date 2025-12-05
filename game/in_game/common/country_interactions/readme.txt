@@ -1,6 +1,6 @@
 ﻿#<interaction_name> = {
 #	
-# type = subject/diplomacy
+# type = subject/diplomacy/union
 # sound = sound to use for the action
 # accept = script, value for acceptance for AI.
 # diplo_chance = {} overrides of default acceptance values..  check ai_diplo_chances

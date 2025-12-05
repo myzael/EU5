@@ -1521,7 +1521,7 @@ little_ice_age.15 = { #Brrr it's getting cold!
 					}
 				}
 				check_range_bounds = no
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 			change_prosperity = prosperity_mild_penalty
 			province = {
@@ -1565,7 +1565,7 @@ little_ice_age.15 = { #Brrr it's getting cold!
 					}
 				}
 				check_range_bounds = no
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 			change_prosperity = prosperity_very_weak_penalty
 			province = {

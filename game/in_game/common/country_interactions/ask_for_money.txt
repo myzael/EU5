@@ -67,26 +67,20 @@
 	effect = {
         scope:recipient = {
 			add_gold = {
-				value = scope:actor.country_tax_base
-				min = {
-					value = scope:recipient.country_tax_base
-					min = {
-						value = scope:actor.country_tax_base
-						multiply = 4
-					}
+				value = scope:recipient.country_tax_base
+				max = {
+					value = scope:actor.country_tax_base
+					multiply = 4
 				}
 				multiply = -1
 			}
 		}
 		scope:actor = {
 			add_gold = {
-				value = scope:actor.country_tax_base
-				min = {
-					value = scope:recipient.country_tax_base
-					min = {
-						value = scope:actor.country_tax_base
-						multiply = 4
-					}
+				value = scope:recipient.country_tax_base
+				max = {
+					value = scope:actor.country_tax_base
+					multiply = 4
 				}
 			}
 		}

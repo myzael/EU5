@@ -291,6 +291,13 @@ muscovite_succession_war.18 = {#PRISON
 
 }
 
+scripted_trigger muscovite_succession_war_betrayal_character_trigger = {
+	is_alive = yes
+	is_adult = yes
+	is_female = no
+	is_ruler = no
+}
+
 # The Betrayal
 muscovite_succession_war.19 = {
 	hide_portraits = yes
@@ -306,15 +313,10 @@ muscovite_succession_war.19 = {
 					any_rebel = {
 						rebel_name_key = war_of_succession_pretender
 						any_character_supporting_rebel = {
-							is_alive = yes
-							is_adult = yes
-							is_female = no
-							is_ruler = no
+							muscovite_succession_war_betrayal_character_trigger = yes
 							dynasty = root.ruler.dynasty
 							any_child = {
-								is_alive = yes
-								is_adult = yes
-								is_female = no
+								muscovite_succession_war_betrayal_character_trigger = yes
 							}
 						}
 					}
@@ -343,34 +345,24 @@ muscovite_succession_war.19 = {
 				controller = prev
 			}
 			OR = {
-				AND = {
+				AND = {	#Either there is a character that supports a root dynasty rebel and has a valid child...  
 					any_character_supporting_rebel = {
-						is_alive = yes
-						is_adult = yes
-						is_female = no
-						is_ruler = no
+						muscovite_succession_war_betrayal_character_trigger = yes
 						dynasty = root.ruler.dynasty
 						any_child = {
-							is_alive = yes
-							is_adult = yes
-							is_female = no
+							muscovite_succession_war_betrayal_character_trigger = yes
 						}
 					}
 				}
-				AND = {
+				AND = { # or... there is a character that supports a root dynasty rebel and has a valid sibling
 					any_character_supporting_rebel = {
-						is_alive = yes
-						is_adult = yes
-						is_female = no
-						is_ruler = no
+						muscovite_succession_war_betrayal_character_trigger = yes
 						dynasty = root.ruler.dynasty
+						save_temporary_scope_as = previous_character
 					}
 					any_character_supporting_rebel = {
-						is_alive = yes
-						is_adult = yes
-						is_female = no
-						is_ruler = no
-						is_sibling_of = prev
+						muscovite_succession_war_betrayal_character_trigger = yes
+						is_sibling_of = scope:previous_character
 					}
 				}
 			}
@@ -394,36 +386,48 @@ muscovite_succession_war.19 = {
 			save_scope_as = war_of_succession_pretender
 		}
 
-		random_character = {
-			limit = {
-				is_alive = yes
-				is_adult = yes
-				is_female = no
-				dynasty = root.ruler.dynasty
-				rebel = scope:war_of_succession_pretender
-			}
-			save_scope_as = pretender
-			random_child ?= {
+		scope:war_of_succession_pretender = {
+			random_character_supporting_rebel = { # set the target pretender to be a character that either has a target child or has a target sibling
 				limit = {
-					is_alive = yes
-					is_adult = yes
-					is_female = no
+					muscovite_succession_war_betrayal_character_trigger = yes
+					dynasty = root.ruler.dynasty
+					save_temporary_scope_as = evaluated_target
+					OR = {
+						scope:war_of_succession_pretender = {
+							any_character_supporting_rebel = {
+								muscovite_succession_war_betrayal_character_trigger = yes
+								is_sibling_of = scope:evaluated_target
+							}
+						}
+						any_child = {
+							muscovite_succession_war_betrayal_character_trigger = yes
+						}
+					}
 				}
-				save_scope_as = target_child
+				save_scope_as = pretender
+				# If the character had a valid target child, try to set it
+				random_child = {
+					limit = {
+						muscovite_succession_war_betrayal_character_trigger = yes
+					}
+					save_scope_as = target_child
+				}
+			}
+
+			# Character did not have a valid target child, so they must have a target sibling to be selected.
+			if = {
+				limit = {
+					NOT = { exists = scope:target_child }
+				}
+				random_character_supporting_rebel = {
+					limit = {
+						muscovite_succession_war_betrayal_character_trigger = yes
+						is_sibling_of = scope:pretender
+					}
+					save_scope_as = target_sibling
+				}
 			}
 		}
-
-		random_character ?= {
-			limit = {
-				is_alive = yes
-				is_adult = yes
-				is_female = no
-				is_sibling_of = prev
-				rebel = scope:war_of_succession_pretender
-			}
-			save_scope_as = target_sibling
-		}
-
 	}
 
 	option = {

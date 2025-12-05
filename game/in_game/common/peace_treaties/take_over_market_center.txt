@@ -52,27 +52,8 @@
 	}
 
 	ai_desire = {
-		if = {
-			limit = {
-				scope:winner = {
-					is_rival_of = scope:loser
-				}
-			}
-			add = {
-				desc = "game_concept_rival"
-				value = 10
-			}
-		}
-		if = {
-			limit = {
-				scope:winner.prestige < scope:loser.prestige
-			}
-			add = {
-				desc = "game_concept_trade_income"
-				value = scope:loser.monthly_trade_income
-				subtract = scope:winner.monthly_trade_income
-			}
-		}
+		# disable for now
+		add = -10
 	}
 }
 

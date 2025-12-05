@@ -4686,7 +4686,7 @@ scripted_effect loss_of_qarachil = {
 		text = lose_5_sop_tt
 		change_variable = {
 			name = fall_of_delhi_vote_weight
-			add = 0.05
+			subtract = 0.05
 		}
 	}
 

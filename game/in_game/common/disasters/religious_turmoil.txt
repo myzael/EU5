@@ -47,8 +47,10 @@
 	on_monthly = {
 
 		show_as_tooltip = {
-			96 = { custom_tooltip = no_event_occurs_tt }
-			4 = { custom_tooltip = an_event_occurs_tt }
+			random_list = {
+				96 = { custom_tooltip = no_event_occurs_tt }
+				4 = { custom_tooltip = an_event_occurs_tt }
+			}
 		}
 		
 		hidden_effect = {

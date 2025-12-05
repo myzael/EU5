@@ -79,7 +79,7 @@ medieval_levy_law = {
 			monthly_towards_quality = societal_value_monthly_move
 		}
 		potential = {
-			tag = MAL
+			has_or_had_tag = MAL
 		}
 		estate_preferences = {
 			nobles_estate
@@ -88,9 +88,10 @@ medieval_levy_law = {
 	}
 	peasant_levies = {
 		country_modifier = {
-			peasants_estate_levy_size = 0.025
+			peasants_estate_levy_size = 0.10
 			monthly_towards_quantity = societal_value_monthly_move
 			levy_combat_efficiency_modifier = -0.10
+			levy_recovery_modifier = 0.1  
 		}
 		
 		estate_preferences = {
@@ -119,7 +120,7 @@ medieval_levy_law = {
 	zamanitchka_voyska = {
 		unique = yes
 		potential = {
-			tag = SER
+			has_or_had_tag = SER
 		}
 		country_modifier = {
 			global_levy_size_modifier = 0.2
@@ -136,8 +137,8 @@ medieval_levy_law = {
 	paik_system = {
 		potential = {
 			OR = {
-				tag = AHO
-				tag = MLB
+				has_or_had_tag = AHO
+				has_or_had_tag = MLB
 				culture = { has_culture_group = culture_group:indian_group }
 			}
 		}
@@ -164,8 +165,8 @@ medieval_levy_law = {
 		}
 		allow = {
 			OR = {
-				tag = CAS
-				tag = SPA
+				has_or_had_tag = CAS
+				has_or_had_tag = SPA
 				culture = culture:castilian
 			}
 		}
@@ -225,7 +226,7 @@ royal_court_customs_law = {
 	itinerant_court_policy = {
 		country_modifier = {
 			capital_movement_cost_modifier = -0.33
-			land_cost_on_distance_from_capital_modifier = -0.1
+			land_cost_on_distance_from_capital_modifier = -0.025
 			monthly_towards_decentralization = societal_value_monthly_move
 			can_call_rural_parliaments = yes
 		}
@@ -254,7 +255,7 @@ royal_court_customs_law = {
 	military_court_policy = { #prussian court
 		unique = yes
 		potential = {
-			tag = PRU
+			has_or_had_tag = PRU
 			has_unlocked_policy_trigger = { type = military_court_policy }
 		}
 		allow = {

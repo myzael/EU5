@@ -83,7 +83,7 @@ judicate_reform = {
 	major = yes
 	potential = {
 		OR = {
-			tag = ARB
+			has_or_had_tag = ARB
 			has_reform = government_reform:judicate_reform
 		}
 	}

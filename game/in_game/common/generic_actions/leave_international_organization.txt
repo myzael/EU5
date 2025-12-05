@@ -63,5 +63,13 @@
 			}
 			add = 10
 		}
+		if = {
+			limit = {
+				scope:recipient = {
+					this = international_organization:swiss_confederation
+				}
+			}
+			add = -1000
+		}
 	}
 }

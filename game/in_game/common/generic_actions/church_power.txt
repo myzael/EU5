@@ -268,10 +268,6 @@ deport_heretics = {
 		scope:actor = {
 			has_colonial_charters = yes
 			religious_unity < 1.0
-			any_owned_location = {
-				is_overseas_for_owner = no
-				dominant_religion != scope:actor.religion
-			}
 		}
 	}
 	
@@ -319,10 +315,8 @@ deport_heretics = {
 		default_sort = province_religion_percentage
 		visible = {
 			any_location_in_province = {
-				OR = {
-					NOT = { dominant_religion = owner.religion }
-					local_religious_unity < 1.0
-				}
+				is_overseas_for_owner = no
+				dominant_religion != scope:actor.religion
 			}
 		}
 	}
@@ -544,12 +538,14 @@ divorce_ruler = {
 		interaction_source_list = {
 			scope:actor.ruler ?= {
 				every_spouse = {
+					limit = {
+						is_alive = yes
+					}
 					add_to_list = source
 				}
 			}
 		}
 		visible = {
-			is_alive = yes
 		}
 		enabled = {
 		}
@@ -648,14 +644,9 @@ summon_mystic = {
 				culture = culture:bosnian
 				religion = religion:bosnian_church
 				estate = estate_type:clergy_estate
-				set_to_limited_random_stats = {
-					max_adm = 90
-					min_adm = 50
-					max_dip = 90
-					min_dip = 50
-					max_mil = 90
-					min_mil = 50
-				}
+				adm = { 50 90 }
+				dip = { 50 90 }
+				mil = { 50 90 }
 				save_scope_as = target_character
 			}
 			change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_move_to_left }

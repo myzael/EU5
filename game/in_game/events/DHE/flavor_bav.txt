@@ -170,10 +170,23 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 			target = c:LBV.capital
 			modifier = antagonism_bav_ignore_feudal_traditions_mild
 		}
-		c:LBV = {
-			make_subject_of = {
-				target = c:UBV
-				type = subject_type:vassal
+		if = {
+			limit = {
+				c:LBV = {
+					is_subject = no
+				}
+			}
+			c:LBV = {
+				make_subject_of = {
+					target = c:UBV
+					type = subject_type:vassal
+				}
+			}
+		}
+		else = {
+			add_casus_belli = {
+				target = c:LBV
+				type = casus_belli:cb_subjugation
 			}
 		}
 	}
@@ -185,6 +198,7 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 		trigger = {
 			c:LBV = {
 				is_human = no
+				is_subject = no
 			}
 		}
 		add_stability = stability_severe_penalty

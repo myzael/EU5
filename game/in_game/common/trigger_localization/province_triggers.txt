@@ -108,9 +108,9 @@ province_tax_base = {
 }
 
 province_rebel_progress = {
-	none = NONE_HAS_REBEL_PRESENCE_TRIGGER
-	global = HAS_HAS_REBEL_PRESENCE_TRIGGER
-	third = THIRD_HAS_REBEL_PRESENCE_TRIGGER
+	none = NONE_PROVINCE_REBEL_PROGRESS_TRIGGER
+	global = PROVINCE_REBEL_PROGRESS_TRIGGER
+	third = THIRD_PROVINCE_REBEL_PROGRESS_TRIGGER
 }
 
 province_population= {

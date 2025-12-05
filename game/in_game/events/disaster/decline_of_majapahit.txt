@@ -481,11 +481,11 @@ decline_of_majapahit.7 = {
 			province = {
 				every_location_in_province = {
 					limit = {
+						this != scope:target_location
 						dominant_religion = religion:sunni
 						integration_level = core
 					}
 					remove_core = ROOT
-					change_integration_level = integrated
 				}
 			}
 		}

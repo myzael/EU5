@@ -2429,3 +2429,93 @@ adopt_compatible_heir_religion_law = {
 		custom_tooltip = negotiate_succession_law_et
 	}
 }
+
+remove_current_major_government_reform = {
+	if = {
+		limit = {
+			any_current_reforms = { is_major_reform = yes }
+		}
+		random_current_reforms = {
+			limit = { is_major_reform = yes }
+			root = { remove_reform = prev }
+		}
+	}
+}
+
+add_organization_donation_opinion_bonus = {
+	add_opinion = {
+		modifier = opinion_donated_gold_to_io
+		target = $target$
+		scale = {
+			value = $value$
+			divide = {
+				if = {
+					limit = {
+						$international_organization$.gold > 0
+					}
+					value = $international_organization$.gold
+				}
+				else = {
+					value = 1
+				}
+				value = $international_organization$.gold
+				min = 1
+			}
+		}
+	}
+}
+
+donate_gold_to_international_organization = {
+	save_temporary_scope_as = root_country
+	if = {
+		limit = { is_leader_of_international_organization = $international_organization$ }
+		custom_tooltip = {
+			text = donate_gold_to_international_organization_tt
+			$international_organization$ = {
+				if = {
+					limit = { international_organization_type = international_organization_type:hre }
+					every_country_with_special_status_of_type = {
+						type = elector
+						add_organization_donation_opinion_bonus = {
+							target = scope:root_country
+							value = $value$
+							international_organization = $international_organization$
+						}
+					}
+					every_country_with_special_status_of_type = {
+						type = archbishop_elector
+						add_organization_donation_opinion_bonus = {
+							target = scope:root_country
+							value = $value$
+							international_organization = $international_organization$
+						}
+					}
+				}
+				else = {
+					every_international_organization_member = {
+						add_organization_donation_opinion_bonus = {
+							target = scope:root_country
+							value = $value$
+							international_organization = $international_organization$
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		$international_organization$ = {
+			leader_country ?= {
+				add_organization_donation_opinion_bonus = {
+					target = scope:root_country
+					value = $value$
+					international_organization = $international_organization$
+				}
+			}
+		}
+	}
+	add_gold = {
+		value = $value$
+		multiply = -1
+	}
+}

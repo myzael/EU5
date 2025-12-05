@@ -747,13 +747,18 @@
 		require_color_on_map = yes
 	}
 	legend_key = {
-		desc = "WAR_OF_RELIGIONS_CATHOLIC_LEAGUE_LEADER"
-		color = war_of_religions_catholic_league_leader_color
+		desc = "protestant_union"
+		color = war_of_religions_protestant_union_color
 		require_color_on_map = yes
 	}
 	legend_key = {
-		desc = "protestant_union"
-		color = war_of_religions_protestant_union_color
+		desc = "WAR_OF_RELIGIONS_PROTESTANT_LEAGUE_LEADER_ALLY"
+		color = war_of_religions_protestant_union_ally_color
+		require_color_on_map = yes
+	}
+	legend_key = {
+		desc = "WAR_OF_RELIGIONS_CATHOLIC_LEAGUE_LEADER"
+		color = war_of_religions_catholic_league_leader_color
 		require_color_on_map = yes
 	}
 	legend_key = {
@@ -762,12 +767,7 @@
 		require_color_on_map = yes
 	}
 	legend_key = {
-		desc = "protestant" #ALLY OF
-		color = war_of_religions_protestant_union_ally_color
-		require_color_on_map = yes
-	}
-	legend_key = {
-		desc = "catholic" #ALLY OF
+		desc = "WAR_OF_RELIGIONS_CATHOLIC_LEAGUE_LEADER_ALLY"
 		color = war_of_religions_catholic_league_ally_color
 		require_color_on_map = yes
 	}

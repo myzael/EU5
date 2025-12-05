@@ -209,7 +209,7 @@ black_death.102 = { # Guilds wage fixing during plague
 					country = root
 					key = merchants_not_supported
 					years = 10
-					power = -50
+					power = merchant_power_severe_penalty
 				}
 			}
 		}
@@ -1504,7 +1504,7 @@ black_death.1015 = { # Expired Medicine
 				country = root
 				key = merchants_not_supported
 				months = 160
-				power = -25
+				power = merchant_power_mild_penalty
 			}
 		}
 	}
@@ -1723,7 +1723,7 @@ black_death.1018 = { # Foreign Aid
 				country = root
 				key = merchants_not_supported
 				months = 60
-				power = -10
+				power = merchant_power_weak_penalty
 			}
 		}
 	}
@@ -1745,7 +1745,7 @@ black_death.1018 = { # Foreign Aid
 				country = root
 				key = BANNED_EXPORTS
 				months = 60
-				power = 10
+				power = merchant_power_weak_bonus
 			}
 		}
 	}

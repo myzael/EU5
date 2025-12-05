@@ -13,8 +13,8 @@ ransom_prisoners_effect = {
 			target = prev.unit_location
 			value = {
 				value = root.prisoner_strength
-				multiply = -5
-				min = -5
+				multiply = -0.1
+				min = -1
 			}
 		}
 	}

@@ -33,6 +33,11 @@
 			text = has_not_had_decline_of_empire_last_25_years 
 			NOT = { has_variable = had_doe_disaster_variable }
 		}
+
+		custom_tooltip = {
+			text = not_recently_become_empire_tt
+			NOT = { has_variable = recently_became_empire_variable }
+		}
 	}
 	
 	can_end = {

@@ -2583,7 +2583,7 @@ template location_tax_base_details {
                 }
                 blockoverride "field_text" {
                     visible = "[Estate.ExistsForCountry]"
-                    raw_text = "[Location.GetEstateTaxBase(Estate.Self)|2L]@gold! ([Divide_CFixedPoint(Location.GetEstateTaxBase(Estate.Self), Location.GetTotalTaxBase)|0%]@tax_base!)"
+                    raw_text = "[Location.GetEstateTaxBase(Estate.Self)|2L]@gold! ([Location.GetEstateTaxBasePercent(Estate.Self)|0%]@tax_base!)"
                 }
             }
 
@@ -2814,7 +2814,7 @@ template supply_limit_tooltip {
 
             TooltipStringPairList = {
                 blockoverride "block_title" {
-                    text = "USED_SUPPLY_TT_TEXT"
+                    text = "[Location.GetUsedSupplyAndMax]"
                 }
                 visible = "[And(Not(Location.IsHiddenByFoW), NotEqualTo_CFixedPoint(Location.GetUsedSupply, '(CFixedPoint)0'))]"
                 textcontext = "[Location.GetAttritionTooltip]"
@@ -3285,7 +3285,7 @@ template location_rgo_tooltip_location_content {
                             maximumsize = {55 -1}
                             align = nobaseline
                             fontsize = 14
-                            raw_text = "[Location.GetRGOProfitPerLevel|+2] @gold!"
+                            raw_text = "[Location.GetRGOProfitPerLevel|+2] @tax_base!"
                         }
                     }
                 }
@@ -3860,6 +3860,9 @@ template LocationRankTag_tooltip {
 
 template adjacency_distance_tooltip {
     ContextualTooltipType = {
+        tooltipmeta = {
+            texture = "gfx/interface/icons/location_icons/distance_capital.dds"
+        }
         blockoverride "title_icon" {
             icon = {
                 using = tooltip_title_icon_size
@@ -5361,7 +5364,8 @@ template SoundTollLocationTooltip {
                 }
             }
 
-            TooltipStringPairList = {
+            TooltipScrolledStringPairList = {
+                blockoverride "block_scrollarea" { maximumsize = { -1 360 } }
                 textcontext = "[Location.GetSoundTollInfo]"
                 visible = "[Not(StringIsEmpty(Location.GetSoundTollInfo))]"
             }

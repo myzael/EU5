@@ -365,7 +365,7 @@ vice_roys  = {
 	for = dip
 	
 	
-	subject_pays_colonial_cost_modifier = 0.10
+	subject_pays_colonial_cost_modifier = 0.50
 	diplomatic_range_modifier = 0.25
 }
 

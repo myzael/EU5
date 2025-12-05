@@ -222,10 +222,6 @@ template EstateIncomeBreakdownTooltip {
 			}
 		}
 
-		blockoverride "tooltip_title_size" {
-			size = { 450 -1 }
-		}
-
 		blockoverride "concept_link" {
 			text = [estate_tax_base|E]
 		}
@@ -1072,6 +1068,7 @@ lateralview = {
 
 																text_single = {
 																	using = layoutpolicy_expanding
+																	maximumsize = {175 -1}
 																	autoresize = no
 																	align = left|nobaseline
 																	text = "[TaxRateSetting.GetName]"
@@ -1439,6 +1436,10 @@ lateralview = {
 
 											#diplomacy
 											budget_card = {
+												tooltipmeta = {
+													texture = "gfx/interface/icons/flat_icons/balance/diplomacy.dds"
+													game_concept = "[diplomatic_income_s|E]"
+												}
 												layoutpolicy_horizontal = expanding
 												size = { -1 30 }
 												visible = "[Or(Not(EqualTo_CFixedPoint(EconomyView.GetIncome('diplomacy'), '(CFixedPoint)0')), EconomyView.UnusedMaintenanceSettingsVisible)]"

@@ -60,7 +60,7 @@ alwet_god = { #Rain God
     }
 
     country_modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -87,7 +87,7 @@ ratovantany_god = { #Earth God, https://en.wikipedia.org/wiki/Ratovantany
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -140,7 +140,7 @@ ngai_god = { #Creator God, https://en.wikipedia.org/wiki/Ngai
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025		  
+      global_population_growth = 0.0001		  
     }
 }
 
@@ -154,7 +154,7 @@ asis_god = { #Creator God
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -208,7 +208,7 @@ hunntuattatteen_god = { #Wife of God
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -275,7 +275,7 @@ asase_ya_god = { #Earth Mother https://en.wikipedia.org/wiki/Asase_Ya/Afua
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -341,7 +341,7 @@ lisa_god = { #Creator God, Sun God https://en.wikipedia.org/wiki/Mawu
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -381,7 +381,7 @@ olokun_isese_god = { #god of water and wealth https://en.wikipedia.org/wiki/Olok
     }
 
     country_modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -395,7 +395,7 @@ obatala_god = { #creator on mankind https://en.wikipedia.org/wiki/%E1%BB%8Cbatal
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -447,7 +447,7 @@ ikenga_god = { #god of fortune https://en.wikipedia.org/wiki/Ikenga
     }
 
     country_modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 
@@ -461,7 +461,7 @@ agwu_nsi_god = { #God of Divination and healing https://en.wikipedia.org/wiki/Ag
 
     country_modifier = {
 		  global_life_expectancy = 2
-      global_population_growth = 0.00025	
+      global_population_growth = 0.0001	
     }
 }
 
@@ -500,7 +500,7 @@ mindiss_god = { #River Protector
     }
 
     country_modifier = {
-		  global_monthly_prosperity = 0.002
+		  global_monthly_prosperity = 0.001
     }
 }
 

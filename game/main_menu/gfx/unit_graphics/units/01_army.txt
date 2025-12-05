@@ -125,8 +125,8 @@ army_cavalry = {
 	attach = { 100 = beards }
 	attach = { 100 = cavalry_weapons }
 	attach = { 100 = shields }
-	attach = { 100 = back }
 	attach = { 100 = cavalry }
+	attach = { 100 = back }
 	#attach = { 100 = saddle }
 	attach = { 100 = horse_accessories }
 	

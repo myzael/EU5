@@ -307,82 +307,81 @@ death_of_hayan_wuruk.6 = {	#Spread of Islam in [target_province.GetName]
 		name = death_of_hayan_wuruk.6.a
 
 		add_stability = stability_weak_penalty
-		show_as_tooltip = {
-			scope:target_location = {
-				if = {
+		scope:target_location = {
+			if = {
+				limit = {
+					root = { has_variable = low_pop_conversion_variable }
+				}
+				every_pop = {
 					limit = {
-						root = { has_variable = low_pop_conversion_variable }
-					}
-					every_pop = {
-						limit = {
-							NOT = {
-								religion = religion:sunni
-							}
-						}
-						split_pop = {
-							fraction = 0.05
+						NOT = {
 							religion = religion:sunni
 						}
 					}
-				} 
-				else_if = {
-					limit = {
-						root = { has_variable = mild_pop_conversion_variable }
-					}
-					every_pop = {
-						limit = {
-							NOT = {
-								religion = religion:sunni
-							}
-						}
-						split_pop = {
-							fraction = 0.1
-							religion = religion:sunni
-						}
-					}
-				} 
-				else_if = {
-					limit = {
-						root = { has_variable = high_pop_conversion_variable }
-					}
-					every_pop = {
-						limit = {
-							NOT = {
-								religion = religion:sunni
-							}
-						}
-						split_pop = {
-							fraction = 0.15
-							religion = religion:sunni
-						}
+					split_pop = {
+						fraction = 0.05
+						religion = religion:sunni
 					}
 				}
-				else = {
-					every_pop = {
-						limit = {
-							NOT = {
-								religion = religion:sunni
-							}
-						}
-						split_pop = {
-							fraction = 0.2
+			} 
+			else_if = {
+				limit = {
+					root = { has_variable = mild_pop_conversion_variable }
+				}
+				every_pop = {
+					limit = {
+						NOT = {
 							religion = religion:sunni
 						}
 					}
-				}
-				if = {
-					limit = {
-						NOT = { has_building = building_type:sufi_mosque }
+					split_pop = {
+						fraction = 0.1
+						religion = religion:sunni
 					}
-					construct_building = {
-						building_type = building_type:sufi_mosque
-						cost_multiplier = 0
-						cost_multiplier_reason = "clergy_expensive_sponsorship"
-						instant = yes
+				}
+			} 
+			else_if = {
+				limit = {
+					root = { has_variable = high_pop_conversion_variable }
+				}
+				every_pop = {
+					limit = {
+						NOT = {
+							religion = religion:sunni
+						}
+					}
+					split_pop = {
+						fraction = 0.15
+						religion = religion:sunni
 					}
 				}
 			}
+			else = {
+				every_pop = {
+					limit = {
+						NOT = {
+							religion = religion:sunni
+						}
+					}
+					split_pop = {
+						fraction = 0.2
+						religion = religion:sunni
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_building = building_type:sufi_mosque }
+				}
+				construct_building = {
+					building_type = building_type:sufi_mosque
+					cost_multiplier = 0
+					cost_multiplier_reason = "clergy_expensive_sponsorship"
+					instant = yes
+				}
+			}
 		}
+		
 	}
 
 }

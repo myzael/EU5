@@ -154,6 +154,6 @@ maghrebi_administration = {
 	
 	requires = urbanization
 
-	global_distance_from_capital_cost_modifier = -0.1
+	global_distance_from_capital_cost_modifier = -0.05
 }
 

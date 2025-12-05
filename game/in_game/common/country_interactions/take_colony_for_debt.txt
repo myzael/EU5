@@ -78,7 +78,7 @@
 			add = {
 				desc = "game_concept_loan"
 				value = scope:target_1.remaining_debt
-				multiply = -1
+				multiply = 0.01
 			}
 		}
 		if = {
@@ -88,6 +88,7 @@
 			add = {
 				desc = "game_concept_colonial_charter"
 				value = scope:target.colonial_charter_value
+				multiply = -2
 			}
 		}
 	}

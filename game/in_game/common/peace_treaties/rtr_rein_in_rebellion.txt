@@ -101,17 +101,24 @@ rtr_demand_occupied_territories = {
 	}
 
 	effect = {
-		scope:winner = {
-			custom_tooltip = {
-				text = rtr_demand_occupied_territories_tt
-				every_controlled_location = {
-					limit = {
-						owner = scope:loser
+		if = {
+			limit = {
+				exists = scope:winner
+				exists = scope:loser
+			}
+			scope:winner = {
+				custom_tooltip = {
+					text = rtr_demand_occupied_territories_tt
+					every_controlled_location = {
+						limit = {
+							owner = scope:loser
+						}
+						change_location_owner = scope:winner
 					}
-					change_location_owner = scope:winner
 				}
 			}
 		}
+		else = { custom_tooltip = rtr_demand_occupied_territories_no_winner_loser_tt }
 	}
 
 	ai_desire = {

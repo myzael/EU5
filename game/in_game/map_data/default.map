@@ -1019,7 +1019,7 @@ sea_zones = {
 	bellona_high_sea_1 bellona_high_sea_2 bellona_high_sea_3 bellona_high_sea_4 bellona_high_sea_5 bellona_high_sea_6 bellona_high_sea_7
 	nauru_high_sea_1 nauru_high_sea_2 nauru_high_sea_3 nauru_high_sea_4 nauru_high_sea_5
 	nauru_coast metoma_island mere_lava_island
-
+	limfjorden
 } 
 
 
@@ -1032,11 +1032,11 @@ sea_zones = {
 # LAKES
 ########
 lakes = { 
-    malaren hjalmaren_lake vattern limfjorden vanern siljan storsjon enare_trask torne_trask storavan uddjaur vastenjaure akkajaure	# Sweden
+    malaren hjalmaren_lake vattern vanern siljan storsjon enare_trask torne_trask storavan uddjaur vastenjaure akkajaure	# Sweden
 	mjosa #norway
 	lake_muritz
 	oulujarvi saima paijanne pielinen pihlajavesi yanis_jarvi haukivesi lake_orivesi puruvesi jaasjarvi puula kyyvesi yli_kitka muojarvi pyhajarvi hoytiainen viinijarvi koitere nasisalki #finland
-    loch_ness dyfi_estuary lough_neagh lough_derg lough_ree lough_corrib lough_mask derwent_water loch_lomond lough_erne lough_conn # british isles
+    loch_ness lough_neagh lough_derg lough_ree lough_corrib lough_mask derwent_water loch_lomond lough_erne lough_conn # british isles
     haarlemmermeer
 	hourtin_carcans_lake lagoon_of_sanguinet lagoon_of_bages_sigean lagoon_of_salses lagoon_of_vaccares lagoon_of_berre
 	taupo # New zealand
@@ -1079,7 +1079,7 @@ lakes = {
 	lake_evans lake_sakami lake_nichicun lake_naococane lake_caniapiscau lake_bienville lake_tasiujaq lake_wiyashakami seal_lake lake_minto lake_payne lake_temiscamingue lake_abitibi
 	lake_nipissing lake_simcoe wanapitei_lake onaman_lake lake_nipigon ogoki_lake lake_of_the_woods rainy_lake lac_seul lake_saint_joseph attawapiskat_lake lake_wunnumin big_trout_lake kesagami_lake
 	
-	curonian_lagoon lake_vorts lake_mamry lake_sniardwy lebsko_lake dniester_liman sasyk_lagoon alibey_lagoon tylihul_liman molochnyi_liman khadzhibey_liman kuialnyk_liman lake_yalpuh lake_kahul lake_katlabukh lake_kitai berezan_liman syvash_lagoon lake_sasyk_syvash mius_liman lake_lubans lake_razna lake_narach
+	curonian_lagoon lake_vorts lake_mamry lake_sniardwy lebsko_lake dniester_liman sasyk_lagoon alibey_lagoon khadzhibey_liman kuialnyk_liman lake_yalpuh lake_kahul lake_katlabukh lake_kitai syvash_lagoon lake_sasyk_syvash  lake_lubans lake_razna lake_narach
 
 	amadjuak_lake
 	#MesoAmerica

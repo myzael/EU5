@@ -231,7 +231,7 @@ nobles_recruitment_center = {
 	construction_demand = estate_construct_building
 
 	modifier = {
-		local_nobles_desired_pop = 0.25
+		local_nobles_desired_pop = 0.025
 		local_manpower = 0.01
 	}
 }

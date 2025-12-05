@@ -543,6 +543,7 @@ expand_farming_operations = {
 				multiply = 0.05
 				add = 1
 			}
+			check_range_bounds = no
 			change_max_raw_material_workers = 1
 			change_prosperity = prosperity_mild_bonus
 		}
@@ -586,6 +587,10 @@ promote_integration = {
 				value = 2
 			}
 		}
+		every_province = {
+			limit = { province_average_integration < 1 }
+			add = 1
+		}
 		
 		multiply = {
 			if = {
@@ -601,19 +606,18 @@ promote_integration = {
 	}
 	
 	on_debate_passed = {
-		ordered_owned_location = {
+		ordered_province = {
+			limit = { province_average_integration < 1 }
 			order_by = population
 			max = 1
 			check_range_bounds = no
-			limit = {
-				integration_level = conquered
-				integration_progress > 0
-				integration_progress <= 75
+			every_location_in_province = {
+				limit = { integration_level = conquered }
+				change_integration_progress = 20
 			}
-			change_integration_progress = 20
 		}
-		
 	}
+	
 	on_debate_failed = {
 		parliament_debate_failed_effect = yes
 	}

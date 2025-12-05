@@ -29,7 +29,7 @@ worship_ulei_umtang_god = { #god of drinking water
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -39,7 +39,7 @@ worship_ulei_longspah_god = { #god of wealth
     religion = ka_niam_khasi_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -60,7 +60,7 @@ worship_dharti_ayo_god = { #goddess of earth https://en.wikipedia.org/wiki/Maran
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -81,7 +81,7 @@ worship_kamuy_huci_god = { #goddess of the hearth https://en.wikipedia.org/wiki/
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -102,7 +102,7 @@ worship_rep_un_kamuy_god = { #god of the sea https://en.wikipedia.org/wiki/Rep-u
     religion = ainu_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -123,7 +123,7 @@ worship_nat_awal_god = { #goddess of fertility
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -144,7 +144,7 @@ worship_nat_awual_god = { #mother goddess of the village
     religion = koyapunem_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -165,7 +165,7 @@ worship_phi_water_god = { #water god
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -175,7 +175,7 @@ worship_phi_earth_god = { #earth god
     religion = satsana_phi
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -207,7 +207,7 @@ worship_mainao_god = { #goddess protector of the rice fields
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -217,7 +217,7 @@ worship_song_bwrai_god = { #household god
     religion = bathou_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -248,7 +248,7 @@ worship_polo_god = { #moon god
     religion = donyi_polo_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -259,7 +259,7 @@ worship_kine_nane_god = { # goddess of crops
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -281,7 +281,7 @@ worship_sumnima_god = { # supreme god, Mother Earth
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -301,7 +301,7 @@ worship_yuma_sammang_god = { # supreme god, Mother Earth https://en.wikipedia.or
     religion = kirat_mundhum_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -322,7 +322,7 @@ worship_khuanu_god = { # Mother Earth
 
     modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -342,6 +342,6 @@ worship_sakhua_god = { # god of the family
     religion = mizo_religion
 
     modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }

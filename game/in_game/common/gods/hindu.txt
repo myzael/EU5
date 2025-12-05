@@ -56,7 +56,7 @@ shiva_god = {
 	}
 
 	country_modifier = {
-		global_population_growth = 0.0003
+		global_population_growth = 0.0001
 		potential_trigger = {
 			NOT = { has_access_to_god_holy_site = { god = shiva_god } }
 			smartism_balanced_gods = yes
@@ -75,7 +75,7 @@ shiva_god = {
 			}
 		}
 		global_life_expectancy = 2
-		global_population_growth = 0.0003
+		global_population_growth = 0.0001
 	}
 
 	country_modifier = {

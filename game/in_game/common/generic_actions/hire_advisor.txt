@@ -9,7 +9,7 @@
 
 	automation_tick = monthly
 	automation_tick_frequency = 1
-	player_automated_category = governmentreform
+	player_automated_category = governmentreforms
 
 
 	potential = {
@@ -24,17 +24,19 @@
 			value = {
 				#how many should we have?
 				value = {
-					value = 2
 					add = {
+						desc = "Size of government"
 						value = modifier:government_size
 					}
 				}
 				#how many have we already got?
-				subtract = num_adult_capable_characters
-			}
+				subtract = {
+					desc = "Current amount"
+					value = num_cabinet_capable_characters
+				}
 
-			#not massively important
-			divide = 5
+				multiply = 14
+			}
 		}
 	}
 

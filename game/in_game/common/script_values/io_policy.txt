@@ -256,156 +256,142 @@ hre_default_emperor_policy_desire = {
 		}
 	}
 }
+hre_default_keep_policy_opinion = {
+	add = {
+		desc = "VOTE_CONSERVATIVE_CLIMATE"
+		value = 25
+	}
+}
 hre_default_policy_opinion = {
 	if = {
 		limit = {
 			exists = scope:policy
 			exists = scope:recipient
 			scope:recipient = {
-				has_variable = io_law_target
 				international_organization_has_leader = yes
 			}
 			NOT = { is_leader_of_international_organization = scope:recipient }
-		}
+		}		
+		#opinion of the leader country
 		if = {
-			#voting FOR the proposed policy
-			limit = { scope:recipient.var:io_law_target = scope:policy }
-			#opinion of the leader country
-			if = {
-				limit = { "opinion(scope:recipient.leader_country)" > 0 }
-				add = {
-					desc = "POLICY_BIAS_OPINION_OF_EMPEROR"
-					value = "opinion(scope:recipient.leader_country)"
-					multiply = 0.25
-				}
-			}
-			else = {
-				add = {
-					desc = "POLICY_BIAS_OPINION_OF_EMPEROR"
-					value = "opinion(scope:recipient.leader_country)"
-					multiply = 0.5
-				}
-			}
-			#diplomatic rep of the leader country
+			limit = { "opinion(scope:recipient.leader_country)" > 0 }
 			add = {
-				desc = "IO_LEADER_DIP_REP"
-				value = scope:recipient.leader_country.modifier:diplomatic_reputation
-			}
-			add = {
-				desc = "POLICY_BIAS_FAVORS_OF_EMPEROR"
-				value = "favors(scope:recipient.leader_country)"
-				multiply = 2
-			}
-			add = {
-				desc = "POLICY_BIAS_ANTAGONISM_OF_EMPEROR"
-				value = "antagonism(scope:recipient.leader_country)"
-				multiply = -0.5
-			}
-			add = {
-				desc = "GREAT_POWER_LEADER_COMPARISON"
-				value = scope:recipient.leader_country.great_power_score
-				subtract = 250 # Dont take Great Power Score from being emperor into account here
-				subtract = great_power_score
-				multiply = 0.25 # Balance factor
-			}
-			if = {
-				limit = { is_allied_with = { target = scope:recipient.leader_country } }
-				add = {
-					desc = "game_concept_alliance"
-					value = 5
-				}
-			}
-			if = {
-				limit = { same_dynasty_as = { target = scope:recipient.leader_country } }
-				add = {
-					desc = "opinion_same_dynasty"
-					value = 10
-				}
-			}
-			if = {
-				limit = { is_subject_of = scope:recipient.leader_country }
-				add = {
-					desc = "game_concept_subject"
-					value = 25
-				}
-			}
-			if = {
-				limit = { culture.language = scope:recipient.leader_country.culture.language }
-				add = {
-					desc = "DIPLOREASON_SAME_COMMON_LANGUAGE"
-					value = 5
-				}
-			}
-			if = {
-				limit = { NOT = { culture.language = scope:recipient.leader_country.culture.language } }
-				add = {
-					desc = "DIPLOREASON_DIFFERENT_COMMON_LANGUAGE"
-					value = -5
-				}
-			}
-			# Dynastic Power of Emperor
-			add = {
-				desc = "IA_DYNASTIC_POWER"
-				value = "scope:recipient.leader_country.dynastic_power(international_organization:hre)"
-				multiply = 0.5
-			}
-			# Higher IA gives higher ability to pass reforms
-			if = {
-				limit = { scope:recipient.var:imperial_authority > 50 }
-				add = {
-					desc = "imperial_authority"
-					value = "scope:recipient.var:imperial_authority"
-					subtract = 50
-					multiply = 2.5
-				}
-			}
-			if = {
-				limit = { government_type = government_type:monarchy }
-				add = {
-					desc = "monarchy"
-					value = 5
-				}
-			}
-			if = {
-				limit = { government_type = government_type:theocracy }
-				add = {
-					desc = "theocracy"
-					value = -5
-				}
-			}
-			if = {
-				limit = { scope:recipient = { has_variable = hre_imperial_religion_group } }
-				if = {
-					limit = { NOT = { religion.group = scope:recipient.var:hre_imperial_religion_group } }
-					add = {
-						desc = "DIPLOREASON_DIFFERENT_RELIGION_GROUP"
-						value = -250
-					}
-				}
-			}
-			if = {
-				limit = { scope:recipient = { has_variable = hre_imperial_religion } }
-				if = {
-					limit = { NOT = { religion = scope:recipient.var:hre_imperial_religion } }
-					add = {
-						desc = "DIPLOREASON_DIFFERENT_RELIGION"
-						value = -50
-					}
-				}
+				desc = "POLICY_BIAS_OPINION_OF_EMPEROR"
+				value = "opinion(scope:recipient.leader_country)"
+				multiply = 0.25
 			}
 		}
 		else = {
 			add = {
-				desc = "VOTE_BASE_VALUE"
+				desc = "POLICY_BIAS_OPINION_OF_EMPEROR"
+				value = "opinion(scope:recipient.leader_country)"
+				multiply = 0.5
+			}
+		}
+		#diplomatic rep of the leader country
+		add = {
+			desc = "IO_LEADER_DIP_REP"
+			value = scope:recipient.leader_country.modifier:diplomatic_reputation
+		}
+		add = {
+			desc = "POLICY_BIAS_FAVORS_OF_EMPEROR"
+			value = "favors(scope:recipient.leader_country)"
+			multiply = 2
+		}
+		add = {
+			desc = "POLICY_BIAS_ANTAGONISM_OF_EMPEROR"
+			value = "antagonism(scope:recipient.leader_country)"
+			multiply = -0.5
+		}
+		add = {
+			desc = "GREAT_POWER_LEADER_COMPARISON"
+			value = scope:recipient.leader_country.great_power_score
+			subtract = 250 # Dont take Great Power Score from being emperor into account here
+			subtract = great_power_score
+			multiply = 0.25 # Balance factor
+		}
+		if = {
+			limit = { is_allied_with = { target = scope:recipient.leader_country } }
+			add = {
+				desc = "game_concept_alliance"
 				value = 5
 			}
+		}
+		if = {
+			limit = { same_dynasty_as = { target = scope:recipient.leader_country } }
+			add = {
+				desc = "opinion_same_dynasty"
+				value = 10
+			}
+		}
+		if = {
+			limit = { is_subject_of = scope:recipient.leader_country }
+			add = {
+				desc = "game_concept_subject"
+				value = 25
+			}
+		}
+		if = {
+			limit = { culture.language = scope:recipient.leader_country.culture.language }
+			add = {
+				desc = "DIPLOREASON_SAME_COMMON_LANGUAGE"
+				value = 5
+			}
+		}
+		if = {
+			limit = { NOT = { culture.language = scope:recipient.leader_country.culture.language } }
+			add = {
+				desc = "DIPLOREASON_DIFFERENT_COMMON_LANGUAGE"
+				value = -5
+			}
+		}
+		# Dynastic Power of Emperor
+		add = {
+			desc = "IA_DYNASTIC_POWER"
+			value = "scope:recipient.leader_country.dynastic_power(international_organization:hre)"
+			multiply = 0.5
+		}
+		# Higher IA gives higher ability to pass reforms
+		if = {
+			limit = { scope:recipient.var:imperial_authority > 50 }
+			add = {
+				desc = "imperial_authority"
+				value = "scope:recipient.var:imperial_authority"
+				subtract = 50
+				multiply = 2.5
+			}
+		}
+		if = {
+			limit = { government_type = government_type:monarchy }
+			add = {
+				desc = "monarchy"
+				value = 5
+			}
+		}
+		if = {
+			limit = { government_type = government_type:theocracy }
+			add = {
+				desc = "theocracy"
+				value = -5
+			}
+		}
+		if = {
+			limit = { scope:recipient = { has_variable = hre_imperial_religion_group } }
 			if = {
-				limit = { scope:recipient.var:imperial_authority > 50 }
+				limit = { NOT = { religion.group = scope:recipient.var:hre_imperial_religion_group } }
 				add = {
-					desc = "imperial_authority"
-					value = "scope:recipient.var:imperial_authority"
-					subtract = 50
-					multiply = -2.5
+					desc = "DIPLOREASON_DIFFERENT_RELIGION_GROUP"
+					value = -250
+				}
+			}
+		}
+		if = {
+			limit = { scope:recipient = { has_variable = hre_imperial_religion } }
+			if = {
+				limit = { NOT = { religion = scope:recipient.var:hre_imperial_religion } }
+				add = {
+					desc = "DIPLOREASON_DIFFERENT_RELIGION"
+					value = -50
 				}
 			}
 		}
@@ -641,6 +627,69 @@ country_needs_allies_value = {
 	}
 }
 
+country_needs_offensive_friends = {
+	desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
+
+	save_temporary_scope_as = root_country
+
+	save_temporary_value_as = {
+		name = root_offensive_alliance_strength
+		value = offensive_alliance_strength
+	}
+
+	subtract = scope:root_offensive_alliance_strength
+
+	if = {
+		limit = {
+			exists = scope:scripted_relation_type
+			exists = scope:recipient
+		}
+		add = scope:recipient.country_strength
+	}
+
+	every_neighbor_country = {
+		limit = {
+			nor = { 
+				has_mutual_scripted_relation = {
+					type = relation_type:alliance
+					target = scope:root_country
+				}
+				in_union_with = scope:root_country
+				has_royal_marriage_with = scope:root_country
+			}
+			is_threat_to = scope:root_country
+			trigger_if = {
+				limit = {
+					exists = scope:actor
+				}
+				not = { this = scope:actor }
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:target
+				}
+				not = { this = scope:target }
+			}
+			trigger_if = {
+				limit = {
+					exists = scope:recipient
+					scope:recipient = {
+						scope_type = international_organization
+					}
+				}
+				NOT = { is_member_of_international_organization = scope:recipient }
+			}
+		}
+		save_temporary_scope_as = target_country
+		add = "scope:root_country.conquer_desire(scope:target_country)"
+		multiply = {
+			value = defensive_alliance_strength
+			multiply = 1.25
+			subtract = scope:root_offensive_alliance_strength
+		}
+	}
+}
+
 union_treasury_cost = {
 	desc = "UNION_TREASURY_COST"
 	value = 25
@@ -706,31 +755,25 @@ union_parliament_gold_bribe_actor = {
 }
 
 union_member_opinion_on_maintain = {
+	#AI is always in favor of not being anyone's puppet. We don't need some high math here as this is the default when the centralization option is rejected
 	add = {
-		desc = "VOTE_BASE_VALUE"
-		value = 10
+		desc = "POLICY_RESPECTS_SOVEREIGNTY"
+		value = 100
 	}
 	if = {
 		limit = {
-			scope:recipient ?= {
-				country_has_special_status = {
-					type = special_status:senior_partner
-					country = scope:actor
-				}
+			scope:recipient = {
+				country_is_senior_partner = { country = root }
 			}
 		}
 		subtract = {
-			desc = "UNION_WE_ARE_SENIOR_PARTNER"
+			desc = "VOTE_IS_SENIOR_PARTNER"
 			value = 1000
 		}
 	}
 }
 
 union_member_opinion_on_centralization = {
-	add = {
-		desc = "VOTE_BASE_VALUE"
-		value = 1
-	}
 	if = {
 		limit = {
 			exists = scope:recipient
@@ -744,26 +787,44 @@ union_member_opinion_on_centralization = {
 	}
 	if = {
 		limit = {
+			scope:recipient = {
+				country_is_senior_partner = { country = root }
+			}
+		}
+		add = {
+			desc = "VOTE_IS_SENIOR_PARTNER"
+			value = 1000
+		}
+	}
+	else_if = {
+		limit = {
 			get_senior_partner = { union = scope:recipient }
 			exists = scope:senior_partner_scope
+		}
+		#Treats us like a mere subject!
+		if = {
+			limit = {
+				receiving_scripted_relation = {
+					type = relation_type:rein_in_junior_diplomacy
+					target = scope:senior_partner_scope
+				}
+			}
+			subtract = {
+				desc = "UNION_SENIOR_PARTNER_REINS_IN_OUR_DIPLOMACY"
+				value = 75
+			}
 		}
 		#Opinion
 		add = {
 			desc = "UNION_OPINION_OF_SENIOR_PARTNER"
 			value = "root.opinion(scope:senior_partner_scope)"
-			divide = 10
+			divide = 5
 		}
 		#Dip Rep
 		add = {
 			desc = "UNION_DIPLOMATIC_REPUTATION_OF_SENIOR_PARTNER"
 			value = scope:senior_partner_scope.modifier:diplomatic_reputation
 			multiply = 3
-		}
-		#Trust
-		add = {
-			desc = "UNION_TRUST_OF_SENIOR_PARTNER"
-			value = "root.trust(scope:senior_partner_scope)"
-			divide = 10
 		}
 		#Great Power Score comparison
 		add = {
@@ -831,6 +892,14 @@ union_member_opinion_on_centralization = {
 						multiply = 1.5
 					}
 				}
+				min = -100
+				max = 25
+			}
+		}
+		else = {
+			add = {
+				desc = "DIPLOREASON_SAME_CULTURE"
+				value = 25
 			}
 		}
 		#Different Religion
