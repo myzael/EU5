@@ -42,6 +42,9 @@
 		upper_palatine = positive
 		frisian = positive
 		walloon = positive
+		lesser_polish = positive
+		greater_polish = positive
+		mazovian = positive
 	}
 	
 	culture_groups = {
