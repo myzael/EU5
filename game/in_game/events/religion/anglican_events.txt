@@ -396,7 +396,6 @@ anglican_events.10 = {
 	option = {
 		name = anglican_events.10.a
 		create_colonial_charter = {
-			source = scope:origin
 			target = scope:neighbor_colony
 		}
 		

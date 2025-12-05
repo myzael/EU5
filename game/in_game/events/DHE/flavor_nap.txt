@@ -10,6 +10,7 @@ flavor_nap.3 = { #Renaissance in Naples
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1400.1.1
 		to = 1500.1.1
 		monthly_chance = 5
@@ -43,6 +44,7 @@ flavor_nap.4 = { #The Great City of the Baroque
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1600.1.1
 		to = 1650.1.1
 		monthly_chance = 5
@@ -1133,6 +1135,7 @@ flavor_nap.270 = { #The pious Elzéar of Sabran
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1371.1.1
 		to = 1401.1.1
 		monthly_chance = 3
@@ -1298,7 +1301,11 @@ flavor_nap.290 = { #The Resentful Prince Consort
 		set_variable = { name = andras_was_killed_flag value = 1 }
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
 		c:HUN = {
-			add_casus_belli = { target = c:NAP type = casus_belli:cb_claim_throne}
+			add_casus_belli = {
+				target = c:NAP
+				type = casus_belli:cb_claim_throne
+				character = scope:prince_consort
+			}
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -1525,6 +1532,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1318.1.1
 		to = 1368.1.1
 		monthly_chance = 5
@@ -1567,7 +1575,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 				every_neighbor_location = {
 					limit = {
@@ -1613,7 +1621,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 						}
 					}
 
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 				every_neighbor_location = {
 					limit = {
@@ -1906,6 +1914,9 @@ flavor_nap.108 = { #The Treaty of Villeneuve (Sicily pays yearly homage)
 	option = {
 		name = flavor_nap.108.a
 		historical_option = yes
+		trigger = {
+			NOT = { is_at_war_with = C:NAP }
+		}
 		change_gold_effect = { scale = -2 }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
@@ -1920,8 +1931,16 @@ flavor_nap.108 = { #The Treaty of Villeneuve (Sicily pays yearly homage)
 		add_opinion = { target = c:NAP modifier = opinion_insulted }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
-			c:NAP = {
-				trigger_event_silently = { id = flavor_nap.107 }
+			if = {
+				limit = { 
+					OR = {
+						NOT = { is_at_war_with = C:NAP } 	
+						NOT = {	has_truce_with = c:NAP }
+					}
+				}
+				c:NAP = {
+					trigger_event_silently = { id = flavor_nap.107 }
+				}
 			}
 			c:SIC = {
 				remove_variable = sicily_pays_tribute
@@ -1941,6 +1960,7 @@ flavor_nap.109 = { #The Library of the Angevin Kings
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1500.1.1
 		monthly_chance = 20
@@ -1999,6 +2019,7 @@ flavor_nap.110 = { #Grand Court of the Vicar
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1799.1.1
 		monthly_chance = 5
@@ -2041,6 +2062,7 @@ flavor_nap.111 = { #The Basilica of Santa Chiara
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1343.1.1
 		monthly_chance = 5
@@ -2089,6 +2111,7 @@ flavor_nap.112 = { #The Destruction of the Scuola Medica Salernitana
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1650.1.1
 		monthly_chance = 100
@@ -2136,6 +2159,7 @@ flavor_nap.113 = { #The Palace of Caserta
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1727.1.1
 		to = 1777.1.1
 		monthly_chance = 2
@@ -2205,6 +2229,7 @@ flavor_nap.114 = { #La Pudizia
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1727.1.1
 		to = 1777.1.1
 		monthly_chance = 2
@@ -2271,6 +2296,7 @@ flavor_nap.115 = { #San Leucio Silk Factory
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1725.1.1
 		to = 1775.1.1
 		monthly_chance = 10
@@ -2312,6 +2338,7 @@ flavor_nap.116 = { #Accademia Pontaniana's delights the World
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1443.1.1
 		to = 1542.1.1
 		monthly_chance = 10
@@ -2355,6 +2382,7 @@ flavor_nap.117 = { #Albanians flee
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1500.1.1
 		monthly_chance = 10
@@ -2430,6 +2458,7 @@ flavor_nap.118 = { #Croatians flee
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1550.1.1
 		monthly_chance = 10
@@ -2647,6 +2676,7 @@ flavor_nap.121 = { #Boccaccio's family's debt
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1339.1.1
 		to = 1341.1.1
 		monthly_chance = 20
@@ -2693,6 +2723,7 @@ flavor_nap.6 = { #Fate of Prato
 
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1345.1.1
 		#1351 in our timeline
 		to = 1355.1.1
@@ -2794,7 +2825,7 @@ flavor_nap.7 = { #Fate of Prato - Accept or Deny
 
 		scope:nap_from = {
 			set_variable = nap_success
-			trigger_event_non_silently = flavor_nap.8
+			trigger_event_silently = flavor_nap.8
 		}
 	}
 
@@ -2804,7 +2835,7 @@ flavor_nap.7 = { #Fate of Prato - Accept or Deny
 		add_prestige = prestige_mild_penalty
 		scope:nap_from = {
 			set_variable = nap_failure
-			trigger_event_non_silently = flavor_nap.8
+			trigger_event_silently = flavor_nap.8
 		}
 	}
 }
@@ -2875,6 +2906,7 @@ flavor_nap.9 = { #Giambattista della Porta
 
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1555.1.1
 		to = 1558.1.1
 		monthly_chance = 25
@@ -2929,6 +2961,7 @@ flavor_nap.10 = { #Magia Naturalis
 
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1558.1.1
 		to = 1565.1.1
 		monthly_chance = 25
@@ -2991,6 +3024,7 @@ flavor_nap.11 = { #Fraticelli
 
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1337.1.1
 		to = 1350.1.1
 		monthly_chance = 5
@@ -3074,6 +3108,7 @@ flavor_nap.12 = { #https://en.wikipedia.org/wiki/State_of_the_Presidi
 
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1557.1.1
 		to = 1800.1.1
 		monthly_chance = 5
@@ -3124,6 +3159,7 @@ flavor_nap.400 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = NAP
+		tag = TWS
 		from = 1640.1.1
 		to = 1650.1.1
 		monthly_chance = 5

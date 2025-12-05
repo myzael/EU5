@@ -1,6 +1,8 @@
 ﻿#Schools of Jurisprudence
 
 hanafi_school = {
+	color = rgb { 17 43 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -22,6 +24,8 @@ hanafi_school = {
 }
 
 hanbali_school = {
+	color = rgb { 0 53 4 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -43,6 +47,8 @@ hanbali_school = {
 }
 
 maliki_school = {
+	color = rgb { 0 41 10 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -64,6 +70,8 @@ maliki_school = {
 }
 
 shafii_school = {
+	color = rgb { 4 39 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -86,6 +94,8 @@ shafii_school = {
 }
 
 zahiri_school = {
+	color = rgb { 16 29 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -108,6 +118,8 @@ zahiri_school = {
 #Schools of Theology
 
 ashari_school = {
+	color = rgb { 18 36 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -127,6 +139,8 @@ ashari_school = {
 }
 
 maturidi_school = {
+	color = rgb { 0 49 11 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -146,6 +160,8 @@ maturidi_school = {
 }
 
 athari_school = {
+	color = rgb { 2 32 0 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -165,6 +181,8 @@ athari_school = {
 }
 
 mutazili_school = {
+	color = rgb { 0 43 11 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:ibadi
@@ -184,6 +202,8 @@ mutazili_school = {
 }
 
 wahhabi_school = {
+	color = rgb { 0 29 0 }
+
 	enabled_for_country = {
 		religion = religion:sunni
 		has_global_variable = wahabism_founded

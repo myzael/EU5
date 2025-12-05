@@ -572,7 +572,7 @@ a_varangians = {
 	}
 
 	country_potential = {
-		tag = BYZ
+		has_or_had_tag = BYZ
 	}
 	
 	buildable = yes

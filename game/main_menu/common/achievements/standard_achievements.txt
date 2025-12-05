@@ -343,7 +343,7 @@ hongwu_di = {
 
 	happened = {
 		international_organization:middle_kingdom.leader_country = root
-		tag = MNG
+		has_or_had_tag = MNG
 		region:north_china_region = {
 			any_ownable_location_in_region = {
 				percent = 1

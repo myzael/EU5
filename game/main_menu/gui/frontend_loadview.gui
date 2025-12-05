@@ -48,9 +48,6 @@ widget = {
 		blockoverride "scroll_list_layout" {
 			loadgame_grid = {
 				using = layoutpolicy_expanding
-				blockoverride "load_slot_buttons" {
-					using = sp_load_slot_buttons
-				}
 				blockoverride "slot_button_SP_left_action_playtroughitem" {
 					on_action = "[FrontEndLoadView.SetInitSettings('(bool)no', '(bool)no')]"
 				}

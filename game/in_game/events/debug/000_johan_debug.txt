@@ -816,7 +816,6 @@ johan.10 = {
 	option = {
 		name = johan.1.c
 		create_colonial_charter = {
-			source = capital.province
 			target = c:FIN.capital.province_definition
 		}
 	}

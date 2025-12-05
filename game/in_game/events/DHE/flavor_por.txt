@@ -461,7 +461,7 @@ flavor_por.9 = { #Spice Trade in Indian Ocean
 				country = root
 				key = portuguese_privateers
 				months = 120
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 	}
@@ -3078,6 +3078,7 @@ flavor_por.40 = { # Lei Mental
 }
 
 scripted_trigger por_can_be_kicked_out = {
+	is_adult = yes
 	NOR = {
 		root.ruler_or_regent ?= this
 		root.heir ?= this

@@ -6230,6 +6230,205 @@ BYZ_cross_cypher_komnenos = { # Byzantium - Tetragrammatic cross & Komnenos cyph
 		instance = { position = { 0.5 0.5 } scale = { 0.675 0.675 } }		
 	}		
 }
+BYZ_cross_capetian = { # Byzantium - Tetragrammatic cross & Capetian roundel in heart
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross_cantoned.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_beta_letter_tetragrammatic_cross.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.21 0.22 } scale = { -0.475 0.40 } }
+		instance = { position = { 0.79 0.22 } scale = { 0.475 0.40 } }
+		instance = { position = { 0.21 0.78 } scale = { -0.475 0.40 } }
+		instance = { position = { 0.79 0.78 } scale = { 0.475 0.40 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.575 0.575 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.525 0.525 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.45 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.435 0.425 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.565 0.425 } scale = { 0.25 0.25 } }
+		instance = { position = { 0.5 0.6 } scale = { 0.25 0.25 } }
+	}
+}
+BYZ_angevine = { # Byzantium - Early angevine per pale design
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+	color4 = "red_mid"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_label_05.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.25 0.61 }  scale = { 0.85 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.75 0.5 } scale = { 0.5 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.75 0.5 } scale = { 0.067 1.0 } }
+		instance = { position = { 0.75 0.5 } scale = { 0.5 0.1 } }
+	}
+	colored_emblem = {
+		texture = "ce_beta_letter_tetragrammatic_cross.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.61 0.23 } scale = { -0.4 0.40 } }
+		instance = { position = { 0.89 0.23 } scale = { 0.4 0.40 } }
+		instance = { position = { 0.61 0.77 } scale = { -0.4 0.40 } }
+		instance = { position = { 0.89 0.77 } scale = { 0.4 0.40 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale_50.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+	}
+}
+BYZ_capetian = { # Byzantium - Early capetian per pale design
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_fleur_de_lis.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.10 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.00 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.20 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.20 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.40 } scale = { @semy @semy } }
+		instance = { position = { 0.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.20 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.40 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.60 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.80 0.60 } scale = { @semy @semy } }
+		instance = { position = { 1.00 0.60 } scale = { @semy @semy } }
+		instance = { position = { 0.10 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.30 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.50 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.70 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.90 0.80 } scale = { @semy @semy } }
+		instance = { position = { 0.00 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.20 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.40 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.60 1.00 } scale = { @semy @semy } }
+		instance = { position = { 0.80 1.00 } scale = { @semy @semy } }
+		instance = { position = { 1.00 1.00 } scale = { @semy @semy } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.75 0.5 } scale = { 0.5 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.75 0.5 } scale = { 0.067 1.0 } }
+		instance = { position = { 0.75 0.5 } scale = { 0.5 0.1 } }
+	}
+	colored_emblem = {
+		texture = "ce_beta_letter_tetragrammatic_cross.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.61 0.23 } scale = { -0.4 0.40 } }
+		instance = { position = { 0.89 0.23 } scale = { 0.4 0.40 } }
+		instance = { position = { 0.61 0.77 } scale = { -0.4 0.40 } }
+		instance = { position = { 0.89 0.77 } scale = { 0.4 0.40 } }
+	}
+	colored_emblem = {
+		texture = "ce_divider_per_pale_50.dds"
+		color1 = "black_secondary"
+		color2 = "black_secondary"
+	}
+}
 
 BZH = { # Beisheng
 	pattern = "pattern_solid.dds"
@@ -11071,7 +11270,7 @@ DZK = { # Durdzuketia
 	}
 }
 
-EGL = { # Bulduqani
+EGL = { # Egil/Bulduqani
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
@@ -14040,6 +14239,18 @@ GHR = { # Garha
 		texture = "te_hanuman_flying_blue.dds"
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }			
 	}	
+}
+
+GJR = { # Sultanate of Gujarat
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_barry_04.dds"
+		color1 = color1
+		color2 = color2
+	}
 }
 
 GLA = { # Glauchau
@@ -18707,6 +18918,25 @@ JNG = { # Junagarh
 	}		
 }
 
+JNP = { # Jaunpur
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	12	85	45	} 
+	color2 = "yellow"
+	color3 = hsv360 	{	230	40	60	} 
+
+	colored_emblem = {
+		texture = "ce_arabic_naskh_shahada_03.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.47 0.5 } scale = { 0.90 0.75 } }		
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_thin_double.dds"
+		color1 = color3
+		color2 = color1
+	}	
+}
+
 JNT = { # Jaintiapur
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
@@ -19461,7 +19691,41 @@ KHM = { # Khmer
 	}	
 }
 
-KHR = { # Kherla
+KHN = { # Kharan
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	205	75	45	}
+	color2 = "white"
+	color3 = "red_scarlet"
+
+	colored_emblem = {
+		texture = "ce_crescent_rotated.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.20 0.30 } scale = { 0.5 0.5 } }
+	}
+}
+KHN_princely = { # Kharan - Princely state
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	205	75	55	}
+	color2 = "red_secondary"
+	color3 = hsv360 	{	90	80	50	}
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color1
+		color2 = color2
+		color3 = color3
+	}
+	colored_emblem = {
+		texture = "ce_crescent_star_05_rotated_02.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.8 0.165 } scale = { 0.35 0.35 } }
+	}
+}
+
+KHR = { # Kherla TODO Some gond art instead, tiger (associated with dynasty) if possible
 	pattern = "pattern_fringe.dds"
 	color1 = "red"
 	color2 = "yellow"
@@ -19472,6 +19736,24 @@ KHR = { # Kherla
 		color2 = color2
 		instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }			
 	}		
+}
+
+KHU = { # Khunj
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_eternal_knot_06.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.35 0.5 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_of_3_fringe.dds"
+		color1 = color2
+		color2 = color2
+	}
 }
 
 KHS = { # Khasa
@@ -19493,6 +19775,57 @@ KHS = { # Khasa
 		color2 = color3
 		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }					
 	}	
+}
+
+KHZ = { # Khuzdar
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_bars_03.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+KHZ_princely = { # Las Bela Princely State
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	90	70	45	}
+	color2 = "red_secondary"
+	color3 = "black"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.125 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.375 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.625 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.875 } scale = { 1.0 0.25 } }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_star_05_rotated_02.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.8 0.25 } scale = { 0.45 0.45 } }
+	}
 }
 
 KIA = { # Kitkehaki
@@ -19715,6 +20048,26 @@ KKH = { # Kaskankaham
 	}
 }
 
+KKL = { # Khalkhal
+	pattern = "pattern_solid.dds"
+	color1 = "red_scarlet"
+	color2 = "yellow"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_diamond_mena_polylobe.dds"
+		color1 = color3
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_mena_rasulid_central_rosette_08.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.55 0.55 } }
+	}
+}
+
 KKR = { # Khukhragarh
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"	
@@ -19728,6 +20081,25 @@ KKR = { # Khukhragarh
 		instance = { position = { 0.31 0.495 } scale = { -0.8 0.8 } }
 		instance = { position = { 0.69 0.495 } scale = { 0.8 0.8 } }		
 	}	
+}
+
+KLA = { # Kalat
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	90	70	45	}
+	color2 = "red_secondary"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_fess.dds"
+		color1 = color1
+		color2 = color2
+	}
+	colored_emblem = {
+		texture = "ce_crescent_star_06_mena.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.85 } }
+	}
 }
 
 KLB = { # Banu Kilab
@@ -24473,6 +24845,21 @@ MLN = { # Malinalco
 		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }				
 	}
 } 
+
+MLW = { # Malwa
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	80	75	32	} 
+	color2 = hsv360 	{	08 	82	65	}
+	color3 = "yellow_pale"
+	color4 = hsv360 	{	45	65	65	}
+	
+	colored_emblem = {
+		texture = "ce_crescent_semy_field_border.dds"
+		color1 = color3
+		color2 = color4
+		color3 = color2
+	}
+}
 
 MMA = { # Mong Mao
 	pattern = "pattern_solid.dds"
@@ -31468,6 +31855,17 @@ PRO = { # Provence
 		instance = { position = { 0.195 0.14 }  scale = { 0.07 0.175 } }			
 		instance = { position = { 0.805 0.14 }  scale = { 0.07 0.175 } }					
 	}		
+}
+PRO_republic = { # Provence - Pre Angevine Maritime republic of Marseille
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_cross.dds"
+		color1 = color2
+		color2 = color2
+	}
 }
 
 PRT = { # Mandore
@@ -42162,28 +42560,7 @@ WLS_cross_neith = { # Cross of Neith design
 	}
 }
 
-WMA = { # Weimar-Orlamünde - Derived from Andechs with lion pg in chief
-	pattern = "pattern_solid.dds"
-	color1 = "blue"
-	color2 = "white"
-	color3 = "yellow"
-
-	colored_emblem = {
-		texture = "ce_eagle_wide_chief.dds"
-		color1 = color2
-		color2 = color3
-		color3 = color3
-		instance = { position = { 0.5 0.65 } scale = { 0.9 0.95 } }
-	}
-	colored_emblem = {
-		texture = "ce_lion_passant_guardant_long_thin.dds"
-		color1 = color2
-		color2 = color3
-		color3 = color1
-		instance = { position = { 0.5 0.20 } scale = { 0.9 0.9 } }
-	}
-}
-WMA_wettin = { # Weimar-Orlamünde - Later Wettin variant in Meissen colours
+WMA = { # Weimar - Cadets of Gft Orlamünde using different arms, adopted by Otto III (derived from Andechs, with ancient tinctures undifferentiated) after the two branches split in the 13th c. (lion & semy of hearts is for the main branch = Orlamünde)
 	pattern = "pattern_solid.dds"
 	color1 = "black"
 	color2 = "yellow"

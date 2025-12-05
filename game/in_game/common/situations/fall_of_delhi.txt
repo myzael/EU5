@@ -18,13 +18,20 @@
 	visible = {
 		OR = {
 			tag = DLH
-			is_neighbor_of = c:DLH
-			is_subject_of = c:DLH
-			is_enemy_of = c:DLH
-			is_rival_of = c:DLH
-			AND = {
-				exists = capital
-				capital.sub_continent = sub_continent:south_asia
+			OR = {
+				AND = {
+					exists = capital
+					capital.sub_continent = sub_continent:south_asia
+				}
+				AND = {
+					country_exists = c:DLH
+					OR = {
+						is_neighbor_of = c:DLH
+						is_subject_of = c:DLH
+						is_enemy_of = c:DLH
+						is_rival_of = c:DLH
+					}
+				}
 			}
 		}
 	}
@@ -224,7 +231,7 @@
 		else_if = {
 			limit = {
 				c:DLH = {
-					has_variable = dissolution_of_delhi_started
+					any_active_disaster = { disaster_type = disaster_type:dissolution_of_delhi }
 				}
 			}
 			c:DLH = { trigger_event_non_silently = fall_of_delhi.5 }

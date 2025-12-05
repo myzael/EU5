@@ -340,7 +340,7 @@ prepare_for_war = {
 	sound = PARLIAMENT_PREPARE_FOR_WAR
 	
 	ai_tick = daily
-	ai_tick_frequency = 100
+	ai_tick_frequency = 30
 	automation_tick = daily
 	automation_tick_frequency = 7
 	player_automated_category = parliament

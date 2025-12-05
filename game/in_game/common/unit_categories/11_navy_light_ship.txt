@@ -15,7 +15,7 @@
 	food_storage_per_strength = 0.1
 
 	
-	flanking_ability = 1.1
+	flanking_ability = 1.2
 
 	maintenance_demand =  light_ship_1_maintenance
 	construction_demand = light_ship_1_construction

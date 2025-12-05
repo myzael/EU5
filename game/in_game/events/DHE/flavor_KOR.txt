@@ -94,6 +94,10 @@ flavor_kor.1 = {
 	}
 }
 
+scripted_trigger is_joseon_dynasty = {
+	has_variable = KOR_joseon_dynasty
+}
+
 scripted_trigger kor_has_mongol_aristocrats = {
 	tag = KOR
 	has_variable = kor_is_influenced_by_mongols
@@ -1026,6 +1030,7 @@ flavor_kor.16 = {
 	}
 	trigger = {
 		stability > 20
+		is_joseon_dynasty = yes
 	}
 	illustration_tags = {
         10 = regular
@@ -1873,10 +1878,6 @@ flavor_kor.28 = {
 			value = societal_value_move_to_left
 		}
 	}
-}
-
-scripted_trigger is_joseon_dynasty = {
-	has_variable = KOR_joseon_dynasty
 }
 
 # Veritable Records of the Joseon Dynasty

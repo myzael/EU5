@@ -8,7 +8,6 @@ cb_claim_throne = {
 	}
 	allow_declaration = {
 		#The claim throne cb is not given to if these triggers are not fulfilled
-		religion.group = scope:target.religion.group
 		government_type = government_type:monarchy
 		scope:target = {
 			government_type = government_type:monarchy

@@ -11,18 +11,8 @@
 	allow = {
 		scope:actor = {
 			custom_tooltip = {
-				text = favor_heir_tt
-				OR = {
-					NOT = { has_variable_list = supported_heirs }
-					NOT = {
-						any_in_list = {
-							variable = supported_heirs
-							is_alive = yes
-							has_variable = home_country
-							var:home_country ?= scope:actor
-						}
-					}
-				}
+				text = favor_heir_ct
+				NOT = { has_variable = favored_heir }
 			}
 		}
 	}
@@ -46,20 +36,31 @@
 			modifier:blocked_from_character_interactions = no
 			is_eligible_heir_baseline = scope:actor
 			valid_estate_for_heir_selection = scope:actor.succession_law
+			custom_tooltip = {
+				text = favor_heir_at
+				scope:actor = {
+					NOT = { is_target_in_variable_list = { name = supported_heirs target = root } }
+				}
+			}
 		}
 	}
 	effect = {
 		scope:recipient = {
 			custom_tooltip = {
-				text = favor_heir_ct
+				text = favor_heir_tt
 				set_variable = {
 					name = home_country
 					value = scope:actor
 				}
 			}
 		}
-		hidden_effect = {
+		custom_tooltip = {
+			text = favor_heir_bt
 			scope:actor = {
+				set_variable = {
+					name = favored_heir
+					value = scope:recipient
+				}
 				add_to_variable_list = {
 					name = supported_heirs
 					target = scope:recipient

@@ -18,7 +18,7 @@ reconquista_of_the_sea = {
 		has_or_had_tag = KNI
 	}
 	navy_galley_power = 0.2
-	ship_capture_chance = 0.2
+	ship_capture_chance = 0.05
 }
 friends_in_need = { 
 	age = age_2_renaissance 

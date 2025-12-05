@@ -112,4 +112,8 @@ diplomacy_manager = {
 	opinion = { first = XIU second = COC type = opinion_tyrant_overlord }
 	opinion = { first = COC second = HEL type = opinion_irritated }
 	opinion = { first = HEL second = COC type = opinion_tyrant_overlord }
+
+	#Iberia #Due to the Truce of 1337, making the Battle of Río Salado event chain easier to trigger
+	opinion = { first = POR second = CAS type = opinion_good_relations }
+	opinion = { first = CAS second = POR type = opinion_good_relations }
 }

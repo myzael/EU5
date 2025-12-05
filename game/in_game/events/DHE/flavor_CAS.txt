@@ -6,6 +6,7 @@ flavor_cas.1 = { # Columbus triggered from flavor_por.1
 	desc = flavor_cas.1.desc
 	historical_info = flavor_cas.1.historical_info
 	image = "gfx/interface/illustrations/institutions/new_world.dds"
+	fire_only_once = yes
 
 	immediate = {
 		clear_saved_scope = target_country
@@ -8340,7 +8341,7 @@ flavor_cas.136 = { # The Great Fire of Valladolid #DEVASTATION
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { minor_destroy_building_levels_in_location = yes }
 			}
 		}
 	}
@@ -8362,7 +8363,7 @@ flavor_cas.136 = { # The Great Fire of Valladolid #DEVASTATION
 					}
 				}
 
-				location = { destroy_building = prev }
+				location = { major_destroy_building_levels_in_location = yes }
 			}
 		}
 	}

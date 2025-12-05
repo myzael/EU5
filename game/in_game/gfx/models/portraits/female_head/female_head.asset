@@ -68,6 +68,7 @@ pdxmesh = {
 	blend_shape = { id = "nbs_chin_length_min"		type = "additive_animations/nbs_chin_length_min.mesh" data = "normal|tangent" }
 	blend_shape = { id = "nbs_eye_forward_max"		type = "additive_animations/nbs_eye_forward_max.mesh" data = "normal|tangent" }
 	blend_shape = { id = "nbs_eye_forward_min"		type = "additive_animations/nbs_eye_forward_min.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_forehead_brow_height_max"		type = "additive_animations/nbs_forehead_brow_height_max.mesh" data = "normal|tangent" }
 	blend_shape = { id = "nbs_head_face_forward_max"		type = "additive_animations/nbs_head_face_forward_max.mesh" data = "normal|tangent" }
 	blend_shape = { id = "nbs_head_face_forward_min"		type = "additive_animations/nbs_head_face_forward_min.mesh" data = "normal|tangent" }
 	blend_shape = { id = "nbs_jaw_forward_max"		type = "additive_animations/nbs_jaw_forward_max.mesh" data = "normal|tangent" }
@@ -131,6 +132,7 @@ pdxmesh = {
 	blend_shape = { id = "jaw_def_max"    type = "blendshapes_genes/jaw_def_max.mesh" }
 	blend_shape = { id = "jaw_def_min"    type = "blendshapes_genes/jaw_def_min.mesh" }
 
+	blend_shape = { id = "mouth_lip_def_max"    type = "blendshapes_genes/mouth_lip_def_max.mesh" }
 	blend_shape = { id = "mouth_lower_lip_pad_max"    type = "blendshapes_genes/mouth_lower_lip_pad_max.mesh" }
 	blend_shape = { id = "mouth_lower_lip_pad_min"    type = "blendshapes_genes/mouth_lower_lip_pad_min.mesh" }
 	blend_shape = { id = "mouth_lower_lip_size_max"    type = "blendshapes_genes/mouth_lower_lip_size_max.mesh" }
@@ -141,6 +143,7 @@ pdxmesh = {
 	blend_shape = { id = "mouth_upper_lip_size_min"    type = "blendshapes_genes/mouth_upper_lip_size_min.mesh" }
 	blend_shape = { id = "mouth_philtrum_def_max"    type = "blendshapes_genes/mouth_philtrum_def_max.mesh" }
 	blend_shape = { id = "mouth_philtrum_def_min"    type = "blendshapes_genes/mouth_philtrum_def_min.mesh" }
+	blend_shape = { id = "mouth_philtrum_shape_max"    type = "blendshapes_genes/mouth_philtrum_shape_max.mesh" }
 	blend_shape = { id = "mouth_philtrum_width_max"    type = "blendshapes_genes/mouth_philtrum_width_max.mesh" }
 	blend_shape = { id = "mouth_philtrum_width_min"    type = "blendshapes_genes/mouth_philtrum_width_min.mesh" }
 	blend_shape = { id = "mouth_area_width_max"    type = "blendshapes_genes/mouth_area_width_max.mesh" }
@@ -174,6 +177,8 @@ pdxmesh = {
 	blend_shape = { id = "nose_tip_size_min"    type = "blendshapes_genes/nose_tip_size_min.mesh" }
 	blend_shape = { id = "nose_width_max"    type = "blendshapes_genes/nose_width_max.mesh" }
 	blend_shape = { id = "nose_width_min"    type = "blendshapes_genes/nose_width_min.mesh" }
+
+	blend_shape = { id = "temple_def_max"    type = "blendshapes_genes/temple_def_max.mesh" }
 
 	## Other misc blend shapes ##
 	blend_shape = { id = "eyelashes_length_max"    type = "blendshapes_genes/neutral.mesh" }
@@ -267,6 +272,7 @@ entity = {
 	attribute = { name = "nbs_chin_length_min"    blend_shape = "nbs_chin_length_min" }
 	attribute = { name = "nbs_eye_forward_max"    blend_shape = "nbs_eye_forward_max" }
 	attribute = { name = "nbs_eye_forward_min"    blend_shape = "nbs_eye_forward_min" }
+	attribute = { name = "nbs_forehead_brow_height_max"    blend_shape = "nbs_forehead_brow_height_max" }
 	attribute = { name = "nbs_head_face_forward_max"    blend_shape = "nbs_head_face_forward_max" }
 	attribute = { name = "nbs_head_face_forward_min"    blend_shape = "nbs_head_face_forward_min" }
 	attribute = { name = "nbs_jaw_forward_max"    blend_shape = "nbs_jaw_forward_max" }
@@ -329,6 +335,7 @@ entity = {
 	attribute = { name = "bs_jaw_def_max"    blend_shape = "jaw_def_max" }
 	attribute = { name = "bs_jaw_def_min"    blend_shape = "jaw_def_min" }
 
+	attribute = { name = "bs_mouth_lip_def_max"    blend_shape = "mouth_lip_def_max" }
 	attribute = { name = "bs_mouth_lower_lip_pad_max"    blend_shape = "mouth_lower_lip_pad_max" }
 	attribute = { name = "bs_mouth_lower_lip_pad_min"    blend_shape = "mouth_lower_lip_pad_min" }
 	attribute = { name = "bs_mouth_lower_lip_size_max"    blend_shape = "mouth_lower_lip_size_max" }
@@ -339,6 +346,7 @@ entity = {
 	attribute = { name = "bs_mouth_upper_lip_size_min"    blend_shape = "mouth_upper_lip_size_min" }
 	attribute = { name = "bs_mouth_philtrum_def_max"    blend_shape = "mouth_philtrum_def_max" }
 	attribute = { name = "bs_mouth_philtrum_def_min"    blend_shape = "mouth_philtrum_def_min" }
+	attribute = { name = "bs_mouth_philtrum_shape_max"    blend_shape = "mouth_philtrum_shape_max" }
 	attribute = { name = "bs_mouth_philtrum_width_max"    blend_shape = "mouth_philtrum_width_max" }
 	attribute = { name = "bs_mouth_philtrum_width_min"    blend_shape = "mouth_philtrum_width_min" }
 	attribute = { name = "bs_mouth_area_width_max"    blend_shape = "mouth_area_width_max" }
@@ -372,6 +380,8 @@ entity = {
 	attribute = { name = "bs_nose_tip_size_min"    blend_shape = "nose_tip_size_min" }
 	attribute = { name = "bs_nose_width_max"    blend_shape = "nose_width_max" }
 	attribute = { name = "bs_nose_width_min"    blend_shape = "nose_width_min" }
+
+	attribute = { name = "bs_temple_def_max"    blend_shape = "temple_def_max" }
 
 	## Other misc blend shapes ##
 	attribute = { name = "bs_eyelashes_length_max"    blend_shape = "eyelashes_length_max" }

@@ -32,7 +32,7 @@
         enabled = {
 			opinion = {
 				target = scope:actor
-				value > 50
+				value < 100
 			}
 		}
 	}
@@ -60,7 +60,7 @@
         enabled = {
 			loan_interest < {
 				value = scope:actor.estate_loan_interest
-				multiply = 2
+				multiply = 1.5
 			}
 		}
 	}
@@ -83,6 +83,6 @@
 	}
 
 	ai_will_do = {
-		add = -10
+		add = 1
 	}	
 }	

@@ -360,6 +360,9 @@ flavor_eth.60 = { #Debre Berhan Plundered
 	trigger = {
 		tag = ETH
 		capital = location:debra_berhan
+		scope:target = {
+			location_key = debra_berhan
+		}
 	}
 	illustration_tags = {
 		10 = angry
@@ -816,8 +819,11 @@ flavor_eth.110 = { #Independence from the Patriarchate
 		create_international_organization = {
 			#Scoped country and religion is added automatically
 			type = international_organization_type:autocephalous_patriarchate
-			add_country_to_international_organization = prev
-			set_leader_country = prev
+			custom_tooltip = {
+				text = new_autocephalous_patriarchate.tt
+				add_country_to_international_organization = prev
+				set_leader_country = prev
+			}
 			#So we can use it in text
 			save_scope_as = new_international_organization
 
@@ -964,6 +970,24 @@ flavor_eth.120 = { #The Kebra Nagast
 				}
 				10 = {
 					trigger = {
+						OR = {
+							NOT = { has_trait = greedy }
+							NOT = { has_trait = midas_touched }
+						}
+					}
+					add_trait = trait:midas_touched
+				}
+				10 = {
+					trigger = {
+						OR = {
+							NOT = { has_trait = architectural_visionary }
+							NOT = { has_trait = obsessive_perfectionist }
+						}
+					}
+					add_trait = trait:architectural_visionary
+				}
+				10 = {
+					trigger = {
 						NOT = { has_trait = well_connected }
 					}
 					add_trait = trait:well_connected 
@@ -1011,30 +1035,11 @@ flavor_eth.120 = { #The Kebra Nagast
 				10 = {
 					trigger = {
 						OR = {
-							NOT = { has_trait = greedy }
-							NOT = { has_trait = midas_touched }
-						}
-					}
-					add_trait = trait:midas_touched
-				}
-				10 = {
-					trigger = {
-						OR = {
 							NOT = { has_trait = loose_lips }
 							NOT = { has_trait = secretive }
 						}
 					}
 					add_trait = trait:secretive
-				}
-
-				10 = {
-					trigger = {
-						OR = {
-							NOT = { has_trait = architectural_visionary }
-							NOT = { has_trait = obsessive_perfectionist }
-						}
-					}
-					add_trait = trait:architectural_visionary
 				}
 			}
 		}

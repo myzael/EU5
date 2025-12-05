@@ -18016,6 +18016,43 @@ template button_checkbox_template_alt {
 	}
 }
 
+template button_checkbox_square_template_alt {
+	block "color" {
+		texture = "gfx/interface/buttons/checkbox_small_square.dds"
+	}
+
+	texture_density = 2
+	framesize = { 40 40 }
+	size = { 30 30 }
+	block "color_checkbox_background" {
+		background = {
+			texture = "gfx/interface/buttons/checkbox_small_square_bg.dds"
+			texture_density = 2
+			using = color_dark_blue
+			margin = { 3 3 }
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+		}
+	}
+}
+
+# template button_checkbox_square_frame_alt {
+# 	block "color" {
+# 		texture = "gfx/interface/buttons/checkbox_small_square_frame.dds"
+# 	}
+
+# 	texture_density = 2
+# 	framesize = { 40 40 }
+# 	size = { 30 30 }
+
+# 	background = {
+# 		texture = "gfx/interface/buttons/checkbox_small_square_bg.dds"
+# 		texture_density = 2
+# 		using = color_dark_blue
+# 		margin = { 3 3 }
+# 		shaderfile = "gfx/FX/pdxgui_default.shader"
+# 	}
+# }
+
 types UiLibrary
 {
 	type header_pattern = widget {
@@ -18067,6 +18104,48 @@ types UiLibrary
 	type button_checkbox_alt = checkbutton {
 		using = button_checkbox_template_alt
 	}
+
+	# type button_checkbox_square_alt = checkbutton {
+	# 	using = button_checkbox_square_template_alt
+	# }
+
+	type statebutton_checkbox_square = button {
+		using = button_checkbox_square_template_alt
+		frame = 1
+	}
+
+	# type button_checkbox_square_frame = checkbutton {
+	# 	using = button_checkbox_square_template_alt
+	# 	blockoverride "color"  {
+	# 	texture = "gfx/interface/buttons/checkbox_small_square_frame.dds"
+	# 	}
+	# 	blockoverride "color_checkbox_background" {
+	# 		background = {
+	# 			visible = no
+	# 		}
+	# 	}
+	# }
+
+	# type button_checkbox_diamond_frame = checkbutton {
+	# 	using = button_checkbox_square_template_alt
+	# 	blockoverride "color" {
+	# 	texture = "gfx/interface/buttons/checkbox_diamond_frame.dds"
+	# 	}
+	# 	blockoverride "color_checkbox_background" {
+	# 		background = {
+	# 			visible = no
+	# 		}
+	# 	}
+	# }
+	type statebutton_checkbox_diamond_frame = button {
+		using = button_checkbox_square_template_alt
+		frame = 1
+		blockoverride "color" {
+			texture = "gfx/interface/buttons/checkbox_diamond_frame.dds"
+		}
+		blockoverride "color_checkbox_background" {}
+	}
+	
 
 	type button_checkbox_round = checkbutton {
 		texture = "gfx/interface/buttons/checkbox_round.dds"

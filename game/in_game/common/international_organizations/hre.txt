@@ -125,6 +125,15 @@
 		great_power_score_exempt_from_forfeit = 250
 
 		diplomatic_capacity = 1
+		max_diplomats = 2
+		diplomatic_range = 500
+		
+		fort_limit = 1
+		
+		num_possible_artists = 1 
+		cultures_capacity = 1
+		government_size = 1
+		monthly_prestige = 0.1
 		
 		allowed_alliance = yes
 		allowed_guarantee = yes
@@ -197,7 +206,9 @@
 	}
 	
 	can_join_trigger = {
-		country_exists = scope:recipient.leader_country
+		scope:recipient = {
+			international_organization_has_leader = yes
+		}
 		religion = scope:recipient.leader_country.religion
 		OR = {
 			is_neighbor_of_international_organization = scope:recipient
@@ -796,12 +807,7 @@
 		}
 	}
 	
-	ai_issue_voting_bias = {
-		add = {
-			desc = "INERTIA"
-			value = -1
-		}
-		
+	ai_issue_voting_bias = {		
 		#passing policies is what makes the empire great, so if the leader can enact one, they will
 		add = {
 			desc = "POLICY_BIAS_LEADER_ALWAYS_WANTS"

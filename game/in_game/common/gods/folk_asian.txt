@@ -35,7 +35,7 @@ ulei_umtang_god = { #god of drinking water
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -48,7 +48,7 @@ ulei_longspah_god = { #god of wealth
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -75,7 +75,7 @@ dharti_ayo_god = { #goddess of earth https://en.wikipedia.org/wiki/Marang_Buru
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -102,7 +102,7 @@ kamuy_huci_god = { #goddess of the hearth https://en.wikipedia.org/wiki/Kamuy-hu
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -129,7 +129,7 @@ rep_un_kamuy_god = { #god of the sea https://en.wikipedia.org/wiki/Rep-un-kamuy
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -156,7 +156,7 @@ nat_awal_god = { #goddess of fertility
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -183,7 +183,7 @@ nat_awual_god = { #mother goddess of the village
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -210,7 +210,7 @@ phi_water_god = { #water god
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -223,7 +223,7 @@ phi_earth_god = { #earth god
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -263,7 +263,7 @@ mainao_god = { #goddess protector of the rice fields
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -276,7 +276,7 @@ song_bwrai_god = { #household god
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -316,7 +316,7 @@ polo_god = { #moon god
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -330,7 +330,7 @@ kine_nane_god = { # goddess of crops
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -358,7 +358,7 @@ sumnima_god = { # supreme god, Mother Earth
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -384,7 +384,7 @@ yuma_sammang_god = { # supreme god, Mother Earth https://en.wikipedia.org/wiki/Y
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }
 
@@ -411,7 +411,7 @@ khuanu_god = { # Mother Earth
 
     country_modifier = {
       global_life_expectancy = 2
-      global_population_growth = 0.00025
+      global_population_growth = 0.0001
     }
 }
 
@@ -437,6 +437,6 @@ sakhua_god = { # god of the family
     }
 
     country_modifier = {
-      global_monthly_prosperity = 0.002
+      global_monthly_prosperity = 0.001
     }
 }

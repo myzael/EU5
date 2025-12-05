@@ -23,6 +23,7 @@
 # - location_potential: <trigger> can the building be built in the location (root = location) (think of this as a "visible" check)
 # - country_potential: <trigger> can the building be built by the country (root = country) (think of this as a "visible" check)
 # - can_destroy: <trigger> can the building be destroyed in the location (root = location, actor = destroyer, building = building)
+# - is_indestructible: <yes/no> if set to yes, the building can neither be destroyed via button press nor via the effect for it. remove_if can still delete the building tho
 # - remove_if: <trigger> will the building be auto-destroyed in the location (root = building)
 # - capital_modifier: <modifier> modifier applied to the location if built in the capital (multiplied by building level and goods access)
 # - capital_country_modifier: <modifier> modifier applied to the country if built in the capital (multiplied by building level and goods access)

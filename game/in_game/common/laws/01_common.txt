@@ -299,24 +299,55 @@ education_masses_law = {
 		years = 2
 	}
 
-	epic_tradition_education = {
+	epic_tradition_education_sects = {
 		potential = {
 			has_advance = written_alphabet
-			OR = {
-				AND = {
-					has_advance = printing_press_advance
-					OR = {
-						has_estate_privilege = estate_privilege:clergy_literacy_rights
-						has_estate_privilege = estate_privilege:embellish_great_works_of_faith
+			AND = {
+				OR = {
+					AND = {
+						has_advance = printing_press_advance
+						OR = {
+							has_estate_privilege = estate_privilege:clergy_literacy_rights
+							has_estate_privilege = estate_privilege:embellish_great_works_of_faith
+						}
 					}
+					government_type = government_type:tribe
+					government_type = government_type:steppe_horde
 				}
-				government_type = government_type:tribe
-				government_type = government_type:steppe_horde
+				religion = { has_sects = yes }
 			}
 		}
 		country_modifier = {
 			skill_of_new_artists = 0.15
 			increase_literacy_from_religious_sects_cost_modifier = -0.5
+			invite_artist_cost_modifier = 0.1
+		}
+		estate_preferences = {
+			burghers_estate
+		}
+		years = 2
+	}
+
+	epic_tradition_education = {
+		potential = {
+			has_advance = written_alphabet
+			AND = {
+				OR = {
+					AND = {
+						has_advance = printing_press_advance
+						OR = {
+							has_estate_privilege = estate_privilege:clergy_literacy_rights
+							has_estate_privilege = estate_privilege:embellish_great_works_of_faith
+						}
+					}
+					government_type = government_type:tribe
+					government_type = government_type:steppe_horde
+				}
+				religion = { has_sects = no }
+			}
+		}
+		country_modifier = {
+			skill_of_new_artists = 0.15
 			invite_artist_cost_modifier = 0.1
 		}
 		estate_preferences = {
@@ -602,7 +633,7 @@ administrative_system = {
 		}
 		country_modifier = {
 			monthly_towards_decentralization = societal_value_monthly_move
-			global_distance_from_capital_cost_modifier = -0.05
+			subject_loyalty = 10
 		}
 		estate_preferences = {
 			burghers_estate
@@ -655,7 +686,7 @@ administrative_system = {
 			has_or_had_tag = NOV
 		}
 		country_modifier = {
-			global_monthly_prosperity = 0.005
+			global_monthly_prosperity = 0.001
 			global_monthly_development = 0.001
 		}
 		estate_preferences = {
@@ -683,7 +714,7 @@ administrative_system = {
 				culture = culture:aragonese
 				culture = culture:basque
 				culture = culture:castilian
-				tag = ARA
+				has_or_had_tag = ARA
 			}
 		}
 		country_modifier = {
@@ -711,7 +742,7 @@ administrative_system = {
 	tongues_policy = {
 		unique = yes
 		potential = {
-			tag = KNI
+			has_or_had_tag = KNI
 		}
 		country_modifier = {
 			tax_income_efficiency = large_tax_income_efficiency_bonus
@@ -725,7 +756,7 @@ administrative_system = {
 	rajya_policy = {
 		unique = yes
 		potential = {
-			tag = VIJ
+			has_or_had_tag = VIJ
 		}
 		country_modifier = {
 			tax_income_efficiency = large_tax_income_efficiency_bonus
@@ -758,7 +789,7 @@ administrative_system = {
 	zabt_system_policy = {
 		unique = yes
 		potential = {
-			tag = MUG
+			has_or_had_tag = MUG
 		}
 		country_modifier = {
 			cultures_capacity = 2
@@ -773,7 +804,7 @@ administrative_system = {
 	pronoia_system = {
 		unique = yes
 		potential = {
-			tag = BYZ
+			has_or_had_tag = BYZ
 			NOT = { has_unlocked_policy_trigger = { type = reformed_pronoia_system } }
 		}
 		country_modifier = {
@@ -788,13 +819,14 @@ administrative_system = {
 	reformed_pronoia_system = {
 		unique = yes
 		potential = {
-			tag = BYZ
+			has_or_had_tag = BYZ
 			has_unlocked_policy_trigger = { type = reformed_pronoia_system }
 		}
 		country_modifier = {
-			global_estate_max_tax = -0.1
-			global_crown_estate_power = 0.1
-			army_infantry_maintenance_cost_modifier = -0.1
+			nobles_estate_levy_size = -0.1
+			pop_join_rebel_threshold = -0.025
+			tax_income_efficiency = medium_tax_income_efficiency_bonus
+			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
 		}
 		estate_preferences = {
 			crown_estate
@@ -833,7 +865,7 @@ administrative_system = {
 	regulations_of_the_royal_court = {
 		unique = yes
 		potential = {
-			tag = GEO
+			has_or_had_tag = GEO
 		}
 		country_modifier = {
 			monthly_towards_aristocracy = societal_value_monthly_move
@@ -850,7 +882,7 @@ administrative_system = {
 	maj_office_of_the_mahapatih = {
 		unique = yes
 		potential = {
-			tag = MAJ
+			has_or_had_tag = MAJ
 		}
 		country_modifier = {
 			antagonism_monthly_change_modifier = 0.02
@@ -981,24 +1013,34 @@ intelligence_agency = {
 			}
 		}
 		on_activate = {
-			add_opinion = {
-				target = c:CHI
-				modifier = opinion_curbed_chinese_influence
-			}
-			reverse_add_opinion = {
-				target = c:CHI
-				modifier = opinion_curbed_chinese_influence
+			if = {
+				limit = {
+					country_exists = c:CHI
+				}
+				add_opinion = {
+					target = c:CHI
+					modifier = opinion_curbed_chinese_influence
+				}
+				reverse_add_opinion = {
+					target = c:CHI
+					modifier = opinion_curbed_chinese_influence
+				}			
 			}
 		}
 		on_deactivate = {
-			remove_opinion = {
-				target = c:CHI
-				modifier = opinion_curbed_chinese_influence
-			}
-			c:CHI = {
+			if = {
+				limit = {
+					country_exists = c:CHI
+				}
 				remove_opinion = {
-					target = root
+					target = c:CHI
 					modifier = opinion_curbed_chinese_influence
+				}
+				c:CHI = {
+					remove_opinion = {
+						target = root
+						modifier = opinion_curbed_chinese_influence
+					}
 				}
 			}
 		}
@@ -1027,7 +1069,7 @@ bureaucracy_law = {
 	}
 	decentralized_bureaucracy_policy = {
 		country_modifier = {
-			global_monthly_prosperity = 0.0025
+			global_monthly_prosperity = 0.001
 			monthly_towards_decentralization = societal_value_monthly_move
 		}
 		estate_preferences = {
@@ -1153,8 +1195,8 @@ cabinet_laws = {
 		unique = yes
 		potential = {
 			OR = {
-				tag = ENG
-				tag = GBR
+				has_or_had_tag = ENG
+				has_or_had_tag = GBR
 			}
 			has_variable = yorkist_tradition
 		}
@@ -1331,7 +1373,7 @@ cultural_traditions_law = {
 	maritime_society = {
 		potential = {
 			OR = {
-				tag = HSA
+				has_or_had_tag = HSA
 				AND = {
 					country_type = building
 					is_merchant_republic = yes
@@ -1351,8 +1393,8 @@ cultural_traditions_law = {
 		unique = yes
 		potential = {
 			OR = {
-				tag = PRU
-				tag = BRA
+				has_or_had_tag = PRU
+				has_or_had_tag = BRA
 			}
 			has_unlocked_policy_trigger = { type = pietism_society }
 		}
@@ -1851,7 +1893,7 @@ mining_law = {
 	novo_brdo_mining_law = {
 		unique = yes
 		potential = {
-			tag = SER
+			has_or_had_tag = SER
 			custom_tooltip = {
 				text = has_unlocked_novo_brdo_tt
 				has_variable = novo_brdo_variable

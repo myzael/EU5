@@ -19,6 +19,10 @@
 	ZOOM_COOLDOWN_TIME = 0.2 # The zoom links consecutive scrollwheel inputs. This value controls the maximum time to determine if two inputs are consecutive.
 
     MAX_PAN_TO_ZOOM_STEP = 5							# The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
+	MIN_PAN_TO_ZOOM_CONTINENT_STEP = 18
+	MIN_PAN_TO_ZOOM_REGION_STEP = 9
+	MIN_PAN_TO_ZOOM_AREA_STEP = 7
+	MIN_PAN_TO_ZOOM_PROVINCE_STEP = 6
     START_LOOK_AT = { 8988 0 6163 }					# Initial look at (X/Y)
 	START_ZOOM_STEP = 18								# Initial zoom step 
 	START_PITCH = 78								# Initial pitch

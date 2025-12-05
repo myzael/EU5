@@ -930,7 +930,7 @@ worship_water_god = {
 worship_creator_god = {
 	icon = religious_aspect_folk_green
 	modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.0005
 	}
 	religion = tengri
 	religion = lugbara_religion
@@ -1394,7 +1394,7 @@ worship_fire_god = {
 worship_fertility_god = {
 	icon = religious_aspect_folk_pink
 	modifier = {
-		global_population_growth = 0.0004
+		global_population_growth = 0.0001
 	}
 	religion = tengri
 	religion = lugbara_religion

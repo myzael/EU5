@@ -160,7 +160,6 @@ page = {
 			"pause_menu"
 			"window_tab"
 			"map"
-			"map_modes"
 		}
 	}
 }
@@ -185,6 +184,13 @@ page = {
 		name = "SETTINGS_CATEGORY_CONFIRM"
 		order = {
 			"confirm"
+		}
+	}
+	category = {
+		category = "Interface" # Must match category name in code
+		name = "SETTINGS_CATEGORY_PLAYSETS"
+		order = {
+			"warning_wrong_playset"
 		}
 	}
 	category = {

@@ -99,6 +99,9 @@ european_nordic_blonde_ethnicity = {
 	}
 
 	gene_eyebrows_inner = {
+		3 =  { name = thinnest_short 		range = { 0.3 0.6 } }
+		3 =  { name = thinnest_medium 		range = { 0.3 0.6 } }
+		0 =  { name = thinnest_long 		range = { 0.3 0.6 } }
 		10 =  { name = thinner_short 		range = { 0.3 0.6 } }
 		20 =  { name = thinner_medium 		range = { 0.3 0.6 } }
 		20 =  { name = thinner_long 		range = { 0.3 0.6 } }

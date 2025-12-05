@@ -5,7 +5,7 @@
 	potential = {
 	}
 
-	ai_tick = month
+	ai_tick = monthly
 	ai_tick_frequency = 3
 
 	allow = {

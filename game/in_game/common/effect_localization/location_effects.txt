@@ -103,11 +103,25 @@ destroy_building = {
 	third_past = PAST_THIRD_DESTROY_BUILDING_EFFECT
 }
 
+destroy_building_forcefully = {
+	global = DESTROY_BUILDING_EFFECT
+	third = THIRD_DESTROY_BUILDING_EFFECT
+	global_past = PAST_DESTROY_BUILDING_EFFECT
+	third_past = PAST_THIRD_DESTROY_BUILDING_EFFECT
+}
+
 destroy_all_buildings_of_type = {
 	global = DESTROY_ALL_BUILDINGS_OF_TYPE_EFFECT
 	third = THIRD_DESTROY_ALL_BUILDINGS_OF_TYPE_EFFECT
 	global_past = PAST_DESTROY_ALL_BUILDINGS_OF_TYPE_EFFECT
 	third_past = PAST_THIRD_DESTROY_ALL_BUILDINGS_OF_TYPE_EFFECT
+}
+
+change_location_owner_forcefully= {
+	global = CHANGE_LOCATION_OWNER_EFFECT
+	global_past = PAST_CHANGE_LOCATION_OWNER_EFFECT
+	third = THIRD_LOCATION_OWNER_EFFECT
+	third_past = PAST_THIRD_LOCATION_OWNER_EFFECT
 }
 
 change_location_owner = {

@@ -894,7 +894,7 @@ rural_peasant_produce_employment = 		1.0
 rural_peasant_enhance_employment = 		0.25
 tiny_rural_peasant_produce_employment = 0.25
 tiny_rural_peasant_enhance_employment = 0.1
-elephant_hunting_grounds_employment = 	5.0
+elephant_hunting_grounds_employment = 	2.5
 small_peasant_employment = 				0.25
 
 #tribesmen

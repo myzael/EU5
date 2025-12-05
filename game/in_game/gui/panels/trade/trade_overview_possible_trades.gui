@@ -455,11 +455,13 @@ types PossibleTrades {
 				hbox = {
 					margin = { 6 0 }	
 					text_single = {
+						datacontext = "[Trade]"
 						size = {45 20}
 						autoresize = no
 						using = Font_Size_Small
 						visible = "[Trade.HasTradeHappened]"
-						raw_text = "[Trade.GetQuantityOfGoodsActuallyMoved|2<]@good!"
+						#raw_text = "[Trade.GetQuantityOfGoodsActuallyMoved|2<]@good!"
+						text = "TRADE_INEFFICIENT_CARD_TEXT"
 						align = center
 					}
 				}
@@ -1319,7 +1321,7 @@ types TradeOverview {
 										text_single = {
 											text = "[CategoryTradesItem.GetName]"
 											align = nobaseline
-											maximumsize = {300 -1}
+											maximumsize = {375 -1}
 										}
 
 										expand = {}

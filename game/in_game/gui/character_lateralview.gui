@@ -805,6 +805,7 @@ template partner_character_view {
 				scrollbarpolicy_horizontal = always_off
 
 				autoresizescrollarea = yes
+				minimumsize = { 160 0 }
 
 				scrollbar_vertical = {
 					using = Scrollbar_Vertical
@@ -1040,7 +1041,7 @@ template children_character_view {
 				scrollbarpolicy_horizontal = always_off
 
 				autoresizescrollarea = yes
-
+				minimumsize = { 365 0 }
 				scrollbar_vertical = {
 					using = Scrollbar_Vertical
 				}
@@ -1052,8 +1053,28 @@ template children_character_view {
 
 						datamodel = "[CharacterLateralview.GetCharacter.GetChildren]"
 						item = {
-							portrait_standard_head_button = {
-								size = { 50 50 }
+							widget = {
+								size = { 44 55 }
+								character_frame_small = {
+									blockoverride "character_frame_size" {
+										size = { 39 46 }
+										parentanchor = center
+										position = {5 0}
+									}
+									blockoverride "character_frame_estate_visible" {
+										visible = no
+									}
+									blockoverride "portrait_datacontext" {
+										datacontext = "[Character]"
+									}
+									blockoverride "character_portrait_visible" {
+										visible = yes
+									}
+									blockoverride "character_portrait_ani_visible" {
+										visible = no
+									}
+									blockoverride "portrait_position" {position = { 0 0 }}
+								}
 							}
 						}
 					}

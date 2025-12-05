@@ -81,6 +81,6 @@ ori_encourage_salt_trade = {
 ori_expansion_of_infrastructure = {
 	age = age_6_revolutions
 	potential = { has_or_had_tag = ORI }
-	global_monthly_development = 0.002
+	global_monthly_development = 0.001
 	requires = the_gold_standard
 }

@@ -798,7 +798,20 @@ scripted_trigger professional_armies_event_51_trigger = {
 institution_events.51 = {
 	type = country_event
 	title = institution_events.51.title
-	desc = institution_events.51.desc
+	desc = {
+		triggered_desc = {
+			trigger = {
+				exists = scope:professional_armies_country
+			}
+			desc = institution_events.51.desc
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { exists = scope:professional_armies_country }
+			}
+			desc = institution_events.51.desc.fallback
+		}
+	}
 	trigger = {
 		knows_about_institution = institution:professional_armies
 		NOT = { has_embraced_institution = institution:professional_armies }
@@ -851,13 +864,24 @@ institution_events.51 = {
 				add_temporary_demand = { type = demand:demands_of_weapons years = 5 scale_with_pop = 0.01 }
 			}
 		}
+		add_gold = {
+			value = country_tax_base
+			multiply = 3
+		}
 		ai_chance = {
 			factor = 10
 		}
 	}
 	option = {
 		name = institution_events.51.b
+		trigger = {
+			exists = scope:professional_armies_country
+		}
 		add_opinion = { modifier = opinion_rejects_army_support  target = scope:professional_armies_country }
+		add_gold = {
+			value = country_tax_base
+			multiply = 3
+		}
 		ai_chance = {
 			factor = 0
 		}

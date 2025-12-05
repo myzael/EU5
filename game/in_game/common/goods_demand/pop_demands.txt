@@ -791,13 +791,14 @@ pop_demand = {
 				}
 				and = {
 					exists = owner
-					owner.modifier:peasants_allowed_weapons = yes
+					owner.modifier:peasants_allowed_weapons = no
 				}
 			}
 			
-			add = {
-				value = 0.0005
-				desc = "POP_DEMAND_PEASANTS"
+			
+			multiply = {
+				value = 0
+				desc = "POP_DEMAND_PEASANTSNO_WEAPONS"
 			}
 		}
 

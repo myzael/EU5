@@ -213,6 +213,10 @@ contribute_to_organization_treasury = {
 			gold > 0
 		}
 	}
+	cooldown = {
+		type = contribute_to_organization_treasury
+		years = 1
+	}
 	select_trigger = {
 		looking_for_a = international_organization
 		source = actor
@@ -248,9 +252,9 @@ contribute_to_organization_treasury = {
 		if = {
 			limit = { exists = scope:target_value }
 			scope:actor = {
-				add_gold = {
+				donate_gold_to_international_organization = {
+					international_organization = scope:recipient
 					value = scope:target_value
-					multiply = -1
 				}
 			}
 			scope:recipient = {

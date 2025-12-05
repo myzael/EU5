@@ -17,6 +17,7 @@
 			OR = {
 				government_type = government_type:monarchy
 				succession_law = heir_selection:signoria_selection
+				succession_law = heir_selection:matrilineal_non_exclusive
 			}
 		}
 	}
@@ -39,7 +40,7 @@
 			is_alive = yes
 		}
 		enabled = {
-			character_can_marry_trigger = yes
+			is_eligible_for_royal_marriage = yes
 		}
 	}
 
@@ -81,11 +82,14 @@
 			character_can_marry_trigger = yes
 			not = { is_spouse_of = scope:recipient }
 			modifier:blocked_from_character_interactions = no
-		}
-
-		enabled = {
 			character_can_marry_recipient_trigger = yes
 		}
+
+		#enabled = {
+		#	scope:recipient = {
+		#		character_can_marry_recipient_trigger = yes
+		#	}
+		#}
 	}
 	
 	effect = {

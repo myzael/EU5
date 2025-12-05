@@ -133,7 +133,7 @@ a_sowar_cavalry = {
 			current_age = age_5_absolutism
 			current_age = age_6_revolutions
 		}
-		tag = MUG
+		has_or_had_tag = MUG
 	}
 	
 

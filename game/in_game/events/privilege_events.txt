@@ -80,7 +80,7 @@ scripted_effect start_german_migration = {
             #  max year = 1430
             #  x = floor(y*((100/(1430 - 1337))*(max(1430-current_year,0))/100))
             value = {
-                value = $num_pops$ #Pops to migrate
+                value = $num_pops_per_month$ #Pops we are meant to migrate
                 multiply = {
                     value = {
                         value = 100
@@ -98,10 +98,31 @@ scripted_effect start_german_migration = {
                 }
                 floor = yes
             }
-            divide = 1000
-			max = 0.05
+            #Max amount of pops that the migration can move each month as such that the remaining number of pops never drops under 2000
+            max = {
+                value = { #Amount of german peasants that can be safely removed from the origin location
+                    $from_location$ = {
+                        ordered_pop = {
+				            order_by = pop_size
+                            max = 1
+                            limit = {
+                                pop_type = pop_type:peasants
+                                culture = $target_culture$
+                            }
+				            value = {
+                                value = pop_size
+                                multiply = 1000 #Multiply into peasant units
+                                subtract = $safety_threshold_of_peasants$ #Minimum amount of peasants to be kept at the location 
+                                divide = $num_months$ #Number of months the migration lasts
+                                min = 0 #No negative numbers
+                            }
+                        }
+                    }
+                }
+            }
+            divide = 1000 #Transform back to thousands units
         }
-        months = 48
+        months = $num_months$ #4 years
     }
 }
 scripted_trigger enough_migrants_500 = { #Are there more than 0 migrants?
@@ -297,7 +318,9 @@ privilege_events.100 = {
                 from_location = scope:scope_german_location
                 to_province = this.province_definition
                 target_culture = scope:german_migrating_culture
-                num_pops = 500
+                num_pops_per_month = 50
+                num_months = 48
+                safety_threshold_of_peasants = 2000
             }
         }
         scope:german_province.owner = {
@@ -322,7 +345,9 @@ privilege_events.100 = {
                 from_location = scope:scope_german_location
                 to_province = this.province_definition
                 target_culture = scope:german_migrating_culture
-                num_pops = 1000
+                num_pops_per_month = 100
+                num_months = 48
+                safety_threshold_of_peasants = 2000
             }
         }
         scope:german_province.owner = {

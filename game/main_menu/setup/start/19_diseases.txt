@@ -374,7 +374,13 @@ disease_outbreak_manager = {
         type = malaria #this one is environmental so it will create outbreaks wherever we have set a value
         resistance = 1 #native population is resistant to it
         regions = {
-            #Africa
+
+            #Low Malaria Infection Zones
+            egypt_region
+            maghreb_region            
+            southern_africa_region
+            
+            #High Malaria Infection Zones
             kongo_region
             ethiopia_region
             nubia_region
@@ -382,10 +388,6 @@ disease_outbreak_manager = {
             great_lakes_region
             swahili_coast_region
             madagascar_region
-            egypt_region
-            maghreb_region
-            southern_africa_islands_region
-            southern_africa_region
             zimbabwe_region
             guinea_region
             sahel_region

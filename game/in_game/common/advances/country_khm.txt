@@ -105,7 +105,7 @@ khm_protection_from_raids = {
 	potential = {
 		has_or_had_tag = KHM
 	}
-	global_garrison_growth = 0.1
+	global_garrison_growth = 0.01
 
 	requires = corps_organisation
 }

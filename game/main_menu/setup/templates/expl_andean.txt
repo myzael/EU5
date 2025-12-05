@@ -7,6 +7,7 @@
 	acamama_area
 	chala_area
 	qullaw_area
+	yunga_area
 }
 
 discovered_provinces = {

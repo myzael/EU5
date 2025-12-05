@@ -39,6 +39,8 @@ basic_dialog = {
 
 		button_regular = {
 			size = {120 30}
+			autoresize = no
+			layoutpolicy_horizontal = expanding
 			text = "SAVE_SETTINGS"
 			onclick = "[CloseSettingsDialogWindow.OnSave]"
 			input_action = "confirm"
@@ -48,6 +50,8 @@ basic_dialog = {
 
 		button_regular = {
 			size = {120 30}
+			autoresize = no
+			layoutpolicy_horizontal = expanding
 			text = "DISCARD"
 			onclick = "[CloseSettingsDialogWindow.OnDiscard]"
 			use_global_input_instance = yes
@@ -56,6 +60,8 @@ basic_dialog = {
 
 		button_regular = {
 			size = {120 30}
+			autoresize = no
+			layoutpolicy_horizontal = expanding
 			text = "CANCEL_BUTTON"
 			onclick = "[CloseSettingsDialogWindow.OnCancel]"
 			input_action = "close_window"

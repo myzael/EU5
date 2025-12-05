@@ -321,9 +321,13 @@ template SubUnitType_tooltip {
 				textcontext = "[SubUnitType.GetImpacts]"
 			}
 
+			TooltipStringPairList = {				
+				textcontext ="SUBUNIT_RAW_GOLD_COST_MAINTENANCE"
+			}			
+			
 			TooltipListBase  = {
 				blockoverride "block_title" {
-					text = "MAINTENANCE_UNITTYPE"
+					text = "[SelectLocalization(SubUnitType.GetCategory.IsArmy, 'MAINTENANCE_UNITTYPE', 'MAINTENANCE_UNITTYPE_SHIP')]"
 				}
 
 				hbox = {
@@ -615,7 +619,7 @@ template SubUnit_tooltip {
 							text = "SUBUNIT_HOME"
 						}
 						text_single = {
-							raw_text = "[SubUnit.GetHome.GetName]"
+							raw_text = "[SubUnit.GetHome.GetName] [location_icon]"
 						}
 					}
 				}
@@ -645,7 +649,7 @@ template SubUnit_tooltip {
 
 			TooltipListBase  = {
 				blockoverride "block_title" {
-					text = "MAINTENANCE_UNITTYPE"
+					text = "[SelectLocalization(SubUnitType.GetCategory.IsArmy, 'MAINTENANCE_UNITTYPE', 'MAINTENANCE_UNITTYPE_SHIP')]"
 				}
 
 				hbox = {
@@ -2282,6 +2286,11 @@ template Unit_tooltip {
 			# 	}
 			# }
 
+			TooltipScrolledDebugTextBlock = {
+				blockoverride "block_scrollarea" { maximumsize = { -1 250 }}
+				textcontext = "[Unit.GetDebugTooltip]"
+			}
+
 			TooltipStringPairList = {
 				visible = "[And(Unit.IsAutomated, Unit.GetCountry.IsPlayer)]"
 				textcontext = "UNIT_TOOLTIP_OBJECTIVE_TEXT"
@@ -3114,6 +3123,10 @@ template SubunitInCombat_tooltip {
 			
 			
 			TooltipStringPairList = {
+				tooltipmeta = {
+					texture = "[GetConceptTexture('combat')]"
+					game_concept = "[combat|e]"
+				}
 				textcontext = "[SubUnit.GetCombatDetails]"
 			}
 
@@ -3291,12 +3304,18 @@ template UnitOverviewLeviesTooltip {
 				visible = "[Not(StringIsEmpty(UnitOverview.RaiseAllLeviesAmountInfo('(bool)yes')))]"
 				textcontext = "[UnitOverview.RaiseAllLeviesAmountInfo('(bool)yes')]"
 			}
+			
+						
 			TooltipConditionList = {
 				blockoverride "block_title" {
 					text = "game_concept_effects"
 				}
 				visible = "[Not(StringIsEmpty(UnitOverview.RaiseAllLeviesEffectsInfo('(bool)yes')))]"
 				datacontext = "[StringToConditionListOnlyPassedAndNeutral(UnitOverview.RaiseAllLeviesEffectsInfo('(bool)yes'))]"
+			}
+			
+			TooltipStringPairList = {
+				textcontext = "[Player.GetLevyRecoveryInfo]"
 			}
 			TooltipRequirementsList = {
 				blockoverride "block_title" {
@@ -5234,7 +5253,7 @@ template unit_recruit_map_tt {
 			
 			TooltipListBase  = {
 				blockoverride "block_title" {
-					text = "MAINTENANCE_UNITTYPE"
+					text = "[SelectLocalization(SubUnitType.GetCategory.IsArmy, 'MAINTENANCE_UNITTYPE', 'MAINTENANCE_UNITTYPE_SHIP')]"
 				}
 
 				hbox = {
@@ -5433,7 +5452,7 @@ template unit_recruit_ranking_tt {
 			datacontext = "[RecruitInLocationLateralView.GetUnitType]"
 			TooltipListBase  = {
 				blockoverride "block_title" {
-					text = "MAINTENANCE_UNITTYPE"
+					text = "[SelectLocalization(SubUnitType.GetCategory.IsArmy, 'MAINTENANCE_UNITTYPE', 'MAINTENANCE_UNITTYPE_SHIP')]"
 				}
 
 				hbox = {

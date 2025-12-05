@@ -67,6 +67,11 @@ antagonism_subjugated_nation = {
 	yearly_decay = 2
 }
 
+antagonism_forced_ruler_change = {
+	value = 0.5 #multiplied by total worth of locations etc, so for subjugating it's half the value
+	yearly_decay = 2
+}
+
 antagonism_forced_migrate = {
 	value = 0.5
 	yearly_decay = 2
@@ -373,7 +378,7 @@ antagonism_improve_relation_reversed = {
 }
 
 antagonism_chk_raiding_neighbors_for_food = {
-	value = -10
+	value = -5
 	yearly_decay = 0.5
 }
 

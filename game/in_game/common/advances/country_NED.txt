@@ -265,7 +265,7 @@ gel_expand_kwarteers = {
 	potential = {
 		has_or_had_tag = GEL
 	}
-	global_distance_from_capital_cost_modifier = -0.10
+	global_distance_from_capital_cost_modifier = -0.05
 
 	requires = crown_power_advance_discovery
 }

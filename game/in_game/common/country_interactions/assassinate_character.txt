@@ -58,13 +58,35 @@
 		}
         enabled = {
 			scope:actor = {
-				spy_network = { 
-					target = scope:recipient 
-					value >= {
-						value = ROOT.assassinate_character_cost_multiplier
-						min = 0.25
-						multiply = 300
-						max = 100
+				custom_tooltip = {
+					text = assassinate_character_at
+					trigger_if = {
+						limit = {
+							scope:recipient = {
+								is_subject = yes
+								NOT = { is_subject_of = scope:actor }
+							}
+						}
+						spy_network = { 
+							target = scope:recipient.overlord
+							value >= {
+								value = ROOT.assassinate_character_cost_multiplier
+								min = 0.25
+								multiply = 300
+								max = 100
+							}
+						}
+					}
+					trigger_else = {
+						spy_network = { 
+							target = scope:recipient 
+							value >= {
+								value = ROOT.assassinate_character_cost_multiplier
+								min = 0.25
+								multiply = 300
+								max = 100
+							}
+						}
 					}
 				}
 			}
@@ -76,12 +98,30 @@
 		if = {
 			limit = { exists = scope:target }
 			scope:actor = {
-				add_spy_network = {
-					target = scope:recipient
-					value = {
-						value = -300
-						multiply = scope:target.assassinate_character_cost_multiplier
-						min = -100
+				if = {
+					limit = {
+						scope:recipient = {
+							is_subject = yes
+							NOT = { is_subject_of = scope:actor }
+						}
+					}
+					add_spy_network = {
+						target = scope:recipient.overlord
+						value = {
+							value = -300
+							multiply = scope:target.assassinate_character_cost_multiplier
+							min = -100
+						}
+					}
+				}
+				else = {
+					add_spy_network = {
+						target = scope:recipient
+						value = {
+							value = -300
+							multiply = scope:target.assassinate_character_cost_multiplier
+							min = -100
+						}
 					}
 				}
 				if = {

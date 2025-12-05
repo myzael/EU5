@@ -414,6 +414,38 @@ template io_join_button_tooltip {
 	}
 }
 
+template io_join_wihtout_diplomacy_button_tooltip {
+	ContextualTooltipType = {
+		blockoverride "title_icon" {
+			icon = {
+				using = tooltip_title_icon_size
+				texture = "[InternationalOrganizationsView.GetInternationalOrganization.GetIcon]"
+			}
+		}
+		blockoverride "title_text" {
+			text = "JOIN_IO_MEMBERSHIP"
+		}
+		blockoverride "concept_link" {
+			text = [international_organization|E]
+		}
+		blockoverride "tooltip_content" {
+			TooltipFlavorTextBlock = {
+				blockoverride "text" {
+					visible = "[Not(StringIsEmpty(UIAction.GetDescription))]"
+					text = "[UIAction.GetDescription]"
+				}
+			}
+			TooltipRequirementsList = {
+				visible = "[And(Not(UIAction.IsEnabled), Not(StringIsEmpty(UIAction.GetConditions)))]"
+				blockoverride "block_title" {
+					text = "IO_INVITE_WHY_CANNOT_JOIN_REASONS_T"
+				}
+				textcontext = "[UIAction.GetConditions]"
+			}
+		}
+	}
+}
+
 template io_invite_button_tooltip {
 	ContextualTooltipType = {
 		blockoverride "title_icon" {

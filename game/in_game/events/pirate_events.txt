@@ -100,15 +100,7 @@ pirate_events.1 = {
 		add_reform = government_reform:pirate_brethren_reform
 		custom_tooltip = {
 			text = government_implements_several_policies_relevant_to_pirates_tt
-			if = {
-				limit = {
-					any_current_reforms = { is_major_reform = yes }
-				}
-				random_current_reforms = {
-					limit = { is_major_reform = yes }
-					root = { remove_reform = prev }
-				}
-			}
+			remove_current_major_government_reform = yes
 			unlock_policy_effect = { type = state_piracy_policy }
 			add_policy = policy:state_piracy_policy
 			add_policy = policy:council_of_captains
@@ -220,15 +212,7 @@ pirate_events.2 = {
 		hidden_Effect = {
 			unlock_government_reform_effect = { type = pirate_brethren_reform }
 		}
-		if = {
-			limit = {
-				any_current_reforms = { is_major_reform = yes }
-			}
-			random_current_reforms = {
-				limit = { is_major_reform = yes }
-				root = { remove_reform = prev }
-			}
-		}
+		remove_current_major_government_reform = yes
 
 		if = {
 			limit = { navy_size_percentage < 1 }

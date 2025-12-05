@@ -240,13 +240,13 @@ free_cities.5 = {
 			add_manpower = { value = scope:hre_leader.monthly_manpower multiply = -6 }
 			add_gold = {
 				value = scope:hre_leader.monthly_income_trade_and_tax
-				multiply = -1.20
+				multiply = 1.20
 			}
 		}
 		else = {
 			add_gold = {
 				value = scope:hre_leader.monthly_income_trade_and_tax
-				multiply = -3.5
+				multiply = 3.5
 			}
 		}
 		show_as_tooltip = {
@@ -669,6 +669,7 @@ free_cities.13 = {
 			has_country_modifier = fc_city_league
 		}
 		any_known_country = {
+			this != root
             international_organization:hre = {
                 country_has_special_status = {
                     type = special_status:free_city
@@ -711,6 +712,7 @@ free_cities.13 = {
 		hidden_effect = {
 			random_country = {
 				limit = {
+					this != root
                     international_organization:hre = {
                         country_has_special_status = {
                             type = special_status:free_city

@@ -22,15 +22,7 @@
 				local_control > 0
 				count = all
 			}
-			scope:actor = {
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action = cabinet_action:expel_people
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = expel_people interaction_target = target } }
 		}
 		map_color = {
 			lerp = {

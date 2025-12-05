@@ -222,7 +222,7 @@ flavor_geo.3 = { #Envoy from [GetCountry('GEO').GetNameWithNoTooltip]
 		scope:target_location = {
 			add_merchant_power = {
 				country = ROOT
-				power = 50
+				power = merchant_power_severe_bonus
 				months = 24
 				key = trade_in_caucasus_key
 			}

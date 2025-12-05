@@ -52,9 +52,9 @@
 		}	
 	}
 	has_overlords_ruler = no
-	annexation_speed = 2
+	annexation_speed = 1
 	annexation_min_years_before = 15
-	annexation_min_opinion = 200
+	annexation_min_opinion = 190
 	annexation_stall_opinion = 175
 	subject_can_cancel = no
 	overlord_can_cancel = no
@@ -102,11 +102,18 @@
 	subject_creation_enabled = {
 		government_type = government_type:monarchy
 		has_reform = government_reform:french_feudal_nobility
+
+		scope:target_province = { region = region:france_region }
 	}
 	
 	release_country_enabled = {
 		government_type = government_type:monarchy
 		has_reform = government_reform:french_feudal_nobility
+
+		scope:target = {
+			capital = { region = region:france_region }
+			culture = { has_culture_group = culture_group:french_group }
+		}
 	}
 
 	visible_through_diplomacy = {

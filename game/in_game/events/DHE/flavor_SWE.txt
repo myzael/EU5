@@ -2239,6 +2239,7 @@ flavor_swe.47 = {
 					this != root.ruler
 					is_female = no
 					is_adult = yes
+					is_alive = yes
 				}
 
 			}
@@ -2261,6 +2262,7 @@ flavor_swe.47 = {
 						this != root.ruler
 						is_female = no
 						is_adult = yes
+						is_alive = yes
 					}
 					save_scope_as = pretender
 				}
@@ -2717,7 +2719,7 @@ flavor_swe.55 = {
 		capital.market = {
 			add_merchant_power = {
 				country = c:HSA
-				power = -10
+				power = merchant_power_weak_penalty
 				months = 240
 				key = swe_denies_hsa
 			}
@@ -2732,7 +2734,7 @@ flavor_swe.55 = {
 		capital.market = {
 			add_merchant_power = {
 				country = c:HSA
-				power = 100
+				power = merchant_power_ultimate_bonus
 				months = 240
 				key = swe_allows_hsa
 			}

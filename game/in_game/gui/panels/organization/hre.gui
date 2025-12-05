@@ -313,6 +313,24 @@ organization_panel = {
 			}
 		}
 
+		#join io
+		action_button_diamond = {
+			size = {470 30}
+			title = "INT_ORG_MEMBERSHIP_TITLE"
+			text = "JOIN_IO_MEMBERSHIP"
+			actor = "[InternationalOrganizationsView.GetPlayer]"
+			left_action = {
+				action_name = "join_international_organization"
+				parameter = {
+					parameter_name = "recipient"
+					parameter_value = "[InternationalOrganizationsView.GetInternationalOrganization]"
+				}
+			}
+			tooltipwidget = {
+				using = io_join_wihtout_diplomacy_button_tooltip
+			}
+		}
+
 		#leave io
 		action_button_diamond = {
 			size = {470 30}

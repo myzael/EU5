@@ -78,6 +78,16 @@ flavor_ayu.1 = { #Formation of Ayutthaya
 		location:bight_ayodhya = { rename_location = bight_ayutthaya }
 		if = {
 			limit = {
+				ruler = character:adh_ramathibodi
+			}
+			ruler = {
+				found_dynasty = uthong_dynasty
+				set_first_name = name_ramathibodi
+			}
+			set_variable = uthong_ruler
+		}
+		if = {
+			limit = {
 				tag = LAV
 			}
 			annex_country = { country = c:ADH }
@@ -105,13 +115,11 @@ flavor_ayu.1 = { #Formation of Ayutthaya
 			set_capital = scope:target_location
 		}
 		form_country = formable_country:AYU_f
-		if = {
-			limit = {
-				ruler = character:adh_ramathibodi
-			}
-			ruler = {
-				found_dynasty = uthong_dynasty
-				set_first_name = name_ramathibodi
+		if = { #To avoid him not being ruler afterwards due to shenanigans with unions dissolving
+			limit = { has_variable = uthong_ruler }
+			hidden_effect = {
+				remove_variable = uthong_ruler
+				set_new_ruler = character:adh_ramathibodi
 			}
 		}
 	}

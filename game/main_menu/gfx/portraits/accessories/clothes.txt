@@ -221,11 +221,6 @@ male_clothes_jewish_clergy_ephod = {
 #                         			#
 #####################################
 
-female_no_clothes = {
-	set_tags = "no_clothes"
-    entity = { required_tags = ""             }
-}
-
 #		NORTH GERMAN	#
 female_noble_dress = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_noble_dress_entity  }
@@ -310,7 +305,6 @@ female_clothes_iroquois_noble_overcoat = {
 
 #		DECCAN		#
 female_clothes_deccan_low_pearls = {
-	set_tags = "no_clothes"
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_deccan_low_pearls_entity  }
 }
 

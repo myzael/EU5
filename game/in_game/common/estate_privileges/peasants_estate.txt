@@ -102,7 +102,7 @@ peasants_yeomanry = {
 
 	country_modifier = {
 		nobles_estate_target_satisfaction = medium_privilege_target_satisfaction_penalty
-		peasants_estate_levy_size = 0.05
+		peasants_estate_levy_size = 0.20
 		global_peasants_estate_power = 0.2
 		monthly_towards_free_subjects = societal_value_monthly_move
 		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
@@ -124,6 +124,7 @@ peasants_allowed_weapons_privilege = {
 		peasants_estate_levy_size = 0.2
 		peasants_allowed_weapons = yes
 		levy_combat_efficiency_modifier = 0.25
+		levy_recovery_modifier = 0.1
 		global_peasants_estate_power = 0.5
 		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
 	}
@@ -254,7 +255,7 @@ peasants_no_poll_tax_privilege = {
 	estate = peasants_estate
 
 	potential = {
-		tag = ENG
+		has_or_had_tag = ENG
 	}
 	allow = {
 	}
@@ -286,6 +287,8 @@ ara_sindicat_ara_remenca = {
 	country_modifier = {
 		peasants_estate_target_satisfaction = medium_privilege_target_satisfaction
 		global_peasants_estate_power = 0.2
+		monthly_towards_free_subjects = societal_value_monthly_move
+		global_monthly_food_modifier = 0.1
 	}
 }
 
@@ -466,7 +469,7 @@ gradozadanje_and_gradobljudenlje_rights = {
 	estate = peasants_estate
 		
 	potential = {
-		tag = SER
+		has_or_had_tag = SER
 	}
 	
 	country_modifier = {
@@ -533,8 +536,8 @@ ayuntamientos = {
 
 	potential = {
 		OR = {
-			tag = SPA
-			tag = CAS
+			has_or_had_tag = SPA
+			has_or_had_tag = CAS
 		}
 	}
 
@@ -549,7 +552,7 @@ cas_caballeros_villanos = {
 	estate = peasants_estate
 	
 	potential = {
-		tag = CAS
+		has_or_had_tag = CAS
 	}
 	allow = {
 	}
@@ -590,7 +593,7 @@ land_owning_farmers = {
 	estate = peasants_estate
 	
 	potential = { 
-		tag = SWE
+		has_or_had_tag = SWE
 	}
 	allow = {
 	}	

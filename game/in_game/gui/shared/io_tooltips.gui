@@ -583,7 +583,7 @@ template ParliamentIssueWithContext_tooltip {
 		blockoverride "tooltip_content" {
 			TooltipTextBlock = {
 				blockoverride "text" {
-					text = "[ParliamentIssueWithContextWrap.GetParliamentIssue.GetTooltip]"
+					text = "[ParliamentIssueWithContextWrap.GetTooltip]"
 				}
 			}
 			TooltipFlavorTextBlock = {

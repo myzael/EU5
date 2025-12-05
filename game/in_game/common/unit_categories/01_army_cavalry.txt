@@ -14,7 +14,7 @@
 	food_consumption_per_strength = 2
 
 
-	damage_taken = 0.5		#cavalry vs infantry in size
+	damage_taken = 0.75		#cavalry vs infantry in size
 	
 	frontage = 1
 	initiative = 2

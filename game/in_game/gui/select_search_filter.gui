@@ -280,6 +280,8 @@ template select_search_filter_content {
 					}
 
 					vbox = {
+						minimumsize = { 360 -1 }
+						maximumsize = { 360 -1 }
 						layoutpolicy_horizontal = expanding
 						visible = "[And(SearchFilterCategory.IsExpanded, SearchFilterCategory.HasGroups)]"
 						datamodel = "[SearchFilterCategory.GetGroups]"
@@ -322,13 +324,12 @@ template select_search_filter_content {
 
 								hbox = {
 									visible = "[SearchFilterGroup.IsExpanded]"
-									margin = { 25 0 }
+									margin = { 15 0 }
 									layoutpolicy_horizontal = expanding
 									ignoreinvisible = yes
 
 									vbox = {
 										margin = { 15 10 }
-										margin_left = 8
 										layoutpolicy_horizontal = expanding
 										spacing = 6
 

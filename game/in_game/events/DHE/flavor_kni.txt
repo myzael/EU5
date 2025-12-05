@@ -977,7 +977,7 @@ flavor_kni.100 = {
 	trigger = {
 		owns = location:malta
 		religion = religion:catholic
-		NOT = { tag = KNI }
+		NOT = { has_or_had_tag = KNI }
 		NOT = { country_exists = c:KNI }
 		international_organization:hre = {
 			international_organization_has_leader = yes

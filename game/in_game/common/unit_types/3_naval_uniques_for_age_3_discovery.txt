@@ -34,7 +34,7 @@ n_square_rigged_caravel = {
 n_baochuan = {
 	category = navy_heavy_ship
 	copy_from = n_age_3_discovery_heavy_ship
-	buildable = no
+	buildable = yes
 
 	movement_speed = 6
 	maritime_presence = ship_lower_medium_maritime

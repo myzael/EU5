@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"idle"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_idle_editor_timeline"
 		}
 		timeline_layer={
@@ -12,7 +12,7 @@ behavioral_states={
 		}
 	}
  	"move2"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move2_editor_timeline"
 		}
 		timeline_layer={
@@ -20,7 +20,7 @@ behavioral_states={
 		}
 	}
  	"move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"attack_r"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_attack_r_editor_timeline"
 		}
 		timeline_layer={
@@ -39,7 +39,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 5"
+		name="Lane 1"
 		behavioral_state="idle"
 		transition_interval=0.000000
 	}
@@ -140,132 +140,168 @@ events={
 		hierarchy_place="waves_vfx"
 		type=stop
 	}
- 	audio_event={
-		name="snd_cannon_fire"
-		trigger_time_absolute=1.069819
-		stop_on_state_change=yes
-		audio_event_name="navy_cannon_fire"
-	}
  	particle_action={
-		name="cannon1shot"
-		trigger_time_absolute=1.124091
-		hierarchy_place="cannon_door1"
+		name="cannon_shot12"
+		trigger_time_absolute=3.149184
+		hierarchy_place="cannon_door12"
 		type=start
-	}
- 	particle_action={
-		name="cannon2shot"
-		trigger_time_absolute=1.164091
-		hierarchy_place="cannon_door2"
-		type=start
-	}
- 	particle_action={
-		name="cannon4shot"
-		trigger_time_absolute=1.223910
-		hierarchy_place="cannon_door4"
-		type=start
-	}
- 	particle_action={
-		name="cannon3shot"
-		trigger_time_absolute=1.249203
-		hierarchy_place="cannon_door3"
-		type=start
-	}
- 	particle_action={
-		name="cannon5shot"
-		trigger_time_absolute=1.309023
-		hierarchy_place="cannon_door5"
-		type=start
-	}
- 	particle_action={
-		name="cannon6shot"
-		trigger_time_absolute=1.389205
-		hierarchy_place="cannon_door6"
-		type=start
-	}
- 	particle_action={
-		name="cannon_shot7"
-		trigger_time_absolute=1.449152
-		hierarchy_place="cannon_door7"
-		type=start
-	}
- 	particle_action={
-		name="cannon_shot8"
-		trigger_time_absolute=1.536922
-		hierarchy_place="cannon_door8"
-		type=start
-	}
- 	particle_action={
-		name="cannon_shot9"
-		trigger_time_absolute=1.602217
-		hierarchy_place="cannon_door9"
-		type=start
-	}
- 	particle_action={
-		name="cannon_shot10"
-		trigger_time_absolute=1.647420
-		hierarchy_place="cannon_door10"
-		type=stop
 	}
  	particle_action={
 		name="cannon_shot11"
-		trigger_time_absolute=1.702669
+		trigger_time_absolute=3.053754
 		hierarchy_place="cannon_door11"
 		type=start
 	}
  	particle_action={
-		name="cannon_shot12"
-		trigger_time_absolute=1.747873
-		hierarchy_place="cannon_door12"
+		name="cannon_shot10"
+		trigger_time_absolute=2.953302
+		hierarchy_place="cannon_door10"
+		type=stop
+	}
+ 	particle_action={
+		name="cannon_shot9"
+		trigger_time_absolute=2.893031
+		hierarchy_place="cannon_door9"
 		type=start
+	}
+ 	particle_action={
+		name="cannon_shot8"
+		trigger_time_absolute=2.807645
+		hierarchy_place="cannon_door8"
+		type=start
+	}
+ 	particle_action={
+		name="cannon_shot7"
+		trigger_time_absolute=2.724898
+		hierarchy_place="cannon_door7"
+		type=start
+	}
+ 	particle_action={
+		name="cannon6shot"
+		trigger_time_absolute=2.664951
+		hierarchy_place="cannon_door6"
+		type=start
+	}
+ 	particle_action={
+		name="cannon5shot"
+		trigger_time_absolute=2.599837
+		hierarchy_place="cannon_door5"
+		type=start
+	}
+ 	particle_action={
+		name="cannon3shot"
+		trigger_time_absolute=2.519926
+		hierarchy_place="cannon_door3"
+		type=start
+	}
+ 	particle_action={
+		name="cannon4shot"
+		trigger_time_absolute=2.444407
+		hierarchy_place="cannon_door4"
+		type=start
+	}
+ 	particle_action={
+		name="cannon2shot"
+		trigger_time_absolute=2.349430
+		hierarchy_place="cannon_door2"
+		type=start
+	}
+ 	particle_action={
+		name="cannon1shot"
+		trigger_time_absolute=2.279294
+		hierarchy_place="cannon_door1"
+		type=start
+	}
+ 	audio_event={
+		name="snd_cannon_fire"
+		trigger_time_absolute=2.199909
+		stop_on_state_change=yes
+		audio_event_name="navy_cannon_fire"
 	}
  }
 
 timelines={
 	"L_relative_idle_editor_timeline"={
+		on_enter={
+			"snd_AnimState_Idle"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
+			"foam_stop"
 			"Connection 13"
 			"Connection 17"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="idle_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_move2_editor_timeline"={
+		on_enter={
+			"snd_AnimState_move1"
+		}
 		boundary_behavior=loop
 		duration=19.633389
 		events={
+			"moving_waves"
 			"Connection 21"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_move_editor_timeline"={
-		boundary_behavior=loop
+		on_enter={
+			"snd_AnimState_move2"
+		}
+		boundary_behavior=clamp
 		duration=4.733565
 		events={
+			"snd_move_sails"
 			"Connection 19"
 			"Connection 25"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="unfold_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_attack_r_editor_timeline"={
+		on_enter={
+			"snd_AnimState_attack"
+		}
 		boundary_behavior=loop
 		duration=7.433481
 		events={
+			"cannon_shot12"
+			"cannon_shot11"
+			"cannon_shot10"
+			"cannon_shot9"
+			"cannon_shot8"
+			"cannon_shot7"
+			"cannon6shot"
+			"cannon5shot"
+			"cannon3shot"
+			"cannon4shot"
+			"cannon2shot"
+			"cannon1shot"
+			"snd_cannon_fire"
 			"Connection 15"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="attack_r_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"idle_time"={
 		on_enter={
@@ -319,32 +355,31 @@ timelines={
 		boundary_behavior=loop
 		duration=7.433481
 		events={
-			"snd_cannon_fire"
-			"cannon1shot"
-			"cannon2shot"
-			"cannon4shot"
-			"cannon3shot"
-			"cannon5shot"
-			"cannon6shot"
-			"cannon_shot7"
-			"cannon_shot8"
-			"cannon_shot9"
-			"cannon_shot10"
-			"cannon_shot11"
 			"cannon_shot12"
+			"cannon_shot11"
+			"cannon_shot10"
+			"cannon_shot9"
+			"cannon_shot8"
+			"cannon_shot7"
+			"cannon6shot"
+			"cannon5shot"
+			"cannon3shot"
+			"cannon4shot"
+			"cannon2shot"
+			"cannon1shot"
+			"snd_cannon_fire"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
 		animation="attack_r_animation"
 		duration_source=animation
-		time_offset_source=unsynced_random_on_enter
 	}
  }
 
 starting_timeline={
 	on_enter={
-		"Lane 5"
+		"Lane 1"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

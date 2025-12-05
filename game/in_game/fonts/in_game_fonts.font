@@ -779,48 +779,81 @@ fontfiles = {
 	group = {
 		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
 		files = { 
-			"fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf"
-			"fonts/NotoSerifDisplay/NotoSerifDisplay-SemiBold.ttf" 
-			"fonts/NotoSerifSC/NotoSerifSC-Bold.otf" 
-			"fonts/NotoSerifJP/NotoSerifJP-Bold.otf" 
-			"fonts/NotoSerifKR/NotoSerifKR-Bold.otf" 
+			"fonts/MapNamesFonts/CormorantGaramond-SemiBold.ttf"
+			"fonts/MapNamesFonts/NotoSerifDisplay-SemiBold.ttf" 
+			"fonts/MapNamesFonts/NotoSerifSC-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifJP-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifKR-Bold.otf" 
 		}
 	}
 
 	group = {
 		languages = { "l_simp_chinese" }
 		files = { 
-			"fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf"
-			"fonts/NotoSerifDisplay/NotoSerifDisplay-SemiBold.ttf" 
-			"fonts/NotoSerifSC/NotoSerifSC-Bold.otf" 
-			"fonts/NotoSerifJP/NotoSerifJP-Bold.otf" 
-			"fonts/NotoSerifKR/NotoSerifKR-Bold.otf" 
+			"fonts/MapNamesFonts/CormorantGaramond-SemiBold.ttf"
+			"fonts/MapNamesFonts/NotoSerifDisplay-SemiBold.ttf" 
+			"fonts/MapNamesFonts/NotoSerifSC-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifJP-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifKR-Bold.otf" 
 		}
 	}
 
 	group = {
 		languages = { "l_korean" }
 		files = { 
-			"fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf"
-			"fonts/NotoSerifDisplay/NotoSerifDisplay-SemiBold.ttf" 
-			"fonts/NotoSerifKR/NotoSerifKR-Bold.otf"
-			"fonts/NotoSerifSC/NotoSerifSC-Bold.otf" 
-			"fonts/NotoSerifJP/NotoSerifJP-Bold.otf"
+			"fonts/MapNamesFonts/CormorantGaramond-SemiBold.ttf"
+			"fonts/MapNamesFonts/NotoSerifDisplay-SemiBold.ttf" 
+			"fonts/MapNamesFonts/NotoSerifKR-Bold.otf"
+			"fonts/MapNamesFonts/NotoSerifSC-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifJP-Bold.otf"
 		}
 	}
 
 	group = {
 		languages = { "l_japanese" }
 		files = { 
-			"fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf"
-			"fonts/NotoSerifDisplay/NotoSerifDisplay-SemiBold.ttf" 
-			"fonts/NotoSerifJP/NotoSerifJP-Bold.otf" 
-			"fonts/NotoSerifSC/NotoSerifSC-Bold.otf" 
-			"fonts/NotoSerifKR/NotoSerifKR-Bold.otf" 
+			"fonts/MapNamesFonts/CormorantGaramond-SemiBold.ttf"
+			"fonts/MapNamesFonts/NotoSerifDisplay-SemiBold.ttf" 
+			"fonts/MapNamesFonts/NotoSerifJP-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifSC-Bold.otf" 
+			"fonts/MapNamesFonts/NotoSerifKR-Bold.otf" 
 		}
 	}
 }
+fontfiles = {
+	name = "MapFontNumbersFiles"
+	always_load = no
 
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/MapNamesFonts/NotoSerif_SemiCondensed-Regular.ttf" "fonts/MapNamesFonts/NotoSansSC-Regular.ttf" "fonts/MapNamesFonts/NotoSansJP-Regular.ttf" "fonts/MapNamesFonts/NotoSansKR-Regular.ttf" }
+	}
+
+	group = {
+		languages = { "l_simp_chinese" }
+		files = { "fonts/MapNamesFonts/NotoSerif_SemiCondensed-Regular.ttf" "fonts/MapNamesFonts/NotoSansSC-Regular.ttf" "fonts/MapNamesFonts/NotoSansJP-Regular.ttf" "fonts/MapNamesFonts/NotoSansKR-Regular.ttf" }
+	}
+
+	group = {
+		languages = { "l_korean" }
+		files = { "fonts/MapNamesFonts/NotoSerif_SemiCondensed-Regular.ttf" "fonts/MapNamesFonts/NotoSansKR-Regular.ttf" "fonts/MapNamesFonts/NotoSansSC-Regular.ttf" "fonts/MapNamesFonts/NotoSansJP-Regular.ttf" }
+	}
+
+	group = {
+		languages = { "l_japanese" }
+		files = { "fonts/MapNamesFonts/NotoSerif_SemiCondensed-Regular.ttf" "fonts/MapNamesFonts/NotoSansJP-Regular.ttf" "fonts/MapNamesFonts/NotoSansSC-Regular.ttf" "fonts/MapNamesFonts/NotoSansKR-Regular.ttf" }
+	}
+}
+
+fontfiles = {
+	name = "MapFontConsoleFiles"
+	always_load = no
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_simp_chinese" "l_korean" "l_japanese" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/MapNamesFonts/NotoSansMono_SemiCondensed-Medium.ttf" "fonts/MapNamesFonts/NotoSansSC-Regular.ttf" "fonts/MapNamesFonts/NotoSansJP-Regular.ttf" "fonts/MapNamesFonts/NotoSansKR-Regular.ttf" }
+	}
+}
 # For map names
 font = {
 	name = "MapFont"
@@ -836,7 +869,7 @@ font = {
 
 	fontstyle = {
 		style = regular
-		fontfiles = "NotoSerif-Regular"
+		fontfiles = "MapFontNumbersFiles"
 	}
 }
 
@@ -845,7 +878,7 @@ font = {
 
 	fontstyle = {
 		style = regular
-		fontfiles = "NotoSansMono-Regular"
+		fontfiles = "MapFontConsoleFiles"
 	}
 }
 

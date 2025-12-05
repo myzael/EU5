@@ -522,7 +522,7 @@ types RightPanelTypes
 	}
 
 	type right_panel = widget {
-		visible = "[Not(TutorialHasVar('intro_hide_ui_5'))]"
+		visible = "[And(Not(TutorialHasVar('intro_hide_ui_5')), Not(IsLobbyOpen))]"
 		allow_outside = yes
 		layer = bottom
 

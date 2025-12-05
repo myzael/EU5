@@ -2226,7 +2226,7 @@ template market_food_balance_tooltip {
 		blockoverride "tooltip_content" {
 
 			TooltipTextBlock = {
-				visible = "[And(Not(Market.HasStarvingProvinces), Not(Market.WillRunOutOfFoodStochpile))]"
+				visible = "[And(GreaterThan_CFixedPoint(Market.GetMonthlyFoodBalance, '(CFixedPoint)0'), Not(Market.HasStarvingProvinces))]"
 				blockoverride "text" {
 					text = "MARKET_HUB_FOOD_TEXT_GREEN"
 				}

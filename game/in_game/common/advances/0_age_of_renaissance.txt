@@ -20,6 +20,8 @@ patron_of_art  = {
 
 	has_cultural_maintenance = yes
 	num_possible_artists = 1
+	
+	unlock_interaction = commission_art
 }
 
 renaissance_sculptures  = {

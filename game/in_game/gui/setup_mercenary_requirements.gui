@@ -113,7 +113,7 @@ types SetupMercenaryTypes
 					default_format = "#yellow_titles"
 					autoresize = no
 					align = nobaseline
-					raw_text = "[Character.GetNameToFitWithNoTooltip('(int32)30', '(bool)yes')], [Character.GetAgeInYears]"
+					raw_text = "[Character.GetNameToFitWithNoTooltip('(int32)45', '(bool)yes')], [Character.GetAgeInYears]"
 
 					sort_by_left_fade_highlight = {
 						name = "name"
@@ -227,7 +227,10 @@ types SetupMercenaryTypes
 		}
 		
 		select_portrait = {
-			datacontext = "[PossibleLeaderItem.GetCharacter]"
+			blockoverride "portrait_datacontext"
+			{
+				datacontext = "[PossibleLeaderItem.GetCharacter]"
+			}
 			parentanchor = bottom
 		}
 	}

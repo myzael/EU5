@@ -1222,3 +1222,12 @@ can_adopt_compatible_religion_law = {
 		}
 	}
 }
+
+#root = country
+peaceful_and_rich = {
+	at_war = no
+	gold >= {
+		value = monthly_income_trade_and_tax
+		multiply = 2
+	}
+}

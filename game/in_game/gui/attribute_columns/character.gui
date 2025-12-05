@@ -382,8 +382,11 @@
 		}
 
 		block "portraits" {
-			select_portrait = {
-				datacontext = "[InteractionTarget.GetCharacter]"
+			select_portrait = {				
+				blockoverride "portrait_datacontext"
+				{
+					datacontext = "[InteractionTarget.GetCharacter]"
+				}
 				parentanchor = vcenter
 				position = {-2 0}
 				blockoverride "character_portrait_visible" {

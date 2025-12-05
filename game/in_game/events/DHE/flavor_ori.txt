@@ -1181,7 +1181,7 @@ flavor_ori.1000 = {
 			add_merchant_power = {
 				country = c:POR
 				key = ori_sabotaged_merchants
-				power = -30
+				power = merchant_power_mild_penalty
 				years = 10
 			}
 		}

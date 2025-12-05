@@ -6,7 +6,7 @@
 		name_omar name_osman name_john name_james name_joseph name_zechariah
 	}	
 	female_names = {
-		Fatimah	Randa Tabassum 	Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Faghissa Fahriya Fariza Fedada 
+		Fatimah Randa Tabassum Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka Faghissa Fahriya Fariza Fedada 
 		Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi 
 		Tintifawin Tinzert Tisent Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuhrict Tureght Dihya Tajeddigt Tidir Tifawt
 	}

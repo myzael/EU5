@@ -4,6 +4,7 @@
 		has_or_had_tag = DAN
 	}
 	global_levy_size_modifier = 0.1
+	levy_recovery_modifier = 0.1 
 	
 	requires = feudalism_advance
 }

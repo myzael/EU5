@@ -1271,16 +1271,31 @@ BYZ = { # Byzantium
 		}
 	}
 	flag_definition = {
+		coa = BYZ_capetian
+		priority = 22
+		trigger = {
+			coa_def_capetian_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = BYZ_angevine
+		priority = 23
+		trigger = {
+			coa_def_angevine_trigger = yes
+		}
+	}		
+	flag_definition = {
 		coa = BYZ_cross_eagle
-		priority = 20
+		priority = 30
 		trigger = {
 			coa_def_absolute_monarchy_trigger = yes
 			coa_def_empire_trigger = yes
 		}
 	}		
+	# TODO roundel in heart variants for earlier/more global contexts
 	flag_definition = {
 		coa = BYZ_cross_cypher
-		priority = 21
+		priority = 31
 		trigger = {
 			coa_def_absolute_monarchy_trigger = yes
 			coa_def_empire_trigger = yes
@@ -1289,11 +1304,20 @@ BYZ = { # Byzantium
 	}		
 	flag_definition = {
 		coa = BYZ_cross_cypher_komnenos
-		priority = 22
+		priority = 32
 		trigger = {
 			coa_def_absolute_monarchy_trigger = yes
 			coa_def_empire_trigger = yes
-			coa_def_komnenos_dynasty_trigger = yes # TODO a variant for earlier/more global contexts
+			coa_def_komnenos_dynasty_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = BYZ_cross_capetian
+		priority = 33
+		trigger = {
+			coa_def_absolute_monarchy_trigger = yes
+			coa_def_empire_trigger = yes
+			coa_def_capetian_trigger = yes
 		}
 	}		
 	flag_definition = {
@@ -2111,7 +2135,10 @@ GBR = { # Great Britain
 		subject_canton = GBR_scottish
 		priority = 2
 		trigger = {
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 		}
 	}
 	flag_definition = {
@@ -2127,7 +2154,10 @@ GBR = { # Great Britain
 		subject_canton = GBR_scottish
 		priority = 4
 		trigger = {
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_GBR_ireland_trigger = no
 		}
 	}
@@ -2136,7 +2166,10 @@ GBR = { # Great Britain
 		subject_canton = sub_GBR_union_jack_1606
 		priority = 7
 		trigger = {
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_paris_ownership_trigger = yes
 			coa_def_GBR_ireland_trigger = yes
 		}
@@ -2146,7 +2179,10 @@ GBR = { # Great Britain
 		subject_canton = sub_GBR_union_jack_1606
 		priority = 8
 		trigger = {
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_paris_ownership_trigger = yes
 		}
 	}
@@ -2190,7 +2226,10 @@ GBR = { # Great Britain
 		priority = 13
 		trigger = {
 			coa_def_lost_french_possessions_trigger = yes
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 		}
 	}
 	flag_definition = {
@@ -2199,7 +2238,10 @@ GBR = { # Great Britain
 		priority = 14
 		trigger = {
 			coa_def_lost_french_possessions_trigger = yes
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_GBR_ireland_trigger = yes
 		}
 	}
@@ -2343,7 +2385,10 @@ GBR = { # Great Britain
 		subject_canton = GBR_scottish
 		priority = 54
 		trigger = {
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_date_after_1600 = yes
 		}
 	}
@@ -2405,7 +2450,10 @@ GBR = { # Great Britain
 		priority = 202
 		trigger = {
 			coa_def_republic_trigger = yes
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 		}
 	}
 	flag_definition = {
@@ -2414,7 +2462,10 @@ GBR = { # Great Britain
 		priority = 203
 		trigger = {
 			coa_def_republic_trigger = yes
-			coa_def_scottish_trigger = yes
+			OR = {
+				coa_def_scottish_trigger = yes
+				coa_def_GBR_SCO_trigger = yes
+			}
 			coa_def_GBR_ireland_trigger = yes
 		}
 	}
@@ -3587,6 +3638,34 @@ JUL = { # Juliers
 	}	
 }
 
+KHN = { # Kharan
+	flag_definition = {
+		coa = KHN
+		priority = 1
+	}
+	flag_definition = {
+		coa = KHN_princely
+		priority = 10
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+		}
+	}	
+}
+
+KHZ = { # Khuzdar
+	flag_definition = {
+		coa = KHZ
+		priority = 1
+	}
+	flag_definition = {
+		coa = KHZ_princely
+		priority = 10
+		trigger = {
+			coa_def_absolutism_age_5_trigger = yes
+		}
+	}	
+}
+
 KIE = { # Kiev
 	flag_definition = {
 		coa = KIE
@@ -3790,6 +3869,7 @@ LIT = { # Lithuania
 		coa = LIT_jagiellon
 		priority = 10
 		trigger = {
+			coa_def_gediminid_dynasty_trigger = no
 			OR = {
 				coa_def_christian_trigger = yes
 				coa_def_jagiellon_dynasty_trigger = yes
@@ -3820,7 +3900,6 @@ LIV = { # Livonia
 }
 
 LON = { # Leon
-
 	flag_definition = {
 		coa = LON
 		priority = 1
@@ -4466,7 +4545,9 @@ NAP = { # Naples
 		trigger = {
 			OR = {
 				coa_def_ARA_ensign_trigger = yes
+				coa_def_CAS_ensign_trigger = yes
 				coa_def_aragon_dynasty_trigger = yes
+				coa_def_castile_dynasty_trigger = yes
 			}
 		}
 	}
@@ -5599,6 +5680,13 @@ PRO = { # Provence
 			}
 		}
 	}
+	flag_definition = {
+		coa = PRO_republic
+		priority = 100
+		trigger = {
+			coa_def_republic_trigger = yes
+		}
+	}		
 }
 
 PRU = { # Prussia
@@ -6282,12 +6370,17 @@ SIC = { # Sicily
 		coa = SIC
 		priority = 10
 		trigger = {
-			coa_def_aragon_dynasty_trigger = yes
+			OR = {
+				coa_def_ARA_ensign_trigger = yes
+				coa_def_CAS_ensign_trigger = yes
+				coa_def_aragon_dynasty_trigger = yes
+				coa_def_castile_dynasty_trigger = yes
+			}
 		}
 	}
 	flag_definition = {
 		coa = SIC_angevine
-		priority = 10
+		priority = 11
 		trigger = {
 			coa_def_angevine_trigger = yes
 		}
@@ -7893,7 +7986,12 @@ TWS = { # Two Sicilies
 		coa = TWS_aragonese
 		priority = 5
 		trigger = {
-			coa_def_aragon_dynasty_trigger = yes
+			OR = {
+				coa_def_ARA_ensign_trigger = yes
+				coa_def_CAS_ensign_trigger = yes
+				coa_def_aragon_dynasty_trigger = yes
+				coa_def_castile_dynasty_trigger = yes
+			}
 		}
 	}
 	flag_definition = {

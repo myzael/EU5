@@ -1,3 +1,217 @@
+types BattleResultTypes {
+	type battle_result_icon_column = widget {
+		size = { 40 164 }
+
+		widget = {
+			parentanchor = bottom
+			size = { 40 104 }
+
+			vbox = {
+
+				# Units Started icon
+				widget = {
+					size = { 40 26 }
+
+					using = bg_list_item
+
+					tooltipwidget = {
+						SimpleContextualTooltipType = {
+							blockoverride "title_icon" {
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+									texture = "gfx/interface/icons/battle_summary/navy_start_of_battle.dds"
+								}
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+									texture = "gfx/interface/icons/battle_summary/armies_start_of_battle.dds"
+								}
+							}
+
+							blockoverride "concept_link" {
+								text = "[battle|e]"
+							}
+
+							lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_TOAL_UNITS_GENERIC"
+
+						}
+					}
+
+					hbox = {
+						parentanchor = center
+						icon = {
+							visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+							texture = "gfx/interface/icons/battle_summary/navy_start_of_battle.dds"
+							size = { 20 20 }
+						}
+						icon = {
+							visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+							texture = "gfx/interface/icons/battle_summary/armies_start_of_battle.dds"
+							size = { 20 20 }
+						}
+					}
+
+					
+				}
+
+				# Units Lost icon
+				widget = {
+					size = { 40 26 }
+
+					using = bg_list_item
+
+					tooltipwidget = {
+						SimpleContextualTooltipType = {
+							blockoverride "title_icon" {
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+									texture = "gfx/interface/icons/battle_summary/navy_destroyed.dds"
+								}
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+									texture = "gfx/interface/icons/battle_summary/armies_destroyed.dds"
+								}
+							}
+
+							blockoverride "concept_link" {
+								text = "[battle|e]"
+							}
+
+							lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_LOSSES_GENERIC"
+
+						}
+					}
+
+					hbox = {
+						parentanchor = center
+						icon = {
+							visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+							texture = "gfx/interface/icons/battle_summary/navy_destroyed.dds"
+							size = { 20 20 }
+						}
+						icon = {
+							visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+							texture = "gfx/interface/icons/battle_summary/armies_destroyed.dds"
+							size = { 20 20 }
+						}
+					}
+				}
+
+				# Units Captured icon
+				widget = {
+					size = { 40 26 }
+
+					using = bg_list_item
+
+					tooltipwidget = {
+						SimpleContextualTooltipType = {
+							blockoverride "title_icon" {
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+									texture = "gfx/interface/icons/battle_summary/navy_captured.dds"
+								}
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+									texture = "gfx/interface/icons/battle_summary/armies_captured.dds"
+								}
+							}
+
+							blockoverride "concept_link" {
+								text = "[battle|e]"
+							}
+
+							lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_CAPTURED_GENERIC"
+
+						}
+					}
+
+					hbox = {
+						parentanchor = center
+						icon = {
+							visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+							texture = "gfx/interface/icons/battle_summary/navy_captured.dds"
+							size = { 20 20 }
+						}
+						icon = {
+							visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+							texture = "gfx/interface/icons/battle_summary/armies_captured.dds"
+							size = { 20 20 }
+						}
+					}
+				}
+
+				# Units Remaining icon
+				widget = {
+					size = { 40 26 }
+
+					using = bg_list_item
+
+					tooltipwidget = {
+						SimpleContextualTooltipType = {
+							blockoverride "title_icon" {
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+									texture = "gfx/interface/icons/battle_summary/navy_end_of_battle.dds"
+								}
+								icon = {
+									using = tooltip_title_icon_size
+									visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+									texture = "gfx/interface/icons/battle_summary/armies_end_of_battle.dds"
+								}
+							}
+
+							blockoverride "concept_link" {
+								text = "[battle|e]"
+							}
+
+							lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_REMAINING_UNITS_GENERIC"
+
+						}
+					}
+
+					hbox = {
+						parentanchor = center
+						icon = {
+							visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+							texture = "gfx/interface/icons/battle_summary/navy_end_of_battle.dds"
+							size = { 20 20 }
+						}
+						icon = {
+							visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+							texture = "gfx/interface/icons/battle_summary/armies_end_of_battle.dds"
+							size = { 20 20 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+template bg_list_item {
+	background = {
+		block "should_mirror" {
+			mirror = horizontal|vertical
+		}
+		texture = "gfx/interface/component_tiles/list_item.dds"
+		spriteType = Corneredstretched
+		texture_density = 2
+		spriteBorder_left = 14
+		spriteBorder_right = 14
+
+		modify_texture = {
+			using = color_brown_leather_texture
+			blend_mode = overlay
+		}
+	}
+}
+
 template bg_result_upper_stats {
 	# visible = "[BattleResultMessage.GetBattleResult.IsLand]"
 
@@ -66,11 +280,17 @@ template battle_result_side_template_outer {
 
 template battle_result_subunits {
 	widget = {
-		size = { 330 160 }
-		
-		vbox = {
+		size = { 360 170 }
+
+		hbox = {
+			block "icon_column_left" {
+				battle_result_icon_column = {
+					blockoverride "should_mirror" {}
+				}
+			}
+
 			overlappingitembox = {
-				size = { 315 136 }
+				size = { 315 170 }
 				spacing = 7
 				datamodel = "[BattleResultMessageSide.GetUnitStats]"
 				ignoreinvisible = yes
@@ -78,7 +298,7 @@ template battle_result_subunits {
 				# Can't use UnitCards since these are not subunits
 				item = {
 					widget = {
-						size = { 75 136 }
+						size = { 75 170 }
 						vbox = {
 							alwaystransparent = no
 							filter_mouse = all
@@ -122,7 +342,6 @@ template battle_result_subunits {
 							widget = {
 								size = { 52 52 }
 
-								using = bg_circle_piechart
 								icon = {
 									# visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0')]"
 									size = { 70% 70% }
@@ -131,63 +350,7 @@ template battle_result_subunits {
 
 									
 								}
-
-								piechart = {
-									visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
-									using = bg_circle
-									parentanchor = vcenter|left
-									size = { 100% 100% }
-									
-									datacontext = "[BattleUnitStats]"
-									using = piechart_angles
-
-									using = bg_combat_map_unit
-									blockoverride "texture_shape" {
-										texture = "gfx/interface/buttons/round_button_close_alt.dds"
-										texture_density = 2
-										
-									}
-									blockoverride "texture_color" {
-										modify_texture = {
-											using = color_light_paper_texture
-											blend_mode = multiply
-										}
-										modify_texture = {
-											using = color_white_texture
-											alpha = 0.2
-										}
-										modify_texture = {
-											using = overlay_leather_texture
-											blend_mode = overlay
-											alpha = 0.3
-										}
-										glow = {
-											name = "drop_shadow"
-											glow_radius = 3
-											color = {0.0 0.0 0.0 1.0}
-											alpha = 0.5
-										}
-									}
-
-									pieslice_no_highlight = {
-										texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
-										value = "[FixedPointToFloat(BattleUnitStats.GetRemaining)]"
-										color = { 1 1 1 1 }
-									}
-
-									pieslice_no_highlight = {
-										texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
-										value = "[Subtract_float(FixedPointToFloat(BattleUnitStats.GetSize), FixedPointToFloat(BattleUnitStats.GetRemaining))]"
-										color = { 1 1 1 1 }
-									}
-
-									icon = {
-										size = { 50% 50% }
-										parentanchor = center
-										texture = "[GetSubUnitCategoryIcon(BattleUnitStats.GetCategory)]"
-									}
-									using = bg_circle_piechart
-								}
+								using = bg_circle_piechart
 							}
 			
 							expand = {}
@@ -196,48 +359,52 @@ template battle_result_subunits {
 							
 								# using = bg_unit_block
 								
-								hbox = {
+								widget = {
+									size = { -1 26 }
 									layoutpolicy_horizontal = expanding
 									background = {
 										texture = "gfx/interface/colors/dark_blue.dds"
 										alpha = 0.4
 									}
-
-									tooltipwidget = {
-										SimpleContextualTooltipType = {
-											blockoverride "title_icon" {
-												icon = {
-													using = tooltip_title_icon_size
-													texture = "[GetSubUnitCategoryIcon(BattleUnitStats.GetCategory)]"
+									hbox = {
+										tooltipwidget = {
+											SimpleContextualTooltipType = {
+												blockoverride "title_icon" {
+													icon = {
+														using = tooltip_title_icon_size
+														texture = "[GetSubUnitCategoryIcon(BattleUnitStats.GetCategory)]"
+													}
 												}
+
+												blockoverride "concept_link" {
+													text = [battle|e]
+												}
+
+												lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_TOAL_UNITS"
+
 											}
-
-											blockoverride "concept_link" {
-												text = [battle|e]
-											}
-
-											lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_TOAL_UNITS"
-
 										}
-									}
 
-									text_single = {
-										visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
-										text = "[BattleUnitStats.GetSize]"
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_gray"
-									}
-									text_single = {
-										visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0')]"
-										raw_text = "0"
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_gray"
+										text_single = {
+											visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
+											text = "[BattleUnitStats.GetSize]"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_gray"
+										}
+										text_single = {
+											visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0')]"
+											raw_text = "0"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_gray"
+										}
 									}
 								}
 								
-								hbox = {
+								widget = {
+									size = { -1 26 }
+									layoutpolicy_horizontal = expanding
 									# visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
 
 									tooltipwidget = {
@@ -258,27 +425,34 @@ template battle_result_subunits {
 										}
 									}
 
-									text_single = {
-										visible = "[Not(EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleUnitStats.GetSize, BattleUnitStats.GetRemaining), '(CFixedPoint)0'))]"
-										raw_text = "-" #BattleUnitStats.GetLosses
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_red"
-									}
-
-									text_single = {
-										raw_text = "[Subtract_CFixedPoint(BattleUnitStats.GetSize, BattleUnitStats.GetRemaining)|-0]" #BattleUnitStats.GetLosses
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_gray"
+									hbox = {
+										text_single = {
+											visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetDestroyed, '(CFixedPoint)0'))]"
+											raw_text = "-[BattleUnitStats.GetDestroyed|-0]"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_red"
+										}
+	
+										text_single = {
+											visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetDestroyed, '(CFixedPoint)0')]"
+											raw_text = "0"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_gray"
+										}
 									}
 								}
 
-								hbox = {
+								widget = {
+									size = { -1 26 }
 									layoutpolicy_horizontal = expanding
 									background = {
 										texture = "gfx/interface/colors/dark_blue.dds"
 										alpha = 0.4
+									}
+
+									hbox = {
 										tooltipwidget = {
 											SimpleContextualTooltipType = {
 												blockoverride "title_icon" {
@@ -287,32 +461,79 @@ template battle_result_subunits {
 														texture = "[GetSubUnitCategoryIcon(BattleUnitStats.GetCategory)]"
 													}
 												}
-	
 												blockoverride "concept_link" {
 													text = [battle|e]
 												}
-	
-												textcontext = "BATTLE_UNIT_TYPE_STATS_TT_REMAINING_UNITS"
-	
+
+												lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_CAPTURED"
+
 											}
 										}
+
+										text_single = {
+											visible = "[LessThan_CFixedPoint(BattleUnitStats.GetImprisoned, '(CFixedPoint)0')]"
+											raw_text = "[BattleUnitStats.GetImprisoned|0]"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_red"
+										}
+
+										text_single = {
+											visible = "[GreaterThan_CFixedPoint(BattleUnitStats.GetImprisoned, '(CFixedPoint)0')]"
+											raw_text = "+[BattleUnitStats.GetImprisoned|+0]"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_green"
+										}
+
+										text_single = {
+											visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetImprisoned, '(CFixedPoint)0')]"
+											raw_text = "0"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_gray"
+										}
 									}
-									text_single = {
-										visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
-										datacontext = "[BattleUnitStats]"
-										autoresize = yes
-										text = "[BattleUnitStats.GetRemaining]"
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_white"
+								}
+
+								widget = {
+									size = { -1 26 }
+									layoutpolicy_horizontal = expanding
+									tooltipwidget = {
+										SimpleContextualTooltipType = {
+											blockoverride "title_icon" {
+												icon = {
+													using = tooltip_title_icon_size
+													texture = "[GetSubUnitCategoryIcon(BattleUnitStats.GetCategory)]"
+												}
+											}
+
+											blockoverride "concept_link" {
+												text = [battle|e]
+											}
+
+											lowpriotextcontext = "BATTLE_UNIT_TYPE_STATS_TT_REMAINING_UNITS"
+
+										}
 									}
-									text_single = {
-										visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0')]"
-										autoresize = yes
-										raw_text = "0"
-										align = center|nobaseline
-										alwaystransparent = yes
-										default_format = "#color_gray"
+									hbox = {
+										text_single = {
+											visible = "[Not(EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0'))]"
+											datacontext = "[BattleUnitStats]"
+											autoresize = yes
+											text = "[BattleUnitStats.GetRemaining]"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_white"
+										}
+										text_single = {
+											visible = "[EqualTo_CFixedPoint(BattleUnitStats.GetSize, '(CFixedPoint)0')]"
+											autoresize = yes
+											raw_text = "0"
+											align = center|nobaseline
+											alwaystransparent = yes
+											default_format = "#color_gray"
+										}
 									}
 								}
 							}
@@ -320,6 +541,7 @@ template battle_result_subunits {
 					}
 				}
 			}
+			block "icon_column_right" {}
 		}
 	}
 }
@@ -342,7 +564,7 @@ types BattleResults {
 window = {
 	name = "battle_result_message_popup"
 	parentanchor = center
-	size = { 860 550 }
+	size = { 860 580 }
 
 	widget = {
 		size = { 100% 100% }
@@ -902,6 +1124,7 @@ window = {
 								}
 
 								vbox = { #stats
+									spacing = 10
 									using = layoutpolicy_expanding
 									hbox = {#subunits
 										using = battle_result_subunits
@@ -937,73 +1160,45 @@ window = {
 											expand = {}
 
 											vbox = {
-												visible = "[BattleResultMessage.GetBattleResult.IsLand]"
 												text_single = {
-													text = "TOTAL_CASUALTIES"
+													text = "OVERALL_CHANGE"
 													default_format = "#color_white"
 												}
 
 												text_single = {
-													visible = "[Not(EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalSize, BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining), '(CFixedPoint)0'))]"
-													raw_text = "-[BattleResultMessage.GetBattleResult.GetAttacker.GetLosses] @army_strength!"
+													visible = "[GreaterThan_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "+[BattleResultMessage.GetBattleResult.GetAttacker.GetOverallChangeForUI]"
+													default_format = "#color_green"
+												}
+
+												text_single = {
+													visible = "[LessThan_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "[BattleResultMessage.GetBattleResult.GetAttacker.GetOverallChangeForUI]"
 													default_format = "#color_red"
 												}
 
 												text_single = {
-													visible = "[EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalSize, BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining), '(CFixedPoint)0')]"
-													raw_text = "[BattleResultMessage.GetBattleResult.GetAttacker.GetLosses]"
-												}
-											}
-
-											vbox = {
-												visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
-												text_single = {
-													text = "TOTAL_CASUALTIES"
-													default_format = "#color_white"
-												}
-
-												text_single = {
-													visible = "[Not(EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalSize, BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining), '(CFixedPoint)0'))]"
-													raw_text = "-[BattleResultMessage.GetBattleResult.GetAttacker.GetNavalLosses] @navy_strength!"
-													default_format = "#color_red"
-												}
-
-												text_single = {
-													visible = "[EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalSize, BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining), '(CFixedPoint)0')]"
-													raw_text = "[BattleResultMessage.GetBattleResult.GetAttacker.GetLosses]"
+													visible = "[EqualTo_CFixedPoint(BattleResultMessage.GetBattleResult.GetAttacker.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "0"
+													default_format = "#color_gray"
 												}
 											}
 
 											widget = {
 												size = { 55 55 }
-
-												piechart = {
-													using = bg_circle
-													parentanchor = vcenter|left
-													size = { 55 55 }
-													minimumsize = { 55 55 }
-
-													using = piechart_angles
-
-													pieslice_no_highlight = {
-														texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
-														value = "[FixedPointToFloat(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining)]"
-														color = { 1 1 1 1 }
-													}
-
-													pieslice_no_highlight = {
-														texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
-														value = "[Subtract_float(FixedPointToFloat(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalSize), FixedPointToFloat(BattleResultMessage.GetBattleResult.GetAttacker.GetTotalRemaining))]"
-														color = { 1 1 1 1 }
-													}
-
-													icon = {
-														size = { 60% 60% }
-														parentanchor = center
-														texture = "gfx/interface/icons/disasters/_default.dds"
-													}
-													using = bg_circle_piechart
+												icon = {
+													visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+													size = { 60% 60% }
+													parentanchor = center
+													texture = "gfx/interface/icons/flat_icons/declare_war/navy.dds"
 												}
+												icon = {
+													visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+													size = { 60% 60% }
+													parentanchor = center
+													texture = "gfx/interface/icons/unit_category/total_strength.dds"
+												}
+												using = bg_circle_piechart
 											}
 										}
 									}
@@ -1221,7 +1416,6 @@ window = {
 												layoutstretchfactor_horizontal = 3
 												using = layoutpolicy_expanding
 												spacing = 3
-												using = bg_result_upper_stats
 
 												expand = {}
 									
@@ -1380,9 +1574,14 @@ window = {
 							hbox = {
 								using = layoutpolicy_expanding
 								vbox = { #stats
+									spacing = 10
 									using = layoutpolicy_expanding
 									hbox = {#subunits
 										using = battle_result_subunits
+										blockoverride "icon_column_left" {}
+										blockoverride "icon_column_right" {
+											battle_result_icon_column = {}
+										}
 									}
 
 									hbox = {#casualties
@@ -1415,71 +1614,43 @@ window = {
 
 											widget = {
 												size = { 55 55 }
-
-												piechart = {
-													using = bg_circle
-													parentanchor = vcenter|left
-													size = { 55 55 }
-													minimumsize = { 55 55 }
-
-													using = piechart_angles
-
-													pieslice_no_highlight = {
-														texture = "gfx/interface/pie_charts/pie_chart_alpha_80_green.dds"
-														value = "[FixedPointToFloat(BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining)]"
-														color = { 1 1 1 1 }
-													}
-
-													pieslice_no_highlight = {
-														texture = "gfx/interface/pie_charts/pie_chart_alpha_80_red.dds"
-														value = "[Subtract_float(FixedPointToFloat(BattleResultMessage.GetBattleResult.GetDefender.GetTotalSize), FixedPointToFloat(BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining))]"
-														color = { 1 1 1 1 }
-													}
-
-													icon = {
-														size = { 60% 60% }
-														parentanchor = center
-														texture = "gfx/interface/icons/disasters/_default.dds"
-													}
-													using = bg_circle_piechart
+												icon = {
+													visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
+													size = { 60% 60% }
+													parentanchor = center
+													texture = "gfx/interface/icons/flat_icons/declare_war/navy.dds"
 												}
+												icon = {
+													visible = "[BattleResultMessage.GetBattleResult.IsLand]"
+													size = { 60% 60% }
+													parentanchor = center
+													texture = "gfx/interface/icons/unit_category/total_strength.dds"
+												}
+												using = bg_circle_piechart
 											}
 
 											vbox = {
-												visible = "[BattleResultMessage.GetBattleResult.IsLand]"
 												text_single = {
-													text = "TOTAL_CASUALTIES"
+													text = "OVERALL_CHANGE"
 													default_format = "#color_white"
 												}
 
 												text_single = {
-													visible = "[Not(EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetTotalSize, BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining), '(CFixedPoint)0'))]"
-													raw_text = "-[BattleResultMessage.GetBattleResult.GetDefender.GetLosses] @army_strength!"
-													default_format = "#color_red"
-												}
-												
-												text_single = {
-													visible = "[EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetTotalSize, BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining), '(CFixedPoint)0')]"
-													raw_text = "[BattleResultMessage.GetBattleResult.GetDefender.GetLosses]"
-												}
-											}
-
-											vbox = {
-												visible = "[Not(BattleResultMessage.GetBattleResult.IsLand)]"
-												text_single = {
-													text = "TOTAL_CASUALTIES"
-													default_format = "#color_white"
+													visible = "[GreaterThan_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "+[BattleResultMessage.GetBattleResult.GetDefender.GetOverallChangeForUI]"
+													default_format = "#color_green"
 												}
 
 												text_single = {
-													visible = "[Not(EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetTotalSize, BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining), '(CFixedPoint)0'))]"
-													raw_text = "-[BattleResultMessage.GetBattleResult.GetDefender.GetNavalLosses] @navy_strength!"
+													visible = "[LessThan_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "[BattleResultMessage.GetBattleResult.GetDefender.GetOverallChangeForUI]"
 													default_format = "#color_red"
 												}
-												
+
 												text_single = {
-													visible = "[EqualTo_CFixedPoint(Subtract_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetTotalSize, BattleResultMessage.GetBattleResult.GetDefender.GetTotalRemaining), '(CFixedPoint)0')]"
-													raw_text = "[BattleResultMessage.GetBattleResult.GetDefender.GetNavalLosses]"
+													visible = "[EqualTo_CFixedPoint(BattleResultMessage.GetBattleResult.GetDefender.GetOverallChange, '(CFixedPoint)0')]"
+													raw_text = "0"
+													default_format = "#color_gray"
 												}
 											}
 

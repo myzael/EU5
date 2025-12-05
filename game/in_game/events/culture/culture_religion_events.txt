@@ -220,9 +220,13 @@ culture_religion_events.5 = {
 	trigger = {
 		has_ruler = yes
 		religion.group != ruler.religion.group
-		
-		any_owned_non_rural_location = { dominant_religion ?= root.religion }
 		country_has_estate = estate_type:clergy_estate
+		ruler = {
+			any_ruling_countries = { #So that it's not changing cultures of rulers that are also ruling other countries
+				count = 1
+			}
+		}
+		any_owned_non_rural_location = { dominant_religion ?= root.religion }
 	}
 
 	immediate = {

@@ -339,7 +339,7 @@ lateralview = {
 								}
 								
 								icon = {
-									size = { 40 50 }
+									size = { 50 55 }
 									texture = "gfx/interface/alerts/alert_red.dds"
 									texture_density = 2
 									datacontext = "[UnitTypeLateralView.GetUnitType.GetCategory]"
@@ -351,7 +351,7 @@ lateralview = {
 										direction = vertical
 								
 										icon = {
-											size = { 22 22 }
+											size = { 20 20 }
 											parentanchor = top|hcenter
 											texture = "[GetSubUnitCategoryIcon(SubUnitCategory.Self)]"
 											glow = {
@@ -366,6 +366,7 @@ lateralview = {
 											visible = "[SubUnitCategory.HasCombatAbility(Player.Self)]"
 											text = "[SubUnitCategory.GetCombatAbility(Player.Self)|+=0%]"
 											align = center
+											fontsize = 13
 										}
 									}
 
@@ -376,7 +377,7 @@ lateralview = {
 
 								widget = {
 									visible = "[And(UnitTypeLateralView.GetUnitType.IsRegiment, Not(UnitTypeLateralView.GetUnitType.HasStat('attrition_loss')))]"
-									size = { 200 -1 }
+									size = { 235 -1 }
 								}
 
 								# ATTRITION
@@ -1186,7 +1187,7 @@ lateralview = {
 													dynamicgridbox = {
 														layoutpolicy_horizontal = expanding
 														flipdirection = yes
-														datamodel_wrap = 6
+														datamodel_wrap = 4
 
 														datamodel = "[UnitTypeLateralView.GetUnitType.GetConstructionDemand.GetEntries]"
 														item = {

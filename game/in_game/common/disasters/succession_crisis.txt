@@ -51,8 +51,8 @@
 	modifier = {
 		monthly_pretender_rebel_growth = 0.01
 		global_crown_estate_power = -0.2
-		global_estate_target_satisfaction = big_permanent_target_satisfaction_penalty
-		monthly_legitimacy = 0.25
+		global_estate_target_satisfaction = larger_permanent_target_satisfaction_penalty
+		blocked_from_creating_subjects = yes
 	}
 	
 	on_start = { 

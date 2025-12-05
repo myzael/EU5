@@ -356,7 +356,7 @@ republics.15 = {
 					country = root
 					key = trade_focus
 					months = 120
-					power = 50
+					power = merchant_power_severe_bonus
 				}
 			}
 		}
@@ -369,7 +369,7 @@ republics.15 = {
 				country = root
 				key = trade_focus
 				months = 120
-				power = 100
+				power = merchant_power_ultimate_bonus
 			}
 		}
 	}

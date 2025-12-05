@@ -921,8 +921,9 @@ lack_of_demand_for_fine_goods = {
 }
 
 chk_stealing_of_foods = {
-	fruit = 5
-	legumes = 5
+	fruit = -5
+	legumes = -5
+	maize = -5
 	
 
 	hidden = no

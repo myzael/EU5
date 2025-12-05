@@ -223,6 +223,7 @@ granary = {
 		local_food_capacity = 200
 	}
 
+	ai_forbid_shutdown = yes
 }
 
 fortress_granary = { #https://en.wikipedia.org/wiki/Agadir_(granary)

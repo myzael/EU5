@@ -64,29 +64,29 @@ ethnicity_template = {
 
 	expressions_brow = {
 		50 = { name = no_expression		range = { 0.0 1.0 } }
-		10 = { name = frown_angry_01		range = { 0.0 1.0 } }
-		10 = { name = frown_angry_02		range = { 0.0 1.0 } }
-		10 = { name = frown_angry_03		range = { 0.0 1.0 } }
-		5 = { name = frown_neutral_01		range = { 0.0 1.0 } }
-		5 = { name = frown_neutral_02		range = { 0.0 1.0 } }
-		5 = { name = frown_neutral_03		range = { 0.0 1.0 } }
+		10 = { name = frown_angry_01		range = { 0.0 0.8 } }
+		10 = { name = frown_angry_02		range = { 0.0 0.8 } }
+		10 = { name = frown_angry_03		range = { 0.0 0.8 } }
+		10 = { name = frown_neutral_01		range = { 0.0 0.8 } }
+		10 = { name = frown_neutral_02		range = { 0.0 0.8 } }
+		10 = { name = frown_neutral_03		range = { 0.0 0.8 } }
 		5 = { name = frown_worry_01		range = { 0.0 1.0 } }
 		5 = { name = frown_worry_02		range = { 0.0 1.0 } }
 		5 = { name = frown_worry_03		range = { 0.0 1.0 } }
 	}
 
 	expressions_forehead = {
-		70 = { name = no_expression		range = { 0.0 1.0 } }
-		10 = { name = eyebrow_raise_01		range = { 0.0 1.0 } }
-		10 = { name = eyebrow_raise_02		range = { 0.0 1.0 } }
-		10 = { name = eyebrow_raise_03		range = { 0.0 1.0 } }
-		10 = { name = eyebrow_raise_01_left		range = { 0.0 1.0 } }
-		10 = { name = eyebrow_raise_01_right		range = { 0.0 1.0 } }
-		5 = { name = eyebrow_raise_01		range = { 0.5 1.0 } }
-		5 = { name = eyebrow_raise_02		range = { 0.5 1.0 } }
-		5 = { name = eyebrow_raise_03		range = { 0.5 1.0 } }
-		5 = { name = eyebrow_raise_01_left		range = { 0.5 1.0 } }
-		5 = { name = eyebrow_raise_01_right		range = { 0.5 1.0 } }
+		100 = { name = no_expression		range = { 0.0 1.0 } }
+		10 = { name = eyebrow_raise_01		range = { 0.0 0.5 } }
+		10 = { name = eyebrow_raise_02		range = { 0.0 0.5 } }
+		10 = { name = eyebrow_raise_03		range = { 0.0 0.5 } }
+		10 = { name = eyebrow_raise_01_left		range = { 0.0 0.5 } }
+		10 = { name = eyebrow_raise_01_right		range = { 0.0 0.5 } }
+		5 = { name = eyebrow_raise_01		range = { 0.5 0.8 } }
+		5 = { name = eyebrow_raise_02		range = { 0.5 0.8 } }
+		5 = { name = eyebrow_raise_03		range = { 0.5 0.8 } }
+		5 = { name = eyebrow_raise_01_left		range = { 0.5 0.8 } }
+		5 = { name = eyebrow_raise_01_right		range = { 0.5 0.8 } }
 	}
 
 	skin_color = {
@@ -178,6 +178,12 @@ ethnicity_template = {
 		10 = { name = old_mouth_3		range = { 0.1 1.0 } }
 	}
 
+	gene_aging_colors = {
+		10 = { name = early_aging_colors		range = { 0.5 0.85 } }
+		10 = { name = average_aging_colors		range = { 0.5 0.85 } }
+		10 = { name = late_aging_colors		range = { 0.5 0.85 } }
+	}
+
 	gene_body_weight = {
 		0 =  { name = template_1 		range = { 0.0 0.3 } }
 		5 =  { name = template_1 		range = { 0.3 0.45 } }
@@ -249,11 +255,11 @@ ethnicity_template = {
 	gene_chin_dimple = {
 		70 =  { name = template_1 		range = { 0.0 0.0 } }
 
-		13 =  { name = template_1 		range = { 0.0 0.5 } }
-		2 =  { name = template_1 		range = { 0.6 0.9 } }
+		10 =  { name = template_1 		range = { 0.0 0.5 } }
+		5 =  { name = template_1 		range = { 0.6 0.9 } }
 
-		13 =  { name = template_2 		range = { 0.0 0.5 } }
-		2 =  { name = template_2 		range = { 0.5 0.9 } }
+		10 =  { name = template_2 		range = { 0.0 0.5 } }
+		5 =  { name = template_2 		range = { 0.5 0.9 } }
 	}
 
 	gene_chin_height = {
@@ -414,8 +420,8 @@ ethnicity_template = {
 		0 =  { name = template_1 		range = { 0.0 0.2 } }
 		10 =  { name = template_1 		range = { 0.2 0.4 } }
 		68 =  { name = template_1 		range = { 0.4 0.6 } }
-		10 =  { name = template_1 		range = { 0.6 0.8 } }
-		0 =  { name = template_1 		range = { 0.8 1.0 } }
+		10 =  { name = template_1 		range = { 0.6 0.7 } }
+		0 =  { name = template_1 		range = { 0.7 1.0 } }
 	}
 
 	gene_forehead_brow_curve = {
@@ -523,11 +529,11 @@ ethnicity_template = {
 	}
 
 	gene_mouth_corner_height = {
-		0 =  { name = template_1 		range = { 0.1 0.3 } }
-		5 =  { name = template_1 		range = { 0.3 0.4 } }
+		0 =  { name = template_1 		range = { 0.1 0.35 } }
+		5 =  { name = template_1 		range = { 0.35 0.4 } }
 		80 =  { name = template_1 		range = { 0.4 0.6 } }
-		5 =  { name = template_1 		range = { 0.6 0.7 } }
-		0 =  { name = template_1 		range = { 0.7 0.9 } }
+		5 =  { name = template_1 		range = { 0.6 0.65 } }
+		0 =  { name = template_1 		range = { 0.65 0.9 } }
 	}
 
 	gene_mouth_height = {
@@ -554,6 +560,14 @@ ethnicity_template = {
 		0 =  { name = template_1 		range = { 0.8 1.0 } }
 	}
 
+	gene_mouth_lip_def = {
+		10 =  { name = template_1 		range = { 0.0 0.3 } }
+		20 =  { name = template_1 		range = { 0.3 0.5 } }
+		70 =  { name = template_1 		range = { 0.5 0.7 } }
+		20 =  { name = template_1 		range = { 0.7 0.9 } }
+		10 =  { name = template_1 		range = { 0.9 1.0 } }
+	}
+
 	gene_mouth_lower_lip_pad = {
 		0 =  { name = template_1 		range = { 0.0 0.2 } }
 		20 =  { name = template_1 		range = { 0.2 0.4 } }
@@ -576,6 +590,14 @@ ethnicity_template = {
 		58 =  { name = template_1 		range = { 0.4 0.6 } }
 		20 =  { name = template_1 		range = { 0.6 0.8 } }
 		2 =  { name = template_1 		range = { 0.8 1.0 } }
+	}
+
+	gene_mouth_philtrum_shape = {
+		15 =  { name = template_1 		range = { 0.0 0.2 } }
+		20 =  { name = template_1 		range = { 0.2 0.4 } }
+		30 =  { name = template_1 		range = { 0.4 0.6 } }
+		15 =  { name = template_1 		range = { 0.6 0.8 } }
+		5 =  { name = template_1 		range = { 0.8 1.0 } }
 	}
 
 	gene_mouth_philtrum_width = {
@@ -738,6 +760,12 @@ ethnicity_template = {
 		25 =  { name = template_1 		range = { 0.4 0.6 } }
 		0 =  { name = template_1 		range = { 0.6 0.8 } }
 		0 =  { name = template_1 		range = { 0.8 1.0 } }
+
+		2 =  { name = template_2 		range = { 0.0 0.2 } }
+		5 =  { name = template_2 		range = { 0.2 0.4 } }
+		2 =  { name = template_2 		range = { 0.4 0.6 } }
+		0 =  { name = template_2 		range = { 0.6 0.8 } }
+		0 =  { name = template_2 		range = { 0.8 1.0 } }
 	}
 
 	gene_nose_tip_forward = {
@@ -757,14 +785,25 @@ ethnicity_template = {
 	}
 
 	gene_nose_width = {
-		0 =  { name = template_1 		range = { 0.15 0.3 } }
-		10 =  { name = template_1 		range = { 0.3 0.4 } }
-		68 =  { name = template_1 		range = { 0.4 0.6 } }
+		0 =  { name = template_1 		range = { 0.15 0.35 } }
+		10 =  { name = template_1 		range = { 0.35 0.4 } }
+		80 =  { name = template_1 		range = { 0.4 0.6 } }
 		10 =  { name = template_1 		range = { 0.6 0.8 } }
 		0 =  { name = template_1 		range = { 0.8 0.9 } }
 	}
 
+	gene_temple_def = {
+		2 =  { name = template_1 		range = { 0.15 0.35 } }
+		10 =  { name = template_1 		range = { 0.35 0.4 } }
+		80 =  { name = template_1 		range = { 0.4 0.6 } }
+		10 =  { name = template_1 		range = { 0.6 0.8 } }
+		2 =  { name = template_1 		range = { 0.8 0.9 } }
+	}
+
 	gene_eyebrows_inner = {
+		2 =  { name = thinnest_short 		range = { 0.3 0.6 } }
+		2 =  { name = thinnest_medium 		range = { 0.3 0.6 } }
+		0 =  { name = thinnest_long 		range = { 0.3 0.6 } }
 		10 =  { name = thinner_short 		range = { 0.3 0.6 } }
 		10 =  { name = thinner_medium 		range = { 0.3 0.6 } }
 		10 =  { name = thinner_long 		range = { 0.3 0.6 } }

@@ -176,3 +176,10 @@ show_production_building_trigger = {
 		count > 10	
 	}
 }
+
+is_no_longer_capital = {
+	location = {
+		is_capital = no
+		owner ?= { in_civil_war = no }
+	}	
+}

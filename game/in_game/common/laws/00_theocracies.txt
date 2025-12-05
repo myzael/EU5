@@ -39,7 +39,7 @@
 	the_papacy = {
 		unique = yes
 		potential = { 
-			tag = PAP 
+			tag = PAP
 		}
 		country_modifier = {
 			monthly_religious_influence = 0.1

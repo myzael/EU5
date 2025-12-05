@@ -15,7 +15,7 @@
 	can_add_location_trigger = {
 		is_land = yes
 		is_passable = yes
-		any_neighbor_location = {
+		any_coast_border_location = {
 			is_owned_by_international_organization = scope:recipient
 		}
 		owner ?= {

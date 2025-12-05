@@ -708,7 +708,7 @@ autonomous_kadiluks = {
 	estate = clergy_estate
 	
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		OR = {
 			current_age = age_4_reformation
 			current_age = age_5_absolutism

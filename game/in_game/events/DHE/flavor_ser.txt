@@ -686,8 +686,11 @@ flavor_ser.31 = { #The Dawn of a New Empire
 			}
 			create_international_organization = {
 				type = international_organization_type:autocephalous_patriarchate
-				add_country_to_international_organization = root
-				set_leader_country = root
+				custom_tooltip = {
+					text = new_autocephalous_patriarchate.tt
+					add_country_to_international_organization = prev
+					set_leader_country = prev
+				}
 			}
 			religion:orthodox = {
 				create_holy_site = {
@@ -1695,6 +1698,7 @@ flavor_ser.120 = { #Gold found in Lece
 
 	option = {
 		name = flavor_ser.120.a
+		historical_option = yes
 	
 		change_gold_effect = { scale = -5.00 }
 		add_migration = {

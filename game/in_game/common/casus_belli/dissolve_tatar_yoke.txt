@@ -14,7 +14,10 @@ cb_dissolve_tatar_yoke = {
 		scope:target = c:GLH
 	}
 	allow_creation = {
-		country_rank = country_rank:rank_kingdom
+		OR = {
+			country_rank = country_rank:rank_kingdom
+			country_rank = country_rank:rank_empire
+		}
 	}
 
 	war_goal_type = dissolve_tatar_yoke_wargoal

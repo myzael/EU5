@@ -39,22 +39,39 @@ template message_template {
 					spacing = 5
 
 					block "message_template_content" {
-						vbox = {
+						scrollarea = {
 							layoutpolicy_horizontal = expanding
-							margin = {5 0}
-							using = message_text_box_background		
-							visible = "[MessagePopup.HasDescription]"
-							text_multi = {
-								layoutpolicy_horizontal = expanding
-								size = {-1 60}
-								autoresize = yes
-								minimumsize = { 500 -1 }
-								using = Font_Type_Standard
-								fontsize = 17
-								default_format = "#medium"
-								align = center
-								text = "[MessagePopup.GetDescription]"
-								margin = { 10 20 }
+							maximumsize = { -1 500 }
+							
+							scrollbarpolicy_horizontal = always_off
+							autoresizescrollarea = yes
+			
+							scrollbar_vertical = {
+								using = Scrollbar_Vertical
+							}
+			
+							scrollwidget = {
+								TooltipBlockListContent = {
+									visible = "[MessagePopup.HasDescription]"
+
+									set_parent_dimension_to_minimum = height
+									layoutpolicy_horizontal = expanding
+									using = message_text_box_background
+
+									text_multi = {
+										layoutpolicy_horizontal = expanding
+										size = {-1 60}
+										autoresize = yes
+										minimumsize = { 500 -1 }
+										maximumsize = { 500 -1 }
+										using = Font_Type_Standard
+										fontsize = 17
+										default_format = "#medium"
+										align = center
+										text = "[MessagePopup.GetDescription]"
+										margin = { 10 20 }
+									}
+								}
 							}
 						}
 
@@ -79,6 +96,7 @@ template message_template {
 
 									ontextcontextchanged = "[SetBlockListFromTextContext(PdxGuiWidget.AccessSelf)]"
 									textcontext = "[MessagePopup.GetEffect]"
+									margin = { 10 10 }
 								}
 							}
 						}
@@ -164,8 +182,8 @@ template message_template {
 			
 							# block "accept_input_action" {
 								onclick = "[MessagePopup.OnAccept]"
-								input_action = "confirm"
-								use_global_input_instance = yes
+								# input_action = "confirm"
+								# use_global_input_instance = yes
 							# }
 						}
 					}

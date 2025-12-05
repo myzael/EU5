@@ -121,10 +121,26 @@
 				if = {
 					limit = { has_variable = supports_northern_court }
 					add_to_global_variable_list = { name = nanbokuchou_northern_supporters target = this }
+					situation:nanbokuchou = {
+						set_vote = {
+							voter = prev
+							resolution = resolution:nanbokuchou_resolution
+							vote = c:STC
+							locked = yes
+						}
+					}
 				}
 				if = {
 					limit = { has_variable = supports_southern_court }
 					add_to_global_variable_list = { name = nanbokuchou_southern_supporters target = this }
+					situation:nanbokuchou = {
+						set_vote = {
+							voter = prev
+							resolution = resolution:nanbokuchou_resolution
+							vote = c:STC
+							locked = yes
+						}
+					}
 				}
 				if = {
 					limit = {
@@ -132,6 +148,13 @@
 						NOT = { has_variable = supports_southern_court }
 					}
 					add_to_global_variable_list = { name = nanbokuchou_neutral_countries target = this }
+					situation:nanbokuchou = {
+						set_vote = {
+							voter = prev
+							resolution = resolution:nanbokuchou_resolution
+							locked = yes
+						}
+					}
 				}
 			}
 		}

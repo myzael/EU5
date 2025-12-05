@@ -12,35 +12,12 @@ rise_of_the_ottomans.1 = {
 	desc = rise_of_the_ottomans.1.desc
 	image = "gfx/interface/illustrations/situation/rise_of_the_ottomans.dds"
 	immediate = {
-		ordered_in_global_list = {
-			variable = eligible_beylik_list
-			order_by = {
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			}
-			max = 1
-			check_range_bounds = no
+		
+		situation:rise_of_the_ottomans.var:strongest_beylik_variable = {
 			save_scope_as = target_country
 			ruler_or_regent = { save_scope_as = target_character }
 		}
+		
 		if = {
 			limit = { has_reform = government_reform:anatolian_beylik }
 			set_variable = {
@@ -66,26 +43,34 @@ rise_of_the_ottomans.1 = {
 		if = {
 			limit = {
 				NOT = { has_reform = government_reform:anatolian_beylik }
-				any_owned_location = {
-					any_pop = {
-						owner = root
-						culture = culture:turkish_culture
-					}
+				any_pop = {
+					owner = root
+					culture = culture:turkish_culture
 				}
 			}
-			every_owned_location = {
+			every_pop = {
 				limit = {
-					any_pop = {
-						owner = root
-						culture = culture:turkish_culture
-					}
+					owner = root
+					culture = culture:turkish_culture
 				}
-				every_pop = {
-					limit = {
-						owner = root
-						culture = culture:turkish_culture
+				add_pop_satisfaction = pop_satisfaction_ultimate_penalty
+			}
+		}
+
+		if = {
+			limit = { 
+				has_reform = government_reform:anatolian_beylik 
+				any_neighbor_country = {
+					NOT = { is_subject_of = root }
+					ROOT = { can_declare_war_on = prev }
+				}
+			}
+			every_neighbor_country = {
+				root = {
+					add_opinion = {
+						target = prev
+						modifier = anatolian_struggle_modifier
 					}
-					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
 				}
 			}
 		}
@@ -116,6 +101,24 @@ rise_of_the_ottomans.2 = {
 		name = rise_of_the_ottomans.2.a
 		set_variable = { name = tur_rise_of_ottoman_flag value = 1 }
 		add_reform = government_reform:legacy_of_osman
+
+		if = {
+			limit = { 
+				has_reform = government_reform:anatolian_beylik 
+				any_neighbor_country = {
+					NOT = { is_subject_of = root }
+					ROOT = { can_declare_war_on = prev }
+				}
+			}
+			every_neighbor_country = {
+				root = {
+					add_opinion = {
+						target = prev
+						modifier = anatolian_struggle_modifier
+					}
+				}
+			}
+		}
 	}
 }
 

@@ -1,4 +1,6 @@
-﻿accessory_genes = {
+﻿special_genes = {
+
+accessory_genes = {
 
 	headwear = {
 		inheritable = no
@@ -1363,5 +1365,7 @@
 		}
 
 	}
+
+}
 
 }

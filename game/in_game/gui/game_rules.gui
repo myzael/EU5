@@ -177,8 +177,14 @@ window = {
 													ContextualTooltipType = {
 														blockoverride "title_icon" {
 															icon = {
+																visible = "[JominiGameRules.WouldBeIronman]"
 																using = tooltip_title_icon_size
 																texture = "gfx/interface/icons/flat_icons/ironman_flat.dds"
+															}
+															icon = {
+																visible = "[Not( JominiGameRules.WouldBeIronman )]"
+																using = tooltip_title_icon_size
+																texture = "gfx/interface/icons/flat_icons/ironman_off.dds"
 															}
 														}
 														blockoverride "title_text" {

@@ -46,7 +46,7 @@
 	}
 	
 	has_overlords_ruler = no
-	annexation_speed = 0
+	can_be_annexed = no
 	is_colonial_subject = yes
 
 	diplomatic_capacity_cost_scale = 0.5
@@ -63,6 +63,7 @@
 	}
 	
 	fleet_basing_rights = yes
+	food_access = yes
 	
 	overlord_share_exploration = yes
 	

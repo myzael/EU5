@@ -1,4 +1,6 @@
 ﻿mula_sangh_school = {
+	color = rgb { 46 86 41 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -12,6 +14,8 @@
 }
 
 balatkara_gana_school = {
+	color = rgb { 95 77 46 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -25,6 +29,8 @@ balatkara_gana_school = {
 }
 
 kashtha_sangha_school = {
+	color = rgb { 95 46 63 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -38,6 +44,8 @@ kashtha_sangha_school = {
 }
 
 upkesa_gaccha_school = {
+	color = rgb { 46 91 95 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -51,6 +59,8 @@ upkesa_gaccha_school = {
 }
 
 kharatara_gaccha_school = {
+	color = rgb { 128 85 12 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -64,6 +74,8 @@ kharatara_gaccha_school = {
 }
 
 tapa_gaccha_school = {
+	color = rgb { 108 33 37 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}
@@ -77,6 +89,8 @@ tapa_gaccha_school = {
 }
 
 tristutik_gaccha_school = {
+	color = rgb { 84 33 108 }
+
 	enabled_for_country = {
 		religion = religion:jain
 	}

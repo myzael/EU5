@@ -18,8 +18,10 @@ irish_booleying_advance = {
 	age = age_1_traditions
 	
 	potential = {
-		culture = culture:irish
-		culture = culture:norse_gael
+		OR = {
+			culture = culture:irish
+			culture = culture:norse_gael
+		}
 	}
 	
 	global_livestock_output_modifier = 0.1

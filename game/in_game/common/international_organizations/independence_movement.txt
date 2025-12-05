@@ -27,6 +27,15 @@
 		}
 	}
 	
+	join_defensive_wars_always = {
+		custom_tooltip = {
+			text = independence_movement_join_war_def_always_tt
+			scope:target ?= {
+				this = root.international_organization_target
+			}
+		}
+	}
+
 	create_visible_trigger = {
 		is_subject = yes
 		overlord = scope:target

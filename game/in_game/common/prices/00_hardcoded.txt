@@ -215,39 +215,27 @@ relocate_market = {
 }
 
 train_general = {
-	gold = 20
-	scaled_gold = 10
-	
-	max_scale = 10000
+	army_tradition = 10
 }
 
 train_admiral = {
-	gold = 20
-	scaled_gold = 10
-	
-	max_scale = 10000
+	navy_tradition = 10
 }
 
 recruit_explorer = {
 	gold = 20
 	scaled_gold = 5
 	
-	max_scale = 2000
+	max_scale = 1000
 }
 
 
 hire_advisor = {
-	gold = 20
-	scaled_gold = 5
-	
-	max_scale = 5000
+	government_power = 20
 }
 
 hire_artist = {
-	gold = 20
-	scaled_gold = 3
-	
-	max_scale = 1000
+	prestige = 10
 }
 
 destroy_market = {
@@ -1076,7 +1064,6 @@ coup_attempt_disaster_actions_price = {
 }
 
 hyw_main_actions_price = {
-	scaled_gold = 1
 	government_power = 10
 }
 

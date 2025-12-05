@@ -83,13 +83,18 @@ types Scrollbar
 
 		block "subheader_upper_divider" {}
 
-		searchbar = {
-			datacontext = "[FilteredSortedList.GetSearchBar]"
-			block "searchbar_visible" {
-				visible = "[Or(SearchBar.HasSearchFilterCategories, SearchBar.HasTextSearchFilters)]"
-			}
-		}
+		hbox = {
+			layoutpolicy_horizontal = expanding
 
+			searchbar = {
+				datacontext = "[FilteredSortedList.GetSearchBar]"
+				block "searchbar_visible" {
+					visible = "[Or(SearchBar.HasSearchFilterCategories, SearchBar.HasTextSearchFilters)]"
+				}
+			}
+
+			block "extra_searchbar_content" {}
+		}
 		# block "subheader_lower_divider" {}
 
 		widget = {

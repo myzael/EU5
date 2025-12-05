@@ -1658,20 +1658,10 @@ tianxia = {
 			international_organization:middle_kingdom = {
 				custom_tooltip = {
 					text = chi_have_extra_celestial_governor_tt
-					change_variable = {
-						name = num_of_celestial_governors
-						add = 1
-					}
 				}
 			}
 		}
 		on_deactivate = {
-			hidden_effect = {
-				change_variable = {
-					name = num_of_celestial_governors
-					subtract = 1
-				}
-			}
 		}
 		country_modifier = {
 			#Celestial Governor benefits

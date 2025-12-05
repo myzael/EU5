@@ -41,6 +41,18 @@
 	}
 
 	text = {
+		localization_key = character_title_colonel
+
+		trigger = {
+			is_adult = yes
+			is_ruler = no
+			is_mercenary_leader = yes
+			has_trait_category = general
+			birth_location = { has_institution = institution:artillery_institution } # age 4
+		}
+	}
+
+	text = {
 		localization_key = character_title_nobility_pirate
 
 		trigger = {
@@ -425,3 +437,170 @@ character_title_prefix_captain = {
 }
 character_title_prefix_captain_female = { parent = character_title_prefix_captain suffix = "_female" }
 character_title_prefix_captain_plural = { parent = character_title_prefix_captain suffix = "_plural" }
+
+
+
+
+character_title_prefix_colonel = {
+	type = culture
+
+	# Dialects
+	text = {
+		localization_key = colonel_catalan
+		trigger = { dialect ?= { this = dialect:catalan_dialect } }
+	}
+	text = {
+		localization_key = colonel_danish
+		trigger = { dialect ?= { this = dialect:danish_dialect } }
+	}
+	text = {
+		localization_key = colonel_norwegian
+		trigger = { dialect ?= { this = dialect:norwegian_dialect } }
+	}
+	text = {
+		localization_key = colonel_dutch
+		trigger = { dialect ?= { this = dialect:dutch_dialect } }
+	}
+	text = {
+		localization_key = colonel_icelandic
+		trigger = { dialect ?= { this = dialect:icelandic_dialect } }
+	}
+	text = {
+		localization_key = colonel_scottish_gaelic
+		trigger = { dialect ?= { this = dialect:scottish_gaelic_dialect } }
+	}
+	text = {
+		localization_key = colonel_slovak
+		trigger = { dialect ?= { this = dialect:slovak_dialect } }
+	}
+	text = {
+		localization_key = colonel_latvian
+		trigger = { dialect ?= { this = dialect:latvian_dialect } }
+	}
+	text = {
+		localization_key = colonel_estonian
+		trigger = { dialect ?= { this = dialect:estonian_dialect } }
+	}
+	text = {
+		localization_key = colonel_breton
+		trigger = { dialect ?= { this = dialect:breton_dialect } }
+	}
+	text = {
+		localization_key = colonel_norman
+		trigger = { dialect ?= { this = dialect:norman_dialect } }
+	}
+	text = {
+		localization_key = colonel_low_german
+		trigger = { dialect ?= { this = dialect:low_german_dialect } }
+	}
+	text = {
+		localization_key = colonel_scots
+		trigger = { dialect ?= { this = dialect:scots_dialect } }
+	}
+
+	# Languages
+	text = {
+		localization_key = colonel_swedish
+		trigger = { language ?= { this = language:scandinavian_language } }
+	}
+	text = {
+		localization_key = colonel_spanish
+		trigger = { language ?= { this = language:spanish_language } }
+	}
+	text = {
+		localization_key = colonel_occitan
+		trigger = { language ?= { this = language:occitan_language } }
+	}
+	text = {
+		localization_key = colonel_french
+		trigger = { language ?= { this = language:french_language } }
+	}
+	text = {
+		localization_key = colonel_frisian
+		trigger = { language ?= { this = language:frisian_language } }
+	}
+	text = {
+		localization_key = colonel_north_italian
+		trigger = { language ?= { this = language:north_italian_language } }
+	}
+	text = {
+		localization_key = colonel_italian
+		trigger = { language ?= { this = language:south_italian_language } }
+	}
+	text = {
+		localization_key = colonel_german
+		trigger = { language ?= { this = language:german_language } }
+	}
+	text = {
+		localization_key = colonel_lithuanian
+		trigger = { language ?= { this = language:baltic_language } }
+	}
+	text = {
+		localization_key = colonel_finnish
+		trigger = { language ?= { this = language:finnish_language } }
+	}
+	text = {
+		localization_key = colonel_polish
+		trigger = { language ?= { this = language:west_slavic_language } }
+	}
+	text = {
+		localization_key = colonel_czech
+		trigger = { language ?= { this = language:czechslovak_language } }
+	}
+	text = {
+		localization_key = colonel_hungarian
+		trigger = { language ?= { this = language:hungarian_language } }
+	}
+	text = {
+		localization_key = colonel_south_slavic
+		trigger = { language ?= { this = language:serbo_croatian_language } }
+	}
+	text = {
+		localization_key = colonel_bulgarian
+		trigger = { language ?= { this = language:bulgarian_language } }
+	}
+	text = {
+		localization_key = colonel_romanian
+		trigger = { language ?= { this = language:romanian_language } }
+	}
+	text = {
+		localization_key = colonel_greek
+		trigger = { language ?= { this = language:greek_language } }
+	}
+	text = {
+		localization_key = colonel_russian
+		trigger = { language ?= { this = language:east_slavic_language } }
+	}
+	text = {
+		localization_key = colonel_ruthenian
+		trigger = { language ?= { this = language:ruthenian_language } }
+	}
+	text = {
+		localization_key = colonel_basque
+		trigger = { language ?= { this = language:basque_language } }
+	}
+	text = {
+		localization_key = colonel_welsh
+		trigger = { language ?= { this = language:brythonic_language } }
+	}
+	text = {
+		localization_key = colonel_irish
+		trigger = { language ?= { this = language:gaelic_language } }
+	}
+	text = {
+		localization_key = colonel_arabic
+		trigger = { language ?= { this = language:arabic_language } }
+	}
+	text = {
+		localization_key = colonel_english
+		trigger = { language ?= { this = language:english_language } }
+	}
+
+	# Fallback
+	text = {
+		fallback = yes
+		localization_key = colonel_default
+	}
+}
+character_title_prefix_colonel_female = { parent = character_title_prefix_colonel suffix = "_female" }
+character_title_prefix_colonel_plural = { parent = character_title_prefix_colonel suffix = "_plural" }

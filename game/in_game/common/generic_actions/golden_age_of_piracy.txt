@@ -5,7 +5,7 @@ create_allied_pirate_nation = {
 	show_message = no #CAESAR-18619 Turn into Major Events eventually
 	potential = {
 		scope:actor = {
-			NOT = {country_type = navy}		
+			NOT = { country_type = navy }		
 		}
 	}
 
@@ -14,18 +14,10 @@ create_allied_pirate_nation = {
 			num_of_ports >= 10
 			
 			#Has a relatively substantial Navy
-			navy_size_percentage >= 0.33
-			#Has coastal low control sailor buildings
-			any_port_in_country = {
-				is_capital = no
-				any_buildings_in_location = {
-					owner ?= scope:actor
-					building_type = {
-						building_sailors_produced > 0
-					}
-				}
-				local_control < 0.3
-			}
+			navy_size_percentage >= 0.25
+
+			#Produces at least some sailors
+			monthly_sailors > 0
 			
 		}
 		
@@ -79,13 +71,6 @@ create_allied_pirate_nation = {
 		visible = {
 			is_coastal = yes
 			is_capital = no
-			any_buildings_in_location = {
-				owner ?= scope:actor
-				building_type = {
-					building_sailors_produced > 0
-				}
-			}
-			local_control < 0.3
 		}
 	}
 	
@@ -101,7 +86,20 @@ create_allied_pirate_nation = {
 
 	ai_will_do = {
 		#The AI will be heavily discouraged from doing this
-		add = -20
+		subtract = {
+			value = 25
+			desc = BASE_VALUE
+		}
+		if = {
+			limit = {
+				scope:actor = { is_disloyal_subject = yes }
+			}
+			add = {
+				desc = "[subject_loyalty|e]"
+				value = 100
+				subtract = scope:actor.subject_loyalty
+			}
+		}
 		add = {
 			desc = "[ports|e]"
 			value = {
@@ -110,50 +108,36 @@ create_allied_pirate_nation = {
 				multiply = 100
 			}
 		}
-		add = {
-			desc = "IS_BANKRUPT_TOOLTIP"
-			if = {
-				limit = {	
-					scope:actor ?= { 
-						is_during_bankruptcy = yes
-					}
+		if = {
+			limit = {	
+				scope:actor ?= { 
+					is_during_bankruptcy = yes
 				}
-				value = -1000
+			}
+			subtract = {
+				value = 1000
+				desc = "IS_BANKRUPT_TOOLTIP"
 			}
 		}
 		if = {
 			limit = {
 				scope:actor ?= { num_loans > 0 }
 			}
-			add = {
+			subtract = {
 				desc = "PENDING_LOANS_TOOLTIP"
 				value = scope:actor.num_loans
 				multiply = -50
 			}
 		}
-		add = {
-			desc = "[navy|e]"
-			value = {
-				add = scope:actor.navy_size
-				divide = 100
+		if = {
+			limit = { exists = scope:target_location }
+			subtract = {
+				value = scope:target_location.proximity
+				desc = "[proximity|e]"
 			}
-		}
-		add = {
-			desc = "[navy_maintenance|e]"
-			value = {
-				add = scope:actor.navy_maintenance
-				multiply = 5
-			}
-		}
-		add = {
-			desc = "[income|e]"
-			value = {
-				add = scope:actor.monthly_balance
-				if = {
-					limit = { scope:actor.monthly_balance < 0 }
-					multiply = 2
-				}
-				else = { multiply = 0.25 }
+			subtract = {
+				value = scope:target_location.rank_index
+				multiply = 10
 			}
 		}
 	}

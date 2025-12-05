@@ -569,7 +569,7 @@ sindhi_language = {
 	male_names = {
 		Ali_Sher Fath name_nizam.name_al_din Furuz_Salah_ad-Din Shuja'_Beg Nanda
 		Shah_Husayn name_muhammad.name_jesus name_muhammad.name_baqi Jani_Beg Yar_Muhammad
-		name_muhammad.name_murad Gulam Sarfaraz Gulam_Nabi 'Abd_an-Nabi Thara
+		name_muhammad.name_murad Gulam Sarfaraz Gulam_Nabi Abd_an-Nabi Thara
 		Nur_Mahammad name_muhammad Muzzafar name_ali name_khalil Sikandar Bhenji Hamirji
 		Bhav name_natwar Sidhraj Ghulam Hussain
 

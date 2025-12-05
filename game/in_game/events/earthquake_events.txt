@@ -143,9 +143,10 @@ scripted_effect minor_earthquake_damage = {
 			add = {
 				value = num_buildings
 				divide = 15
+				ceiling = yes
 			}
 		}
-		location = { destroy_building = prev }
+		location = { minor_destroy_building_levels_in_location = yes }
 	}
 	every_unit_in_location = {
 		damage_unit_percent = { 0.33 1 }
@@ -168,7 +169,7 @@ scripted_effect minor_earthquake_damage = {
 					divide = 20
 				}
 			}
-			location = { destroy_building = prev }
+			location = { minor_destroy_building_levels_in_location = yes }
 		}
 		every_unit_in_location = {
 			damage_unit_percent = { 0 0.33 }
@@ -193,9 +194,10 @@ scripted_effect major_earthquake_damage = {
 			add = {
 				value = num_buildings
 				divide = 10
+				ceiling = yes
 			}
 		}
-		location = { destroy_building = prev }
+		location = { major_destroy_building_levels_in_location = yes }
 	}
 	every_unit_in_location = {
 		damage_unit_percent = { 0.5 1 }
@@ -218,7 +220,7 @@ scripted_effect major_earthquake_damage = {
 					divide = 15
 				}
 			}
-			location = { destroy_building = prev }
+			location = { major_destroy_building_levels_in_location = yes }
 		}
 		every_unit_in_location = {
 			damage_unit_percent = { 0.33 1 }
@@ -242,9 +244,10 @@ scripted_effect catastrophic_earthquake_damage = {
 			add = {
 				value = num_buildings
 				divide = 8
+				ceiling = yes
 			}
 		}
-		location = { destroy_building = prev }
+		location = { catastrophic_destroy_building_levels_in_location = yes }
 	}
 	every_unit_in_location = {
 		destroy_unit = yes
@@ -266,7 +269,7 @@ scripted_effect catastrophic_earthquake_damage = {
 					divide = 10
 				}
 			}
-			location = { destroy_building = prev }
+			location = { major_destroy_building_levels_in_location = yes }
 		}
 		every_unit_in_location = {
 			damage_unit_percent = { 0.5 1 }
@@ -350,13 +353,16 @@ earthquake_events.1 = { #Earthquake in Constantinople
  		hidden_effect = {
  			scope:target_location = {
  				minor_earthquake_damage = yes
- 				add_location_modifier = {
- 					modifier = minor_recovery_effort
- 					years = 10
- 					mode = add_and_extend
- 				}
- 			}
- 		}
+			}
+		}
+		scope:target_location = {
+			add_location_modifier = {
+				modifier = minor_recovery_effort
+				years = 10
+				mode = add_and_extend
+			}
+
+		}
  	}
  }
 
@@ -4940,60 +4946,60 @@ earthquake_events.92 = { #generic catastrophic earthquake
 	}
 }
 
- earthquake_events.93 = { #https://es.wikipedia.org/wiki/Terremoto_del_Cabo_de_San_Vicente_de_1356
- 	type = country_event
- 	title = earthquake_events.title
- 	desc = earthquake_events_catastrophic.desc
- 	fire_only_once = yes
+earthquake_events.93 = { #https://es.wikipedia.org/wiki/Terremoto_del_Cabo_de_San_Vicente_de_1356
+	type = country_event
+	title = earthquake_events.title
+	desc = earthquake_events_catastrophic.desc
+	fire_only_once = yes
 
- 	trigger = {
- 		owns = location:sevilla
- 		current_year >= 1351
- 		current_year <= 1361
- 	}
+	trigger = {
+		owns = location:sevilla
+		current_year >= 1351
+		current_year <= 1361
+	}
 
- 	image = "gfx/interface/illustrations/event/backgrounds/special/earthquake.dds"
-	
- 	immediate = {
- 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	image = "gfx/interface/illustrations/event/backgrounds/special/earthquake.dds"
 
- 		location:lisbon = { save_scope_as = target_location }
- 	}
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+
+		location:sevilla = { save_scope_as = target_location }
+	}
 		
- 	option = {
- 		name = earthquake_events_catastrophic.a
+	option = {
+		name = earthquake_events_catastrophic.a
 
- 		custom_tooltip = earthquake_events_catastrophic.a.tt
- 		hidden_effect = {
- 			scope:target_location = {
- 				catastrophic_earthquake_damage = yes
- 				if = {
- 					limit = {
- 						location_rank = location_rank:city
- 					}
- 					change_location_rank = location_rank:town
- 				}
- 			}
- 		}
- 	}
-	
- 	option = {
- 		name = earthquake_events_catastrophy.b
+		custom_tooltip = earthquake_events_catastrophic.a.tt
+		hidden_effect = {
+			scope:target_location = {
+				catastrophic_earthquake_damage = yes
+				if = {
+					limit = {
+						location_rank = location_rank:city
+					}
+					change_location_rank = location_rank:town
+				}
+			}
+		}
+	}
 
- 		major_earthquake_payment = yes
- 		custom_tooltip = earthquake_events_catastrophy.b.tt
- 		hidden_effect = {
- 			scope:target_location = {
- 				catastrophic_earthquake_damage = yes
- 				add_location_modifier = {
- 					modifier = major_recovery_effort
- 					years = 10
- 					mode = add_and_extend
- 				}
- 			}
- 		}
- 	}
- }
+	option = {
+		name = earthquake_events_catastrophy.b
+
+		major_earthquake_payment = yes
+		custom_tooltip = earthquake_events_catastrophy.b.tt
+		hidden_effect = {
+			scope:target_location = {
+				catastrophic_earthquake_damage = yes
+				add_location_modifier = {
+					modifier = major_recovery_effort
+					years = 10
+					mode = add_and_extend
+				}
+			}
+		}
+	}
+}
 
 scripted_trigger earthquake_owns_controls_gallipoli_neightboor_location = {
 	#Neighboor locations of Gallipoli (including sea neighboors)
@@ -5139,7 +5145,7 @@ earthquake_events.1000 = { #The Gallipoli Earthquake - Be mindful - connected to
 						}
 					}
 					check_range_bounds = no
-					location = { destroy_building = prev }
+					location = { catastrophic_destroy_building_levels_in_location = yes }
 				}
 				#Affect neighboor locations
 				every_neighbor_location = { 
@@ -5204,7 +5210,7 @@ earthquake_events.1000 = { #The Gallipoli Earthquake - Be mindful - connected to
 						}
 					}
 				
-					location = { destroy_building = prev }
+					location = { major_destroy_building_levels_in_location = yes }
 				}
 				#Affect neighboor locations
 				every_neighbor_location = { 

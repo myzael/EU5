@@ -2166,6 +2166,22 @@
 	# Default
 
 	text = {
+		localization_key = rank_county_landgraviate
+		trigger = {
+			country_rank_is_county = yes
+			has_reform = government_reform:landgraviate
+		}
+	}
+
+	text = {
+		localization_key = rank_county_margraviate
+		trigger = {
+			country_rank_is_county = yes
+			has_reform = government_reform:margraviate
+		}
+	}
+
+	text = {
 		localization_key = rank_county_turkish
 		trigger = {
 

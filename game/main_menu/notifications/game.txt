@@ -65,7 +65,7 @@ confirm_continue_playset_issues = {
 	level = alert
 	category = mods
 	window_file = @default_window_file
-	window_name = @default_window_name
+	window_name = "playset_warning_message"
 
 	title_text = MODS_GUI_CONFIRM_CONTINUE_PLAYSET_ISSUES
 	text = MODS_GUI_CONFIRM_CONTINUE_PLAYSET_ISSUES_DESC

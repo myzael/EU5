@@ -887,7 +887,7 @@ culture_japan.17 = { #The Wakō Pirates and the Bahan Trade
 		capital.market = {
 			add_merchant_power = {
 				country = root
-				power = 20
+				power = merchant_power_mild_bonus
 				months = 24
 				key = wako_raids
 			}

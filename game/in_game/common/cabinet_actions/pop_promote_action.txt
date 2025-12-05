@@ -18,8 +18,12 @@
 			data = name
 		}
 		column = {
-			data = population
+			data = employment
 		}
+		column = {
+			data = peasant_population
+		}
+		default_sort = employment
 		map_color = define:NMapColors|MAP_COLOR_HIGH
 	}
 
@@ -31,5 +35,9 @@
 		show_for_owner = yes
 	}
 	
-	
+	progress = {
+		scope:target = {
+			value = "unfilled_jobs_in_province_percentage"
+		}
+	}	
 }

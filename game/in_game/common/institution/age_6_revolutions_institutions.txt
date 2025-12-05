@@ -53,6 +53,8 @@
 	spread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_late
 	spread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_late
 	spread_from_any_import = institution_trade_spread_value_late
+	spread_from_any_export = institution_trade_spread_value_late
+	
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late
@@ -108,6 +110,7 @@ industrialization = {
 	spread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_late
 	spread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_late
 	spread_from_any_import = institution_trade_spread_value_late
+	spread_from_any_export = institution_trade_spread_value_late
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late
@@ -154,6 +157,7 @@ levee_en_masse = {
 	spread_from_friendly_coast_border_location = institution_base_spread_from_friendly_neighbor_with_late
 	spread_from_any_coast_border_location = institution_base_spread_from_neighbor_with_late
 	spread_from_any_import = institution_trade_spread_value_late
+	spread_from_any_export = institution_trade_spread_value_late
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late

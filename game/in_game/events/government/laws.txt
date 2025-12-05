@@ -1211,7 +1211,7 @@ laws.0024 = { # Merchants caught selling illegal religious goods
 				country = root
 				key = merchants_not_supported
 				months = 60
-				power = -15
+				power = merchant_power_weak_penalty
 			}
 		}
 	}
@@ -1236,7 +1236,7 @@ laws.0024 = { # Merchants caught selling illegal religious goods
 				country = root
 				key = trade_focus
 				months = 30
-				power = 10
+				power = merchant_power_weak_bonus
 			}
 		}
 	}

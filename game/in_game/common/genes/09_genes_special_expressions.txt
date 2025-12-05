@@ -1308,7 +1308,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.8 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1316,7 +1316,7 @@
 							normal = overlay
 							# properties = 
 						}
-						age = age_preset_expressions
+						age = age_preset_expressions_early
 						priority = 0
 						decal_apply_order = pre_skin_color # pre_skin_color (default) | post_skin_color
 					}
@@ -1334,8 +1334,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.25 }
-							{ 0.75  0.5 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1370,7 +1369,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.8 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1378,7 +1377,7 @@
 							normal = overlay
 							# properties = 
 						}
-						age = age_preset_expressions
+						age = age_preset_expressions_early
 						priority = 0
 						decal_apply_order = pre_skin_color # pre_skin_color (default) | post_skin_color
 					}
@@ -1396,8 +1395,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.25 }
-							{ 0.75  0.5 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1432,7 +1430,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.8 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1440,7 +1438,7 @@
 							normal = overlay
 							# properties = 
 						}
-						age = age_preset_expressions
+						age = age_preset_expressions_early
 						priority = 0
 						decal_apply_order = pre_skin_color # pre_skin_color (default) | post_skin_color
 					}
@@ -1458,8 +1456,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.25 }
-							{ 0.75  0.5 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1494,7 +1491,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.8 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1502,7 +1499,7 @@
 							normal = overlay
 							# properties = 
 						}
-						age = age_preset_expressions
+						age = age_preset_expressions_early
 						priority = 0
 						decal_apply_order = pre_skin_color # pre_skin_color (default) | post_skin_color
 					}
@@ -1520,8 +1517,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.25 }
-							{ 0.75  0.5 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1556,7 +1552,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.8 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply
@@ -1564,7 +1560,7 @@
 							normal = overlay
 							# properties = 
 						}
-						age = age_preset_expressions
+						age = age_preset_expressions_early
 						priority = 0
 						decal_apply_order = pre_skin_color # pre_skin_color (default) | post_skin_color
 					}
@@ -1582,8 +1578,7 @@
 						alpha_curve = {				 #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
 							#gene strength%, decal alpha
 							{ 0.0  0.0 }
-							{ 0.5  0.25 }
-							{ 0.75  0.5 }
+							{ 0.5  0.9 }
 							{ 1.0  1.0 }
 						}
 						blend_modes = {              #overlay/replace/hard_light/multiply

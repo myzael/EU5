@@ -2,7 +2,7 @@
 # These are relations that can be toggled on or off between countries through diplo actions
 #
 #<name> = {
-#	type = <diplomacy/subject> defines if the relation type is something you can have with every country or only with subjects
+#	type = <diplomacy/subject/union> defines if the relation type is something you can have with every country, only with subjects or only with your union partners
 #	relation_type = <oneway/mutual> determines if the relationship is a giving/receiving kind or if partners are mutual in the relationship
 #   uses_diplo_capacity = <none/mutual/giving/receiving> whether this relation uses a diplo relation slot
 #   diplomatic_capacity_cost = <scriptvalue>

@@ -245,6 +245,7 @@ republican_electorate_law = {
 	landholders = {
 		country_modifier = {
 			nobles_estate_levy_size = 0.10
+			levy_combat_efficiency_modifier = 0.05
 			nobles_estate_target_satisfaction = small_permanent_target_satisfaction
 			global_nobles_estate_power = 0.25
 			monthly_towards_serfdom = societal_value_monthly_move
@@ -257,6 +258,7 @@ republican_electorate_law = {
 	citizenry = {
 		country_modifier = {
 			burghers_estate_levy_size = 0.10
+			levy_combat_efficiency_modifier = 0.05
 			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
 			global_burghers_estate_power = 0.25
 		}
@@ -291,6 +293,7 @@ republican_electorate_law = {
 	military_rulership_policy = {
 		country_modifier = {
 			army_tradition_decay = -0.001
+			levy_combat_efficiency_modifier = 0.20
 			monthly_towards_land = societal_value_monthly_move
 		}
 		estate_preferences = {

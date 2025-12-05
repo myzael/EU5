@@ -13,6 +13,12 @@ cb_high_kingship_subjugate = {
 		any_international_organizations_member_of = {
 			international_organization_type = international_organization_type:high_kingship
 		}
+
+		scope:target ?= {
+			any_international_organizations_member_of = {
+				international_organization_type = international_organization_type:high_kingship
+			}
+		}
 	}
 	allow_creation = {
 		any_international_organizations_member_of = {

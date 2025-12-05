@@ -482,6 +482,7 @@ rtr_rekindle_revolt = {
 	allow = {
 		scope:actor = {
 			NOT = { is_at_war_with = c:CHI }
+			NOT = { is_fighting_war_together_with = c:CHI }
 			NOT = { has_truce_with = c:CHI }
 			NOT = { is_subject_of = c:CHI }
 			var:rtr_yuan_allegiance < 0
@@ -677,11 +678,14 @@ rtr_declare_war_for_regional_supremacy = {
 					region = region:west_china_region
 				}
 			}
+			NOT = { country_type = pop }
 			within_diplomatic_range = scope:actor
 			NOT = { is_at_war_with = scope:actor }
 			NOT = { is_fighting_war_together_with = scope:actor }
 			NOT = { is_subject_of = scope:actor }
 			NOT = { ruler ?= scope:actor.ruler }
+		}
+		enabled = {
 			NOT = { has_truce_with = scope:actor }
 		}
 	}

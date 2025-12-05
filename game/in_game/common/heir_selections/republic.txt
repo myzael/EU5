@@ -950,69 +950,9 @@ podesta_elective = {
 	heir_is_allowed = {
 	}
 	calc = {
-		if = {
-			limit = {
-				exists = root
-			}
-			add = {
-				desc = "HEIR_SELECTION_ADM_DESC"
-				value = root.adm
-			}
-			add = {
-				desc = "HEIR_SELECTION_DIP_DESC"
-				value = root.dip
-			}
-			add = {
-				desc = "HEIR_SELECTION_MIL_DESC"
-				value = root.mil
-			}
-			add = {
-				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
-				value = character_age
-			}
-			add = {
-				desc = "HEIR_SELECTION_COUNTRY_PRESTIGE"
-				value = root.owner.prestige
-			}
-			if = {
-				limit = {
-					culture = scope:target.dominant_culture
-				}
-				add = {
-					desc = "HEIR_SELECTION_CULTURE"
-					value = 20
-				}
-			}
-			if = { 
-				limit = { modifier:blocked_from_being_ruler = yes }
-				add = {
-					desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
-					value = -1000 
-				}
-			}
-		}
-
-		# Here it goes the description for explaining the lottery election
-		if = {
-			limit = {
-				not = { exists = root }
-			}
-			add = {
-				desc = "HEIR_SELECTION_ADM_DESC"
-				value = 1
-			}
-			add = {
-				desc = "HEIR_SELECTION_DIP_DESC"
-				value = 1
-			}
-			add = {
-				desc = "HEIR_SELECTION_MIL_DESC"
-				value = 1
-			}
-			add = {
-				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
-				value = 1
-			}
+		add = {
+			desc = "HEIR_SELECTION_PODESTA_NO_HEIR"
+			value = -1
 		}
 	}
 

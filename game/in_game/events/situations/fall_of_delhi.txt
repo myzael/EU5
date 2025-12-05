@@ -796,28 +796,34 @@ fall_of_delhi.8 = {
 			}
 			save_scope_as = target_province
 		}
-		scope:target_province = {
-			ordered_location_in_province = {
-				order_by = population
-				max = 1
-				check_range_bounds = no
-				save_scope_as = target_capital
+		if = {
+			limit = { exists = scope:target_province }
+			scope:target_province = {
+				ordered_location_in_province = {
+					order_by = population
+					max = 1
+					check_range_bounds = no
+					save_scope_as = target_capital
+				}
+				every_location_in_province = {
+					remove_core = ROOT
+				}
 			}
-			every_location_in_province = {
-				remove_core = ROOT
-			}
-		}
-		scope:target_capital = {
-			set_variable = {
-				name = revolter_location
-				value = yes
-				months = 100
+			scope:target_capital = {
+				set_variable = {
+					name = revolter_location
+					value = yes
+					months = 100
+				}
 			}
 		}
 	}
 
 	option = {
 		name = delhi_situation.8.a
+		trigger = {
+			exists = scope:target_province
+		}
 		scope:target_capital = {
 			create_country_from_location = {
 				set_variable = {
@@ -837,20 +843,25 @@ fall_of_delhi.8 = {
 
 	option = {
 		name = delhi_situation.8.b
-
-		custom_tooltip = target_province_debuffs_dlh_tt
-		hidden_effect = {
-			scope:target_province = {
-				every_location_in_province = {
-					change_control = control_mild_penalty
-					every_pop = {
-						limit = {
-							owner = root
+		if = {
+			limit = { exists = scope:target_province }
+			custom_tooltip = {
+				text = target_province_debuffs_dlh_tt
+				scope:target_province = {
+					every_location_in_province = {
+						change_control = control_mild_penalty
+						every_pop = {
+							limit = {
+								owner = root
+							}
+							add_pop_satisfaction = pop_satisfaction_mild_penalty
 						}
-						add_pop_satisfaction = pop_satisfaction_mild_penalty
 					}
 				}
 			}
+		}
+		else = {
+			add_stability = stability_mild_penalty
 		}
 	}
 }
@@ -1223,7 +1234,7 @@ fall_of_delhi.14 = {	#Opposer Insults our Authority!
 				"active_resolution(resolution:fall_of_delhi_resolution).resolution_proposer" = {
 					change_variable = {
 						name = fall_of_delhi_vote_weight
-						add = 0.05
+						add = 0.01
 					}
 				}
 			}

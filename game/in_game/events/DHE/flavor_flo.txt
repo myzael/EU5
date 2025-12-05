@@ -54,6 +54,7 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1500.1.1
 		to = 1600.1.1
 		monthly_chance = 5
@@ -329,6 +330,7 @@ flavor_flo.20 = { #The Pazzi Conspiracy
 	
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1475.1.1
 		to = 1480.1.1
 		monthly_chance = 20
@@ -383,6 +385,7 @@ flavor_flo.27 = { #The Clock Tower of the Palazzo della Signoria
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1337.1.1
 		to = 1400.1.1
 		monthly_chance = 3
@@ -1161,6 +1164,7 @@ flavor_flo.38 = { # Nuova Cronica
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1337.1.1
 		to = 1348.12.30
 		monthly_chance = 3
@@ -1924,8 +1928,11 @@ flavor_flo.49 = { # The Consolidation of Power
 		government_type = government_type:republic
 		NOT = { has_reform = government_reform:dynastic_signoria_reform }
 
-		NOT = {
-			any_current_reforms = { is_major_reform = yes }
+		OR = {
+			NOT = {
+				any_current_reforms = { is_major_reform = yes }
+			}
+			any_current_reforms = { this = government_reform:signoria_reform }
 		}
 	}
 
@@ -1945,6 +1952,8 @@ flavor_flo.49 = { # The Consolidation of Power
 	option = {
 		name = flavor_flo.49.a
 		historical_option = yes
+
+		remove_current_major_government_reform = yes
 
 		add_reform = government_reform:dynastic_signoria_reform
 		change_societal_value = {
@@ -2180,6 +2189,7 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1340.1.1
 		to = 1350.1.1
 		monthly_chance = 10
@@ -2801,6 +2811,7 @@ flavor_flo.60 = {# Walter VI de Brienne on Florentine Throne
 	
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1342.1.1
 		to = 1345.1.1
 		monthly_chance = 25
@@ -2986,6 +2997,7 @@ flavor_flo.63 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = FLO
+		tag = TUS
 		from = 1365.1.1
 		to = 1385.1.1
 		monthly_chance = 10

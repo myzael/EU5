@@ -332,4 +332,30 @@
 			sort_by_tooltip_key = "PROVINCE_SORT_BY_REBEL_PROGRESS"
 		}
 	}
+
+	employment = {
+		widget = unfilled_jobs_in_province
+		width = 100
+		fixed_height = 32
+		is_constant_width = yes
+		sort = {
+			sort_value = {
+				value = unfilled_jobs_in_province
+			}
+			sort_by_tooltip_key = "PROVINCE_SORT_BY_UNFILLED_JOBS"
+		}
+	}
+
+	peasant_population = {
+		widget = province_peasant_population
+		width = 100
+		fixed_height = 32
+		is_constant_width = yes
+		sort = {
+			sort_value = {
+				value = "province_pop_type_population(pop_type:peasants)"
+			}
+			sort_by_tooltip_key = "PROVINCE_SORT_BY_PEASANT_POPULATION"
+		}
+	}
 }

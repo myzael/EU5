@@ -1091,6 +1091,13 @@ has_casus_belli_on = {
 	third =  THIRD_HAS_CASUS_BELLI_TRIGGER
 }
 
+has_casus_belli_of_type = {
+	none = HAS_ANY_CASUS_BELLI_OF_TYPE_TRIGGER
+	global = HAS_ANY_CASUS_BELLI_OF_TYPE_TRIGGER
+	first =  FIRST_HAS_ANY_CASUS_BELLI_OF_TYPE_TRIGGER
+	third =  THIRD_HAS_ANY_CASUS_BELLI_OF_TYPE_TRIGGER
+}
+
 has_target_casus_belli_on_us = {
 	none = HAS_TARGET_CASUS_BELLI_TRIGGER
 	global = HAS_TARGET_CASUS_BELLI_TRIGGER
@@ -1871,6 +1878,13 @@ annexation_cost = {
 	global = ANNEXATION_COST_TRIGGER
 	first =  FIRST_ANNEXATION_COST_TRIGGER
 	third =  THIRD_ANNEXATION_COST_TRIGGER
+}
+
+annexation_progress = {
+	none = ANNEXATION_PROGRESS_TRIGGER
+	global = ANNEXATION_PROGRESS_TRIGGER
+	first =  FIRST_ANNEXATION_PROGRESS_TRIGGER
+	third =  THIRD_ANNEXATION_PROGRESS_TRIGGER
 }
 
 is_disloyal_subject = {
@@ -2663,13 +2677,6 @@ known_in_country = {
 	global = KNOWN_IN_COUNTRY_TRIGGER
 	first = WE_KNOWN_IN_COUNTRY_TRIGGER
 	third = THIRD_KNOWN_IN_COUNTRY_TRIGGER
-}
-
-has_countries_with_antagonism = {
-	none = HAS_COUNTRIES_WITH_ANTAGONISM_TRIGGER
-	global = HAS_COUNTRIES_WITH_ANTAGONISM_TRIGGER
-	first = FIRST_HAS_COUNTRIES_WITH_ANTAGONISM_TRIGGER
-	third = THIRD_HAS_COUNTRIES_WITH_ANTAGONISM_TRIGGER
 }
 
 has_countries_with_timed_antagonism = {

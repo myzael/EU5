@@ -92,41 +92,41 @@ template action_tooltip_pop_out {
 	}
 }
 
-template action_tooltip_pop_out_mercenary {
-	ContextualTooltipType = {
-		blockoverride "title_text" {
-			text = "[MercenaryItem.GetMercenary.GetNameWithNoTooltip]"
-		}
+# template action_tooltip_pop_out_mercenary {
+# 	ContextualTooltipType = {
+# 		blockoverride "title_text" {
+# 			text = "[MercenaryItem.GetMercenary.GetNameWithNoTooltip]"
+# 		}
 
-		blockoverride "title_icon" {
-			icon = {
-				visible = "[Not(Mercenary.IsShip)]"
-				using = tooltip_title_icon_size
-				texture = "gfx/interface/icons/unit_category/mercenary.dds"
-			}
-			icon = {
-				visible = "[Mercenary.IsShip]"
-				using = tooltip_title_icon_size
-				texture = "gfx/interface/icons/unit_category/mercenary_navy.dds"
-				texture_density = 2
-			}
-		}
+# 		blockoverride "title_icon" {
+# 			icon = {
+# 				visible = "[Not(Mercenary.IsShip)]"
+# 				using = tooltip_title_icon_size
+# 				texture = "gfx/interface/icons/unit_category/mercenary.dds"
+# 			}
+# 			icon = {
+# 				visible = "[Mercenary.IsShip]"
+# 				using = tooltip_title_icon_size
+# 				texture = "gfx/interface/icons/unit_category/mercenary_navy.dds"
+# 				texture_density = 2
+# 			}
+# 		}
 
-		blockoverride "concept_link" {
-			text = "[mercenary|e]"
-		}
+# 		blockoverride "concept_link" {
+# 			text = "[mercenary|e]"
+# 		}
 
-		blockoverride "tooltip_content" {
-			using = action_tooltip_inner_content
-		}
+# 		blockoverride "tooltip_content" {
+# 			using = action_tooltip_inner_content
+# 		}
 
-		blockoverride "tooltip_ui_action_block" {
-			TooltipUIActionBlockOld = {
-				visible = "[PdxGuiWidget.HasUIAction]"
-			}
-		}
-	}
-}
+# 		blockoverride "tooltip_ui_action_block" {
+# 			TooltipUIActionBlockOld = {
+# 				visible = "[PdxGuiWidget.HasUIAction]"
+# 			}
+# 		}
+# 	}
+# }
 
 template select_interaction_target_action_provider_cabinet {
 	using = select_interaction_target_action_provider_base
@@ -413,59 +413,59 @@ types BuildingBlocksTooltipsTypes
 		}
 	}
 
-	# type TooltipFastScrolledStringPairList = TooltipListBase {
-	# 	ontextcontextchanged = "[SetStringPairListWithTitleFromTextContext(PdxGuiWidget.AccessSelf)]"
+	type TooltipFastScrolledStringPairList = TooltipListBase {
+		ontextcontextchanged = "[SetStringPairListWithTitleFromTextContext(PdxGuiWidget.AccessSelf)]"
 
-	# 	blockoverride "block_title" {
-	# 		block "block_title" {
-	# 			visible = "[StringPairList.HasTitle]"
-	# 			text = "[StringPairList.GetTitle]"
-	# 		}
-	# 	}
+		blockoverride "block_title" {
+			block "block_title" {
+				visible = "[StringPairList.HasTitle]"
+				text = "[StringPairList.GetTitle]"
+			}
+		}
 
-	# 	TooltipListScrollArea = {
-	# 		visible = "[DataModelHasItems(StringPairList.GetRows)]"
+		TooltipListScrollArea = {
+			visible = "[DataModelHasItems(StringPairList.GetRows)]"
 
-	# 		blockoverride "scrollarea_content" {
-	# 			fixedgridbox = {
-	# 				addcolumn = 420
-	# 				addrow = 30
-	# 				setitemsizefromcell = yes
-	# 				alwaystransparent = no
+			blockoverride "scrollarea_content" {
+				fixedgridbox = {
+					block "fixedgridbox_addcolumn" { addcolumn = 420 }
+					addrow = 30
+					setitemsizefromcell = yes
+					alwaystransparent = no
 
-	# 				datamodel = "[StringPairList.GetRows]"
-	# 				item = {
-	# 					widget = {
-	# 						background = {
-	# 							visible = "[IsOdd_int32(PdxGuiWidget.GetIndexInDataModel)]"
-	# 							using = tooltip_table_field_texture
-	# 						}
+					datamodel = "[StringPairList.GetRows]"
+					item = {
+						widget = {
+							background = {
+								visible = "[IsOdd_int32(PdxGuiWidget.GetIndexInDataModel)]"
+								using = tooltip_table_field_texture
+							}
 
-	# 						hbox = {
-	# 							margin = { 10 0 }
-	# 							text_single = {
-	# 								layoutpolicy_horizontal = expanding
-	# 								autoresize = no
-	# 								text = "[StringPair.GetLeft]"
-	# 							}
+							hbox = {
+								margin = { 10 0 }
+								text_single = {
+									layoutpolicy_horizontal = expanding
+									autoresize = no
+									text = "[StringPair.GetLeft]"
+								}
 
-	# 							text_single = {
-	# 								autoresize = yes
-	# 								text = "[StringPair.GetRight]"
-	# 							}
-	# 						}
-	# 					}
-	# 				}
-	# 			}
-	# 		}
-	# 	}
+								text_single = {
+									autoresize = yes
+									text = "[StringPair.GetRight]"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
-	# 	TooltipListEmptyContent = {
-	# 		block "stringpair_datamodel_is_empty" {
-	# 			visible = "[IsDataModelEmpty(StringPairList.GetRows)]"
-	# 		}
-	# 	}
-	# }
+		TooltipListEmptyContent = {
+			block "stringpair_datamodel_is_empty" {
+				visible = "[IsDataModelEmpty(StringPairList.GetRows)]"
+			}
+		}
+	}
 
 	type TooltipDebugStringPairList = TooltipStringPairList {
 		using = tooltip_debug_delayed_block

@@ -916,6 +916,20 @@ coa_def_tamgha_trigger = {
 	}
 }
 
+coa_def_bars_crescents_flag_trigger = { # Flag only trigger
+	scope:actor ?= {
+		OR = {
+			any_core_location = { region = region:swahili_coast_region }
+			any_core_location = { region = region:somalia_region }
+			any_core_location = { region = region:zimbabwe_region }
+			any_core_location = { region = region:madagascar_region }
+			any_core_location = { region = region:arabia_region }
+			any_core_location = { area = area:northern_ethiopia_area }
+			any_core_location = { area = area:baluchistan_area }
+			any_core_location = { area = area:fars_area }
+		}
+	}
+}
 
 coa_def_armenian_trigger = {
 	scope:actor ?= {
@@ -1786,7 +1800,24 @@ coa_def_burgundy_dynasty_trigger = {
 	scope:actor.ruler.dynasty ?= { dynasty:burgundy_dynasty ?= this }
 }
 
-coa_def_capetian_trigger = {
+coa_def_burgundy_portuguese_dynasty_trigger = { # Royal house including all branches
+	scope:actor ?= {
+		ruler ?= {
+			dynasty ?= {
+				OR = {
+					this = dynasty:burgundy_portuguese_dynasty
+					this = dynasty:avis_dynasty
+					this = dynasty:braganca_dynasty
+					this = dynasty:crato_dynasty
+					this = dynasty:lencastre_dynasty
+					this = dynasty:albuquerque_dynasty	
+				}
+			}
+		}
+	}
+}
+
+coa_def_capetian_trigger = { # Royal house including all branches
 	scope:actor ?= {
 		ruler ?= {
 			dynasty ?= {
@@ -1803,10 +1834,9 @@ coa_def_capetian_trigger = {
 			}
 		}
 	}
-	coa_def_burgundy_portugal_trigger = no # Excluding main branch
 }
 
-coa_def_capetian_semy_trigger = { # Late capetians
+coa_def_capetian_semy_trigger = { # Only the late capetians
 	scope:actor.ruler.dynasty ?= {
 		OR = {			
 			dynasty:anjou_dynasty ?= this
@@ -1846,10 +1876,9 @@ coa_def_casali_dynasty_trigger = {
 	scope:actor.ruler.dynasty ?= { dynasty:casali_dynasty ?= this }
 }
 
-coa_def_castile_dynasty_trigger = {
+coa_def_castile_dynasty_trigger = { # Royal house including all branches
 	scope:actor.ruler.dynasty ?= {
-		OR = {			
-			dynasty:ivree_dynasty ?= this
+		OR = {
 			dynasty:burgundy_castile_dynasty ?= this
 			dynasty:cerda_dynasty ?= this
 			dynasty:manuel_dynasty ?= this
@@ -1862,7 +1891,6 @@ coa_def_castile_dynasty_trigger = {
 			dynasty:tellez_castile_dynasty ?= this
 		}
 	}
-	coa_def_burgundy_ivree_trigger = no # Excluding main branch
 }
 
 coa_def_chatillon_dynasty_trigger = {
@@ -2307,20 +2335,12 @@ coa_def_christian_ruler_trigger = {
 	}
 }
 
-coa_def_burgundy_portugal_trigger = { # Workaround for Bourgogne-Portugal
+coa_def_burgundy_portugal_trigger = { # Either royal house or a vassal of Portugal
 	OR = {
-		coa_def_burgundy_dynasty_trigger = yes
-		coa_def_avis_dynasty_trigger = yes
-	}
-	OR = {
-		coa_def_portuguese_ruler_trigger = yes
+		coa_def_burgundy_portuguese_dynasty_trigger = yes
+		# coa_def_portuguese_ruler_trigger = yes
 		coa_def_POR_ensign_trigger = yes
 	}
-}
-
-coa_def_burgundy_ivree_trigger = { # Workaround for Ivrea-Castile
-	scope:actor.ruler.dynasty ?= { dynasty:ivree_dynasty ?= this }
-	NOT = { scope:actor.ruler.culture ?= { has_culture_group = culture_group:iberian_group } }
 }
 
 coa_def_peasant_rebels_ruler_trigger = { # TODO

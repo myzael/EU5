@@ -139,7 +139,7 @@ cossack_identity = {
 	country_modifier = {
 		cossacks_estate_target_satisfaction = large_privilege_target_satisfaction
 		global_cossacks_estate_power = 0.1
-		global_tribal_promotion = -1
+		block_tribal_promotion = yes
 		global_tribesmen_assimilation_blocked = yes
 		monthly_cossacks_estate_rebel_growth = -0.1
 	}

@@ -1016,11 +1016,34 @@ flavor_lit.11 = {
 	option = {
 		name = flavor_lit.11.b
 
-		show_as_tooltip = {
-			add_casus_belli = {
-				target = c:LIT
-				type = casus_belli:cb_claim_throne
-				years = 10
+		if = {
+			limit = { 
+				c:POL = {
+					NOT = {
+						has_casus_belli_of_type_on = { 
+							type = casus_belli:cb_claim_throne 
+							target = c:LIT 
+						}
+					}
+				}
+			}
+			c:POL = {
+				add_casus_belli = {
+					target = c:LIT
+					type = casus_belli:cb_claim_throne
+					years = 10
+				}
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				c:POL = {
+					add_casus_belli = {
+						target = c:LIT
+						type = casus_belli:cb_claim_throne
+						years = 10
+					}
+				}
 			}
 		}
 	}

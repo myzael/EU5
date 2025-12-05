@@ -624,6 +624,378 @@ template BuildingCategory_tooltip {
 	}
 }
 
+template BuildingCategory_income_tooltip {
+	ContextualTooltipType = {
+		# blockoverride "title_text" {
+		# 	text = "[CategoryBuildingTypesItem.GetCategory.GetNameWithNoTooltip]"
+		# }
+
+		# blockoverride "title_icon" {
+		# 	icon = {
+		# 		size = { 32 46 }
+		# 		texture = "[GetBuildingCategoryIcon(BuildingCategory.Self)]"
+		# 	}
+		# }
+
+		# blockoverride "concept_link" {
+		# 	text = [building_category|E]
+		# }
+
+		blockoverride "tooltip_content" {
+			TooltipTextBlock = {
+				blockoverride "text" {
+					text = "BUILDING_CATEGORY_INCOME_TT_TEXT"
+				}
+			}
+			TooltipListBase = { 
+				# blockoverride "block_title" {
+				# 	text = ""
+				# }
+
+				TooltipListColumnContent = {
+					TooltipTableColumn = {
+						blockoverride "column_title" {}
+						blockoverride "column_title_text" { 
+							text = "[building_type|e]" 
+						}
+						blockoverride "column_title_right" { 
+							expand = {}
+						}
+
+						blockoverride "field_left" {
+							visible = "[BuildingItem.HasBuildings]"
+							icon = {
+								size = { 25 25 }
+								texture = "[GetBuildingIcon(BuildingItem.GetBuildingType.Self)]"
+							}
+						}
+
+						blockoverride "field_text" {
+							visible = "[BuildingItem.HasBuildings]"
+							align = left|nobaseline
+							raw_text = "[BuildingItem.GetTotalLevel] [BuildingItem.GetBuildingType.GetName]"
+						}
+
+						blockoverride "field_right" { 
+							visible = "[BuildingItem.HasBuildings]"
+							expand = {} 
+						}
+					}
+
+					TooltipTableColumn = {
+						blockoverride "column_title" {}
+						blockoverride "column_title_left" { 
+							expand = {}
+						}
+						blockoverride "column_title_text" { text = "[tax_base|e]" }
+
+						blockoverride "field_left" { 
+							visible = "[BuildingItem.HasBuildings]"
+							expand = {}
+						}
+						blockoverride "field_text" {
+							visible = "[BuildingItem.HasBuildings]"
+							raw_text = "[BuildingItem.GetTotalNetProfit|2+]@tax_base!"
+							tooltipmeta = {
+								texture = "[GetBuildingIcon(BuildingItem.GetBuildingType.Self)]"
+								game_concept = "[tax_base|E]"
+								title = "BUILDING_TYPE_TAX_BASE_TT_TITLE"
+							}
+							tooltipwidget = { 
+								using = BuildingType_income_tooltip
+							}
+						}
+					}
+
+					TooltipTableColumn = {
+						blockoverride "column_title" {}
+						blockoverride "column_title_left" { 
+							expand = {}
+						}
+						blockoverride "column_title_text" { text = "[taxes|e]" }
+
+						blockoverride "field_left" { 
+							expand = {}
+							visible = "[BuildingItem.HasBuildings]"
+						}
+						blockoverride "field_text" {
+							visible = "[BuildingItem.HasBuildings]"
+							raw_text = "[BuildingItem.GetTotalIncome|2+]@gold!"
+							tooltipmeta = {
+								texture = "[GetBuildingIcon(BuildingItem.GetBuildingType.Self)]"
+								game_concept = "[income|E]"
+								title = "BUILDING_TYPE_INCOME_TT_TITLE"
+							}
+							tooltipwidget = { 
+								using = BuildingType_income_tooltip
+							}
+						}
+					}
+
+					blockoverride "column_datamodel"  {  datamodel = "[CategoryBuildingTypesItem.GetBuildingItems]" }
+				}
+			}
+		}
+	}
+}
+
+template BuildingType_income_tooltip {
+	ContextualTooltipType = {
+		# blockoverride "title_text" {
+		# 	text = "[CategoryBuildingTypesItem.GetCategory.GetNameWithNoTooltip]"
+		# }
+
+		# blockoverride "title_icon" {
+		# 	icon = {
+		# 		size = { 32 46 }
+		# 		texture = "[GetBuildingCategoryIcon(BuildingCategory.Self)]"
+		# 	}
+		# }
+
+		# blockoverride "concept_link" {
+		# 	text = [building_category|E]
+		# }
+
+		blockoverride "tooltip_content" {
+			TooltipTextBlock = {
+				blockoverride "text" {
+					text = "BUILDING_TYPE_INCOME_TT_TEXT"
+				}
+			}
+			TooltipScrolledContentSection = {
+				blockoverride "block_scrollarea" { maximumsize = { -1 600 }}
+				blockoverride "section_content"	{
+					
+					TooltipListBase = { 
+						# blockoverride "block_title" {
+						# 	text = ""
+						# }
+		
+						TooltipListColumnContent = {
+							TooltipTableColumn = {
+								blockoverride "column_title" {}
+								blockoverride "column_title_text" { 
+									text = "[building|e]" 
+								}
+								blockoverride "column_title_right" { 
+									expand = {}
+								}
+		
+								blockoverride "field_left" {}
+		
+								blockoverride "field_text" {
+									align = left|nobaseline
+									text = "BUILDING_TYPE_INCOME_TT_TABLE_FIELD"
+								}
+		
+								blockoverride "field_right" { 
+									expand = {} 
+								}
+							}
+		
+							TooltipTableColumn = {
+								blockoverride "column_title" {}
+								blockoverride "column_title_left" { 
+									expand = {}
+								}
+								blockoverride "column_title_text" { text = "[tax_base|e]" }
+		
+								blockoverride "field_left" { 
+									expand = {}
+								}
+								blockoverride "field_text" {
+									raw_text = "[Building.GetNetProfitValue|2+]@tax_base!"
+									tooltipwidget = {
+										using = BuildingProfit_Tooltip
+									}
+								}
+							}
+		
+							TooltipTableColumn = {
+								blockoverride "column_title" {}
+								blockoverride "column_title_left" { 
+									expand = {}
+								}
+								blockoverride "column_title_text" { text = "[taxes|e]" }
+		
+								blockoverride "field_left" { 
+									expand = {}
+								}
+								blockoverride "field_text" {
+									raw_text = "[Building.GetIncomeToOwner|2+]@gold!"
+									tooltipwidget = {
+										using = BuildingProfit_Tooltip
+									}
+								}
+							}
+		
+							blockoverride "column_datamodel"  {  datamodel = "[BuildingItem.GetBuildings]" }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+template BuildingCategory_upkeep_tooltip {
+	ContextualTooltipType = {
+		blockoverride "tooltip_content" {
+			TooltipTextBlock = {
+				blockoverride "text" {
+					text = "BUILDING_CATEGORY_UPKEEP_TT_TEXT"
+				}
+			}
+			TooltipListBase = { 
+				TooltipListColumnContent = {
+					TooltipTableColumn = {
+						blockoverride "column_title" {}
+						blockoverride "column_title_text" { 
+							text = "[building_type|e]" 
+						}
+						blockoverride "column_title_right" { 
+							expand = {}
+						}
+
+						blockoverride "field_left" {
+							visible = "[BuildingItem.HasBuildings]"
+							icon = {
+								size = { 25 25 }
+								texture = "[GetBuildingIcon(BuildingItem.GetBuildingType.Self)]"
+							}
+						}
+
+						blockoverride "field_text" {
+							visible = "[BuildingItem.HasBuildings]"
+							align = left|nobaseline
+							raw_text = "[BuildingItem.GetTotalLevel] [BuildingItem.GetBuildingType.GetName]"
+						}
+
+						blockoverride "field_right" { 
+							visible = "[BuildingItem.HasBuildings]"
+							expand = {} 
+						}
+					}
+
+					TooltipTableColumn = {
+						blockoverride "column_title" {}
+						blockoverride "column_title_left" { 
+							expand = {}
+						}
+						blockoverride "column_title_text" { text = "[building_maintenance|e]" }
+
+						blockoverride "field_left" { 
+							expand = {}
+							visible = "[BuildingItem.HasBuildings]"
+						}
+						blockoverride "field_text" {
+							visible = "[BuildingItem.HasBuildings]"
+							raw_text = "#R [BuildingItem.GetTotalUpkeep|2]#!@gold!"
+							tooltipmeta = {
+								texture = "[GetBuildingIcon(BuildingItem.GetBuildingType.Self)]"
+								game_concept = "[building_maintenance|E]"
+								title = "BUILDING_TYPE_UPKEEP_TT_TITLE"
+							}
+							tooltipwidget = { 
+								using = BuildingType_upkeep_tooltip
+							}
+						}
+					}
+
+					blockoverride "column_datamodel"  {  datamodel = "[CategoryBuildingTypesItem.GetBuildingItems]" }
+				}
+			}
+		}
+	}
+}
+
+template BuildingType_upkeep_tooltip {
+	ContextualTooltipType = {
+		blockoverride "tooltip_content" {
+			TooltipScrolledContentSection = {
+				blockoverride "block_scrollarea" { maximumsize = { -1 600 }}
+				blockoverride "section_content"	{
+					TooltipListBase = { 
+						TooltipListColumnContent = {
+							TooltipTableColumn = {
+								blockoverride "column_title" {}
+								blockoverride "column_title_text" { 
+									text = "[building|e]" 
+								}
+								blockoverride "column_title_right" { 
+									expand = {}
+								}
+		
+								blockoverride "field_left" {}
+		
+								blockoverride "field_text" {
+									align = left|nobaseline
+									text = "BUILDING_TYPE_INCOME_TT_TABLE_FIELD"
+								}
+		
+								blockoverride "field_right" { 
+									expand = {} 
+								}
+							}
+		
+							TooltipTableColumn = {
+								blockoverride "column_title" {}
+								blockoverride "column_title_left" { 
+									expand = {}
+								}
+								blockoverride "column_title_text" { text = "[building_maintenance|e]" }
+		
+								blockoverride "field_left" { 
+									expand = {}
+								}
+								blockoverride "field_text" {
+									raw_text = "#R [Building.GetUpkeep|2]#!@gold!"
+									tooltipwidget = {
+										using = Building_upkeep_tooltip
+									}
+								}
+							}
+		
+							blockoverride "column_datamodel"  {  datamodel = "[BuildingItem.GetBuildings]" }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+template Building_upkeep_tooltip {
+	SimpleContextualStringPairTooltipType = {
+		blockoverride "title_icon" {
+			icon = {
+				using = tooltip_title_icon_size
+				texture = "[GetConceptTexture('building_maintenance')]"
+			}
+		}
+
+		blockoverride "concept_link" {
+			text = "[building_maintenance|e]"
+		}
+		lowpriotextcontext = "[Building.GetUpkeepInfo]"
+	}
+}
+
+template building_production_efficiency_tooltip {
+	SimpleContextualStringPairTooltipType = {
+		blockoverride "title_icon" {
+			icon = {
+				using = tooltip_title_icon_size
+				texture = "gfx/interface/icons/flat_icons/building_panel/production_efficiency.dds"
+			}
+		}
+		blockoverride "concept_link" {
+			text = "[production_efficiency|e]"
+		}
+		lowpriotextcontext = "[Building.GetBuildingProductionEfficiencyInfo(ActiveProductionMethod.GetMethod)]"
+	}
+}
+
 template Building_All_Subsidized_Tooltip {	
 	ContextualTooltipType = {
 		blockoverride "title_icon" {

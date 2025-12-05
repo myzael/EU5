@@ -135,6 +135,18 @@ vaccination_advance = {
 	requires = modern_bureaucracy
 }
 
+quinine = {
+	age = age_6_revolutions
+	icon = scientific_revolution_advance
+	
+	malaria_resistance_modifier = 0.2
+
+	requires = modern_bureaucracy
+}
+
+
+
+
 construction_speed_revolutions = {
 	age = age_6_revolutions
 	global_construction_speed = 0.1

@@ -341,7 +341,15 @@ flavor_teu.5 = {
 		tag = TEU
 		religion = religion:catholic
 		any_neighbor_country = {
-			NOT = { religion.group = religion_group:christian }
+			NOR = {
+				religion.group = religion_group:christian
+				is_friendly_with = ROOT
+				opinion = {
+					target = ROOT
+					value >= 100
+				}
+				is_allied_with = { target = ROOT }
+			}
 		}
 	}
 
@@ -354,7 +362,15 @@ flavor_teu.5 = {
 		event_illustration_poptype_effect = { foreground = pop_type:clergy background = pop_type:soldiers }
 		random_neighbor_country = {
 			limit = {
-				NOT = { religion.group = religion_group:christian }
+				NOR = {
+					religion.group = religion_group:christian
+					is_friendly_with = ROOT
+					opinion = {
+						target = ROOT
+						value >= 100
+					}
+					is_allied_with = { target = ROOT }
+				}
 			}
 			save_scope_as = target_nation
 		}
@@ -774,7 +790,7 @@ flavor_teu.12 = {
 			add_merchant_power = {
 				country = ROOT
 				key = governmental_monopoly_renewed
-				power = 20
+				power = merchant_power_mild_bonus
 				years = 10
 			}
 		}

@@ -308,6 +308,116 @@ input_context={
 			modifier=shift
 		}
 	}
+	
+	input_action={
+		name="control_group_0"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_0"
+		scancode=39
+		
+		binding={
+			scancode=39
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_1"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_1"
+		scancode=30
+		
+		binding={
+			scancode=30
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_2"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_2"
+		scancode=31
+		
+		binding={
+			scancode=31
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_3"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_3"
+		scancode=32
+		
+		binding={
+			scancode=32
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_4"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_4"
+		scancode=33
+		
+		binding={
+			scancode=33
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_5"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_5"
+		scancode=34
+		
+		binding={
+			scancode=34
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_6"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_6"
+		scancode=35
+		
+		binding={
+			scancode=35
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_7"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_7"
+		scancode=36
+		
+		binding={
+			scancode=36
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_8"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_8"
+		scancode=37
+		
+		binding={
+			scancode=37
+			modifier=ctrl
+		}
+	}
+	
+	input_action={
+		name="control_group_9"
+		text="SETTING_INPUT_ACTION_CONTROL_GROUP_9"
+		scancode=38
+		
+		binding={
+			scancode=38
+			modifier=ctrl
+		}
+	}
 
 	input_action={
 		name="unpause"
@@ -355,6 +465,16 @@ input_context={
 		text="SETTING_INPUT_ACTION_CAMERA_RIGHT"
 		scancode=7
 		scancode=79
+	}
+
+	input_action={
+		name="camera_zoom_in"
+		text="SETTING_INPUT_ACTION_CAMERA_ZOOM_IN"
+	}
+
+	input_action={
+		name="camera_zoom_out"
+		text="SETTING_INPUT_ACTION_CAMERA_ZOOM_OUT"
 	}
 
 	input_action={
@@ -531,15 +651,6 @@ input_context={
 		text="mapmode_location_religion_name"
 		binding={
 			scancode=10
-			modifier=ctrl
-		}
-	}
-
-	input_action={
-		name="mapmode_raw_material"
-		text="mapmode_raw_material_name"
-		binding={
-			scancode=21
 			modifier=ctrl
 		}
 	}

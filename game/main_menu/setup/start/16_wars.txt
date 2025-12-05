@@ -844,4 +844,26 @@ war_manager = {
 		months = 60
 	}
 	
+	truce = { # English Backing of Balliol
+		defender = SCO
+		defender = SBL # Balliol is here to prevent England from attacking them if they win the Civil war
+		attacker = ENG
+		start_date = 1337.1.1
+		months = 48
+	}
+
+	truce = { # French Backing of Robert Bruce
+		defender = SBL
+		attacker = FRA
+		start_date = 1337.1.1
+		months = 48
+	}
+
+	truce = { # Portuguese-Castilian War of 1336-1337 # Established a bit on advance from the historical date (December 1337) due to gameplay reasons
+		defender = CAS
+		attacker = POR
+		start_date = 1337.1.1
+		months = 60
+	}
+
 }

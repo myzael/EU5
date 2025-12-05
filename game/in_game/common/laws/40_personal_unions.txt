@@ -122,6 +122,25 @@ union_foundation_law = {
 				}
 			}
 		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_SENIOR_PARTNER"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+		}
 	}
 	union_maintain_federal_status_policy = {
 		country_modifier = {
@@ -132,9 +151,9 @@ union_foundation_law = {
 		}
 		wants_propose_policy = {
 			#we give it -100 because the AI should not really care - Unions already start with that law, and it would be unenjoyable when there is a senior partner already established
-			add = {
+			subtract = {
 				desc = "VOTE_BASE_VALUE"
-				value = -100
+				value = 100
 			}
 		}
 		wants_this_policy_bias = {
@@ -143,48 +162,11 @@ union_foundation_law = {
 				desc = "POLICY_GUARANTEED_FREEDOM"
 				value = 50
 			}
-			if = {
-				limit = { is_most_likely_candidate_for_seniority = { union = scope:recipient } }
-				add = {
-					desc = "POLICY_WOULD_BECOME_LEADER_OF_ORGANIZATION"
-					value = -1000
-				}
-			}
-			else_if = {
-				limit = {
-					get_most_likely_candidate_for_seniority = { union = scope:recipient }
-					exists = scope:likely_senior_partner
-				}
-				add = {
-					desc = "POLICY_DIP_REP_OF_FUTURE_LEADER"
-					value = scope:likely_senior_partner.modifier:diplomatic_reputation
-					multiply = -3
-				}
-				add = {
-					desc = "POLICY_OPINION_OF_FUTURE_LEADER"
-					value = "root.opinion(scope:likely_senior_partner)"
-					multiply = -1
-				}
-				if = {
-					limit = { scope:recipient.total_members > 1 }
-					add = {
-						desc = "POLICY_POWER_COMPARISON_OF_FUTURE_LEADER"
-						value = {
-							value = 0
-							scope:recipient = {
-								every_international_organization_member = {
-									limit = { NOT = { this = scope:likely_senior_partner } }
-									add = great_power_score
-								}
-							}
-							divide = {
-								value = scope:recipient.total_members
-								subtract = 1
-							}
-							subtract = scope:likely_senior_partner.great_power_score
-						}
-					}
-				}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
 			}
 		}
 	}
@@ -236,8 +218,50 @@ union_codified_inheritance_law = {
 			}
 			blocked_from_changing_heir_selection = yes
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = -50
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization
+		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_SENIOR_PARTNER"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 
@@ -251,17 +275,12 @@ union_codified_inheritance_law = {
 		international_organization_modifier = {
 		}
 		wants_this_policy_bias = {
-			#AI is always in favor of not being anyone's puppet. We don't need some high math here as this is the default when the centralization option is rejected
+			add = union_member_opinion_on_maintain
+		}
+		wants_keep_policy = {
 			add = {
-				desc = "POLICY_RESPECTS_SOVEREIGNTY"
-				value = 10
-			}
-			if = {
-				limit = { is_most_likely_candidate_for_seniority = { union = scope:recipient } }
-				multiply = {
-					desc = "POLICY_LOSING_OPPORTUNITY_TO_CENTRALIZE"
-					value = -1
-				}
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
 			}
 		}
 	}
@@ -301,9 +320,51 @@ union_economic_law = {
 		}
 		international_organization_modifier = {
 			union_integration_level = 1
-		}	
+		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = -50
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization
+		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_SENIOR_PARTNER"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 
@@ -316,6 +377,12 @@ union_economic_law = {
 		can_build_rgos_in_members = yes
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_maintain
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 }
@@ -354,6 +421,7 @@ union_diplomatic_law = {
 		international_organization_modifier = {
 			union_integration_level = 1
 			union_allowed_enforce_peace = yes
+			union_unlock_rein_in_junior_diplomacy = yes
 		}
 		has_limited_diplomacy = {
 			NOT = {
@@ -376,8 +444,50 @@ union_diplomatic_law = {
 			aggressiveness_modifier = -0.75
 			carefulness_modifier = 0.5
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = -50
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization
+		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_SENIOR_PARTNER"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 	union_organized_diplomats_policy = {
@@ -391,6 +501,12 @@ union_diplomatic_law = {
 		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_maintain
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 }
@@ -431,8 +547,50 @@ union_legislature_law = {
 		international_organization_modifier = {
 			union_integration_level = 1
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = -50
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization
+		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_SENIOR_PARTNER"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 	union_federal_legislature_policy = {
@@ -444,6 +602,12 @@ union_legislature_law = {
 		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_maintain
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 }
@@ -495,6 +659,12 @@ union_unification_of_crowns_law = {
 			add = union_member_opinion_on_centralization
 			subtract = 100
 		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
+		}
 	}
 	union_swift_crown_unification_policy = {
 		allow = {
@@ -527,6 +697,12 @@ union_unification_of_crowns_law = {
 			add = union_member_opinion_on_centralization
 			subtract = 50
 		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
+		}
 	}
 	union_crown_unification_policy = {
 		allow = {
@@ -547,9 +723,34 @@ union_unification_of_crowns_law = {
 			union_integration_level = 1
 		}
 		annexation_speed = 1
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						country_is_senior_partner = { country = root }
+					}
+				}
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "VOTE_BASE_VALUE"
+					value = -50
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_centralization
 			subtract = 25
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 
@@ -561,6 +762,23 @@ union_unification_of_crowns_law = {
 		trust_bonus = 5
 		wants_this_policy_bias = {
 			add = union_member_opinion_on_maintain
+		}
+		wants_keep_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { country_is_senior_partner = { country = root } }
+					}
+				}
+				add = {
+					desc = "VOTE_IS_JUNIOR_PARTNER"
+					value = 25
+				}
+			}
+			add = {
+				desc = "VOTE_CONSERVATIVE_CLIMATE"
+				value = 50
+			}
 		}
 	}
 }
@@ -587,12 +805,45 @@ union_mutual_offense_law = {
 		join_offensive_wars_always = {
 			always = yes
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { country_is_senior_partner = { country = scope:actor } }
+					}
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = {
 				desc = "VOTE_BASE_VALUE"
 				value = -100
 			}
+            add = {
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
+                # Check if the country needs allies at all
+                value = country_needs_offensive_friends
+				multiply = 1.4
+                max = 30
+                min = 0.5
+            }
 			add = io_wants_offensive_war_policy
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
 		}
 	}
 
@@ -604,12 +855,60 @@ union_mutual_offense_law = {
 		join_offensive_wars_auto_call = {
 			always = yes
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { country_is_senior_partner = { country = scope:actor } }
+					}
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "DIPLOREASON_BASE"
+					value = 20
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_policy = policy:union_possible_offense_policy
+					}
+				}
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = {
 				desc = "VOTE_BASE_VALUE"
 				value = -50
 			}
+            add = {
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
+                # Check if the country needs allies at all
+                value = country_needs_offensive_friends
+				multiply = 1.2
+                max = 30
+                min = 0.5
+            }
 			add = io_wants_offensive_war_policy
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
 		}
 	}
 
@@ -621,12 +920,58 @@ union_mutual_offense_law = {
 		join_offensive_wars_can_call = {
 			always = yes
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { country_is_senior_partner = { country = scope:actor } }
+					}
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
+			if = {
+				limit = {
+					scope:recipient = {
+						OR = {
+							international_organization_has_policy = policy:union_automatic_offense_policy
+							international_organization_has_policy = policy:union_assured_offense_policy
+						}
+					}
+				}
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = {
 				desc = "VOTE_BASE_VALUE"
 				value = -25
 			}
+            add = {
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
+                # Check if the country needs allies at all
+                value = country_needs_offensive_friends
+                max = 30
+                min = 0.5
+            }
 			add = io_wants_offensive_war_policy
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
 		}
 	}
 }

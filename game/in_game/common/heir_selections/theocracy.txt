@@ -109,15 +109,14 @@ grandmaster_elective = {
 	custom_tags = { empty_heir_religion_law }
 	allowed_estates = { nobles_estate clergy_estate }
 	heir_is_allowed = {
+		scope:target = {
+			has_variable_list = supported_heirs
+			is_target_in_variable_list = {
+				name = supported_heirs
+				target = root
+			}
+		}
 	}
-	potential = {
-		has_reform = government_reform:military_order_reform
-	}
-
-	locked = {
-		has_reform = government_reform:military_order_reform
-	}
-
 	calc = {
 		if = {
 			limit = {
@@ -126,6 +125,11 @@ grandmaster_elective = {
 			add = {
 				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
 				value = character_age
+				multiply = 3
+			}
+			add = {
+				desc = "HEIR_SELECTION_TOTAL_ABILITIES"
+				value = total_abilities
 			}
 			if = { 
 				limit = { modifier:blocked_from_being_ruler = yes }
@@ -135,24 +139,6 @@ grandmaster_elective = {
 				}
 			}
 		}
-
-		if = {
-			limit = {
-				exists = root
-			}
-			add = {
-				desc = "HEIR_SELECTION_MIL_DESC"
-				value = root.mil
-			}
-			if = {
-				limit = {
-					is_general = yes
-				}
-				desc = HEIR_SELECTION_GENERAL_DESC
-				value = 100
-			}
-		}
-
 		# Here it goes the description for explaining a heir gets +1 points per year.
 		if = {
 			limit = {
@@ -163,11 +149,7 @@ grandmaster_elective = {
 				value = 1
 			}
 			add = {
-				desc = "HEIR_SELECTION_MIL_DESC"
-				value = 1
-			}
-			add = {
-				desc = "HEIR_SELECTION_GENERAL_DESC"
+				desc = "HEIR_SELECTION_TOTAL_ABILITIES"
 				value = 1
 			}
 		}

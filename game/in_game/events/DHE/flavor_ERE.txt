@@ -53,6 +53,10 @@ flavor_ere.1 = {
 		}
 		if = {
 			limit = { is_subject_of = c:JAL }
+			every_current_war = {
+				limit = { is_on_same_side = { country = root target = c:JAL } }
+				root = { leave_war = { war = prev actor = root } }
+			}
 			c:JAL = { trigger_event_non_silently = flavor_ere.2 }
 			custom_tooltip = declare_indep_war_tt
 			show_as_tooltip = {

@@ -22,6 +22,7 @@
 		fort_limit_modifier = 0.25
 		target_of_military_sponsorships = yes
 		blocked_from_conversion = yes
+		levy_combat_efficiency_modifier = 0.1
 	}
 
 	years = 2

@@ -39,6 +39,16 @@
 				type = convert_culture
 				years = 10
 			}
+			every_cabinet = {
+				limit = {
+					has_cabinet_action = yes
+					or = {
+						cabinet_action = cabinet_action:assimilate_area
+						cabinet_action = cabinet_action:promote_culture
+					}
+				}
+				stop_cabinet_action = {}
+			}
 			capital = {
 				every_pop = {
 					limit = {

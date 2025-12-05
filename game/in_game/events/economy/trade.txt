@@ -147,7 +147,7 @@ trade.3 = {
 				country = root
 				key = merchants_too_succesful
 				months = 24
-				power = 5.00
+				power = merchant_power_weak_bonus
 			}
 			owner = {
 				add_opinion = { target = root modifier = merchants_too_succesful }
@@ -163,7 +163,7 @@ trade.3 = {
 				country = root
 				key = merchants_standing_down
 				months = 24
-				power = -20.00
+				power = merchant_power_mild_penalty
 			}
 			
 			owner = {
@@ -232,7 +232,7 @@ trade.5 = {
 				country = root
 				key = bankrupt_merchant
 				months = 120
-				power = -10.00
+				power = merchant_power_weak_penalty
 			}
 		}
 	}
@@ -344,7 +344,7 @@ trade.7 = {
 				country = root
 				key = merchant_recalled
 				months = 120
-				power = -10.00
+				power = merchant_power_weak_penalty
 			}
 		}
 	}
@@ -602,7 +602,7 @@ trade.17 = { # Guilds fight for exclusivity deal (cut down version)
 				country = root
 				key = trade_focus
 				months = 72
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 	}

@@ -89,7 +89,7 @@ worship_dzahui_god = { #https://es.wikipedia.org/wiki/Dzahui
     religion = mesoamerican
 
     modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.001
     }
 }
 
@@ -102,7 +102,7 @@ worship_chaac_god = { #https://en.wikipedia.org/wiki/Chaac
     religion = mayan
 
     modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.001
     }
 }
 

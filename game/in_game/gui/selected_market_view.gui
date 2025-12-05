@@ -601,6 +601,7 @@ lateralview = {
 													visible = "[Not(Merchant.GetCountry.IsPlayer)]"
 													size = {95 20}
 													text_single = {
+														margin = { 5 0}
 														visible = "[GreaterThan_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0')]"
 														parentanchor = right|vcenter
 														maximumsize = {85 20}
@@ -610,11 +611,12 @@ lateralview = {
 														tagtooltip_enabled = yes
 													}
 													text_single = {
+														margin = { 5 0 }
 														visible = "[LessThanOrEqualTo_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0')]"
 														parentanchor = center|vcenter
-														maximumsize = {85 20}
-														align = nobaseline
-														raw_text = "    -"
+														size = {55 20}
+														align = right|nobaseline
+														raw_text = "         -"
 														datacontext = "[Merchant]"
 														tooltipwidget = {
 															SimpleContextualTooltipType = {
@@ -639,10 +641,15 @@ lateralview = {
 												}
 
 												# TOTAL TRADE PROFIT
+												widget = {
+													size = { 75 28 }
+													visible = "[Not(GreaterThan_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0'))]"
+												}
 												button_regular = {
 													visible = "[GreaterThan_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0')]"
-													size = { 95 28 }
+													size = { 75 28 }
 													text_single = {
+														margin = { 5 5 }
 														visible = "[GreaterThan_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0')]"
 														parentanchor = right|vcenter
 														maximumsize = {65 20}
@@ -651,6 +658,7 @@ lateralview = {
 													}
 
 													text_single = {
+														margin = { 5 5 }
 														visible = "[LessThanOrEqualTo_CFixedPoint(Merchant.GetTotalCapacity, '(CFixedPoint)0')]"
 														parentanchor = right|vcenter
 														maximumsize = {65 20}
@@ -660,7 +668,7 @@ lateralview = {
 													}
 													
 													sort_by_small_highlight = {
-														size = { 70 35 }
+														size = { 75 35 }
 														name = "trade_profit"
 													}
 
@@ -830,24 +838,18 @@ lateralview = {
 							sort_by_key_button = {
 								name = "merchant_capacity"
 								layoutpolicy_vertical = expanding
-								size = { 100 30 }
+								size = { 105 30 }
 							}
 
 							sort_by_key_button = {
 								name = "trade_profit"
 								layoutpolicy_vertical = expanding
-								size = { 72 30 }
+								size = { 78 30 }
 							}
-
-							# sort_by_key_button = {
-							# 	name = "merchant_power"
-							# 	layoutpolicy_vertical = expanding
-							# 	size = { 90 -1 }
-							# }
 
 							sort_by_key_button = {
 								name = "merchant_power"
-								size = { 123 30 }
+								size = { 120 30 }
 								layoutpolicy_vertical = expanding
 								# using = layoutpolicy_expanding
 							}

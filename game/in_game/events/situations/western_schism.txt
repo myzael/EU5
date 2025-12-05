@@ -396,7 +396,7 @@ western_schism.7 = { #Trade with Italy is flourishing
 			market = {
 				add_merchant_power = {
 					country = root
-					power = 20
+					power = merchant_power_mild_bonus
 					years = 5
 					key = italian_trade
 				}

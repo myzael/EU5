@@ -55,7 +55,7 @@
 		Kallay Kemeny Thurzo Zichy
 	}
 	lowborn = {
-		Nagy Kovacs	Szabo Varga	Kiss Molnar Farkas Balogh Lakatos Takacs Juhasz	Meszaros name_simeon Fekete Szilagyi Feher name_blaise	
+		Nagy Kovacs Szabo Varga Kiss Molnar Farkas Balogh Lakatos Takacs Juhasz Meszaros name_simeon Fekete Szilagyi Feher name_blaise	
 	}
 
 	location_suffix = "location_suffix_hungarian"

@@ -51,6 +51,7 @@ fiefdom = { # like a personal union except the subject has much less power
 	subject_modifier = {
 		country_cabinet_efficiency = 0.05
 		loyalty_to_overlord = 10
+		blocked_from_conversion = no
 	}
 
 	creation_visible = {

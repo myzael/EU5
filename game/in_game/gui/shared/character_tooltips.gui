@@ -969,7 +969,7 @@ types TooltipCharacterTypes
 									parentanchor = center
 									size = { 40 40 }
 									
-									texture = "gfx/interface/icons/traits/scholar.dds"
+									texture = "[GetEducationIcon(Character.GetEducation)]"
 								}
 								glow = {
 									name = "drop_shadow"
@@ -1541,6 +1541,15 @@ template Character_tooltip {
 				blockoverride "block_scrollarea" { maximumsize = { -1 300 }}
 				blockoverride "block_title" {
 					text = "RULER_ACTIVE_TITLES_HEADER"
+				}
+			}
+
+			TooltipScrolledRowList = {
+				visible = "[And(Character.IsAlive, Not(StringIsEmpty(Character.GetPreviousRulerTermsTooltip)))]"
+				textcontext = "[Character.GetPreviousRulerTermsTooltip]"
+				blockoverride "block_scrollarea" { maximumsize = { -1 300 }}
+				blockoverride "block_title" {
+					text = "RULER_TITLE_HISTORY_HEADER"
 				}
 			}
 

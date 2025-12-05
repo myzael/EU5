@@ -803,4 +803,69 @@
 			expand = {}
 		}
 	}
+
+	type unfilled_jobs_in_province = widget {
+		size = { 115 32 }
+
+		datacontext = "[InteractionTarget.GetProvince]"
+
+		sort_by_highlight = {
+			size = { 100% 100% }
+			name = "employment"
+		}
+
+		hbox = {
+			spacing = 5
+			
+			text_single = {
+				using = layoutpolicy_expanding
+				autoresize = no
+				align = right|nobaseline
+				text = "[InteractionTarget.GetProvince.GetMissingWorkers]"
+			}
+
+			icon = {
+				size = { 25 25 }
+				texture = "gfx/interface/icons/flat_icons/building_panel/employees.dds"
+			}
+
+		tooltipwidget = {
+			using = province_missing_workers_tooltip
+		}
+
+			expand = {}
+		}
+	}
+
+	type province_peasant_population = widget {
+		size = { 115 32 }
+
+		datacontext = "[InteractionTarget.GetProvince]"
+		sort_by_highlight = {
+			size = { 100% 100% }
+			name = "peasant_population"
+		}
+
+		hbox = {
+			spacing = 5
+			
+			text_single = {
+				using = layoutpolicy_expanding
+				autoresize = no
+				align = right|nobaseline
+				text = "[InteractionTarget.GetProvince.GetPopTypeSizeColored('peasants')]"
+			}
+
+			icon = {
+				size = { 25 25 }
+				texture = "gfx/interface/icons/pops/peasants.dds"
+			}
+
+			expand = {}
+		}
+
+		tooltipwidget = {
+			using = province_peasants_tooltip
+		}
+	}
 }

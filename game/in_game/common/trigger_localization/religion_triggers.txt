@@ -89,7 +89,7 @@ has_religious_focuses = {
 has_cardinals  = {
 	none = HAS_CARDINALS_TRIGGER
 	global = HAS_CARDINALS_TRIGGER
-	third = THIRD_CARDINALS_TRIGGER
+	third = THIRD_HAS_CARDINALS_TRIGGER
 }
 
 has_canonization  = {
@@ -137,14 +137,12 @@ is_religion_enabled = {
 total_cardinals= {
 	none = TOTAL_CARDINALS_TRIGGER
 	global = TOTAL_CARDINALS_TRIGGER
-	first = FIRST_TOTAL_CARDINALS_TRIGGER
 	third = THIRD_TOTAL_CARDINALS_TRIGGER
 }
 
 years_active= {
 	none = YEARS_ACTIVE_TRIGGER
 	global = YEARS_ACTIVE_TRIGGER
-	first = FIRST_YEARS_ACTIVE_TRIGGER
 	third = THIRD_YEARS_ACTIVE_TRIGGER
 }
 

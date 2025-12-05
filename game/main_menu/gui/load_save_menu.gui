@@ -357,6 +357,7 @@ template mixed_load_slot_buttons {
 	# MP games
 	action_tooltip = {
 		click_mode = single
+		click_type = right
 		visible = "[And(PlaythroughItem.HasConfirmation, PlaythroughItem.IsMultiplayer)]"
 		enabled = "[JominiIsMultiplayerAccessible]"
 		description = "[JominiGetMultiplayerAccessibleString]"
@@ -379,9 +380,10 @@ template mixed_load_slot_buttons {
 
 	action_tooltip = {
 		click_mode = single
-		click_type = right
+		click_type = left
 		visible = "[And(PlaythroughItem.HasConfirmation, PlaythroughItem.IsMultiplayer)]"
-		title = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_SP_TOOLTIP"
+		title = "LOAD_SAVE_GAME_TOOLTIP"
+		description = "LOAD_SAVE_GAME_DESC"
 		block "slot_button_MP_right_action_playtroughitem" {}
 		on_action = "[PlaythroughItem.LoadLatest]"
 		clicksoundlater = "UI_button_gameLoad_confirm"
@@ -398,49 +400,49 @@ template mixed_load_slot_buttons {
 	}
 }
 
-template sp_load_slot_buttons {
-	action_tooltip = {
-		click_mode = single
-		visible = "[PlaythroughItem.HasConfirmation]"
-		title = "LOAD_SAVE_GAME_TOOLTIP"
-		block "slot_button_SP_left_action_playtroughitem" {}
-		description = "LOAD_SAVE_GAME_DESC"
-		on_action = "[PlaythroughItem.LoadLatest]"
-		clicksoundlater = "UI_button_gameLoad_confirm"
-	}
+# template sp_load_slot_buttons {
+# 	action_tooltip = {
+# 		click_mode = single
+# 		visible = "[PlaythroughItem.HasConfirmation]"
+# 		title = "LOAD_SAVE_GAME_TOOLTIP"
+# 		block "slot_button_SP_left_action_playtroughitem" {}
+# 		description = "LOAD_SAVE_GAME_DESC"
+# 		on_action = "[PlaythroughItem.LoadLatest]"
+# 		clicksoundlater = "UI_button_gameLoad_confirm"
+# 	}
 
-	action_tooltip = {
-		click_mode = confirm
-		visible = "[Not(PlaythroughItem.HasConfirmation)]"
-		title = "LOAD_SAVE_GAME_TOOLTIP"
-		block "slot_button_SP_left_action_playtroughitem" {}
-		description = "LOAD_SAVE_GAME_DESC"
-		on_action = "[PlaythroughItem.LoadLatest]"
-		clicksoundlater = "UI_button_gameLoad_confirm"
-	}
+# 	action_tooltip = {
+# 		click_mode = confirm
+# 		visible = "[Not(PlaythroughItem.HasConfirmation)]"
+# 		title = "LOAD_SAVE_GAME_TOOLTIP"
+# 		block "slot_button_SP_left_action_playtroughitem" {}
+# 		description = "LOAD_SAVE_GAME_DESC"
+# 		on_action = "[PlaythroughItem.LoadLatest]"
+# 		clicksoundlater = "UI_button_gameLoad_confirm"
+# 	}
 	
-	action_tooltip = {
-		click_mode = single
-		click_type = right
-		visible = "[And(PlaythroughItem.HasConfirmation, Not(PlaythroughItem.IsIronman))]"
-		title = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_TOOLTIP"
-		description = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_DESC"
-		block "slot_button_SP_right_action_playtroughitem" {}
-		on_action = "[PlaythroughItem.LoadLatest]"
-		clicksoundlater = "UI_button_gameLoad_confirm"
-	}
+# 	action_tooltip = {
+# 		click_mode = single
+# 		click_type = right
+# 		visible = "[And(PlaythroughItem.HasConfirmation, Not(PlaythroughItem.IsIronman))]"
+# 		title = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_TOOLTIP"
+# 		description = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_DESC"
+# 		block "slot_button_SP_right_action_playtroughitem" {}
+# 		on_action = "[PlaythroughItem.LoadLatest]"
+# 		clicksoundlater = "UI_button_gameLoad_confirm"
+# 	}
 	
-	action_tooltip = {
-		click_mode = confirm
-		click_type = right
-		visible = "[And(Not(PlaythroughItem.HasConfirmation), Not(PlaythroughItem.IsIronman))]"
-		title = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_TOOLTIP"
-		description = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_DESC"
-		block "slot_button_SP_right_action_playtroughitem" {}
-		on_action = "[PlaythroughItem.LoadLatest]"
-		clicksoundlater = "UI_button_gameLoad_confirm"
-	}
-}
+# 	action_tooltip = {
+# 		click_mode = confirm
+# 		click_type = right
+# 		visible = "[And(Not(PlaythroughItem.HasConfirmation), Not(PlaythroughItem.IsIronman))]"
+# 		title = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_TOOLTIP"
+# 		description = "LOAD_SAVE_GAME_AND_GO_TO_LOBBY_DESC"
+# 		block "slot_button_SP_right_action_playtroughitem" {}
+# 		on_action = "[PlaythroughItem.LoadLatest]"
+# 		clicksoundlater = "UI_button_gameLoad_confirm"
+# 	}
+# }
 
 template mp_load_slot_buttons {
 	action_tooltip = {

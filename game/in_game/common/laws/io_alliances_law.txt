@@ -31,6 +31,28 @@
 				desc = "DIPLOREASON_BASE"
 				value = 20
 			}
+			if = {
+				limit = {
+					exists = scope:recipient
+					scope:recipient = {
+						OR = {
+							international_organization_has_policy = policy:possible_defense_policy
+							international_organization_has_policy = policy:automatic_defense_policy
+							international_organization_has_policy = policy:assured_defense_policy
+						}
+					}
+				}
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
+		}
+		wants_keep_policy = {
+			subtract = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
 		}
 	}
 
@@ -43,13 +65,28 @@
 			}
 		}
 		wants_this_policy_bias = {
+			if = {
+				limit = {
+					exists = scope:recipient
+					scope:recipient = {
+						OR = {
+							international_organization_has_policy = policy:automatic_defense_policy
+							international_organization_has_policy = policy:assured_defense_policy
+						}
+					}
+				}
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
 			add = io_members_and_potential_members_opinion_value
             add = {
                 desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
                 # Check if the country needs allies at all
                 value = country_needs_allies_value
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 		wants_propose_policy = {
@@ -69,6 +106,12 @@
 				}
 			}
 		}
+		wants_keep_policy = {
+			add = {
+				desc = "POLICY_BASE_REASON_KEEP_POLICY"
+				value = 20
+			}
+		}
 		reasons_to_join = {
 			add = io_members_and_potential_members_opinion_value
             add = {
@@ -76,7 +119,7 @@
                 # Check if the country needs allies at all
                 value = country_needs_allies_value
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 			max = 40
 		}
@@ -105,7 +148,7 @@
                 # Check if the country needs allies at all
                 value = country_needs_allies_value
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -127,6 +170,8 @@
 				desc = "OPINION_OF_OTHER_MEMBERS"
 				value = io_members_and_potential_members_opinion_value
 				multiply = 1.2
+				min = -100
+				max = 100
 			}
             add = {
                 desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
@@ -134,18 +179,25 @@
                 value = country_needs_allies_value
 				multiply = 1.2
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 			if = {
 				limit = { exists = scope:recipient }
 				add = {
 					desc = "YEARS_OF_ORGANIZATION_EXISTENCE"
-					value = -25
+					value = -100
 					add = {
 						value = scope:recipient.international_organization_lifetime
-						multiply = 5	#is 0 after 5 years
+						multiply = 5	#is 0 after 20 years, though the opinion bonus will probably speed it up
 					}
 					max = 25
+				}
+				if = {
+					limit = { scope:recipient = { international_organization_has_policy = policy:assured_defense_policy } }
+					subtract = {
+						desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+						value = 1000
+					}
 				}
 			}
 		}
@@ -165,10 +217,23 @@
 					value = -25
 					add = {
 						value = scope:recipient.international_organization_lifetime
-						multiply = 5	#is 0 after 5 years
+						multiply = 5	#make the propose after a 5 years grace period
 					}
-					max = 25
+					max = 0
 				}
+				if = {
+					limit = { scope:recipient = { international_organization_has_policy = policy:assured_defense_policy } }
+					subtract = {
+						desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+						value = 1000
+					}
+				}
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "POLICY_BASE_REASON_KEEP_POLICY"
+				value = 40
 			}
 		}
 		reasons_to_join = {
@@ -176,6 +241,8 @@
 				desc = "OPINION_OF_OTHER_MEMBERS"
 				value = io_members_and_potential_members_opinion_value
 				multiply = 1.2
+				min = -100
+				max = 100
 			}
             add = {
                 desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
@@ -183,7 +250,7 @@
                 value = country_needs_allies_value
 				multiply = 1.2
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 			max = 60
 		}
@@ -217,7 +284,7 @@
                 value = country_needs_allies_value
 				multiply = 1.2
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -236,12 +303,12 @@
 				limit = { exists = scope:recipient }
 				add = {
 					desc = "YEARS_OF_ORGANIZATION_EXISTENCE"
-					value = -50
+					value = -200
 					add = {
 						value = scope:recipient.international_organization_lifetime
-						multiply = 5	#is 0 after 10 years
+						multiply = 5	#is 0 after 40 years, though the opinion bonus will probably speed it up
 					}
-					max = 50
+					max = 25
 				}
 			}
 		}
@@ -263,20 +330,25 @@
                 value = country_needs_allies_value
 				multiply = 1.4
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 			if = {
 				limit = { exists = scope:recipient }
 				add = {
 					desc = "YEARS_OF_ORGANIZATION_EXISTENCE"
-					value = -50
+					value = -200
 					add = {
 						value = scope:recipient.international_organization_lifetime
-						multiply = 5	#is 0 after 10 years
-						min = { 0.05 0.5 }
+						multiply = 5	#is 0 after 10 years as grace period
 					}
-					max = 25
+					max = 0
 				}
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "POLICY_BASE_REASON_KEEP_POLICY"
+				value = 20
 			}
 		}
 		reasons_to_join = {
@@ -293,7 +365,7 @@
                 value = country_needs_allies_value
 				multiply = 1.4
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 			max = 75
 		}
@@ -327,7 +399,7 @@
                 value = country_needs_allies_value
 				multiply = 1.4
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -335,6 +407,7 @@
 
 mutual_offense_law = {
 	type = international_organization
+	law_category = military
 	potential = { 
         OR = {
             international_organization_type = international_organization_type:foreign_league_france
@@ -362,24 +435,60 @@ mutual_offense_law = {
 				always = yes
 			}
 		}
+		wants_propose_policy = {
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_leader = yes
+					}
+					NOT = { is_leader_of_international_organization = scope:recipient }
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "DIPLOREASON_BASE"
+					value = 40
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
+		}
 		wants_this_policy_bias = {
 			add = {
 				desc = "DIPLOREASON_BASE"
 				value = -40
 			}
 			add = {
+				desc = "BIAS_FROM_RULER_TRAITS"
+				value = modifier:bias_for_militarist_policies
+			}
+			add = {
 				desc = "OPINION_OF_OTHER_MEMBERS"
 				value = io_members_and_potential_members_opinion_value
 				multiply = 1.4
+				min = -100
+				max = 100
 			}
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
 				multiply = 1.4
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
 		}
 		policy_bias_towards_new_member = {
 			add = {
@@ -406,12 +515,12 @@ mutual_offense_law = {
 				}
 			}
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
 				multiply = 1.4
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -433,28 +542,57 @@ mutual_offense_law = {
 				desc = "OPINION_OF_OTHER_MEMBERS"
 				value = io_members_and_potential_members_opinion_value
 				multiply = 1.2
+				min = -100
+				max = 100
 			}
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
 				multiply = 1.2
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 		wants_propose_policy = {
-			value = 1
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_leader = yes
+					}
+					NOT = { is_leader_of_international_organization = scope:recipient }
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				subtract = {
+					desc = "DIPLOREASON_BASE"
+					value = 20
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
 			if = {
 				limit = {
 					scope:recipient = {
 						international_organization_has_policy = policy:assured_offense_policy
 					}
 				}
-				multiply = {
+				subtract = {
 					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
-					value = 0
+					value = 1000
 				}
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
 			}
 		}
 		policy_bias_towards_new_member = {
@@ -482,12 +620,12 @@ mutual_offense_law = {
 				}
 			}
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
 				multiply = 1.2
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -503,15 +641,32 @@ mutual_offense_law = {
 		wants_this_policy_bias = {
 			add = io_members_and_potential_members_opinion_value
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 		wants_propose_policy = {
-			value = 1
+			if = {
+				limit = {
+					scope:recipient = {
+						international_organization_has_leader = yes
+					}
+					NOT = { is_leader_of_international_organization = scope:recipient }
+				}
+				subtract = {
+					desc = "DIPLOREASON_IS_NOT_LEADER_COUNTRY"
+					value = 1000
+				}
+			}
+			else = {
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
+			}
 			if = {
 				limit = {
 					scope:recipient = {
@@ -521,10 +676,16 @@ mutual_offense_law = {
 						}
 					}
 				}
-				multiply = {
+				subtract = {
 					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
-					value = 0
+					value = 1000
 				}
+			}
+		}
+		wants_keep_policy = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
 			}
 		}
 		policy_bias_towards_new_member = {
@@ -548,11 +709,11 @@ mutual_offense_law = {
 				}
 			}
             add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                desc = "NEEDS_ALLIES_AGAINST_DIFFICULT_CONQUEST_TARGETS"
                 # Check if the country needs allies at all
-                value = country_needs_allies_value
+                value = country_needs_offensive_friends
                 max = 30
-                min = { 0.05 0.5 }
+                min = 0.5
             }
 		}
 	}
@@ -577,6 +738,12 @@ mutual_offense_law = {
 			}
 		}
 		wants_this_policy_bias = {
+			add = {
+				desc = "DIPLOREASON_BASE"
+				value = 20
+			}
+		}
+		wants_keep_policy = {
 			add = {
 				desc = "DIPLOREASON_BASE"
 				value = 20

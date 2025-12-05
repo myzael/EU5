@@ -5,7 +5,7 @@
 # already_percent = no(default)/yes
 # decimals = 2(default)/x (int)
 # in game_data = {}
-# 	category = all(default)/none/country/location/province/character/unit/mercenary/religion/internationalorganizatiuon/rebel
+# 	category = all(default)/none/country/location/province/character/unit/mercenary/religion/internationalorganizatiuon/rebel/dynasty
 #	min = -infinity(default)/x (fixed point)
 #	max = +infinity(default)/x (fixed point)
 #	cap_zero_to_one = no(default)/yes
@@ -3233,6 +3233,13 @@ allow_subjects={
 	}
 }
 
+force_convert_created_subjects={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
 disallow_migration_beyond_borders={
 	boolean=yes
 	game_data={
@@ -3356,6 +3363,13 @@ food_purchase_cost={
 
 diplomatic_annexation_cost={
 	color=bad
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+hostile_diplomatic_annexation_cost={
 	percent=yes
 	game_data={
 		category=country
@@ -3709,6 +3723,14 @@ max_war_exhaustion={
 	color=good
 	game_data={
 		category=country
+	}
+}
+
+force_army_maintenance={
+	color=bad
+	boolean=yes
+	game_data={
+		category=unit
 	}
 }
 
@@ -4271,7 +4293,7 @@ local_monthly_control_decline={
 
 global_monthly_control_decline={
 	percent=yes
-	color = bad
+	color = good
 	game_data={
 		category=country
 	}
@@ -4776,6 +4798,14 @@ global_merchant_capacity_modifier={
 	game_data={
 		category=country
 	}
+}
+
+local_market_access = {
+	percent=yes
+	game_data={
+		category=location
+	}
+
 }
 
 monthly_prestige={
@@ -5514,6 +5544,13 @@ local_war_score_cost={
 	}
 }
 
+block_tribal_promotion = {
+	boolean = yes
+	game_data={
+		category=country
+	}
+}
+
 global_tribal_promotion={
 	percent=yes
 	game_data={
@@ -5700,6 +5737,13 @@ global_levy_size_modifier={
 	percent=yes
 	game_data={
 		category=country
+	}
+}
+
+levy_recovery_modifier={
+	percent=yes
+	game_data={
+		category=unit
 	}
 }
 
@@ -9263,6 +9307,14 @@ blocked_from_declaring_war={
 	}
 }
 
+union_blocked_from_declaring_war={
+	color=bad
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
 trade_range={
 	decimals=0
 	game_data={
@@ -9806,6 +9858,55 @@ local_malaria_impact_modifier={
 	percent=yes
 	game_data={
 		category=location
+	}
+}
+
+bubonic_plague_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+smallpox_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+typhus_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+influenza_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+measles_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+great_pestilence_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+malaria_resistance_modifier={
+	percent=yes
+	game_data={
+		category=country
 	}
 }
 
@@ -13781,7 +13882,21 @@ union_allowed_enforce_peace={
 	}
 }
 
+union_unlock_rein_in_junior_diplomacy={
+	boolean=yes
+	game_data={
+		category=internationalorganization
+	}
+}
+
 unlock_prikazi_reform_cabinet_actions = {
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+cannot_be_subjugated = {
 	boolean=yes
 	game_data={
 		category=country

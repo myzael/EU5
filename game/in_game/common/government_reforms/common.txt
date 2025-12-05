@@ -443,7 +443,7 @@ exchange_of_ideas = {
 local_army_organization = {
 	age = age_2_renaissance
 	country_modifier = {
-		peasants_estate_levy_size = 0.05
+		peasants_estate_levy_size = 0.20
 		global_peasants_estate_power = 0.25
 		monthly_towards_free_subjects = societal_value_minor_monthly_move
 	}
@@ -458,8 +458,8 @@ bank_ledgers_system = {
 	}
 	age = age_2_renaissance
 	country_modifier = {
-		monthly_inflation = -0.001
-		merchant_maintenance_cost = -0.05
+		monthly_inflation = -0.00025
+		merchant_maintenance_cost = -0.20
 		monthly_towards_capital_economy = societal_value_monthly_move
 	}	
 

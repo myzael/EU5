@@ -349,6 +349,8 @@ move_nw_good_to_new_location = {
 				scope:target_location.raw_material = {
 					subtract = "price_in_market(scope:target_location.market)"
 				}
+				#Multiply the price result to make the action more common if positive
+				multiply = 10
 				#If there is surplus is less valuable
 				if = {
 					limit = {
@@ -830,7 +832,7 @@ move_ow_good_to_new_location = {
 	ai_will_do = {
 		#If the action is doable by the AI, 
 		#meaning there is a combination of target good and target location where it can replace the RGO it should do it
-		add = 100
+		add = 200
 	}
 }
 

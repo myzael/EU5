@@ -59,16 +59,24 @@
 			data = population
 		}
 		visible = {
-			trigger_if = {
-				limit = { scope:actor ?= { has_variable = supports_northern_court } }
-				tag = NTC
-			}
-			trigger_else_if = {
-				limit = { scope:actor ?= { has_variable = supports_southern_court } }
-				tag = STC
-			}
-			trigger_else = {
-				always = no
+			OR = {
+				AND = {
+					exists = scope:actor
+					this = c:NTC
+					scope:actor = { has_variable = supports_northern_court }
+				}
+				AND = {
+					exists = scope:actor
+					this = c:STC
+					scope:actor = { has_variable = supports_southern_court }
+				}
+				AND = {
+					NOT = { exists = scope:actor }
+					OR = {
+						this = c:NTC
+						this = c:STC
+					}
+				}
 			}
 		}
 	}

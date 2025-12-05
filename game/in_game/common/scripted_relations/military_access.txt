@@ -90,4 +90,18 @@
         positive_opinion = 0.1
         royal_ties = 0.5
     }
+
+    wants_to_keep = {
+        if = {
+            limit = {
+                scope:actor = {
+                    wants_to_attack = scope:recipient
+                }
+            }
+
+            add = {
+                value = -100
+            }
+        }
+    }
 }	

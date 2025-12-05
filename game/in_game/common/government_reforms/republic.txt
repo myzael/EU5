@@ -5,6 +5,7 @@
 	
 	country_modifier = {
 		global_nobles_estate_power = 0.1
+		levy_combat_efficiency_modifier = 0.05
 		country_cabinet_efficiency = 0.10
 		monthly_towards_aristocracy = societal_value_monthly_move
 	}
@@ -38,11 +39,6 @@ merchant_republic = {
 		court_language_is_market_language_importance_modifier = 5
 
 	}
-	
-	
-	locked = {
-		always = yes
-	}
 
 	years = 2
 }
@@ -53,7 +49,7 @@ peasant_republic_reform = {
 
 	allow = {
 		OR = {
-			tag = DIT
+			has_or_had_tag = DIT
 			"estate_power(estate_type:peasants_estate)" >= 0.5
 
 			#This is added for countries that should be given access to this through an event etc
@@ -145,12 +141,12 @@ dynastic_signoria_reform = {
 			"estate_power(estate_type:crown_estate)" > 0.3
 
 			#Starting tags that are already hereditary
-			tag = MLO
-			tag = FER
-			tag = PAD
-			tag = RAV
-			tag = VER
-			tag = RIM
+			has_or_had_tag = MLO
+			has_or_had_tag = FER
+			has_or_had_tag = PAD
+			has_or_had_tag = RAV
+			has_or_had_tag = VER
+			has_or_had_tag = RIM
 		}
 	}
 
@@ -255,7 +251,7 @@ hanseatic_merchant_federation = {
 	government = republic
 
 	potential = {
-		tag = HSA
+		has_or_had_tag = HSA
 		country_type = building
 	}
 
@@ -264,6 +260,7 @@ hanseatic_merchant_federation = {
 	}
 
 	country_modifier = {
+		cannot_be_subjugated = yes
 		global_burghers_estate_power = -0.5
 		merchant_maintenance_cost = -0.25
 		allows_hanseatic_federation_buildings = yes

@@ -2056,8 +2056,8 @@ flavor_tur.34 = {
 	immediate = {
 		create_character = {
 			adm = { 25 100 }
-			adm = { 25 100 }
-			adm = { 25 100 }
+			dip = { 25 100 }
+			mil = { 25 100 }
 			add_trait = trait:efficient_administrator
 			save_scope_as = target_character
 			create_in_limbo = yes
@@ -2913,6 +2913,7 @@ flavor_tur.49 = { #A Fifth of the Spoils
 		has_slavery = yes
 
 		has_advance = recruitment_law_advance
+		NOT = { has_policy = ottoman_war_slave_tax }
 	}
 
 	option = {
@@ -9073,7 +9074,10 @@ flavor_tur.120 = { #The Cannons of [super_sinister_rival.GetName]
 
 		ruler = {
 			ordered_child = {   #get the youngest one
-				limit = { age_in_years > 0 }
+				limit = {
+					is_alive = yes
+					age_in_years > 0
+				}
 				order_by = {
 					value = age_in_years
 					multiply = -1
@@ -10092,7 +10096,7 @@ scripted_effect major_fire_damage = {
 				divide = 10
 			}
 		}
-		location = { destroy_building = prev }
+		location = { major_destroy_building_levels_in_location = yes }
 	}
 }
 
@@ -15236,6 +15240,13 @@ flavor_tur.184 = {
 				}
 			}
 		}
+
+		scope:target_location = {
+			add_location_modifier = {
+				modifier = tur_public_cats
+				years = 15
+			}
+		}
 	}
 }
 
@@ -15555,6 +15566,8 @@ flavor_tur.189 = {
 
 	option = {
 		name = flavor_tur.189.a
+
+		historical_option = yes
 
 		location:constantinople = {
 			construct_building = {
@@ -17744,6 +17757,7 @@ flavor_tur.1000 = {
 		is_great_power = yes
 		region:balkan_region = {
 			any_country_with_capital_in_geography = {
+				ruler_or_regent ?= { has_dynasty = yes }
 				culture = culture:albanian
 			}
 		}
@@ -17758,6 +17772,10 @@ flavor_tur.1000 = {
 				}
 				position = 0
 				save_scope_as = target_country
+
+				ruler_or_regent ?= { 
+					dynasty = { save_scope_as = target_dynasty }
+				}
 			}
 		}
 

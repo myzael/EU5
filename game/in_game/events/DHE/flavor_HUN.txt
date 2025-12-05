@@ -2366,7 +2366,6 @@ flavor_hun.450 = { #Expanding the Buda Castle
 				building_type = building_type:royal_court
 				cost_multiplier = 0.75
 				cost_multiplier_reason = "palace_cheap_sponsorship"
-				cost_multiplier_reason = "game_concept_event"
 			}
 		}
 		change_societal_value = {

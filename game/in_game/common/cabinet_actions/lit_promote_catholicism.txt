@@ -61,15 +61,7 @@
 					local_religious_unity < 1.0
 				}
 			}
-			scope:actor = {
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action = cabinet_action:promote_religion
-						interaction_target:target_1 ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = lit_promote_catholicism interaction_target = target_1 } }
 		}
 		map_color = {
 			lerp = {

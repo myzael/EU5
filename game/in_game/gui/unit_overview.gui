@@ -458,7 +458,7 @@ lateralview = {
 								}
 							}
 							
-								icon_text_2rows = {
+							icon_text_2rows = {
 								blockoverride "icon_setup" {
 									texture = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds"
 									glow = {
@@ -521,6 +521,9 @@ lateralview = {
 						expand = {}
 
 						vbox = {
+						
+						
+						
 							layoutpolicy_horizontal = expanding
 							spacing = 10
 
@@ -1454,8 +1457,7 @@ lateralview = {
 
 											unit_card = {
 												blockoverride "name_sort_highlight" {
-													sort_by_left_fade_highlight = {
-														position = { -10 0 }
+													sort_by_small_highlight = {
 														ignore_layout = yes
 														name = "name"
 													}

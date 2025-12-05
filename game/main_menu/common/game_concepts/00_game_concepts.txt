@@ -28,6 +28,11 @@ character_modifier = {
 	texture = "gfx/interface/icons/modifiers/character.dds"
 }
 
+dynasty_modifier = {
+	alias = { dynasty_modifiers }
+	texture = "gfx/interface/icons/modifiers/character.dds"
+}
+
 decaying_modifier = {
 	texture = "gfx/interface/icons/flat_icons/decaying_modifier.dds"
 }
@@ -1529,6 +1534,10 @@ diplomat = {
 diplomatic_limitation = {
 	alias = { diplomatic_limitations diplomatically_limited limited_diplomacy unlimited_diplomacy }
 	texture = "gfx/interface/icons/resources/diplo_actions.dds"
+}
+
+bias = {
+	texture = "gfx/interface/icons/map_modes/opinion.dds"
 }
 
 opinion = {

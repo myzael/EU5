@@ -1684,12 +1684,12 @@ flavor_mal.28 = {
 		ruler_or_regent ?= {
 			save_scope_as = target_character
 		}
+		unlock_government_reform_effect = { type = malian_tribute_system }
 	}
 
 	option = {
 		name = flavor_mal.28.a
-
-		unlock_government_reform_effect = { type = malian_tribute_system }
+		add_reform = government_reform:malian_tribute_system
 	}
 
 	option = {

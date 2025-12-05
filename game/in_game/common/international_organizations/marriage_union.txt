@@ -62,6 +62,18 @@ marriage_union = {
 	}
 	
 	auto_disband_trigger = {
-		total_members < 2
+		OR = {
+			total_members < 2
+			custom_tooltip = {
+				text = marriage_union_disband_tt
+				OR = {
+					NOT = { exists = "leader_at_index(1)" }
+					"leader_at_index(0)" = "leader_at_index(1)"
+					"leader_at_index(0)" = {
+						first_spouse != "root.leader_at_index(1)"
+					}
+				}
+			}
+		}
 	}
 }

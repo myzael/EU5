@@ -25,14 +25,9 @@
 		add = scope:recipient.modifier:years_to_annex_members
 	}
 	can_annex_members = {
+		is_subject = no
 		custom_tooltip = {
 			text = union_annexation_rule_tt
-			has_special_status_in_international_organization = {
-				type = special_status:senior_partner
-				international_organization = scope:recipient
-			}
-			is_subject = no
-			scope:recipient.modifier:enable_annexation_of_members = yes
 			scope:target ?= {
 				modifier:is_senior_partner = no
 				trigger_if = {
@@ -49,6 +44,13 @@
 				is_subject = no
 			}
 		}
+	}
+	can_annex_visible = {
+		has_special_status_in_international_organization = {
+			type = special_status:senior_partner
+			international_organization = scope:recipient
+		}
+		scope:recipient.modifier:enable_annexation_of_members = yes
 	}
 
 	#Baseline of a union, will never change
@@ -73,6 +75,26 @@
 	}
 
 	can_declare_war = {
+		trigger_if = {
+			limit = {
+				scope:attacker = {
+					is_member_of_international_organization = scope:recipient
+					modifier:union_blocked_from_declaring_war = yes
+				}
+			}
+			custom_tooltip = {
+				text = union_can_declare_war_at
+				scope:defender = {
+					is_member_of_international_organization = scope:recipient
+				}
+				scope:recipient = {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = scope:defender
+					}
+				}
+			}
+		}
 		trigger_if = {
 			limit = { scope:defender = { is_member_of_international_organization = scope:recipient } }
 			trigger_if = {
@@ -269,6 +291,7 @@
 				if = {
 					limit = {
 						has_variable = union_heir_character
+						has_variable = union_senior_partner
 						var:union_heir_character = { NOT = { owner = root.var:union_senior_partner } }
 					}
 					var:union_heir_character = {

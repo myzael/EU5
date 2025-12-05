@@ -24,35 +24,26 @@ ciompi_revolt.1 = { #The Ciompi Revolts
 		name = ciompi_revolt.1.a
 
 		add_stability = stability_extreme_penalty
-		custom_tooltip = every_location_capital_area_tt
-		show_as_tooltip = {
-			random_owned_location = {
-				limit = { 
-					area = root.capital.area 
-					owner = ROOT 
-				}
-				random_pop = {
-					limit = {
-						owner = root
-					}
-					add_pop_satisfaction = pop_satisfaction_ultimate_penalty
-				}
+
+		ordered_pop = {
+			limit = { 
+				owner = root 
+				pop_type = pop_type:laborers
 			}
+			order_by = pop_size
+			max = 4
+			add_pop_satisfaction = pop_satisfaction_ultimate_penalty 
 		}
-		hidden_effect = {
-			every_owned_location = {
-				limit = { 
-					area = root.capital.area 
-					owner = ROOT 
-				}
-				every_pop = {
-					limit = {
-						owner = root
-					}
-					add_pop_satisfaction = pop_satisfaction_ultimate_penalty 
-				} 
-			} 	
-		}	
+		
+		ordered_pop = {
+			limit = { 
+				owner = root 
+				pop_type = pop_type:burghers
+			}
+			order_by = pop_size
+			max = 2
+			add_pop_satisfaction = pop_satisfaction_ultimate_penalty 
+		}
 	}
 }
 

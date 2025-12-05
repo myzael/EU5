@@ -61,8 +61,8 @@ locations={
 	sligo = { rank = town 			town_setup = british_town_port}
 	
 	# greece
-	athens = { rank = city			town_setup = greek_town_port }
-	thessaloniki = { rank = city 	town_setup = greek_town_port }
+	athens = { rank = city			town_setup = greek_city_port }
+	thessaloniki = { rank = city 	town_setup = greek_city_port }
 	candia = { rank = town 			town_setup = greek_town_port }
 	corinth = { rank = town 		town_setup = greek_town_port }
 	ioannina = { rank = town 		town_setup = balkan_town }
@@ -417,24 +417,24 @@ locations={
 	sarai_al_jadid = { rank = town			town_setup = russian_town }
 	
 	# Maghreb
-	mahdia = { rank = city town_setup = maghreb_city }
+	mahdia = { rank = city town_setup = maghreb_coastal_city }
 	marrakesh = { rank = city 	town_setup = maghreb_city }
-	rabat = { rank = city 	town_setup = maghreb_city }
-	annaba = { rank = city 		town_setup = maghreb_city }
-	bejaia = { rank = city 	town_setup = maghreb_city }
+	rabat = { rank = city 	town_setup = maghreb_coastal_city }
+	annaba = { rank = city 		town_setup = maghreb_coastal_city }
+	bejaia = { rank = city 	town_setup = maghreb_coastal_city }
 	fez = { rank = city 		town_setup = maghreb_city }
 	meknes = { rank = city 		town_setup = maghreb_city }
 	constantine_ALG = { rank = city town_setup = maghreb_city }
 	sijilmasa = { rank = city 	town_setup = maghreb_city }
 	tlemcen = { rank = city 	town_setup = maghreb_city }
-	tunis = { rank = city 		town_setup = maghreb_city }
-	oran = { rank = city 		town_setup = maghreb_city }
+	tunis = { rank = city 		town_setup = maghreb_coastal_city }
+	oran = { rank = city 		town_setup = maghreb_coastal_city }
 	
-	algiers = { rank = town 	town_setup = maghreb_town }
+	algiers = { rank = town 	town_setup = maghreb_coastal_town }
 	kairouan = { rank = town town_setup = maghreb_town }
-	azemmour = { rank = town 		town_setup = maghreb_town }
-	noul_lamta = { rank = town 	town_setup = maghreb_town }
-	cherchell = { rank = town 	town_setup = maghreb_town }
+	azemmour = { rank = town 		town_setup = maghreb_coastal_town }
+	noul_lamta = { rank = town 	town_setup = maghreb_coastal_town }
+	cherchell = { rank = town 	town_setup = maghreb_coastal_town }
 	tahert = { rank = town 		town_setup = maghreb_town }
 	taza = { rank = town 		town_setup = maghreb_town }
 	tidsi = { rank = town 		town_setup = maghreb_town }
@@ -1533,6 +1533,7 @@ building_manager = {
 	monastery 	= { tag = ENG level = 1 location = skipton } # Bolton Priory
 	stockade 	= { tag = DHM level = 1 location = durham }
 	
+	cathedral 	= { tag = ENG level = 1 location = london } # Old St Paul's Cathedral
 	cathedral 	= { tag = ENG level = 1 location = york } # York Minster
 	cathedral 	= { tag = ENG level = 1 location = canterbury } # Canterbury Cathedral
 	cathedral 	= { tag = ENG level = 1 location = wells } # Wells Cathedral
@@ -1825,6 +1826,7 @@ building_manager = {
 	dock = { tag = ARA level = 1	location = barcelona }
 	dock = { tag = CAS level = 1	location = sevilla }
 	dock = { tag = GRA level = 1	location = malaga }
+	dock = { tag = ENG level = 1 location = london }
 
 	fishing_village = { tag = CAS level = 1 location = bilbao }
 	fishing_village = { tag = CAS level = 1 location = laredo }

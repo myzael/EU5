@@ -1757,7 +1757,17 @@ flavor_boh.30 = { #Silver Found in [target_location.GetNameWithNoTooltip]
 
 		scope:target_location = {
 			change_raw_material = goods:silver
-			change_max_raw_material_workers = 3
+			if = {
+				limit = { is_full_expanded_rgo = no }
+				change_max_raw_material_workers = 3
+			}
+			else = {
+				add_location_modifier = { 
+					modifier = expanded_mines_modifier
+					years = 10 
+					mode = add_and_extend 
+				}
+			}
 			change_prosperity = prosperity_ultimate_bonus
 		}
 		if = {
@@ -1821,6 +1831,7 @@ flavor_boh.31 = { #The Crown of Bohemia
 }
 
 scripted_trigger is_valid_luxembourg_heir = {
+	is_alive = yes
 	is_ruler = no
 	is_heir = no
 	is_female = no
@@ -2275,7 +2286,17 @@ flavor_boh.40 = { # Expanding Kutná Hora
 		location:kutna_hora = {
 			change_development = development_mild_bonus
 			change_prosperity = prosperity_severe_bonus
-			change_max_raw_material_workers = 3
+			if = {
+				limit = { is_full_expanded_rgo = no }
+				change_max_raw_material_workers = 3
+			}
+			else = {
+				add_location_modifier = { 
+					modifier = expanded_mines_modifier
+					years = 10 
+					mode = add_and_extend 
+				}
+			}
 		}
 		custom_tooltip = flavor_boh.40.a.tt
 		set_variable = prevent_kutna_hora_flood

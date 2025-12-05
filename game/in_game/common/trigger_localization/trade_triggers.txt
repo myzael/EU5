@@ -14,13 +14,13 @@ trade_volume = {
 trade_buy = {
 	none = NONE_TRADE_BUY_TRIGGER
 	global = TRADE_BUY_TRIGGER
-	third = THIRD_BUY_TRIGGER
+	third = THIRD_TRADE_BUY_TRIGGER
 }
 
 trade_sell = {
 	none = NONE_TRADE_SELL_TRIGGER
 	global = TRADE_SELL_TRIGGER
-	third = THIRD_SELL_TRIGGER
+	third = THIRD_TRADE_SELL_TRIGGER
 }
 
 trade_profit = {

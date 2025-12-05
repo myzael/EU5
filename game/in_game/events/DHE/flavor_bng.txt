@@ -570,8 +570,8 @@ flavor_bng.9 = {
 
 		create_character = {
 			adm = { 50 90 }
-			adm = { 40 80 }
-			adm = { 10 30 }
+			dip = { 40 80 }
+			mil = { 10 30 }
 			min_age = 30
 			birth_location = root.capital
 			estate = estate_type:clergy_estate
@@ -583,8 +583,8 @@ flavor_bng.9 = {
 
 		create_character = {
 			adm = { 50 90 }
-			adm = { 40 80 }
-			adm = { 10 30 }
+			dip = { 40 80 }
+			mil = { 10 30 }
 			min_age = 30
 			birth_location = root.capital
 			estate = estate_type:clergy_estate

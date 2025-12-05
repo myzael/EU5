@@ -146,7 +146,7 @@ theotokos = {
 		}
 	}
 	
-	global_population_growth = 0.0005
+	global_population_growth = 0.0002
 
 	requires = artists_advance_discovery
 }

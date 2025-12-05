@@ -9,26 +9,26 @@ scripted_effect add_to_reformer_list = {
 
 scripted_trigger is_swiss_tag = {
 	OR = {
-		tag = c:SWI
-		tag = c:BCH
-		tag = c:STG
-		tag = c:ZUR
-		tag = c:SYZ
-		tag = c:GLR
-		tag = c:URI
-		tag = c:OBW
-		tag = c:LCU
-		tag = c:SIT
-		tag = c:BRN
-		tag = c:SLT
-		tag = c:NEU
-		tag = c:BAS
-		tag = c:LSA
-		tag = c:KYB
-		tag = c:TRN
-		tag = c:GNV
-		tag = c:SCL
-		tag = c:WER
+		tag = SWI
+		tag = BCH
+		tag = STG
+		tag = ZUR
+		tag = SYZ
+		tag = GLR
+		tag = URI
+		tag = OBW
+		tag = LCU
+		tag = SIT
+		tag = BRN
+		tag = SLT
+		tag = NEU
+		tag = BAS
+		tag = LSA
+		tag = KYB
+		tag = TRN
+		tag = GNV
+		tag = SCL
+		tag = WER
 	}
 }
 

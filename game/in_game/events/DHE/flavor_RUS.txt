@@ -227,6 +227,14 @@ flavor_rus.3 = {
 		own_entire_area = area:tambov_area
 		own_entire_area = area:samara_area
 		own_entire_area = area:astrakhan_area
+
+		any_known_country = {
+			capital.region = region:ural_region
+			OR = {
+				country_type = army
+				country_type = location
+			}
+		}
 	}
 
 		illustration_tags = {
@@ -2359,7 +2367,7 @@ flavor_rus.26 = {
 			market = {
 				add_merchant_power = {
 					country = root
-					power = 25
+					power = merchant_power_mild_bonus
 					years = 10
 					key = state_promoted_mercantilism_key
 				}

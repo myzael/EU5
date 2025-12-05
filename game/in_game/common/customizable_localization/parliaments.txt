@@ -130,6 +130,13 @@
 	}
 
 	text = {
+		localization_key = country_flavor_parliament_naples
+		trigger = {
+			tag = NAP
+		}
+	}
+
+	text = {
 		localization_key = country_flavor_parliament_italian_monarchy
 		trigger = {
 			OR = {
@@ -162,13 +169,6 @@
 	}
 
 	text = {
-		localization_key = country_flavor_parliament_naples
-		trigger = {
-			tag = NAP
-		}
-	}
-
-	text = {
 		localization_key = country_flavor_parliament_italian
 		trigger = {
 			OR = {
@@ -181,7 +181,7 @@
 	text = {
 		localization_key = country_flavor_parliament_japanese
 		trigger = {
-			culture.language = language:albanian_language
+			culture.language = language:japanese_language
 		}
 	}
 
@@ -208,6 +208,13 @@
 				country_rank = country_rank:rank_kingdom
 				country_rank = country_rank:rank_empire
 			}
+		}
+	}
+
+	text = {
+		localization_key = country_flavor_parliament_tagsatzung
+		trigger = {
+			culture = culture:high_alemannic
 		}
 	}
 
@@ -380,12 +387,6 @@
 		localization_key = country_flavor_parliament_turkish
 		trigger = {
 			culture.language = language:turkish_language
-		}
-	}
-	text = {
-		localization_key = country_flavor_parliament_tagsatzung
-		trigger = {
-			culture = culture:high_alemannic
 		}
 	}
 	text = {

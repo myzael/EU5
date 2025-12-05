@@ -1024,6 +1024,10 @@ template CulturalInfluence_tooltip {
 				}
 			}
 			TooltipStringPairList = {
+				tooltipmeta = {
+					texture = "gfx/interface/icons/flat_icons/cultural_influence.dds"
+					game_concept = "[cultural_influence|e]"
+				}
 				blockoverride "block_title" {
 					datacontext = "[Culture]"
 					text = "CUL_INF_MONTHLY"

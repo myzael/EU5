@@ -363,7 +363,7 @@ grant_city_rights = {
 
 	modifier_when_in_debate = {
 		global_pop_promotion_speed_modifier = 1
-		global_monthly_prosperity = 0.5
+		global_monthly_prosperity = 0.1
 	}
 
 	allow = {

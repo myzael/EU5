@@ -1538,11 +1538,14 @@ societal_values.404 = {
 
 	option = {
 		name = societal_values.404.a
+
+		ai_will_select = { value = 0 }
 		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_move_to_left }
 		add_stability = stability_severe_penalty
 	}
 	option = {
 		name = societal_values.404.b
+		ai_will_select = { value = 1 }
 		if = {
 			limit = { exists = scope:target_location }
 			add_casus_belli = {
@@ -3529,7 +3532,7 @@ societal_values.906 = {
 				country = root
 				key = income_bonanza
 				months = 120
-				power = 25.00
+				power = merchant_power_mild_bonus
 			}
 		}
 	}
@@ -3852,8 +3855,10 @@ societal_values.1007 = {
 		societal_value:land_vs_naval > 25
 		has_ports = yes
 		has_advance = ship_building_advance
-		NOT = {	has_country_modifier = blockade_tactics	}
-		NOT = {	has_country_modifier = slipping_standards }
+		NOR = {
+			has_country_modifier = blockade_tactics
+			has_country_modifier = slipping_standards
+		}
 	}
 
 	illustration_tags = {
@@ -3862,16 +3867,24 @@ societal_values.1007 = {
 	}
 
 	immediate = {
-		event_illustration_poptype_effect = { foreground = pop_type:peasants
-  background = pop_type:peasants }	#Naval Sailor
+		event_illustration_poptype_effect = { 	#Naval Sailor
+			foreground = pop_type:peasants
+  			background = pop_type:peasants 
+		}
 	}
 
 	option = {
 		name = societal_values.1007.a
+
+		ai_will_select = { value = 1 }
+
 		add_country_modifier = { modifier = slipping_standards years = 10 mode = add_and_extend }
 	}
 	option = {
 		name = societal_values.1007.b
+
+		ai_will_select = { value = 0 }
+
 		add_stability = stability_severe_penalty
 	}
 }
@@ -5400,9 +5413,19 @@ societal_values.1704 = {
 
 	option = {
 		name = societal_values.1704.a
+
+		ai_will_select = {
+			value = 0
+		}
+
 		add_navy_tradition = navy_tradition_extreme_bonus
 	}
 	option = {
+
+		ai_will_select = {
+			value = 1
+		}
+
 		name = societal_values.1704.b
 		change_gold_effect = { scale = 3.00 }
 	}
@@ -6172,7 +6195,7 @@ societal_values.2000 = { # Rise of Urbanization (rural desolation)
 				country = root
 				key = trade_focus
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 		add_estate_satisfaction = { type = estate_type:burghers_estate
@@ -6325,7 +6348,7 @@ societal_values.2002 = { # Privatization of Public Services
 				country = root
 				key = merchant_power_key_selling_offices
 				years = 50
-				power = 50
+				power = merchant_power_severe_bonus
 			}
 		}
 
@@ -6359,7 +6382,7 @@ societal_values.2002 = { # Privatization of Public Services
 				country = root
 				key = merchant_power_key_selling_minor_offices
 				years = 25
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 
@@ -6762,7 +6785,7 @@ societal_values.2006 = { # Renewed focus on Traditional Practices
 				country = root
 				key = trade_focus
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 		change_societal_value = {
@@ -6891,7 +6914,7 @@ societal_values.2009 = { # Increased Bartering
 				country = root
 				key = merchants_not_supported
 				months = 120
-				power = -25
+				power = merchant_power_mild_penalty
 			}
 		}
 
@@ -6913,7 +6936,7 @@ societal_values.2009 = { # Increased Bartering
 				country = root
 				key = trade_focus
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 
@@ -6962,7 +6985,7 @@ societal_values.2010 = { # Rise of Private Enterprise
 				country = root
 				key = trade_houses_over_guilds
 				months = 48
-				power = -25
+				power = merchant_power_mild_penalty
 			}
 		}
 
@@ -6985,7 +7008,7 @@ societal_values.2010 = { # Rise of Private Enterprise
 				country = root
 				key = guilds_over_trade_houses
 				months = 48
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 		change_societal_value = {
@@ -7587,7 +7610,7 @@ societal_values.2021 = { # International Trade Fair
 				country = root
 				key = merchant_power_key_local_trade_focus
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 
@@ -7875,7 +7898,7 @@ societal_values.2027 = { # Protectionism
 				country = root
 				key = game_concept_protectionism
 				months = 120
-				power = 25
+				power = merchant_power_mild_bonus
 			}
 		}
 

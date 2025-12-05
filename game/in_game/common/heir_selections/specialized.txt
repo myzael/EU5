@@ -155,7 +155,7 @@ general_heir_selection = {
 					is_general = yes
 				}
 				add = {
-					desc = "HEIR_SELECTION_ADMIRAL_DESC"
+					desc = "HEIR_SELECTION_GENERAL_DESC"
 					value = 100
 				}
 			}
@@ -211,15 +211,15 @@ general_heir_selection = {
 				value = 1
 			}
 			add = {
-				desc = "HEIR_SELECTION_ADMIRAL_DESC"
+				desc = "HEIR_SELECTION_GENERAL_DESC"
 				value = 100
 			}
 			add = {
-				desc = "HEIR_SELECTION_ADMIRAL_TRAIT_DESC"
+				desc = "HEIR_SELECTION_GENERAL_TRAIT_DESC"
 				value = 50
 			}
 			add = {
-				desc = "HEIR_SELECTION_NOT_ADMIRAL_DESC"
+				desc = "HEIR_SELECTION_NOT_GENERAL_DESC"
 				value = -1000
 			}
 		}

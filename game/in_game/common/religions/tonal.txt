@@ -54,7 +54,7 @@ mayan = {
 	
 	definition_modifier = {
 		prestige_from_land_battle = 0.1
-        global_levy_size_modifier = 0.1
+        levy_recovery_modifier = 0.1 
 	}
 	
 	tags = { tonal_gfx }

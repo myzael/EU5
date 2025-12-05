@@ -42,6 +42,11 @@ template trade_details {
 			}
 		}
 		TooltipTextBlock = {
+			background = {
+				visible = "[GreaterThan_CFixedPoint(Trade.GetDesiredGoodsToShip, Trade.GetQuantityOfGoodsActuallyMoved)]"
+				using = color_mid_red_texture
+				alpha = 0.5
+			}
 			visible = "[IsOutCompeted(Trade.Self)]"
 			blockoverride "text" {
 				text = "[GetOutCompetedInfo(Trade.Self)]"
@@ -85,8 +90,13 @@ template trade_details {
 				text = "[Trade.GetQuantityOfGoodsActuallyMoved|V2]"
 			}
 		}			
-		widget = {
+		widget = {			
 			size = { 440 28 }
+			background = {
+				visible = "[GreaterThan_CFixedPoint(Trade.GetDesiredGoodsToShip, Trade.GetQuantityOfGoodsActuallyMoved)]"
+				using = color_mid_red_texture
+				alpha = 0.5
+			}
 			flowcontainer = {
 				position = { 0 0 }
 				datacontext = "[Trade]"
@@ -99,6 +109,33 @@ template trade_details {
 				parentanchor = right
 				align = right
 				text = "[Trade.GetDesiredGoodsToShip|V2]"
+			}
+			tooltipwidget = {
+				visible = "[GreaterThan_CFixedPoint(Trade.GetDesiredGoodsToShip, Trade.GetQuantityOfGoodsActuallyMoved)]"
+				ContextualTooltipType = {
+					blockoverride "title_text" {
+						datacontext = "[Trade]"
+						text = "TRADE_INEFFICIENT_HEADER"
+					}
+					blockoverride "title_icon" {
+						icon = {
+							using = tooltip_title_icon_size
+							texture = "gfx/interface/icons/flat_icons/trade_maintenance.dds"
+						}
+					}
+					blockoverride "concept_link" {
+						text = [merchant_maintenance|E]
+					}
+					blockoverride "tooltip_content" {
+						TooltipTextBlock = {							
+							blockoverride "text" {
+								datacontext = "[Trade]"
+								text = "TRADE_INEFFICIENT_TT_TEXT"
+							}
+						}
+					}
+				}
+
 			}
 		}			
 		widget = {

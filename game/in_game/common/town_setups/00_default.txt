@@ -350,6 +350,7 @@ chinese_town = {
 	tools_guild = 1
 	scriptorium = 1
 	lacquerware_guild = 1
+	dyes_guild = 1
 	zhixian = 1
 }
 
@@ -371,6 +372,7 @@ chinese_coastal_town = {
 	tools_guild = 1
 	scriptorium = 1
 	lacquerware_guild = 1
+	dyes_guild = 1
 	zhixian = 1
 	wharf = 1
 }
@@ -397,6 +399,7 @@ chinese_city = {
 	tools_guild = 2
 	scriptorium = 2
 	lacquerware_guild = 1
+	dyes_guild = 2
 	zhixian = 1
 	provincial_garrison = 1
 }
@@ -423,6 +426,7 @@ chinese_coastal_city = {
 	tools_guild = 2
 	scriptorium = 2
 	lacquerware_guild = 1
+	dyes_guild = 2
 	zhixian = 1
 	wharf = 1
 }
@@ -664,6 +668,23 @@ maghreb_town = {
 	marketplace = 1
 }
 
+maghreb_coastal_town = {
+	fortress_granary = 1
+	temple = 1
+	tools_guild = 1
+	weapon_guild = 1
+	cloth_guild = 1
+	fine_cloth_guild = 1
+	mason = 1
+	pottery_guild = 1
+	paper_guild = 1
+	granary = 1
+	slave_market = 1
+	marketplace = 1
+	naval_supplies_guild = 1
+	wharf = 1
+}
+
 maghreb_city = {
 	fortress_granary = 1
 	temple = 1
@@ -681,6 +702,27 @@ maghreb_city = {
 	slave_market = 2
 	funduq = 1
 	marketplace = 2
+}
+
+maghreb_coastal_city = {
+	fortress_granary = 1
+	temple = 1
+	castle = 1
+	tools_guild = 2
+	weapon_guild = 1
+	cloth_guild = 1
+	fine_cloth_guild = 1
+	paper_guild = 2
+	mason = 2
+	pottery_guild = 2
+	furniture_guild = 1
+	scriptorium = 2
+	granary = 2
+	slave_market = 2
+	funduq = 1
+	marketplace = 2
+	naval_supplies_guild = 2
+	wharf = 1
 }
 
 egyptian_city = {

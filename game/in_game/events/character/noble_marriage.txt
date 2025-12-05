@@ -293,6 +293,7 @@ scripted_trigger valid_female_of_ruler_dynasty = {
 	is_heir = no
 	is_ruler =  no
 	modifier:blocked_from_marriage = no
+	NOT = { has_estate = estate_type:clergy_estate }
 }
 
 scripted_trigger valid_dynasty_head = {
@@ -300,6 +301,8 @@ scripted_trigger valid_dynasty_head = {
 	is_adult = yes
 	age_in_years > 25
 	is_married = no
+	modifier:blocked_from_marriage = no
+	NOT = { has_estate = estate_type:clergy_estate }
 }
 
 
@@ -326,7 +329,6 @@ noble_marriage.4 = {
 			NOT = { this = scope:target_dynasty }
 			dynasty_head ?= {
 				valid_dynasty_head = yes
-				NOT = { has_estate = estate_type:clergy_estate }
 			}
 		}
 		
@@ -340,7 +342,6 @@ noble_marriage.4 = {
 				NOT = { this = scope:target_dynasty }
 				dynasty_head ?= {
 					valid_dynasty_head = yes
-					NOT = { has_estate = estate_type:clergy_estate }
 				}
 				
 			}

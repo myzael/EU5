@@ -13,5 +13,6 @@
 		procure_core_claim
 		request_war_entry
 		hyw_sign_truce
+		hyw_defect_action
 	}
 }

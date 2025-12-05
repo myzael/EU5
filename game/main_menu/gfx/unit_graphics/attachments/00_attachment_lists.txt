@@ -430,8 +430,8 @@ back = {
 	10 = {}
 }
 
-light_tag:backpacks = {
-	10 = peasant_backpacks
+south_american_gfx:back = {
+	1 = aztec_cavalry_backpacks
 }
 
 heavy_tag:back = {
@@ -449,17 +449,6 @@ pavise_tag:back = {
 
 IDEAL_UNIFORM:back = {
 	10 = backpacks
-}
-
-###############################################
-# cavalry
-###############################################
-
-mounts = {
-	1 = cavalry
-#	1 = horses
-	1 = camelry
-    1 = elephantry
 }
 
 ###############################################

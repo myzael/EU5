@@ -22,7 +22,7 @@
 	}
 }
 
-mordvinic_language = {	#https://en.wikipedia.org/wiki/Mordvinic_languages
+mordvinic_language = { #https://en.wikipedia.org/wiki/Mordvinic_languages
 
 	color = map_mordvinic
 
@@ -49,7 +49,7 @@ mordvinic_language = {	#https://en.wikipedia.org/wiki/Mordvinic_languages
 	}
 }
 
-mari_language = {	#https://en.wikipedia.org/wiki/Mari_language
+mari_language = { #https://en.wikipedia.org/wiki/Mari_language
 	color = map_mari
 
 	family = uralic_language_family
@@ -80,7 +80,7 @@ mari_language = {	#https://en.wikipedia.org/wiki/Mari_language
 	}
 }
 
-permic_language = {	#https://en.wikipedia.org/wiki/Permic_languages
+permic_language = { #https://en.wikipedia.org/wiki/Permic_languages
 	color = map_PRM
 
 	family = uralic_language_family
@@ -97,7 +97,7 @@ permic_language = {	#https://en.wikipedia.org/wiki/Permic_languages
 	}
 }
 
-ugrian_language = {	#https://en.wikipedia.org/wiki/Khanty_language + https://en.wikipedia.org/wiki/Mansi_language
+ugrian_language = { #https://en.wikipedia.org/wiki/Khanty_language + https://en.wikipedia.org/wiki/Mansi_language
 	color = map_khanty
 
 	family = uralic_language_family
@@ -116,7 +116,7 @@ ugrian_language = {	#https://en.wikipedia.org/wiki/Khanty_language + https://en.
 	}
 }
 
-yeniseian_language = {	#https://en.wikipedia.org/wiki/Yeniseian_languages + https://en.wikipedia.org/wiki/Ket_language
+yeniseian_language = { #https://en.wikipedia.org/wiki/Yeniseian_languages + https://en.wikipedia.org/wiki/Ket_language
 	color = map_ket
 
 	male_names = {

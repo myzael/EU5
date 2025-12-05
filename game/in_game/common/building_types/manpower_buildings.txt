@@ -19,7 +19,7 @@
 		government_type = government_type:monarchy 
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	capital_modifier = {
@@ -398,7 +398,7 @@ city_guard = {
 		government_type = government_type:republic 
 	}
 	remove_if = {
-		location = { is_capital = no }
+		is_no_longer_capital = yes
 	}
 	
 	capital_modifier = {

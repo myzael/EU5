@@ -935,7 +935,7 @@ creator_god = {
 	icon = god_folk_green
 	
 	country_modifier = {
-		global_monthly_prosperity = 0.002
+		global_monthly_prosperity = 0.001
 	}
 	religion = tengri
 	religion = lugbara_religion
@@ -1401,7 +1401,7 @@ fertility_god = {
 	icon = god_folk_pink
 	
 	country_modifier = {
-		global_population_growth = 0.0004
+		global_population_growth = 0.0001
 	}
 	religion = tengri
 	religion = lugbara_religion

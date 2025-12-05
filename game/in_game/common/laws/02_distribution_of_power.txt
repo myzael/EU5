@@ -116,7 +116,7 @@
 		potential = {
 			OR = {
 				has_advance = magna_carta_advance
-				overlord ?= { OR = { tag = ENG tag = GBR } }
+				overlord ?= { OR = { has_or_had_tag = ENG has_or_had_tag = GBR } }
 			}
 		}
 	
@@ -155,7 +155,7 @@
 		potential = {
 			has_reform = government_reform:pyrenean_fueros_reform
 			OR = {
-				tag = NAV
+				has_or_had_tag = NAV
 				culture = culture:basque
 			}
 		}
@@ -259,8 +259,8 @@
 		potential = {
 			has_reform = government_reform:crown_castile_reform
 			OR = {
-				tag = CAS
-				tag = SPA
+				has_or_had_tag = CAS
+				has_or_had_tag = SPA
 				culture = culture:castilian
 			}
 		}
@@ -286,10 +286,10 @@
 		potential = {
 			has_unlocked_policy_trigger = { type = dop_law_comuneros_parliament }
 			OR = {
-				tag = CAS
+				has_or_had_tag = CAS
 				culture = culture:castilian
 				AND = {
-					tag = SPA
+					has_or_had_tag = SPA
 					culture = culture:castilian
 				}
 			}
@@ -310,10 +310,10 @@
 		potential = {
 			has_unlocked_policy_trigger = { type = dop_law_castilian_courts_reinforced }
 			OR = {
-				tag = CAS
+				has_or_had_tag = CAS
 				culture = culture:castilian
 				AND = {
-					tag = SPA
+					has_or_had_tag = SPA
 					culture = culture:castilian
 				}
 			}
@@ -356,7 +356,7 @@
 	dop_office_of_the_eristavi = {
 		unique = yes
 		potential = {
-			tag = GEO
+			has_or_had_tag = GEO
 		}
 
 		country_modifier = {

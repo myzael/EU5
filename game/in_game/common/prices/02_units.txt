@@ -138,7 +138,7 @@ navy_transport_maintenance = {
 
 # Panokseon
 n_panokseon_build = {
-	gold = 150
+	gold = 15
 	sailors = 1
 }
 
@@ -147,7 +147,7 @@ n_panokseon_reinforce = {
 	sailors = 1
 }
 n_panokseon_maintenance = {
-	gold = 10
+	gold = 0.2
 	sailors = 0.2
 }
 

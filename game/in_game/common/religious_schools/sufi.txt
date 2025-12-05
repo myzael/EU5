@@ -1,4 +1,6 @@
 ﻿bektashi_school = {
+	color = rgb { 21 125 66 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -21,6 +23,8 @@
 }
 
 chishti_school = {
+	color = rgb { 229 60 8 }
+
 	enabled_for_country = {
 		religion = religion:sunni
 		societal_value:mysticism_vs_jurisprudence <= -50
@@ -35,6 +39,8 @@ chishti_school = {
 }
 
 khalwati_school = {
+	color = rgb { 229 137 8 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -55,6 +61,8 @@ khalwati_school = {
 }
 
 mevlevi_school = {
+	color = rgb { 44 7 15}
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -75,6 +83,8 @@ mevlevi_school = {
 }
 
 naqshbandi_school = {
+	color = rgb { 44 7 7 }
+
 	enabled_for_country = {
 		religion = religion:sunni
 		societal_value:mysticism_vs_jurisprudence <= -50
@@ -89,6 +99,8 @@ naqshbandi_school = {
 }
 
 qadiri_school = {
+	color = rgb { 38 120 188 }
+
 	enabled_for_country = {
 		religion = religion:sunni
 		societal_value:mysticism_vs_jurisprudence <= -50
@@ -103,6 +115,8 @@ qadiri_school = {
 }
 
 safavid_school = {
+	color = rgb { 56 35 11 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -123,6 +137,8 @@ safavid_school = {
 }
 
 shadhili_school = {
+	color = rgb { 56 11 28 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -143,6 +159,8 @@ shadhili_school = {
 }
 
 suhrawardi_school = {
+	color = rgb { 139 50 32 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -163,6 +181,8 @@ suhrawardi_school = {
 }
 
 isawiyya_school = {
+	color = rgb { 123 45 27 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:sunni
@@ -185,6 +205,8 @@ isawiyya_school = {
 }
 
 din_i_ilahi_school = {
+	color = rgb { 0 38 10 }
+
 	enabled_for_country = {
 		OR = {
 			religion = religion:shia

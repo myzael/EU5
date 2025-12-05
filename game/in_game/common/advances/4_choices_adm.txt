@@ -72,7 +72,7 @@ state_efficiency = {
 	
 	
 	requires = subject_integration
-	global_distance_from_capital_cost_modifier = -0.025
+	global_distance_from_capital_cost_modifier = -0.05
 }
 
 
@@ -307,7 +307,7 @@ centralized_government = {
 	icon = road_building
 	for = adm
 
-	global_distance_from_capital_cost_modifier = -0.10
+	global_distance_from_capital_cost_modifier = -0.05
 }
 
 economic_ideas = {
@@ -315,7 +315,7 @@ economic_ideas = {
 	icon = expanded_supply_trains
 	for = adm
 
-	global_monthly_development = 0.002
+	global_monthly_development = 0.001
 }
 additional_colonists = {
 	age = age_5_absolutism

@@ -376,7 +376,7 @@ lateralview = {
 													using = layoutpolicy_expanding
 													autoresize = no
 													align = center|nobaseline
-													text = "[Player.GetDiplomacy.GetDiplomaticRelationsWithCountryAmount(Country.Self)]"
+													text = "[Player.GetDiplomacy.GetUsedDiplomaticCapacityWithCountry(Country.Self)|2]"
 													tooltipwidget = {
 														ContextualTooltipType = {
 															blockoverride "title_icon" {
@@ -392,6 +392,10 @@ lateralview = {
 																text = "DIPLOMATIC_ACTIONS_CAP_TOOLTIP_T"
 															}
 															blockoverride "tooltip_content" {
+																TooltipScrolledStringPairList = {
+																	blockoverride "block_scrollarea" { maximumsize = { -1 150 } minimumsize = { -1 30 } }
+																	textcontext = "[Player.GetDiplomacy.GetUsedDiplomaticCapacityWithCountryInfo(Country.Self)]"
+																}
 																TooltipScrolledStringPairList = {
 																	blockoverride "block_scrollarea" { maximumsize = { -1 150 } minimumsize = { -1 30 } }
 																	textcontext = "[Player.GetDiplomacy.GetDiplomaticRelationsWithCountryInfo(Country.Self)]"

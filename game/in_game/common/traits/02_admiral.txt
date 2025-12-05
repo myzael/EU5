@@ -22,7 +22,7 @@ buccaneer = {
 prize_hunter = {
 	category = admiral
 	modifier = {
-		ship_capture_chance = 0.2
+		ship_capture_chance = 0.05
 	}
 }
 

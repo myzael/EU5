@@ -1202,14 +1202,14 @@ template exploration_item {
 							}
 
 							header_action_button_left = {
-								size = { 20 20 }
+								size = { 30 30 }
 								parentanchor = vcenter|right
-								position = { -10 0 }
+								position = { 10 0 }
 								title = "game_concept_exploration"
 								actor = "[Player]"
 								blockoverride "button_icon_stretch_sprite" {}
 								blockoverride "header_button_frame_inner" {visible = no}
-								blockoverride "header_button_icon_size" {size = { 20 20 } }
+								blockoverride "header_button_icon_size" {size = { 30 30 } }
 								blockoverride "header_button_text_layout" {}
 								blockoverride "icon_texture" {
 									texture = "gfx/interface/icons/sort/change.dds"

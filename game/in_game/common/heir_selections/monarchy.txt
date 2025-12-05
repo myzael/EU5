@@ -14,6 +14,7 @@
 	heir_is_allowed = {
 	}
 	traverse_family_tree = yes
+	depth_first = yes
 	sibling_score = {
 		if = {
 			limit = {
@@ -90,6 +91,7 @@ absolute_cognatic_primogeniture = {
 	heir_is_allowed = {
 	}
 	traverse_family_tree = yes
+	depth_first = yes
 	sibling_score = {
 		if = {
 			limit = {
@@ -1206,30 +1208,35 @@ union_of_crowns_succession = {
 			limit = {
 				exists = root
 			}
-
 			add = {
 				desc = "HEIR_SELECTION_IS_RULER"
 				if = {
-					limit = {
-						is_ruler = yes
-					}
+					limit = { is_ruler = yes }
 					value = 100
 				}
 			}
-			
-			#bonus for males
+			add = {
+				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
+				value = character_age
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				if = { limit = { modifier:blocked_from_being_ruler = yes } value = -1000 }
+			}
+		}
+	}
+	sibling_score = {
+		if = {
+			limit = {
+				exists = root
+			}
 			add = {
 				desc = "HEIR_SELECTION_IS_DIRECT_MALE_DESCENDANT"
 				if = {
 					limit = {
-						is_female = no
-						owner = {
-							has_ruler = yes
-							ruler ?= {
-								any_descendant = {
-									this = root
-								}
-							}
+						OR = {
+							not = { exists = root }
+							is_female = no
 						}
 					}
 					value = 200
@@ -1248,99 +1255,8 @@ union_of_crowns_succession = {
 		else = {
 			#description
 			add = {
-				desc = "HEIR_SELECTION_IS_RULER"
-				value = 100
-			}
-
-			add = {
 				desc = "HEIR_SELECTION_IS_DIRECT_MALE_DESCENDANT"
 				value = 200
-			}
-
-			add = {
-				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
-				value = 1
-			}
-		}
-	}
-	sibling_score = {
-		if = {
-			limit = {
-				exists = root
-			}
-			if = {
-				limit = {
-					is_female = no
-					owner = {
-						has_ruler = yes
-						ruler ?= {
-							any_descendant = {
-								this = root
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						father ?= owner.ruler
-					}
-					#bonus for sons
-					add = {
-						desc = "HEIR_SELECTION_IS_RULER_SON_DESC"
-						value = 200
-					}
-				}
-				else_if = {
-					limit = {
-						father ?= {
-							father ?= owner.ruler
-						}
-					}
-					#bonus for sons
-					add = {
-						desc = "HEIR_SELECTION_IS_RULER_GRANDSON_DESC"
-						value = 100
-					}
-				}
-				#bonus for males
-				add = {
-					desc = "HEIR_SELECTION_IS_DIRECT_MALE_DESCENDANT"
-					value = 200
-				}
-				add = {
-					desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
-					value = character_age
-				}
-			}
-			else_if = {
-				limit = {
-					is_female = no
-					is_ruler = yes
-				}
-				add = {
-					desc = "HEIR_SELECTION_IS_RULER_DESC"
-					value = 100
-				}
-			}
-
-			add = {
-				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
-				if = { limit = { modifier:blocked_from_being_ruler = yes } value = -1000 }
-			}
-		}
-		else = {
-			#description
-			add = {
-				desc = "HEIR_SELECTION_IS_DIRECT_MALE_DESCENDANT"
-				value = 200
-			}
-			add = {
-				desc = "HEIR_SELECTION_IS_RULER_SON_DESC"
-				value = 200
-			}			
-			add = {
-				desc = "HEIR_SELECTION_IS_RULER_GRANDSON_DESC"
-				value = 100
 			}
 			add = {
 				desc = "HEIR_SELECTION_IS_RULER_DESC"
@@ -1349,6 +1265,10 @@ union_of_crowns_succession = {
 			add = {
 				desc = "HEIR_SELECTION_OLDER_HEIR_DESC"
 				value = 1
+			}
+			add = {
+				desc = "HEIR_SELECTION_IS_UNSUITED_TO_RULE_DESC"
+				value = -1000
 			}
 		}
 	}
@@ -1382,6 +1302,7 @@ austrian_cognatic_primogeniture = {
 	heir_is_allowed = {
 	}
 	traverse_family_tree = yes
+	depth_first = yes
 	sibling_score = {
 		if = {
 			limit = {

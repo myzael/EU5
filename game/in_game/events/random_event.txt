@@ -678,6 +678,9 @@ random_event.16 = {
 
 	option = {
 		name = random_event.16.a
+
+		ai_will_select = { value = 0 }
+
 		add_country_modifier = {
 			modifier = passive_in_political_crisis
 			years = 2
@@ -686,6 +689,9 @@ random_event.16 = {
 	}
 	option = {
 		name = random_event.16.b
+
+		ai_will_select = { value = 1 }
+		
 		add_prestige = prestige_weak_penalty
 	}
 }
@@ -1960,6 +1966,7 @@ random_event.39 = {
 			is_subject = no
 			NOT = { has_opinion = { target = root modifier = opinion_supports_dissidents } }
 			has_ruler = yes
+			in_civil_war = no
 		}
 		country_has_estate = estate_type:nobles_estate
 	}
@@ -1972,6 +1979,7 @@ random_event.39 = {
 				is_subject = no
 				NOT = { has_opinion = { target = root modifier = opinion_supports_dissidents } }
 				has_ruler = yes
+				in_civil_war = no
 			}
 			save_scope_as = dissidents
 		}
@@ -4361,7 +4369,7 @@ random_event.87 = {
 				country = root
 				key = merchants_not_supported
 				months = 120
-				power = -50
+				power = merchant_power_severe_penalty
 			}
 		}
 	}
@@ -4382,7 +4390,7 @@ random_event.87 = {
 				country = root
 				key = merchants_not_supported
 				months = 120
-				power = -50
+				power = merchant_power_severe_penalty
 			}
 		}
 	}
@@ -4633,6 +4641,7 @@ random_event.93 = {
 		any_cabinet_character = {
 			NOT = {
 				dynasty ?= root.ruler.dynasty
+				is_heir = no
 			}
 			count > 0
 		}
@@ -4644,6 +4653,7 @@ random_event.93 = {
 				NOT = {
 					dynasty ?= root.ruler.dynasty
 				}
+				is_heir = no
 			}
 			save_scope_as = minister
 		}
@@ -4659,14 +4669,6 @@ random_event.93 = {
 	option = {
 		name = random_event.93.b
 
-		trigger = {
-			scope:minister = {
-				OR = {
-					is_heir = no
-					has_estate = estate_type:crown_estate
-				}
-			}
-		}
 		kill_character = {
 			target = scope:minister
 			reason = beheading

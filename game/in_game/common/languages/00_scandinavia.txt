@@ -340,8 +340,8 @@ finnish_language = {
 	} 
 	lowborn = {
 		Rova Suensaari Tammpere Nieminen Hannus Jaakkola Ilkka Akseli Haapa
-		Lahtinen Sepp  Laine jarvinen Anttonen	Karpela	sarkilahti	Karp Lepo
-		sydanmaa makela Koskinen Lankinen Bottii	Lonooen	Markonen
+		Lahtinen Sepp  Laine jarvinen Anttonen Karpela sarkilahti Karp Lepo
+		sydanmaa makela Koskinen Lankinen Bottii Lonooen Markonen
 	}
 	patronym_suffix_son = "patronym_suffix_finnish_son"
 	patronym_suffix_daughter = "patronym_suffix_finnish_daughter"

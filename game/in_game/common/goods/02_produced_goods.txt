@@ -64,6 +64,8 @@ weaponry = { #Swords, clubs, spears, halberds, bows, crossbows, etc
 	demand_add = {
 		nobles = 0.1
 		soldiers = 0.0025
+		laborers = 0.0005
+		peasants = 0.0005
 	}
 	
 	wealth_impact_threshold = {

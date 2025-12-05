@@ -5,24 +5,24 @@
 	family = atlantic_language_family
 
 	male_names = {
-		Amari Birayma Detye Dyor Faly Jor Lat Leele	Ndiadiane Samba	
-		Fambi Fode Kolki Massamba Maysa Mbegan Mbissine	Patar Tasse	Wali
+		Amari Birayma Detye Dyor Faly Jor Lat Leele Ndiadiane Samba	
+		Fambi Fode Kolki Massamba Maysa Mbegan Mbissine Patar Tasse Wali
 		Alpha Boubacar Dawo Ibrahima Lamine Mamado Oumar name_yaya Yero Saikou
 	}
 	female_names = {
-		Aja	Fadia name_ida Kaddy Maimuna Mariama 
+		Aja Fadia name_ida Kaddy Maimuna Mariama 
 		Bintou Fatou Fatim Lingeer Ndoye Ngoneh Salimatou Sobel Ngneh
-		Aaminata Aissatou Binta	Dalanda Djenabou Fatoumata Hassanatou Houssainatou Kadiatou	Safiyah
+		Aaminata Aissatou Binta Dalanda Djenabou Fatoumata Hassanatou Houssainatou Kadiatou Safiyah
 	}
 	dynasty_names = {
-		Diop Diouf Dyeme Faal Fak Kumba	Ndiaye Njogu Penda Wagadu
+		Diop Diouf Dyeme Faal Fak Kumba Ndiaye Njogu Penda Wagadu
 		Beye Demba Faye Guelowar Joos Manneh Ndour Thiaw
-		Ba Bello Buhari	Diallo Gambari Jalloh Nyako	Sankara Shagari Sow	Tall Tuggar
+		Ba Bello Buhari Diallo Gambari Jalloh Nyako Sankara Shagari Sow Tall Tuggar
 	}
 	lowborn = {
-		Abdou Alagie Amadou Alieu Baboucar Dawda Ebrima Lamin Modou	Samba
-		Fambi Fode Kolki Massamba Maysa Mbegan Mbissine	Patar Tasse	Wali
-		Alpha Boubacar Dawo	Ibrahima Lamine	Mamado Oumar name_yaya Yero Saikou
+		Abdou Alagie Amadou Alieu Baboucar Dawda Ebrima Lamin Modou Samba
+		Fambi Fode Kolki Massamba Maysa Mbegan Mbissine Patar Tasse Wali
+		Alpha Boubacar Dawo Ibrahima Lamine Mamado Oumar name_yaya Yero Saikou
 	}
 }
 
@@ -55,13 +55,13 @@ senufo_language = {
 
 	male_names = {
 		Zie Zana Ngolo Beh Dognimin
-		Birama Bubu	Gane Kambine Majan Soumaoro
-		Gnounga	Karim Kouka	Nonraogo Oubri
+		Birama Bubu Gane Kambine Majan Soumaoro
+		Gnounga Karim Kouka Nonraogo Oubri
 	}
 	female_names = {
 		Gnon Zele Bara Ghire
 		Fatou name_eve Isatou Kabir Kaddy Makuto Ramata
-		Guessrima Kenga	Poko
+		Guessrima Kenga Poko
 	}
 	dynasty_names = {
 	}
@@ -98,13 +98,13 @@ kwa_language = {
 		Atoapem Bodua Kwasi Kwadwo Kwabena Kwafi Kwaku Kwame Kwao Ogyam Okoto Ntonni Pereko Okyin
 	}
 	female_names = {
-		Abena Adwoa Afia Akosua Akua Amma anane	Maanu Nsowa	Yaa
+		Abena Adwoa Afia Akosua Akua Amma anane Maanu Nsowa Yaa
 	}
 	dynasty_names = {
-		Abohyen Achampong Appiah Boateng Bretuo	Essien Oboadum Opemsoo Oyoko Yeboah
+		Abohyen Achampong Appiah Boateng Bretuo Essien Oboadum Opemsoo Oyoko Yeboah
 	}
 	lowborn = {
-		Atoapem	Bodua Kwasi Kwadwo Kwabena Kwafi Kwaku Kwame Kwao Ogyam Okoto Ntonni Pereko	Okyin
+		Atoapem Bodua Kwasi Kwadwo Kwabena Kwafi Kwaku Kwame Kwao Ogyam Okoto Ntonni Pereko Okyin
 	}
 }
 
@@ -180,12 +180,12 @@ dogon_language = { #Copied some from Mande and Gur
 	color = map_dogon
 
 	male_names = {
-		Birama Bubu	Gane Kambine Majan Soumaoro
-		Gnounga	Karim Kouka	Nonraogo Oubri
+		Birama Bubu Gane Kambine Majan Soumaoro
+		Gnounga Karim Kouka Nonraogo Oubri
 	}
 	female_names = {
 		Fatou name_eve Isatou Kabir Kaddy Makuto Ramata
-		Guessrima Kenga	Poko
+		Guessrima Kenga Poko
 	}
 	dynasty_names = {
 	}

@@ -148,7 +148,7 @@ international_organization_manager = {
 		ruler_term = { character = hab_rudolf_i_habsburg start_date = 1275.5.1 end_date = 1291.7.15 regnal_number = 1 }
 		ruler_term = { character = ogk_adolf_von_nassau start_date = 1292.5.5 end_date = 1298.7.2 regnal_number = 1 }
 		ruler_term = { character = hab_albrecht_i_habsburg start_date = 1298.7.27 end_date = 1308.5.1 regnal_number = 1 }
-		ruler_term = { character = lux_henry_vii_luxembourg start_date = 1308.11.27 end_date = 1313.8.24 regnal_number = 6 }
+		ruler_term = { character = lux_henry_vii_luxembourg start_date = 1308.11.27 end_date = 1313.8.24 regnal_number = 7 }
 		ruler_term = {
 			character = ubv_ludwig_iv_wittelsbach start_date = 1314.10.20 end_date = 1322.9.28 regnal_number = 4
 			character = hab_friedrich_i_habsburg start_date = 1314.10.20 end_date = 1322.9.28 regnal_number = 1 # As Antiking
@@ -156,6 +156,14 @@ international_organization_manager = {
 		ruler_term = { character = ubv_ludwig_iv_wittelsbach start_date = 1322.9.28 regnal_number = 4 }
 		#Great Interregnum will continue until Charles IV secures Succession for his son
 
+		regnal_numbers = {
+			name_charles = 3
+			name_lothar = 2
+			name_wido = 1
+			name_lambert = 1
+			name_arnulf = 1
+			name_berengar = 1
+		}
 		variables = { 
 			imperial_authority = 5
 		}

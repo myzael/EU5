@@ -158,7 +158,7 @@ miaphysite_flavor.5 = {
 	
 	trigger = {
 		exists = scope:loser
-		this = location:jerusalem
+		this = location:yerevan
 		owner.religion = religion:miaphysite
 		NOT = { scope:loser.religion = religion:miaphysite }
 	}
@@ -170,7 +170,7 @@ miaphysite_flavor.5 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		location:jerusalem = {
+		location:yerevan = {
 			save_scope_as = target_location
 		}
 	}

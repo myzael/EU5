@@ -18,6 +18,6 @@
 	}
 	country_modifier = {
 		global_manpower_modifier = 0.1
-		army_reinforce_cost = -0.2
+		army_reinforce_cost = -0.02
 	}
 }

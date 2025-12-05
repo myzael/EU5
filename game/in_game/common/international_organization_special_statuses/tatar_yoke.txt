@@ -24,7 +24,7 @@ tatar_tax_collector = {
 	modifier = {
 		rural_migration_attraction = 0.1
 		non_rural_migration_attraction = 0.1
-		global_monthly_development = 0.0025
+		global_monthly_development = 0.002
 	}
 
 	can_bestow_trigger = {

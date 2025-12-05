@@ -155,6 +155,11 @@ colonial_range_modifier = {
 }
 
 
+block_tribal_promotion = {
+	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+}
+
+
 global_tribal_promotion = {
 	positive = "gfx/interface/icons/modifier_types/global_tribal_promotion.dds" 
 }
@@ -717,6 +722,10 @@ naval_morale_modifier = {
 
 max_war_exhaustion = {
 	positive = "gfx/interface/icons/modifier_types/max_war_exhaustion.dds" 
+}
+
+force_army_maintenance = {
+	positive = "gfx/interface/icons/modifier_types/army_maintenance_cost.dds"
 }
 
 army_maintenance_cost = {
@@ -2044,6 +2053,10 @@ allow_subjects = {
 	negative = "gfx/interface/icons/modifier_types/allow_subjects_negative.dds"
 }
 
+force_convert_created_subjects = {
+	positive = "gfx/interface/icons/modifier_types/convert_religion_cost_modifier.dds" 
+}
+
 disallow_migration_beyond_borders = {
 	positive = "gfx/interface/icons/modifier_types/disallow_migration_beyond_borders.dds" 
 }
@@ -2486,6 +2499,10 @@ merchant_maintenance_cost = {
 }
 
 diplomatic_annexation_cost = {
+	positive = "gfx/interface/icons/modifier_types/diplomatic_annexation_cost.dds" 
+}
+
+hostile_diplomatic_annexation_cost = {
 	positive = "gfx/interface/icons/modifier_types/diplomatic_annexation_cost.dds" 
 }
 
@@ -4632,6 +4649,9 @@ blocked_from_declaring_war = {
 	positive = "gfx/interface/icons/modifier_types/blocked_from_declaring_war.dds" 
 }
 
+union_blocked_from_declaring_war = {
+	positive = "gfx/interface/icons/modifier_types/blocked_from_declaring_war.dds" 
+}
 
 trade_range = {
 	positive = "gfx/interface/icons/modifier_types/trade_range.dds"
@@ -4872,6 +4892,34 @@ local_great_pestilence_impact_modifier = {
 
 local_malaria_impact_modifier = {
 	positive = "gfx/interface/icons/modifier_types/local_malaria_impact_modifier.dds"
+}
+
+bubonic_plague_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/bubonic_plague_resistance_modifier.dds"
+}
+
+smallpox_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/smallpox_resistance_modifier.dds"
+}
+
+typhus_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/typhus_resistance_modifier.dds"
+}
+
+influenza_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/influenza_resistance_modifier.dds"
+}
+
+measles_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/measles_resistance_modifier.dds"
+}
+
+great_pestilence_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/great_pestilence_resistance_modifier.dds"
+}
+
+malaria_resistance_modifier = {
+	positive = "gfx/interface/icons/modifier_types/malaria_resistance_modifier.dds"
 }
 
 male_spouses = {
@@ -6101,6 +6149,10 @@ can_build_mamluk_barracks = {
 	positive = "gfx/interface/icons/modifier_types/can_build_mamluk_barracks.dds"
 }
 
+levy_recovery_modifier = {
+	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+}
+
 levy_combat_efficiency_modifier = {
 	positive = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds" 
 }
@@ -7159,6 +7211,10 @@ remove_panaqa_early_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/has_panaqas.dds" 
 }
 
+local_market_access = {
+	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder
+}
+
 
 local_prosperity_decay = {
 	positive = "gfx/interface/icons/modifier_types/global_prosperity_decay.dds"
@@ -7252,6 +7308,14 @@ union_allowed_enforce_peace = {
 	positive = "gfx/interface/icons/modifier_types/allowed_enforce_peace.dds" 
 }
 
+union_unlock_rein_in_junior_diplomacy = {
+	positive = "gfx/interface/icons/modifier_types/allow_diplomacy_force_embargo.dds" 
+}
+
 unlock_prikazi_reform_cabinet_actions = {
 	positive = "gfx/interface/icons/modifier_types/grant_cabinet_right.dds"
+}
+
+cannot_be_subjugated = {
+	positive = "gfx/interface/icons/modifier_types/subject_not_obligated_to_join_war.dds"
 }

@@ -307,7 +307,7 @@ occitan_language = {
 			dynasty_names = {
 				amat_dynasty anglesola_dynasty
 				borja_dynasty
-				cabrera_dynasty cardona_dynasty castro_dynasty cervello_dynasty cruilles_dynasty
+				cabrera_dynasty cardona_dynasty cervello_dynasty cruilles_dynasty
 				mataplana_dynasty de_montcada de_montsoriu
 				pinos_dynasty
 				queralt_dynasty

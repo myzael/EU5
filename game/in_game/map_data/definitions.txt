@@ -20,7 +20,7 @@
 			}
 			denmark_area = {
 				sonderjylland_province = { ribe haderslev aabenraa tonder }
-				norrejylland_province = { randers viborg aalborg ars limfjorden }
+				norrejylland_province = { randers viborg aalborg ars }
 				western_jutland_province = { bolling ringkobing holstebro_lundenes varde }
 				eastern_jutland_province = { kolding aarhus grindsted silkeborg kalo }
 				vendsyssel_thy_province = { thisted skagen hjorring }
@@ -131,7 +131,7 @@
 					western_gotland_basin gotlands_hav
 				}
 				skagerrak_province = { frier_fjord grenen_cape jammer_bay kristiansand_fjord oslo_fjord skagerrack vigso_bay }
-				danish_sea = { alborg_bugt kattegatt oresund stora_balt lilla_balt 	}
+				danish_sea = { alborg_bugt kattegatt oresund stora_balt lilla_balt limfjorden}
 				south_baltic_sea = {
 					kalmar_sund skanska_kusten blekinge_kust central_baltic oland_coast
 				}
@@ -765,7 +765,7 @@
 			}
 			# Wales
 			wales_area = {
-				deheubarth_province = { carmarthen pembroke fishguard kidwelly cardigan aberystwyth dyfi_estuary }
+				deheubarth_province = { carmarthen pembroke fishguard kidwelly cardigan aberystwyth }
 				gwynedd_province = { carnarvon anglesey conwy harlech flint penllyn denbigh snowdon }
 				powys_province = { montgomery machynlleth llangollen berwyn_range }
 				brecon_province = { brecknock builth radnor brecon_beacons cambrian_mountains }
@@ -1538,7 +1538,7 @@
 				labinsk_province = { chatyun adyukh armavir shkhancheriekhabl belorechensk }
 			}
 			yedisan_area = {
-				khadjibey_province = { khadjibey teligol kuyanlik ananiv iagorlic berezan_liman khadzhibey_liman kuialnyk_liman tylihul_liman }
+				khadjibey_province = { khadjibey teligol kuyanlik ananiv iagorlic khadzhibey_liman kuialnyk_liman}
 				boh_province = { dashev balikley aqmecit_prybuzhzhya argamakli_sarai vithold_hammami harbuzynka }
 				oleshia_province = { oleshia bereznehuvate bashtanka tavan velyka_oleksandrivka }
 				qalancak_province = { qalancaq aslan_horod ordu_bazar rohat_kermen enice velyka_lepetykha }
@@ -1563,8 +1563,8 @@
 				donetsk_province = { donets_kharkiv chuhuiv khotmyzh kotelva okhtyrka zmiiv }
 			}
 			pryazovia_area = {
-				berda_province = { melitopol kyrylivka tokmak konski_vody kuchugur berdiansk molochnyi_liman }
-				kalmius_province = { taganrog velyka_novosilka domakha huliaipole shyrokyne vasylivka mius_liman }
+				berda_province = { melitopol kyrylivka tokmak konski_vody kuchugur berdiansk }
+				kalmius_province = { taganrog velyka_novosilka domakha huliaipole shyrokyne vasylivka }
 				bakhmut_province = { bakhmut lysychansk kreminna oleksandrivka posad }
 			}
 			azov_area = {

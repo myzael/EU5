@@ -236,7 +236,7 @@ chickasaw_choctaw_language = { #Western sub-family of the Muskogean language, Ch
 	}
 	female_names = {
 		Nahomtima Immahoka Lunnabaga Llanquiray Manque Millaray Peyeche Piro Pitrel Quetroman Quimey Quintruy Quintuqueo 
-		Rayen Saqui Somoche	Mintahoye Phalishta Ishtimmarharlechar Temusharhoctay Mintahoyo
+		Rayen Saqui Somoche Mintahoye Phalishta Ishtimmarharlechar Temusharhoctay Mintahoyo
 	}
 	dynasty_names = {
 	}
@@ -296,7 +296,7 @@ timucua_language = {
 	}
 	female_names = {
 		Nahomtima Immahoka Lunnabaga Llanquiray Manque Millaray Peyeche Piro Pitrel Quetroman Quimey Quintruy Quintuqueo 
-		Rayen Saqui Somoche	Mintahoye Phalishta Ishtimmarharlechar Temusharhoctay Mintahoyo
+		Rayen Saqui Somoche Mintahoye Phalishta Ishtimmarharlechar Temusharhoctay Mintahoyo
 	}
 	dynasty_names = {
 	}
@@ -366,7 +366,7 @@ dhegiha_language = { #Dhegiha branch of the Mississippian Siouan languages : Osa
 		Voigaspache Manyvoile Quinihonique  Natanhi Miasa Ousabe Voichinouthe Amanpasse Cutsagabe Channahon Bassechinga   
 	}
 	female_names = {
-		Wyhesee	Mohongo Miskanozhe Zhawemiteki Mizhite Wasista Mitsino Mitahne Meumbane Waoowinchtcha
+		Wyhesee Mohongo Miskanozhe Zhawemiteki Mizhite Wasista Mitsino Mitahne Meumbane Waoowinchtcha
 	}
 	dynasty_names = {
 		Zawe Wazhika Wasa Mato Tte Toxe Ppetq Mashka Tanka Maska Napata Xida Opo Ho Haka Tada Okaxpa Maxe Wesa Mikaxe Mi Kke Shoke Nikiata Tizho 
@@ -389,7 +389,7 @@ tutelo_language = { #Ohio valley Siouan language, plus the
 		Voigaspache Manyvoile Quinihonique Natanhi Miasa Ousabe Voichinouthe Amanpasse Cutsagabe Channahon Bassechinga   
 	}
 	female_names = {
-		Wyhesee	Mohongo Miskanozhe Zhawemiteki Mizhite Wasista Mitsino Mitahne Meumbane Waoowinchtcha
+		Wyhesee Mohongo Miskanozhe Zhawemiteki Mizhite Wasista Mitsino Mitahne Meumbane Waoowinchtcha
 	}
 	dynasty_names = {
 		Itaayadi Oayadi Naotodcaayadi Zawe Wazhika Wasa Mato Tte Toxe Ppetq Mashka Tanka Maska Napata Xida Opo Ho Haka Tada Okaxpa Maxe Wesa Mikaxe Mi Kke Shoke Nikiata Tizho  

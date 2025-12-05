@@ -151,6 +151,23 @@ possible_offence_upkeep_cost = {
 	}
 }
 
+rein_in_junior_diplomacy_upkeep_cost = {
+	add = {
+		desc = "UPKEEP_BASE_VALUE"
+		value = 0.2
+	}
+	add = {
+		desc = "RELATIVE_GREAT_POWER_SCORE"
+		value = scope:second.great_power_score
+		divide = {
+			value = scope:first.great_power_score
+			min = 1 
+		}
+		multiply = 0.5
+		min = 0.5
+	}
+}
+
 # these use first/second as scopes.
 alliance_upkeep_cost = {
 	add = {

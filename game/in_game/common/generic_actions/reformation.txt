@@ -98,6 +98,19 @@
 				exists = scope:target
 			}
 			scope:actor = {
+				#save the current heir selection to re-apply it after
+				random_current_policy = {
+					limit = {
+						OR = {
+							this = policy:heir_special_succession
+							this = policy:heir_same_religion
+							this = policy:heir_same_religion_group
+							this = policy:heir_any_religion
+						}
+					}
+					save_temporary_scope_as = target_policy
+				}
+
 				change_religion = scope:target
 				change_religion_for_ruler_and_family = { country = scope:actor religion = scope:target }
 				if = {
@@ -109,6 +122,9 @@
 					change_government_type = government_type:monarchy
 				}
 				ruler ?= { remove_character_modifier = enacted_placitum_regium }
+				
+				add_policy = scope:target_policy
+				
 				add_cooldown = {
 					type = convert_religion
 					years = 10

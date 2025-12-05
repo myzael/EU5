@@ -809,6 +809,7 @@ ikko_ikki.8 = { #Support of the ikko ikki
 				}
 				order_by = population
 				max = 3
+				check_range_bounds = no
 				scope:target_io = { add_location_to_international_organization = prev }
 			}
 		}

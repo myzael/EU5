@@ -36,15 +36,7 @@
 			data = rebel_size
 		}
 		visible = {
-			scope:actor = {
-				not = {
-					any_cabinet = {
-						has_cabinet_action = yes
-						cabinet_action = cabinet_action:rebel_crackdown
-						interaction_target:target ?= root
-					}
-				}
-			}
+			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = rebel_crackdown interaction_target = target } }
 		}
 	}
 
@@ -84,20 +76,27 @@
 	}
 
 	ai_will_do = {
-		#screw those guys
-		value = 1
+		value = -1
 
 		add = {
-			scope:target ?= {
-				value = rebel_size
-				multiply = 150
-				multiply = rebel_progress
-
-				if = {
-					limit = { scope:actor.total_population > 0 }
-					divide = scope:actor.total_population
+			if = {
+				limit = {
+					scope:target ?= {
+						rebel_progress > 0.3
+					}
 				}
-			} 
+
+				scope:target ?= {
+					value = rebel_size
+					multiply = 150
+					multiply = rebel_progress
+
+					if = {
+						limit = { scope:actor.total_population > 0 }
+						divide = scope:actor.total_population
+					}
+				} 
+			}
 		}
 	}
 }

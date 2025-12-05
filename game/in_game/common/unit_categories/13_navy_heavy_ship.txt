@@ -8,7 +8,7 @@
 	transport_capacity = 0.050
 	
 	
-	frontage = 1.25
+	frontage = 1.5
 	initiative = 1
 	combat_speed = 0.5
 	

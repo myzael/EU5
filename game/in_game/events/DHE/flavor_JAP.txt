@@ -593,7 +593,7 @@ flavor_jap.13 = { #Kakitsu Treaty
 		scope:target_location = {
 			add_merchant_power = {
 				country = root
-				power = 50
+				power = merchant_power_severe_bonus
 				months = 25
 				key = kakitsu_treaty
 			}
