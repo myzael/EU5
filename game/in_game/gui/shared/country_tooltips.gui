@@ -1024,7 +1024,7 @@ template Army_size_tooltip {
 							}
 							expand = {}
 							text_single = {
-								raw_text = "[Country.GetMaxManpowerValue|2W] [manpower_icon]"
+								raw_text = "[Country.GetCurrencyValue('manpower')] / [Country.GetMaxManpowerValue|2W] [manpower_icon]"
 							}
 						}
 					}
