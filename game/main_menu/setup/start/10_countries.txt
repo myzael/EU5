@@ -40152,12 +40152,12 @@ countries = {
 		accepted_cultures = {
 			greater_polish
 			silesian
+			ashkenazi
 			mazovian
 		}
 
 		tolerated_cultures = {
 			kashubian
-			ashkenazi
 		}
 
 		#Setup to accurately portray the starting situation
