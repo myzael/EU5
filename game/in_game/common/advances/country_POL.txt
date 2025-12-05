@@ -23,7 +23,7 @@ statute_of_kalisz = {
 	age = age_1_traditions
 	potential = { has_or_had_tag = POL }
 
-	tolerance_heathen = 1
+	tolerance_heathen = 2
 
 	requires = legalism_advance
 }
