@@ -16,6 +16,7 @@ market_manager = {
 	add_market = sevilla
 	add_market = cologne
 	add_market = kyiv
+	add_market = gdansk
 	add_market = krakow
 	add_market = moscow
 	add_market = kaffa
