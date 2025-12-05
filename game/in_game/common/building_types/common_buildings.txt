@@ -169,8 +169,8 @@ mercury_patio = {
 	construction_demand = mercury_patio_construction
 
 	modifier = {
-		local_goods_gold_output_modifier = 1.0
-		local_silver_output_modifier = 1.0
+		local_goods_gold_output_modifier = 0.5
+		local_silver_output_modifier = 0.5
 	}
 }
 
