@@ -3725,7 +3725,7 @@ mstow = { topography = flatland vegetation = woods climate = continental religio
 krakow = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = salt}
 chrzanow = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = silver}
 ksiaz_wielki = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = horses}
-proszowice = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = clay}
+proszowice = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = wheat}
 lublin = { topography = flatland vegetation = farmland climate = continental religion = catholic culture = lesser_polish raw_material = wool}
 janow_lubelski = { topography = flatland vegetation = forest climate = continental religion = catholic culture = lesser_polish raw_material = legumes}
 kazimierz = { topography = flatland vegetation = woods climate = continental religion = catholic culture = lesser_polish raw_material = legumes}
