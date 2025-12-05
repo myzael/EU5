@@ -2052,6 +2052,7 @@
  STATIC_MODIFIER_NAME_reduced_payment_obligations: "Reduced Payment Obligations"
  STATIC_MODIFIER_NAME_appanage_diplomatic_betrayal_modifier: "Diplomatic Betrayal"
  STATIC_MODIFIER_DESC_appanage_diplomatic_betrayal_modifier: "We have decided to exchange our abstinence from the political situation between our overlord and the [GetCountry('ENG').GetLongName] for ample gold."
+ STATIC_MODIFIER_NAME_victory_in_the_hyw_modifier: "Victory in the $hundred_years_war$"
 
 #Western Schism
  STATIC_MODIFIER_NAME_ws_show_unity_of_faith: "Show Unity of Faith"

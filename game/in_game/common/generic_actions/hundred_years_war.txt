@@ -1326,6 +1326,8 @@ hyw_defect_action = {	#Betray our Allegiance
 				is_subject_of = c:FRA
 				is_subject_of = c:ENG
 			}
+
+			capital.continent = overlord.capital.continent
 		}
 	}
 
@@ -1408,7 +1410,7 @@ hyw_defect_action = {	#Betray our Allegiance
 	ai_will_do = {
 
 		add = {
-			value = 50
+			value = 40
 			subtract = scope:actor.subject_loyalty
 			desc = "lack of loyalty"
 		}
@@ -1418,7 +1420,7 @@ hyw_defect_action = {	#Betray our Allegiance
 				subtract = {
 					value = prestige
 					desc = "overlord prestige"
-					subtract = 15
+					subtract = 10
 				}
 			}
 		}
@@ -1441,7 +1443,7 @@ hyw_defect_action = {	#Betray our Allegiance
 				desc = "Distance to England"
 				c:ENG = {
 					value = "border_distance_to(scope:actor)"
-					multiply = -0.05
+					multiply = -0.1
 				}
 			}
 		}

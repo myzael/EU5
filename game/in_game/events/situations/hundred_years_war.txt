@@ -281,6 +281,11 @@ hundred_years_war.100 = {
 		if = {
 			limit = { tag = ENG }
 			add_prestige = prestige_extreme_bonus
+			add_country_modifier = {
+				modifier = victory_in_the_hyw_modifier
+				years = modifier_duration_years_long
+				mode = replace
+			}
 		}
 	}
 

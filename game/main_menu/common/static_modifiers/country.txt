@@ -10907,3 +10907,13 @@ liberal_influences_government_modifier = {
 	monthly_towards_liberalism = societal_value_large_monthly_move
 	global_estate_satisfaction_recovery = 0.001
 }
+
+victory_in_the_hyw_modifier = {
+	game_data = { 
+		category = country
+		decaying = yes
+	}
+
+	subject_loyalty = 20
+	global_crown_estate_power = 0.2
+}
