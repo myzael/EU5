@@ -135,8 +135,8 @@
  rypin.west_slavic_language: "Rypin"
  rypin.west_slavic_language.genitive: "Rypiński"
  # Province 'kuyavia_province' (Kuyavia) #
- wloclawek.west_slavic_language: "Włocławek" # Włocławek
- wloclawek.west_slavic_language.genitive: "Włocławski"
+ wloclawek.west_slavic_language: "Brześć Kujawski" # Włocławek
+ wloclawek.west_slavic_language.genitive: "Brzeski"
  bydgoszcz.west_slavic_language: "Bydgoszcz"
  bydgoszcz.west_slavic_language.genitive: "Bydgoski"
  inowroclaw.west_slavic_language: "Inowrocław" # Inowrocław
@@ -215,7 +215,7 @@
  wschowa.west_slavic_language: "Wschowa"
  wschowa.west_slavic_language.genitive: "Wschowski"
  # Province 'naklo_province' (Nakło) #
- naklo.west_slavic_language: "Nakło nad Notecią" # Nakło nad Notecią
+ naklo.west_slavic_language: "Nakło" # Nakło nad Notecią
  naklo.west_slavic_language.genitive: "Nakielski"
  wyrzysk.west_slavic_language: "Wyrzysk"
  wyrzysk.west_slavic_language.genitive: "Wyrzyski"
@@ -749,7 +749,7 @@
  wroclaw.west_slavic_language: "Wrocław" # Wrocław
  wroclaw.west_slavic_language.genitive: "Wrocławski"
  brzeg.west_slavic_language: "Brzeg"
- brzeg.west_slavic_language.genitive: "Brzeski"
+ brzeg.west_slavic_language.genitive: "z Brzegu"
  grodkow.west_slavic_language: "Grodków" # Grodków
  grodkow.west_slavic_language.genitive: "Grodkowski"
  nysa.west_slavic_language: "Nysa"
