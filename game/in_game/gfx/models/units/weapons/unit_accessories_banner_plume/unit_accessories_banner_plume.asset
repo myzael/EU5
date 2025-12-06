@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_banner_plume_mesh"
+	file = "unit_accessories_banner_plume.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_banner_plumeShape"
+		index = 0
+		texture_diffuse = "unit_accessories_banner_plume_diffuse.dds"
+		texture_normal = "unit_accessories_banner_plume_normal.dds"
+		#texture_specular = "unit_accessories_banner_plume_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_banner_plume_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

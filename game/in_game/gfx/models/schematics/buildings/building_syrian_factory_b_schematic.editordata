@@ -1,0 +1,117 @@
+﻿node_editor_meta={
+	view={
+		position={ 1052.891357 -55.827820 }
+		zoom=0.680769
+	}
+	nodes={
+		0={
+			position={ -643.834839 753.042908 }
+		}
+		1={
+			position={ -1227.161133 251.405945 }
+		}
+		2={
+			position={ -1229.474487 418.414490 }
+		}
+		3={
+			position={ 14.869112 200.405548 }
+		}
+		4={
+			position={ -525.760986 -335.331909 }
+		}
+		5={
+			position={ -490.934753 -76.721748 }
+		}
+		6={
+			position={ 360.936737 451.643982 }
+		}
+		7={
+			position={ -1177.067993 -199.062271 }
+		}
+		8={
+			position={ -1250.792236 -375.238037 }
+		}
+		9={
+			position={ -1486.078369 -40.838333 }
+		}
+		10={
+			position={ -1224.023682 543.145630 }
+		}
+		11={
+			position={ -637.037415 416.102844 }
+		}
+		29={
+			position={ 102.047829 453.866394 }
+		}
+		12={
+			position={ 596.415833 863.320190 }
+			inlined=yes
+		}
+		13={
+			position={ -338.829224 347.158844 }
+			inlined=yes
+		}
+		14={
+			position={ 342.721436 659.820374 }
+			inlined=yes
+		}
+		15={
+			position={ 596.415833 863.320190 }
+			inlined=yes
+		}
+		16={
+			position={ 596.415833 863.320190 }
+			inlined=yes
+		}
+		17={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		18={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		19={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		20={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		21={
+			position={ -527.443909 220.486603 }
+			inlined=yes
+		}
+		22={
+			position={ 596.415833 863.320190 }
+			inlined=yes
+		}
+		23={
+			position={ -1089.418091 -411.931183 }
+			inlined=yes
+		}
+		24={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		25={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		26={
+			position={ -1089.418091 -411.931183 }
+			inlined=yes
+		}
+		27={
+			position={ -527.443909 220.486603 }
+			inlined=yes
+		}
+		28={
+			position={ 596.415833 863.320190 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

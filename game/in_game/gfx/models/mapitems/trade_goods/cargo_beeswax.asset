@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "cargo_beeswax_mesh"
+	file = "cargo_beeswax.mesh"
+
+	meshsettings = {
+		name = "cargo_beeswaxShape"
+		index = 0
+		texture_diffuse = "cargo_beeswax_diffuse.dds"
+		texture_normal = "cargo_beeswax_normal.dds"
+		texture_specular = "cargo_beeswax_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "pasted__cargo_pottery_lod4Shape"
+		index = 0
+		texture_diffuse = "cargo_pottery_diffuse.dds"
+		texture_normal = "cargo_pottery_normal.dds"
+		texture_specular = "cargo_pottery_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "raw_beeswax_a_lod6Shape"
+		index = 0
+		texture_diffuse = "raw_beeswax_diffuse.dds"
+		texture_normal = "raw_beeswax_normal.dds"
+		texture_specular = "raw_beeswax_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_beeswax_entity"
+	pdxmesh = "cargo_beeswax_mesh"
+}

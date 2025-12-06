@@ -1,0 +1,93 @@
+compound_node={
+	id="Particle/Kill by Age & Id"
+	graph={
+		Nodes={
+			pdxns:math:And={
+				Id=10
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "op1" LinkedNode = 5 LinkedPin = "enable_id" }
+					Link = { PinId = "op2" LinkedNode = 13 LinkedPin = "value" }
+				}
+			}
+			pdxns:math:And={
+				Id=9
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "op1" LinkedNode = 15 LinkedPin = "value" }
+					Link = { PinId = "op2" LinkedNode = 10 LinkedPin = "value" }
+				}
+			}
+			pdxns:particle:GetAge={
+				Id=12
+				Node={
+				}
+				Inputs={
+				}
+			}
+			pdxns:math:GreaterThanF={
+				Id=15
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "op1" LinkedNode = 12 LinkedPin = "age" }
+					Link = { PinId = "op2" LinkedNode = 5 LinkedPin = "lifetime_id" }
+				}
+			}
+			pdxns:common:GraphInterface={
+				Id=5
+				Node={
+					pins={
+						pin={
+							id=lifetime_id
+							label="Lifetime"
+							input=no
+							type=Float
+						}
+						pin={
+							id=tag_id
+							label="Tag"
+							input=no
+							type=Int
+						}
+						pin={
+							id=enable_id
+							label="Enable"
+							input=no
+							type=Bool
+						}
+					}
+				}
+				Inputs={
+				}
+			}
+			pdxns:particle:Kill={
+				Id=8
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "condition" LinkedNode = 9 LinkedPin = "value" }
+				}
+			}
+			pdxns:particle:GetTag={
+				Id=14
+				Node={
+				}
+				Inputs={
+				}
+			}
+			pdxns:math:EqualI={
+				Id=13
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "op1" LinkedNode = 5 LinkedPin = "tag_id" }
+					Link = { PinId = "op2" LinkedNode = 14 LinkedPin = "tag" }
+				}
+			}
+		}
+	}
+
+}

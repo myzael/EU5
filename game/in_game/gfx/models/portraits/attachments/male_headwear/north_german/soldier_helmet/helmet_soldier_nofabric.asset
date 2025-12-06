@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "helmet_soldier_nofabric_mesh"
+	file = "helmet_soldier_nofabric.mesh"
+
+	meshsettings = {
+		name = "helmet_soldier_nofabricShape"
+		index = 0
+		texture_diffuse = "soldier_helmet_diffuse.dds"
+		texture_normal = "soldier_helmet_normal.dds"
+		texture_specular = "soldier_helmet_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_soldier_round_kettle_helmet_nocloth_entity"
+	pdxmesh = "helmet_soldier_nofabric_mesh"
+}

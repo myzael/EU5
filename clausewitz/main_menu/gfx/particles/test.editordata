@@ -1,0 +1,57 @@
+NodeEditorMeta={
+	Nodes={
+		1={
+			Position={ 0.000000 229.740692 }
+		}
+		2={
+			Position={ 611.333008 149.740494 }
+		}
+		10={
+			Position={ 318.962952 3.148163 }
+		}
+		11={
+			Position={ 351.500183 390.740753 }
+		}
+		13={
+			Position={ 539.925903 0.000000 }
+		}
+		14={
+			Position={ 346.332947 161.740509 }
+		}
+		17={
+			Position={ 122.074249 5.481476 }
+		}
+		0={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		6={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		7={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		12={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		16={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		18={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		20={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+		19={
+			Position={ 81.000000 48.000000 }
+			Inlined=yes
+		}
+	}
+}

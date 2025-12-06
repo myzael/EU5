@@ -1,0 +1,63 @@
+##### GLOBAL PARAMETERS #######
+
+
+map_height = {
+    parameter="MapHeight"
+    event = "MasterAmbientSystem_Start"
+}
+
+
+##### MAS DATA PARAMETERS #####
+
+masDataVegetationDensity = {
+    parameter= "masDataVegetationDensity"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataTopologyElevation = {
+    parameter= "masDataTopologyElevation"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataTopologyOcean = {
+    parameter= "masDataTopologyOcean"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataTopologyOceanDeep = {
+    parameter= "masDataTopologyOceanDeep"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataTopologyCoast = {
+    parameter= "masDataTopologyCoast"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataTopologyLake = {
+    parameter= "masDataTopologyLake"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataClimateZone = {
+    parameter= "masDataClimateZone"
+    event = "MasterAmbientSystem_Start"
+}
+
+masDataCityDensity = {
+    parameter= "masDataCityDensity"
+    event = "MasterAmbientSystem_Start"
+}
+
+
+
+
+
+
+
+
+#### HUBS ####
+
+#   ambience_city = {
+#       event = "event:/SFX/Ambience/3D/Hub/city_western"
+#}

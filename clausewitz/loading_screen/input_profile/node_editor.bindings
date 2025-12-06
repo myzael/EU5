@@ -1,0 +1,72 @@
+binding = {
+    input_action = "node_editor_paste_connected_to_existing"
+    keycode = "v"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "node_editor_nodes_100%"
+    keycode = "0"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_nodes_fit"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "node_editor_nodes_add"
+    keycode = "p"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_selected_remove"
+    keycode = "del"
+}
+
+binding = {
+    input_action = "node_editor_select_all_nodes"
+    keycode = "a"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_selection_clear"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_selection_invert"
+    keycode = "i"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "node_editor_create_infobox_node"
+    keycode = "i"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_create_group_node"
+    keycode = "g"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "node_editor_create_compound_node"
+    keycode = "g"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "node_editor_shatter_selected_group"
+    keycode = "t"
+    modifier = ctrl
+}

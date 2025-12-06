@@ -1,0 +1,73 @@
+﻿node_editor_meta={
+	view={
+		position={ 680.750305 -327.973236 }
+		zoom=0.859869
+	}
+	nodes={
+		0={
+			position={ -1207.745117 695.417847 }
+		}
+		2={
+			position={ -867.262878 164.195251 }
+		}
+		3={
+			position={ -887.353638 411.203796 }
+		}
+		4={
+			position={ 52.646866 358.183289 }
+		}
+		5={
+			position={ 162.460739 832.216492 }
+		}
+		6={
+			position={ -693.679626 681.347229 }
+		}
+		7={
+			position={ -881.903687 535.934998 }
+		}
+		8={
+			position={ -96.428177 834.438904 }
+		}
+		12={
+			position={ -687.694580 895.329529 }
+		}
+		11={
+			position={ 59.084202 740.236145 }
+			inlined=yes
+		}
+		1={
+			position={ -853.668091 875.751221 }
+			inlined=yes
+		}
+		9={
+			position={ 59.084202 740.236145 }
+			inlined=yes
+		}
+		10={
+			position={ -853.668091 875.751221 }
+			inlined=yes
+		}
+		13={
+			position={ -445.764496 983.424194 }
+			inlined=yes
+		}
+		14={
+			position={ -445.764496 983.424194 }
+			inlined=yes
+		}
+		15={
+			position={ -445.764496 983.424194 }
+			inlined=yes
+		}
+		16={
+			position={ -445.764496 983.424194 }
+			inlined=yes
+		}
+		17={
+			position={ -445.764496 983.424194 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_bag_caremat_mesh"
+	file = "unit_accessories_bag_caremat.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_bag_carematShape"
+		index = 0
+		texture_diffuse = "unit_accessories_bag_caremat_diffuse.dds"
+		texture_normal = "unit_accessories_bag_caremat_normal.dds"
+		#texture_specular = "unit_accessories_bag_caremat_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_bag_caremat_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

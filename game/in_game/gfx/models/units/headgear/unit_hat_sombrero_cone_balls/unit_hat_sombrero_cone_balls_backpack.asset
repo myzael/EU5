@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "unit_hat_sombrero_cone_balls_backpack_mesh"
+	file = "unit_hat_sombrero_cone_balls_backpack.mesh"
+
+	
+
+	meshsettings = {
+		name = "unit_hat_sombrero_cone_balls_backpackShape"
+		index = 0
+		texture_diffuse = "unit_hat_sombrero_cone_balls_diffuse.dds"
+		texture_normal = "unit_hat_sombrero_cone_balls_normal.dds"
+		texture_specular = "unit_hat_cone_long_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_sombrero_cone_balls_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+	
+}
+

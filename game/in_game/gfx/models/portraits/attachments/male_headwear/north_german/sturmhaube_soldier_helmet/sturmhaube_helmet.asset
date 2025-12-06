@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "sturmhaube_helmet_mesh"
+	file = "sturmhaube_helmet.mesh"
+
+	meshsettings = {
+		name = "sturmhaube_helmetShape"
+		index = 0
+		texture_diffuse = "sturmhaube_helmet_diffuse.dds"
+		texture_normal = "sturmhaube_helmet_normal.dds"
+		texture_specular = "sturmhaube_helmet_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_soldier_sturmhaube_helmet_entity"
+	pdxmesh = "sturmhaube_helmet_mesh"
+}

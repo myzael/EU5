@@ -1,0 +1,64 @@
+# This database contains entries that may have the same names as the biomes in gfx/terrain2/materials.txt
+# "May" is important here:
+#	An entry that has a matching biome in the terrain materials file will be used for all cities in locations that has that biome
+#	An entry that does not have a matching biome will never be used, but it can still be useful as other entries can copy its settings
+
+# Below is an entry with a name that does not match any biome
+my_material_set = {
+
+	# Entries can have up to 4 decal_materials and road_materials
+	# Each material entry needs to have an index. This index is going to be matched with a material_index in the city mesh list scripts
+	# For instance the mesh list for peasant buildings might have index 0 and burghers+nobles index 1
+	# This is where you'd decide which textures get mapped to those indices
+	
+	# Decal materials are applied to a procedural mesh under the cities
+	# 4 materials are supported and they blend together using a heightmap in the property.g channel
+	# The alpha channel in the diffuse is used to alpha-blend the resulting color on top of the terrain.
+	# properties.r = AO
+	# properties.g = HeightMap
+	# properties.b = Metalness
+	# properties.a = Roughness
+	decal_material = {
+		index = 0
+		
+		# IMPORTANT: Textures listed here do not have any texture streaming
+		# Keep the textures small in size! They will not cover large areas anyway so we shouldn't need to have these very large at all - 128x128 or 256x256. Make them tile more often rather than increasing texture size
+		diffuse = 		"gfx/city_materials/textures/city_mud_diffuse.dds"
+		normal =  		"gfx/city_materials/textures/city_mud_normal.dds"
+		properties = 	"gfx/city_materials/textures/city_mud_properties.dds"
+		
+		specular = 0.42 # [optional] defaults to 0.42 which is a generic "good" spec value and the default in the texture importer
+		uv_tiling = 0.5	# UV-tiling is only for decal_materials, determines how many texture-tiles fit inside one world unit
+	}
+	decal_material = {
+		index = 1
+		diffuse = 		"gfx/city_materials/textures/city_cobblestone_diffuse.dds"
+		normal =  		"gfx/city_materials/textures/city_cobblestone_normal.dds"
+		properties = 	"gfx/city_materials/textures/city_cobblestone_properties.dds"
+		uv_tiling = 0.6
+	}
+	
+	# Road materials are applied to the roads
+	# roads select the highest material index of the meshes that it is next to, or 0 if no mesh is nearby
+	road_material = {
+		index = 0
+		diffuse = 		"gfx/city_materials/textures/road_mud_diffuse.dds"
+		normal =  		"gfx/city_materials/textures/road_mud_normal.dds"
+		properties = 	"gfx/city_materials/textures/road_mud_properties.dds"
+		
+						# Roads do not have a scriptable spec as the properties.g channel is available to them
+		thickness = 0.4 # Thickness determines how wide the roads get
+	}
+	road_material = {
+		index = 1
+		thickness = 0.3
+		diffuse = 		"gfx/city_materials/textures/road_cobblestone_diffuse.dds"
+		normal =  		"gfx/city_materials/textures/road_cobblestone_normal.dds"
+		properties = 	"gfx/city_materials/textures/road_cobblestone_properties.dds"
+	}
+}
+
+# And here are two entries that do match with a biome
+# They can contain specific textures and settings, but to avoid script duplication they just copy the first entry
+tropical_flatland_jungle 	= { copy_from = my_material_set }
+tropical_hills_jungle 		= { copy_from = my_material_set }

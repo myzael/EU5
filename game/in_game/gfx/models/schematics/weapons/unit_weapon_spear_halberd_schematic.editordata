@@ -1,0 +1,54 @@
+﻿node_editor_meta={
+	view={
+		position={ -1411.008789 -69.484314 }
+		zoom=1.028458
+	}
+	nodes={
+		0={
+			position={ 419.000000 216.500000 }
+			name="Slash Sparks"
+			size={ 1490.921143 577.915222 }
+		}
+		1={
+			position={ 439.032410 309.907745 }
+			name="Blade of Axe"
+			size={ 591.836304 287.000000 }
+		}
+		2={
+			position={ 1963.333374 231.209732 }
+		}
+		3={
+			position={ 1050.226562 582.804138 }
+		}
+		4={
+			position={ 2048.021973 570.397949 }
+		}
+		5={
+			position={ 1429.567383 582.805237 }
+		}
+		6={
+			position={ 524.032288 394.908478 }
+		}
+		7={
+			position={ 494.909363 622.408447 }
+		}
+		8={
+			position={ 1277.281616 1410.090820 }
+			inlined=yes
+		}
+		9={
+			position={ 1526.541382 1233.220825 }
+			inlined=yes
+		}
+		10={
+			position={ 1526.541382 1233.220825 }
+			inlined=yes
+		}
+		11={
+			position={ 2291.132812 922.842346 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

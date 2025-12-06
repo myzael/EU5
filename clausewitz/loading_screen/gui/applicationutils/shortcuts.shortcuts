@@ -1,0 +1,4 @@
+shortcutbindings = {
+	tools_omnisearch = "ctrl+shift+p"
+	log_status_open_linked_logviewer = "ctrl+l"
+}

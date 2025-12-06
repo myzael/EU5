@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_arbalest_quiver_syria_mesh"
+	file = "unit_weapon_arbalest_quiver_syria.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_arbalest_quiver_syriaShape"
+		index = 0
+		texture_diffuse = "unit_weapon_bow_arbalest_quiver_shield_diffuse.dds"
+		texture_normal = "unit_weapon_bow_arbalest_quiver_shield_normal.dds"
+		#texture_specular = "unit_weapon_bow_arbalest_quiver_shield_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_bow_arbalest_quiver_shield_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

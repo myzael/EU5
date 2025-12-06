@@ -1,0 +1,149 @@
+pdxmesh = {
+	name = "ship_light_02_european_barque_mesh"
+	file = "ship_light_02_european_barque.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_light_02_european_barque_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_light_02_european_barque_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_light_02_european_barque_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_light_02_european_barque_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_light_02_european_barque|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_02_european_barque|folded_sails|folded_sails|f"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_02_european_barque|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_02_european_barque|folded_sails|folded_sails|f"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_02_european_barque|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_02_european_barque|folded_sails|folded_sails|f"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_02_european_barque|ship_hull|ship_hull_lct|shi"
+		index = 0
+		texture_diffuse = "ship_light_2_european_barque_diffuse.dds"
+		texture_normal = "ship_light_2_european_barque_normal.dds"
+		texture_specular = "ship_light_2_european_barque_properties.dds"
+		texture = { file = "ship_light_2_european_barque_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_02_european_barque|ship_hull|ship_hull_lct|shi"
+		index = 0
+		texture_diffuse = "ship_light_2_european_barque_diffuse.dds"
+		texture_normal = "ship_light_2_european_barque_normal.dds"
+		texture_specular = "ship_light_2_european_barque_properties.dds"
+		texture = { file = "ship_light_2_european_barque_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_02_european_barque|ship_hull|ship_hull_lct|shi"
+		index = 0
+		texture_diffuse = "ship_light_2_european_barque_diffuse.dds"
+		texture_normal = "ship_light_2_european_barque_normal.dds"
+		texture_specular = "ship_light_2_european_barque_properties.dds"
+		texture = { file = "ship_light_2_european_barque_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_light_02_european_barque_entity"
+	pdxmesh = "ship_light_02_european_barque_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+
+	attach = { ensign_flag_lctr = "ship_flag_entity" }
+	attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+	attach = { deck_cannon_right_lct_001 = "cannon_entity" }
+	attach = { deck_cannon_right_lct_002 = "cannon_entity" }
+	attach = { deck_cannon_right_lct_003 = "cannon_entity" }
+	attach = { deck_cannon_left_lct_001 = "cannon_entity" }
+	attach = { deck_cannon_left_lct_002 = "cannon_entity" }
+	attach = { deck_cannon_left_lct_003 = "cannon_entity" }
+}

@@ -1,0 +1,12 @@
+﻿road1 = {		
+	id = 0
+	default_style = 0
+	anchor_type = 0
+}
+
+river = {
+	id = 15
+	anchor_type = 0
+	default_style = 2
+	color = { 0.0 0.0 1.0 }
+}

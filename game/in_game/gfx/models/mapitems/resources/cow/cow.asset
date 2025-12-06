@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "cow_mesh"
+	file = "cow.mesh"
+
+	animation = { id = "moving_animation" type = "cow_moving.anim" }
+	animation = { id = "idle_animation" type = "cow_idle.anim" }
+
+	meshsettings = {
+		name = "cowShape"
+		index = 0
+		texture_diffuse = "cow_diffuse.dds"
+		texture_normal = "european_cow_normal.dds"
+		texture_specular = "cow_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "cow_entity"
+	pdxmesh = "cow_mesh"
+
+	default_state = "moving"
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

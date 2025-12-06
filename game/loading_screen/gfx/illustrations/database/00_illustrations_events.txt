@@ -1,0 +1,159 @@
+﻿######################################################################################################
+########################################  REGULAR EVENTS  ############################################
+######################################################################################################
+
+
+illustration_characters_regular_interior = {
+	scene = "characters_regular_interior"
+	tags = {
+		10 = regular
+		10 = interior
+	}
+}
+
+illustration_characters_regular_exterior = {
+	scene = "characters_regular_exterior"
+	tags = {
+		10 = regular
+		10 = exterior
+	}
+}
+
+illustration_characters_regular_location = {
+	scene = "characters_regular_location"
+	tags = {
+		10 = regular
+		10 = location
+	}
+}
+
+illustration_characters_happy_exterior = {
+	scene = "characters_happy_exterior"
+	tags = {
+		10 = happy
+		10 = exterior
+	}
+}
+
+illustration_characters_happy_interior = {
+	scene = "characters_happy_interior"
+	tags = {
+		10 = happy
+		10 = interior
+	}
+}
+
+illustration_characters_angry_interior = {
+	scene = "characters_angry_interior"
+	tags = {
+		10 = angry
+		10 = interior
+	}
+}
+
+illustration_characters_angry_exterior = {
+	scene = "characters_angry_exterior"
+	tags = {
+		10 = angry
+		10 = exterior
+	}
+}
+
+illustration_characters_trading_exterior = {
+	scene = "characters_trading_exterior"
+	tags = {
+		10 = trading
+		10 = exterior
+	}
+}
+
+illustration_characters_armed_interior = {
+	scene = "characters_armed_interior"
+	tags = {
+		10 = armed
+		10 = interior
+	}
+}
+
+illustration_characters_armed_exterior = {
+	scene = "characters_armed_exterior"
+	tags = {
+		10 = armed
+		10 = exterior
+	}
+}
+
+illustration_goods = {
+	scene = "scene_goods"
+	tags = {
+		10 = goods
+	}
+}
+
+######################################################################################################
+#########################################  INSTITUTIONS  #############################################
+######################################################################################################
+illustration_event_renaissance = {
+	scene = "events_Institution_Renaissance"
+	tags = {
+		20 = institution
+		20 = ages
+		10 = renaissance
+		10 = society
+	}
+}
+
+illustration_event_Professional_Army = {
+	scene = "events_Institution_Professional_Army"
+	tags = {
+		20 = institution
+		20 = professional
+		20 = army
+		10 = military
+	}
+}
+
+illustration_event_professional_bank = {
+	scene = "events_Institution_ProfessionalBank"
+	tags = {
+		20 = institution
+		20 = professional
+		10 = bank
+		10 = economy
+	}
+}
+
+#prototype of new system
+# events_clergy_happy_fancy_interior = {
+# 	image_list_tags = {
+# 		10 = characters
+# 		10 = peasant
+# 		10 = discussing
+# 		10 = nature
+# 	}
+# 	random_scene = {
+# 		10 = character_right
+# 		10 = character_center
+# 		30 = flags_corners_battle
+# 	}
+# }
+#example of tags
+# characters_peasant_discussing_nature_background = {
+# 	scene = "characters_peasant_discussing_nature_background"
+# 	tags = {
+# 		10 = characters
+# 		10 = peasant
+# 		10 = discussing
+# 		10 = angry
+# 	}
+# }
+#example of tags
+# characters_peasant_discussing_nature_background2 = {
+# 	scene = "characters_peasant_discussing_nature_background"
+# 	tags = {
+# 		10 = characters
+# 		10 = peasant
+# 		10 = discussing
+# 		10 = nature
+# 	}
+# }

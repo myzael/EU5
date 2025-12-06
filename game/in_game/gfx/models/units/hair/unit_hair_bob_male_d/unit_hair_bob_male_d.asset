@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_hair_bob_male_d_mesh"
+	file = "unit_hair_bob_male_d.mesh"
+
+	meshsettings = {
+		name = "unit_hair_bob_male_dShape"
+		index = 0
+		texture_diffuse = "unit_hair_bob_male_d_diffuse.dds"
+		texture_normal = "unit_hair_bob_male_d_normal.dds"
+		texture_specular = "unit_hair_bob_male_d_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hair_bob_male_d_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

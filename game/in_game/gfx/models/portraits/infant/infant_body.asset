@@ -1,0 +1,47 @@
+﻿pdxmesh = {
+	name = "infant_body_mesh"
+	file = "infant_body.mesh"
+
+	#scale = 0.85
+
+	animation = { id = "infant_idle"				type = "infant_cloth_base_idle.anim" }
+
+	#additive_animation = { id = "body_pose_1" type = "pose/male_body_test_pose01_idle.anim" }
+	#additive_animation = { id = "body_pose_2" type = "pose/male_body_test_pose02_idle.anim" }
+
+	#blend_shape = { id = "male_body_test_bs_female"		type = "blendshapes/male_body_test_bs_female.mesh" }
+
+	meshsettings = {
+		name = "infant_bodyShape"
+		index = 0
+		texture_diffuse = "infant_diffuse.dds"
+		texture_normal = "infant_normal.dds"
+		texture_specular = "infant_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "infant_body_entity"
+	pdxmesh = "infant_body_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+
+    game_data = {
+        portrait_entity_user_data = {
+            color_mask_remap_interval = {
+                interval = {0.0 1.0}
+            }
+	        portrait_decal = {
+	            body_part = torso
+	        }
+		}
+	}
+
+}

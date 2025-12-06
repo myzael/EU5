@@ -1,0 +1,22 @@
+﻿{
+	"name":	"Shared DLC Data",
+	"localizable_name":	"D000_shared",
+	"path":	"dlc/D000_shared",
+	"picture":	"thumbnail.dds",
+	"checksum":	"d424955caf227b8efe9efc6329799e21",
+	"description":	"",
+	"supported_version":	"",
+	"dependencies":	[],
+	"replace_path":	[],
+	"tags":	[],
+	"pops_id":	"",
+	"msgr_id":	"",
+	"steam_id":	0,
+	"review_steam_id":	0,
+	"affects_save_compatibility":	false,
+	"mp_synced":	false,
+	"third_party_content":	false,
+	"enabled":	true,
+	"hidden":	true,
+	"verify":	false
+}

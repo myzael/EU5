@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "male_headwear_german_noble_velvet_hat_feather_mesh"
+	file = "noble_velvet_hat_feather.mesh"
+
+	meshsettings = {
+		name = "noble_velvet_hat_featherShape"
+		index = 0
+		texture_diffuse = "noble_velvet_hat_feather_diffuse.dds"
+		texture_normal = "noble_velvet_hat_feather_normal.dds"
+		texture_specular = "noble_velvet_hat_feather_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_noble_velvet_hat_feather_entity"
+	pdxmesh = "male_headwear_german_noble_velvet_hat_feather_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/north_german/noble_velvet_hat/noble_velvet_hat_feather_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_low_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "environment_mediterranean_olive_tree_01_mesh"
+	file = "environment_mediterranean_olive_tree_01.mesh"
+
+	meshsettings = {
+		name = "environment_mediterranean_olive_tree_01Shape"
+		index = 0
+		texture_diffuse = "mediterranean_trees_atlas_diffuse.dds"
+		texture_normal = "mediterranean_trees_atlas_normal.dds"
+		texture_specular = "cargo_hay_properties.dds"
+		texture = { file = "oceanic_tint.dds" index = 3 srgb = yes }
+		shader = "tree_two_sided"
+		shader_file = "gfx/FX/tree.shader"
+	}
+	
+
+	meshsettings = {
+		name = "environment_mediterranean_olive_tree_01Shape"
+		index = 1
+		texture_diffuse = "tree_wood_light_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "environment_mediterranean_olive_tree_01_entity"
+	pdxmesh = "environment_mediterranean_olive_tree_01_mesh"
+}

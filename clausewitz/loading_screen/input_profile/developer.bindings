@@ -1,0 +1,6 @@
+binding = {
+    input_action = "toggle_imgui"
+
+    scancode = 53 # Grave
+    modifier = ctrl
+}

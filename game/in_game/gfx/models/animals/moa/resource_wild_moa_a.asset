@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "resource_wild_moa_a_mesh"
+	file = "resource_wild_moa_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_wild_moa_a_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_wild_moa_a_moving.anim" }
+
+	meshsettings = {
+		name = "resource_wild_moa_a_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_moa_a_diffuse.dds"
+		texture_normal = "resource_moa_a_normal.dds"
+		texture_specular = "resource_moa_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_wild_moa_a|LOD_1|resource_wild_moa_a_lod1|resource_wil"
+		index = 0
+		texture_diffuse = "resource_moa_a_diffuse.dds"
+		texture_normal = "resource_moa_a_normal.dds"
+		texture_specular = "resource_moa_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_wild_moa_a|LOD_2|resource_wild_moa_a_lod1|resource_wil"
+		index = 0
+		texture_diffuse = "resource_moa_a_diffuse.dds"
+		texture_normal = "resource_moa_a_normal.dds"
+		texture_specular = "resource_moa_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}

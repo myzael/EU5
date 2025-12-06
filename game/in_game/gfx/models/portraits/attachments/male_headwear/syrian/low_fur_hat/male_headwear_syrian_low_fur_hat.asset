@@ -1,0 +1,36 @@
+pdxmesh = {
+	name = "male_headwear_syrian_low_fur_hat_mesh"
+	file = "male_headwear_syrian_low_fur_hat.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_syrian_low_fur_hairShape"
+		index = 0
+		texture_diffuse = "male_headwear_syrian_low_fur_hat_diffuse.dds"
+		texture_normal = "male_headwear_syrian_low_fur_hat_normal.dds"
+		texture_specular = "male_headwear_syrian_low_fur_hat_properties.dds"
+		shader = "portrait_attachment_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "male_headwear_syrian_low_fur_hatShape"
+		index = 0
+		texture_diffuse = "male_headwear_syrian_low_fur_hat_diffuse.dds"
+		texture_normal = "male_headwear_syrian_low_fur_hat_normal.dds"
+		texture_specular = "male_headwear_syrian_low_fur_hat_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_syrian_low_fur_hat_entity"
+	pdxmesh = "male_headwear_syrian_low_fur_hat_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

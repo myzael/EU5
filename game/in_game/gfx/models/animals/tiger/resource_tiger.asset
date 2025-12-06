@@ -1,0 +1,72 @@
+pdxmesh = {
+	name = "resource_tiger_mesh"
+	file = "resource_tiger.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "stand_idle_animation" type = "resource_tiger_stand_idle.anim" }
+	animation = { id = "lay_idle_animation" type = "resource_tiger_lay_idle.anim" }
+	animation = { id = "laying_transition_animation" type = "resource_tiger_laying_transition.anim" }
+	animation = { id = "standing_transition_animation" type = "resource_tiger_standing_transition.anim" }
+	animation = { id = "big_stretch_animation" type = "resource_tiger_big_stretch.anim" }
+
+	meshsettings = {
+		name = "resource_tiger_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_tiger_diffuse.dds"
+		texture_normal = "resource_tiger_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_tiger_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_tiger_diffuse.dds"
+		texture_normal = "resource_tiger_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_tiger_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_tiger_diffuse.dds"
+		texture_normal = "resource_tiger_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_tiger_entity"
+	pdxmesh = "resource_tiger_mesh"
+
+	default_state = "stand_idle"
+	state = {
+		name = "stand_idle"
+		animation = "stand_idle_animation"
+	}
+	state = {
+		name = "lay_idle"
+		animation = "lay_idle_animation"
+	}
+	state = {
+		name = "laying_transition"
+		animation = "laying_transition_animation"
+	}
+	state = {
+		name = "standing_transition"
+		animation = "standing_transition_animation"
+	}
+	state = {
+		name = "big_stretch"
+		animation = "big_stretch_animation"
+	}
+}

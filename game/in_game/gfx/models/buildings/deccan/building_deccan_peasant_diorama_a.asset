@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_deccan_peasant_diorama_a_mesh"
+	file = "building_deccan_peasant_diorama_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "building_deccan_peasant_diorama_a_decal_diffuse.dds"
+		texture_normal = "building_deccan_peasant_diorama_a_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_lod0Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_peasant_diorama_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "building_deccan_peasant_diorama_a_decal_diffuse.dds"
+		texture_normal = "building_deccan_peasant_diorama_a_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_lod1Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_peasant_diorama_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "building_deccan_peasant_diorama_a_decal_diffuse.dds"
+		texture_normal = "building_deccan_peasant_diorama_a_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_peasant_diorama_a_lod2Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_peasant_diorama_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_deccan_peasant_diorama_a_entity"
+	pdxmesh = "building_deccan_peasant_diorama_a_mesh"
+}

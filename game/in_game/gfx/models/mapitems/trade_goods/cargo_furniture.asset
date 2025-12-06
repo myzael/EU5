@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "cargo_furniture_mesh"
+	file = "cargo_furniture.mesh"
+
+	meshsettings = {
+		name = "cargo_furnitureShape"
+		index = 0
+		texture_diffuse = "cargo_furniture_diffuse.dds"
+		texture_normal = "cargo_furniture_normal.dds"
+		texture_specular = "cargo_furniture_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "cargo_furniture_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_furniture_entity"
+	pdxmesh = "cargo_furniture_mesh"
+}

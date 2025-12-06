@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_syrian_medium_military_mesh"
+	file = "building_syrian_medium_military.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_medium_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_medium_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_LOD0Shape"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_medium_military_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_medium_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_medium_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_LOD1Shape"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_medium_military_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_medium_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_medium_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_military_medium_LOD2Shape"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_medium_military_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_syrian_medium_military_entity"
+	pdxmesh = "building_syrian_medium_military_mesh"
+}

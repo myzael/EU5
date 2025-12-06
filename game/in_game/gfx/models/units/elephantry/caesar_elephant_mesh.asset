@@ -1,0 +1,73 @@
+pdxmesh = {
+	name = "caesar_elephant_mesh_mesh"
+	file = "caesar_elephant_mesh.mesh"
+
+	#scale = 0.1
+
+	animation = { id = "moving_elephant_animation" type = "../animations/elephantry/unit_elephant_walk.anim" }
+	animation = { id = "charge_elephant_animation" type = "../animations/elephantry/unit_elephant_charge.anim" }
+	animation = { id = "attack_elephant_animation" type = "../animations/elephantry/unit_elephant_attack.anim" }
+	animation = { id = "idle01_elephant_animation" type = "../animations/elephantry/unit_elephant_idle01.anim" }
+	animation = { id = "idle02_elephant_animation" type = "../animations/elephantry/unit_elephant_idle02.anim" }
+	animation = { id = "idle03_elephant_animation" type = "../animations/elephantry/unit_elephant_idle03.anim" }
+
+	meshsettings = {
+		name = "caesar_elephant_meshShape"
+		index = 0
+		shader = "standard"
+	}
+}
+
+#entity = {
+#	name = "unit_camelry_mesh_entity"
+#	pdxmesh = "unit_camelry_mesh_mesh"
+#	
+#	default_state = "idle"
+#	state = {
+#		name = "idle"
+#		animation = "idle_animation"
+#	}
+#	state = {
+#		name = "moving"
+#		animation = "moving_animation"
+#	}
+#    
+#    game_data = {
+#		unit_texture_variations = {
+#			10 = animal_fur_colors
+#		}
+#	}
+#}
+#
+#entity = {
+#	name = "unitgfx_camel_a_entity"
+#	pdxmesh = "unit_camelry_mesh_mesh"
+#	default_state = "idle"
+#	state = {
+#		name = "idle"
+#		animation = "idle_animation"
+#	}
+#	state = {
+#		name = "moving"
+#		animation = "moving_animation"
+#	}
+#
+#	meshsettings = {
+#		name = "unit_camelry_meshShape"
+#		index = 0
+#		texture_diffuse = "unit_camelry_mesh_diffuse.dds"
+#		texture_normal = "unit_camelry_mesh_normal.dds"
+#		#texture_specular = "unit_camelry_mesh_properties.dds"
+#		texture = { index = 3 srgb = no file = "unit_camelry_mesh_mask.dds" }
+#		#shader = "snap_to_terrain_no_deform"
+#		shader = "unit_material_repaint"
+#		shader_file = "gfx/FX/units.shader"
+#	}
+#    
+#    game_data = {
+#		unit_texture_variations = {
+#			10 = animal_fur_colors
+#		}
+#	}
+#    
+# }   

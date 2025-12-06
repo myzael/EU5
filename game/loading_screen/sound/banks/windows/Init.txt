@@ -1,0 +1,551 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	176638663	onmap_city_popcount_tribesmen			\sw_city_audio\onmap_city_popcount_tribesmen	
+	188001396	mas_birds_coast			\Ambience\mas_birds_coast	
+	420033241	onmap_city_popcount_nobles			\sw_city_audio\onmap_city_popcount_nobles	
+	583705497	mus_boredom			\Music\mus_boredom	
+	750999141	mas_birds_forest			\Ambience\mas_birds_forest	
+	963618736	onmap_city_popcount_burghers			\sw_city_audio\onmap_city_popcount_burghers	
+	1051260856	mas_birds_wetlands			\Ambience\mas_birds_wetlands	
+	1197567001	mas_averageclimatezone			\Ambience\mas_averageclimatezone	
+	1228406134	mas_averagevegetationdensity			\Ambience\mas_averagevegetationdensity	
+	1242709302	onmap_city_popcount_clergy			\sw_city_audio\onmap_city_popcount_clergy	
+	1412170766	onmap_city_popcount_slaves			\sw_city_audio\onmap_city_popcount_slaves	
+	1623835262	GlobalMonth			\Global\GlobalMonth	
+	1658309788	MilitaryRelativePlayerStrength			\Military\MilitaryRelativePlayerStrength	
+	1714085387	onmap_city_popcount_soldiers			\sw_city_audio\onmap_city_popcount_soldiers	
+	2025144156	MilitaryRelativeThreat			\Military\MilitaryRelativeThreat	
+	2179929030	mas_birds_field			\Ambience\mas_birds_field	
+	2392355355	mas_birds_settlement			\Ambience\mas_birds_settlement	
+	2414167480	PlayerActionCounter			\Global\PlayerActionCounter	
+	3180534632	onmap_city_popcount_total			\sw_city_audio\onmap_city_popcount_total	
+	3186494045	onmap_city_popcount_peasants			\sw_city_audio\onmap_city_popcount_peasants	
+	3223137305	PlayerPrestige			\Global\PlayerPrestige	
+	3836424184	onmap_city_popcount_laborers			\sw_city_audio\onmap_city_popcount_laborers	
+	4118535133	isOceanOnScreenMuch			\Ambience\isOceanOnScreenMuch	
+	4231425900	city_hasPort			\Ambience\city_hasPort	
+
+Switch	ID	Name	Switch Group			Notes
+	953185740	not_present	onmap_city_popcount_tribesmen			
+	3524519058	present	onmap_city_popcount_tribesmen			
+	979470758	yes	mas_birds_coast			
+	1668749452	no	mas_birds_coast			
+	953185740	not_present	onmap_city_popcount_nobles			
+	3524519058	present	onmap_city_popcount_nobles			
+	2381845804	boredom_high	mus_boredom			
+	3931370606	boredom_low	mus_boredom			
+	979470758	yes	mas_birds_forest			
+	1668749452	no	mas_birds_forest			
+	953185740	not_present	onmap_city_popcount_burghers			
+	3524519058	present	onmap_city_popcount_burghers			
+	979470758	yes	mas_birds_wetlands			
+	1668749452	no	mas_birds_wetlands			
+	283947294	mediterranean	mas_averageclimatezone			
+	1825197448	continental	mas_averageclimatezone			
+	2091201341	oceanic	mas_averageclimatezone			
+	2234995025	arctic	mas_averageclimatezone			
+	2801226017	subtropical	mas_averageclimatezone			
+	3422512605	tropical	mas_averageclimatezone			
+	3484807975	arid	mas_averageclimatezone			
+	219304270	jungle	mas_averagevegetationdensity			
+	491961918	forest	mas_averagevegetationdensity			
+	1458143973	grasslands	mas_averagevegetationdensity			
+	1850388778	desert	mas_averagevegetationdensity			
+	2204106226	farmland	mas_averagevegetationdensity			
+	2780586317	woods	mas_averagevegetationdensity			
+	2841675377	sparse	mas_averagevegetationdensity			
+	953185740	not_present	onmap_city_popcount_clergy			
+	3524519058	present	onmap_city_popcount_clergy			
+	953185740	not_present	onmap_city_popcount_slaves			
+	3524519058	present	onmap_city_popcount_slaves			
+	204834280	E_May	GlobalMonth			
+	1524253218	B_February	GlobalMonth			
+	2128571092	F_June	GlobalMonth			
+	2711487461	H_August	GlobalMonth			
+	3064149645	A_January	GlobalMonth			
+	3174343314	D_April	GlobalMonth			
+	3347078692	C_March	GlobalMonth			
+	3574592705	K_November	GlobalMonth			
+	3616802430	I_September	GlobalMonth			
+	3650722915	L_December	GlobalMonth			
+	4099679588	J_October	GlobalMonth			
+	4292528085	G_July	GlobalMonth			
+	545371365	Low	MilitaryRelativePlayerStrength			
+	2849147824	Medium	MilitaryRelativePlayerStrength			
+	3550808449	High	MilitaryRelativePlayerStrength			
+	953185740	not_present	onmap_city_popcount_soldiers			
+	3524519058	present	onmap_city_popcount_soldiers			
+	1900959741	miltary_advantage	MilitaryRelativeThreat			
+	2120767920	military_disadvantage	MilitaryRelativeThreat			
+	979470758	yes	mas_birds_field			
+	1668749452	no	mas_birds_field			
+	979470758	yes	mas_birds_settlement			
+	1668749452	no	mas_birds_settlement			
+	1095880218	action_high	PlayerActionCounter			
+	2429361596	action_low	PlayerActionCounter			
+	3596201607	action_medium	PlayerActionCounter			
+	1426004580	fewer	onmap_city_popcount_total			
+	2927316364	most	onmap_city_popcount_total			
+	2944094190	more	onmap_city_popcount_total			
+	953185740	not_present	onmap_city_popcount_peasants			
+	3524519058	present	onmap_city_popcount_peasants			
+	545371365	low	PlayerPrestige			
+	1182670505	mid	PlayerPrestige			
+	3550808449	high	PlayerPrestige			
+	953185740	not_present	onmap_city_popcount_laborers			
+	3524519058	present	onmap_city_popcount_laborers			
+	979470758	yes	isOceanOnScreenMuch			
+	1668749452	no	isOceanOnScreenMuch			
+	342620820	port_present	city_hasPort			
+	784127654	null	city_hasPort			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	252254831	settings_listener_profile			\Settings\settings_listener_profile	
+	348405953	Gamestate_Pause			\Gamestate\Gamestate_Pause	
+	572364395	UI_cursor_type			\UX\UI_cursor_type	
+	689201385	mus_scale			\Music\mus_scale	
+	1057535062	CameraZoomMovement			\Camera\CameraZoomMovement	being added by Alexander 
+	1247407262	mus_systemType			\Music\mus_systemType	This should be an optional setting for the player in the music player, do they want dynamics, or just a random playlist with full mix or low intensity
+	1264714913	mus_wardichotomy			\Music\mus_wardichotomy	This should be an optional setting for the player in the music player, do they want differeent music in peace and wartime?
+	1350042143	mus_ispastmainmenu			\Music\mus_ispastmainmenu	
+	1560690692	local_context_indoor			\local_context\local_context_indoor	This state exists so we know if the focused local context is indoors and therefore should filter any louder/more distant sounds as if they're occluded. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
+	1847532688	local_context_gust_left			\local_context\local_context_gust_left	
+	1847896293	mus_tracknumber			\Music\mus_tracknumber	
+	1886252840	mus_harmonic_key			\Music\mus_harmonic_key	
+	2011191162	FlatMap			\Map\FlatMap	denoting the state the map is in 
+	2299810346	MonthlyTickBuildingComplete			\Monthly_Tick_Report\MonthlyTickBuildingComplete	Monthly tick report toggle for buildings being completed
+	2384791228	Gamestate_startSequence			\Gamestate\Gamestate_startSequence	
+	2534849910	PlayerCulturePrimary			\Culture\PlayerCulturePrimary	N.B. THE STRUCTURE FOR CULTURES WILL CHANGE! NOT A PERMANENT SOLUTION HERE /MW 231113
+	2560379089	UX_Panel_Context			\UX\UX_Panel_Context	This state represents where the moluse cursor is currently located in the UI
+	2596015407	CameraPan_Movement			\Camera\CameraPan_Movement	
+	2918864681	mus_pieceType			\Music\mus_pieceType	
+	2942860822	Event_outcome			\Events\Event_outcome	
+	2946097357	PlayerAtWar			\War\PlayerAtWar	
+	3126692012	local_context_gust_center			\local_context\local_context_gust_center	
+	3132422765	GlobalAge			\Time\GlobalAge	
+	3193666671	Gamestate_InGameMenu			\Gamestate\Gamestate_InGameMenu	
+	3211405847	PlayerIncome			\Economy\PlayerIncome	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
+	3271075943	local_context_gust_right			\local_context\local_context_gust_right	
+	3292897190	PlayerBalance			\Economy\PlayerBalance	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
+	3506536279	LocalContextCulture			\Culture\LocalContextCulture	
+	3692379799	local_context_int_type			\local_context\local_context_int_type	This state exists so we can know what local context we're focusing on right now, and enable different reverbs depending on that. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
+	3734685961	CameraZoomLevel			\Camera\CameraZoomLevel	7= Paper map, 12 = Table maybe a bit 
+	3744840081	debug_killswitch			\Debug\debug_killswitch	
+	3889032895	EnemyCulturePrimary			\Culture\EnemyCulturePrimary	N.B. THE STRUCTURE FOR CULTURES WILL CHANGE! NOT A PERMANENT SOLUTION HERE /MW 231113
+	3989959418	mus_harmonic_mode			\Music\mus_harmonic_mode	
+	4008345218	Gamestate_Speed			\Gamestate\Gamestate_Speed	
+	4131181917	MonthlyTickResearchComplete			\Monthly_Tick_Report\MonthlyTickResearchComplete	Monthly tick report toggle for buildings being completed
+	4212815013	local_context_ext_type			\local_context\local_context_ext_type	This state exists so we can know what local context we're focusing on right now, and enable different reverbs depending on that. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
+
+State	ID	Name	State Group			Notes
+	465211496	PDX_Speakers	settings_listener_profile			
+	465606845	PDX_Nightmode	settings_listener_profile			
+	748895195	None	settings_listener_profile			
+	1252584708	PDX_TV	settings_listener_profile			
+	2116481717	PDX_Off	settings_listener_profile			
+	2767704715	PDX_Headphones	settings_listener_profile			
+	3088688550	PDX_HomeCinema	settings_listener_profile			
+	748895195	None	Gamestate_Pause			
+	3092587493	Pause	Gamestate_Pause			
+	3412868374	Unpause	Gamestate_Pause			
+	535510589	country_menu	UI_cursor_type			
+	655016292	character_menu	UI_cursor_type			
+	748895195	None	UI_cursor_type			
+	803298371	unit_menu	UI_cursor_type			
+	975700993	market_menu	UI_cursor_type			
+	1619190897	unit_chasing	UI_cursor_type			
+	1967398253	unit_movement	UI_cursor_type			
+	2161478830	exploration_menu	UI_cursor_type			
+	2199338878	seazone_menu	UI_cursor_type			
+	3553981790	location_menu	UI_cursor_type			
+	3991880913	unit_transport	UI_cursor_type			
+	748895195	None	mus_scale			
+	1854202719	mus_scale_minor	mus_scale			
+	3884029315	mus_scale_major	mus_scale			
+	76079491	CameraZooming_in	CameraZoomMovement			
+	748895195	None	CameraZoomMovement			
+	1784744208	CameraZooming_stationary	CameraZoomMovement			
+	3211533950	CameraZooming_out	CameraZoomMovement			
+	748895195	None	mus_systemType			
+	3827416997	mus_systemType_noMusic	mus_systemType			
+	3829467356	mus_systemType_dynamic	mus_systemType			
+	3939611117	mus_systemType_static_fullMix	mus_systemType			
+	4172215883	mus_systemType_static_customMix	mus_systemType			
+	748895195	None	mus_wardichotomy			
+	1375552676	mus_wardichotomy_disabled	mus_wardichotomy			
+	2387646727	mus_wardichotomy_enabled	mus_wardichotomy			
+	748895195	None	mus_ispastmainmenu			
+	3314308943	mus_ispastmainmenu_false	mus_ispastmainmenu			
+	3510326446	mus_ispastmainmenu_true	mus_ispastmainmenu			
+	616003758	semi_open	local_context_indoor			
+	748895195	None	local_context_indoor			
+	2452206122	false	local_context_indoor			
+	3053630529	true	local_context_indoor			
+	3248502869	DISABLED	local_context_indoor			
+	748895195	None	local_context_gust_left			
+	3449311078	coniferous	local_context_gust_left			
+	3972995972	deciduous	local_context_gust_left			
+	4248645337	grass	local_context_gust_left			
+	748895195	None	mus_tracknumber			
+	3332922736	track_23	mus_tracknumber			
+	3332922737	track_22	mus_tracknumber			
+	3332922738	track_21	mus_tracknumber			
+	3332922739	track_20	mus_tracknumber			
+	3332922741	track_26	mus_tracknumber			
+	3332922742	track_25	mus_tracknumber			
+	3332922743	track_24	mus_tracknumber			
+	3349700320	track_16	mus_tracknumber			
+	3349700321	track_17	mus_tracknumber			
+	3349700322	track_14	mus_tracknumber			
+	3349700323	track_15	mus_tracknumber			
+	3349700324	track_12	mus_tracknumber			
+	3349700325	track_13	mus_tracknumber			
+	3349700326	track_10	mus_tracknumber			
+	3349700327	track_11	mus_tracknumber			
+	3349700334	track_18	mus_tracknumber			
+	3349700335	track_19	mus_tracknumber			
+	3366477904	track_09	mus_tracknumber			
+	3366477905	track_08	mus_tracknumber			
+	3366477912	track_01	mus_tracknumber			
+	3366477914	track_03	mus_tracknumber			
+	3366477915	track_02	mus_tracknumber			
+	3366477916	track_05	mus_tracknumber			
+	3366477917	track_04	mus_tracknumber			
+	3366477918	track_07	mus_tracknumber			
+	3366477919	track_06	mus_tracknumber			
+	748895195	None	mus_harmonic_key			
+	4036275938	mus_harmonic_key_Eb	mus_harmonic_key			
+	4053053553	mus_harmonic_key_Db	mus_harmonic_key			
+	4069831108	mus_harmonic_key_Gb	mus_harmonic_key			
+	4103386286	mus_harmonic_key_Ab	mus_harmonic_key			
+	4153719271	mus_harmonic_key_Bb	mus_harmonic_key			
+	4267681664	mus_harmonic_key_E	mus_harmonic_key			
+	4267681665	mus_harmonic_key_D	mus_harmonic_key			
+	4267681666	mus_harmonic_key_G	mus_harmonic_key			
+	4267681667	mus_harmonic_key_F	mus_harmonic_key			
+	4267681668	mus_harmonic_key_A	mus_harmonic_key			
+	4267681670	mus_harmonic_key_C	mus_harmonic_key			
+	4267681671	mus_harmonic_key_B	mus_harmonic_key			
+	748895195	None	FlatMap			
+	2066128362	FlatMap_on	FlatMap			
+	3217722016	FlatMap_off	FlatMap			
+	748895195	None	MonthlyTickBuildingComplete			
+	782826392	Default	MonthlyTickBuildingComplete			
+	2495990384	Report_Building_Complete	MonthlyTickBuildingComplete			
+	20842036	loadingscreen_first	Gamestate_startSequence			
+	748895195	None	Gamestate_startSequence			
+	871352366	loadingscreen_second	Gamestate_startSequence			
+	984691642	ingame	Gamestate_startSequence			
+	2087420113	ending_game	Gamestate_startSequence			
+	3604647259	mainmenu	Gamestate_startSequence			
+	21176415	east_asian_sfx	PlayerCulturePrimary			
+	588235174	european_sfx	PlayerCulturePrimary			
+	748895195	None	PlayerCulturePrimary			
+	881336927	african_sfx	PlayerCulturePrimary			
+	1597889766	middle_east_sfx	PlayerCulturePrimary			
+	1788697020	indian_sfx	PlayerCulturePrimary			
+	1818634679	north_american_sfx	PlayerCulturePrimary			
+	3383565261	south_american_sfx	PlayerCulturePrimary			
+	555374291	LocalContext	UX_Panel_Context			
+	748895195	None	UX_Panel_Context			
+	985442775	LoadingScreen	UX_Panel_Context			
+	1048449605	Map	UX_Panel_Context			
+	2808619651	FullscreenMenu	UX_Panel_Context			
+	748895195	None	CameraPan_Movement			
+	2571023135	CamerPanning_moving	CameraPan_Movement			
+	4122975127	CamerPanning_stationary	CameraPan_Movement			
+	748895195	None	mus_pieceType			
+	1486245639	setPiece	mus_pieceType			
+	3128647864	mood	mus_pieceType			
+	670611050	Neutral	Event_outcome			
+	748895195	None	Event_outcome			
+	1192865152	Positive	Event_outcome			
+	4219547688	Negative	Event_outcome			
+	748895195	None	PlayerAtWar			
+	2452206122	False	PlayerAtWar			
+	3053630529	True	PlayerAtWar			
+	748895195	None	local_context_gust_center			
+	3449311078	coniferous	local_context_gust_center			
+	3972995972	deciduous	local_context_gust_center			
+	4248645337	grass	local_context_gust_center			
+	465836720	age_6_revolutions	GlobalAge			
+	748895195	None	GlobalAge			
+	846049418	age_5_absolutism	GlobalAge			
+	903691558	age_4_reformation	GlobalAge			
+	2500716166	age_2_renaissance	GlobalAge			
+	2559651287	age_3_discovery	GlobalAge			
+	3170502974	age_1_traditions	GlobalAge			
+	320735774	Gamestate_InGameMenu_true	Gamestate_InGameMenu			
+	748895195	None	Gamestate_InGameMenu			
+	3002122975	Gamestate_InGameMenu_false	Gamestate_InGameMenu			
+	748895195	None	PlayerIncome			
+	2418595136	Decreasing	PlayerIncome			
+	4075250792	Increasing	PlayerIncome			
+	748895195	None	local_context_gust_right			
+	3449311078	coniferous	local_context_gust_right			
+	3972995972	deciduous	local_context_gust_right			
+	4248645337	grass	local_context_gust_right			
+	748895195	None	PlayerBalance			
+	2418595136	Decreasing	PlayerBalance			
+	4075250792	Increasing	PlayerBalance			
+	165558745	LocalContext_european	LocalContextCulture			
+	748895195	None	LocalContextCulture			
+	1250591351	LocalContext_middle_east	LocalContextCulture			
+	1934661826	LocalContext_south_american	LocalContextCulture			
+	1986058827	LocalContext_indian	LocalContextCulture			
+	2120458266	LocalContext_african	LocalContextCulture			
+	3473624948	LocalContext_east_asian	LocalContextCulture			
+	4271650296	LocalContext_north_american	LocalContextCulture			
+	74124220	hall_wood	local_context_int_type			
+	748895195	None	local_context_int_type			
+	2015218286	room_medium_wood	local_context_int_type			
+	2423458584	room_medium_stone	local_context_int_type			
+	2429009316	room_small_wood	local_context_int_type			
+	2568801986	room_small_stone	local_context_int_type			
+	2763386986	hall_stone	local_context_int_type			
+	3248502869	DISABLED	local_context_int_type			
+	615854576	CameraZoomLevel_04	CameraZoomLevel			
+	615854577	CameraZoomLevel_05	CameraZoomLevel			
+	615854578	CameraZoomLevel_06	CameraZoomLevel			
+	615854579	CameraZoomLevel_07	CameraZoomLevel			
+	615854580	CameraZoomLevel_00	CameraZoomLevel			
+	615854581	CameraZoomLevel_01	CameraZoomLevel			
+	615854582	CameraZoomLevel_02	CameraZoomLevel			
+	615854583	CameraZoomLevel_03	CameraZoomLevel			
+	615854588	CameraZoomLevel_08	CameraZoomLevel			
+	615854589	CameraZoomLevel_09	CameraZoomLevel			
+	632632160	CameraZoomLevel_17	CameraZoomLevel			
+	632632161	CameraZoomLevel_16	CameraZoomLevel			
+	632632162	CameraZoomLevel_15	CameraZoomLevel			
+	632632163	CameraZoomLevel_14	CameraZoomLevel			
+	632632164	CameraZoomLevel_13	CameraZoomLevel			
+	632632165	CameraZoomLevel_12	CameraZoomLevel			
+	632632166	CameraZoomLevel_11	CameraZoomLevel			
+	632632167	CameraZoomLevel_10	CameraZoomLevel			
+	632632174	CameraZoomLevel_19	CameraZoomLevel			
+	632632175	CameraZoomLevel_18	CameraZoomLevel			
+	649409746	CameraZoomLevel_28	CameraZoomLevel			
+	649409747	CameraZoomLevel_29	CameraZoomLevel			
+	649409752	CameraZoomLevel_22	CameraZoomLevel			
+	649409753	CameraZoomLevel_23	CameraZoomLevel			
+	649409754	CameraZoomLevel_20	CameraZoomLevel			
+	649409755	CameraZoomLevel_21	CameraZoomLevel			
+	649409756	CameraZoomLevel_26	CameraZoomLevel			
+	649409757	CameraZoomLevel_27	CameraZoomLevel			
+	649409758	CameraZoomLevel_24	CameraZoomLevel			
+	649409759	CameraZoomLevel_25	CameraZoomLevel			
+	666187340	CameraZoomLevel_31	CameraZoomLevel			
+	666187341	CameraZoomLevel_30	CameraZoomLevel			
+	666187343	CameraZoomLevel_32	CameraZoomLevel			
+	748895195	None	CameraZoomLevel			
+	469904675	debug_killswitch_off	debug_killswitch			
+	748895195	None	debug_killswitch			
+	1751366863	debug_killswitch_on	debug_killswitch			
+	748895195	None	EnemyCulturePrimary			
+	1016554174	Chinese	EnemyCulturePrimary			
+	1114932743	Syrian	EnemyCulturePrimary			
+	1607454299	Ashanti	EnemyCulturePrimary			
+	3022682479	Deccan	EnemyCulturePrimary			
+	3593087220	Iroquois	EnemyCulturePrimary			
+	3866797368	Aztec	EnemyCulturePrimary			
+	4155581892	NorthGerman	EnemyCulturePrimary			
+	748895195	None	mus_harmonic_mode			
+	1686212572	mus_harmonic_mode_minor	mus_harmonic_mode			
+	2914042424	mus_harmonic_mode_major	mus_harmonic_mode			
+	748895195	None	Gamestate_Speed			
+	1400591528	speed_05	Gamestate_Speed			
+	1400591529	speed_04	Gamestate_Speed			
+	1400591532	speed_01	Gamestate_Speed			
+	1400591534	speed_03	Gamestate_Speed			
+	1400591535	speed_02	Gamestate_Speed			
+	748895195	None	MonthlyTickResearchComplete			
+	782826392	Default	MonthlyTickResearchComplete			
+	1233547093	Report_Research_Complete	MonthlyTickResearchComplete			
+	491961918	forest	local_context_ext_type			
+	513139656	mountain	local_context_ext_type			
+	514358619	field	local_context_ext_type			
+	748895195	None	local_context_ext_type			
+	3248502869	DISABLED	local_context_ext_type			
+	3888786832	city	local_context_ext_type			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	33339047	ca_pan_LR_urban			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_LR_urban	Pan: 0 is left, 50 is Center, 100 is Right
+	156420364	mus_setpiece_volume			\Music\mus_setpiece_volume	
+	200151049	CameraHeight			\Camera\CameraHeight	25 min city graphics culled at 190 flatmap/maprom at 930
+	317276383	VCA_Ambient_Map			\MasterMix\VCA_Ambient_Map	
+	362798921	masDataCityDensity			\Ambience\Master Ambient System Terrain Data\masDataCityDensity	Rough climate zone parameter going from 1 = tropical to 0 = arctic
+	694893477	mus_soloist_volume			\Music\mus_soloist_volume	
+	704794708	ca_pan_LR_nature			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_LR_nature	Pan: 0 is left, 50 is Center, 100 is Right
+	898989187	ca_pan_FB_fire			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_FB_fire	Pan: 0 is back, 50 is Center, 100 is front
+	1001818840	mus_cue_meter			\Music\mus_cue_meter	
+	1093642105	ca_pan_FB_urban			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_FB_urban	Pan: 0 is back, 50 is Center, 100 is front 
+	1265760930	ca_data_cityDensity			\Ambience\Contextual Ambience Hard Set Terrain Data\ca_data_cityDensity	
+	1490980333	VCA_Music			\MasterMix\VCA_Music	
+	1515534717	VCA_Ambient_Objects			\MasterMix\VCA_Ambient_Objects	
+	1556715851	hover_meter			\UI\hover_meter	
+	1669055291	VCA_Ambient_Panel			\MasterMix\VCA_Ambient_Panel	
+	1919753681	ca_data_vegetationDensity			\Ambience\Contextual Ambience Hard Set Terrain Data\ca_data_vegetationDensity	
+	1920277724	mus_startupsequence_volume			\Music\mus_startupsequence_volume	
+	2035457160	ListenerCone			\Built_In\ListenerCone	
+	2070963658	VCA_Ambient_Map_Background			\MasterMix\VCA_Ambient_Map_Background	
+	2153078782	masDataVegetationDensity			\Ambience\Master Ambient System Terrain Data\masDataVegetationDensity	
+	2414167480	PlayerActionCounter			\Logic\PlayerActionCounter	
+	2489025899	VCA_Armies			\MasterMix\VCA_Armies	
+	2637364457	VCA_Sfx			\MasterMix\VCA_Sfx	
+	2689689170	VCA_Ui			\MasterMix\VCA_Ui	
+	3230545068	ca_data_elevation			\Ambience\Contextual Ambience Hard Set Terrain Data\ca_data_elevation	
+	3305645385	ca_pan_LR_fire			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_LR_fire	Pan: 0 is left, 50 is Center, 100 is Right
+	3493312238	VCA_Master			\MasterMix\VCA_Master	
+	3544628816	ca_pan_FB_water			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_FB_water	Pan: 0 is back, 50 is Center, 100 is front
+	3799703539	PanelFocus			\UI\PanelFocus	Set on hover on and off panels, 0 is out of focus, 100 is in focus, used for fading panel ambience in and out
+	3985324154	ca_pan_LR_water			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_LR_water	Pan: 0 is left, 50 is Center, 100 is Right
+	3992841390	ca_pan_FB_nature			\Ambience\Contextual Ambience Hard Set Panning\ca_pan_FB_nature	Pan: 0 is left, 50 is Center, 100 is Right
+	4045605021	amb_mix_coast_meter			\Ambience\amb_mix_coast_meter	
+	4178822586	masDataTopologyElevation			\Ambience\Master Ambient System Terrain Data\masDataTopologyElevation	1 being highest mountains, 0 being sea level
+
+Modulator LFO	ID	Name			Wwise Object Path	Notes
+	85586488	mod_LFO_dreamy_depth			\mod_ambience\mod_LFO_dreamy_depth	
+	172321864	modLFO_dreamy_wetdry			\mod_ambience\modLFO_dreamy_wetdry	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	73014993	Logic			\Default Work Unit\Master Audio Bus\Logic	
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Diegesis\Ambience	9= Paper map, 12 = Table maybe a bit
+	105317894	Ambience_map			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map	
+	284466152	MapRoom			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\MapRoom	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Diegesis\Reverb	
+	430160473	ContextualAmbience_base_quads			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base\ContextualAmbience_base_quads	
+	445517391	ContextualAmbience_fire			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_fire	
+	578789266	ContextualAmbience_spots			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots	
+	783822780	mas_sea_quad			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_sea_quad	
+	821630201	OnMapUnits			\Default Work Unit\Master Audio Bus\Diegesis\Military\OnMapUnits	
+	914120420	Diegesis			\Default Work Unit\Master Audio Bus\Diegesis	
+	931874857	ContextalAmbience_nature_water			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextalAmbience_nature_water	
+	1031089514	Debug			\Default Work Unit\Master Audio Bus\Debug	
+	1036826058	ContextualAmbience_nature			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature	
+	1142545363	ContextualAmbience_nature_birds			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextualAmbience_nature_birds	
+	1279776192	Height			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\CameraWind\Height	
+	1321853244	ContextualAmbience_base			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base	
+	1486245639	setPiece			\Default Work Unit\Master Audio Bus\Music\cinematic\setPiece	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	1601093916	ContextalAmbience_urban			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban	
+	1637305924	Military			\Default Work Unit\Master Audio Bus\Diegesis\Military	
+	1812165760	OnMapObjects			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\OnMapObjects	
+	1829309140	MAS_MasterAmbienceSystem			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem	
+	1838596016	cinematic			\Default Work Unit\Master Audio Bus\Music\cinematic	
+	2024613458	ContextualAmbience_base_nature			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base\ContextualAmbience_base_nature	
+	2118900976	UI_hover			\Default Work Unit\Master Audio Bus\UI\UI_hover	
+	2129636626	Movement			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\CameraWind\Movement	
+	2369986355	mas_wind_quad			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_wind\mas_wind_quad	
+	2533070856	startSequence			\Default Work Unit\Master Audio Bus\Music\cinematic\startSequence	
+	2574921318	OnMapObjects_walla_singles			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\OnMapObjects\OnMapObjects_walla_singles	
+	2822133703	ContextualAmbience_urban_vox			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_vox	
+	2912108876	ContextualAmbience_urban_walla_quads			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_walla_quads	
+	3024047423	soloists			\Default Work Unit\Master Audio Bus\Music\soloists	
+	3129903933	mas_coast_quad			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_coast_quad	
+	3139696827	mas_wind			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_wind	
+	3173557215	mas_birds			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_birds	
+	3227661591	mas_wind_702			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_wind\mas_wind_702	
+	3241005626	CameraWind			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\CameraWind	
+	3560805548	OnMapObjects_walla_loops			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\OnMapObjects\OnMapObjects_walla_loops	
+	3583214212	ContextualAmbience			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience	
+	3724479913	ducking meter			\Default Work Unit\Master Audio Bus\Logic\ducking meter	
+	3772667841	ContextualAmbience_base_gusts			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base\ContextualAmbience_base_gusts	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4120863563	ContextualAmbience_nature_water_quads			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextalAmbience_nature_water\ContextualAmbience_nature_water_quads	
+	4135919985	cues			\Default Work Unit\Master Audio Bus\Music\cues	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	15771434	local_ext_forest			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior\local_ext_forest	
+	88744378	music_context			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\music_context	
+	538750605	local_context_interior			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior	
+	651884576	set_piece			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\music_context\set_piece	
+	681222507	world_context			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context	Game driven on map reverbs based on vegetation density
+	762652776	local_int_receive_hall			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_receive_hall	
+	854084687	world_mountain			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context\world_mountain	
+	925421246	local_int_receive_room_medium			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_receive_room_medium	
+	1002469546	local_int_receive			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_receive	
+	1017241100	BoredomMeter			\Default Work Unit\Master Audio Bus\Logic\ducking meter\BoredomMeter	
+	1045769692	local_int_room_small_stone			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_room_small_stone	
+	1109445198	local_int_hall_wood			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_hall_wood	
+	1423398518	world_field			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context\world_field	
+	1501726101	world_forest			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context\world_forest	
+	1595305999	dreamy			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\dreamy	
+	1620528595	local_context_exterior			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior	
+	1890676856	local_int_hall_stone			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_hall_stone	
+	1903060307	UI_reverb_Importance			\Default Work Unit\Master Audio Bus\UI_reverb_Importance	
+	2080651732	local_ext_city			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior\local_ext_city	
+	2215249551	local_ext_field			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior\local_ext_field	
+	2335918910	local_context			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context	
+	3077423802	local_int_room_medium_stone			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_room_medium_stone	
+	3154923636	local_ext_mountain			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior\local_ext_mountain	Setting to stereo until figure out how to handle delays in ambisonics - MAWE 250404 
+	3226071334	_render_do_not_use			\Default Work Unit\Master Audio Bus\_render_do_not_use	
+	3451298216	local_int_receive_room_small			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_receive_room_small	
+	3514662981	world_context_receive			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context\world_context_receive	Game driven on map reverbs based on vegetation density
+	3541680202	local_int_room_small_wood			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_room_small_wood	
+	3648235120	local_ext_receive			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_exterior\local_ext_receive	
+	3696130331	world_city			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\world_context\world_city	
+	3989179958	ActionMeter			\Default Work Unit\Master Audio Bus\Logic\ActionMeter	
+	4137814988	local_int_room_medium_wood			\Default Work Unit\Master Audio Bus\Diegesis\Reverb\local_context\local_context_interior\local_int_room_medium_wood	
+
+Effect plug-ins	ID	Name	Type				Notes
+	23333950	Recorder (Custom)	Wwise Recorder			
+	30717587	Delay (Custom)	Wwise Delay			
+	36531246	fx_meter_boredomcounter	Wwise Meter			
+	56174514	Resonant_Room_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms   
+	73322647	Peak Limiter (Custom)	Wwise Peak Limiter			
+	119063286	Holy (Custom)	Wwise RoomVerb			
+	150078804	Flanger (Custom)	Wwise Flanger			
+	207625100	Parametric EQ (Custom)	Wwise Parametric EQ			
+	221209347	Parametric EQ (Custom)	Wwise Parametric EQ			
+	227825348	HamburgStadtpark_ER_Ambisonics (Custom)	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms  
+	242979816	Gain (Custom)	Wwise Gain			
+	258302796	Parametric EQ (Custom)	Wwise Parametric EQ			
+	265638814	Dark_Hall_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms
+	328281677	Flanger (Custom)	Wwise Flanger			
+	329842972	Parametric EQ (Custom)	Wwise Parametric EQ			
+	423533062	Parametric EQ (Custom)	Wwise Parametric EQ			
+	441887155	mus_meter_cues	Wwise Meter			
+	454518594	Parametric EQ (Custom)	Wwise Parametric EQ			
+	467473740	fx_meter_mus_soloist_volume	Wwise Meter			
+	480073638	Expander (Custom)	Wwise Expander			
+	501598640	Flanger (Custom)	Wwise Flanger			
+	531710912	Parametric EQ (Custom)	Wwise Parametric EQ			
+	586545712	Parametric EQ (Custom)	Wwise Parametric EQ			
+	610731447	Parametric EQ (Custom)	Wwise Parametric EQ			
+	613368453	Gain (Custom)	Wwise Gain			
+	696995932	Flanger (Custom)	Wwise Flanger			
+	728708519	Gain (Custom)	Wwise Gain			
+	733050265	Delay (Custom)	Wwise Delay			
+	803609111	Compressor (Custom)	Wwise Compressor			
+	871934099	Compressor (Custom)	Wwise Compressor			
+	905109816	StereoDelay_mountain	Wwise Stereo Delay			
+	971177054	Flanger (Custom)	Wwise Flanger			
+	1005133955	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1033538788	Peak Limiter (Custom)	Wwise Peak Limiter			
+	1055510671	HamburgStadtpark_Dense_Reflections_Ambisonics (Custom)	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms 
+	1058158220	Matrix Reverb (Custom)	Wwise Matrix Reverb			
+	1066801779	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1069491694	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1070618026	Delay (Custom)	Wwise Delay			
+	1634225668	Hamburg_Volksdorfer_Wald_Org_Ambisonics	Wwise Convolution Reverb			NOTE: Does not sound as open as stereo version.    Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 9ms  
+	1755477473	EQ_loadinc_screen_filters	Wwise Parametric EQ			
+	2027554746	Bright_Room_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms  
+	2116481717	PDX_Off	Mastering Suite			
+	2116774349	EQ_amb_map_ducking_under_ca	Wwise Parametric EQ			
+	2206420588	Luna_Studio_Org_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms  
+	2764341709	fx_meter_mus_startupsequence_volume	Wwise Meter			
+	2929037090	fx_meter_actioncounter	Wwise Meter			
+	3121670071	fx_meter_mus_setpiece_volume	Wwise Meter			
+	3255650506	fx_flanger_dreamy	Wwise Flanger			
+	3267679135	fx_metar_amb_coast	Wwise Meter			
+	3270148593	fx_meter_UI_hover	Wwise Meter			
+	3689158329	Berlin_Stadtbad_Org_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 5ms  
+	3793055006	Hamburg_Stadtpark_01_Org_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms  
+	4033730959	Petite_Room_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 8ms  
+	4066956554	EQ_amb_mus_ducking	Wwise Parametric EQ			
+	4161719729	Colossal_Cathedral_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 20ms 
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

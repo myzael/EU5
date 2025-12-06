@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_scapula_mesh"
+	file = "unit_weapon_scapula.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_scapulaShape"
+		index = 0
+		texture_diffuse = "unit_weapon_scapula_diffuse.dds"
+		texture_normal = "unit_weapon_scapula_normal.dds"
+#		texture_specular = "unit_shield_wood_rope_b_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_scapula_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

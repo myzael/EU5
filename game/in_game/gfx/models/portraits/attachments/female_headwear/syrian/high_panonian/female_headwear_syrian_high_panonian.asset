@@ -1,0 +1,83 @@
+pdxmesh = {
+	name = "female_headwear_syrian_high_panonian_mesh"
+	file = "female_headwear_syrian_high_panonian.mesh"
+
+	meshsettings = {
+		name = "female_headwear_syrian_high_panonianShape"
+		index = 0
+		texture_diffuse = "female_headwear_syrian_high_panonian_diffuse.dds"
+		texture_normal = "female_headwear_syrian_high_panonian_normal.dds"
+		texture_specular = "female_headwear_syrian_high_panonian_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	
+	meshsettings = {
+		name = "female_headwear_syrian_high_panonian_hairShape"
+		index = 0
+		texture_diffuse = "female_hair_long_basic_diffuse.dds"
+		texture_normal = "female_hair_long_basic_normal.dds"
+		texture_specular = "female_hair_long_basic_properties.dds"
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headwear_syrian_high_panonian_entity"
+	pdxmesh = "female_headwear_syrian_high_panonian_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/syrian/high_panonian/female_headwear_syrian_high_panonian_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "syrian_female_high_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+		}
+	}
+}
+
+pdxmesh = {
+	name = "female_headwear_syrian_low_panonian_mesh"
+	file = "female_headwear_syrian_low_panonian.mesh"
+
+	meshsettings = {
+		name = "female_headwear_syrian_low_panonianShape"
+		index = 0
+		texture_diffuse = "female_headwear_syrian_high_panonian_diffuse.dds"
+		texture_normal = "female_headwear_syrian_high_panonian_normal.dds"
+		texture_specular = "female_headwear_syrian_high_panonian_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	
+	meshsettings = {
+		name = "female_headwear_syrian_low_panonian_hairShape"
+		index = 0
+		texture_diffuse = "female_hair_long_basic_diffuse.dds"
+		texture_normal = "female_hair_long_basic_normal.dds"
+		texture_specular = "female_hair_long_basic_properties.dds"
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headwear_syrian_low_panonian_entity"
+	pdxmesh = "female_headwear_syrian_low_panonian_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/syrian/high_panonian/female_headwear_syrian_high_panonian_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "syrian_female_low_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+		}
+	}
+}

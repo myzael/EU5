@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "event_midground_mesh"
+	file = "event_midground.mesh"
+
+	animation = { id = "idle_animation" type = "event_midground_idle.anim" }
+	animation = { id = "event_midground_animation" type = "event_midground_event_midground.anim" }
+
+	meshsettings = {
+		name = "event_midgroundShape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_26"
+	}
+}
+
+entity = {
+	name = "event_midground_entity"
+	pdxmesh = "event_midground_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+		looping = no
+		animation_speed = 0.5
+	}
+	# state = {
+	# 	name = "event_midground"
+	# 	animation = "event_midground_animation"
+	# 	looping = no
+	# 	animation_speed = 0.9
+	# }
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}

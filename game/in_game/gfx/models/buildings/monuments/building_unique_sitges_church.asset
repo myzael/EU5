@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "building_unique_sitges_church_mesh"
+	file = "building_unique_sitges_church.mesh"
+
+	meshsettings = {
+		name = "Medium_SizeShape"
+		index = 0
+		texture_diffuse = "decal_sitges_church_diffuse.dds"
+		texture_normal = "decal_sitges_church_normal.dds"
+		texture_specular = "decal_sitges_church_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "Cube_001Shape"
+		index = 0
+		texture_diffuse = "building_sitges_church_diffuse.dds"
+		texture_normal = "building_sitges_church_normal.dds"
+		texture_specular = "building_sitges_church_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_sitges_church_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_unique_sitges_church_entity"
+	pdxmesh = "building_unique_sitges_church_mesh"
+}
+

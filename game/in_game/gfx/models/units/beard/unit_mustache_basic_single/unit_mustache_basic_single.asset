@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_mustache_basic_single_mesh"
+	file = "unit_mustache_basic_single.mesh"
+
+	meshsettings = {
+		name = "unit_mustache_basic_singleShape"
+		index = 0
+		texture_diffuse = "unit_hat_starfish_beret_feathers_diffuse.dds"
+		texture_normal = "unit_hat_starfish_beret_feathers_normal.dds"
+		texture_specular = "unit_hat_bicorn_gold_trim_horizontal_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_starfish_beret_feathers_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

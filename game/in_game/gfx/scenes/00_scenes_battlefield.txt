@@ -1,0 +1,9 @@
+﻿battlefield_water_scene = {	
+	background = "battlefield_water_list"
+}
+battlefield_vegetation_scene = {	
+	background = "battlefield_vegetation_list"
+}
+battlefield_topography_scene = {	
+	background = "battlefield_topography_list"
+}

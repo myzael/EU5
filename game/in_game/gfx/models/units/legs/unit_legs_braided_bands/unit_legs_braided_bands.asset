@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_legs_braided_bands_mesh"
+	file = "unit_legs_braided_bands.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_legs_braided_bands_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_legs_braided_bands_diffuse.dds"
+		texture_normal = "unit_legs_braided_bands_normal.dds"
+		#texture_specular = "unit_legs_braided_bands_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_braided_bands_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_braided_bands_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_legs_braided_bands_diffuse.dds"
+		texture_normal = "unit_legs_braided_bands_normal.dds"
+		#texture_specular = "unit_legs_braided_bands_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_braided_bands_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_braided_bands_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_legs_braided_bands_diffuse.dds"
+		texture_normal = "unit_legs_braided_bands_normal.dds"
+		#texture_specular = "unit_legs_braided_bands_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_braided_bands_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

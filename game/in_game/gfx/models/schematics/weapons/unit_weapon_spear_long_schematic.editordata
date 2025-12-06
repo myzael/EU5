@@ -1,0 +1,54 @@
+﻿node_editor_meta={
+	view={
+		position={ -289.804565 -276.425995 }
+		zoom=0.624931
+	}
+	nodes={
+		0={
+			position={ 393.991821 526.748291 }
+			name="Slash Sparks"
+			size={ 1502.097046 589.130981 }
+		}
+		1={
+			position={ 414.025024 608.618591 }
+			name="Tip of Spear"
+			size={ 591.836304 287.000000 }
+		}
+		2={
+			position={ 1390.428101 1167.401611 }
+		}
+		3={
+			position={ 1025.218750 893.052490 }
+		}
+		4={
+			position={ 2284.578857 997.939819 }
+		}
+		5={
+			position={ 1404.559937 893.053711 }
+		}
+		6={
+			position={ 499.024170 693.618835 }
+		}
+		7={
+			position={ 469.899475 932.657166 }
+		}
+		8={
+			position={ 1205.085449 1359.585693 }
+			inlined=yes
+		}
+		9={
+			position={ 1454.345215 1182.715698 }
+			inlined=yes
+		}
+		10={
+			position={ 1454.345215 1182.715698 }
+			inlined=yes
+		}
+		11={
+			position={ 2218.936523 872.337219 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_hay_mesh"
+	file = "cargo_hay.mesh"
+
+	meshsettings = {
+		name = "cargo_hayShape"
+		index = 0
+		texture_diffuse = "cargo_hay_diffuse.dds"
+		texture_normal = "cargo_hay_normal.dds"
+		texture_specular = "cargo_hay_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_hay_entity"
+	pdxmesh = "cargo_hay_mesh"
+}

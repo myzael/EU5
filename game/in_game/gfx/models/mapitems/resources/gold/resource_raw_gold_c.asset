@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "resource_raw_gold_c_mesh"
+	file = "resource_raw_gold_c.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "|resource_raw_gold_c|LOD_0|resource_raw_gold_c|decal_raw_gold_c"
+		index = 0
+		texture_diffuse = "resource_gold_raw_c_decal_diffuse.dds"
+		texture_normal = "resource_gold_raw_c_decal_normal.dds"
+		texture_specular = "resource_gold_raw_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "|resource_raw_gold_c|LOD_0|resource_raw_gold_c|resource_raw_gol"
+		index = 0
+		texture_diffuse = "resource_gold_diffuse.dds"
+		texture_normal = "resource_gold_normal.dds"
+		texture_specular = "resource_gold_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_4|resource_raw_gold_c|decal_raw_gold_c|decal_raw_gold_cShap"
+		index = 0
+		texture_diffuse = "resource_gold_raw_c_decal_diffuse.dds"
+		texture_normal = "resource_gold_raw_c_decal_normal.dds"
+		texture_specular = "resource_gold_raw_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_4|resource_raw_gold_c|resource_raw_gold_c|resource_raw_gold"
+		index = 0
+		texture_diffuse = "resource_gold_diffuse.dds"
+		texture_normal = "resource_gold_normal.dds"
+		texture_specular = "resource_gold_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_5|resource_raw_gold_c|decal_raw_gold_c|decal_raw_gold_cShap"
+		index = 0
+		texture_diffuse = "resource_gold_raw_c_decal_diffuse.dds"
+		texture_normal = "resource_gold_raw_c_decal_normal.dds"
+		texture_specular = "resource_gold_raw_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_5|resource_raw_gold_c|resource_raw_gold_c|resource_raw_gold"
+		index = 0
+		texture_diffuse = "resource_gold_diffuse.dds"
+		texture_normal = "resource_gold_normal.dds"
+		texture_specular = "resource_gold_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_raw_gold_c_entity"
+	pdxmesh = "resource_raw_gold_c_mesh"
+}

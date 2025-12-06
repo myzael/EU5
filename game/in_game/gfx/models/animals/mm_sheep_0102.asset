@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "mm_sheep_0102_mesh"
+	file = "mm_sheep_0102.mesh"
+
+
+	meshsettings = {
+		name = "mm_sheep_0102Shape"
+		index = 0
+		texture_diffuse = "sheep_0102_diffuse.dds"
+		texture_normal = "sheep_0102_normal.dds"
+		texture_specular = "sheep_0102_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "mm_sheep_0102_entity"
+	pdxmesh = "mm_sheep_0102_mesh"
+
+}

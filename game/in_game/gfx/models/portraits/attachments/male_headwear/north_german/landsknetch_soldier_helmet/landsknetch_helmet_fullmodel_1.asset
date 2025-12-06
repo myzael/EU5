@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "landsknetch_helmet_fullmodel_1_mesh"
+	file = "landsknetch_helmet_fullmodel_1.mesh"
+
+	meshsettings = {
+		name = "landsknetch_helmet_fullmodel_1Shape"
+		index = 0
+		texture_diffuse = "landsknetch_helmet_1_diffuse.dds"
+		texture_normal = "landsknetch_helmet_1_normal.dds"
+		texture_specular = "landsknetch_helmet_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_soldier_landsknetch_helmet_1_entity"
+	pdxmesh = "landsknetch_helmet_fullmodel_1_mesh"
+}

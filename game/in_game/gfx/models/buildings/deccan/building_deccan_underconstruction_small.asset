@@ -1,0 +1,86 @@
+pdxmesh = {
+	name = "building_deccan_underconstruction_small_mesh"
+	file = "building_deccan_underconstruction_small.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_deccan_underconstruction_small_lod_0|decal_decca"
+		index = 0
+		texture_diffuse = "building_deccan_underconstruction_small_decal_diffuse.dds"
+		texture_normal = "building_deccan_underconstruction_small_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_underconstruction_small_lod_0Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_underconstruction_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_underconstruction_small_lod_1|decal_deccan_unde"
+		index = 0
+		texture_diffuse = "building_deccan_underconstruction_small_decal_diffuse.dds"
+		texture_normal = "building_deccan_underconstruction_small_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_underconstruction_small_lod_01Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_underconstruction_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_underconstruction_small_lod_02Shape"
+		index = 0
+		texture_diffuse = "deccan_atlas_master_diffuse.dds"
+		texture_normal = "deccan_atlas_master_normal.dds"
+		texture_specular = "deccan_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_deccan_underconstruction_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_underconstruction_small_lod_2|decal_deccan_unde"
+		index = 0
+		texture_diffuse = "building_deccan_underconstruction_small_decal_diffuse.dds"
+		texture_normal = "building_deccan_underconstruction_small_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_deccan_underconstruction_small_entity"
+	pdxmesh = "building_deccan_underconstruction_small_mesh"
+
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		event = { time = 0 particle = "infrastructure/construction_dust_small" trigger_once = yes}
+	}
+}

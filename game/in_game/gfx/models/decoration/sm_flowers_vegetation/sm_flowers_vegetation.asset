@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "sm_flowers_vegetation_mesh"
+	file = "sm_flowers_vegetation.mesh"
+
+	meshsettings = {
+		name = "sm_flowers_vegetation|pPlane92|pPlane92Shape"
+		index = 0
+		texture_diffuse = "GrassMesh_diffuse.dds"
+		texture_normal = "GrassMesh_normal.dds"
+		texture_specular = "GrassMesh_properties.dds"
+		texture = { file = "tint_farmlands.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_flowers_vegetation|pCylinder13|pCylinderShape13"
+		index = 0
+		texture_diffuse = "flower_vegetation_diffuse.dds"
+		texture_normal = "flower_vegetation_normal.dds"
+		texture_specular = "flower_vegetation_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "sm_flowers_vegetation_entity"
+	pdxmesh = "sm_flowers_vegetation_mesh"
+}

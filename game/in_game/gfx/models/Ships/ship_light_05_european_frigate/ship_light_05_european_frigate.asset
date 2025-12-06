@@ -1,0 +1,143 @@
+pdxmesh = {
+	name = "ship_light_05_european_frigate_mesh"
+	file = "ship_light_05_european_frigate.mesh"
+
+	animation = { id = "idle_animation" type = "ship_light_05_european_frigate_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_light_05_european_frigate_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_light_05_european_frigate_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_light_05_european_frigate_moving.anim" }
+
+	meshsettings = {
+		name = "sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "folded_sailsShape"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_hullShape"
+		index = 0
+		texture_diffuse = "ship_light_05_european_diffuse.dds"
+		texture_normal = "ship_light_05_european_normal.dds"
+		texture_specular = "ship_light_05_european_properties.dds"
+		texture = { file = "ship_light_05_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_light_05_european_frigate_entity"
+	pdxmesh = "ship_light_05_european_frigate_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	
+	state = {
+		name = "move2"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+		event = {
+			entity_editor_id = "1"
+			time = 2.214
+			node = "cannon_door_right_lct_001"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.254
+			node = "cannon_door_right_lct_002"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.314
+			node = "cannon_door_right_lct_003"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}		
+		event = {
+			entity_editor_id = "1"
+			time = 2.354
+			node = "cannon_door_right_lct_004"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.414
+			node = "cannon_door_right_lct_005"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.454
+			node = "cannon_door_right_lct_006"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.454
+			node = "cannon_door_right_lct_007"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.454
+			node = "cannon_door_right_lct_008"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+	}
+	attach = { cannon_door_left_lct_001 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_002 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_003 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_004 = "cannon_door_left_entity" }	
+	attach = { cannon_door_left_lct_007 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_008 = "cannon_door_left_entity" }
+	attach = { cannon_door_right_lct_001 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_002 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_003 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_004 = "cannon_door_right_entity" }	
+	attach = { cannon_door_right_lct_007 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_008 = "cannon_door_right_entity" }
+	attach = { ensign_flag_lctr = "ship_flag_entity" }
+	attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+}
+
+

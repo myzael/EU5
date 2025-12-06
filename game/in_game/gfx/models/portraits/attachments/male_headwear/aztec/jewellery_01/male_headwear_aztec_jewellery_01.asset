@@ -1,0 +1,149 @@
+# Gold
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_earrings_mesh"
+	file = "male_headwear_aztec_jewellery_01_earrings.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_earringsShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_noseplate_mesh"
+	file = "male_headwear_aztec_jewellery_01_noseplate.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_noseplateShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_snake_mesh"
+	file = "male_headwear_aztec_jewellery_01_snake.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_snakeShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_mouthpiece_mesh"
+	file = "male_headwear_aztec_jewellery_01_mouthpiece.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_mouthpieceShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+# Jade
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_jade_earrings_mesh"
+	file = "male_headwear_aztec_jewellery_01_earrings.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_earringsShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_jade_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_jade_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_jade_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_jade_noseplate_mesh"
+	file = "male_headwear_aztec_jewellery_01_noseplate.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_noseplateShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_jade_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_jade_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_jade_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_jade_snake_mesh"
+	file = "male_headwear_aztec_jewellery_01_snake.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_snakeShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_jade_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_jade_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_jade_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_headwear_aztec_jewellery_01_jade_mouthpiece_mesh"
+	file = "male_headwear_aztec_jewellery_01_mouthpiece.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_aztec_jewellery_01_mouthpieceShape"
+		index = 0
+		texture_diffuse = "male_headwear_aztec_jewellery_01_jade_diffuse.dds"
+		texture_normal = "male_headwear_aztec_jewellery_01_jade_normal.dds"
+		texture_specular = "male_headwear_aztec_jewellery_01_jade_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_aztec_jewellery_01_earrings_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_earrings_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_noseplate_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_noseplate_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_snake_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_snake_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_mouthpiece_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_mouthpiece_mesh"
+}
+
+entity = {
+	name = "male_headwear_aztec_jewellery_01_jade_earrings_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_jade_earrings_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_jade_noseplate_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_jade_noseplate_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_jade_snake_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_jade_snake_mesh"
+}
+entity = {
+	name = "male_headwear_aztec_jewellery_01_jade_mouthpiece_entity"
+	pdxmesh = "male_headwear_aztec_jewellery_01_jade_mouthpiece_mesh"
+}

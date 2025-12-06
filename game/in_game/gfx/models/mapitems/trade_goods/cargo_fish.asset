@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "cargo_fish_mesh"
+	file = "cargo_fish.mesh"
+
+	meshsettings = {
+		name = "cargo_fishShape"
+		index = 0
+		texture_diffuse = "cargo_fish_diffuse.dds"
+		texture_normal = "cargo_fish_normal.dds"
+		#texture_specular = "cargo_fish_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_fishShape"
+		index = 1
+		texture_diffuse = "wagon_cart_diffuse.dds"
+		texture_normal = "wagon_cart_normal.dds"
+		texture_specular = "wagon_cart_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_fish_entity"
+	pdxmesh = "cargo_fish_mesh"
+}

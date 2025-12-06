@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "animal_wildboar_mesh"
+	file = "animal_wildboar.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "wildboar_idle_animation" type = "animal_wildboar_wildboar_idle.anim" }
+
+	meshsettings = {
+		name = "animal_wildboar_lod0|animal_wildboar|animal_wildboarShape"
+		index = 0
+		texture_diffuse = "wildboar_diffuse.dds"
+		texture_normal = "wildboar_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "animal_wildboar_lod1|animal_wildboar|animal_wildboarShape"
+		index = 0
+		texture_diffuse = "wildboar_diffuse.dds"
+		texture_normal = "wildboar_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "animal_wildboar_lod2|animal_wildboar|animal_wildboarShape"
+		index = 0
+		texture_diffuse = "wildboar_diffuse.dds"
+		texture_normal = "wildboar_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "animal_wildboar_entity"
+	pdxmesh = "animal_wildboar_mesh"
+
+	default_state = "wildboar_idle"
+	state = {
+		name = "wildboar_idle"
+		animation = "wildboar_idle_animation"
+	}
+}

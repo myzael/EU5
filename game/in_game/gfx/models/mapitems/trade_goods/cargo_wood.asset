@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_wood_mesh"
+	file = "cargo_wood.mesh"
+
+	meshsettings = {
+		name = "cargo_woodShape"
+		index = 0
+		texture_diffuse = "cargo_wood_diffuse.dds"
+		texture_normal = "cargo_wood_normal.dds"
+		texture_specular = "cargo_wood_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_wood_entity"
+	pdxmesh = "cargo_wood_mesh"
+}

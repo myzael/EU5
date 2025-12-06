@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "western_castle_mesh"
+	file = "western_castle.mesh"
+
+	meshsettings = {
+		name = "pCubeShape162"
+		index = 0
+		texture_diffuse = "building_test_diffuse.dds"
+		texture_normal = "building_test_normal.dds"
+		texture_specular = "building_test_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Decal_Size9Shape"
+		index = 0
+		texture_diffuse = "building_mine_gold_decal_diffuse.dds"
+		texture_normal = "building_mine_gold_decal_normal.dds"
+		texture_specular = "building_mine_gold_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "western_castle_entity"
+	pdxmesh = "western_castle_mesh"
+}

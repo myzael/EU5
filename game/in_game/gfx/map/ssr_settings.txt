@@ -1,0 +1,2 @@
+MaskMin = 0.0
+MaskMax = 0.15

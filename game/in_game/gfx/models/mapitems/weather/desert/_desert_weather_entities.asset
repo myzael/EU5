@@ -1,0 +1,68 @@
+entity = {
+	name = "sand_storm_01_small_entity"
+	
+	locator = { name = loc_01 position = { 0.0 0.0 0.0 } }
+		cull_radius = 30.0
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		looping = yes
+		state_time = 5
+		start_event = {	
+			particle = "environment/sandstorm_city_weather_01_small_effect"
+			node = loc_01
+			keep_particle = yes
+			trigger_once = yes 
+		}
+    }
+	state = { name = "end" state_time = 30 looping = no
+		
+	}	
+}
+
+entity = {
+	name = "sand_storm_01_medium_entity"
+	
+	locator = { name = loc_01 position = { 0.0 0.0 0.0 } }
+		cull_radius = 30.0
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		looping = yes
+		state_time = 5
+		start_event = {	
+			particle = "environment/sandstorm_city_weather_01_medium_effect"
+			node = loc_01
+			keep_particle = yes
+			trigger_once = yes 
+		}
+    }
+	state = { name = "end" state_time = 30 looping = no
+		
+	}	
+}
+
+entity = {
+	name = "sand_storm_01_large_entity"
+	
+	locator = { name = loc_01 position = { 0.0 0.0 0.0 } }
+		cull_radius = 50.0
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		looping = yes
+		state_time = 5
+		start_event = {	
+			particle = "environment/sandstorm_city_weather_01_large_effect"
+			node = loc_01
+			keep_particle = yes
+			trigger_once = yes 
+		}
+    }
+	state = { name = "end" state_time = 30 looping = no
+		
+	}	
+}

@@ -1,0 +1,46 @@
+pdxmesh = {
+	name = "unit_artillery_absolutism_mortar_mesh"
+	file = "unit_artillery_absolutism_mortar.mesh"
+	
+	lod_percentages = {
+		lod = { index = 1 percent = 2.5 }
+		lod = { index = 2 percent = 1.8 }
+	
+	meshsettings = {
+		name = "unit_artillery_absolutism_mortar_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_artillery_absolutism_mortar_diffuse.dds"
+		texture_normal = "unit_artillery_absolutism_mortar_normal.dds"
+		texture_specular = "unit_artillery_absolutism_mortar_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_artillery_absolutism_mortar_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_artillery_absolutism_mortar_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_artillery_absolutism_mortar_diffuse.dds"
+		texture_normal = "unit_artillery_absolutism_mortar_normal.dds"
+		texture_specular = "unit_artillery_absolutism_mortar_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_artillery_absolutism_mortar_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_artillery_absolutism_mortar_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_artillery_absolutism_mortar_diffuse.dds"
+		texture_normal = "unit_artillery_absolutism_mortar_normal.dds"
+		texture_specular = "unit_artillery_absolutism_mortar_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_artillery_absolutism_mortar_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

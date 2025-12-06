@@ -1,0 +1,33 @@
+pdxmesh = {
+	name = "rice_field_01_d_mesh"
+	file = "rice_field_01_d.mesh"
+
+	meshsettings = {
+		name = "rice_field_01_d|decal|decalShape"
+		index = 0
+		texture_diffuse = "rice_paddy_01_d_diffuse.dds"
+		texture_normal = "rice_paddy_01_c_normal.dds"
+		texture_specular = "rice_paddy_01_c_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "rice_heads_01_aShapeShape"
+		index = 0
+		texture_diffuse = "rice_kernelhead_billboard_diffuse.dds"
+		texture_normal = "rice_kernelhead_billboard_normal.dds"
+		texture_specular = "rice_kernelhead_billboard_properties.dds"
+		shader = "billboard_test"
+		shader_file = "gfx/FX/tree.shader"
+		additional_shader_defines = { "TEXTURE_TILE_ROWS 2" "TEXTURE_TILE_COLUMNS 2" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" }
+		additional_shader_defines = { "BILLBOARD_DISABLE_TINT" }
+	}
+}
+
+entity = {
+	name = "rice_field_01_d_entity"
+	pdxmesh = "rice_field_01_d_mesh"
+}

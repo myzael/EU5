@@ -1,0 +1,888 @@
+pdxmesh = {
+	name = "unit_skeleton_mesh"
+	file = "unit_skeleton.mesh"
+
+	#unit#
+	animation = { id = "drowning_animation"				type = "animations/unit_drowning.anim" }
+
+	#Pole arms OLD STUFF#
+	# animation = { id = "idle_pole_animation"				type = "animations/pole_arms/unit_pole_idle.anim" }
+	# animation = { id = "moving_pole_animation"				type = "animations/pole_arms/unit_pole_moving.anim" }
+	# animation = { id = "charge_pole_animation"				type = "animations/pole_arms/unit_pole_charge.anim" }
+	# animation = { id = "idle_pole_turn_L_animation"			type = "animations/pole_arms/unit_pole_idle_turn_L.anim" }
+	# animation = { id = "idle_pole_turn_R_animation"			type = "animations/pole_arms/unit_pole_idle_turn_R.anim" }
+	# animation = { id = "attack_01_pole_animation"			type = "animations/pole_arms/unit_pole_attack_01.anim" }
+	# animation = { id = "attack_02_pole_animation"			type = "animations/pole_arms/unit_pole_attack_02.anim" }
+	# animation = { id = "attack_03_pole_animation"			type = "animations/pole_arms/unit_pole_attack_03.anim" }
+
+	##one-handed Sword arms##
+	animation = { id = "attack_one_handed_sword_animation"				type = "animations/one_handed_sword/unit_one_hand_sword_attack01.anim" }
+	animation = { id = "idle_one_handed_sword_animation"				type = "animations/one_handed_sword/unit_one_hand_sword_idle01.anim" }
+	animation = { id = "idle_one_handed_sword_headturn_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_idle02.anim" }
+	animation = { id = "idle_one_handed_sword_alt_animation"			type = "animations/one_handed_sword/unit_one_hand_sword_idle03.anim" }
+	animation = { id = "moving_one_handed_sword_animation"				type = "animations/one_handed_sword/unit_one_hand_sword_walk_01.anim" }
+	animation = { id = "charge_one_handed_sword_animation"				type = "animations/one_handed_sword/unit_one_hand_sword_charge.anim" }
+	#cavalry
+	animation = { id = "one_handed_sword_cavalry_charge_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_charge.anim" }
+	animation = { id = "one_handed_sword_cavalry_attack_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_attack.anim" }
+	animation = { id = "one_handed_sword_cavalry_walk_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_walk.anim" }
+	animation = { id = "one_handed_sword_cavalry_idle_01_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_idle_01.anim" }
+	animation = { id = "one_handed_sword_cavalry_idle_02_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_idle_02.anim" }
+	animation = { id = "one_handed_sword_cavalry_idle_03_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_idle_03.anim" }
+	animation = { id = "one_handed_sword_cavalry_idle_04_animation"		type = "animations/one_handed_sword/unit_one_hand_sword_cavalry_idle_04.anim" }
+
+	##Torch##
+	animation = { id = "walk_torch_animation"					type = "animations/torch/unit_torch_walk.anim" }
+	animation = { id = "charge_torch_animation"					type = "animations/torch/unit_torch_charge.anim" }
+	animation = { id = "idle_torch_01_animation"				type = "animations/torch/unit_torch_idle01.anim" }
+	animation = { id = "idle_torch_02_animation"				type = "animations/torch/unit_torch_idle02.anim" }
+
+	#Knife#
+	animation = { id = "charge_knife_animation"					type = "animations/knife/unit_knife_charge.anim" }
+	animation = { id = "attach_knife_animation"					type = "animations/knife/unit_knife_attack.anim" }
+	animation = { id = "walk_knife_animation"					type = "animations/knife/unit_knife_walk.anim" }
+	animation = { id = "idle_knife_01_animation"				type = "animations/knife/unit_knife_idle01.anim" }
+	animation = { id = "idle_knife_02_animation"				type = "animations/knife/unit_knife_idle02.anim" }
+	animation = { id = "idle_knife_03_animation"				type = "animations/knife/unit_knife_idle03.anim" }
+
+
+
+	#one-handed Slash arms#
+	animation = { id = "charge_one_handed_animation"			type = "animations/one_handed/unit_one_hand_charge.anim" }
+	animation = { id = "attack_01_one_handed_animation"			type = "animations/one_handed/unit_one_hand_attack_01.anim" }
+	animation = { id = "attack_02_one_handed_animation"			type = "animations/one_handed/unit_one_hand_attack_02.anim" }
+	animation = { id = "sheath_put_in_animation"				type = "animations/one_handed/unit_one_hand_sheath_put_in.anim" }
+	animation = { id = "sheath_take_out_animation"				type = "animations/one_handed/unit_one_hand_sheath_take_out.anim" }
+	animation = { id = "idle_one_handed_animation"				type = "animations/one_handed/unit_one_hand_idle.anim" }
+	animation = { id = "idle_one_handed_headturn_animation"		type = "animations/one_handed/unit_one_hand_idle_turn_L.anim" }
+	animation = { id = "idle_one_handed_alt_animation"			type = "animations/one_handed/unit_one_hand_idle_turn_R.anim" }
+	animation = { id = "moving_one_handed_animation"			type = "animations/one_handed/unit_one_hand_moving.anim" }
+
+	#Crossbow#
+	animation = { id = "idle_crossbow_01_animation"				type = "animations/crossbow/unit_crossbow_idle_01.anim" }
+	animation = { id = "idle_crossbow_02_animation"				type = "animations/crossbow/unit_crossbow_idle_02.anim" }
+	animation = { id = "idle_crossbow_03_animation"				type = "animations/crossbow/unit_crossbow_idle_03.anim" }
+	animation = { id = "walk_crossbow_01_animation"				type = "animations/crossbow/unit_crossbow_walk_01.anim" }
+	animation = { id = "charge_crossbow_01_animation"			type = "animations/crossbow/unit_crossbow_charge.anim" }
+	animation = { id = "attack_crossbow_01_animation"			type = "animations/crossbow/unit_crossbow_attack.anim" }
+
+	#pistol#
+	animation = { id = "attack_pistol_01_animation"				type = "animations/pistol/unit_pistol_attack_01.anim" }
+	animation = { id = "walk_pistol_animation"					type = "animations/pistol/unit_pistol_walk_01.anim" }
+	animation = { id = "charge_pistol_animation"				type = "animations/pistol/unit_pistol_charge_01.anim" }
+	animation = { id = "idle_pistol_01_animation"				type = "animations/pistol/unit_pistol_idle_01.anim" }
+	animation = { id = "idle_pistol_02_animation"				type = "animations/pistol/unit_pistol_idle_02.anim" }
+	animation = { id = "idle_pistol_03_animation"				type = "animations/pistol/unit_pistol_idle_03.anim" }
+	#cavalry
+	animation = { id = "pistol_cavalry_attack_animation"				type = "animations/pistol/unit_cavalry_pistol_attack.anim" }
+	animation = { id = "pistol_cavalry_charge_animation"				type = "animations/pistol/unit_cavalry_pistol_charge.anim" }
+	animation = { id = "pistol_cavalry_walk_animation"					type = "animations/pistol/unit_cavalry_pistol_walk.anim" }
+	animation = { id = "pistol_cavalry_idle_01_animation"				type = "animations/pistol/unit_cavalry_pistol_idle_01.anim" }
+	animation = { id = "pistol_cavalry_idle_02_animation"				type = "animations/pistol/unit_cavalry_pistol_idle_02.anim" }
+	animation = { id = "pistol_cavalry_idle_03_animation"				type = "animations/pistol/unit_cavalry_pistol_idle_03.anim" }
+	animation = { id = "pistol_cavalry_idle_04_animation"				type = "animations/pistol/unit_cavalry_pistol_idle_04.anim" }
+
+
+
+
+	#musket#
+	animation = { id = "attack_musket_01_animation"				type = "animations/musket/unit_musket_attack_01.anim" }
+	animation = { id = "charge_musket_animation"				type = "animations/musket/unit_musket_charge_01.anim" }
+	animation = { id = "idle_musket_01_animation"				type = "animations/musket/unit_musket_idle_01.anim" }
+	animation = { id = "walk_march_musket_01_animation"			type = "animations/musket/unit_musket_walk_march_01.anim" }
+	animation = { id = "attack_to_idle_musket_01_animation"		type = "animations/musket/unit_attack_to_idle01.anim" }
+	animation = { id = "idle_to_attack_musket_01_animation"		type = "animations/musket/unit_idle_to_attack01.anim" }
+		#cavalry
+	animation = { id = "idle_musket_cavalry_01_animation"		type = "animations/musket/unit_musket_cavalry_idle_01.anim" }
+	animation = { id = "idle_musket_cavalry_02_animation"		type = "animations/musket/unit_musket_cavalry_idle_02.anim" }
+	animation = { id = "idle_musket_cavalry_03_animation"		type = "animations/musket/unit_musket_cavalry_idle_03.anim" }
+	animation = { id = "walk_musket_cavalry_animation"			type = "animations/musket/unit_musket_cavalry_walk.anim" }
+	animation = { id = "charge_musket_cavalry_animation"		type = "animations/musket/unit_musket_cavalry_charge.anim" }
+	animation = { id = "attack_musket_cavalry_animation"		type = "animations/musket/unit_musket_cavalry_attack.anim" }
+
+
+
+		#arquebus#
+	animation = { id = "attack_arquebus_animation"				type = "animations/arquebus/unit_arqubus_attack.anim" }
+	animation = { id = "charge_arquebus_animation"				type = "animations/arquebus/unit_arqubus_charge.anim" }
+	animation = { id = "walk_arquebus_animation"				type = "animations/arquebus/unit_arqubus_walk.anim" }
+	animation = { id = "idle_arquebus_01_animation"				type = "animations/arquebus/unit_arqubus_idle_01.anim" }
+	animation = { id = "idle_arquebus_02_animation"				type = "animations/arquebus/unit_arqubus_idle_02.anim" }
+	animation = { id = "idle_arquebus_03_animation"				type = "animations/arquebus/unit_arqubus_idle_03.anim" }
+
+
+	#handgonne#
+	animation = { id = "attack_handgonne_animation"					type = "animations/handgonne/unit_handgonne_attack.anim" }
+	animation = { id = "charge_handgonne_animation"					type = "animations/handgonne/unit_handgonne_charge.anim" }
+	animation = { id = "idle_handgonne_01_animation"				type = "animations/handgonne/unit_handgonne_idle_01.anim" }
+	animation = { id = "idle_handgonne_02_animation"				type = "animations/handgonne/unit_handgonne_idle_02.anim" }
+	animation = { id = "idle_handgonne_03_animation"				type = "animations/handgonne/unit_handgonne_idle_03.anim" }
+	animation = { id = "walk_handgonne_animation"					type = "animations/handgonne/unit_handgonne_walk.anim" }
+	#cavalry#
+	#animation = { id = "attack_handgonne_animation"					type = "animations/handgonne/unit_handgonne_attack.anim" }
+	animation = { id = "charge_handgonne_cavalry_animation"				type = "animations/handgonne/unit_cavalry_handgonne_charge.anim" }
+	animation = { id = "attack_handgonne_cavalry_animation"				type = "animations/handgonne/unit_cavalry_handgonne_attack.anim" }
+	animation = { id = "idle_handgonne_cavalry_01_animation"			type = "animations/handgonne/unit_cavalry_handgonne_idle_01.anim" }
+	animation = { id = "idle_handgonne_cavalry_02_animation"			type = "animations/handgonne/unit_cavalry_handgonne_idle_02.anim" }
+	animation = { id = "idle_handgonne_cavalry_03_animation"			type = "animations/handgonne/unit_cavalry_handgonne_idle_03.anim" }
+	animation = { id = "idle_handgonne_cavalry_04_animation"			type = "animations/handgonne/unit_cavalry_handgonne_idle_04.anim" }
+	animation = { id = "walk_handgonne_cavalry_animation"				type = "animations/handgonne/unit_cavalry_handgonne_walk.anim" }
+
+	#fist#
+	animation = { id = "attack_fist_animation"					type = "animations/fist/unit_fist_attack.anim" }
+	animation = { id = "charge_fist_animation"					type = "animations/fist/unit_fist_charge.anim" }
+	animation = { id = "idle_fist_01_animation"					type = "animations/fist/unit_fist_idle_01.anim" }
+	animation = { id = "idle_fist_02_animation"					type = "animations/fist/unit_fist_idle_02.anim" }
+	animation = { id = "idle_fist_03_animation"					type = "animations/fist/unit_fist_idle_03.anim" }
+	animation = { id = "walk_fist_animation"					type = "animations/fist/unit_fist_walk.anim" }
+
+	#one-handed Axe and Mace arms#
+	animation = { id = "attack_one_handed_mace_animation"		type = "animations/one_handed_mace/unit_one_handed_mace_attack.anim" }
+	animation = { id = "charge_one_handed_mace_animation"		type = "animations/one_handed_mace/unit_one_handed_mace_charge.anim" }
+	animation = { id = "walk_one_handed_mace_animation"			type = "animations/one_handed_mace/unit_one_handed_mace_walk.anim" }
+	animation = { id = "idle_one_handed_mace_01_animation"		type = "animations/one_handed_mace/unit_one_handed_mace_idle_01.anim" }
+	animation = { id = "idle_one_handed_mace_02_animation"		type = "animations/one_handed_mace/unit_one_handed_mace_idle_02.anim" }
+	animation = { id = "idle_one_handed_mace_03_animation"		type = "animations/one_handed_mace/unit_one_handed_mace_idle_03.anim" }
+
+	#one-handed spear#
+	animation = { id = "attack_one_handed_spear_animation"		type = "animations/spear/unit_one_handed_spear_attack_01.anim" }
+	animation = { id = "walk_one_handed_spear_animation"		type = "animations/spear/unit_one_handed_spear_walk_01.anim" }
+	animation = { id = "idle_one_handed_spear_01_animation"		type = "animations/spear/unit_one_handed_spear_idle_01.anim" }
+	animation = { id = "idle_one_handed_spear_02_animation"		type = "animations/spear/unit_one_handed_spear_idle_02.anim" }
+	animation = { id = "idle_one_handed_spear_03_animation"		type = "animations/spear/unit_one_handed_spear_idle_03.anim" }
+	animation = { id = "charge_one_handed_spear_animation"		type = "animations/spear/unit_one_handed_spear_charge.anim" }
+	#cavalry#
+	animation = { id = "walk_spear_cavalry_animation"			type = "animations/spear/unit_cavalry_spear_walk.anim" }
+	animation = { id = "attack_spear_cavalry_animation"			type = "animations/spear/unit_cavalry_spear_attack.anim" }
+	animation = { id = "charge_spear_cavalry_animation"			type = "animations/spear/unit_cavalry_spear_charge.anim" }
+	animation = { id = "attack01_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_attack01.anim" }
+	animation = { id = "attack02_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_attack02.anim" }
+	animation = { id = "attack03_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_attack03.anim" }
+	animation = { id = "attack04_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_attack04.anim" }
+	animation = { id = "iddle01_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_idle01.anim" }
+	animation = { id = "iddle02_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_idle02.anim" }
+	animation = { id = "iddle03_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_idle03.anim" }
+	animation = { id = "iddle04_spear_cavalry_animation"		type = "animations/spear/unit_cavalry_spear_idle04.anim" }
+
+	#two-handed Spear arms#
+	animation = { id = "attack_two_handed_spear_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_attack.anim" }
+	animation = { id = "charge_two_handed_spear_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_charge.anim" }
+	animation = { id = "walk_two_handed_spear_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_walk.anim" }
+	animation = { id = "idle_two_handed_spear_01_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_idle_01.anim" }
+	animation = { id = "idle_two_handed_spear_02_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_idle_02.anim" }
+	animation = { id = "idle_two_handed_spear_03_animation"		type = "animations/two_handed_spear/unit_two_hand_spear_idle_03.anim" }
+
+	#pole arm#
+	animation = { id = "attack_polearm_animation"				type = "animations/polearm/unit_polearm_attack.anim" }
+	animation = { id = "charge_polearm_animation"				type = "animations/polearm/unit_polearm_charge.anim" }
+	animation = { id = "idle_polearm_01_animation"				type = "animations/polearm/unit_polearm_idle_01.anim" }
+	animation = { id = "idle_polearm_02_animation"				type = "animations/polearm/unit_polearm_idle_02.anim" }
+	animation = { id = "idle_polearm_03_animation"				type = "animations/polearm/unit_polearm_idle_03.anim" }
+	animation = { id = "walk_polearm_animation"					type = "animations/polearm/unit_polearm_walk.anim" }
+
+	#pike#
+	animation = { id = "attack_pike_animation"					type = "animations/pike/unit_pike_attack.anim" }
+	animation = { id = "charge_pike_animation"					type = "animations/pike/unit_pike_charge.anim" }
+	animation = { id = "idle_pike_01_animation"					type = "animations/pike/unit_pike_idle_01.anim" }
+	animation = { id = "idle_pike_02_animation"					type = "animations/pike/unit_pike_idle_02.anim" }
+	animation = { id = "idle_pike_03_animation"					type = "animations/pike/unit_pike_idle_03.anim" }
+	animation = { id = "walk_pike_animation"					type = "animations/pike/unit_pike_walk.anim" }
+
+	#rapier#
+	animation = { id = "attack_rapier_animation"				type = "animations/rapier/unit_rapier_attack.anim" }
+	animation = { id = "charge_rapier_animation"				type = "animations/rapier/unit_rapier_charge.anim" }
+	animation = { id = "idle_rapier_01_animation"				type = "animations/rapier/unit_rapier_idle_01.anim" }
+	animation = { id = "idle_rapier_02_animation"				type = "animations/rapier/unit_rapier_idle_02.anim" }
+	animation = { id = "idle_rapier_03_animation"				type = "animations/rapier/unit_rapier_idle_03.anim" }
+	animation = { id = "walk_rapier_animation"					type = "animations/rapier/unit_rapier_walk.anim" }
+
+	#sword and pistol#
+	animation = { id = "attack_swordpistol_animation"				type = "animations/swordpistol/unit_swordpistol_charge.anim" }
+	animation = { id = "charge_swordpistol_animation"				type = "animations/swordpistol/unit_swordpistol_charge.anim" }
+	animation = { id = "idle_swordpistol_01_animation"				type = "animations/swordpistol/unit_swordpistol_idle_01.anim" }
+	animation = { id = "idle_swordpistol_02_animation"				type = "animations/swordpistol/unit_swordpistol_idle_02.anim" }
+	animation = { id = "idle_swordpistol_03_animation"				type = "animations/swordpistol/unit_swordpistol_idle_03.anim" }
+	animation = { id = "walk_swordpistol_animation"					type = "animations/swordpistol/unit_swordpistol_walk.anim" }
+
+	#dual pistol#
+	animation = { id = "attack_dualpistol_animation"				type = "animations/dual_pistols/unit_dual_pistol_attack.anim" }
+	animation = { id = "attack_01_dualpistol_animation"				type = "animations/dual_pistols/unit_dual_pistol_attack_01.anim" }
+	animation = { id = "attack_02_dualpistol_animation"				type = "animations/dual_pistols/unit_dual_pistol_attack_02.anim" }
+	animation = { id = "attack_03_dualpistol_animation"				type = "animations/dual_pistols/unit_dual_pistol_attack_03.anim" }
+	animation = { id = "charge_dualpistol_animation"				type = "animations/dual_pistols/unit_dual_pistol_charge.anim" }
+	animation = { id = "idle_dualpistol_01_animation"				type = "animations/dual_pistols/unit_dual_pistol_idle_01.anim" }
+	animation = { id = "idle_dualpistol_02_animation"				type = "animations/dual_pistols/unit_dual_pistol_idle_02.anim" }
+	animation = { id = "idle_dualpistol_03_animation"				type = "animations/dual_pistols/unit_dual_pistol_idle_03.anim" }
+	animation = { id = "walk_dualpistol_animation"					type = "animations/dual_pistols/unit_dual_pistol_walk.anim" }
+	
+	#two-handed Axe arms#
+	animation = { id = "attack_two_handed_axe_animation"		type = "animations/two_handed_axe/unit_two_handed_axe_attack.anim" }
+	animation = { id = "charge_two_handed_axe_animation"		type = "animations/two_handed_axe/unit_two_handed_axe_charge.anim" }
+	animation = { id = "walk_two_handed_axe_animation"			type = "animations/two_handed_axe/unit_two_handed_axe_walk.anim" }
+	animation = { id = "idle_two_handed_axe_01_animation"		type = "animations/two_handed_axe/unit_two_handed_axe_idle_01.anim" }
+	animation = { id = "idle_two_handed_axe_02_animation"		type = "animations/two_handed_axe/unit_two_handed_axe_idle_02.anim" }
+	animation = { id = "idle_two_handed_axe_03_animation"		type = "animations/two_handed_axe/unit_two_handed_axe_idle_03.anim" }
+
+	#two-handed Sword arms#
+	animation = { id = "attack_two_handed_sword_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_attack.anim" }
+	animation = { id = "charge_two_handed_sword_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_charge.anim" }
+	animation = { id = "walk_two_handed_sword_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_walk.anim" }
+	animation = { id = "idle_two_handed_sword_01_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_idle_01.anim" }	
+	animation = { id = "idle_two_handed_sword_02_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_idle_02.anim" }
+	animation = { id = "idle_two_handed_sword_03_animation"		type = "animations/two_handed_sword/unit_two_hand_sword_idle_03.anim" }
+
+	#bow arms#
+	animation = { id = "unit_bow_attack_01_animation"	type = "animations/bow/unit_bow_attack_01.anim" }
+	animation = { id = "unit_bow_walk_01_animation"		type = "animations/bow/unit_bow_walk_01.anim" }
+	animation = { id = "charge_bow_animation"			type = "animations/bow/unit_bow_charge_01.anim" }
+	animation = { id = "idle_bow_01_animation"			type = "animations/bow/unit_bow_idle_01.anim" }
+	animation = { id = "idle_bow_02_animation"			type = "animations/bow/unit_bow_idle_02.anim" }
+	animation = { id = "idle_bow_03_animation"			type = "animations/bow/unit_bow_idle_03.anim" }
+	animation = { id = "unit_bow_cavalry_attack_animation"	type = "animations/bow/unit_bow_cavalry_attack.anim" }
+	animation = { id = "unit_bow_cavalry_charge_animation"	type = "animations/bow/unit_bow_cavalry_charge.anim" }
+	animation = { id = "unit_bow_cavalry_idle_01_animation"	type = "animations/bow/unit_bow_cavalry_idle_01.anim" }
+	animation = { id = "unit_bow_cavalry_idle_02_animation"	type = "animations/bow/unit_bow_cavalry_idle_02.anim" }
+	animation = { id = "unit_bow_cavalry_idle_03_animation"	type = "animations/bow/unit_bow_cavalry_idle_03.anim" }
+	animation = { id = "unit_bow_cavalry_idle_04_animation"	type = "animations/bow/unit_bow_cavalry_idle_04.anim" }
+	animation = { id = "unit_bow_cavalry_walk_animation"	type = "animations/bow/unit_bow_cavalry_walk.anim" }
+
+
+	#Javelin arms#
+	animation = { id = "attack_javelin_animation"	type = "animations/javelin/unit_javelin_attack.anim" }
+	animation = { id = "walk_javelin_animation"		type = "animations/javelin/unit_javelin_walk.anim" }
+	animation = { id = "charge_javelin_animation"	type = "animations/javelin/unit_javelin_charge.anim" }
+	animation = { id = "idle_javelin_01_animation"	type = "animations/javelin/unit_javelin_idle_01.anim" }
+	animation = { id = "idle_javelin_02_animation"	type = "animations/javelin/unit_javelin_idle_02.anim" }
+	animation = { id = "idle_javelin_03_animation"	type = "animations/javelin/unit_javelin_idle_03.anim" }
+
+	#Atlatl arms#
+	animation = { id = "attack_atlatl_animation"	type = "animations/atlatl/unit_atlatl_attack.anim" }
+	animation = { id = "charge_atlatl_animation"	type = "animations/atlatl/unit_atlatl_charge.anim" }
+	animation = { id = "walk_atlatl_animation"		type = "animations/atlatl/unit_atlatl_walk.anim" }
+	animation = { id = "idle_atlatl_01_animation"	type = "animations/atlatl/unit_atlatl_idle_01.anim" }
+	animation = { id = "idle_atlatl_02_animation"	type = "animations/atlatl/unit_atlatl_idle_02.anim" }
+	animation = { id = "idle_atlatl_03_animation"	type = "animations/atlatl/unit_atlatl_idle_03.anim" }
+
+
+	#Elefantry#
+	animation = { id = "elephantry_walk_animation"		type = "animations/elephantry/unit_elephantry_walk.anim" }
+	animation = { id = "elephantry_charge_animation"	type = "animations/elephantry/unit_elephantry_charge.anim" }
+	animation = { id = "elephantry_attack_animation"	type = "animations/elephantry/unit_elephantry_attack.anim" }
+	animation = { id = "elephantry_idle_01_animation"	type = "animations/elephantry/unit_elephantry_idle01.anim" }
+	animation = { id = "elephantry_idle_02_animation"	type = "animations/elephantry/unit_elephantry_idle02.anim" }
+	animation = { id = "elephantry_idle_03_animation"	type = "animations/elephantry/unit_elephantry_idle03.anim" }
+	
+	#hand grenade#
+	animation = { id = "grenade_walk_animation"		type = "animations/grenade/grenade_walk_animation.anim" }
+	animation = { id = "grenade_charge_animation"	type = "animations/grenade/grenade_charge_animation.anim" }
+	animation = { id = "grenade_attack_animation"	type = "animations/grenade/grenade_attack_animation.anim" }
+	animation = { id = "grenade_idle_01_animation"	type = "animations/grenade/grenade_idle_01_animation.anim" }
+	animation = { id = "grenade_idle_02_animation"	type = "animations/grenade/grenade_idle_02_animation.anim" }
+	animation = { id = "grenade_idle_03_animation"	type = "animations/grenade/grenade_idle_03_animation.anim" }
+
+	#cavalry#
+	animation = { id = "unit_horse_riding_pose_animation"	type = "animations/horse/unit_horse_riding_pose.anim" }
+
+	meshsettings = {
+		name = "unit_skeletonShape"
+		index = 0
+		shader = "standard"
+	}
+}
+
+# entity = {
+# 	name = "unit_skeleton_entity"
+# 	pdxmesh = "unit_skeleton_mesh"
+
+# 	scale = 0.08
+
+# 	default_state = "idle"
+	
+	
+# 	# Default animations - pole arms
+	
+# 	#Idle entry point
+# 	state = { name = "idle"	animation = "idle_pole_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_loop" }
+# 	#Idle looping random select
+# 	state = { name = "idle_loop" chance = 8 animation = "idle_pole_animation"				looping = no next_state = "idle_loop" }
+# 	state = { name = "idle_loop" chance = 1	animation = "idle_pole_turn_L_animation"		looping = no next_state = "idle_loop" }
+# 	state = { name = "idle_loop" chance = 1	animation = "idle_pole_turn_R_animation"		looping = no next_state = "idle_loop" }
+
+# 	state = { 
+# 		name = "move"     
+# 		animation = "moving_pole_animation" 
+# 		animation_blend_time = 0.35 
+# 		start_event = { node = root particle = "walking_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { 
+# 		name = "retreat"    animation = "moving_pole_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "charge" animation = "charge_pole_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { 
+# 		name = "attack"   
+# 		animation = "attack_01_pole_animation" 
+# 		animation_blend_time = 0.35 
+# 		looping = no 
+# 		next_state = "attack" 
+# 		start_event = { node = root particle = "fight_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_spear" 	}	 	trigger_once = no keep_sound = no }
+# 		event = { time = 0.18 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "attack"   
+# 		animation = "attack_02_pole_animation" 
+# 		animation_blend_time = 0.35 
+# 		looping = no 
+# 		next_state = "attack"
+# 		start_event = { node = root particle = "fight_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_staff" 	} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.18 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "attack"   
+# 		animation = "attack_03_pole_animation" 
+# 		animation_blend_time = 0.35 
+# 		looping = no 
+# 		next_state = "attack" 
+# 		start_event = { node = root particle = "fight_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_spear" 	} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.65 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+
+# 		## ONE-HANDED SWORD ##
+
+# 	#Idle entry point
+# 	state = { name = "idle_one_sword_handed"	animation = "idle_one_handed_sword_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_one_handed_sword_loop" }
+# 	#Idle looping random select
+# 	state = { name = "idle_one_handed_sword_loop" chance = 8 animation = "idle_one_handed_sword_animation"					looping = no next_state = "idle_one_handed_sword_loop" }
+# 	state = { name = "idle_one_handed_sword_loop" chance = 1 animation = "idle_one_handed_sword_headturn_animation"			looping = no next_state = "idle_one_handed_sword_loop" }
+# 	state = { name = "idle_one_handed_sword_loop" chance = 1 animation = "idle_one_handed_sword_alt_animation"				looping = no next_state = "idle_one_handed_sword_loop" }
+
+	
+# 	state = { name = "move_one_handed_sword"		animation = "moving_one_handed_sword_animation"	animation_blend_time = 0.35		start_event = { node = root particle = "walking_dust" }	
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.03 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.56 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { name = "charge_one_handed_sword"	animation = "charge_one_handed_sword_animation"	animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "retreat_one_handed_sword"    animation = "moving_one_handed_sword_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { name = "attack_one_handed_sword"	animation = "attack_one_handed_sword_animation" 	        animation_blend_time = 0.35 	        looping = no 	        next_state = "attack_one_handed_sword" 	        start_event = { node = root particle = "fight_dust" }	    
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_sword" 	} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.65 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+
+
+
+# 	# one-handed slash arms animations	##
+
+# 	#Idle entry point
+# 	state = { name = "idle_one_handed"	animation = "idle_one_handed_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_one_handed_loop" }
+# 	#Idle looping random select
+# 	state = { name = "idle_one_handed_loop" chance = 8 animation = "idle_one_handed_animation"					looping = no next_state = "idle_one_handed_loop" }
+# 	state = { name = "idle_one_handed_loop" chance = 1 animation = "idle_one_handed_headturn_animation"			looping = no next_state = "idle_one_handed_loop" }
+# 	state = { name = "idle_one_handed_loop" chance = 1 animation = "idle_one_handed_alt_animation"				looping = no next_state = "idle_one_handed_loop" }
+
+	
+# 	state = { name = "move_one_handed"		animation = "moving_one_handed_animation"	animation_blend_time = 0.35		start_event = { node = root particle = "walking_dust" }	
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.03 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.56 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { name = "charge_one_handed"	animation = "charge_one_handed_animation"	animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { name = "attack_one_handed"	animation = "attack_01_one_handed_animation" 	        animation_blend_time = 0.35 	        looping = no 	        next_state = "attack_one_handed" 	        start_event = { node = root particle = "fight_dust" }	    
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_sword" 	} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.65 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { name = "attack_one_handed"	animation = "attack_02_one_handed_animation" 	        animation_blend_time = 0.35 	        looping = no 	        next_state = "attack_one_handed"	        start_event = { node = root particle = "fight_dust" }	    
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_sword" 	}		trigger_once = no keep_sound = no }
+# 		event = { time = 0.33 sound = { soundeffect = "wpn_mel_attack"			 	} 		trigger_once = no keep_sound = no }
+# 	}
+	
+	
+# 	# one-handed axe arms animations	
+
+	
+	
+
+
+# 	# two-handed Spear arms animations
+# 	state = { name = "charge_two_handed_spear"	animation = "charge_two_handed_spear_animation"	animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { name = "idle_two_handed_spear"					animation = "idle_two_handed_spear_01_animation"				looping = no next_state = "idle_two_handed_spear_loop"	animation_blend_time = 0.35  }
+# 	state = { name = "idle_two_handed_spear_loop" chance = 8	animation = "idle_two_handed_spear_01_animation"				looping = no next_state = "idle_two_handed_spear_loop" }
+
+
+# 	state = { name = "move_two_handed_spear"		animation = "walk_two_handed_spear_animation"	animation_blend_time = 0.35		start_event = { node = root particle = "walking_dust" }	
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.03 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.56 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+
+
+
+# 	# bow animations	
+
+
+# 	# Musket animations
+# 	state = { name = "idle_musket"					animation = "idle_musket_01_animation"				looping = no next_state = "idle_musket_loop"	animation_blend_time = 0.0  }
+# 	state = { name = "idle_musket_loop" chance = 1	animation = "idle_musket_01_animation"				looping = no next_state = "idle_musket_loop" }
+
+# 		state = { 
+# 		name = "move_musket"     
+# 		animation = "walk_march_musket_01_animation" 
+# 		animation_blend_time = 0.0
+# 		start_event = { node = root particle = "walking_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+
+# 	state = { name = "attack_musket"	animation = "attack_arquebus_animation" 	        animation_blend_time = 0.0 	        looping = yes 	        next_state = "attack_musket" 	        start_event = { node = root particle = "fight_dust" }	 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_leather" 		} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponGun_rifle" 		} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.93 sound = { soundeffect = "wpn_gun_fire" 				} 		trigger_once = no keep_sound = no }
+# 		event = { time = 2.70 sound = { soundeffect = "wpn_gun_handle" 				} 		trigger_once = no keep_sound = no }
+# 		event = { time = 3.70 sound = { soundeffect = "wpn_gun_reload" 				} 		trigger_once = no keep_sound = no }
+# 		event = { time = 6.40 sound = { soundeffect = "wpn_gun_handle" 				} 		trigger_once = no keep_sound = no }
+# 	}
+
+# 		state = { name = "charge_musket"	animation = "charge_musket_animation"	animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_cloth" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { name = "retreat_musket"	animation = "walk_march_musket_01_animation" 	        animation_blend_time = 0.35 	        looping = no 	        next_state = "attack_bow" 	        start_event = { node = root particle = "fight_dust" }	    
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_cloth" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponProj_bow" 		} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.05 sound = { soundeffect = "wpn_proj_DrawString" 		}		trigger_once = no keep_sound = no }
+# 		event = { time = 1.55 sound = { soundeffect = "wpn_proj_attack" 			} 		trigger_once = no keep_sound = no }
+# 	}
+
+# ## SPEAR ONE HANDED ##
+# 	#Idle entry point
+# 	state = { name = "idle_one_handed_spear"	animation = "idle_one_handed_spear_01_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_one_handed_spear_loop" }
+# 	#Idle looping random select
+# 	state = { name = "idle_one_handed_spear_loop" chance = 8 animation = "idle_one_handed_spear_01_animation"				looping = no next_state = "idle_one_handed_spear_loop" }
+# 	state = { name = "idle_one_handed_spear_loop" chance = 1	animation = "idle_one_handed_spear_02_animation"		looping = no next_state = "idle_one_handed_spear_loop" }
+# 	state = { name = "idle_one_handed_spear_loop" chance = 1	animation = "idle_one_handed_spear_03_animation"		looping = no next_state = "idle_one_handed_spear_loop" }
+
+# 	state = { 
+# 		name = "move_one_handed_spear"     
+# 		animation = "walk_one_handed_spear_animation" 
+# 		animation_blend_time = 0.35 
+# 		start_event = { node = root particle = "walking_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { 
+# 		name = "retreat_one_handed_spear"    animation = "walk_one_handed_spear_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "charge_one_handed_spear" animation = "charge_one_handed_spear_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { 
+# 		name = "attack_one_handed_spear"   
+# 		animation = "attack_one_handed_spear_animation" 
+# 		animation_blend_time = 0.35 
+# 		looping = no 
+# 		next_state = "attack_one_handed_spear" 
+# 		start_event = { node = root particle = "fight_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_spear" 	}	 	trigger_once = no keep_sound = no }
+# 		event = { time = 0.18 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+
+# 	## CROSSBOW ##
+# 	#Idle entry point
+# 	state = { name = "idle_crossbow"	animation = "idle_crossbow_01_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_crossbow_loop" }
+# 	#Idle looping random select
+# 	state = { name = "idle_crossbow_loop" chance = 8 animation = "idle_crossbow_01_animation"				looping = no next_state = "idle_crossbow_loop" }
+# 	state = { name = "idle_crossbow_loop" chance = 1	animation = "idle_crossbow_02_animation"		looping = no next_state = "idle_crossbow_loop" }
+# 	state = { name = "idle_crossbow_loop" chance = 1	animation = "idle_crossbow_03_animation"		looping = no next_state = "idle_crossbow_loop" }
+
+# 	state = { 
+# 		name = "move_crossbow"     
+# 		animation = "walk_crossbow_01_animation" 
+# 		animation_blend_time = 0.35 
+# 		start_event = { node = root particle = "walking_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = { 
+# 		name = "retreat_crossbow"    animation = "walk_crossbow_01_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+# 	state = { 
+# 		name = "charge_crossbow" animation = "walk_crossbow_01_animation" animation_blend_time = 0.35 
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 		event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+# 	}
+	
+# 	state = {
+# 		name = "attack_crossbow"
+# 		animation = "attack_crossbow_01_animation" 
+# 		animation_blend_time = 0.35 
+# 		looping = no 
+# 		next_state = "attack_crossbow"
+# 		start_event = { node = root particle = "fight_dust" }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+# 		event = { time = 0.00 sound = { soundeffect = "setUnitWeaponMelee_spear" 	}	 	trigger_once = no keep_sound = no }
+# 		event = { time = 0.18 sound = { soundeffect = "wpn_mel_attack" 				} 		trigger_once = no keep_sound = no }
+# 	}
+
+# 		state = {
+# 		name = "attack_musket_start"
+   #  	animation = "idle_to_attack_musket_01_animation"
+# 		looping = no
+# 		chance = {
+# 			if_current_state = {
+# 				"attack_musket_loop" = 100
+# 				"attack_musket_start" = 0
+# 			}
+# 		}
+# 		next_state = "attack_musket_loop"
+   # }
+# 	state = {
+# 		name = "attack_musket_loop"
+   #  	animation = "attack_musket_01_animation"
+# 		looping = yes
+# 		chance = {
+# 			if_current_state = {
+# 				"attack_musket_loop" = 0
+# 				"attack_musket_start" = 100
+# 			}
+# 		}
+# 		next_state = "move"		
+   #  }
+
+
+
+# "attack_musket_01_animation"	
+# "attack_to_idle_musket_01_animation"
+# "idle_to_attack_musket_01_animation"
+	
+
+
+	# Pistol animations
+
+	# #Idle entry point
+	# state = { name = "idle_pistol"	animation = "idle_pistol_01_animation"	animation_blend_time = 0.35 looping = no next_state = "idle_pistol_loop" }
+	# #Idle looping random select
+	# state = { name = "idle_pistol_loop" chance = 8 animation = "idle_pistol_01_animation"				looping = no next_state = "idle_pistol_loop" }
+	# state = { name = "idle_pistol_loop" chance = 1	animation = "idle_pistol_02_animation"		looping = no next_state = "idle_pistol_loop" }
+	# state = { name = "idle_pistol_loop" chance = 1	animation = "idle_pistol_03_animation"		looping = no next_state = "idle_pistol_loop" }
+
+	# state = { name = "attack_pistol"	animation = "attack_pistol_01_animation" 	        animation_blend_time = 0.35 	        looping = yes 	        next_state = "attack_pistol" 	        start_event = { node = root particle = "fight_dust" }	    
+	# 	event = { time = 0.00 sound = { soundeffect = "setUnitArmor_leather" 		}		trigger_once = no keep_sound = no }
+	# 	event = { time = 0.00 sound = { soundeffect = "setUnitWeaponGun_pistol" 	}		trigger_once = no keep_sound = no }
+	# 	event = { time = 1.18 sound = { soundeffect = "wpn_gun_handle" 				}		trigger_once = no keep_sound = no }
+	# 	event = { time = 1.53 sound = { soundeffect = "wpn_gun_fire" 				}		trigger_once = no keep_sound = no }
+	# 	event = { time = 3.90 sound = { soundeffect = "wpn_gun_reload" 				}		trigger_once = no keep_sound = no }
+	# 	event = { time = 5.60 sound = { soundeffect = "wpn_gun_handle" 				}		trigger_once = no keep_sound = no }
+	# }
+
+	# state = { 
+	# 	name = "move_pistol"     
+	# 	animation = "walk_pistol_animation" 
+	# 	animation_blend_time = 0.35 
+	# 	start_event = { node = root particle = "walking_dust" }
+	# 	event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+	# 	event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# 	event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# }
+	
+	# state = { 
+	# 	name = "retreat_pistol"    animation = "walk_pistol_animation" animation_blend_time = 0.35 
+	# 	event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+	# 	event = { time = 0.02 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# 	event =	{ time = 0.54 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# }
+	# state = { 
+	# 	name = "charge_pistol" animation = "charge_pistol_animation" animation_blend_time = 0.35 
+	# 	event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail" 			} 		trigger_once = no keep_sound = no }
+	# 	event = { time = 0.10 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# 	event =	{ time = 0.44 sound = { soundeffect = "char_move_step_foot" 		} 		trigger_once = no keep_sound = no }
+	# }
+
+	# cavalry animations	
+	# state = { name = "idle_horse_riding"					animation = "unit_horse_riding_pose_animation"				looping = no next_state = "idle_horse_riding_loop"	animation_blend_time = 0.35  }
+	# state = { name = "idle_horse_riding_loop" chance = 1	animation = "unit_horse_riding_pose_animation"				looping = no next_state = "idle_horse_riding_loop" }
+	
+	# state = { name = "move_horse_riding"		animation = "unit_horse_riding_pose_animation"	animation_blend_time = 0.35		start_event = { node = root particle = "walking_dust" }	}
+	# state = { name = "charge_horse_riding"	animation = "unit_horse_riding_pose_animation"	animation_blend_time = 0.35 }
+	
+	# state = { name = "attack_horse_riding"	animation = "unit_horse_riding_pose_animation" 	        animation_blend_time = 0.35 	        looping = no 	        next_state = "attack_horse_riding" 	        start_event = { node = root particle = "fight_dust" }	    }
+
+
+		#Hand goes for sword in the sheath ( sword in sheat model )
+	 #   state = {
+  #   	name = "build_road"
+  #   	animation = "build_road_moving_animation"
+		# looping = no
+		# next_state = "build_road"
+		# chance = {
+		# 	if_current_state = {
+		# 		"build_road" = 100
+		# 		"build_road_2" = 100
+		# 		"idle" = 100
+		# 		"move" = 100
+		# 		"retreat" = 100
+		# 		"force_march" = 100
+		# 	}
+		# }
+		# start_event = { node = THE_RIG:Right_hand_node_1 entity = "shovel_01_entity" }  # Change to shovel when model is in.
+  #   }
+
+  #   #Sword bind to hand joint ( sheath without a sword model )
+  #   state = {
+  #   	name = "build_road"
+  #   	animation = "build_road_post_moving_animation"
+		# looping = no
+		# next_state = "build_road_2"
+		# chance = {
+		# 	if_current_state = {
+		# 		"build_road" = 50
+		# 		"build_road_2" = 0
+		# 		"idle" = 0
+		# 		"move" = 0
+		# 		"retreat" = 0
+		# 		"force_march" = 0
+		# 	}
+		# }
+		# start_event = { node = THE_RIG:Right_hand_node_1 entity = "shovel_01_entity" }  # Change to shovel when model is in.
+  #   }
+
+
+}
+
+# Temporary setup to make the horse point in the right direction
+entity = {
+	name = "horse_skeleton_entity"
+	pdxmesh = "horse_skeleton_mesh"
+
+
+
+	default_state = "idle"
+	
+	@rider_scale = 0.26
+	locator = { name = "rider_locator"		parent_joint = "spine_01_J"		rotation = { -90 0 0 } position = { @[rider_scale * -1] @[rider_scale*-8] @[rider_scale * -0.2] } scale = @rider_scale	}
+	attach = { rider_locator = unit_skeleton_entity }
+	
+	# Default animations - pole arms
+	state = { name = "idle"	  				animation = "idle_animation"	propagate_state = "idle_horse_riding"	  	 		}
+	state = { name = "idle_one_handed"	  	animation = "idle_animation"	propagate_state = "idle_horse_riding_one_handed"	}
+	state = { name = "move"   	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "move_horse_riding"   	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_leather"		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "retreat"	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "retreat_horse_riding"	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_leather"		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}
+	state = { name = "charge" 	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "charge_horse_riding" 	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_leather"		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "attack"	animation = "idle_animation" 	animation_blend_time = 0.35 looping = yes propagate_state = "attack_horse_riding"	 }
+
+	# one-handed slash arms animations	
+	state = { name = "idle_one_handed"	  	animation = "idle_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "idle_horse_riding"	  	 } # "idle_horse_riding_one_handed"	 do we want to do this? 	
+	state = { name = "move_one_handed"   	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "move_horse_riding"   	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail"   		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	} # "move_horse_riding_one_handed"   	
+	state = { name = "retreat_one_handed"	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "retreat_horse_riding"	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail"   		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	} # "retreat_horse_riding_one_handed"	
+	state = { name = "charge_one_handed" 	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "charge_horse_riding" 	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_mail"  			}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	} # "charge_horse_riding_one_handed" 	
+	state = { name = "attack_one_handed"	animation = "idle_animation" 	animation_blend_time = 0.35 looping = yes propagate_state = "attack_horse_riding"	 } # "attack_horse_riding_one_handed"	
+	
+	# one-handed axe arms animations
+	state = { name = "idle_one_handed_axe"	  	animation = "idle_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "idle_horse_riding"	  	 }
+	state = { name = "move_one_handed_axe"   	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "move_horse_riding"   	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "retreat_one_handed_axe"	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "retreat_horse_riding"	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}
+	state = { name = "charge_one_handed_axe" 	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "charge_horse_riding" 	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "attack_one_handed_axe"	animation = "idle_animation" 	animation_blend_time = 0.35 looping = yes propagate_state = "attack_horse_riding"	 }
+	
+	# two-handed axe arms animations	
+	state = { name = "idle_two_handed_axe"	  	animation = "idle_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "idle_horse_riding"	  	 }
+	state = { name = "move_two_handed_axe"   	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "move_horse_riding"   	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "retreat_two_handed_axe"	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "retreat_horse_riding"	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal"  		}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}
+	state = { name = "charge_two_handed_axe" 	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "charge_horse_riding" 	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_metal" 			}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "attack_two_handed_axe"	animation = "idle_animation" 	animation_blend_time = 0.35 looping = yes propagate_state = "attack_horse_riding"	 }
+
+	# bow animations	
+	state = { name = "idle_bow"	  	animation = "idle_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "idle_horse_riding"	  	 }
+	state = { name = "move_bow"   	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "move_horse_riding"   	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_cloth" 			}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "retreat_bow"	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "retreat_horse_riding"	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_cloth" 			}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}
+	state = { name = "charge_bow" 	animation = "moving_animation"	animation_blend_time = 0.35 looping = yes propagate_state = "charge_horse_riding" 	 
+		event = { time = 0.00 sound = { soundeffect = "setUnitArmor_cloth" 			}		trigger_once = no keep_sound = no }
+		event = { time = 0.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 0.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.10 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+		event = { time = 1.58 sound = { soundeffect = "char_move_step_hoof" 		}		trigger_once = no keep_sound = no }
+	}	
+	state = { name = "attack_bow"	animation = "idle_animation" 	animation_blend_time = 0.35 looping = yes propagate_state = "attack_horse_riding"	 }
+}
+entity = { # TODO: This entity is only here in order to rotate the horse 90 degrees. Pls remove it
+	name = "unit_cavalry_skeleton_entity"
+	locator = { name = "rotated_root" rotation = { -90 0 0 } }
+	attach = { rotated_root = "horse_skeleton_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "idle_one_handed" }
+	state = { name = "move" }	
+	state = { name = "retreat" }
+	state = { name = "charge" }	
+	state = { name = "attack" }
+
+	# one-handed slash arms animations	
+	state = { name = "idle_one_handed" }
+	state = { name = "move_one_handed" }
+	state = { name = "retreat_one_handed" }
+	state = { name = "charge_one_handed" }
+	state = { name = "attack_one_handed" }
+	
+	# one-handed axe arms animations
+	state = { name = "idle_one_handed_axe" }
+	state = { name = "move_one_handed_axe" }	
+	state = { name = "retreat_one_handed_axe" }
+	state = { name = "charge_one_handed_axe" }	
+	state = { name = "attack_one_handed_axe" }
+	
+	# two-handed axe arms animations	
+	state = { name = "idle_two_handed_axe" }
+	state = { name = "move_two_handed_axe" }	
+	state = { name = "retreat_two_handed_axe" }
+	state = { name = "charge_two_handed_axe" }	
+	state = { name = "attack_two_handed_axe" }
+
+	# bow animations	
+	state = { name = "idle_bow" }
+	state = { name = "move_bow" }	
+	state = { name = "retreat_bow" }
+	state = { name = "charge_bow" }	
+	state = { name = "attack_bow" }
+}

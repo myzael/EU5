@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_spear_dynamite_mesh"
+	file = "unit_weapon_spear_dynamite.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_spear_dynamiteShape"
+		index = 0
+		texture_diffuse = "unit_weapon_spare_dynamite_diffuse.dds"
+		texture_normal = "unit_weapon_spare_dynamite_normal.dds"
+		#texture_specular = "unit_weapon_spare_dynamite_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_spare_dynamite_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

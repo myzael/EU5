@@ -1,0 +1,41 @@
+pdxmesh = {
+	name = "building_mine_gold_western_mesh"
+	file = "building_mine_gold_western.mesh"
+	scale = 1.3
+
+	meshsettings = {
+		name = "building_mine_gold_western|pCube7|pCubeShape7"
+		index = 0
+		texture_diffuse = "building_test_diffuse.dds"
+		texture_normal = "building_test_normal.dds"
+		texture_specular = "building_test_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Decal_Size5Shape"
+		index = 0
+		texture_diffuse = "building_mine_gold_decal_diffuse.dds"
+		texture_normal = "building_mine_gold_decal_normal.dds"
+		texture_specular = "building_mine_gold_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_mine_gold_western|Group64109|Group64109Shape"
+		index = 0
+		texture_diffuse = "rock_gold_a_diffuse.dds"
+		texture_normal = "rock_gold_a_normal.dds"
+		texture_specular = "rock_gold_a_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_mine_gold_western_entity"
+	pdxmesh = "building_mine_gold_western_mesh"
+}

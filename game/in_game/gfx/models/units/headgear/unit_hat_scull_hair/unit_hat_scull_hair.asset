@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_hat_scull_hair_mesh"
+	file = "unit_hat_scull_hair.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_scull_hair_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hat_scull_hair_diffuse.dds"
+		texture_normal = "unit_hat_scull_hair_normal.dds"
+		texture_specular = "unit_hat_scull_hair_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_scull_hair_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hat_scull_hair_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_hat_scull_hair_diffuse.dds"
+		texture_normal = "unit_hat_scull_hair_normal.dds"
+		texture_specular = "unit_hat_scull_hair_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_scull_hair_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_scull_hair_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_hat_scull_hair_diffuse.dds"
+		texture_normal = "unit_hat_scull_hair_normal.dds"
+		texture_specular = "unit_hat_scull_hair_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_scull_hair_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

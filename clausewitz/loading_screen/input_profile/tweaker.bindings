@@ -1,0 +1,4 @@
+binding = {
+    input_action = "tweaker_remove_snapshots"
+    keycode = "del"
+}

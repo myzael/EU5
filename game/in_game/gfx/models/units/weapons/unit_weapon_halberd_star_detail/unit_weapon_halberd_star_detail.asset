@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_weapon_halberd_star_detail_mesh"
+	file = "unit_weapon_halberd_star_detail.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_halberd_star_detailShape"
+		index = 0
+		texture_diffuse = "unit_weapon_halberd_star_detail_diffuse.dds"
+		texture_normal = "unit_weapon_halberd_star_detail_normal.dds"
+#		texture_specular = "unit_weapon_halberd_star_detail_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_halberd_star_detail_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

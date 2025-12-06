@@ -1,0 +1,108 @@
+pdxmesh = {
+	name = "gather_beeswax_mesh"
+	file = "gather_beeswax.mesh"
+	scale = 0.5
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_lod0Shape"
+		index = 0
+		texture_diffuse = "raw_beeswax_diffuse.dds"
+		texture_normal = "raw_beeswax_normal.dds"
+		texture_specular = "raw_beeswax_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_props_lod0Shape"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "gather_beeswax_decal_diffuse.dds"
+		texture_normal = "gather_beeswax_decal_normal.dds"
+		texture_specular = "gather_beeswax_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_lod1Shape"
+		index = 0
+		texture_diffuse = "raw_beeswax_diffuse.dds"
+		texture_normal = "raw_beeswax_normal.dds"
+		texture_specular = "raw_beeswax_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_props_lod1Shape"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "gather_beeswax_decal_diffuse.dds"
+		texture_normal = "gather_beeswax_decal_normal.dds"
+		texture_specular = "gather_beeswax_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_props_lod2Shape"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_lod2Shape"
+		index = 0
+		texture_diffuse = "raw_beeswax_diffuse.dds"
+		texture_normal = "raw_beeswax_normal.dds"
+		texture_specular = "raw_beeswax_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_beeswax_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "gather_beeswax_decal_diffuse.dds"
+		texture_normal = "gather_beeswax_decal_normal.dds"
+		texture_specular = "gather_beeswax_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "gather_beeswax_entity"
+	pdxmesh = "gather_beeswax_mesh"
+}

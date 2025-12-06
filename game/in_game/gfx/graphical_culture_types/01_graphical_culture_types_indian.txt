@@ -1,0 +1,16 @@
+﻿indian_gfx = {
+	priority = 110 # Continent
+	culture_tag = indian_gfx
+	ethnicities = {
+		10 = indian_ethnicity
+	}
+}
+
+dravidian_gfx = {
+	priority = 400 # Area
+	culture_tag = dravidian_gfx
+	ethnicities = {
+		5 = indian_ethnicity
+		10 = indian_dravidian_ethnicity
+	}
+}

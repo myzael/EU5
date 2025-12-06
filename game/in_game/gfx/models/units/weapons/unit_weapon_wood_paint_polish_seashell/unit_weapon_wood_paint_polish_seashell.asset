@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_wood_paint_polish_seashell_mesh"
+	file = "unit_weapon_wood_paint_polish_seashell.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_wood_paint_polish_seashellShape"
+		index = 0
+		texture_diffuse = "unit_weapon_wood_paint_polish_seashell_diffuse.dds"
+		texture_normal = "unit_weapon_wood_paint_polish_seashell_normal.dds"
+#		texture_specular = "unit_weapon_wood_paint_polish_seashell_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_wood_paint_polish_seashell_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

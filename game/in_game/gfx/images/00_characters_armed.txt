@@ -1,0 +1,552 @@
+﻿### Characters Lists ###
+
+## religions
+religions_armed = {
+	tag = "characters_armed"
+
+
+	###Christians
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_armed.dds"
+		priority = 50 # higher priority to beat abrahamic_gfx
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = christian_gfx }
+		}
+	}
+
+	###CLERGY
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_angry.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = abrahamic_gfx }
+		}
+	}
+	###Buddhists
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/asian/asian_clergy_angry.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = buddhist_gfx }
+		}
+	}
+
+	###Hindus
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_angry.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = dharmic_gfx }
+		}
+	}
+
+}
+
+nobles_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### NOBLES ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/ashanti/ashanti_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###ASIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/asian/asian_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = east_asian_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/indian/indian_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/aztec/aztec_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/syrian/syrian_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/iroquois/iroquois_nobles_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/north_german/north_german_nobles_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+		}
+	}
+}
+
+burghers_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### BURGHERS ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###ASIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = east_asian_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_angry.dds"# TODO CAESAR-25898
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+		}
+	}
+}
+
+soldiers_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### BURGHERS ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###ASIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = east_asian_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_armed.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+		}
+	}
+}
+
+clergy_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### CLERGY ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/ashanti/ashanti_clergy_angry.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_angry.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/aztec/aztec_clergy_angry.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_angry.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/iroquois/iroquois_clergy_angry.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = christian_gfx }
+		}
+	}
+}
+
+slaves_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### SLAVES ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/ashanti/ashanti_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###ASIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/asian/asian_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = east_asian_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/indian/indian_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/aztec/aztec_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/syrian/syrian_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/iroquois/iroquois_slaves.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/north_german/north_german_slaves.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:slaves }
+		}
+	}
+}
+
+peasants_armed = {
+	tag = "characters_armed"
+	#############################################################################################################################
+	##### PEASANTS ######
+	#############################################################################################################################
+	###ASHANTI
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/ashanti/ashanti_peasants_angry.dds" # TODO CAESAR-25898
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = african_gfx }
+		}
+	}
+	###ASIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/asian/asian_peasants_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = east_asian_gfx }
+		}
+	}
+	###INDIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/indian/indian_peasants_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = indian_gfx }
+		}
+	}
+	###AZTEC
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/aztec/aztec_peasants_angry.dds" # TODO CAESAR-25898
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+	###SYRIAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/syrian/syrian_peasants_armed.dds"
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+	###IROQUOIS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/iroquois/iroquois_peasants_angry.dds" # TODO CAESAR-25898
+		priority = 5
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+	###NORTH GERMAN
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/north_german/north_german_peasants_armed.dds"
+		priority = 1
+		scope = country
+		trigger = {
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+		}
+	}
+	
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/empty.dds"
+		priority = 0
+		scope = country
+		trigger = {
+			always = yes
+		}
+	}
+}

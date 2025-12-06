@@ -1,0 +1,13 @@
+﻿# Unique Levies
+
+
+# Unlockable Levies
+
+levy_conscripts = {
+	size = 0.01
+	unit = a_conscripts
+	
+	allowed_pop_type = peasants
+	allowed_pop_type = clergy
+	allowed_pop_type = burghers
+}

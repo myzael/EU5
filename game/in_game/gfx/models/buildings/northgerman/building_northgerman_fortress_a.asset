@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_northgerman_fortress_a_mesh"
+	file = "building_northgerman_fortress_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.5 }
+		lod = { index = 2 percent = 8.5 }
+	}
+
+	meshsettings = {
+		name = "LOD_0|fortress|fortressShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_fortress_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|decal|decalShape"
+		index = 0
+		texture_diffuse = "decal_fortress_diffuse.dds"
+		texture_normal = "decal_fortress_normal.dds"
+		texture_specular = "decal_fortress_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_1|fortress|fortressShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_fortress_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|decal|decalShape"
+		index = 0
+		texture_diffuse = "decal_fortress_diffuse.dds"
+		texture_normal = "decal_fortress_normal.dds"
+		texture_specular = "decal_fortress_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_2|fortress|fortressShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_fortress_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|decal|decalShape"
+		index = 0
+		texture_diffuse = "decal_fortress_diffuse.dds"
+		texture_normal = "decal_fortress_normal.dds"
+		texture_specular = "decal_fortress_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_northgerman_fortress_a_entity"
+	pdxmesh = "building_northgerman_fortress_a_mesh"
+}

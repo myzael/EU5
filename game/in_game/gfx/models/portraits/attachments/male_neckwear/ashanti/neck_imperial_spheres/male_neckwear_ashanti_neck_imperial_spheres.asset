@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "male_neckwear_ashanti_neck_imperial_spheres_mesh"
+	file = "male_neckwear_ashanti_neck_imperial_spheres.mesh"
+
+	meshsettings = {
+		name = "male_neckwear_ashanti_neck_imperial_spheresShape"
+		index = 0
+		texture_diffuse = "male_neckwear_ashanti_neck_imperial_spheres_diffuse.dds"
+		texture_normal = "male_neckwear_ashanti_neck_imperial_spheres_normal.dds"
+		texture_specular = "male_neckwear_ashanti_neck_imperial_spheres_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_neckwear_ashanti_neck_imperial_spheres_entity"
+	pdxmesh = "male_neckwear_ashanti_neck_imperial_spheres_mesh"
+}

@@ -1,0 +1,104 @@
+﻿# Material indices need to fit into a single channel of a compressed texture
+# That means a maximum of 32 material-textures are supported. If you have multiple materials in this file that use the same texture they will count as one
+#
+#
+#	example = {
+#		texture = "flatmap_hills.dds"	-- which texture to use for this materials
+#		priority = 50					-- Only one material will be used per pixel. If two materials are valid for a pixel the one with higher priority is used
+#
+#		topography = "mountains"			-- Which types of topography this material is valid for. If no topography is entered then this material is valid for all topographies
+#		topography = "mountain_wasteland" -- If more than one topography is entered then this material is valid for all those topographies.
+#
+#		vegetation = "jungle"			-- Same as with the topography. 
+#		vegetation = " flatland_wasteland" -- If both topography and vegetation are entered then the material is valid if the location has at least one topography match and at least one vegetation match
+#
+#		climate = "tropical"
+#		climate = "continental"
+#	}
+
+default = {
+	texture = "wip.dds"
+}
+
+mountains = {
+	texture = "flatmap_mountain.dds"
+	priority = 80
+
+	topography = "mountains"
+	topography = "mountain_wasteland"
+
+	#vegetation = ""
+}
+
+jungle = {
+	texture = "flatmap_jungle.dds"
+	priority = 90
+	vegetation = "jungle"
+}
+
+hills = {
+	texture = "flatmap_hills.dds"
+	priority = 80
+	topography = hills
+	topography = hills_wasteland
+}
+
+wetlands = {
+	texture = "flatmap_marsh.dds"
+	priority = 80
+	topography = wetlands
+	topography = wetlands_wasteland
+}
+
+plateau = {
+	texture = "wip.dds"
+	priority = 80
+	topography = plateau
+	topography = plateau_wasteland
+}
+
+desert = {
+	texture = "flatmap_desert.dds"
+	priority = 80
+	topography = dune_wasteland
+	topography = salt_pans
+	topography = flatland_wasteland
+	topography = mesa_wasteland
+
+	vegetation = desert
+}
+
+sparse = {
+	texture = "flatmap_plains.dds"
+	priority = 80
+	vegetation = sparse
+}
+
+woods = {
+	texture = "flatmap_woods.dds"
+	priority = 40
+	vegetation = woods
+}
+
+forest = {
+	texture = "flatmap_pine.dds"
+	priority = 80
+	vegetation = forest
+}
+
+pine = {
+	texture = "flatmap_pine.dds"
+	priority = 40
+
+	topography = "mountains"
+	topography = "mountain_wasteland"
+
+	vegetation = woods
+	vegetation = forest
+}
+
+farmland = {
+	texture = "flatmap_farmland.dds"
+	priority = 80
+	vegetation = farmland
+}

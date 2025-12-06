@@ -1,0 +1,54 @@
+﻿node_editor_meta={
+	view={
+		position={ -273.211182 -15.030495 }
+		zoom=0.525591
+	}
+	nodes={
+		0={
+			position={ 110.000000 167.500000 }
+			name="Stab Sparks"
+			size={ 1482.477173 559.499573 }
+		}
+		1={
+			position={ 130.032593 249.369934 }
+			name="Tip of Spear"
+			size={ 591.836304 287.000000 }
+		}
+		2={
+			position={ 1636.486816 407.187347 }
+		}
+		3={
+			position={ 741.226562 533.804321 }
+		}
+		4={
+			position={ 1767.930176 645.684937 }
+		}
+		5={
+			position={ 1120.567383 533.804932 }
+		}
+		6={
+			position={ 215.031616 334.370056 }
+		}
+		7={
+			position={ 185.908630 573.409119 }
+		}
+		8={
+			position={ 906.544067 993.062500 }
+			inlined=yes
+		}
+		9={
+			position={ 1155.803833 816.192505 }
+			inlined=yes
+		}
+		10={
+			position={ 1155.803833 816.192505 }
+			inlined=yes
+		}
+		11={
+			position={ 1920.395020 505.814026 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

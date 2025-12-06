@@ -1,0 +1,137 @@
+pdxmesh = {
+	name = "gather_chili_mesh"
+	file = "gather_chili.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "gather_chili|LOD_0|gather_chili_lod0|gather_chili_props|gather_"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_woodsShape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_lod0Shape"
+		index = 0
+		texture_diffuse = "raw_chili_diffuse.dds"
+		texture_normal = "raw_chili_normal.dds"
+		texture_specular = "raw_chili_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "gather_chili_decal_diffuse.dds"
+		texture_normal = "gather_chili_decal_normal.dds"
+		texture_specular = "gather_chili_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_3|gather_chili_lod1|gather_chili_props|gather_chili_propsSh"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_3|gather_chili_lod1|gather_chili_wood|gather_chili_woodShap"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_lod1Shape"
+		index = 0
+		texture_diffuse = "raw_chili_diffuse.dds"
+		texture_normal = "raw_chili_normal.dds"
+		texture_specular = "raw_chili_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "gather_chili_decal_diffuse.dds"
+		texture_normal = "gather_chili_decal_normal.dds"
+		texture_specular = "gather_chili_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_4|gather_chili_lod2|gather_chili_props|gather_chili_propsSh"
+		index = 0
+		texture_diffuse = "resources_gather_d_props_diffuse.dds"
+		texture_normal = "resources_gather_d_props_normal.dds"
+		texture_specular = "resources_gather_d_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_4|gather_chili_lod2|gather_chili_wood|gather_chili_woodShap"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_lod2Shape"
+		index = 0
+		texture_diffuse = "raw_chili_diffuse.dds"
+		texture_normal = "raw_chili_normal.dds"
+		texture_specular = "raw_chili_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "gather_chili_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "gather_chili_decal_diffuse.dds"
+		texture_normal = "gather_chili_decal_normal.dds"
+		texture_specular = "gather_chili_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "gather_chili_entity"
+	pdxmesh = "gather_chili_mesh"
+}

@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "decoration_parrot_jungle_a_mesh"
+	file = "decoration_parrot_jungle_a.mesh"
+	
+
+	animation = { id = "bird_flying_animation" type = "decoration_parrot_jungle_a_bird_flying.anim" }
+
+	meshsettings = {
+		name = "decoration_parrot_jungle_aShape"
+		index = 0
+		texture_diffuse = "decoration_parrot_jungle_a_diffuse.dds"
+		texture_normal = "decoration_parrot_jungle_a_normal.dds"
+		texture_specular = "decoration_parrot_jungle_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "decoration_parrot_jungle_a_entity"
+	pdxmesh = "decoration_parrot_jungle_a_mesh"
+
+	default_state = "bird_flying"
+	state = {
+		name = "bird_flying"
+		animation = "bird_flying_animation"
+	}
+
+}
+

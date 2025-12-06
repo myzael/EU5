@@ -1,0 +1,44 @@
+﻿global_variables={
+}
+
+local_variables={
+}
+
+behavioral_states={
+	"idle"={
+		list_layer={
+			timeline_layer={
+				timeline="idle"
+			}
+		}
+	}
+ }
+
+events={
+	behavioral_state_transition={
+		name="starting_state_internal_outgoing_transition"
+		behavioral_state="idle"
+		transition_interval=0.000000
+	}
+ }
+
+timelines={
+	"idle"={
+		boundary_behavior=clamp
+		starttime_offset=0.000000
+		playback_rate=1.000000
+		source_joint="root"
+		layer=0
+		animation="idle_animation"
+	}
+ }
+
+starting_timeline={
+	on_enter={
+		"starting_state_internal_outgoing_transition"
+	}
+	boundary_behavior=loop
+	starttime_offset=0.000000
+	playback_rate=1.000000
+	layer=0
+}

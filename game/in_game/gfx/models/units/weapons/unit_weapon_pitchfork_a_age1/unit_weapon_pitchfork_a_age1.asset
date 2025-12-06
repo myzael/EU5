@@ -1,0 +1,47 @@
+pdxmesh = {
+	name = "unit_weapon_pitchfork_a_age1_mesh"
+	file = "unit_weapon_pitchfork_a_age1.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_weapon_pitchfork_a_age1_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_weapon_pitchfork_a_age1_diffuse.dds"
+		texture_normal = "unit_weapon_pitchfork_a_age1_normal.dds"
+		#texture_specular = "unit_weapon_pitchfork_a_age1_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_pitchfork_a_age1_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_weapon_pitchfork_a_age1_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_weapon_pitchfork_a_age1_diffuse.dds"
+		texture_normal = "unit_weapon_pitchfork_a_age1_normal.dds"
+		#texture_specular = "unit_weapon_pitchfork_a_age1_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_pitchfork_a_age1_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_weapon_pitchfork_a_age1_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_weapon_pitchfork_a_age1_diffuse.dds"
+		texture_normal = "unit_weapon_pitchfork_a_age1_normal.dds"
+		#texture_specular = "unit_weapon_pitchfork_a_age1_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_pitchfork_a_age1_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+entity = {
+	name = "unit_weapon_pitchfork_a_age1_entity"
+	pdxmesh = "unit_weapon_pitchfork_a_age1_mesh"
+}

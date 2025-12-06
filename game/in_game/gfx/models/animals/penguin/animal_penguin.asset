@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "animal_penguin_mesh"
+	file = "animal_penguin.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "animal_penguin_idle_animation" type = "animal_penguin_animal_penguin_idle.anim" }
+
+	meshsettings = {
+		name = "animal_penguin_lod0Shape"
+		index = 0
+		texture_diffuse = "animal_penguin_diffuse.dds"
+		texture_normal = "animal_penguin_normal.dds"
+		texture_specular = "animal_penguin_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_1|animal_penguin_lod1|animal_penguin_lod1|animal_penguin_lo"
+		index = 0
+		texture_diffuse = "animal_penguin_diffuse.dds"
+		texture_normal = "animal_penguin_normal.dds"
+		texture_specular = "animal_penguin_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_2|animal_penguin_lod1|animal_penguin_lod1|animal_penguin_lo"
+		index = 0
+		texture_diffuse = "animal_penguin_diffuse.dds"
+		texture_normal = "animal_penguin_normal.dds"
+		texture_specular = "animal_penguin_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "animal_penguin_entity"
+	pdxmesh = "animal_penguin_mesh"
+
+	default_state = "animal_penguin_idle"
+	state = {
+		name = "animal_penguin_idle"
+		animation = "animal_penguin_idle_animation"
+	}
+}

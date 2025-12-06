@@ -1,0 +1,54 @@
+﻿node_editor_meta={
+	view={
+		position={ -113.766975 76.925323 }
+		zoom=0.433333
+	}
+	nodes={
+		0={
+			position={ 343.434631 49.045837 }
+			name="Stab Sparks"
+			size={ 1566.006348 582.758850 }
+		}
+		1={
+			position={ 380.080658 151.853592 }
+			name="Tip Of Knife"
+			size={ 600.927246 287.000000 }
+		}
+		2={
+			position={ 1404.175537 706.246521 }
+		}
+		4={
+			position={ 1037.906738 415.410706 }
+		}
+		5={
+			position={ 2008.157471 458.685364 }
+		}
+		8={
+			position={ 1418.563721 411.696838 }
+		}
+		10={
+			position={ 465.079834 236.853531 }
+		}
+		11={
+			position={ 440.178528 446.541290 }
+		}
+		7={
+			position={ 1893.422241 1397.216553 }
+			inlined=yes
+		}
+		9={
+			position={ 2142.682129 1220.346680 }
+			inlined=yes
+		}
+		6={
+			position={ 2142.682129 1220.346680 }
+			inlined=yes
+		}
+		3={
+			position={ 2907.272949 909.968079 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

@@ -1,0 +1,121 @@
+﻿D015_monuments1 = {
+	tag = "monuments1"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+
+	#Ancient Monuments Pack
+	
+	#leshan_buddhaleshan_buddha
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/leshan_buddhaleshan_buddha_metadata_os5115x848_d2000x85.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:longyou_jiading
+		}
+	}
+
+	#pyramids
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/pyramids_metadata_os5115x848_d1800x65.dds"
+		priority = 10
+		scope = location
+		
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:giza
+		}
+	}
+
+	#samarra_mosquee
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/samarra_mosquee_metadata_os5115x848_d2500x150.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:samarra
+		}
+	}
+
+	#teotihuacan
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/teotihuacan_metadata_os5115x848_d1700x150.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:tehotihuacan
+		}
+	}
+
+	#sanchi_stupa
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/sanchi_stupa_metadata_os5115x848_d2600x120.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:bhopal
+		}
+	}
+
+	#colosseum
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/colosseum_metadata_os5115x848_d2500x130.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:rome
+		}
+	}
+
+	#parthenon
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/parthenon_metadata_os5115x848_d2200x130.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:athens
+		}
+	}
+
+	#stonehenge
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/monuments/stonehenge_metadata_os5115x848_d2000x430.dds"
+		priority = 10
+		scope = location
+		trigger = {
+			has_newsletter_subscription = yes
+			this = location:amesbury
+		}
+	}
+}
+
+D015_monuments2 = { #Holy Sites
+	tag = "monuments2"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+
+}
+
+D015_monuments3 = {
+	tag = "monuments3"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+}

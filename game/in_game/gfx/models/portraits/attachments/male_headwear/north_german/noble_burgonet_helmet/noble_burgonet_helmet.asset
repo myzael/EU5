@@ -1,0 +1,100 @@
+pdxmesh = {
+	name = "noble_burgonet_helmet_mesh"
+	file = "noble_burgonet_helmet.mesh"
+
+	meshsettings = {
+		name = "noble_burgonet_helmetShape"
+		index = 0
+		texture_diffuse = "burgonet_noble_helmet_1_diffuse.dds"
+		texture_normal = "burgonet_noble_helmet_1_normal.dds"
+		texture_specular = "burgonet_noble_helmet_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+}
+pdxmesh = {
+	name = "noble_burgonet_helmet_dark_mesh"
+	file = "noble_burgonet_helmet.mesh"
+
+	meshsettings = {
+		name = "noble_burgonet_helmetShape"
+		index = 0
+		texture_diffuse = "burgonet_noble_helmet_1_dark_diffuse.dds"
+		texture_normal = "burgonet_noble_helmet_1_normal.dds"
+		texture_specular = "burgonet_noble_helmet_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+}
+
+entity = {
+	name = "male_headwear_german_soldier_noble_burgonet_helmet_entity"
+	pdxmesh = "noble_burgonet_helmet_mesh"
+}
+entity = {
+	name = "male_headwear_german_soldier_noble_burgonet_helmet_dark_entity"
+	pdxmesh = "noble_burgonet_helmet_dark_mesh"
+}
+
+
+# Feathers
+pdxmesh = {
+	name = "noble_burgonet_helmet_feather_mesh"
+	file = "noble_burgonet_helmet_feather.mesh"
+
+	meshsettings = {
+		name = "noble_burgonet_helmet_featherShape"
+		index = 0
+		texture_diffuse = "burgonet_noble_helmet_1_diffuse.dds"
+		texture_normal = "burgonet_noble_helmet_1_normal.dds"
+		texture_specular = "burgonet_noble_helmet_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+
+	}
+	meshsettings = {
+		name = "feather_plumes_1Shape"
+		index = 0
+		texture_diffuse = "feathers_plumes_1_diffuse.dds"
+		texture_normal = "feathers_plumes_1_normal.dds"
+		texture_specular = "feathers_plumes_1_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "noble_burgonet_helmet_feather_dark_mesh"
+	file = "noble_burgonet_helmet_feather.mesh"
+
+	meshsettings = {
+		name = "noble_burgonet_helmet_featherShape"
+		index = 0
+		texture_diffuse = "burgonet_noble_helmet_1_dark_diffuse.dds"
+		texture_normal = "burgonet_noble_helmet_1_normal.dds"
+		texture_specular = "burgonet_noble_helmet_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+
+	}
+	meshsettings = {
+		name = "feather_plumes_1Shape"
+		index = 0
+		texture_diffuse = "feathers_plumes_1_diffuse.dds"
+		texture_normal = "feathers_plumes_1_normal.dds"
+		texture_specular = "feathers_plumes_1_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_soldier_noble_burgonet_helmet_feather_entity"
+	pdxmesh = "noble_burgonet_helmet_feather_mesh"
+}
+entity = {
+	name = "male_headwear_german_soldier_noble_burgonet_helmet_feather_dark_entity"
+	pdxmesh = "noble_burgonet_helmet_feather_dark_mesh"
+}

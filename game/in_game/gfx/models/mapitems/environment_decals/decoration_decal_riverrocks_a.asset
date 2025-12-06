@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "decoration_decal_riverrocks_a_mesh"
+	file = "sm_decal_cracked.mesh"
+	scale = 0.22
+
+	meshsettings = {
+		name = "sm_decals_test1Shape"
+		index = 0
+		texture_diffuse = "decoration_decal_riverrocks_a_diffuse.dds"
+		texture_normal = "decoration_decal_riverrocks_a_normal.dds"
+		texture_specular = "decoration_decal_riverrocks_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decoration_decal_riverrocks_a_entity"
+	pdxmesh = "decoration_decal_riverrocks_a_mesh"
+}

@@ -1,0 +1,5 @@
+
+binding = {
+    input_action = "curve_editor_remove"
+    keycode = "del"
+}

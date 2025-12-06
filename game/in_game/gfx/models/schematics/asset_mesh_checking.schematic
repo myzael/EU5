@@ -1,0 +1,26 @@
+﻿name="7cc06f92-dd0e-4877-b42a-b3b0c9919ae7"
+graph={
+	nodes={
+		pdxns:ecs:MeshType={
+			id=0
+			node={
+				mesh_name="unit_mesh_decal_mesh"
+				inputs={ "Lod_Override_0" }
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:assemble_entity={
+			id=1
+			node={
+			}
+			inputs={
+				link={
+					pin_id="components"
+					linked_node=0
+					linked_pin="mesh_components"
+				}
+			}
+		}
+	}
+}

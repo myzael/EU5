@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "building_blockade_mesh"
+	file = "building_blockade.mesh"
+
+	animation = { id = "idle_animation" type = "building_blockade_idle.anim" }
+
+	meshsettings = {
+		name = "pCylinderShape2"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_blockade_entity"
+	pdxmesh = "building_blockade_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

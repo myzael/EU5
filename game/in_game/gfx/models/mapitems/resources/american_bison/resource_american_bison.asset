@@ -1,0 +1,35 @@
+pdxmesh = {
+	name = "resource_american_bison_mesh"
+	file = "resource_american_bison.mesh"
+	
+	
+
+	animation = { id = "moving_animation" type = "resource_american_bison_moving.anim" }
+	animation = { id = "idle_animation" type = "resource_american_bison_idle.anim" }
+
+	meshsettings = {
+		name = "resource_american_bisonShape"
+		index = 0
+		texture_diffuse = "resource_american_bison_diffuse.dds"
+		texture_normal = "resource_american_bison_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"		
+		
+	}
+}
+
+entity = {
+	name = "resource_american_bison_entity"
+	pdxmesh = "resource_american_bison_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}

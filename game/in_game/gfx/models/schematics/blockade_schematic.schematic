@@ -1,0 +1,66 @@
+﻿name="60788f2e-34eb-4f0a-b3f8-01064422d4e7"
+graph={
+	nodes={
+		pdxns:common:compound={
+			id=0
+			node={
+				graph="origin_global_transform"
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:MeshType={
+			id=1
+			node={
+				mesh_name="building_blockade_mesh"
+				inputs={ "Lod_Override_0" }
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:assemble_entity={
+			id=2
+			node={
+				name="BlckadeEntity"
+			}
+			inputs={
+				link={
+					pin_id="components"
+					linked_node=0
+					linked_pin="Global Transform Component"
+				}
+				link={
+					pin_id="components"
+					linked_node=1
+					linked_pin="mesh_components"
+				}
+				link={
+					pin_id="components"
+					linked_node=3
+					linked_pin="opacity"
+				}
+			}
+		}
+		pdxns:ecs:create_opacity_component={
+			id=3
+			node={
+				value="-- SELECT FROM PIN --"
+			}
+			inputs={
+				link={
+					pin_id="Mesh Opacity"
+					linked_node=4
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:values:Float={
+			id=4
+			node={
+				value=1.000000
+			}
+			inputs={
+			}
+		}
+	}
+}

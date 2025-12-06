@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "resource_cloves_b_mesh"
+	file = "resource_cloves_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 10.0 }
+		lod = { index = 2 percent = 5.0 }
+	}
+
+	meshsettings = {
+		name = "resorces_cloves_a_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_diffuse.dds"
+		texture_normal = "resource_cloves_normal.dds"
+		texture_specular = "resource_cloves_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cloves_b_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_b_decal_diffuse.dds"
+		texture_normal = "resource_cloves_b_decal_normal.dds"
+		texture_specular = "resource_cloves_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_cloves_b_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_b_decal_diffuse.dds"
+		texture_normal = "resource_cloves_b_decal_normal.dds"
+		texture_specular = "resource_cloves_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resorces_cloves_a_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_diffuse.dds"
+		texture_normal = "resource_cloves_normal.dds"
+		texture_specular = "resource_cloves_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cloves_b_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_b_decal_diffuse.dds"
+		texture_normal = "resource_cloves_b_decal_normal.dds"
+		texture_specular = "resource_cloves_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resorces_cloves_a_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_cloves_diffuse.dds"
+		texture_normal = "resource_cloves_normal.dds"
+		texture_specular = "resource_cloves_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_cloves_b_entity"
+	pdxmesh = "resource_cloves_b_mesh"
+}

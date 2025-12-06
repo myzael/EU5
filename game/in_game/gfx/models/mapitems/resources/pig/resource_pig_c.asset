@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "resource_pig_c_mesh"
+	file = "resource_pig_c.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "pig_idle_animation" type = "resource_pig_c_pig_idle.anim" }
+
+	meshsettings = {
+		name = "resource_pig_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_pig_c_diffuse.dds"
+		texture_normal = "resource_pig_normal.dds"
+		texture_specular = "resource_pig_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_pig_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_pig_c_diffuse.dds"
+		texture_normal = "resource_pig_normal.dds"
+		texture_specular = "resource_pig_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_pig_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_pig_c_diffuse.dds"
+		texture_normal = "resource_pig_normal.dds"
+		texture_specular = "resource_pig_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_pig_c_entity"
+	pdxmesh = "resource_pig_c_mesh"
+
+	default_state = "pig_idle"
+	state = {
+		name = "pig_idle"
+		animation = "pig_idle_animation"
+	}
+}

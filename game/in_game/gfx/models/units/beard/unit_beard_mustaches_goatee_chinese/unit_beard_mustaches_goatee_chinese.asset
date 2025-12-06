@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "unit_beard_mustaches_goatee_chinese_mesh"
+	file = "unit_beard_mustaches_goatee_chinese.mesh"
+
+	meshsettings = {
+		name = "unit_beard_mustaches_goatee_chineseShape"
+		index = 0
+		texture_diffuse = "unit_beard_bushy_beard_moustache_mask.dds"
+		texture_normal = "unit_beard_mustaches_spain_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "unit_beard_mustaches_goatee_chinese_entity"
+	pdxmesh = "unit_beard_mustaches_goatee_chinese_mesh"
+}

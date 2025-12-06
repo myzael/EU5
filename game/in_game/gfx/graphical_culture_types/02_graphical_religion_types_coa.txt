@@ -1,0 +1,31 @@
+﻿# Intended for coa & flag triggers (using _coa suffix)
+
+colombian_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = colombian_coa_gfx
+}
+
+ecuadorian_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = ecuadorian_coa_gfx
+}
+
+andean_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = andean_coa_gfx
+}
+
+argentinian_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = argentinian_coa_gfx
+}
+
+permic_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = permic_coa_gfx
+}
+
+folk_european_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = folk_european_gfx # otherwise not used
+}

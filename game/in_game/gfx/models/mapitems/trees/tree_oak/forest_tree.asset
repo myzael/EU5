@@ -1,0 +1,67 @@
+pdxmesh = {
+	name = "forest_tree_mesh"
+	file = "forest_tree.mesh"
+	scale = 1.2
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "forest_tree_lod0Shape"
+		index = 0
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "forest_tree_lod0Shape"
+		index = 1
+		texture_diffuse = "basetree_diffuse.dds"
+		texture_normal = "basetree_normal.dds"
+		texture_specular = "basetree_properties.dds"
+		texture = { file = "tint_forest.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "forest_tree_lod1Shape"
+		index = 0
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "forest_tree_lod1Shape"
+		index = 1
+		texture_diffuse = "basetree_diffuse.dds"
+		texture_normal = "basetree_normal.dds"
+		texture_specular = "basetree_properties.dds"
+		texture = { file = "tint_forest.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "forest_tree_lod2Shape"
+		index = 0
+		texture_diffuse = "basetree_diffuse.dds"
+		texture_normal = "basetree_normal.dds"
+		texture_specular = "basetree_properties.dds"
+		texture = { file = "tint_forest.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "forest_tree_entity"
+	pdxmesh = "forest_tree_mesh"
+}

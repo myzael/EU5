@@ -1,0 +1,22 @@
+﻿{
+	"name":	"Sacred Sites",
+	"localizable_name":	"D017_sacred_sites_pack",
+	"path":	"dlc/D017_sacred_sites_pack",
+	"picture":	"thumbnail.dds",
+	"checksum":	"c951f557c9b4857a3e9cfe3673912eb1",
+	"description":	"",
+	"supported_version":	"",
+	"dependencies":	[],
+	"replace_path":	[],
+	"tags":	[],
+	"pops_id":	"D017_sacred_sites_pack",
+	"msgr_id":	"",
+	"steam_id":	3865300,
+	"review_steam_id":	4091680,
+	"affects_save_compatibility":	false,
+	"mp_synced":	false,
+	"third_party_content":	false,
+	"enabled":	true,
+	"hidden":	false,
+	"verify":	true
+}

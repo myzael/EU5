@@ -1,0 +1,27 @@
+﻿pdxmesh = {
+	name = "blind_eye_cloth_mesh"
+	file = "blind_eye_cloth.mesh"
+
+	meshsettings = {
+		name = "blind_eye_clothShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "blind_eye_cloth_entity"
+	pdxmesh = "blind_eye_cloth_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

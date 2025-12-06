@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_shield_wood_obsidian_mesh"
+	file = "unit_shield_wood_obsidian.mesh"
+
+	meshsettings = {
+		name = "unit_shield_wood_obsidianShape"
+		index = 0
+		texture_diffuse = "unit_shield_wood_obsidian_diffuse.dds"
+		texture_normal = "unit_shield_wood_obsidian_normal.dds"
+		#texture_specular = "unit_shield_wood_obsidian_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_shield_wood_obsidian_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

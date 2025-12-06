@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "western_fortress_mesh"
+	file = "western_fortress.mesh"
+
+	meshsettings = {
+		name = "pCubeShape192"
+		index = 0
+		texture_diffuse = "building_test_diffuse.dds"
+		texture_normal = "building_test_normal.dds"
+		texture_specular = "building_test_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "western_fortress|Decal_Size10|Decal_Size10Shape"
+		index = 0
+		texture_diffuse = "decal_building_windmill_a_diffuse.dds"
+		texture_normal = "decal_building_windmill_a_normal.dds"
+		texture_specular = "decal_building_windmill_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "western_fortress_entity"
+	pdxmesh = "western_fortress_mesh"
+}

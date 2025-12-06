@@ -1,0 +1,810 @@
+﻿characters_regular_interior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	   list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	   list = "vfx_mist"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims" #schematic
+		pdxmesh = "midground2_mesh" #mesh
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "characters_regular"
+		uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	}
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_regular_exterior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "vfx_mist"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims" #schematic
+		pdxmesh = "midground2_mesh" #mesh
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "characters_regular"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_happy_exterior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "happy_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims" #schematic
+		pdxmesh = "midground2_mesh" #mesh
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "characters_happy"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {2 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 93
+	}
+}
+
+characters_happy_interior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "happy_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims" #schematic
+		pdxmesh = "midground2_mesh" #mesh
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "characters_happy"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_angry_interior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "angry_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground2_mesh"
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "characters_angry"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+
+	#4 the best camera ever
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_angry_exterior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "angry_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_paint"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims" #schematic
+		pdxmesh = "midground2_mesh" #mesh
+		list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+		list = "characters_angry"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_armed_interior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "angry_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_mist"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground2_mesh"
+		list = "characters_armed"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+characters_armed_exterior = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "frontobjects_exterior"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+	    list = "angry_effect"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+		list = "vfx_mist"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground2_mesh"
+		list = "characters_armed"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background1_mesh"
+	    list = "vfx_light"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+#####SCENES OF GOODS #######
+
+scene_goods = {
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground1_mesh"
+	    list = "goods1"
+	}
+	
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "foreground2_mesh"
+		list = "vfx_mist"
+	}
+	ecs_illustration_image = {
+		name = "illustration_override_anims"
+		pdxmesh = "midground1_mesh"
+	    list = "goods2"
+	}
+
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {3 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 130
+	}
+	# camera = {
+	# 	camera_near_far = {0.14 100000} #xyz
+	# 	camera_position = {4 -10 0}
+	# 	camera_look_at = {0 -10 0}
+	# 	camera_fov_y_degrees = 92
+	# }
+}
+
+##### SCENES WITH LOCATION AS BCKG
+#We need to update location layers after location_scene is updated
+
+characters_regular_location = {
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "foreground1_mesh"
+	#     list = "mood_effect"
+	# }
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "foreground2_mesh"
+	#     list = "characters_regular"
+	# }
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "midground1_mesh"
+	#     list = "vfx_light"
+	# }
+
+	ecs_illustration_image = {
+		# Layer 01 - WEATHER
+		name = "illustration_override"
+		pdxmesh = "location1_mesh"
+		list = "weather"
+		uv_random_seed = 39481
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	ecs_illustration_image = {
+		# Layer 02 - STATUS
+		name = "illustration_override"
+		pdxmesh = "location2_mesh"
+		list = "status"
+		#uv_random_seed = 394
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 03 - RAW GOODS
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location3_mesh"
+	# 	list = "raw_goods"
+	# 	uv_random_seed = 3949
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+	# ecs_illustration_image = {
+	# 	# Layer 04 - ROADS
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location4_mesh"
+	# 	list = "roads"
+	# 	#uv_random_seed = 39484
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 05 - GROUND 1
+		name = "illustration_override"
+		pdxmesh = "location5_mesh"
+		list = "ground1"
+		uv_random_seed = 39728
+		#uv_move_speed = { -0.11 0.11 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.11
+	}
+
+	ecs_illustration_image = {
+		# Layer 06 - FX
+		name = "illustration_override"
+		pdxmesh = "location6_mesh"
+		list = "location_fx"
+		uv_random_seed = 39486
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 7 - DOCK
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location7_mesh"
+	# 	list = "dock"
+	# 	uv_random_seed = 3943
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 8 - WATER
+		name = "illustration_override"
+		pdxmesh = "location8_mesh"
+		list = "water"
+		uv_random_seed = 3943
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 9 - GROUND 2 (optional)
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location9_mesh"
+	# 	list = "ground2"
+	# 	uv_random_seed = 3948
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 10 - SETTLEMENT 1
+		name = "illustration_override"
+		pdxmesh = "location10_mesh"
+		list = "settlement1"
+		uv_random_seed = 39541
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 11 - FORTIFICATIONS
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location11_mesh"
+	# 	list = "fortifications"
+	# 	uv_random_seed = 39489
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	# ecs_illustration_image = {
+	# 	# Layer 12 - FACTORIES
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location12_mesh"
+	# 	list = "factories"
+	# 	uv_random_seed = 39487
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	# ecs_illustration_image = {
+	# 	# Layer 13 - RELIGIOUS BUILDINGS
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location13_mesh"
+	# 	list = "religious_buildings"
+	# 	uv_random_seed = 39487
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 14 - SETTLEMENT 2
+		name = "illustration_override"
+		pdxmesh = "location14_mesh"
+		list = "settlement2"
+		uv_random_seed = 39487
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	ecs_illustration_image = {
+		# Layer 15 - GROUND 3
+		name = "illustration_override"
+		pdxmesh = "location15_mesh"
+		list = "ground3"
+		uv_random_seed = 394875
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 16 - WEATHER
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location16_mesh"
+	# 	list = "weather"
+	# 	#resize_behaviour = ResizeToViewport
+	# 	uv_random_seed = 39487
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 17 - TOPOLOGY
+		name = "illustration_override"
+		pdxmesh = "location17_mesh"
+		list = "topology"
+		uv_random_seed = 39499
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	ecs_illustration_image = {
+		# Layer 18 - SKY
+		name = "illustration_override"
+		pdxmesh = "location18_mesh"
+		list = "skyv2"
+		uv_random_seed = 39487
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.15 100000} #xyz
+		camera_position = {167 -17 0}
+		camera_look_at = {0 -16 0}
+		camera_fov_y_degrees = 18
+	}
+}
+
+
+#OLD leaving there for a bit
+# event_location_test = {
+# 	ecs_illustration_image = {
+# 		name = "illustration_override_anims"
+# 		pdxmesh = "foreground1_mesh"
+# 	    list = "fo_testtest"
+# 	}
+
+# 	ecs_illustration_image = {
+# 		name = "illustration_override_anims"
+# 		pdxmesh = "background1_mesh"
+# 	    list = "characters_testtest"
+# 	}
+
+# 	# ecs_illustration_image = {
+# 	# 	name = "illustration_override_anims"
+# 	# 	pdxmesh = "background2_mesh"
+# 	#     list = "vfx_testtest"
+# 	# }
+
+# 	# ecs_illustration_image = {
+# 	# 	# Layer 01 - WEATHER
+# 	# 	name = "illustration_override"
+# 	# 	pdxmesh = "location1_mesh"
+# 	# 	list = "weather"
+# 	# 	#resize_behaviour = ResizeToViewport
+# 	# 	uv_random_seed = 39481
+# 	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 	# 	#image_proportion = 0.31
+# 	# }
+
+# 	ecs_illustration_image = {
+# 		# Layer 04 - ROADS
+# 		name = "illustration_override"
+# 		pdxmesh = "location9_mesh"
+# 		list = "roads"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39484
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 05 - GROUND 1
+# 		name = "illustration_override"
+# 		pdxmesh = "location10_mesh"
+# 		list = "ground1"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39728
+# 		#uv_move_speed = { -0.11 0.11 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.11
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 06 - FX
+# 		name = "illustration_override"
+# 		pdxmesh = "location11_mesh"
+# 		list = "location_fx"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39486
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 7 - DOCK
+# 		name = "illustration_override"
+# 		pdxmesh = "location12_mesh"
+# 		list = "dock"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 3948
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 8 - WATER
+# 		name = "illustration_override"
+# 		pdxmesh = "location13_mesh"
+# 		list = "water"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 3948
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 9 - GROUND 2 (optional)
+# 		name = "illustration_override"
+# 		pdxmesh = "location14_mesh"
+# 		list = "ground2"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 10 - SETTLEMENT 1
+# 		name = "illustration_override"
+# 		pdxmesh = "location15_mesh"
+# 		list = "settlement1"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 3954
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 11 - FORTIFICATIONS
+# 		name = "illustration_override"
+# 		pdxmesh = "location16_mesh"
+# 		list = "fortifications"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 12 - FACTORIES
+# 		name = "illustration_override"
+# 		pdxmesh = "location17_mesh"
+# 		list = "factories"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 13 - RELIGIOUS BUILDINGS
+# 		name = "illustration_override"
+# 		pdxmesh = "location18_mesh"
+# 		list = "religious_buildings"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 14 - SETTLEMENT 2
+# 		name = "illustration_override"
+# 		pdxmesh = "location19_mesh"
+# 		list = "settlement2"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 15 - GROUND 3
+# 		name = "illustration_override"
+# 		pdxmesh = "location20_mesh"
+# 		list = "ground3"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 16 - WEATHER
+# 		name = "illustration_override"
+# 		pdxmesh = "location21_mesh"
+# 		list = "weather"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 17 - TOPOLOGY
+# 		name = "illustration_override"
+# 		pdxmesh = "location22_mesh"
+# 		list = "topology"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39496
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	ecs_illustration_image = {
+# 		# Layer 18 - SKY
+# 		name = "illustration_override"
+# 		pdxmesh = "location23_mesh"
+# 		list = "skyv2"
+# 		#resize_behaviour = ResizeToViewport
+# 		uv_random_seed = 39487
+# 		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+# 		#image_proportion = 0.31
+# 	}
+
+# 	gfx_environment_file = "gfx/illustrations/environment2.txt"
+# 	camera = {
+# 		camera_near_far = {0.15 100000} #xyz
+# 		camera_position = {167 -17 0}
+# 		camera_look_at = {0 -16 0}
+# 		camera_fov_y_degrees = 18
+# 	}
+# }
+
+
+#other camera setups
+
+	# #3 in between 1 and 2
+	# camera = {
+	# 	camera_near_far = {0.15 100000} #xyz
+	# 	camera_position = {34 -10 0}
+	# 	camera_look_at = {0 -10 0}
+	# 	camera_fov_y_degrees = 59
+	# }
+
+	#2 flatter perspective
+	# camera = {
+	# 	camera_near_far = {0.15 100000} #xyz
+	# 	camera_position = {157 -10 0}
+	# 	camera_look_at = {0 -10 0}
+	# 	camera_fov_y_degrees = 23
+	# }
+
+	#1 nice frontobjects revealing scene effect
+	# camera = {
+	# 	camera_near_far = {0.15 10000} #xyz
+	# 	camera_position = {1 -10 0}
+	# 	camera_look_at = {0 -10 0}
+	# 	camera_fov_y_degrees = 94
+	# }
+
+	#last one used
+	# camera = {
+# 	camera_near_far = {0.14 100000} #xyz
+# 	camera_position = {5 -10 0}
+# 	camera_look_at = {0 -10 0}
+# 	camera_fov_y_degrees = 87
+# }

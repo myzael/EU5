@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_camelry_auxiliary_mesh"
+	file = "unit_camelry_auxiliary.mesh"
+
+	meshsettings = {
+		name = "unit_camelry_auxiliaryShape"
+		index = 0
+		texture_diffuse = "unit_camelry_camel_auxiliary_diffuse.dds"
+		texture_normal = "unit_camelry_camel_auxiliary_normal.dds"
+		texture_specular = "unit_camelry_camel_auxiliary_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_camelry_camel_auxiliary_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

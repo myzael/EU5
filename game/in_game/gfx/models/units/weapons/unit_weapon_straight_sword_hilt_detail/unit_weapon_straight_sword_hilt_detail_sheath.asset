@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_straight_sword_hilt_detail_sheath_mesh"
+	file = "unit_weapon_straight_sword_hilt_detail_sheath.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_straight_sword_hilt_detail_sheathShape"
+		index = 0
+		texture_diffuse = "unit_weapon_straight_sword_hilt_detail_diffuse.dds"
+		texture_normal = "unit_weapon_straight_sword_hilt_detail_normal.dds"
+		#texture_specular = "unit_hat_straw_hat_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_straight_sword_hilt_detail_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

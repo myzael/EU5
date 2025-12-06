@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "cargo_cloves_mesh"
+	file = "cargo_cloves.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "cargo_cloves_lod0Shape"
+		index = 0
+		texture_diffuse = "cargo_cloves_diffuse.dds"
+		texture_normal = "cargo_cloves_normal.dds"
+		texture_specular = "cargo_cloves_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|cargo_cloves_lod1|cargo_cloves_lod1|cargo_cloves_lod1Shap"
+		index = 0
+		texture_diffuse = "cargo_cloves_diffuse.dds"
+		texture_normal = "cargo_cloves_normal.dds"
+		texture_specular = "cargo_cloves_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_cloves_lod2|cargo_cloves_lod1|cargo_cloves_lod1Shape"
+		index = 0
+		texture_diffuse = "cargo_cloves_diffuse.dds"
+		texture_normal = "cargo_cloves_normal.dds"
+		texture_specular = "cargo_cloves_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_cloves_entity"
+	pdxmesh = "cargo_cloves_mesh"
+}

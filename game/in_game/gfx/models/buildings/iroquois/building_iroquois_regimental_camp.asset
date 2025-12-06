@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "building_iroquois_regimental_camp_mesh"
+	file = "building_iroquois_regimental_camp.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_diffuse.dds"
+		texture_normal = "building_iroquois_regimental_camp_normal.dds"
+		texture_specular = "building_iroquois_regimental_camp_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_diffuse.dds"
+		texture_normal = "building_iroquois_regimental_camp_normal.dds"
+		texture_specular = "building_iroquois_regimental_camp_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_diffuse.dds"
+		texture_normal = "building_iroquois_regimental_camp_normal.dds"
+		texture_specular = "building_iroquois_regimental_camp_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_regimental_camp_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_regimental_camp_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_iroquois_regimental_camp_entity"
+	pdxmesh = "building_iroquois_regimental_camp_mesh"
+}

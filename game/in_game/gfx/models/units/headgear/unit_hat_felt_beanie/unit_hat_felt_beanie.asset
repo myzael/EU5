@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "unit_hat_felt_beanie_mesh"
+	file = "unit_hat_felt_beanie.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2.0 }
+		lod = { index = 2 percent = 1 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_felt_beanie_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hat_felt_beanie_diffuse.dds"
+		texture_normal = "unit_hat_felt_beanie_normal.dds"
+		#texture_specular = "unit_hat_felt_beanie_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_felt_beanie_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hat_felt_beanie_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_hat_felt_beanie_diffuse.dds"
+		texture_normal = "unit_hat_felt_beanie_normal.dds"
+		#texture_specular = "unit_hat_felt_beanie_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_felt_beanie_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_felt_beanie_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_hat_felt_beanie_diffuse.dds"
+		texture_normal = "unit_hat_felt_beanie_normal.dds"
+		#texture_specular = "unit_hat_felt_beanie_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_felt_beanie_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

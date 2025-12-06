@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_sword_leather_hilt_mesh"
+	file = "unit_weapon_sword_leather_hilt.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_sword_leather_hiltShape"
+		index = 0
+		texture_diffuse = "unit_sword_leather_hilt_diffuse.dds"
+		texture_normal = "unit_sword_leather_hilt_normal.dds"
+#		texture_specular = "unit_sword_leather_hilt_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_sword_leather_hilt_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

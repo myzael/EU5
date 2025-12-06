@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "resources_spices_raw_b_mesh"
+	file = "resources_spices_raw_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_spices_diffuse.dds"
+		texture_normal = "resource_spices_normal.dds"
+		texture_specular = "resource_spices_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b|LOD_0|resources_spices_raw_b_lod0|resour"
+		index = 0
+		texture_diffuse = "resources_spices_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_spices_raw_b_decal_normal.dds"
+		texture_specular = "resources_spices_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b|LOD_1|resources_spices_raw_b_lod1|resour"
+		index = 0
+		texture_diffuse = "resources_spices_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_spices_raw_b_decal_normal.dds"
+		texture_specular = "resources_spices_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_spices_diffuse.dds"
+		texture_normal = "resource_spices_normal.dds"
+		texture_specular = "resource_spices_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b|LOD_2|resources_spices_raw_b_lod2|resour"
+		index = 0
+		texture_diffuse = "resources_spices_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_spices_raw_b_decal_normal.dds"
+		texture_specular = "resources_spices_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resources_spices_raw_b_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_spices_diffuse.dds"
+		texture_normal = "resource_spices_normal.dds"
+		texture_specular = "resource_spices_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resources_spices_raw_b_entity"
+	pdxmesh = "resources_spices_raw_b_mesh"
+}

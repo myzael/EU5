@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_leather_mesh"
+	file = "cargo_leather.mesh"
+
+	meshsettings = {
+		name = "cargo_leatherShape"
+		index = 0
+		texture_diffuse = "cargo_leather_diffuse.dds"
+		texture_normal = "cargo_leather_normal.dds"
+		texture_specular = "cargo_leather_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_leather_entity"
+	pdxmesh = "cargo_leather_mesh"
+}

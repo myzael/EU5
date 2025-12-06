@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_stick_snake_mesh"
+	file = "unit_weapon_stick_snake.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_stick_snakeShape"
+		index = 0
+		texture_diffuse = "unit_weapon_stick_snake_diffuse.dds"
+		texture_normal = "unit_weapon_stick_snake_normal.dds"
+		#texture_specular = "unit_weapon_stick_snake_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_stick_snake_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

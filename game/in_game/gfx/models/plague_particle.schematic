@@ -1,0 +1,38 @@
+﻿name="78565c92-50bb-47f4-9cb7-81234c697d6b"
+graph={
+	nodes={
+		pdxns:ecs:assemble_entity={
+			id=1
+			node={
+			}
+			inputs={
+				link={
+					pin_id="components"
+					linked_node=2
+					linked_pin="particle_emitter"
+				}
+			}
+		}
+		pdxns:ecs:create_particle_component={
+			id=2
+			node={
+				value="environment/plague"
+			}
+			inputs={
+				link={
+					pin_id="enabled"
+					linked_node=0
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:values:Bool={
+			id=0
+			node={
+				value=yes
+			}
+			inputs={
+			}
+		}
+	}
+}

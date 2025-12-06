@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "boy_hair_chinese_front_small_bun_mesh"
+	file = "boy_hair_chinese_front_small_bun.mesh"
+
+	meshsettings = {
+		name = "boy_hair_chinese_front_small_bunShape"
+		index = 0
+		texture_diffuse = "male_hair_long_no_highlights_band_diffuse.dds"
+		texture_normal = "female_hair_long_a_normal.dds"
+		texture_specular = "male_hair_long_no_highlights_band_properties.dds"
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "boy_hair_chinese_front_small_bun_entity"
+	pdxmesh = "boy_hair_chinese_front_small_bun_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

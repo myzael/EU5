@@ -1,0 +1,296 @@
+pdxmesh = {
+	name = "ship_heavy_05_european_twodecker_mesh"
+	file = "ship_heavy_05_european_twodecker.mesh"
+	animation = { id = "idle_animation" type = "ship_heavy_05_european_twodecker_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_heavy_05_european_twodecker_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_heavy_05_european_twodecker_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_heavy_05_european_twodecker_moving.anim" }
+	lod_percentages = {
+		lod = { index = 1 percent = inf }
+		lod = { index = 2 percent = inf }
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_heavy_05_european_twodecker|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_heavy_05_european_twodecker|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_heavy_05_european_twodecker|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_heavy_05_european_twodecker|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_heavy_05_european_twodecker|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_heavy_05_european_twodecker|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_heavy_05_european_twodecker|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_heavy_5_european_twodecker_diffuse.dds"
+		texture_normal = "ship_heavy_5_european_twodecker_normal.dds"
+		texture_specular = "ship_heavy_5_european_twodecker_properties.dds"
+		texture = { file = "ship_heavy_5_european_twodecker_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_heavy_05_european_twodecker|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_heavy_5_european_twodecker_diffuse.dds"
+		texture_normal = "ship_heavy_5_european_twodecker_normal.dds"
+		texture_specular = "ship_heavy_5_european_twodecker_properties.dds"
+		texture = { file = "ship_heavy_5_european_twodecker_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_heavy_05_european_twodecker|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_heavy_5_european_twodecker_diffuse.dds"
+		texture_normal = "ship_heavy_5_european_twodecker_normal.dds"
+		texture_specular = "ship_heavy_5_european_twodecker_properties.dds"
+		texture = { file = "ship_heavy_5_european_twodecker_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_heavy_05_european_twodecker_entity"
+	pdxmesh = "ship_heavy_05_european_twodecker_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+		event = {
+            entity_editor_id = "1"
+            time = 2.214
+            node = "cannon_door_right_lct_001"
+            keep_particle = yes
+            particle = "cannon_explosion_v3"
+        }
+	
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.254
+            node = "cannon_door_right_lct_002"
+            keep_particle = yes
+            particle = "cannon_explosion_v3"
+        }
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.314
+            node = "cannon_door_right_lct_003"
+            keep_particle = yes
+            particle = "cannon_explosion_v3"
+        }
+		
+				
+		event = {
+            entity_editor_id = "1"
+            time = 2.354
+            node = "cannon_door_right_lct_004"
+            keep_particle = yes
+            particle = "cannon_explosion_v3"
+        }
+		
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.414
+            node = "cannon_door_right_lct_005"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.454
+            node = "cannon_door_right_lct_006"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+				
+		event = {
+            entity_editor_id = "1"
+            time = 2.514
+            node = "cannon_door_right_lct_007"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.524
+            node = "cannon_door_right_lct_015"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.554
+            node = "cannon_door_right_lct_008"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.564
+            node = "cannon_door_right_lct_014"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.614
+            node = "cannon_door_right_lct_009"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.624
+            node = "cannon_door_right_lct_013"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.654
+            node = "cannon_door_right_lct_010"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.664
+            node = "cannon_door_right_lct_012"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.714
+            node = "cannon_door_right_lct_011"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+	}
+	#attach = { ensign_flag_lctr = "ship_flag_entity" }
+	#attach = { mainmast_flag_lctr = "ship_flag_entity" }
+	#attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+	#attach = { cannon_door_left_lct_001 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_002 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_003 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_004 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_005 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_006 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_007 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_008 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_009 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_010 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_011 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_012 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_013 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_014 = "cannon_door_left_entity" }
+	#attach = { cannon_door_left_lct_015 = "cannon_door_left_entity" }	
+	#attach = { cannon_door_right_lct_001 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_002 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_003 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_004 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_005 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_006 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_007 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_008 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_009 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_010 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_011 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_012 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_013 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_014 = "cannon_door_right_entity" }
+	#attach = { cannon_door_right_lct_015 = "cannon_door_right_entity" }	
+}

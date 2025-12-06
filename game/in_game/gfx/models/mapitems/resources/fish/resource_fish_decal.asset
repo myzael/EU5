@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "resource_fish_decal_mesh"
+	file = "resource_fish_decal.mesh"
+
+
+	animation = { id = "idle_animation" type = "resource_fish_decal_idle.anim" }
+
+	meshsettings = {
+		name = "fish_meshesShape"
+		index = 0
+		texture_diffuse = "raw_resources_fish_diffuse.dds"
+		texture_normal = "raw_resources_fish_normal.dds"
+		texture_specular = "raw_resources_fish_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+

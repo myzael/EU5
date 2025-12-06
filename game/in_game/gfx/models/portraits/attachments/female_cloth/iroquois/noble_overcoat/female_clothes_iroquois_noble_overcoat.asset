@@ -1,0 +1,40 @@
+﻿pdxmesh = {
+	name = "female_clothes_iroquois_noble_overcoat_mesh"
+	file = "female_clothes_iroquois_noble_overcoat.mesh"
+
+	meshsettings = {
+		name = "female_clothes_iroquois_noble_overcoatShape"
+		index = 0
+		texture_diffuse = "female_clothes_iroquois_noble_overcoat_diffuse.dds"
+		texture_normal = "female_clothes_iroquois_noble_overcoat_normal.dds"
+		texture_specular = "female_clothes_iroquois_noble_overcoat_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_iroquois_noble_overcoat_entity"
+	pdxmesh = "female_clothes_iroquois_noble_overcoat_mesh"
+}
+
+# Common
+pdxmesh = {
+	name = "female_clothes_iroquois_common_overcoat_mesh"
+	file = "female_clothes_iroquois_common_overcoat.mesh"
+
+	meshsettings = {
+		name = "female_clothes_iroquois_common_overcoatShape"
+		index = 0
+		texture_diffuse = "female_clothes_iroquois_noble_overcoat_diffuse.dds"
+		texture_normal = "female_clothes_iroquois_noble_overcoat_normal.dds"
+		texture_specular = "female_clothes_iroquois_noble_overcoat_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_iroquois_common_overcoat_entity"
+	pdxmesh = "female_clothes_iroquois_common_overcoat_mesh"
+}

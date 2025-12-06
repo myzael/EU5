@@ -1,0 +1,64 @@
+pdxmesh = {
+	name = "vegetation_tree_test_mesh"
+	file = "vegetation_tree_test.mesh"
+	scale = 2
+
+	meshsettings = {
+		name = "pPlaneShape2"
+		index = 0
+		texture_diffuse =  "billboard_test_diffuse.dds"
+		texture_normal =   "billboard_test_normal.dds"
+		texture_specular = "billboard_test_properties.dds"
+		texture = { file = "tint_forest_with_terrain.dds" index = 3 srgb = yes }
+		#texture = { file = "oceanic_tint.dds" index = 3 srgb = yes }
+		shader = "billboard_test"
+		shader_file = "gfx/FX/tree.shader"
+		additional_shader_defines = { "BILLBOARD_SCALE_CORRECTION 0.76702f * 2.0f" } #0.76702 because this particular mesh had that difference between UV and Position, 2.0 because of scale = 2.0 further down
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" }
+	}
+
+	meshsettings = {
+		name = "pasted__pCylinderShape6"
+		index = 0
+		#texture_diffuse =  "billboard_test_diffuse.dds"
+		#texture_normal =   "billboard_test_normal.dds"
+		#texture_specular = "billboard_test_properties.dds"
+        texture_diffuse = "tree_wood_diffuse.dds"
+        texture_normal = "tree_wood_normal.dds"
+        texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" }
+	}
+	scale = 2.0
+}
+
+entity = {
+	name = "vegetation_tree_test_entity"
+	pdxmesh = "vegetation_tree_test_mesh"
+	scale = 2.5
+}
+entity = {
+	name = "vegetation_tree_test_debug_entity"
+	cull_radius = 20
+	
+	@spacing = 10
+	@rot = 45
+	locator = { name = l0 position = { @[spacing * 0] 0 0 } rotation = { @[rot * 0] 0 0 } }
+	locator = { name = l1 position = { @[spacing * 1] 0 0 } rotation = { @[rot * 1] 0 0 } }
+	locator = { name = l2 position = { @[spacing * 2] 0 0 } rotation = { @[rot * 2] 0 0 } }
+	locator = { name = l3 position = { @[spacing * 3] 0 0 } rotation = { @[rot * 3] 0 0 } }
+	locator = { name = l4 position = { @[spacing * 4] 0 0 } rotation = { @[rot * 4] 0 0 } }
+	locator = { name = l5 position = { @[spacing * 5] 0 0 } rotation = { @[rot * 5] 0 0 } }
+	locator = { name = l6 position = { @[spacing * 6] 0 0 } rotation = { @[rot * 6] 0 0 } }
+	locator = { name = l7 position = { @[spacing * 7] 0 0 } rotation = { @[rot * 7] 0 0 } }
+	
+	attach = { l0 = vegetation_tree_test_entity }
+	attach = { l1 = vegetation_tree_test_entity }
+	attach = { l2 = vegetation_tree_test_entity }
+	attach = { l3 = vegetation_tree_test_entity }
+	attach = { l4 = vegetation_tree_test_entity }
+	attach = { l5 = vegetation_tree_test_entity }
+	attach = { l6 = vegetation_tree_test_entity }
+	attach = { l7 = vegetation_tree_test_entity }
+}

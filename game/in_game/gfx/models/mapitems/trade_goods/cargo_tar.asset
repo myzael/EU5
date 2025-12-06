@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_tar_mesh"
+	file = "cargo_tar.mesh"
+
+	meshsettings = {
+		name = "cargo_tarShape"
+		index = 0
+		texture_diffuse = "cargo_tar_diffuse.dds"
+		texture_normal = "cargo_tar_normal.dds"
+		texture_specular = "cargo_tar_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_tar_entity"
+	pdxmesh = "cargo_tar_mesh"
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_backpack_blankets_leather_straps_mesh"
+	file = "unit_backpack_blankets_leather_straps.mesh"
+
+	meshsettings = {
+		name = "unit_backpack_blankets_leather_strapsShape"
+		index = 0
+		texture_diffuse = "unit_backpack_blankets_leather_straps_diffuse.dds"
+		texture_normal = "unit_backpack_blankets_leather_straps_normal.dds"
+#		texture_specular = "unit_backpack_blankets_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_backpack_blankets_leather_straps_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

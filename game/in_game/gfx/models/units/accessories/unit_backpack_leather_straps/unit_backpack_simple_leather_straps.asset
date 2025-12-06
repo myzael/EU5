@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_backpack_simple_leather_straps_mesh"
+	file = "unit_backpack_simple_leather_straps.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_backpack_simple_leather_straps_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_backpack_simple_leather_straps_diffuse.dds"
+		texture_normal = "unit_backpack_simple_leather_straps_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_backpack_simple_leather_straps_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_backpack_simple_leather_straps_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_backpack_simple_leather_straps_diffuse.dds"
+		texture_normal = "unit_backpack_simple_leather_straps_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_backpack_simple_leather_straps_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_backpack_simple_leather_straps_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_backpack_simple_leather_straps_diffuse.dds"
+		texture_normal = "unit_backpack_simple_leather_straps_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_backpack_simple_leather_straps_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

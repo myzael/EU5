@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "illustration_005_mesh"
+	file = "illustration_005.mesh"
+
+	meshsettings = {
+		name = "illustration_005Shape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_005_entity"
+	pdxmesh = "illustration_005_mesh"
+}

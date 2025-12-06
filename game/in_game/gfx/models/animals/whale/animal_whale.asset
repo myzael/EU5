@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "animal_whale_mesh"
+	file = "animal_whale.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "animal_whale_idle_animation" type = "animal_whale_animal_whale_idle.anim" }
+
+	meshsettings = {
+		name = "LOD_0|animal_whale_lod0|animal_whale_lod0|animal_whale_lod0Shap"
+		index = 0
+		texture_diffuse = "animal_whale_diffuse.dds"
+		texture_normal = "animal_whale_normal.dds"
+		texture_specular = "animal_whale_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "standard_no_city"
+	}
+
+	meshsettings = {
+		name = "animal_whale_lod1|animal_whale_lod0|animal_whale_lod0Shape"
+		index = 0
+		texture_diffuse = "animal_whale_diffuse.dds"
+		texture_normal = "animal_whale_normal.dds"
+		texture_specular = "animal_whale_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "standard_no_city"
+	}
+
+	meshsettings = {
+		name = "animal_whale_lod2|animal_whale_lod0|animal_whale_lod0Shape"
+		index = 0
+		texture_diffuse = "animal_whale_diffuse.dds"
+		texture_normal = "animal_whale_normal.dds"
+		texture_specular = "animal_whale_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "standard_no_city"
+	}
+}
+
+entity = {
+	name = "animal_whale_entity"
+	pdxmesh = "animal_whale_mesh"
+
+	default_state = "animal_whale_idle"
+	state = {
+		name = "animal_whale_idle"
+		animation = "animal_whale_idle_animation"
+	}
+}

@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "decal_landscape_a_mesh"
+	file = "sm_decal.mesh"
+	scale = 0.33
+
+	meshsettings = {
+		name = "sm_decals_test1Shape"
+		index = 0
+		texture_diffuse = "decal_landscape_a_diffuse.dds"
+		texture_normal = "decal_landscape_a_normal.dds"
+		texture_specular = "decal_landscape_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_landscape_a_entity"
+	pdxmesh = "decal_landscape_a_mesh"
+}

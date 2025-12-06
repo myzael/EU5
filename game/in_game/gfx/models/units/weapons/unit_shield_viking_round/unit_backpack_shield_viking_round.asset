@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_backpack_shield_viking_round_mesh"
+	file = "unit_backpack_shield_viking_round.mesh"
+
+	meshsettings = {
+		name = "unit_backpack_shield_viking_roundShape"
+		index = 0
+		texture_diffuse = "unit_shield_viking_round_diffuse.dds"
+		texture_normal = "unit_shield_viking_round_normal.dds"
+		#texture_specular = "unit_hat_straw_hat_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_shield_viking_round_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

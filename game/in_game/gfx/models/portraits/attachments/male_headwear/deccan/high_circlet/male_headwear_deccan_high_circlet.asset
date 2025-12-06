@@ -1,0 +1,19 @@
+﻿pdxmesh = {
+	name = "male_headwear_deccan_high_circlet_mesh"
+	file = "male_headwear_deccan_high_circlet.mesh"
+
+	meshsettings = {
+		name = "male_headwear_deccan_high_circletShape"
+		index = 0
+		texture_diffuse = "male_headwear_deccan_high_circlet_diffuse.dds"
+		texture_normal = "male_headwear_deccan_high_circlet_normal.dds"
+		texture_specular = "male_headwear_deccan_high_circlet_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_deccan_high_circlet_entity"
+	pdxmesh = "male_headwear_deccan_high_circlet_mesh"
+}

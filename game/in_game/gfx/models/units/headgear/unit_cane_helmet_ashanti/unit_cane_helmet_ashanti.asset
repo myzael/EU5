@@ -1,0 +1,47 @@
+pdxmesh = {
+	name = "unit_cane_helmet_ashanti_mesh"
+	file = "unit_cane_helmet_ashanti.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_cane_helmet_ashanti_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_cane_helmet_ashanti_diffuse.dds"
+		texture_normal = "unit_cane_helmet_ashanti_normal.dds"
+		#texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cane_helmet_ashanti_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cane_helmet_ashanti_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_cane_helmet_ashanti_diffuse.dds"
+		texture_normal = "unit_cane_helmet_ashanti_normal.dds"
+		#texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cane_helmet_ashanti_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cane_helmet_ashanti_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_cane_helmet_ashanti_diffuse.dds"
+		texture_normal = "unit_cane_helmet_ashanti_normal.dds"
+		#texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cane_helmet_ashanti_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+entity = {
+	name = "unit_cane_helmet_ashanti_entity"
+	pdxmesh = "unit_cane_helmet_ashanti_mesh"
+}

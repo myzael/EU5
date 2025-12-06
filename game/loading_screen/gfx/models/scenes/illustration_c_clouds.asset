@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "illustration_c_clouds_mesh"
+	file = "illustration_c_clouds.mesh"
+
+	meshsettings = {
+		name = "illustration_c_clouds|illustration_b_clouds|illustration_b_clou"
+		index = 0
+		texture_diffuse = "illustration_C_backclouds.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_c_clouds_entity"
+	pdxmesh = "illustration_c_clouds_mesh"
+}

@@ -1,0 +1,447 @@
+Event	ID	Name			Wwise Object Path	Notes
+	10661006	UI_panel_society_select			\ev_UI\panel\panel_left\society\UI_panel_society_select	
+	12010446	UI_button_press			\ev_UI\button\UI_button_press	
+	21508801	UI_previous			\ev_UI\navigation\UI_previous	hooked only on sound.gui as a template, USED AS  UI_BACKWARD - Leon 14/11/2024 - should be changed in the future to the same name for the template
+	31551915	UI_action_navy_train_admiral			\ev_UI\actions\UI_action_navy_train_admiral	
+	45484812	UI_panel_selectedMarket_show			\ev_UI\panel\panel_right\UI_panel_selectedMarket_show	
+	62122785	UI_hoverOff_shield			\ev_UI\mousePointer\UI_hoverOff_shield	hooked only on sound.gui as a template - Leon 18/09/2024
+	76864608	UI_alert_appear			\ev_UI\alerts\UI_alert_appear	
+	99965767	UI_event_age_3_discovery			\ev_UI\events\UI_event_age_3_discovery	hooked only on eventwindow.gui - Leon 18/09/2024
+	110231398	UI_action_advances_research_add			\ev_UI\actions\UI_action_advances_research_add	
+	136284562	UI_button_gameNew_confirm			\ev_UI\button\UI_button_gameNew_confirm	hooked in frontend_mainview.gui and frontend_singleplayer.gui with on_action
+	145257136	WE_PERFORM_train_admiral_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\military\WE_PERFORM_train_admiral_ACTION	
+	149459806	UI_action_character_mission_base_finished_success			\ev_UI\actions\UI_action_character_mission_base_finished_success	
+	171674646	UI_flow_exit_to_desktop			\ev_UI\flow\UI_flow_exit_to_desktop	
+	177127496	UI_action_character_marry_lowborn			\ev_UI\actions\UI_action_character_marry_lowborn	posted by jomini effect  FILE: marry_lowborn.txt
+	179426739	UI_panelChild_military_units_currentarmies_show			\ev_UI\panel\panel_left\military\UI_panelChild_military_units_currentarmies_show	
+	183167143	UI_unpause			\ev_UI\time\UI_unpause	hooked only on game_audio.h - Leon 18/09/2024
+	199633464	UI_building_construction_started			\ev_UI\panel\panel_left\production\UI_building_construction_started	
+	216067002	UI_confirm			\ev_UI\button\UI_confirm	hooked only on sound.gui as a template - Leon 18/09/2024
+	236525186	UI_contextmenu_show			\ev_UI\contextualmenu\UI_contextmenu_show	
+	237598328	UI_action_army_disband			\ev_UI\actions\UI_action_army_disband	
+	240951096	PARLIAMENT_PROMOTE_MAMLUKS			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_request\PARLIAMENT_PROMOTE_MAMLUKS	
+	244195801	UI_map_location_select			\ev_UI\map\UI_map_location_select	
+	262855367	UI_popup_peace_message			\ev_UI\popup\popup_type\UI_popup_peace_message	
+	268562816	UI_window_problematic_hide			\ev_UI\window\UI_window_problematic_hide	hooked only on sound.gui as a template - Leon 18/09/2024
+	272763609	UI_save			\ev_UI\button\UI_save	Required code support because save button sometimes triggers a confirmation window (if save already exists with same name), so we need it to trigger when the save actually happens (not on the button).
+	296199020	UI_panelChild_society_people_characters_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_characters_show	
+	308265597	UI_action_diplomacy_rival_remove			\ev_UI\actions\UI_action_diplomacy_rival_remove	
+	309422112	UI_action_estate_bribe			\ev_UI\actions\UI_action_estate_bribe	
+	325529056	UI_panelChild_diplomacy_relations_currentRelations_show			\ev_UI\panel\panel_left\diplomacy\UI_panelChild_diplomacy_relations_currentRelations_show	
+	340413352	UI_situation_end			\ev_UI\situation\UI_situation_end	
+	353950556	UI_panelAux_diplomacy_subjectType_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_subjectType_show	
+	369211234	UI_button_gameLoad_confirm			\ev_UI\button\UI_button_gameLoad_confirm	hooked in load_save_menu.gui with on_action
+	400741291	UI_popup_goods_message			\ev_UI\popup\popup_type\UI_popup_goods_message	
+	407375010	UI_action_army_raise_levies			\ev_UI\actions\UI_action_army_raise_levies	
+	420872380	UI_checkbutton_automation			\ev_UI\button\UI_checkbutton_automation	extra layer on top of default - Rob 14//01
+	430551011	PROMOTE_TO_HEAD_OF_CABINET			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_promote_to_head_of_cabinet\PROMOTE_TO_HEAD_OF_CABINET	posted by jomini effect FILE: promote_to_head_of_cabinet.txt 
+	437587123	UI_panel_diplomacy_relations_show			\ev_UI\panel\panel_left\diplomacy\UI_panel_diplomacy_relations_show	
+	442731214	UI_window_problematic_unmute			\ev_UI\window\UI_window_problematic_unmute	
+	483419467	UI_panel_government_modifiers_show			\ev_UI\panel\panel_left\government\UI_panel_government_modifiers_show	
+	516162189	UI_window_hide			\ev_UI\window\UI_window_hide	hooked only on sound.gui as a template - Leon 18/09/2024
+	517651860	UI_gameStart_flag_out			\ev_UI\startgame_sequence\UI_gameStart_flag_out	hooked in animation.gui with start_sound
+	542387104	UI_button_gameContinue			\ev_UI\button\UI_button_gameContinue	hooked in frontend_mainview.gui with clicksound and on_action
+	556718627	UI_messageLog			\ev_UI\notification\UI_messageLog	hooked only on sound.gui as a template - Leon 18/09/2024
+	562141476	UI_panelAux_recruitmentLocation_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_recruitmentLocation_show	
+	598708234	UI_button_exit_game			\ev_UI\button\UI_button_exit_game	
+	623256610	UI_military_build_army			\ev_UI\panel\panel_left\military\UI_military_build_army	
+	626312308	UI_action_government_reform_add			\ev_UI\actions\UI_action_government_reform_add	
+	627119789	playerAction_02_hi			\ev_logic\playerAction_02_hi	
+	639896982	UI_event_age_2_renaissance			\ev_UI\events\UI_event_age_2_renaissance	hooked only on eventwindow.gui - Leon 18/09/2024
+	641339107	UI_button_selectScenario			\ev_UI\button\UI_button_selectScenario	
+	642928406	UI_cursor_rightclick_hold_start			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_start	
+	668881734	UI_panelChild_government_country_cabinet_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_cabinet_show	
+	670611050	neutral			\ev_music\triggers\neutral	
+	676491974	UI_action_estate_privilege_remove			\ev_UI\actions\UI_action_estate_privilege_remove	
+	679238780	UI_panelChild_society_people_pops_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_pops_show	
+	692971584	UI_panel_geopolitics_maritime_show			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_maritime_show	
+	730670884	UI_action_character_appoint_explorer			\ev_UI\actions\UI_action_character_appoint_explorer	
+	732921526	UI_action_character_mission_base_finished			\ev_UI\actions\UI_action_character_mission_base_finished	
+	770510449	PARLIAMENT_ASK_FOR_LARGER_LEVIES			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_request\PARLIAMENT_ASK_FOR_LARGER_LEVIES	
+	780903572	UI_action_religion_aspect_remove			\ev_UI\actions\UI_action_religion_aspect_remove	posted by jomini effect  FILE: general_religion.txt
+	819126853	UI_action_cabinet_character			\ev_UI\actions\UI_action_cabinet_character	
+	830026844	UI_call_parliament			\ev_UI\panel\panel_left\government\UI_call_parliament	
+	831221832	UI_action_character_mission_base_start			\ev_UI\actions\UI_action_character_mission_base_start	
+	834355671	UI_unit_moveconfirm_valid			\ev_UI\unit_controls\UI_unit_moveconfirm_valid	hooked only on game_audio.h - Leon 18/09/2024
+	850370377	RIVAL_REMOVED_ON_US			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Diplomacy_Remove_Rival\RIVAL_REMOVED_ON_US	
+	867012588	UI_eventGeneric_interior			\ev_UI\events\UI_eventGeneric_interior	
+	876130536	UI_map_location_hoverOff			\ev_UI\map\UI_map_location_hoverOff	
+	885218819	UI_panel_stop_all			\ev_UI\panel\UI_panel_stop_all	hooked only on sound.gui as a template - Leon 18/09/2024
+	888438439	UI_eventGeneric_option_moral			\ev_UI\events\UI_eventGeneric_option_moral	hooked only on sound.gui as a template - Leon 18/09/2024
+	899914638	UI_advances_start			\ev_UI\panel\panel_left\advances\UI_advances_start	
+	902392867	UI_handGrab			\ev_UI\navigation\components\UI_handGrab	
+	909507097	UI_panel_economy_trading_show			\ev_UI\panel\panel_left\economy\UI_panel_economy_trading_show	
+	918626650	UI_event_age_5_absolutism			\ev_UI\events\UI_event_age_5_absolutism	hooked only on eventwindow.gui - Leon 18/09/2024
+	928159728	PARLIAMENT_REQUEST_MORE_TAXES			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_request\PARLIAMENT_REQUEST_MORE_TAXES	
+	938887944	UI_dropdown_expand			\ev_UI\window\UI_dropdown_expand	hooked on sound.gui as a template, and setting_types.gui - Leon 18/09/2024
+	946534558	UI_window_show			\ev_UI\window\UI_window_show	hooked only on sound.gui as a template - Leon 18/09/2024
+	952906500	UI_action_parliament_agenda_accept			\ev_UI\actions\UI_action_parliament_agenda_accept	
+	954538157	UI_action_cabinet_complete			\ev_UI\actions\UI_action_cabinet_complete	
+	954967518	UI_gameStart_generic			\ev_UI\startgame_sequence\UI_gameStart_generic	hooked in animation.gui with start_sound
+	961361117	UI_gameStart_gui_out			\ev_UI\startgame_sequence\UI_gameStart_gui_out	hooked in animation.gui with start_sound
+	974490823	UI_gameStart_cloud_out			\ev_UI\startgame_sequence\UI_gameStart_cloud_out	hooked in animation.gui with start_sound, also this starts the UI_gamespeed_clock_tick switch group
+	993150615	ADD_GOV_REFORM			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Government_reform_add\ADD_GOV_REFORM	
+	1008505108	UI_popup_character_message			\ev_UI\popup\popup_type\UI_popup_character_message	
+	1015178300	test_button_press			\ev_UI\test_button_press	THIS IS PURELY FOR TESTING EVENT TRIGGERS EASILY AND QUICKLY
+	1023201004	UI_lateralview_show			\ev_UI\panel\UI_lateralview_show	Tobey/Mattias confirmed this is being used  on snd_UI_lateralview, which is used on left panel, right panel, and some other "organisation" panel. We felt it best to have importance on this   hooked only on sound.gui as a template - Leon 18/09/2024
+	1029858532	UI_panelChild_diplomacy_organizations_greatPowers_show			\ev_UI\panel\panel_left\diplomacy\UI_panelChild_diplomacy_organizations_greatPowers_show	
+	1038349870	WE_PERFORM_remove_religious_aspect_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Religious_aspect_remove\WE_PERFORM_remove_religious_aspect_ACTION	
+	1054368490	UI_panelAux_government_reform_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_government_reform_show	
+	1056977043	UI_window_problematic_mute			\ev_UI\window\UI_window_problematic_mute	
+	1074263444	UI_popup_show			\ev_UI\popup\UI_popup_show	hooked only on sound.gui as a template - Leon 18/09/2024
+	1086422815	UI_action_cabinet_generic			\ev_UI\actions\UI_action_cabinet_generic	
+	1096100677	UI_panel_society_people_show			\ev_UI\panel\panel_left\society\UI_panel_society_people_show	
+	1126930679	UI_hoverOff			\ev_UI\mousePointer\UI_hoverOff	hooked only on sound.gui as a template - Leon 18/09/2024
+	1148777658	UI_event_bg_north_german_nobles_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_nobles_interior	
+	1168036015	WE_PERFORM_add_religious_aspect_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Religious_aspect_add\WE_PERFORM_add_religious_aspect_ACTION	
+	1177495437	UI_panel_government_select			\ev_UI\panel\panel_left\government\UI_panel_government_select	
+	1179637668	UI_cursor_rightclick_hold_finished			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_finished	
+	1183488787	IMPORTANT_CHAR_DEATH			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Relevant_character_death\IMPORTANT_CHAR_DEATH	
+	1186317872	UI_handRelease			\ev_UI\navigation\components\UI_handRelease	
+	1192865152	positive			\ev_music\triggers\positive	
+	1208050392	UI_action_balance_loan_repay			\ev_UI\actions\UI_action_balance_loan_repay	
+	1212464888	UI_diplomatic_action_economy			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_economy	
+	1215951942	UI_map_country_select			\ev_UI\map\UI_map_country_select	
+	1219435278	UI_advances_select			\ev_UI\panel\panel_left\advances\UI_advances_select	
+	1231370412	UI_panel_economy_select			\ev_UI\panel\panel_left\economy\UI_panel_economy_select	
+	1236781346	UI_gameStart_gui_in			\ev_UI\startgame_sequence\UI_gameStart_gui_in	hooked in animation.gui with start_sound
+	1247938609	UI_action_parliament_call			\ev_UI\actions\UI_action_parliament_call	
+	1260987865	UI_popup_ask_repay_loan_message			\ev_UI\popup\popup_type\UI_popup_ask_repay_loan_message	
+	1270256779	UI_action_navy_disband			\ev_UI\actions\UI_action_navy_disband	
+	1307813086	UI_action_building_build			\ev_UI\actions\UI_action_building_build	THIS IS A HARDCODED EVENT IN CODE - DO NOT CHANGE NAME  This event triggers when player opts to construct a building (both when selecting buildable position on map, and when choosing a building in the "build" window for a city/town)
+	1317259046	WE_PERFORM_train_general_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\military\WE_PERFORM_train_general_ACTION	
+	1340235632	UI_action_religion_generic			\ev_UI\actions\UI_action_religion_generic	
+	1367193261	UI_map_rotate_stop			\ev_UI\map\UI_map_rotate_stop	Should be in as per /CAESAR-16661
+	1368163639	UI_action_government_reform_remove			\ev_UI\actions\UI_action_government_reform_remove	
+	1369595247	UI_reject			\ev_UI\button\UI_reject	hooked only on sound.gui as a template - Leon 18/09/2024
+	1389577613	UI_clickRelease			\ev_UI\mousePointer\UI_clickRelease	hooked only on sound.gui as a template - Leon 18/09/2024
+	1390485418	UI_event_main			\ev_UI\events\UI_event_main	
+	1391202337	UI_eventGeneric			\ev_UI\events\UI_eventGeneric	hooked on sound.gui as a template and audio_ui.gui directly - Leon 18/09/2024
+	1402141287	LOAN_REPAID			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\LOAN_REPAID	
+	1403696543	UI_panelAux_diplomacy_macrobuilder_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_macrobuilder_show	
+	1403995457	UI_tooltip_show			\ev_UI\tooltip\UI_tooltip_show	hooked only on sound.gui as a template - Leon 18/09/2024
+	1412530009	UI_action_character_appoint_admiral			\ev_UI\actions\UI_action_character_appoint_admiral	
+	1423809008	UI_event_positive			\ev_UI\events\UI_event_positive	
+	1429158155	UI_alert_appear_yellow			\ev_UI\alerts\UI_alert_appear_yellow	
+	1471806109	UI_action_automate_enable			\ev_UI\actions\UI_action_automate_enable	
+	1483658475	UI_panelChild_economy_trading_trades_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_trades_show	
+	1487799759	UI_speedDecrease			\ev_UI\POTENTIALLY DEPRECATED POOL\UI_speedDecrease	hooked only on game_audio.h - Leon 18/09/2024
+	1498491076	WE_PERFORM_take_estate_loan_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_take\WE_PERFORM_take_estate_loan_ACTION	
+	1499424373	UI_panelChild_economy_trading_markets_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_markets_show	
+	1515078172	UI_checkbutton_default			\ev_UI\button\UI_checkbutton_default	hooked only on defaults.gui - Leon 18/09/2024
+	1517232631	UI_hoverOff_location			\ev_UI\mousePointer\UI_hoverOff_location	
+	1526230518	UI_panelChild_show			\ev_UI\panel\UI_panelChild_show	hooked only on sound.gui as a template - Leon 18/09/2024
+	1552825070	UI_panelChild_society_culture_cultureBreakdown_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_culture_cultureBreakdown_show	
+	1570422669	UI_alert_appear_purple			\ev_UI\alerts\UI_alert_appear_purple	
+	1590767404	UI_event_age_generic			\ev_UI\events\UI_event_age_generic	hooked only on sound.gui as a template - Leon 18/09/2024
+	1605671630	REMOVE_GOV_REFORM			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Government_reform_remove\REMOVE_GOV_REFORM	
+	1622888474	UI_tooltip_hide			\ev_UI\tooltip\UI_tooltip_hide	hooked only on sound.gui as a template - Leon 18/09/2024
+	1635175696	UI_event_age_option_military			\ev_UI\events\UI_event_age_option_military	hooked only on sound.gui as a template - Leon 18/09/2024
+	1647329596	UI_notify_advance_research_complete			\ev_UI\notification\UI_notify_advance_research_complete	This notification is triggered when research/advance is completed at the time it is completed.  This is not to be confused with the monthly tick variation of the idea of research being considered completed.  This is a hard-coded trigger  This event also sets the state group MonthlyTickResearchComplete to "Report_Research_Complete", which allows the relevant monthly tick report switch group actors to play it's corresponding update audio response when monthly_tick event is performed.   Note that monthly_tick event will then reset the state back to "default"
+	1664530709	UI_popup_confirm			\ev_UI\popup\UI_popup_confirm	hooked only on sound.gui as a template - Leon 18/09/2024
+	1669785477	UI_hover_flag			\ev_UI\mousePointer\UI_hover_flag	hooked only on sound.gui as a template - Leon 18/09/2024
+	1689358179	UI_map_pan_stop			\ev_UI\map\UI_map_pan_stop	Should be in as per /CAESAR-16661
+	1699203479	UI_panelChild_geopolitics_expansion_exploration_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_expansion_exploration_show	
+	1734456955	UI_speedIncrease			\ev_UI\POTENTIALLY DEPRECATED POOL\UI_speedIncrease	hooked only on game_audio.h - Leon 18/09/2024
+	1749140321	UI_next			\ev_UI\navigation\UI_next	hooked only on sound.gui as a template, USED AS UI_FORWARD - Leon 14/11/2024 - should be changed in the future to the same name for the template
+	1750337625	UI_panel_society_religion_show			\ev_UI\panel\panel_left\society\UI_panel_society_religion_show	
+	1755184239	PARLIAMENT_PREPARE_FOR_WAR			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_agenda_accepted\PARLIAMENT_PREPARE_FOR_WAR	
+	1756039486	UI_panelAux_rulingHistory_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_rulingHistory_show	
+	1782842345	UI_action_advances_research_remove			\ev_UI\actions\UI_action_advances_research_remove	
+	1787526607	UI_alert_discard			\ev_UI\alerts\UI_alert_discard	
+	1812021436	UI_action_balance_loan_take			\ev_UI\actions\UI_action_balance_loan_take	
+	1821335758	UI_eventGeneric_option_historical			\ev_UI\events\UI_eventGeneric_option_historical	hooked only on sound.gui as a template - Leon 18/09/2024
+	1823638194	UI_diplomatic_action_hostile			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_hostile	
+	1827843101	UI_flow_start_new_game			\ev_UI\flow\UI_flow_start_new_game	
+	1853441180	UI_alert_appear_red			\ev_UI\alerts\UI_alert_appear_red	
+	1859653464	UI_unit_hoverOn			\ev_UI\unit_controls\UI_unit_hoverOn	
+	1866827072	UI_panelAux_military_builder_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_military_builder_show	
+	1878216141	UI_button_exit_toMainMenu			\ev_UI\button\UI_button_exit_toMainMenu	
+	1886893979	UI_panel_geopolitics_expansion_show			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_expansion_show	
+	1892698290	LOAN_REPAID_TO_COUNTRY			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\LOAN_REPAID_TO_COUNTRY	
+	1896461989	UI_diplomatic_action_friendly			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_friendly	
+	1896925393	UI_popup_international_organization_message			\ev_UI\popup\popup_type\UI_popup_international_organization_message	
+	1899232285	UI_eventGeneric_option_generic			\ev_UI\events\UI_eventGeneric_option_generic	hooked only on sound.gui as a template - Leon 18/09/2024
+	1900737853	UI_panelChild_advances_ages_show			\ev_UI\panel\panel_left\advances\UI_panelChild_advances_ages_show	
+	1915314724	UI_action_building_subsidize_enable			\ev_UI\actions\UI_action_building_subsidize_enable	
+	1920172298	UI_notification_hide			\ev_UI\notification\UI_notification_hide	
+	1921728545	UI_event_age_6_revolution			\ev_UI\events\UI_event_age_6_revolution	hooked only on eventwindow.gui - Leon 18/09/2024
+	1926510935	UI_lateralview_hide			\ev_UI\panel\UI_lateralview_hide	hooked only on sound.gui as a template - Leon 18/09/2024
+	1943819579	UI_map_country_hoverOff			\ev_UI\map\UI_map_country_hoverOff	
+	1957242648	UI_diplomatic_action_subject			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_subject	
+	1959414849	UI_alert_appear_orange			\ev_UI\alerts\UI_alert_appear_orange	
+	1976118655	UI_button_gameNew			\ev_UI\button\UI_button_gameNew	hooked in frontend_mainview.gui and frontend_singleplayer.gui with on_action
+	1982182399	UI_popup_hide			\ev_UI\popup\UI_popup_hide	hooked only on sound.gui as a template - Leon 18/09/2024
+	1988342514	WE_PERFORM_create_trade_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_create_trade\WE_PERFORM_create_trade_ACTION	
+	1994395019	UI_panel_military_objectives_group_show			\ev_UI\panel\panel_left\military\UI_panel_military_objectives_group_show	
+	2016053992	UI_panel_unitMulti_show			\ev_UI\panel\panel_right\UI_panel_unitMulti_show	
+	2024661996	UI_action_estate_privilege_grant			\ev_UI\actions\UI_action_estate_privilege_grant	
+	2037940001	UI_cursor_leftclick_hold_start			\ev_UI\confirm_hold\UI_cursor_leftclick_hold_start	
+	2059158596	UI_hoverOff_alert			\ev_UI\mousePointer\UI_hoverOff_alert	hooked only on sound.gui as a template - Leon 18/09/2024
+	2064035685	UI_action_character_mission_base_finished_failure			\ev_UI\actions\UI_action_character_mission_base_finished_failure	
+	2065889691	REVOKE_PRIVILEGE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Privilege_revoke\REVOKE_PRIVILEGE	
+	2068335985	UI_panel_advances_select			\ev_UI\panel\panel_left\advances\UI_panel_advances_select	
+	2077152161	UI_panel_production_select			\ev_UI\panel\panel_left\production\UI_panel_production_select	
+	2089897127	UI_mapmode_transition_default			\ev_UI\map\UI_mapmode_transition_default	Triggered when mapmode changes
+	2093769900	UI_panelAux_selectInteractionTarget_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_selectInteractionTarget_show	
+	2094968236	UI_cursor_leftclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_leftclick_hold_aborted	
+	2118900976	UI_hover			\ev_UI\mousePointer\UI_hover	hooked only on sound.gui as a template - Leon 18/09/2024
+	2126965355	UI_checkbutton_diamond			\ev_UI\button\UI_checkbutton_diamond	hooked on buttons.gui - Leon 18/09/2024
+	2133833785	UI_panel_economy_markets_show			\ev_UI\panel\panel_left\economy\UI_panel_economy_markets_show	
+	2181272451	UI_action_character_death			\ev_UI\actions\UI_action_character_death	
+	2188861279	UI_popup_war_message			\ev_UI\popup\popup_type\UI_popup_war_message	
+	2189963872	UI_panel_show			\ev_UI\panel\UI_panel_show	
+	2214257447	UI_popup_basic_message			\ev_UI\popup\popup_type\UI_popup_basic_message	
+	2214819711	PARLIAMENT_ISSUE_PASSED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_success\PARLIAMENT_ISSUE_PASSED	
+	2230199699	UI_checkbutton_round			\ev_UI\button\UI_checkbutton_round	hooked on buttons.gui - Leon 18/09/2024
+	2236511245	UI_panel_military_select			\ev_UI\panel\panel_left\military\UI_panel_military_select	
+	2265264099	UI_button_minus			\ev_UI\button\UI_button_minus	hooked only on sound.gui as a template - Leon 18/09/2024
+	2269712420	UI_eventGeneric_option_risky			\ev_UI\events\UI_eventGeneric_option_risky	hooked only on sound.gui as a template - Leon 18/09/2024
+	2283677594	MISSION_TASK_START			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Mission_task_start\MISSION_TASK_START	
+	2285978820	UI_checkbutton_square			\ev_UI\button\UI_checkbutton_square	hooked on buttons.gui - Leon 18/09/2024
+	2291310513	UI_notification_show			\ev_UI\notification\UI_notification_show	
+	2302165565	UI_button_plus			\ev_UI\button\UI_button_plus	hoooked on standard_types.gui and buttons.gui - Leon 18/09/2024
+	2349945590	UI_event_age_4_reformation			\ev_UI\events\UI_event_age_4_reformation	hooked only on eventwindow.gui - Leon 18/09/2024
+	2353636589	UI_panel_internationalOrganizations_show			\ev_UI\panel\panel_right\UI_panel_internationalOrganizations_show	
+	2366001700	UI_panelChild_advances_research_show			\ev_UI\panel\panel_left\advances\UI_panelChild_advances_research_show	
+	2371018161	UI_notify_parliament_success			\ev_UI\notification\UI_notify_parliament_success	
+	2372243149	UI_action_religion_aspect_add			\ev_UI\actions\UI_action_religion_aspect_add	posted by jomini effect  FILE: general_religion.txt
+	2377570988	UI_event_bg_north_german_peasants_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_peasants_exterior	
+	2382294805	WE_RIVAL_SET			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Diplomacy_Select_Rival\WE_RIVAL_SET	
+	2388286340	UI_unit_moveconfirm_invalid			\ev_UI\unit_controls\UI_unit_moveconfirm_invalid	hooked only on game_audio.h - Leon 18/09/2024
+	2406190385	UI_contextmenu_hide			\ev_UI\contextualmenu\UI_contextmenu_hide	
+	2415942602	UI_eventGeneric_exterior			\ev_UI\events\UI_eventGeneric_exterior	
+	2423127660	UI_event_bg_north_german_nobles_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_nobles_exterior	
+	2429247398	UI_panelChild_economy_trading_currentNeeds_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_currentNeeds_show	
+	2483300427	UI_popup_country_message			\ev_UI\popup\popup_type\UI_popup_country_message	
+	2489330806	UI_popup_religion_message			\ev_UI\popup\popup_type\UI_popup_religion_message	
+	2490112630	UI_popup_location_message			\ev_UI\popup\popup_type\UI_popup_location_message	
+	2506117631	UI_event_age_option_diplomatic			\ev_UI\events\UI_event_age_option_diplomatic	hooked only on sound.gui as a template - Leon 18/09/2024
+	2509247896	UI_event_negative			\ev_UI\events\UI_event_negative	
+	2515565625	UI_panelChild_society_people_rebels_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_rebels_show	
+	2519197294	UI_close			\ev_UI\navigation\UI_close	hooked only on sound.gui as a template - Leon 18/09/2024
+	2561726404	UI_event_object			\ev_UI\events\UI_event_object	
+	2562777637	UI_action_navy_hire_mercenaries			\ev_UI\actions\UI_action_navy_hire_mercenaries	
+	2581599150	UI_panelAux_diplomacy_selectCountry_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_selectCountry_show	
+	2583287033	UI_panel_government_values_show			\ev_UI\panel\panel_left\government\UI_panel_government_values_show	
+	2586293740	UI_alert_appear_green			\ev_UI\alerts\UI_alert_appear_green	
+	2587738004	UI_panelAux_automation_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_automation_show	
+	2588718726	UI_diplomatic_action_access			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_access	
+	2600706187	UI_hover_alert			\ev_UI\mousePointer\UI_hover_alert	hooked only on sound.gui as a template - Leon 18/09/2024
+	2617125450	UI_panelChild_society_religion_doctrine_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_religion_doctrine_show	
+	2628239431	UI_alert_appear_blue			\ev_UI\alerts\UI_alert_appear_blue	
+	2682833690	UI_panelAux_buildLocation_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_buildLocation_show	
+	2704079083	UI_panel_government_country_show			\ev_UI\panel\panel_left\government\UI_panel_government_country_show	
+	2727482282	UI_alert_appear_yellow_diplo			\ev_UI\alerts\UI_alert_appear_yellow_diplo	
+	2733028901	UI_event_characters			\ev_UI\events\UI_event_characters	
+	2739449946	UI_panel_seazone_show			\ev_UI\panel\panel_right\UI_panel_seazone_show	
+	2748011726	CHAR_DEATH			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Relevant_character_death\CHAR_DEATH	
+	2755597554	UI_alert_open_and_cycle			\ev_UI\alerts\UI_alert_open_and_cycle	
+	2787708012	UI_advances_finished			\ev_UI\panel\panel_left\advances\UI_advances_finished	
+	2791106298	UI_cooltip_lock			\ev_UI\tooltip\UI_cooltip_lock	hooked only on sound.gui as a template - Leon 18/09/2024
+	2791656659	UI_situation_start			\ev_UI\situation\UI_situation_start	
+	2792155208	UI_pause			\ev_UI\time\UI_pause	hooked only on game_audio.h - Leon 18/09/2024
+	2803393552	UI_panel_government_missions_show			\ev_UI\panel\panel_left\government\UI_panel_government_missions_show	
+	2806840970	UI_action_navy_build			\ev_UI\actions\UI_action_navy_build	As this is technically a "build" action, it plays UI_action_building_base initially before decor
+	2807573198	UI_missions_start			\ev_UI\panel\panel_left\government\UI_missions_start	
+	2808352893	UI_popup_situation_message			\ev_UI\popup\popup_type\UI_popup_situation_message	
+	2841348048	UI_action_character_grant_cabinet_rights			\ev_UI\actions\UI_action_character_grant_cabinet_rights	posted by jomini effect  FILE: grant_cabinet_right.txt
+	2847972850	UI_map_location_hoverOn			\ev_UI\map\UI_map_location_hoverOn	
+	2848843905	UI_event_bg_north_german_clergy_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_exterior	
+	2851932290	UI_panel_advances_show			\ev_UI\panel\panel_left\advances\UI_panel_advances_show	This "show" event is now redundent for the Advances tab, in favour of UI_panel_advances_select" event (in keeping with other panel "select" events, for when selecting a panel)
+	2853090971	UI_action_character_appoint_general			\ev_UI\actions\UI_action_character_appoint_general	
+	2855776247	UI_panel_unitType_show			\ev_UI\panel\panel_right\UI_panel_unitType_show	
+	2886109600	BRIBE_ESTATE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Estate_bribe\BRIBE_ESTATE	
+	2890747618	UI_map_goto			\ev_UI\map\UI_map_goto	
+	2898280575	UI_event_bg_north_german_clergy_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_interior	
+	2916084332	UI_panelChild_geopolitics_maritime_coasts_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_coasts_show	
+	2920080030	UI_panelAux_diplomacy_manageSubjects_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_manageSubjects_show	
+	2924931311	UI_cursor_rightclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_aborted	
+	2927605888	UI_gameStart_cloud_in			\ev_UI\startgame_sequence\UI_gameStart_cloud_in	hooked in animation.gui with start_sound
+	2949462130	UI_panelChild_geopolitics_maritime_privateers_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_privateers_show	
+	2983903936	UI_action_production_expand_rgo			\ev_UI\actions\UI_action_production_expand_rgo	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
+	3000364817	UI_panelChild_government_country_parliament_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_parliament_show	
+	3012140585	UI_panelAux_battle_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_battle_show	Used in a blockoverride in battle lateralview (which swaps out the block in "template snd_UI_panel" in sounds.gui) This is under panel_auxiliary structure as at time of adding we're somewhat unsure how this will be used. 
+	3025223725	WEDECLWAR			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\WEDECLWAR	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
+	3035926175	UI_diplomatic_action_covert			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_covert	
+	3041563226	silence			\ev_UI\panel\silence	an empty event to maybe use to evade errors
+	3054099920	UI_panel_character_show			\ev_UI\panel\panel_right\UI_panel_character_show	
+	3117304105	UI_mapmode_terrain_show			\ev_UI\map\UI_mapmode_terrain_show	
+	3118971615	UI_popup_institution_message			\ev_UI\popup\popup_type\UI_popup_institution_message	
+	3132668674	UI_alert_disappear			\ev_UI\alerts\UI_alert_disappear	
+	3142426739	UI_tooltip_lock			\ev_UI\tooltip\UI_tooltip_lock	hooked only on sound.gui as a template - Leon 18/09/2024 # Tooltip lock - Hooked to the moment the lock bar fills up, independent of duration in settings.
+	3146150192	UI_panel_production_buildings_show			\ev_UI\panel\panel_left\production\UI_panel_production_buildings_show	
+	3151094490	PERFORM_parliament_issue_vote_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_vote\PERFORM_parliament_issue_vote_ACTION	
+	3168810457	UI_panelChild_diplomacy_relations_knownCountries_show			\ev_UI\panel\panel_left\diplomacy\UI_panelChild_diplomacy_relations_knownCountries_show	
+	3193081913	UI_action_production_method_change			\ev_UI\actions\UI_action_production_method_change	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
+	3206315385	GRANT_PRIVILEGE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Privilege_grant\GRANT_PRIVILEGE	
+	3207691944	UI_hover_shield			\ev_UI\mousePointer\UI_hover_shield	hooked only on sound.gui as a template - Leon 18/09/2024
+	3212963646	UI_panel_location_show			\ev_UI\panel\panel_right\UI_panel_location_show	
+	3219236936	UI_action_road_build			\ev_UI\actions\UI_action_road_build	
+	3219439502	UI_panel_military_units_show			\ev_UI\panel\panel_left\military\UI_panel_military_units_show	
+	3226991506	UI_menu_close			\ev_UI\window\UI_menu_close	hooked only on sound.gui as a template - Leon 18/09/2024
+	3238475348	PERFORM_call_parliament_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_call\PERFORM_call_parliament_ACTION	
+	3248651425	UI_event_bg_north_german_burghers_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_burghers_interior	
+	3250256928	UI_button_release			\ev_UI\button\UI_button_release	
+	3250879979	UI_panel_foreignCountry_show			\ev_UI\panel\panel_right\UI_panel_foreignCountry_show	
+	3252850616	UI_chat_public			\ev_UI\notification\UI_chat_public	
+	3262869724	UI_action_automate_disable			\ev_UI\actions\UI_action_automate_disable	
+	3266926730	UI_panel_geopolitics_select			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_select	
+	3282376362	UI_open			\ev_UI\navigation\UI_open	hooked only on sound.gui as a template - Leon 18/09/2024
+	3307088016	UI_hoverOff_flag			\ev_UI\mousePointer\UI_hoverOff_flag	hooked only on sound.gui as a template - Leon 18/09/2024
+	3327114082	UI_panelChild_military_units_currentNavies_show			\ev_UI\panel\panel_left\military\UI_panelChild_military_units_currentNavies_show	
+	3332738749	UI_eventGeneric_option_rewarding			\ev_UI\events\UI_eventGeneric_option_rewarding	hooked only on sound.gui as a template - Leon 18/09/2024
+	3362151704	PARLIAMENT_ISSUE_FAILED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_failed\PARLIAMENT_ISSUE_FAILED	
+	3362477794	UI_diplomatic_action_base_SEENOTES			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_base_SEENOTES	This is just a container for any behaviour we want from any diplomatic action, not to be implemented as is!
+	3369282596	CABINET_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Cabinet_action_general\CABINET_ACTION	
+	3370842300	playerAction_04_low			\ev_logic\playerAction_04_low	
+	3390232292	UI_action_army_hire_mercenary_leader			\ev_UI\actions\UI_action_army_hire_mercenary_leader	
+	3390406425	UI_panelAux_currentDebt_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_currentDebt_show	
+	3397087224	UI_action_character_arrange_royal_wedding			\ev_UI\actions\UI_action_character_arrange_royal_wedding	
+	3400299644	UI_chat_private			\ev_UI\notification\UI_chat_private	
+	3403303922	UI_panel_diplomacy_select			\ev_UI\panel\panel_left\diplomacy\UI_panel_diplomacy_select	
+	3425895518	UI_panelChild_society_religion_religionBreakdown_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_religion_religionBreakdown_show	
+	3445118303	UI_event_age_option_administrative			\ev_UI\events\UI_event_age_option_administrative	hooked only on sound.gui as a template - Leon 18/09/2024
+	3454852719	UI_building_construction_finished			\ev_UI\panel\panel_left\production\UI_building_construction_finished	
+	3458069813	UI_cursor_leftclick_hold_finished			\ev_UI\confirm_hold\UI_cursor_leftclick_hold_finished	
+	3458210454	UI_unit_hoverOff			\ev_UI\unit_controls\UI_unit_hoverOff	
+	3469559191	UI_event_bg_north_german_burghers_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_burghers_exterior	
+	3485819248	trigger_war			\ev_music\triggers\trigger_war	additional UI_war_stinger added to this event so that the stinger is part of the sfx.  Removed inclusion of trigger_war (as this is not directing the music system, ONLY this spot stinger)
+	3499263738	playerAction_05_very_low			\ev_logic\playerAction_05_very_low	
+	3530492992	UI_eventGeneric_option_evil			\ev_UI\events\UI_eventGeneric_option_evil	hooked only on sound.gui as a template - Leon 18/09/2024
+	3547884932	UI_panel_society_culture_show			\ev_UI\panel\panel_left\society\UI_panel_society_culture_show	
+	3556452064	UI_panelChild_geopolitics_expansion_colonies_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_expansion_colonies_show	
+	3573347740	ALL_LOANS_REPAID			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\ALL_LOANS_REPAID	
+	3585011879	UI_action_building_subsidize_disable			\ev_UI\actions\UI_action_building_subsidize_disable	
+	3596049214	UI_action_character_ennoble			\ev_UI\actions\UI_action_character_ennoble	posted by jomini effect  FILE: ennoble.txt
+	3610128939	UI_panelChild_government_country_estates_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_estates_show	
+	3613420813	UI_gameStart_flag_in			\ev_UI\startgame_sequence\UI_gameStart_flag_in	hooked in animation.gui with start_sound
+	3648400836	UI_action_parliament_request			\ev_UI\actions\UI_action_parliament_request	
+	3661445043	ALL_LOANS_REPAID_TO_COUNTRY			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\ALL_LOANS_REPAID_TO_COUNTRY	
+	3682485021	UI_notify_building_finished			\ev_UI\notification\UI_notify_building_finished	This notification is triggered when a building, road, or RGO is completed at the time it is completed.  This is not to be confused with the monthly tick variation of the idea of a building being considered completed.  This is a hard-coded trigger  This event also sets the state group MonthlyTickBuildingComplete to "Report_Building_Complete", which allows the relevant monthly tick report switch group actors to play it's corresponding update audio response when monthly_tick event is performed.   Note that monthly_tick event will then reset the state back to "default"
+	3694161739	UI_action_navy_raise_levies			\ev_UI\actions\UI_action_navy_raise_levies	
+	3694329007	UI_unit_select			\ev_UI\unit_controls\UI_unit_select	
+	3717619261	UI_action_army_recruit_regulars			\ev_UI\actions\UI_action_army_recruit_regulars	
+	3725839678	WE_PERFORM_change_religious_aspect_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Religious_aspect_change\WE_PERFORM_change_religious_aspect_ACTION	
+	3731337767	UI_panelChild_society_culture_worksOfArt_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_culture_worksOfArt_show	
+	3731727916	UI_action_army_hire_mercenaries			\ev_UI\actions\UI_action_army_hire_mercenaries	
+	3736164361	UI_action_parliament_debate_accept			\ev_UI\actions\UI_action_parliament_debate_accept	
+	3749731140	UI_action_building_destroy			\ev_UI\actions\UI_action_building_destroy	
+	3754155271	UI_map_rotate_start			\ev_UI\map\UI_map_rotate_start	Should be in as per /CAESAR-16661
+	3761280229	UI_panel_building_show			\ev_UI\panel\panel_right\UI_panel_building_show	
+	3766014625	UI_alert_appear_green_diplo			\ev_UI\alerts\UI_alert_appear_green_diplo	
+	3772456826	UI_hover_location			\ev_UI\mousePointer\UI_hover_location	
+	3776757432	UI_flow_ingame_menu_show			\ev_UI\flow\UI_flow_ingame_menu_show	
+	3779715239	MISSION_TASK_COMPLETE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Mission_task_complete\MISSION_TASK_COMPLETE	
+	3784152269	WE_RIVAL_REMOVED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Diplomacy_Remove_Rival\WE_RIVAL_REMOVED	
+	3811523399	UI_action_character_marry_noble			\ev_UI\actions\UI_action_character_marry_noble	posted by jomini effect  FILE: marry_noble.txt
+	3817302371	UI_window_problematic_show			\ev_UI\window\UI_window_problematic_show	hooked only on sound.gui as a template - Leon 18/09/2024
+	3832622703	UI_panel_production_rawgoods_show			\ev_UI\panel\panel_left\production\UI_panel_production_rawgoods_show	
+	3849446927	UI_clickPress			\ev_UI\mousePointer\UI_clickPress	hooked only on sound.gui as a template - Leon 18/09/2024
+	3853755469	UI_popup_mission_task_message			\ev_UI\popup\popup_type\UI_popup_mission_task_message	
+	3866448035	UI_flow_ingame_menu_hide			\ev_UI\flow\UI_flow_ingame_menu_hide	
+	3867244034	UI_mapmode_terrain_hide			\ev_UI\map\UI_mapmode_terrain_hide	
+	3906608629	RIVAL_SET_ON_US			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Diplomacy_Select_Rival\RIVAL_SET_ON_US	
+	3955808218	UI_popup_newborn_message			\ev_UI\popup\popup_type\UI_popup_newborn_message	
+	3963372331	ESTATELOAN			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_take\ESTATELOAN	
+	3981680751	playerAction_03_mid			\ev_logic\playerAction_03_mid	
+	3988921483	CABINET_CHARACTER			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Cabinet_action_character\CABINET_CHARACTER	
+	3993311298	UI_flow_enter_game			\ev_UI\flow\UI_flow_enter_game	
+	4028108250	UI_event_neutral			\ev_UI\events\UI_event_neutral	
+	4034110199	UI_panel_production_food_show			\ev_UI\panel\panel_left\production\UI_panel_production_food_show	
+	4040154550	UI_action_trading_create_trade			\ev_UI\actions\UI_action_trading_create_trade	
+	4041017517	PARLIAMENT_ASK_FOR_LAW_CHANGES			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_request\PARLIAMENT_ASK_FOR_LAW_CHANGES	
+	4049159732	UI_action_religion_aspect_change			\ev_UI\actions\UI_action_religion_aspect_change	posted by jomini effect  FILE: general_religion.txt
+	4050042510	UI_action_army_train_general			\ev_UI\actions\UI_action_army_train_general	
+	4072694599	UI_map_country_hoverOn			\ev_UI\map\UI_map_country_hoverOn	
+	4083126854	UI_menu_open			\ev_UI\window\UI_menu_open	hooked only on sound.gui as a template - Leon 18/09/2024
+	4089139148	UI_panel_economy_balance_show			\ev_UI\panel\panel_left\economy\UI_panel_economy_balance_show	
+	4093402349	CABINET_ACTION_FINISHED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Cabinet_action_complete\CABINET_ACTION_FINISHED	
+	4099195768	UI_action_character_cabinet_appoint_or_promote			\ev_UI\actions\UI_action_character_cabinet_appoint_or_promote	
+	4099557833	UI_panel_goodsDetails_show			\ev_UI\panel\panel_right\UI_panel_goodsDetails_show	
+	4100108849	UI_flow_exit_to_main_menu			\ev_UI\flow\UI_flow_exit_to_main_menu	
+	4105244426	UI_panel_diplomacy_organizations_show			\ev_UI\panel\panel_left\diplomacy\UI_panel_diplomacy_organizations_show	
+	4106110621	UI_panelChild_government_country_politics_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_politics_show	
+	4120014760	UI_panelChild_diplomacy_organizations_knownOrganizations_show			\ev_UI\panel\panel_left\diplomacy\UI_panelChild_diplomacy_organizations_knownOrganizations_show	
+	4120803256	monthly_tick			\ev_UI\time\monthly_tick	Triggered at the end of every month, much which we're treating much like a "report".  This report is a time notification in essence, though also includes feedback depending on whether buildings have been completed, research has been completed, and whether income was overall positive or negative, all over the course of an in-game month.   After playing research and building completed switches (which have audio feedback enabled from UI_notify_advance_research_complete and UI_notify_building_finished), the corresponding switches are reset back to "default"   Removed inclusion of "balance" as this is no longer something we felt appropriate for monthly update.  Including here our understood difference between "balance" vs "income" Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source) Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")  No delays are set on this event, and are instead dealt with on the actors triggered    Previous note on this event: THIS ONE SHOULD ACTUALLY BE IMPLEMENTED BY ALEX AS PER CAESAR-25858
+	4144791249	UI_alert_appear_red_diplo			\ev_UI\alerts\UI_alert_appear_red_diplo	
+	4148173346	UI_popup_reject			\ev_UI\popup\UI_popup_reject	#hide problem to be fixed - hooked only on sound.gui as a template  - Leon 18/09/2024
+	4157466671	UI_panel_military_objectives_show			\ev_UI\panel\panel_left\military\UI_panel_military_objectives_show	
+	4169307922	RULER_FAMILY_CHAR_DEATH			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Relevant_character_death\RULER_FAMILY_CHAR_DEATH	
+	4179692575	UI_dropdown_retract			\ev_UI\window\UI_dropdown_retract	hooked on sound.gui as a template, and setting_types.gui - Leon 18/09/2024
+	4206959319	UI_panel_unitSingle_show			\ev_UI\panel\panel_right\UI_panel_unitSingle_show	
+	4213100483	UI_action_navy_hire_mercenary_leader			\ev_UI\actions\UI_action_navy_hire_mercenary_leader	
+	4214071737	UI_action_diplomacy_rival_select			\ev_UI\actions\UI_action_diplomacy_rival_select	
+	4220608591	UI_button_gameLoad			\ev_UI\button\UI_button_gameLoad	hooked in frontend_loadview.gui and load_save_menu.gui via onclick and clicksound
+	4224851398	UI_notify_parliament_failure			\ev_UI\notification\UI_notify_parliament_failure	
+	4227909777	PARLIAMENT_AGENDA_ACCEPTED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_agenda_accepted\PARLIAMENT_AGENDA_ACCEPTED	
+	4238831049	UI_map_pan_start			\ev_UI\map\UI_map_pan_start	Should be in as per /CAESAR-16661
+	4242637569	playerAction_01_very_hi			\ev_logic\playerAction_01_very_hi	
+	4242677837	UI_military_build_navy			\ev_UI\panel\panel_left\military\UI_military_build_navy	
+	4272977146	UI_event_bg_north_german_peasants_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_peasants_interior	
+	4292595116	UI_panel_rebels_show			\ev_UI\panel\panel_right\UI_panel_rebels_show	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2011191162	FlatMap			\Map\FlatMap	denoting the state the map is in 
+	2299810346	MonthlyTickBuildingComplete			\Monthly_Tick_Report\MonthlyTickBuildingComplete	Monthly tick report toggle for buildings being completed
+	2560379089	UX_Panel_Context			\UX\UX_Panel_Context	This state represents where the moluse cursor is currently located in the UI
+	3211405847	PlayerIncome			\Economy\PlayerIncome	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
+	4008345218	Gamestate_Speed			\Gamestate\Gamestate_Speed	
+	4131181917	MonthlyTickResearchComplete			\Monthly_Tick_Report\MonthlyTickResearchComplete	Monthly tick report toggle for buildings being completed
+
+State	ID	Name	State Group			Notes
+	748895195	None	FlatMap			
+	2066128362	FlatMap_on	FlatMap			
+	3217722016	FlatMap_off	FlatMap			
+	748895195	None	MonthlyTickBuildingComplete			
+	782826392	Default	MonthlyTickBuildingComplete			
+	2495990384	Report_Building_Complete	MonthlyTickBuildingComplete			
+	555374291	LocalContext	UX_Panel_Context			
+	748895195	None	UX_Panel_Context			
+	985442775	LoadingScreen	UX_Panel_Context			
+	1048449605	Map	UX_Panel_Context			
+	2808619651	FullscreenMenu	UX_Panel_Context			
+	748895195	None	PlayerIncome			
+	2418595136	Decreasing	PlayerIncome			
+	4075250792	Increasing	PlayerIncome			
+	748895195	None	Gamestate_Speed			
+	1400591528	speed_05	Gamestate_Speed			
+	1400591529	speed_04	Gamestate_Speed			
+	1400591532	speed_01	Gamestate_Speed			
+	1400591534	speed_03	Gamestate_Speed			
+	1400591535	speed_02	Gamestate_Speed			
+	748895195	None	MonthlyTickResearchComplete			
+	782826392	Default	MonthlyTickResearchComplete			
+	1233547093	Report_Research_Complete	MonthlyTickResearchComplete			
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	108007250	modEnv_CameraWind_GoTo			\mod_ambience_MATTIAS\modEnv_CameraWind_GoTo	
+	420220267	modEnc_economy_income			\mod_ui\modEnc_economy_income	
+	552283626	modEnv_map_hoveron			\mod_ui\modEnv_map_hoveron	
+	1005714762	modEnv_map_hoveroff			\mod_ui\modEnv_map_hoveroff	
+	1048068648	modEnv_clickhold_abort			\mod_ui\modEnv_clickhold_abort	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	297065560	modTime_pause_03			\mod_ui\modTime_pause_03	
+	538630741	modTime_2s			\mod_ui\modTime_2s	
+	545486103	modTime_pause_05_fastest			\mod_ui\modTime_pause_05_fastest	
+	557848921	modTime_pause_02			\mod_ui\modTime_pause_02	
+	564001705	modTime_pause_04			\mod_ui\modTime_pause_04	
+	828725602	modTime_pause_01_slowest			\mod_ui\modTime_pause_01_slowest	
+	1043713584	modTime_confirm_hold			\mod_ui\modTime_confirm_hold	
+
+Effect plug-ins	ID	Name	Type				Notes
+	602431758	Parametric EQ (Custom)	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	60814895	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\UI_economy_income\silence\Silence	
+	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
+	131369381	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_pause_levels\silence\Silence	
+	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
+	497010292	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\monthly_tick_research_complete\silence\Silence	
+	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
+	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\02_hi\Sine	
+	829218908	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_unpause_levels\silence\Silence	
+	853361665	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\monthly_tick_building_complete\silence\Silence	
+	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\04_low\Sine	
+

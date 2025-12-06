@@ -1,0 +1,95 @@
+﻿british_gfx = {
+	priority = 200 # region
+	culture_tag = british_gfx
+}
+
+celtic_gfx = {
+	priority = 300 # region
+	culture_tag = celtic_gfx
+}
+
+gaelic_gfx = {
+	priority = 450 # region
+	culture_tag = gaelic_gfx
+}
+
+irish_gfx = {
+	priority = 500 # subregion
+	culture_tag = irish_gfx
+	ethnicities = {
+		10 = european_nordic_blonde_ethnicity
+		20 = european_nordic_brown_hair_ethnicity
+		20 = european_nordic_red_hair_ethnicity
+		20 = european_west_ethnicity
+		10 = european_west_dark_hair_ethnicity
+		10 = european_west_red_hair_ethnicity
+	}
+}
+
+north_british_gfx = {  
+	priority = 300 # subregion
+	culture_tag = north_british_gfx
+}
+
+scottish_gfx = {  
+	priority = 400 # subregion
+	culture_tag = scottish_gfx
+	ethnicities = {
+		10 = european_nordic_blonde_ethnicity
+		20 = european_nordic_brown_hair_ethnicity
+		20 = european_nordic_red_hair_ethnicity
+		20 = european_west_ethnicity
+		10 = european_west_dark_hair_ethnicity
+		10 = european_west_red_hair_ethnicity
+	}
+}
+
+english_gfx = {
+	priority = 400 # subregion
+	culture_tag = english_gfx
+	ethnicities = {
+		70 = european_west_ethnicity
+		20 = european_west_dark_hair_ethnicity
+		10 = european_west_red_hair_ethnicity
+
+		
+		5 = european_nordic_blonde_ethnicity
+		10 = european_nordic_brown_hair_ethnicity
+		10 = european_nordic_red_hair_ethnicity
+	}
+}
+
+welsh_gfx = {
+	priority = 400 # subregion
+	culture_tag = welsh_gfx
+	ethnicities = {
+		40 = european_west_ethnicity
+		60 = european_west_dark_hair_ethnicity
+		5 = european_west_red_hair_ethnicity
+	}
+}
+
+scottish_highland_gfx = {
+	priority = 500 # area
+	culture_tag = scottish_highland_gfx
+	ethnicities = {
+		20 = european_nordic_blonde_ethnicity
+		50 = european_nordic_brown_hair_ethnicity
+		30 = european_nordic_red_hair_ethnicity
+	}
+}
+
+scottish_lowland_gfx = {  
+	priority = 500 # area
+	culture_tag = scottish_lowland_gfx
+}
+
+cornish_gfx = {
+	priority = 500 # area
+	culture_tag = cornish_gfx
+	ethnicities = {
+		20 = european_west_ethnicity
+		10 = european_west_dark_hair_ethnicity
+		10 = european_west_red_hair_ethnicity
+	}
+}

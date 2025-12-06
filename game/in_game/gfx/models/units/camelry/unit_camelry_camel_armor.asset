@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_camelry_camel_armor_mesh"
+	file = "unit_camelry_camel_armor.mesh"
+
+	meshsettings = {
+		name = "unit_camelry_camel_armorShape"
+		index = 0
+		texture_diffuse = "unit_medium_camel_armor_diffuse.dds"
+		texture_normal = "unit_medium_camel_armor_normal.dds"
+		texture_specular = "unit_camelry_camel_auxiliary_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_medium_camel_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

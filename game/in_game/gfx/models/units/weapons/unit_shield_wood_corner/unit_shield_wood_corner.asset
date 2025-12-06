@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_shield_wood_corner_mesh"
+	file = "unit_shield_wood_corner.mesh"
+
+	meshsettings = {
+		name = "unit_shield_wood_cornerShape"
+		index = 0
+		texture_diffuse = "unit_shield_wood_corner_diffuse.dds"
+		texture_normal = "unit_shield_wood_corner_normal.dds"
+		#texture_specular = "unit_shield_wood_corner_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_shield_wood_corner_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

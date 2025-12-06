@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapons_wodao_mesh"
+	file = "unit_weapons_wodao.mesh"
+
+	meshsettings = {
+		name = "unit_weapons_wodaoShape"
+		index = 0
+		texture_diffuse = "unit_weapons_wodao_diffuse.dds"
+		texture_normal = "unit_weapons_wodao_normal.dds"
+		#texture_specular = "unit_weapons_wodao_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapons_wodao_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

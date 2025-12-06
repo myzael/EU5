@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "bridge_medium_test_mesh"
+	file = "bridge_medium_test.mesh"
+
+	meshsettings = {
+		name = "bridge_medium_testShape"
+		index = 0
+		texture_diffuse = "bridge_test_medium_diffuse.dds"
+		texture_normal = "bridge_test_medium_normal.dds"
+		texture_specular = "bridge_test_medium_properties.dds"
+		shader = "bridge"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "bridge_medium_test_entity"
+	pdxmesh = "bridge_medium_test_mesh"
+}

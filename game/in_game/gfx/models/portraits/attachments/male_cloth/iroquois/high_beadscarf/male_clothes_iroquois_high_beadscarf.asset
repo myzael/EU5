@@ -1,0 +1,20 @@
+﻿pdxmesh = {
+	name = "male_clothes_iroquois_high_beadscarf_mesh"
+	file = "male_clothes_iroquois_high_beadscarf.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_high_beadscarfShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_high_beadscarf_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_high_beadscarf_normal.dds"
+		texture_specular = "male_clothes_iroquois_high_beadscarf_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_iroquois_high_beadscarf_entity"
+	pdxmesh = "male_clothes_iroquois_high_beadscarf_mesh"
+}
+

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_rake_simple_mesh"
+	file = "unit_weapon_rake_simple.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_rake_simpleShape"
+		index = 0
+		texture_diffuse = "unit_weapon_rake_simple_diffuse.dds"
+		texture_normal = "unit_weapon_rake_simple_normal.dds"
+		#texture_specular = "unit_weapon_rake_simple_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_rake_simple_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

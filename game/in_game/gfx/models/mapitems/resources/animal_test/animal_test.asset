@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "animal_test_mesh"
+	file = "animal_test.mesh"
+
+	meshsettings = {
+		name = "pPlaneShape1"
+		index = 0
+		texture_diffuse = "environment_resource_wheat_diffuse.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "animal_test_entity"
+	pdxmesh = "animal_test_mesh"
+}

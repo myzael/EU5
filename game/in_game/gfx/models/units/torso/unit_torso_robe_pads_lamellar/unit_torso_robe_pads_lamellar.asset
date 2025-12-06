@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_torso_robe_pads_lamellar_mesh"
+	file = "unit_torso_robe_pads_lamellar.mesh"
+
+	meshsettings = {
+		name = "unit_torso_robe_pads_lamellarShape"
+		index = 0
+		texture_diffuse = "unit_torso_robe_pads_lamellar_diffuse.dds"
+		texture_normal = "unit_torso_robe_pads_lamellar_normal.dds"
+		#texture_specular = "unit_torso_robe_pads_lamellar_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_torso_robe_pads_lamellar_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

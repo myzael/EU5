@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "resource_european_cow_mesh"
+	file = "resource_european_cow.mesh"
+
+	animation = { id = "cow_idle_animation" type = "resource_european_cow_cow_idle.anim" }
+	animation = { id = "cow_walk_animation" type = "resource_european_cow_cow_walk.anim" }
+
+	meshsettings = {
+		name = "european_cow1Shape"
+		index = 0
+		texture_diffuse = "european_cow_diffuse.dds"
+		texture_normal = "european_cow_normal.dds"
+		texture_specular = "european_cow_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_european_cow_entity"
+	pdxmesh = "resource_european_cow_mesh"
+
+	default_state = "cow_idle"
+	state = {
+		name = "cow_idle"
+		animation = "cow_idle_animation"
+	}
+	state = {
+		name = "cow_walk"
+		animation = "cow_walk_animation"
+	}
+}

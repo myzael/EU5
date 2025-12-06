@@ -1,0 +1,169 @@
+pdxmesh = {
+	name = "ship_galley_02_european_mediterranean_galley_mesh"
+	file = "ship_galley_02_european_mediterranean_galley.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_galley_02_european_mediterranean_galley_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_galley_02_european_mediterranean_galley_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_galley_02_european_mediterranean_galley_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_galley_02_european_mediterranean_galley_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_2_european_mediterranean_galley|Sails|Sails_1"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_2_european_mediterranean_galley|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_2_european_mediterranean_galley|Sails|Sails_1"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_2_european_mediterranean_galley|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_2_european_mediterranean_galley|Sails|Sails_1"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_2_european_mediterranean_galley|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_2_european_mediterranean_galley|ship_hull|shi"
+		index = 0
+		texture_diffuse = "ship_galley_2_european_mediterranean_galley_diffuse.dds"
+		texture_normal = "ship_galley_2_european_mediterranean_galley_normal.dds"
+		texture_specular = "ship_galley_2_european_mediterranean_galley_properties.dds"
+		texture = { file = "ship_galley_2_european_mediterranean_galley_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_2_european_mediterranean_galley|ship_hull|shi"
+		index = 0
+		texture_diffuse = "ship_galley_2_european_mediterranean_galley_diffuse.dds"
+		texture_normal = "ship_galley_2_european_mediterranean_galley_normal.dds"
+		texture_specular = "ship_galley_2_european_mediterranean_galley_properties.dds"
+		texture = { file = "ship_galley_2_european_mediterranean_galley_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_2_european_mediterranean_galley|ship_hull|shi"
+		index = 0
+		texture_diffuse = "ship_galley_2_european_mediterranean_galley_diffuse.dds"
+		texture_normal = "ship_galley_2_european_mediterranean_galley_normal.dds"
+		texture_specular = "ship_galley_2_european_mediterranean_galley_properties.dds"
+		texture = { file = "ship_galley_2_european_mediterranean_galley_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_galley_02_european_mediterranean_galley_entity"
+	pdxmesh = "ship_galley_02_european_mediterranean_galley_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+
+
+attach = { deck_oar_right_lctr_001 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_002 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_003 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_004 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_005 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_006 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_007 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_008 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_009 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_010 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_011 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_012 = "big_oar_right_entity" }
+attach = { deck_oar_right_lctr_013 = "big_oar_right_entity" }
+attach = { deck_oar_left_lctr_001 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_002 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_003 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_004 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_005 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_006 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_007 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_008 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_009 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_010 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_011 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_012 = "big_oar_left_entity" }
+attach = { deck_oar_left_lctr_013 = "big_oar_left_entity" }
+attach = { ensign_flag_lctr = "ship_flag_entity" }
+attach = { mainmast_flag_lctr = "ship_flag_entity" }
+attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+
+}

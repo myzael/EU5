@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "soldier_burgonet_helmet_mesh"
+	file = "soldier_burgonet_helmet.mesh"
+
+	meshsettings = {
+		name = "soldier_burgonet_helmet55Shape"
+		index = 0
+		texture_diffuse = "burgonet_helmet_01_diffuse.dds"
+		texture_normal = "burgonet_helmet_01_normal.dds"
+		texture_specular = "burgonet_helmet_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "soldier_burgonet_helmet_dark_mesh"
+	file = "soldier_burgonet_helmet.mesh"
+
+	meshsettings = {
+		name = "soldier_burgonet_helmet55Shape"
+		index = 0
+		texture_diffuse = "burgonet_helmet_01_dark_diffuse.dds"
+		texture_normal = "burgonet_helmet_01_normal.dds"
+		texture_specular = "burgonet_helmet_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_soldier_burgonet_helmet_entity"
+	pdxmesh = "soldier_burgonet_helmet_mesh"
+}
+
+entity = {
+	name = "male_headwear_german_soldier_burgonet_helmet_dark_entity"
+	pdxmesh = "soldier_burgonet_helmet_dark_mesh"
+}

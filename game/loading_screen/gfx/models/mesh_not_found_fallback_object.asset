@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "mesh_not_found_fallback_object"
+	file = "mesh_not_found_fallback_object.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "test_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "mesh_not_found_fallback_object"
+	pdxmesh = "mesh_not_found_fallback_object"
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "illustration_a_backplane_houses_mesh"
+	file = "illustration_a_backplane_houses.mesh"
+
+	meshsettings = {
+		name = "illustration_a_backplane_housesShape"
+		index = 0
+		texture_diffuse = "illustration_A_frontplane.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_a_backplane_houses_entity"
+	pdxmesh = "illustration_a_backplane_houses_mesh"
+}

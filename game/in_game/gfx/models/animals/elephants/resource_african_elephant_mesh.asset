@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "resource_african_elephant_mesh_mesh"
+	file = "resource_african_elephant_mesh.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "LOD_0|resource_african_elephant_mesh|resource_african_elephant_"
+		index = 0
+		texture_diffuse = "resource_elephant_diffuse.dds"
+		texture_normal = "resource_elephant_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_african_elephant_mesh1|resource_african_elephant_mesh|"
+		index = 0
+		texture_diffuse = "resource_elephant_diffuse.dds"
+		texture_normal = "resource_elephant_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_african_elephant_mesh2|resource_african_elephant_mesh|"
+		index = 0
+		texture_diffuse = "resource_elephant_diffuse.dds"
+		texture_normal = "resource_elephant_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_african_elephant_mesh_entity"
+	pdxmesh = "resource_african_elephant_mesh_mesh"
+}

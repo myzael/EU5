@@ -1,0 +1,106 @@
+compound_node={
+	id="Particle/Duration Pause Timer"
+	graph={
+		Nodes={
+			pdxns:logic:RetainedValueF={
+				Id=13
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "signal" LinkedNode = 12 LinkedPin = "signal" }
+					Link = { PinId = "input_value" LinkedNode = 15 LinkedPin = "sum" }
+				}
+			}
+			pdxns:math:ModF={
+				Id=18
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "dividend" LinkedNode = 14 LinkedPin = "age" }
+					Link = { PinId = "divisor" LinkedNode = 13 LinkedPin = "output_value" }
+				}
+			}
+			pdxns:logic:RetainedValueF={
+				Id=9
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "signal" LinkedNode = 12 LinkedPin = "signal" }
+					Link = { PinId = "input_value" LinkedNode = 7 LinkedPin = "duration" }
+				}
+			}
+			pdxns:math:AddF={
+				Id=15
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "term1" LinkedNode = 7 LinkedPin = "duration" }
+					Link = { PinId = "term2" LinkedNode = 7 LinkedPin = "pause" }
+				}
+			}
+			pdxns:particle:GetSystemAge={
+				Id=14
+				Node={
+				}
+				Inputs={
+				}
+			}
+			pdxns:common:GraphInterface={
+				Id=5
+				Node={
+					pins={
+						pin={
+							id=active
+							label="Active"
+							input=yes
+							flags=optional
+							type=Bool
+						}
+					}
+				}
+				Inputs={
+					Link = { PinId = "active" LinkedNode = 19 LinkedPin = "value" }
+				}
+			}
+			pdxns:common:GraphInterface={
+				Id=7
+				Node={
+					pins={
+						pin={
+							id=duration
+							label="Duration"
+							input=no
+							type=Float
+						}
+						pin={
+							id=pause
+							label="Pause"
+							input=no
+							type=Float
+						}
+					}
+				}
+				Inputs={
+				}
+			}
+			pdxns:math:GreaterThanF={
+				Id=19
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "op1" LinkedNode = 9 LinkedPin = "output_value" }
+					Link = { PinId = "op2" LinkedNode = 18 LinkedPin = "remainder" }
+				}
+			}
+			pdxns:particle:TimedToggle={
+				Id=12
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "duration" LinkedNode = 15 LinkedPin = "sum" }
+				}
+			}
+		}
+	}
+
+}

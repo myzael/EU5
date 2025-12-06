@@ -1,0 +1,33 @@
+pdxmesh = {
+	name = "simple_plane_A_mesh"
+	file = "simple_plane_A.mesh"
+}
+
+pdxmesh = {
+	name = "simple_plane_A_flag_mesh"
+	file = "simple_plane_A.mesh"
+	meshsettings = {
+		name = "pPlaneShape1"
+		texture_diffuse = "white.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		index = 0
+		shader = "standard_waving_flag"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "simple_plane_A_entity"
+	pdxmesh = "simple_plane_A_mesh"
+
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}
+
+entity = {
+	name = "simple_plane_A_flag_entity"
+	pdxmesh = "simple_plane_A_flag_mesh"
+}

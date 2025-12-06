@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "resources_silk_raw_b_mesh"
+	file = "resources_silk_raw_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "raw_b_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_silk_diffuse.dds"
+		texture_normal = "resource_silk_normal.dds"
+		texture_specular = "resource_silk_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_silk_raw_b|LOD_0|raw_b_lod0|decal_lod0|decal_lod0Shap"
+		index = 0
+		texture_diffuse = "resources_silk_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_silk_raw_b_decal_normal.dds"
+		texture_specular = "resources_silk_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "raw_b_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_silk_diffuse.dds"
+		texture_normal = "resource_silk_normal.dds"
+		texture_specular = "resource_silk_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_silk_raw_b|LOD_1|raw_b_lod1|decal_lod1|decal_lod1Shap"
+		index = 0
+		texture_diffuse = "resources_silk_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_silk_raw_b_decal_normal.dds"
+		texture_specular = "resources_silk_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "raw_b_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_silk_diffuse.dds"
+		texture_normal = "resource_silk_normal.dds"
+		texture_specular = "resource_silk_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_silk_raw_b|LOD_2|raw_b_lod2|decal_lod2|decal_lod2Shap"
+		index = 0
+		texture_diffuse = "resources_silk_raw_b_decal_diffuse.dds"
+		texture_normal = "resources_silk_raw_b_decal_normal.dds"
+		texture_specular = "resources_silk_raw_b_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resources_silk_raw_b_entity"
+	pdxmesh = "resources_silk_raw_b_mesh"
+}

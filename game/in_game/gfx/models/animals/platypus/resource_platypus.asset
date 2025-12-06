@@ -1,0 +1,49 @@
+pdxmesh = {
+	name = "resource_platypus_mesh"
+	file = "resource_platypus.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.5 }
+	}
+
+	animation = { id = "animal_platypus_idle_animation" type = "resource_platypus_animal_platypus_idle.anim" }
+
+	meshsettings = {
+		name = "LOD_0|resource_platypus|resource_platypus|resource_platypusShap"
+		index = 0
+		texture_diffuse = "animal_platypus_diffuse.dds"
+		texture_normal = "animal_platypus_normal.dds"
+		texture_specular = "animal_platypus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_1|resource_platypus|resource_platypus|resource_platypusShap"
+		index = 0
+		texture_diffuse = "animal_platypus_diffuse.dds"
+		texture_normal = "animal_platypus_normal.dds"
+		texture_specular = "animal_platypus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_2|resource_platypus|resource_platypus|resource_platypusShap"
+		index = 0
+		texture_diffuse = "animal_platypus_diffuse.dds"
+		texture_normal = "animal_platypus_normal.dds"
+		texture_specular = "animal_platypus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_platypus_entity"
+	pdxmesh = "resource_platypus_mesh"
+
+	default_state = "animal_platypus_idle"
+	state = {
+		name = "animal_platypus_idle"
+		animation = "animal_platypus_idle_animation"
+	}
+}

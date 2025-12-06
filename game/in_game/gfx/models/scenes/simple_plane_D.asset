@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "simple_plane_D_mesh"
+	file = "simple_plane_D.mesh"
+
+	meshsettings = {
+		name = "pPlaneShape6"
+		index = 0
+		shader = "standard_alpha_blend"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+
+}
+
+entity = {
+	name = "simple_plane_D_entity"
+	pdxmesh = "simple_plane_D_mesh"
+}

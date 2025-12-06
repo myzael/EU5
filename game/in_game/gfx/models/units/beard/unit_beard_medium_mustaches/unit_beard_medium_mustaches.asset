@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_beard_medium_mustaches_mesh"
+	file = "unit_beard_medium_mustaches.mesh"
+
+	meshsettings = {
+		name = "unit_beard_medium_mustachesShape"
+		index = 0
+		texture_diffuse = "unit_beard_medium_mustaches_diffuse.dds"
+		texture_normal = "unit_beard_medium_mustaches_normal.dds"
+		texture_specular = "unit_beard_cutted_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

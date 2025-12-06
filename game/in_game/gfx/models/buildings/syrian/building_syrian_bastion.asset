@@ -1,0 +1,85 @@
+pdxmesh = {
+	name = "building_syrian_bastion_mesh"
+	file = "building_syrian_bastion.mesh"
+	scale = 1.5
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.5 }
+		lod = { index = 2 percent = 8.5 }
+	}
+
+	
+
+	meshsettings = {
+		name = "building_syrian_bastion_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "building_syrian_bastion_decal_diffuse.dds"
+		texture_normal = "building_syrian_bastion_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_bastion_lod0Shape"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_bastion_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	
+
+	meshsettings = {
+		name = "building_syrian_bastion_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "building_syrian_bastion_decal_diffuse.dds"
+		texture_normal = "building_syrian_bastion_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_bastion_lod1Shape"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_bastion_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_bastion_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "building_syrian_bastion_decal_diffuse.dds"
+		texture_normal = "building_syrian_bastion_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_bastion_lod2Shape"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_bastion_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_syrian_bastion_entity"
+	pdxmesh = "building_syrian_bastion_mesh"
+}

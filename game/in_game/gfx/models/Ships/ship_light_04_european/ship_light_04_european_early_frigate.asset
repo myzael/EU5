@@ -1,0 +1,209 @@
+pdxmesh = {
+	name = "ship_light_04_european_early_frigate_mesh"
+	file = "ship_light_04_european_early_frigate.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_light_04_european_early_frigate_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_light_04_european_early_frigate_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_light_04_european_early_frigate_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_light_04_european_early_frigate_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_light_04_european_early_frigate|Sails|Sails|SailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_04_european_early_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_04_european_early_frigate|Sails|Sails|SailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_04_european_early_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_04_european_early_frigate|Sails|Sails|SailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_04_european_early_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_04_european_early_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_4_european_early_frigate_diffuse.dds"
+		texture_normal = "ship_light_4_european_early_frigate_normal.dds"
+		texture_specular = "ship_light_4_european_early_frigate_properties.dds"
+		texture = { file = "ship_heavy_04_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_04_european_early_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_4_european_early_frigate_diffuse.dds"
+		texture_normal = "ship_light_4_european_early_frigate_normal.dds"
+		texture_specular = "ship_light_4_european_early_frigate_properties.dds"
+		texture = { file = "ship_heavy_04_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_04_european_early_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_4_european_early_frigate_diffuse.dds"
+		texture_normal = "ship_light_4_european_early_frigate_normal.dds"
+		texture_specular = "ship_light_4_european_early_frigate_properties.dds"
+		texture = { file = "ship_heavy_04_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_light_04_european_early_frigate_entity"
+	pdxmesh = "ship_light_04_european_early_frigate_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "move"
+    	animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "move2"
+    	animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	state = {
+			name = "attack_r"
+			animation = "attack_r_animation"
+			event = {
+				entity_editor_id = "2"
+				time = 2.214
+				node = "cannon_door_right_lctr_001"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.234
+				node = "cannon_door_right_lctr_002"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.254
+				node = "cannon_door_right_lctr_003"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.274
+				node = "cannon_door_right_lctr_004"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.294
+				node = "cannon_door_right_lctr_005"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.314
+				node = "cannon_door_right_lctr_006"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+			event = {
+				entity_editor_id = "2"
+				time = 2.334
+				node = "cannon_door_right_lctr_007"
+				keep_particle = yes
+				particle = "cannon_explosion_v2"
+			}
+		}
+			attach = { cannon_door_left_lctr_001 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_002 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_003 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_004 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_005 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_006 = "cannon_door_left_entity" }
+			attach = { cannon_door_left_lctr_007 = "cannon_door_left_entity" }
+			attach = { cannon_door_right_lctr_001 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_002 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_003 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_004 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_005 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_006 = "cannon_door_right_entity" }
+			attach = { cannon_door_right_lctr_007 = "cannon_door_right_entity" }
+			attach = { deck_cannon_left_lctr_001 = "cannon_entity" }
+			attach = { deck_cannon_right_lctr_001 = "cannon_entity" }
+			attach = { ensign_flag_lctr = "ship_flag_entity" }
+			attach = { mainmast_flag_lctr = "ship_flag_entity" }
+			attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+			attach = { pennant_flag_lctr_002 = "flag_pennant_entity" }	
+	}

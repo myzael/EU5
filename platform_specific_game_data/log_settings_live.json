@@ -1,0 +1,34 @@
+{
+	"loggers": [
+		{
+			"category": "fir_log",
+			"always_flush_level": "error",
+			"sinks": [
+				{
+					"type": "file",
+					"file_name": "framerate_issues",
+					"log_level": "debug",
+					"format_pattern": "%v"
+				}
+			]
+		},
+		{
+			"category": "game_hardware_checker",
+			"always_flush_level": "debug",
+			"sinks": [
+				{
+					"type": "file",
+					"log_level": "debug",
+					"file_name": "hardware_checker",
+					"format_pattern": "[%T][%s:%#]: %v"
+				},
+				{
+					"type": "file",
+					"log_level": "error",
+					"file_name": "error",
+					"format_pattern": "[%T][%s:%#]: %v"
+				}
+			]
+		}
+	]
+}

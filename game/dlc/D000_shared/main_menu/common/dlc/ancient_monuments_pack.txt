@@ -1,0 +1,8 @@
+﻿ancient_monuments_pack = {
+    id = "D015_ancient_monuments_pack/D015_ancient_monuments_pack.dlc.json"
+    name = "ancient_monuments_pack_key"
+    desc = "ancient_monuments_pack_desc"
+    activate = "ancient_monuments_pack_activate_desc"
+    item = "monuments_signup_reward"
+    color = rgb { 84 140 85 } # for ui mainly
+}

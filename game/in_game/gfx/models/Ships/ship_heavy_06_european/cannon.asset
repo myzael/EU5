@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "cannon_mesh"
+	file = "cannon.mesh"
+
+	meshsettings = {
+		name = "polySurface162Shape"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "cannon_entity"
+	pdxmesh = "cannon_mesh"
+}

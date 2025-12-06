@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "resource_wolf_a_mesh"
+	file = "resource_wolf_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	animation = { id = "wolf_walk_cycle_animation" type = "resource_wolf_a_wolf_walk_cycle.anim" }
+
+	meshsettings = {
+		name = "resource_wolf_a|LOD_0|resource_wolf_LOD0|resource_wolf_LOD0Shap"
+		index = 0
+		texture_diffuse = "resource_wolf_a_diffuse.dds"
+		texture_normal = "resource_wolf_normal.dds"
+		texture_specular = "resource_wolf_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_wolf_a|LOD_1|resource_wolf_LOD1|resource_wolf_LOD1Shap"
+		index = 0
+		texture_diffuse = "resource_wolf_a_diffuse.dds"
+		texture_normal = "resource_wolf_normal.dds"
+		texture_specular = "resource_wolf_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_wolf_a|LOD_2|resource_wolf_LOD2|resource_wolf_LOD2Shap"
+		index = 0
+		texture_diffuse = "resource_wolf_a_diffuse.dds"
+		texture_normal = "resource_wolf_normal.dds"
+		texture_specular = "resource_wolf_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_wolf_a_entity"
+	pdxmesh = "resource_wolf_a_mesh"
+
+	default_state = "wolf_walk_cycle"
+	state = {
+		name = "wolf_walk_cycle"
+		animation = "wolf_walk_cycle_animation"
+	}
+}

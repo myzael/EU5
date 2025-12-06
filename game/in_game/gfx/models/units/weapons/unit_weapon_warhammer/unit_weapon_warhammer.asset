@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_warhammer_mesh"
+	file = "unit_weapon_warhammer.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_warhammer81Shape"
+		index = 0
+		texture_diffuse = "unit_weapon_warhammer_diffuse.dds"
+		texture_normal = "unit_weapon_warhammer_normal.dds"
+	#	texture_specular = "unit_weapon_handheld_bombard_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_warhammer_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

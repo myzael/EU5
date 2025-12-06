@@ -1,0 +1,77 @@
+types CabinetColumns
+{
+	type cabinet_name = widget {
+		layoutpolicy_horizontal = expanding
+		size = { 530 145 }
+
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			margin = { 4 4 }
+
+			using = bg_cabinet_card_frame
+			
+			datacontext = "[InteractionTarget.GetCabinet]"
+
+			cabinet_card = {
+				size = {-1 140}
+				visible = "[Not(Cabinet.IsCharacterSet)]"
+				blockoverride "cabinet_card_size" {
+					layoutpolicy_horizontal = expanding
+					size = {-1 90}
+				}
+				blockoverride "cabinet_char_action" {
+					visible = no
+				}
+				blockoverride "no_advisor_portrait" {}
+				blockoverride "cabinet_action_tt" {
+					using = select_interaction_target_action_provider
+					using = snd_UI_confirm
+					tooltipmeta = {
+						texture = "gfx/interface/icons/alerts_icons/cabinet.dds"
+						title = "[UIAction.GetTitle]"
+						game_concept = "[cabinet|E]"
+					}
+					# tooltipwidget = {
+					# 	ContextualTooltipType = {
+					# 		blockoverride "tooltip_content" {
+					# 			using = action_tooltip_inner_content
+					# 		}
+					# 	}
+					# }
+					# action_tooltip = {
+					# 	click_type = left
+					# 	click_mode = confirm
+					# 	title = "[UIAction.GetDescription]"
+					# }
+				}
+			}
+
+			cabinet_card = {
+				visible = "[Cabinet.IsCharacterSet]"
+				blockoverride "cabinet_card_size" {
+					layoutpolicy_horizontal = expanding
+					size = {-1 120}
+				}
+				blockoverride "cabinet_char_action" {
+					visible = no
+				}
+				blockoverride "cabinet_action_tt" {
+					using = select_interaction_target_action_provider
+					using = snd_UI_confirm
+					tooltipmeta = {
+						texture = "gfx/interface/icons/alerts_icons/cabinet.dds"
+						title = "[Cabinet.GetName]"
+						game_concept = "[cabinet|E]"
+					}
+					# tooltipwidget = {
+					# 	ContextualTooltipType = {
+					# 		blockoverride "tooltip_content" {
+					# 			using = action_tooltip_inner_content
+					# 		}
+					# 	}
+					# }
+				}
+			}
+		}		
+	}
+}

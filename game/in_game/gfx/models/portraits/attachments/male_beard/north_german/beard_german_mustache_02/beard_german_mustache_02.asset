@@ -1,0 +1,32 @@
+﻿pdxmesh = {
+	name = "beard_german_mustache_02_mesh"
+	file = "beard_german_mustache_02.mesh"
+
+#	blend_shape = { id = "beard_n_heard_mid_a_bs01"		type = "beard_n_heard_mid_a_bs01.mesh" }
+
+	meshsettings = {
+		name = "beard_german_mustache_02Shape"
+		index = 0
+		texture_diffuse = "beard_base_hair_diffuse.dds"
+		texture_normal = "beard_base_hair_normal.dds"
+		texture_specular = "beard_base_hair_properties.dds"
+		texture = { file = "sheep_0102_properties.dds" index = 3 }
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "beard_german_mustache_02_entity"
+	pdxmesh = "beard_german_mustache_02_mesh"
+
+#	attribute = { name = "bs_head_test"					blend_shape = "beard_n_heard_mid_a_bs01" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

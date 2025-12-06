@@ -1,0 +1,137 @@
+pdxmesh = {
+	name = "resource_cocoa_gathered_mesh"
+	file = "resource_cocoa_gathered.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_diffuse.dds"
+		texture_normal = "resource_cocoa_normal.dds"
+		texture_specular = "resource_cocoa_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_prop_lod0Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_diffuse.dds"
+		texture_normal = "resources_gather_props_normal.dds"
+		texture_specular = "resources_gather_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_gathered_decal_diffuse.dds"
+		texture_normal = "resource_cocoa_gathered_decal_normal.dds"
+		texture_specular = "resource_cocoa_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_wood_lod0Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_diffuse.dds"
+		texture_normal = "resource_cocoa_normal.dds"
+		texture_specular = "resource_cocoa_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_gathered_decal_diffuse.dds"
+		texture_normal = "resource_cocoa_gathered_decal_normal.dds"
+		texture_specular = "resource_cocoa_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_wood_lod1Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_prop_lod1Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_diffuse.dds"
+		texture_normal = "resources_gather_props_normal.dds"
+		texture_specular = "resources_gather_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_diffuse.dds"
+		texture_normal = "resource_cocoa_normal.dds"
+		texture_specular = "resource_cocoa_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_cocoa_gathered_decal_diffuse.dds"
+		texture_normal = "resource_cocoa_gathered_decal_normal.dds"
+		texture_specular = "resource_cocoa_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_wood_lod2Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_cocoa_gathered_prop_lod2Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_diffuse.dds"
+		texture_normal = "resources_gather_props_normal.dds"
+		texture_specular = "resources_gather_props_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_cocoa_gathered_entity"
+	pdxmesh = "resource_cocoa_gathered_mesh"
+}

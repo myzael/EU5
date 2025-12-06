@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_legs_iron_chainmail_knee_cops_mesh"
+	file = "unit_legs_iron_chainmail_knee_cops.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "unit_legs_iron_chainmail_knee_cops_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_legs_iron_chainmail_knee_cops_diffuse.dds"
+		texture_normal = "unit_legs_iron_chainmail_knee_cops_normal.dds"
+		#texture_specular = "unit_legs_iron_chainmail_knee_cops_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_iron_chainmail_knee_cops_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_legs_iron_chainmail_knee_cops_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_legs_iron_chainmail_knee_cops_diffuse.dds"
+		texture_normal = "unit_legs_iron_chainmail_knee_cops_normal.dds"
+		#texture_specular = "unit_legs_iron_chainmail_knee_cops_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_iron_chainmail_knee_cops_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_iron_chainmail_knee_cops_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_legs_iron_chainmail_knee_cops_diffuse.dds"
+		texture_normal = "unit_legs_iron_chainmail_knee_cops_normal.dds"
+		#texture_specular = "unit_legs_iron_chainmail_knee_cops_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_iron_chainmail_knee_cops_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

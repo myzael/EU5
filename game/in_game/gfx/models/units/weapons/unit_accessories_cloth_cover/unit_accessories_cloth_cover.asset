@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_cloth_cover_mesh"
+	file = "unit_accessories_cloth_cover.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_cloth_coverShape"
+		index = 0
+		texture_diffuse = "unit_accessories_cloth_cover_diffuse.dds"
+		texture_normal = "unit_accessories_cloth_cover_normal.dds"
+		#texture_specular = "unit_accessories_cloth_cover_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_cloth_cover_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

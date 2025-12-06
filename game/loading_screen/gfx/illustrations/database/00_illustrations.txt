@@ -1,0 +1,7 @@
+﻿illustration_locations = {
+	scene = "location_scene"
+	tags = {
+		10 = Johan
+	}
+}
+

@@ -1,0 +1,118 @@
+pdxmesh = {
+	name = "building_han_factory_c_mesh"
+	file = "building_han_factory_c.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "building_han_factory_c_animation" type = "building_han_factory_c_building_han_factory_c.anim" }
+
+	meshsettings = {
+		name = "building_han_factory_large_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "building_han_factory_c_decal_diffuse.dds"
+		texture_normal = "building_han_factory_c_decal_normal.dds"
+		texture_specular = "building_han_factory_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_factory_large_wheel_lod0Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_factory_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_factory_large_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "building_han_factory_c_decal_diffuse.dds"
+		texture_normal = "building_han_factory_c_decal_normal.dds"
+		texture_specular = "building_han_factory_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_factory_large_wheel_lod1Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_factory_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_factory_large_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "building_han_factory_c_decal_diffuse.dds"
+		texture_normal = "building_han_factory_c_decal_normal.dds"
+		texture_specular = "building_han_factory_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_factory_large_wheel_lod2Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_factory_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_han_factory_c_entity"
+	pdxmesh = "building_han_factory_c_mesh"
+
+	default_state = "building_han_factory_c"
+	state = {
+		name = "building_han_factory_c"
+		animation = "building_han_factory_c_animation"
+		looping = yes
+        	state_time = 6
+
+
+		
+		event =
+        {
+            time = 0
+            node = "building_han_factory_b_lctr_0"
+            particle = "infrastructure/factory_smoke_large"
+            trigger_once = yes
+            keep_particle = yes
+		}
+
+		event =
+        {
+            time = 0
+            node = "building_han_factory_b_lctr_1"
+            particle = "infrastructure/factory_smoke_large"
+            trigger_once = yes
+            keep_particle = yes
+		}
+		event =
+        {
+            time = 0
+            node = "building_han_factory_b_lctr_2"
+            particle = "infrastructure/factory_smoke_large"
+            trigger_once = yes
+            keep_particle = yes
+		}
+	}
+}

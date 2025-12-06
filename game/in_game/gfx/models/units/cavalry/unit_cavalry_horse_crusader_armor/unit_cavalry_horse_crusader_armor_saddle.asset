@@ -1,0 +1,76 @@
+pdxmesh = {
+	name = "unit_cavalry_horse_crusader_armor_saddle_mesh"
+	file = "unit_cavalry_horse_crusader_armor_saddle.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 6.0 }
+		lod = { index = 2 percent = 2.5}
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_armor_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_crusader_horse_armor_diffuse.dds"
+		texture_normal = "unit_crusader_horse_armor_normal.dds"
+		#texture_specular = "unit_crusader_horse_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_crusader_horse_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_saddle_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_saddle_a_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_saddle_a_normal.dds"
+		#texture_specular = "unit_cavalry_horse_saddle_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_saddle_a_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_armor_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_crusader_horse_armor_diffuse.dds"
+		texture_normal = "unit_crusader_horse_armor_normal.dds"
+		#texture_specular = "unit_crusader_horse_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_crusader_horse_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_saddle_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_saddle_a_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_saddle_a_normal.dds"
+		#texture_specular = "unit_cavalry_horse_saddle_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_saddle_a_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_armor_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_crusader_horse_armor_diffuse.dds"
+		texture_normal = "unit_crusader_horse_armor_normal.dds"
+		#texture_specular = "unit_crusader_horse_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_crusader_horse_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_crusader_saddle_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_saddle_a_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_saddle_a_normal.dds"
+		#texture_specular = "unit_cavalry_horse_saddle_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_saddle_a_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

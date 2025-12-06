@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "animal_donkey_mesh"
+	file = "animal_donkey.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "moving_animation" type = "animal_donkey_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|unit_animal_donkey|unit_animal_donkey|unit_animal_donkeyS"
+		index = 0
+		texture_diffuse = "animal_donkey_diffuse.dds"
+		texture_normal = "animal_donkey_normal.dds"
+		texture_specular = "animal_donkey_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "unit_animal_donkey_lod1|unit_animal_donkey|unit_animal_donkeySh"
+		index = 0
+		texture_diffuse = "animal_donkey_diffuse.dds"
+		texture_normal = "animal_donkey_normal.dds"
+		texture_specular = "animal_donkey_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "unit_animal_donkey_lod2|unit_animal_donkey|unit_animal_donkeySh"
+		index = 0
+		texture_diffuse = "animal_donkey_diffuse.dds"
+		texture_normal = "animal_donkey_normal.dds"
+		texture_specular = "animal_donkey_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "animal_donkey_entity"
+	pdxmesh = "animal_donkey_mesh"
+
+	default_state = "moving"
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}

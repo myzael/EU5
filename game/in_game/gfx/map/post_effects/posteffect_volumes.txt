@@ -1,0 +1,146 @@
+##reload posteffectvolumes
+#PostEffectVolumes.Enabled
+#PostEffectVolumes.ForceUpdate
+#Draw.DebugPostEffectVolumes
+
+posteffect_values = {
+	name = standard
+	lut = "gfx/map/post_effects/colorcorrection_neutral.tga"
+	fog_color=hsv{ 0.58 0.50 0.72 }
+	fog_begin=0.0
+	fog_end=250.0
+	fog_max= 0.5
+}
+
+posteffect_values = {
+	name = hot
+	inherit = standard
+	lut = "gfx/map/post_effects/colorcorrection_hot.tga"
+	fog_color=hsv{ 0.06 0.63 0.71 }
+	fog_begin=0.0
+	fog_end=250.0
+	fog_max= 0.5
+}
+
+posteffect_values = {
+	name = cold
+	inherit = standard
+	lut = "gfx/map/post_effects/colorcorrection_cold.tga"
+	fog_color=hsv{ 0.62 0.54 0.82 }
+	fog_begin=0.0
+	fog_end=200.0
+	fog_max= 0.5
+}
+
+posteffect_values = {
+	name = zoom_step_00
+	inherit = standard
+	fog_max = 2.0
+	fog_begin = 50
+	fog_end = 100
+}
+posteffect_values = {
+	inherit = zoom_step_00
+	name = zoom_step_01
+	fog_max = 0.5
+	fog_begin = 250
+	fog_end = 500
+}
+posteffect_values = {
+	inherit = zoom_step_01
+	name = zoom_step_02
+	fog_max = 0.15
+	fog_begin = 500
+	fog_end = 1000
+}
+posteffect_values = {
+	inherit = zoom_step_02
+	name = flatmap
+	fog_max = 0
+	fog_begin = 500
+	fog_end = 1000
+}
+
+#################################
+
+############ VOLUMES ############
+############ HEIGHTS ############
+
+#################################
+
+posteffect_volumes = {
+
+	posteffect_height_volume = {
+		name = "zoom_step_00"
+
+		posteffect_values_day = zoom_step_00
+		posteffect_values_night = zoom_step_00
+
+		height = 25
+		fade_distance = 10
+	}
+
+	posteffect_height_volume = {
+		name = "zoom_step_01"
+	
+		posteffect_values_day = zoom_step_01
+		posteffect_values_night = zoom_step_01
+	
+		height = 35
+		fade_distance = 150
+	}
+
+	posteffect_height_volume = {
+		name = "zoom_step_02"
+	
+		posteffect_values_day = zoom_step_02
+		posteffect_values_night = zoom_step_02
+	
+		height = 200
+		fade_distance = 230
+	}
+
+	posteffect_height_volume = {
+		name = "flatmap"
+	
+		posteffect_values_day = flatmap
+		posteffect_values_night = flatmap
+	
+		height = 430
+		fade_distance = 0
+	}
+}
+
+################################# 
+
+############ VOLUMES ############ 
+############ BOXES	 ############ 
+
+#################################
+
+	
+posteffect_volume = {
+	name = "arctic"
+	posteffect_values_day = cold
+	posteffect_values_night = cold
+	position = { 8192 0 8192 }
+	size = { 16384 3000 4500 }
+	fade_distance = 2000
+}
+posteffect_volume = {
+	name = "equator"
+	posteffect_values_day = hot
+	posteffect_values_night = hot
+	position = { 8192 0 3350 }
+	size = { 16384 3000 4500 }
+	fade_distance = 2000
+}
+posteffect_volume = {
+	name = "antarctic"
+	posteffect_values_day = cold
+	posteffect_values_night = cold
+	position = { 8192 0 0 }
+	size = { 16384 3000 1750 }
+	fade_distance = 1000
+}
+	

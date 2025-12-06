@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "unit_weapon_traditions_triangular_sword_sheath_mesh"
+	file = "unit_weapon_traditions_triangular_sword_sheath.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_traditions_triangular_sword_sheathShape"
+		index = 0
+		texture_diffuse = "unit_weapon_traditions_triangular_sword_diffuse.dds"
+		texture_normal = "unit_weapon_traditions_triangular_sword_normal.dds"
+#		texture_specular = "unit_weapon_early_rapier_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_traditions_triangular_sword_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

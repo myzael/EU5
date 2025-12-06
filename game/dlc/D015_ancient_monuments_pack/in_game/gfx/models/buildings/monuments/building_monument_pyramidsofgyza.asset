@@ -1,0 +1,90 @@
+pdxmesh = {
+	name = "building_monument_pyramidsofgyza_mesh"
+	file = "building_monument_pyramidsofgyza.mesh"
+	
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 10.0 }
+	}
+
+	scale = 85
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_lod0Shape"
+		index = 0
+		texture_diffuse = "atlas_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "atlas_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "atlas_monument_pyramidsofgyza_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_monument_pyramidsofgyza_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "decal_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "decal_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "decal_monument_pyramidsofgyza_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_lod1Shape"
+		index = 0
+		texture_diffuse = "atlas_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "atlas_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "atlas_monument_pyramidsofgyza_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_monument_pyramidsofgyza_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "decal_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "decal_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "decal_monument_pyramidsofgyza_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_lod2Shape"
+		index = 0
+		texture_diffuse = "atlas_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "atlas_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "atlas_monument_pyramidsofgyza_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_monument_pyramidsofgyza_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	
+
+
+	meshsettings = {
+		name = "building_monument_pyramidsofgyza_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "decal_monument_pyramidsofgyza_diffuse.dds"
+		texture_normal = "decal_monument_pyramidsofgyza_normal.dds"
+		texture_specular = "decal_monument_pyramidsofgyza_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+}
+
+entity = {
+	name = "building_monument_pyramidsofgyza_entity"
+	pdxmesh = "building_monument_pyramidsofgyza_mesh"
+}

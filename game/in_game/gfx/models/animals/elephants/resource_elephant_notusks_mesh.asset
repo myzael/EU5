@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "resource_elephant_notusks_mesh_mesh"
+	file = "resource_elephant_notusks_mesh.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "|resource_elephant_notusks_mesh|LOD_0|resource_elephant_notusks"
+		index = 0
+		texture_diffuse = "resource_elephant_notusks_diffuse.dds"
+		texture_normal = "resource_elephant_notusks_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_3|resource_elephant_notusks_mesh|resource_elephant_notusks_"
+		index = 0
+		texture_diffuse = "resource_elephant_notusks_diffuse.dds"
+		texture_normal = "resource_elephant_notusks_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_4|resource_elephant_notusks_mesh|resource_elephant_notusks_"
+		index = 0
+		texture_diffuse = "resource_elephant_notusks_diffuse.dds"
+		texture_normal = "resource_elephant_notusks_normal.dds"
+		texture_specular = "resource_elephant_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_elephantry_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_elephant_notusks_mesh_entity"
+	pdxmesh = "resource_elephant_notusks_mesh_mesh"
+}

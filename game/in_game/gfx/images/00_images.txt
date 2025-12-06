@@ -1,0 +1,488 @@
+﻿### Illustration Lists ###
+empty_layer = {
+	tag = "empty_layer"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+}
+
+throne_room_test = {
+	tag = "throne_room"
+
+	#Shogunate
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/international_organization_types/japanese_shogunate.dds"
+		priority = 30
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			any_ruling_countries = {
+				OR = {
+					tag = JAP
+					is_leader_of_international_organization = international_organization:japanese_shogunate
+				}
+			}
+		}
+	}
+
+	#Papal
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/papal_authority.dds"
+		priority = 30
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			any_ruling_countries = {
+				OR = {
+					tag = PAP
+					is_leader_of_international_organization = international_organization:catholic_church
+				}
+			}
+		}
+	}
+
+	#Hre
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/international_organization_types/hre.dds"
+		priority = 21
+		scope = character
+		trigger = {
+			owner = { is_leader_of_international_organization = international_organization:hre }
+		}
+	}
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_north_german.dds"
+		priority = 10
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = european_gfx }
+		}
+	}
+
+	# Horde
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_horde.dds"
+		priority = 30
+		scope = character
+		trigger = {
+			employer = { 
+				government_type = government_type:steppe_horde
+			}
+		}
+	}
+
+	#Republic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_republic.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			employer = { 
+				government_type = government_type:republic
+				gfx_culture_applicable = european_gfx
+			}
+		}
+	}
+
+	#Theocracy
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_theocracy.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			employer = { 
+				government_type = government_type:theocracy
+				gfx_culture_applicable = christian_gfx
+			}
+		}
+	}
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_north_german.dds"
+		priority = 15
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { 
+				gfx_culture_applicable = european_gfx
+				country_rank_level >= 3
+			}
+		}
+	}
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_north_german_low_tier.dds"
+		priority = 10
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = european_gfx }
+		}
+	}
+
+	#Syrian
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_syrian.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = middle_east_gfx }
+		}
+	}
+
+	#Steppe Horde
+	# illustration_image = {
+	# 	texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_theocracy.dds"
+	# 	priority = 20
+	# 	scope = country
+	# 	trigger = {
+	# 		government_type = government_type:steppe_horde
+	# 	}
+	# }
+
+	#Aztec
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_aztec.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = south_american_gfx }
+		}
+	}
+
+	#Asian
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_asian_middle_kingdom.dds"
+		priority = 30
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { 
+				is_leader_of_international_organization = international_organization:middle_kingdom
+			}
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_asian.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { 
+				gfx_culture_applicable = east_asian_gfx
+			}
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_horde.dds"
+		priority = 40
+		scope = character
+		trigger = {
+			employer = { 
+				gfx_culture_applicable = east_asian_gfx
+				OR = {
+					government_type = government_type:tribe
+					government_type = government_type:steppe_horde
+				}
+			}
+		}
+	}
+
+	#Iroquois
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_iroquois.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = north_american_gfx }
+		}
+	}
+
+	#Ashanti
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_ashanti.dds"
+		priority = 20
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = african_gfx }
+		}
+	}
+
+	#Deccan
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_deccan.dds"
+		priority = 21
+		scope = character
+		trigger = {
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer = { gfx_culture_applicable = indian_gfx }
+		}
+	}
+
+
+	# commander
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/institutions/professional_armies.dds"
+		priority = 12
+		scope = character
+		trigger = {
+			OR = {
+				is_general = yes
+				has_trait_category = general
+			}
+			is_ruler = no
+			modifier:blocked_from_being_leader = no
+		}
+	}
+	illustration_image = {
+		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_naval_supplies.dds"
+		priority = 12
+		scope = character
+		trigger = {
+			OR = {
+				is_admiral = yes
+				has_trait_category = admiral
+			}
+			is_ruler = no
+			modifier:blocked_from_being_leader = no
+		}
+	}
+
+	# artist
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
+		priority = 11
+		scope = character
+		trigger = {
+			is_ruler = no
+			is_artist = yes
+			artist_type = scientist
+		}
+	}
+	illustration_image = {
+		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_masonry.dds"
+		priority = 11
+		scope = character
+		trigger = {
+			is_ruler = no
+			is_artist = yes
+			artist_type = architect
+		}
+	}
+	illustration_image = {
+		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_paper.dds"
+		priority = 11
+		scope = character
+		trigger = {
+			is_ruler = no
+			is_artist = yes
+			OR = {
+				artist_type = calligrapher
+				artist_type = writer
+				artist_type = jurist
+				artist_type = philosopher
+				artist_type = composer
+			}
+		}
+	}
+	illustration_image = {
+		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_tools.dds"
+		priority = 11
+		scope = character
+		trigger = {
+			is_ruler = no
+			is_artist = yes
+			artist_type = metalsmith
+		}
+	}
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/institutions/renaissance.dds"
+		priority = 10
+		scope = character
+		trigger = {
+			is_artist = yes
+			is_ruler = no
+		}
+	}
+
+	# generic
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/character_panel/canvas_backdrop.dds"
+		priority = 1
+		scope = character
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+balance_overview_scene = {
+	tag = "balance_overview_scene"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/economy_balance.dds"
+		priority = 1
+		scope = country
+	}
+}
+
+expansion_overview_scene = {
+	tag = "expansion_overview_scene"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/geopolitics_expansion_illustration.dds"
+		priority = 1
+		scope = country
+	}
+}
+
+maritime_overview_scene = {
+	tag = "maritime_overview_scene"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/government/geopolitics_illustration.dds"
+		priority = 1
+		scope = country
+	}
+}
+
+diseases_overview_scene = {
+	tag = "diseases_overview_scene"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/situation/_default.dds"
+		priority = 1
+		scope = country
+	}
+}

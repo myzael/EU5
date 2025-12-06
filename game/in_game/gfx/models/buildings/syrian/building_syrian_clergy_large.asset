@@ -1,0 +1,84 @@
+pdxmesh = {
+	name = "building_syrian_clergy_large_mesh"
+	file = "building_syrian_clergy_large.mesh"
+	scale = 0.5
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_syrian_clergy_large_diffuse.dds"
+		texture_normal = "building_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_clergy_large_properties.dds"
+
+		shader = "standard"
+
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_large_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_syrian_clergy_large_diffuse.dds"
+		texture_normal = "building_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_clergy_large_properties.dds"
+
+		shader = "standard"
+
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_large_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_syrian_clergy_large_diffuse.dds"
+		texture_normal = "building_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_clergy_large_properties.dds"
+
+		shader = "standard"
+
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_clergy_large_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_large_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_large_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_syrian_clergy_large_entity"
+	pdxmesh = "building_syrian_clergy_large_mesh"
+}

@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_hat_round_bent_mesh"
+	file = "unit_hat_round_bent.mesh"
+
+	meshsettings = {
+		name = "unit_hat_round_bentShape"
+		index = 0
+		texture_diffuse = "unit_hat_round_bent_diffuse.dds"
+		texture_normal = "unit_hat_round_bent_normal.dds"
+		#texture_specular = "unit_hat_round_bent_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_round_bent_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

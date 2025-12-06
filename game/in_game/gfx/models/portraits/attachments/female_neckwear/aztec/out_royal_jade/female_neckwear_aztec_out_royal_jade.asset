@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "female_neckwear_aztec_out_royal_jade_mesh"
+	file = "female_neckwear_aztec_out_royal_jade.mesh"
+	
+	meshsettings = {
+		name = "female_neckwear_aztec_out_royal_jadeShape"
+		index = 0
+		texture_diffuse = "female_neckwear_aztec_out_royal_jade_diffuse.dds"
+		texture_normal = "female_neckwear_aztec_out_royal_jade_normal.dds"
+		texture_specular = "female_neckwear_aztec_out_royal_jade_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_neckwear_aztec_out_royal_jade_entity"
+	pdxmesh = "female_neckwear_aztec_out_royal_jade_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}

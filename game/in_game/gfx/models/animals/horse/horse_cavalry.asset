@@ -1,0 +1,34 @@
+pdxmesh = {
+	name = "cavalry_horse_0_mesh"
+	file = "cavalry_horse_0.mesh"
+	scale = 7
+
+	animation = { id = "idle_animation" type = "horse_cavalry_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "cavalry_horse_0Shape"
+		index = 0
+		texture_diffuse = "horse_a_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+entity = {
+	name = "horse_cavalry_entity"
+	pdxmesh = "cavalry_horse_0_mesh"
+
+	scale = 7
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}

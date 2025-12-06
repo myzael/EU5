@@ -1,0 +1,87 @@
+﻿event_illustration_data = {
+	aggregate_members = {
+		pop_type = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "peasant"
+				possible_values = {
+					"peasants"
+					"burghers"
+					"nobles"
+					"clergy"
+				}
+				description = "Set the pop type"
+			}
+		}
+
+		gfx_culture = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "north_german_gfx"
+				possible_values = {
+					"african_gfx"
+					"east_asian_gfx"
+					"indian_gfx"
+					"south_american_gfx"
+					"middle_east_gfx"
+					"north_american_gfx"
+					"north_german_gfx"
+				}
+				description = "Set the sfx culture"
+			}
+		}
+
+		sfx_culture = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "north_german_sfx"
+				possible_values = {
+					"african_sfx"
+					"east_asian_sfx"
+					"indian_sfx"
+					"south_american_sfx"
+					"middle_east_sfx"
+					"north_american_sfx"
+					"north_german_sfx"
+				}
+				description = "Set the sfx culture"
+			}
+		}
+
+		mood = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "regular"
+				possible_values = {
+					"regular"
+					"happy"
+					"angry"
+					"armed"
+					"trading"
+					"spying"
+					"sailing"
+				}
+				description = "Set the mood of the characters"
+			}
+		}
+
+		outcome = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "neutral"
+				possible_values = {
+					"neutral"
+					"positive"
+					"negative"
+				}
+				description = "Set the nature of the outcome of the event (used for music stinger)"
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "resource_beaver_fur_mesh"
+	file = "resource_beaver_fur.mesh"
+
+	animation = { id = "idle_animation" type = "resource_beaver_fur_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_beaver_fur_moving.anim" }
+
+	meshsettings = {
+		name = "resource_beaver_furShape"
+		index = 0
+		texture_diffuse = "raw_resources_fur_diffuse.dds"
+		texture_normal = "raw_resources_fur_normal.dds"
+		texture_specular = "raw_resources_fur_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_beaver_fur_entity"
+	pdxmesh = "resource_beaver_fur_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}

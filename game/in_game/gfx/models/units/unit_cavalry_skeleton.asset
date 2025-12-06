@@ -1,0 +1,22 @@
+pdxmesh = {
+	name = "unit_cavalry_skeleton_mesh"
+	file = "unit_cavalry_skeleton.mesh"
+
+	#cavalry#
+	animation = { id = "unit_cavalry_walk"		type = "animations/cavalry/unit_cavalry_walk.anim" }
+	animation = { id = "unit_cavalry_attack"	type = "animations/cavalry/unit_cavalry_idle_01.anim" }
+	animation = { id = "unit_cavalry_charge"	type = "animations/cavalry/unit_cavalry_charge.anim" }
+	animation = { id = "unit_cavalry_idle_01"	type = "animations/cavalry/unit_cavalry_idle_01.anim" }
+	animation = { id = "unit_cavalry_idle_02"	type = "animations/cavalry/unit_cavalry_idle_02.anim" }
+	animation = { id = "unit_cavalry_idle_03"	type = "animations/cavalry/unit_cavalry_idle_03.anim" }
+	animation = { id = "unit_cavalry_idle_04"	type = "animations/cavalry/unit_cavalry_idle_04.anim" }
+	animation = { id = "unit_cavalry_attack_01"	type = "animations/cavalry/unit_cavalry_attack_01.anim" }
+	animation = { id = "unit_cavalry_attack_02"	type = "animations/cavalry/unit_cavalry_attack_02.anim" }
+
+
+	meshsettings = {
+		name = "unit_cavalry_skeletonShape"
+		index = 0
+		shader = "standard"
+	}
+}

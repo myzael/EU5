@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "oars_small_left_mesh"
+	file = "oars_small_left.mesh"
+
+	animation = { id = "idle_animation" type = "oars_small_left_idle.anim" }
+	animation = { id = "unfold_animation" type = "oars_small_left_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "oars_small_left_attack_r.anim" }
+	animation = { id = "moving_animation" type = "oars_small_left_moving.anim" }
+
+	meshsettings = {
+		name = "ship_galley_00_iroquois_canoe_oar_left_Shape1"
+		index = 0
+		texture_diffuse = "ship_trim_diffuse.dds"
+		texture_normal = "ship_trim_normal.dds"
+		texture_specular = "ship_trim_properties.dds"
+		shader = "ship_hull_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "oars_small_left_entity"
+	pdxmesh = "oars_small_left_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "move"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+		time_offset = { 0.1 0.18 }
+	}
+	state = {
+		name = "move2"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+		time_offset = { 0.1 0.18}
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+}

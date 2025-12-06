@@ -1,0 +1,19 @@
+﻿pdxmesh = {
+	name = "female_headwear_aztec_low_pearls_circlet_mesh"
+	file = "female_headwear_aztec_low_pearls_circlet.mesh"
+
+	meshsettings = {
+		name = "female_headwear_aztec_low_pearls_circletShape"
+		index = 0
+		texture_diffuse = "female_headwear_aztec_low_pearls_circlet_diffuse.dds"
+		texture_normal = "female_headwear_aztec_low_pearls_circlet_normal.dds"
+		texture_specular = "female_headwear_aztec_low_pearls_circlet_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headwear_aztec_low_pearls_circlet_entity"
+	pdxmesh = "female_headwear_aztec_low_pearls_circlet_mesh"
+}

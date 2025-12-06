@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "environment_jungle_tree_08_mesh"
+	file = "environment_jungle_tree_08.mesh"
+
+	meshsettings = {
+		name = "environment_jungle_tree_08Shape"
+		index = 0
+		texture_diffuse = "jungle_trees_atlas_diffuse.dds"
+		texture_normal = "jungle_trees_atlas_normal.dds"
+		texture_specular = "cargo_hay_properties.dds"
+		texture = { file = "tint_tree_jungle.dds" index = 3 srgb = yes }
+		shader = "tree_two_sided"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "environment_jungle_tree_08Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "environment_jungle_tree_08_entity"
+	pdxmesh = "environment_jungle_tree_08_mesh"
+}

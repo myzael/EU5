@@ -1,0 +1,63 @@
+Event	ID	Name			Wwise Object Path	Notes
+	78934752	boredomTimer_restart			\ev_logic\boredomTimer_restart	
+	481652823	mus_system_start			\ev_music\playback_functions\mus_system_start	Posted to the Music Manager persistent Wwise game object on entering the Asap scope, i.e. as soon as one starts the game
+	627119789	playerAction_02_hi			\ev_logic\playerAction_02_hi	
+	712530859	stage_change_loadscreen			\ev_logic\flow\stage_change_loadscreen	
+	905463613	mus_system_stop			\ev_music\playback_functions\mus_system_stop	Posted to the Music Manager persistent Wwise game object on leaving the Asap scope, i.e. on quitting the game
+	988148090	cursor_on_panel			\ev_logic\panel_flow\cursor_on_panel	Should also be posted to 
+	1139193997	quit_to_desktop			\ev_logic\quit_to_desktop	
+	1262474572	scope_menu_enter			\ev_logic\flow\scope_menu_enter	posted to the UI Manager persistent Wwise game object on entering the Menu scope, i.e. when first entering main menu
+	1848497817	MasterAmbientSystem_Start_viascopes			\ev_amb\MasterAmbientSystem_Start_viascopes	Posted to the Ambient Manager persiosntent Wwise game object on entering the InGame scope
+	2388945449	panel_focus_zero			\ev_logic\panel_flow\panel_focus_zero	
+	2400172433	stage_change_game			\ev_logic\flow\stage_change_game	
+	2739109761	stage_change_mainmenu			\ev_logic\flow\stage_change_mainmenu	
+	2817961853	mus_set_pieceType_setPiece			\ev_music\logic\mus_set_pieceType_setPiece	
+	3370842300	playerAction_04_low			\ev_logic\playerAction_04_low	
+	3499263738	playerAction_05_very_low			\ev_logic\playerAction_05_very_low	
+	3545445578	kill_panel			\ev_logic\panel_flow\kill_panel	For when we remove a panel with illustration via code, determines the "fade out behaviour" for that soundscape
+	3811421686	cursor_off_panel			\ev_logic\panel_flow\cursor_off_panel	
+	3981680751	playerAction_03_mid			\ev_logic\playerAction_03_mid	
+	4086911251	scope_menu_leave			\ev_logic\flow\scope_menu_leave	posted to the UI Manager persistent Wwise game object on leaving the Menu scope, i.e. when quitting the game from main menu
+	4242637569	playerAction_01_very_hi			\ev_logic\playerAction_01_very_hi	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2384791228	Gamestate_startSequence			\Gamestate\Gamestate_startSequence	
+
+State	ID	Name	State Group			Notes
+	20842036	loadingscreen_first	Gamestate_startSequence			
+	748895195	None	Gamestate_startSequence			
+	871352366	loadingscreen_second	Gamestate_startSequence			
+	984691642	ingame	Gamestate_startSequence			
+	2087420113	ending_game	Gamestate_startSequence			
+	3604647259	mainmenu	Gamestate_startSequence			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3493312238	VCA_Master			\MasterMix\VCA_Master	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	72484483	mod_boredomTimer			\mod_music\mod_boredomTimer	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	73014993	Logic			\Default Work Unit\Master Audio Bus\Logic	
+	3724479913	ducking meter			\Default Work Unit\Master Audio Bus\Logic\ducking meter	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1017241100	BoredomMeter			\Default Work Unit\Master Audio Bus\Logic\ducking meter\BoredomMeter	
+	3989179958	ActionMeter			\Default Work Unit\Master Audio Bus\Logic\ActionMeter	
+
+Effect plug-ins	ID	Name	Type				Notes
+	36531246	fx_meter_boredomcounter	Wwise Meter			
+	613368453	Gain (Custom)	Wwise Gain			
+	2929037090	fx_meter_actioncounter	Wwise Meter			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	41530255	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Logic\THESILENCELOOP\THESILENCELOOP\Silence	
+	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
+	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
+	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
+	727756844	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\StartupPlayerActionMaximizer\Sine	
+	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\02_hi\Sine	
+	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\04_low\Sine	
+	1071802883	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\boredomTimer\boredomTimer_on\Sine	
+

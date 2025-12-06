@@ -1,0 +1,22 @@
+pdxmesh = {
+	name = "loading_screen_mesh"
+	file = "loading_screen.mesh"
+
+	meshsettings = {
+		name = "pPlaneShape5"
+		index = 0
+		#texture_diffuse = "ship_diffuse.dds"
+		shader = "standard_alpha_blend"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "loading_screen_entity"
+	pdxmesh = "loading_screen_mesh"
+	
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}

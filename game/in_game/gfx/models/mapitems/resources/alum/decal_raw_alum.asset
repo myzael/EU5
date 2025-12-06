@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "decal_raw_alum_mesh"
+	file = "decal_raw_alum.mesh"
+
+	meshsettings = {
+		name = "decal_raw_alumShape"
+		index = 0
+		texture_diffuse = "decal_raw_alum_decal_diffuse.dds"
+		texture_normal = "decal_raw_alum_decal_normal.dds"
+		texture_specular = "decal_raw_alum_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_raw_alum_entity"
+	pdxmesh = "decal_raw_alum_mesh"
+}

@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "resources_turkey_mesh"
+	file = "resources_turkey.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "turkey_idle_animation" type = "resources_turkey_turkey_idle.anim" }
+
+	meshsettings = {
+		name = "LOD_0|resources_turkey|resources_turkey|resources_turkeyShape"
+		index = 0
+		texture_diffuse = "resource_turkey_diffuse.dds"
+		texture_normal = "resource_turkey_normal.dds"
+		texture_specular = "resource_turkey_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|resources_turkey|resources_turkey|resources_turkeyShape"
+		index = 0
+		texture_diffuse = "resource_turkey_diffuse.dds"
+		texture_normal = "resource_turkey_normal.dds"
+		texture_specular = "resource_turkey_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|resources_turkey|resources_turkey|resources_turkeyShape"
+		index = 0
+		texture_diffuse = "resource_turkey_diffuse.dds"
+		texture_normal = "resource_turkey_normal.dds"
+		texture_specular = "resource_turkey_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resources_turkey_entity"
+	pdxmesh = "resources_turkey_mesh"
+
+	default_state = "turkey_idle"
+	state = {
+		name = "turkey_idle"
+		animation = "turkey_idle_animation"
+	}
+}

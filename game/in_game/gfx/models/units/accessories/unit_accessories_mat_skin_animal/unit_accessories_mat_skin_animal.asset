@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_mat_skin_animal_mesh"
+	file = "unit_accessories_mat_skin_animal.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_mat_skin_animalShape"
+		index = 0
+		texture_diffuse = "unit_accessories_mat_skin_animal_diffuse.dds"
+		texture_normal = "unit_accessories_mat_skin_animal_normal.dds"
+		#texture_specular = "unit_accessories_mat_skin_animal_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_mat_skin_animal_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

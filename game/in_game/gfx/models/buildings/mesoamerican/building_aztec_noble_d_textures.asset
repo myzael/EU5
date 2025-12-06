@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "building_aztec_noble_d_textures_mesh"
+	file = "building_aztec_noble_d_textures.mesh"
+
+	meshsettings = {
+		name = "Big_Size_001Shape"
+		index = 0
+		texture_diffuse = "decal_aztec_noble_d_diffuse.dds"
+		texture_normal = "decal_aztec_noble_d_normal.dds"
+		texture_specular = "building_aztec_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+		
+	}
+
+	meshsettings = {
+		name = "Cube_043Shape"
+		index = 0
+		texture_diffuse = "building_aztec_noble_c_diffuse.dds"
+		texture_normal = "building_aztec_noble_c_normal.dds"
+		texture_specular = "building_aztec_noble_c_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_aztec_noble_d_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_aztec_noble_d_textures_entity"
+	pdxmesh = "building_aztec_noble_d_textures_mesh"
+}

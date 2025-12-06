@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "flag_pennant_trader_mesh"
+	file = "flag_pennant.mesh"
+
+	meshsettings = {
+		name = "ship_flag4Shape"
+		index = 0
+		texture_diffuse = "flag_cloth_diffuse.dds"
+		texture_normal = "flag_cloth_normal.dds"
+		texture_specular = "flag_cloth_properties.dds"
+		shader = "ship_flag"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "flag_pennant_trader_entity"
+	pdxmesh = "flag_pennant_trader_mesh"
+}

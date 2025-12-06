@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_iroquois_square_b_mesh"
+	file = "building_iroquois_square_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_LOD0Shape"
+		index = 0
+		texture_diffuse = "iroquois_atlas_diffuse.dds"
+		texture_normal = "iroquois_atlas_normal.dds"
+		texture_specular = "iroquois_atlas_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_iroquois_square_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_square_b_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_LOD1Shape"
+		index = 0
+		texture_diffuse = "iroquois_atlas_diffuse.dds"
+		texture_normal = "iroquois_atlas_normal.dds"
+		texture_specular = "iroquois_atlas_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_iroquois_square_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_square_b_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_LODShape2"
+		index = 0
+		texture_diffuse = "iroquois_atlas_diffuse.dds"
+		texture_normal = "iroquois_atlas_normal.dds"
+		texture_specular = "iroquois_atlas_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_iroquois_square_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_iroquois_square_b_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "building_iroquois_square_b_decal_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "building_iroquois_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_iroquois_square_b_entity"
+	pdxmesh = "building_iroquois_square_b_mesh"
+}

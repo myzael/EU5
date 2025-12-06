@@ -1,0 +1,128 @@
+﻿node_editor_meta={
+	view={
+		position={ 568.823425 -36.873596 }
+		zoom=0.621992
+	}
+	nodes={
+		1={
+			position={ -1227.161133 251.405945 }
+		}
+		2={
+			position={ -1229.474487 418.414490 }
+		}
+		3={
+			position={ 247.367111 194.287155 }
+		}
+		4={
+			position={ -35.803284 -282.625000 }
+		}
+		5={
+			position={ 286.504028 -845.198059 }
+		}
+		6={
+			position={ 360.936737 451.643982 }
+		}
+		7={
+			position={ -562.201904 -654.242737 }
+		}
+		8={
+			position={ -239.894592 -1216.815796 }
+		}
+		9={
+			position={ -565.323059 -510.691895 }
+		}
+		10={
+			position={ -243.015747 -1073.264893 }
+		}
+		11={
+			position={ -1224.023682 543.145630 }
+		}
+		12={
+			position={ -637.037415 416.102844 }
+		}
+		13={
+			position={ 102.047829 453.866394 }
+		}
+		27={
+			position={ -636.380127 750.610229 }
+		}
+		16={
+			position={ 552.601807 394.661560 }
+			inlined=yes
+		}
+		17={
+			position={ 874.909058 -167.911499 }
+			inlined=yes
+		}
+		18={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		19={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		20={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		21={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		22={
+			position={ 9673.691406 -1424.979492 }
+			inlined=yes
+		}
+		23={
+			position={ 9995.999023 -1987.552490 }
+			inlined=yes
+		}
+		24={
+			position={ -1089.418091 -411.931183 }
+			inlined=yes
+		}
+		25={
+			position={ 1027.144409 507.129517 }
+			inlined=yes
+		}
+		26={
+			position={ -1089.418091 -411.931183 }
+			inlined=yes
+		}
+		0={
+			position={ 704.837036 1069.702637 }
+			inlined=yes
+		}
+		14={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		15={
+			position={ -359.727234 346.504456 }
+			inlined=yes
+		}
+		28={
+			position={ 631.977234 774.895386 }
+			inlined=yes
+		}
+		29={
+			position={ 631.977234 774.895386 }
+			inlined=yes
+		}
+		30={
+			position={ 631.977234 774.895386 }
+			inlined=yes
+		}
+		31={
+			position={ 631.977234 774.895386 }
+			inlined=yes
+		}
+		32={
+			position={ 631.977234 774.895386 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

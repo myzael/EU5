@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_hat_turban_india_cotton_mesh"
+	file = "unit_hat_turban_india_cotton.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_turban_india_cotton_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hat_turban_india_cotton_diffuse.dds"
+		texture_normal = "unit_hat_turban_india_cotton_normal.dds"
+		#texture_specular = "unit_hat_turban_india_cotton_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_turban_india_cotton_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hat_turban_india_cotton_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_hat_turban_india_cotton_diffuse.dds"
+		texture_normal = "unit_hat_turban_india_cotton_normal.dds"
+		#texture_specular = "unit_hat_turban_india_cotton_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_turban_india_cotton_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_turban_india_cotton_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_hat_turban_india_cotton_diffuse.dds"
+		texture_normal = "unit_hat_turban_india_cotton_normal.dds"
+		#texture_specular = "unit_hat_turban_india_cotton_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_turban_india_cotton_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

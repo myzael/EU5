@@ -1,0 +1,82 @@
+pdxmesh = {
+	name = "building_aztec_market_b_mesh"
+	file = "building_aztec_market_b.mesh"
+	
+	
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_bShape"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_aztec_market_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_b_decalShape"
+		index = 0
+		texture_diffuse = "decal_aztec_market_b_diffuse.dds"
+		texture_normal = "decal_aztec_market_b_normal.dds"
+		texture_specular = "decal_aztec_market_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_b1Shape"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_aztec_market_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_b_decal1Shape"
+		index = 0
+		texture_diffuse = "decal_aztec_market_b_diffuse.dds"
+		texture_normal = "decal_aztec_market_b_normal.dds"
+		texture_specular = "decal_aztec_market_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_b2Shape"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_aztec_market_b_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_aztec_market_b_decal2Shape"
+		index = 0
+		texture_diffuse = "decal_aztec_market_b_diffuse.dds"
+		texture_normal = "decal_aztec_market_b_normal.dds"
+		texture_specular = "decal_aztec_market_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_aztec_market_b_entity"
+	pdxmesh = "building_aztec_market_b_mesh"
+}

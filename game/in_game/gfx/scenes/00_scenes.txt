@@ -1,0 +1,505 @@
+﻿## LOCATION SCENE
+location_scene = {
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "foreground1_mesh"
+	#     list = "fo_testtest"
+	# }
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "foreground2_mesh"
+	#     list = "characters_testtest"
+	# }
+
+	# ecs_illustration_image = {
+	# 	name = "illustration_override_anims"
+	# 	pdxmesh = "midground1_mesh"
+	#     list = "vfx_testtest"
+	# }
+
+	# ecs_illustration_image = {
+	# 	# Layer 01 - WEATHER
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location1_mesh"
+	# 	list = "weather"
+	# 	uv_random_seed = 39481
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 02 - STATUS
+		name = "illustration_override"
+		pdxmesh = "location2_mesh"
+		list = "status"
+		#uv_random_seed = 394
+		#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+		#image_proportion = 0.31
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 03 - RAW GOODS
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location3_mesh"
+	# 	list = "wetlands"
+	# 	uv_random_seed = 3943
+	# 	#uv_move_speed = { -0.01 0.01 0 0 } # X min, X max, Y min, Y max
+	# 	#image_proportion = 0.31
+	# }
+
+	ecs_illustration_image = {
+		# Layer 03 - ROADS
+		name = "illustration_override"
+		pdxmesh = "location3_mesh"
+		list = "roads"
+	}
+
+	ecs_illustration_image = {
+		# Layer 04 - GROUND1
+		name = "illustration_override"
+		pdxmesh = "location4_mesh"
+		list = "ground1"
+		uv_random_seed = 39728
+	}
+
+	ecs_illustration_image = {
+		# Layer 05 - FX
+		name = "illustration_override"
+		pdxmesh = "location5_mesh"
+		list = "location_fx"
+		uv_random_seed = 39486
+	}
+
+	ecs_illustration_image = {
+		# Layer 06 - DOCK
+		name = "illustration_override"
+		pdxmesh = "location6_mesh"
+		list = "dock"
+		uv_random_seed = 3943
+	}
+
+	# ecs_illustration_image = {
+	# 	# Layer 7 - WALL
+	# 	name = "illustration_override"
+	# 	pdxmesh = "location7_mesh"
+	# 	list = "wall"
+	# 	uv_random_seed = 39541
+	# }
+
+	ecs_illustration_image = {
+		# Layer 8 - SETTLEMENT1
+		name = "illustration_override"
+		pdxmesh = "location8_mesh"
+		list = "settlement1"
+		uv_random_seed = 39541
+	}
+
+	ecs_illustration_image = {
+		# Layer 9 - MONUMENTS1
+		name = "illustration_override"
+		pdxmesh = "location9_mesh"
+		list = "monuments1"
+		#uv_random_seed = 35664
+	}
+	
+	ecs_illustration_image = {
+		# Layer 10 - MONUMENTS2
+		name = "illustration_override"
+		pdxmesh = "location10_mesh"
+		list = "monuments2"
+		#uv_random_seed = 39541
+	}
+
+	ecs_illustration_image = {
+		# Layer 11 - MONUMENTS3
+		name = "illustration_override"
+		pdxmesh = "location11_mesh"
+		list = "monuments3"
+		#uv_random_seed = 39541
+	}
+	
+	ecs_illustration_image = {
+		# Layer 12 - FORTIFICATIONS
+		name = "illustration_override"
+		pdxmesh = "location12_mesh"
+		list = "fortifications"
+		uv_random_seed = 39489
+	}
+	
+	ecs_illustration_image = {
+		# Layer 13 - FACTORIES
+		name = "illustration_override"
+		pdxmesh = "location13_mesh"
+		list = "factories"
+		uv_random_seed = 39487
+	}
+	
+	ecs_illustration_image = {
+		# Layer 14 - RELIGIOUS BUILDINGS
+		name = "illustration_override"
+		pdxmesh = "location14_mesh"
+		list = "religious_buildings"
+		uv_random_seed = 39487
+	}
+	
+	
+	ecs_illustration_image = {
+		# Layer 15 - SETTLEMENT 2
+		name = "illustration_override"
+		pdxmesh = "location15_mesh"
+		list = "settlement2"
+		uv_random_seed = 39487
+	}
+
+	ecs_illustration_image = {
+		# Layer 16 - water
+		name = "illustration_override"
+		pdxmesh = "location16_mesh"
+		list = "water"
+		uv_random_seed = 3943
+	}
+
+	ecs_illustration_image = {
+		# Layer 17 - FARMLAND
+		name = "illustration_override"
+		pdxmesh = "location17_mesh"
+		list = "farmland"
+		#resize_behaviour = ResizeToViewport
+		uv_random_seed = 39487
+	}
+
+	ecs_illustration_image = {
+		# Layer 18 - GROUND 3
+		name = "illustration_override"
+		pdxmesh = "location18_mesh"
+		list = "ground3"
+		uv_random_seed = 394875
+	}
+
+	ecs_illustration_image = {
+		# Layer 19 - STATUS BACK VOLCANO
+		name = "illustration_override"
+		pdxmesh = "location19_mesh"
+		list = "statusback"
+		#uv_random_seed = 39499
+	}
+
+	ecs_illustration_image = {
+		# Layer 20 - TOPOLOGY
+		name = "illustration_override"
+		pdxmesh = "location20_mesh"
+		list = "topology"
+		uv_random_seed = 39499
+	}
+
+	ecs_illustration_image = {
+		# Layer 21 - SKY
+		name = "illustration_override"
+		pdxmesh = "location21_mesh"
+		list = "skyv2"
+		uv_random_seed = 39487
+	}
+
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.15 100000} #xyz
+		camera_position = {165 -17 0}
+		camera_look_at = {0 -14 0}
+		camera_fov_y_degrees = 16
+	}
+}
+
+ecs_scene03 = {
+	ecs_scene_entity = {
+		name = "default_mesh"
+		pdxmesh = "paper_map_table_bottom_mesh"
+		#trigger_texture = {
+		#	scope = country
+		#	trigger = {
+		#		coa_monarchy_trigger = yes
+		#	}
+		#	texture = "gfx/models/animals/elephants/resource_asia_elephant_a_diffuse_modified.dds"
+		#}
+	}
+	camera = {
+		camera_near_far = { 0.01 10000}
+		camera_position = {50 130 -500}
+		camera_look_at = {50 130 0}
+		camera_fov_y_degrees = 75
+	}
+	gfx_environment_file = "gfx/illustrations/environment.txt"
+}
+
+ecs_scene_illustration =
+{
+	ecs_illustration_image = {
+		list = "inst_prof_bank_foreground_object"
+		name = "default_illustration"
+		#pdxmesh = "paper_map_table_bottom_mesh"
+	}
+	camera = {
+		camera_near_far = { 0.01 10000}
+		camera_position = {50 130 -500}
+		camera_look_at = {50 130 0}
+		camera_fov_y_degrees = 75
+	}
+	gfx_environment_file = "gfx/illustrations/environment.txt"
+}
+
+ecs_scene_override_illustration_example =
+{
+	ecs_illustration_image = {
+		#list = "inst_renaissance_frontobject"
+		list = "inst_renaissance_background"
+		name = "illustration_override"
+		#name = "illustration_override"
+		#pdxmesh = "event_static_mesh"
+		pdxmesh = "event_frontobject_mesh"
+	}
+
+	# ecs_illustration_image = {
+	# 	list = "inst_prof_bank_foreground"
+	# 	name = "illustration_override"
+	# 	#pdxmesh = "event_foreground_mesh"
+	# 	pdxmesh = "event_static_mesh"
+	# 	#pdxmesh = "event_frontobject_mesh"
+	# }
+
+	ecs_illustration_image = {
+		#list = "inst_renaissance_background"
+		list = "inst_renaissance_frontobject"
+		name = "illustration_override"
+		#pdxmesh = "event_frontobject_mesh"
+		pdxmesh = "event_foreground_mesh"
+	}
+
+	camera = {
+		camera_near_far = { 0.01 10000}
+	    camera_position = { 50 35 -5 }
+		camera_look_at = { 0 	35 -5 }
+		camera_fov_y_degrees = 75
+	}
+	gfx_environment_file = "gfx/illustrations/environment.txt"
+}
+
+
+seazone_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "status"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+
+character_scene = {
+	
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "throne_room"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+balance_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+markets_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+culture_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+religion_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+war_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+people_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "exterior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+diplomacy_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "interior_backgrounds"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+expansion_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "expansion_overview_scene"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+maritime_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "maritime_overview_scene"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+diseases_overview_scene = {
+	ecs_illustration_image = {
+		name = "illustration_override"
+		pdxmesh = "background2_mesh"
+		list = "diseases_overview_scene"
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.14 100000} #xyz
+		camera_position = {12 -10 0}
+		camera_look_at = {0 -10 0}
+		camera_fov_y_degrees = 79
+	}
+}
+
+cabinet_scene = {
+	ecs_illustration_image = {
+		# Layer 01 - Cabinet
+		name = "illustration_override"
+		pdxmesh = "illustration_011_mesh"
+		list = "cabinet"
+		resize_behaviour = ResizeToViewport
+	}
+	gfx_environment_file = "gfx/illustrations/environment2.txt"
+	camera = {
+		camera_near_far = {0.001 10000}
+		camera_projection = orthographic
+	}
+}
+
+2d_image_test = {
+	background = "event01"
+}
+situation_scene = {
+	ecs_illustration_image = {
+		list = "situations"
+		name = "illustration_override"
+		pdxmesh = "illustration_003_mesh"
+		resize_behaviour = ResizeToViewport
+		uv_random_seed = 39481
+	}
+
+	gfx_environment_file = "gfx/illustrations/environment2.txt"	#crear uno de army selection
+	camera = {
+		camera_near_far = {
+			0.001
+			10000
+		}
+		camera_projection = orthographic
+	}
+}

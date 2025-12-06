@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "unit_hair_cut_afro_mesh"
+	file = "unit_hair_cut_afro.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2.0 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_hair_cut_afro_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hair_cut_afro_diffuse.dds"
+		texture_normal = "unit_hair_cut_afro_normal.dds"
+		texture_specular = "unit_hair_bob_male_d_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hair_cut_afro_lod01Shape"
+		index = 0
+		texture_diffuse = "unit_hair_cut_afro_diffuse.dds"
+		texture_normal = "unit_hair_cut_afro_normal.dds"
+		texture_specular = "unit_hair_bob_male_d_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hair_cut_afro_lod02Shape"
+		index = 0
+		texture_diffuse = "unit_hair_cut_afro_diffuse.dds"
+		texture_normal = "unit_hair_cut_afro_normal.dds"
+		texture_specular = "unit_hair_bob_male_d_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

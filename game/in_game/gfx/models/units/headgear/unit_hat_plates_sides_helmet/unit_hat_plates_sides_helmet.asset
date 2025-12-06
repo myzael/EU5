@@ -1,0 +1,47 @@
+pdxmesh = {
+	name = "unit_hat_plates_sides_helmet_mesh"
+	file = "unit_hat_plates_sides_helmet.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_plates_sides_helmet|unit_hat_plates_sides_helmet_lod0|"
+		index = 0
+		texture_diffuse = "unit_helm_plates_side_diffuse.dds"
+		texture_normal = "unit_helm_plates_side_normal.dds"
+		#texture_specular = "unit_helm_plates_side_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_helm_plates_side_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_plates_sides_helmet|unit_hat_plates_sides_helmet_lod1|"
+		index = 0
+		texture_diffuse = "unit_helm_plates_side_diffuse.dds"
+		texture_normal = "unit_helm_plates_side_normal.dds"
+		#texture_specular = "unit_helm_plates_side_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_helm_plates_side_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_plates_sides_helmet|unit_hat_plates_sides_helmet_lod2|"
+		index = 0
+		texture_diffuse = "unit_helm_plates_side_diffuse.dds"
+		texture_normal = "unit_helm_plates_side_normal.dds"
+		#texture_specular = "unit_helm_plates_side_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_helm_plates_side_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+entity = {
+	name = "unit_hat_plates_sides_helmet_entity"
+	pdxmesh = "unit_hat_plates_sides_helmet_mesh"
+}

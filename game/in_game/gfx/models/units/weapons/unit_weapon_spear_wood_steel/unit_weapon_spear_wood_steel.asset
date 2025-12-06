@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_spear_wood_steel_mesh"
+	file = "unit_weapon_spear_wood_steel.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_spear_wood_steelShape"
+		index = 0
+		texture_diffuse = "unit_weapon_spear_wood_steel_diffuse.dds"
+		texture_normal = "unit_weapon_spear_wood_steel_normal.dds"
+		#texture_specular = "unit_weapon_spear_wood_steel_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_spear_wood_steel_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

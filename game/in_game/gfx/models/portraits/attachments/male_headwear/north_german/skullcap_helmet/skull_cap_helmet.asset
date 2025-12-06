@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "skull_cap_helmet_mesh"
+	file = "skull_cap_helmet.mesh"
+
+	meshsettings = {
+		name = "skull_cap_helmetShape"
+		index = 0
+		texture_diffuse = "skullcap_helmet_diffuse.dds"
+		texture_normal = "skullcap_helmet_normal.dds"
+		texture_specular = "skullcap_helmet_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_soldier_skull_cap_helmet_entity"
+	pdxmesh = "skull_cap_helmet_mesh"
+}

@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_medicine_mesh"
+	file = "cargo_medicine.mesh"
+
+	meshsettings = {
+		name = "cargo_medicineShape"
+		index = 0
+		texture_diffuse = "cargo_medicine_diffuse.dds"
+		texture_normal = "cargo_medicine_normal.dds"
+		texture_specular = "cargo_medicine_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_medicine_entity"
+	pdxmesh = "cargo_medicine_mesh"
+}

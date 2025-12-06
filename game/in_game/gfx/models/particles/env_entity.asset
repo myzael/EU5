@@ -1,0 +1,282 @@
+entity = {
+	name = "fire"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "temp" position = { 100 1 100 } }
+
+	locator = { name = part1 }
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "temp"
+			particle = "particle_effects/Fire"
+			trigger_once = yes
+		}
+
+	}
+}
+
+entity = {
+	name = "p_mist_jungle_01"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "temp" position = { 0 -10 0 } }
+
+	locator = { name = part1 }
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "part1"
+			particle = "p_mist_jungle_01"
+			trigger_once = yes
+		}
+	}
+}
+
+entity = {
+	name = "p_foam_splash_01"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "temp" position = { 0 -10 0 } }
+
+	locator = { name = part1 }
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "part1"
+			particle = "p_foam_splash_01"
+			trigger_once = yes
+		}
+
+	}
+}
+
+entity = {
+	name = "p_sparkle"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "temp" position = { 0 -10 0 } }
+
+	locator = { name = part1 }
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "part1"
+			particle = "sparkle"
+			trigger_once = yes
+		}
+	}
+}
+
+entity = {
+	name = "rain"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "rain" position = { 0 0 0 } }
+
+	cull_radius = 50.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "rain"
+			particle = "environment/rain_weather_02_effect"
+			trigger_once = yes
+			keep_particle = yes
+			entity_fade_speed = 0.6
+		}
+
+	}
+
+	state = {
+		name = "despawn"
+		state_time = 5
+		event = {
+			time = 0
+			node = "rain"
+			trigger_once = yes
+			keep_particle = no
+		}
+	}
+}
+
+entity = {
+	name = "sandstorm"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "sandstorm" position = { 0 0 0 } }
+
+	cull_radius = 50.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "sandstorm"
+			particle = "environment/sandstorm_city_weather_01_small_effect"
+			trigger_once = yes
+			keep_particle = yes
+			entity_fade_speed = 0.3
+		}
+
+	}
+
+	state = {
+		name = "despawn"
+		state_time = 5
+		event = {
+			time = 0
+			node = "sandstorm"
+			trigger_once = yes
+			keep_particle = no
+		}
+	}
+
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}
+
+entity = {
+	name = "seastorm"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "seastorm" position = { 0 0 0 } }
+
+	cull_radius = 50.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "seastorm"
+			particle = "environment/sea_storm_01_small_effect"
+			trigger_once = yes
+			keep_particle = yes
+			entity_fade_speed = 0.3
+		}
+
+	}
+
+	state = {
+		name = "despawn"
+		state_time = 5
+		event = {
+			time = 0
+			node = "seastorm"
+			trigger_once = yes
+			keep_particle = no
+		}
+	}
+	
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}
+
+entity = {
+	name = "snowstorm"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "snowstorm" position = { 0 0 0 } }
+
+	cull_radius = 50.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "snowstorm"
+			particle = "environment/snow_storm_01_small_effect"
+			trigger_once = yes
+			keep_particle = yes
+			entity_fade_speed = 0.3
+		}
+
+	}
+
+	state = {
+		name = "despawn"
+		state_time = 5
+		event = {
+			time = 0
+			node = "snowstorm"
+			trigger_once = yes
+			keep_particle = no
+		}
+	}
+}
+
+entity = {
+	name = "factory_smoke_medium"
+	pdxmesh = "cube_test_mesh"
+	
+	locator = { name = "temp" position = { 0 -10 0 } }
+	
+	locator = { name = part1 }
+	
+	default_state = "idle"
+	state = { 
+		name = "idle" state_time = 5
+		event = { 
+			time = 0 
+			node = "part1" 
+			particle = "infrastructure/factory_smoke_medium"
+			trigger_once = yes
+		}	
+	}
+}
+
+entity = {
+	name = "celebration"
+	default_state = "idle"
+
+	state = { 
+		name = "idle" state_time = 5 looping = no
+		start_event = {	particle = "celebration"	trigger_once = yes	}	
+	}
+}
+
+entity = {
+	name = "waterfall"
+	pdxmesh = "cube_test_mesh"
+
+	locator = { name = "temp" position = { 0 -10 0 } }
+
+	locator = { name = part1 }
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			node = "part1"
+			particle = "waterfall"
+			trigger_once = yes
+		}
+	}
+}

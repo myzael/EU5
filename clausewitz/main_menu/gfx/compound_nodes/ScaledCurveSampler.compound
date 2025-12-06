@@ -1,0 +1,85 @@
+compound_node={
+	id=ScaledCurveSampler
+	graph={
+		Nodes={
+			pdxns:math:MulF={
+				Id=1
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "factor1" LinkedNode = 2 LinkedPin = "value_out" }
+					Link = { PinId = "factor2" LinkedNode = 10 LinkedPin = "scale_y" }
+				}
+			}
+			pdxns:math:DivF={
+				Id=9
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "dividend" LinkedNode = 10 LinkedPin = "x" }
+					Link = { PinId = "divisor" LinkedNode = 10 LinkedPin = "scale_x" }
+				}
+			}
+			pdxns:common:GraphInterface={
+				Id=8
+				Node={
+					pins={
+						pin={
+							id=result
+							label="Result"
+							input=yes
+							flags=optional
+							type=Float
+						}
+					}
+				}
+				Inputs={
+					Link = { PinId = "result" LinkedNode = 1 LinkedPin = "product" }
+				}
+			}
+			pdxns:common:curvesampler={
+				Id=2
+				Node={
+				}
+				Inputs={
+					Link = { PinId = "curve" LinkedNode = 10 LinkedPin = "curve" }
+					Link = { PinId = "value" LinkedNode = 9 LinkedPin = "quotient" }
+				}
+			}
+			pdxns:common:GraphInterface={
+				Id=10
+				Node={
+					pins={
+						pin={
+							id=curve
+							label="Curve"
+							input=no
+							type=Curve
+						}
+						pin={
+							id=x
+							label="X"
+							input=no
+							type=Float
+						}
+						pin={
+							id=scale_x
+							label="Scale X"
+							input=no
+							type=Float
+						}
+						pin={
+							id=scale_y
+							label="Scale Y"
+							input=no
+							type=Float
+						}
+					}
+				}
+				Inputs={
+				}
+			}
+		}
+	}
+
+}

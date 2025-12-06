@@ -1,0 +1,34 @@
+pdxmesh = {
+	name = "unit_auxiliary_donkey_mesh"
+	file = "unit_auxiliary_donkey.mesh"
+
+	animation = { id = "moving_animation" type = "unit_auxiliary_donkey_moving.anim" }
+	animation = { id = "idle_animation" type = "unit_auxiliary_donkey_idle.anim" }
+
+	meshsettings = {
+		name = "unit_auxiliary_donkeyShape"
+		index = 0
+		texture_diffuse = "unit_donkey_auxiliary_armor_diffuse.dds"
+		texture_normal = "unit_donkey_auxiliary_armor_normal.dds"
+		texture_specular = "unit_donkey_auxiliary_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_donkey_auxiliary_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+entity = {
+	name = "unit_auxiliary_donkey_entity"
+	pdxmesh = "unit_auxiliary_donkey_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+	
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

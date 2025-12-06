@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "D017_building_monument_the_kaaba_mesh"
+	file = "D017_building_monument_the_kaaba.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 20.0 }
+		lod = { index = 2 percent = 12.0 }
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_lod_0Shape"
+		index = 0
+		texture_diffuse = "building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "building_holy_site_the_kaaba_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_decal_lod_0Shape"
+		index = 0
+		texture_diffuse = "decal_building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "decal_building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "decal_building_holy_site_the_kaaba_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_lod_01Shape"
+		index = 0
+		texture_diffuse = "building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "building_holy_site_the_kaaba_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_decal_lod_1Shape"
+		index = 0
+		texture_diffuse = "decal_building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "decal_building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "decal_building_holy_site_the_kaaba_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_lod_02Shape"
+		index = 0
+		texture_diffuse = "building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "building_holy_site_the_kaaba_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_the_kaaba_decal_lod_2Shape"
+		index = 0
+		texture_diffuse = "decal_building_holy_site_the_kaaba_diffuse.dds"
+		texture_normal = "decal_building_holy_site_the_kaaba_normal.dds"
+		texture_specular = "decal_building_holy_site_the_kaaba_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "D017_building_monument_the_kaaba_entity"
+	pdxmesh = "D017_building_monument_the_kaaba_mesh"
+}

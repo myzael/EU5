@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "building_asian_temple_mesh"
+	file = "building_asian_temple.mesh"
+
+	meshsettings = {
+		name = "building_asian_templeShape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		texture = { file = "building_asian_temple_ao_unique.dds" index = 5 }
+		shader = "snap_to_terrain_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_asian_temple_decalShape"
+		index = 0
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_asian_temple_entity"
+	pdxmesh = "building_asian_temple_mesh"
+}

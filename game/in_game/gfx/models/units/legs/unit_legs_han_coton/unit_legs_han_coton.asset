@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_legs_han_coton_mesh"
+	file = "unit_legs_han_coton.mesh"
+
+	meshsettings = {
+		name = "unit_legs_han_cotonShape"
+		index = 0
+		texture_diffuse = "unit_legs_han_coton_diffuse.dds"
+		texture_normal = "unit_legs_han_coton_normal.dds"
+		#texture_specular = "unit_legs_han_coton_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_han_coton_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

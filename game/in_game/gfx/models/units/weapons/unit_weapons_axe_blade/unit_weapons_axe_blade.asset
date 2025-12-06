@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapons_axe_blade_mesh"
+	file = "unit_weapons_axe_blade.mesh"
+
+	meshsettings = {
+		name = "unit_weapons_axe_bladeShape"
+		index = 0
+		texture_diffuse = "unit_weapons_axe_blade_diffuse.dds"
+		texture_normal = "unit_weapons_axe_blade_normal.dds"
+		#texture_specular = "unit_weapons_axe_blade_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapons_axe_blade_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

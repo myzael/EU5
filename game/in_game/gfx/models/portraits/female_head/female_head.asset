@@ -1,0 +1,391 @@
+pdxmesh = {
+	name = "female_head_mesh"
+	file = "female_head.mesh"
+	
+	#Unpause Game to check animations
+	animation = { id = "head_bind_pose"				type = "animations/female_head_bind_pose.anim" }
+	animation = { id = "head_pose_01"				type = "animations/female_head_pose_01.anim" }
+	animation = { id = "head_pose_02"				type = "animations/female_head_pose_02.anim" }
+	animation = { id = "head_pose_03"				type = "animations/female_head_pose_03.anim" }
+	animation = { id = "head_pose_04"				type = "animations/female_head_pose_04.anim" }
+
+	## Additive animations ##
+	additive_animation = { id = "chin_height"				type = "additive_animations/female_head_chin_height.anim" }
+	additive_animation = { id = "chin_length"				type = "additive_animations/female_head_chin_length.anim" }
+	additive_animation = { id = "chin_size"				type = "additive_animations/female_head_chin_size.anim" }
+	additive_animation = { id = "ear_angle"				type = "additive_animations/female_head_ear_angle.anim" }
+	additive_animation = { id = "ear_out"				type = "additive_animations/female_head_ear_out.anim" }
+	additive_animation = { id = "ear_size"				type = "additive_animations/female_head_ear_size.anim" }
+	additive_animation = { id = "eye_forward"				type = "additive_animations/female_head_eye_forward.anim" }
+	additive_animation = { id = "eye_height"				type = "additive_animations/female_head_eye_height.anim" }
+	additive_animation = { id = "eye_open"				type = "additive_animations/female_head_eye_open.anim" }
+	additive_animation = { id = "eye_size"				type = "additive_animations/female_head_eye_size.anim" }
+	additive_animation = { id = "eye_spacing"				type = "additive_animations/female_head_eye_spacing.anim" }
+	additive_animation = { id = "forehead_angle"				type = "additive_animations/female_head_forehead_angle.anim" }
+	additive_animation = { id = "forehead_brow_angle"				type = "additive_animations/female_head_forehead_brow_angle.anim" }
+	additive_animation = { id = "forehead_brow_curve"				type = "additive_animations/female_head_forehead_brow_curve.anim" }
+	additive_animation = { id = "forehead_brow_height"				type = "additive_animations/female_head_forehead_brow_height.anim" }
+	additive_animation = { id = "forehead_height"				type = "additive_animations/female_head_forehead_height.anim" }
+	additive_animation = { id = "head_face_forward"				type = "additive_animations/female_head_head_face_forward.anim" }
+	additive_animation = { id = "head_head_height"				type = "additive_animations/female_head_head_height.anim" }
+	additive_animation = { id = "head_head_size"				type = "additive_animations/female_head_head_size.anim" }
+	additive_animation = { id = "head_head_width"				type = "additive_animations/female_head_head_width.anim" }
+	additive_animation = { id = "jaw_angle"				type = "additive_animations/female_head_jaw_angle.anim" }
+	additive_animation = { id = "jaw_forward"				type = "additive_animations/female_head_jaw_forward.anim" }
+	additive_animation = { id = "jaw_height"				type = "additive_animations/female_head_jaw_height.anim" }
+	additive_animation = { id = "jaw_width"				type = "additive_animations/female_head_jaw_width.anim" }
+	additive_animation = { id = "mouth_corner_height"				type = "additive_animations/female_head_mouth_corner_height.anim" }
+	additive_animation = { id = "mouth_forward"				type = "additive_animations/female_head_mouth_forward.anim" }
+	additive_animation = { id = "mouth_height"				type = "additive_animations/female_head_mouth_height.anim" }
+	additive_animation = { id = "mouth_width"				type = "additive_animations/female_head_mouth_width.anim" }
+	additive_animation = { id = "neck_length"				type = "additive_animations/female_head_neck_length.anim" }
+	additive_animation = { id = "neck_width"				type = "additive_animations/female_head_neck_width.anim" }
+	additive_animation = { id = "skull_depth"				type = "additive_animations/female_head_skull_depth.anim" }
+	additive_animation = { id = "skull_height"				type = "additive_animations/female_head_skull_height.anim" }
+	additive_animation = { id = "skull_width"				type = "additive_animations/female_head_skull_width.anim" }
+
+	additive_animation = { id = "child_proportions"				type = "additive_animations/female_head_child_proportions.anim" }
+	additive_animation = { id = "infant_proportions"				type = "additive_animations/female_head_infant_proportions.anim" }
+	additive_animation = { id = "old_posture"				type = "additive_animations/female_head_old_posture.anim" }
+
+	## Additive animations - Expressions ##
+	additive_animation = { id = "expression_brow_frown_angry_01"				type = "additive_expressions/female_head_expression_brow_frown_angry_01.anim" }
+	additive_animation = { id = "expression_brow_frown_neutral_01"				type = "additive_expressions/female_head_expression_brow_frown_neutral_01.anim" }
+	additive_animation = { id = "expression_brow_frown_worry_01"				type = "additive_expressions/female_head_expression_brow_frown_worry_01.anim" }
+	additive_animation = { id = "expression_eyes_squint_01"				type = "additive_expressions/female_head_expression_eyes_squint_01.anim" }
+	additive_animation = { id = "expression_forehead_raise_01"				type = "additive_expressions/female_head_expression_forehead_raise_01.anim" }
+	additive_animation = { id = "expression_forehead_raise_01_left"				type = "additive_expressions/female_head_expression_forehead_raise_01_left.anim" }
+	additive_animation = { id = "expression_forehead_raise_01_right"				type = "additive_expressions/female_head_expression_forehead_raise_01_right.anim" }
+	additive_animation = { id = "expression_mouth_displeased_01"				type = "additive_expressions/female_head_expression_mouth_displeased_01.anim" }
+	additive_animation = { id = "expression_mouth_open_01"				type = "additive_expressions/female_head_expression_mouth_open_01.anim" }
+	additive_animation = { id = "expression_mouth_pout_01"				type = "additive_expressions/female_head_expression_mouth_pout_01.anim" }
+	additive_animation = { id = "expression_mouth_smile_01"				type = "additive_expressions/female_head_expression_mouth_smile_01.anim" }
+	additive_animation = { id = "expression_mouth_smile_01_left"				type = "additive_expressions/female_head_expression_mouth_smile_01_left.anim" }
+	additive_animation = { id = "expression_mouth_smile_01_right"				type = "additive_expressions/female_head_expression_mouth_smile_01_right.anim" }
+
+	## Corrective blend shapes ## (will only use the normal data of the blend shape to match with the corresponding additive animation since joint translation does not affect vertex normals in the engine currently)
+	blend_shape = { id = "nbs_chin_length_max"		type = "additive_animations/nbs_chin_length_max.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_chin_length_min"		type = "additive_animations/nbs_chin_length_min.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_eye_forward_max"		type = "additive_animations/nbs_eye_forward_max.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_eye_forward_min"		type = "additive_animations/nbs_eye_forward_min.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_head_face_forward_max"		type = "additive_animations/nbs_head_face_forward_max.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_head_face_forward_min"		type = "additive_animations/nbs_head_face_forward_min.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_jaw_forward_max"		type = "additive_animations/nbs_jaw_forward_max.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_jaw_forward_min"		type = "additive_animations/nbs_jaw_forward_min.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_jaw_width_max"		type = "additive_animations/nbs_jaw_width_max.mesh" data = "normal|tangent" }
+	blend_shape = { id = "nbs_jaw_width_min"		type = "additive_animations/nbs_jaw_width_min.mesh" data = "normal|tangent" }
+
+	# "Additive" blend shapes used in combination with additive animation
+	blend_shape = { id = "abs_child_1"		type = "additive_animations/abs_child_1.mesh" }
+	blend_shape = { id = "abs_infant_1"		type = "additive_animations/abs_infant_1.mesh" }
+
+	## Aging and fatness blend shapes
+	blend_shape = { id = "old_1"		type = "blendshapes/old_1.mesh" }
+	blend_shape = { id = "old_2"		type = "blendshapes/old_2.mesh" }
+	blend_shape = { id = "old_3"		type = "blendshapes/old_3.mesh" }
+	blend_shape = { id = "old_mouth_1_early"		type = "blendshapes/old_mouth_1_early.mesh" }
+	blend_shape = { id = "old_mouth_2_early"		type = "blendshapes/old_mouth_2_early.mesh" }
+	blend_shape = { id = "old_mouth_3_early"		type = "blendshapes/old_mouth_3_early.mesh" }
+
+	blend_shape = { id = "fat_1"		type = "blendshapes/fat_1.mesh" }
+	blend_shape = { id = "gaunt_1"		type = "blendshapes/gaunt_1.mesh" }
+
+	## Regular blend shapes ##
+	blend_shape = { id = "cheek_def_max"    type = "blendshapes_genes/cheek_def_max.mesh" }
+	blend_shape = { id = "cheek_def_2_max"    type = "blendshapes_genes/cheek_def_2_max.mesh" }
+	blend_shape = { id = "cheek_def_min"    type = "blendshapes_genes/cheek_def_min.mesh" }
+	blend_shape = { id = "cheek_fat_1_max"    type = "blendshapes_genes/cheek_fat_1_max.mesh" }
+	blend_shape = { id = "cheek_fat_1_min"    type = "blendshapes_genes/cheek_fat_1_min.mesh" }
+	blend_shape = { id = "cheek_fat_2_max"    type = "blendshapes_genes/cheek_fat_2_max.mesh" }
+	blend_shape = { id = "cheek_fat_3_max"    type = "blendshapes_genes/cheek_fat_3_max.mesh" }
+	blend_shape = { id = "cheek_forward_max"    type = "blendshapes_genes/cheek_forward_max.mesh" }
+	blend_shape = { id = "cheek_forward_min"    type = "blendshapes_genes/cheek_forward_min.mesh" }
+	blend_shape = { id = "cheek_height_max"    type = "blendshapes_genes/cheek_height_max.mesh" }
+	blend_shape = { id = "cheek_height_min"    type = "blendshapes_genes/cheek_height_min.mesh" }
+	blend_shape = { id = "cheek_width_max"    type = "blendshapes_genes/cheek_width_max.mesh" }
+	blend_shape = { id = "cheek_width_min"    type = "blendshapes_genes/cheek_width_min.mesh" }
+
+	blend_shape = { id = "chin_cleft"    type = "blendshapes_genes/chin_cleft.mesh" }
+	blend_shape = { id = "chin_def_max"    type = "blendshapes_genes/chin_def_max.mesh" }
+	blend_shape = { id = "chin_def_min"    type = "blendshapes_genes/chin_def_min.mesh" }
+	blend_shape = { id = "chin_dimple"    type = "blendshapes_genes/chin_dimple.mesh" }
+
+	blend_shape = { id = "eye_angle_max"    type = "blendshapes_genes/eye_angle_max.mesh" }
+	blend_shape = { id = "eye_angle_min"    type = "blendshapes_genes/eye_angle_min.mesh" }
+	blend_shape = { id = "eye_lower_lid_def_max"    type = "blendshapes_genes/eye_lower_lid_def_max.mesh" }
+	blend_shape = { id = "eye_lower_lid_def_2_max"    type = "blendshapes_genes/eye_lower_lid_def_2_max.mesh" }
+	blend_shape = { id = "eye_lower_lid_def_min"    type = "blendshapes_genes/eye_lower_lid_def_min.mesh" }
+	blend_shape = { id = "eye_socket_1_max"    type = "blendshapes_genes/eye_socket_1.mesh" }
+	blend_shape = { id = "eye_socket_2_max"    type = "blendshapes_genes/eye_socket_2.mesh" }
+	blend_shape = { id = "eye_upper_lid_shape_max"    type = "blendshapes_genes/eye_upper_lid_shape_max.mesh" }
+	blend_shape = { id = "eye_upper_lid_shape_min"    type = "blendshapes_genes/eye_upper_lid_shape_min.mesh" }
+	blend_shape = { id = "eye_upper_lid_size_max"    type = "blendshapes_genes/eye_upper_lid_size_max.mesh" }
+	blend_shape = { id = "eye_upper_lid_size_min"    type = "blendshapes_genes/eye_upper_lid_size_min.mesh" }
+	blend_shape = { id = "eye_upper_lid_size_2_min"    type = "blendshapes_genes/eye_upper_lid_size_2_min.mesh" }
+
+	blend_shape = { id = "forehead_brow_forward_max"    type = "blendshapes_genes/forehead_brow_forward_max.mesh" }
+	blend_shape = { id = "forehead_brow_forward_min"    type = "blendshapes_genes/forehead_brow_forward_min.mesh" }
+	blend_shape = { id = "forehead_roundness_max"    type = "blendshapes_genes/forehead_roundness_max.mesh" }
+	blend_shape = { id = "forehead_roundness_min"    type = "blendshapes_genes/forehead_roundness_min.mesh" }
+
+	blend_shape = { id = "jaw_def_max"    type = "blendshapes_genes/jaw_def_max.mesh" }
+	blend_shape = { id = "jaw_def_min"    type = "blendshapes_genes/jaw_def_min.mesh" }
+
+	blend_shape = { id = "mouth_lower_lip_pad_max"    type = "blendshapes_genes/mouth_lower_lip_pad_max.mesh" }
+	blend_shape = { id = "mouth_lower_lip_pad_min"    type = "blendshapes_genes/mouth_lower_lip_pad_min.mesh" }
+	blend_shape = { id = "mouth_lower_lip_size_max"    type = "blendshapes_genes/mouth_lower_lip_size_max.mesh" }
+	blend_shape = { id = "mouth_lower_lip_size_min"    type = "blendshapes_genes/mouth_lower_lip_size_min.mesh" }
+	blend_shape = { id = "mouth_upper_lip_shape_max"    type = "blendshapes_genes/mouth_upper_lip_shape_max.mesh" }
+	blend_shape = { id = "mouth_upper_lip_shape_min"    type = "blendshapes_genes/mouth_upper_lip_shape_min.mesh" }
+	blend_shape = { id = "mouth_upper_lip_size_max"    type = "blendshapes_genes/mouth_upper_lip_size_max.mesh" }
+	blend_shape = { id = "mouth_upper_lip_size_min"    type = "blendshapes_genes/mouth_upper_lip_size_min.mesh" }
+	blend_shape = { id = "mouth_philtrum_def_max"    type = "blendshapes_genes/mouth_philtrum_def_max.mesh" }
+	blend_shape = { id = "mouth_philtrum_def_min"    type = "blendshapes_genes/mouth_philtrum_def_min.mesh" }
+	blend_shape = { id = "mouth_philtrum_width_max"    type = "blendshapes_genes/mouth_philtrum_width_max.mesh" }
+	blend_shape = { id = "mouth_philtrum_width_min"    type = "blendshapes_genes/mouth_philtrum_width_min.mesh" }
+	blend_shape = { id = "mouth_area_width_max"    type = "blendshapes_genes/mouth_area_width_max.mesh" }
+
+	blend_shape = { id = "neck_def_max"    type = "blendshapes_genes/neck_def_max.mesh" }
+
+	blend_shape = { id = "nose_forward_max"    type = "blendshapes_genes/nose_forward_max.mesh" }
+	blend_shape = { id = "nose_forward_min"    type = "blendshapes_genes/nose_forward_min.mesh" }
+	blend_shape = { id = "nose_height_max"    type = "blendshapes_genes/nose_height_max.mesh" }
+	blend_shape = { id = "nose_height_min"    type = "blendshapes_genes/nose_height_min.mesh" }
+	blend_shape = { id = "nose_length_max"    type = "blendshapes_genes/nose_length_max.mesh" }
+	blend_shape = { id = "nose_length_min"    type = "blendshapes_genes/nose_length_min.mesh" }
+	blend_shape = { id = "nose_nostril_height_max"    type = "blendshapes_genes/nose_nostril_height_max.mesh" }
+	blend_shape = { id = "nose_nostril_height_min"    type = "blendshapes_genes/nose_nostril_height_min.mesh" }
+	blend_shape = { id = "nose_nostril_width_max"    type = "blendshapes_genes/nose_nostril_width_max.mesh" }
+	blend_shape = { id = "nose_nostril_width_min"    type = "blendshapes_genes/nose_nostril_width_min.mesh" }
+	blend_shape = { id = "nose_ridge_angle_max"    type = "blendshapes_genes/nose_ridge_angle_max.mesh" }
+	blend_shape = { id = "nose_ridge_angle_min"    type = "blendshapes_genes/nose_ridge_angle_min.mesh" }
+	blend_shape = { id = "nose_ridge_shape_max"    type = "blendshapes_genes/nose_ridge_shape_max.mesh" }
+	blend_shape = { id = "nose_ridge_shape_min"    type = "blendshapes_genes/nose_ridge_shape_min.mesh" }
+	blend_shape = { id = "nose_ridge_def_max"    type = "blendshapes_genes/nose_ridge_def_max.mesh" }
+	blend_shape = { id = "nose_ridge_def_min"    type = "blendshapes_genes/nose_ridge_def_min.mesh" }
+	blend_shape = { id = "nose_root_def_max"    type = "blendshapes_genes/nose_root_def_max.mesh" }
+	blend_shape = { id = "nose_root_def_min"    type = "blendshapes_genes/nose_root_def_min.mesh" }
+	blend_shape = { id = "nose_tip_angle_max"    type = "blendshapes_genes/nose_tip_angle_max.mesh" }
+	blend_shape = { id = "nose_tip_angle_min"    type = "blendshapes_genes/nose_tip_angle_min.mesh" }
+	blend_shape = { id = "nose_tip_def_max"    type = "blendshapes_genes/nose_tip_def_max.mesh" }
+	blend_shape = { id = "nose_tip_forward_max"    type = "blendshapes_genes/nose_tip_forward_max.mesh" }
+	blend_shape = { id = "nose_tip_forward_min"    type = "blendshapes_genes/nose_tip_forward_min.mesh" }
+	blend_shape = { id = "nose_tip_size_max"    type = "blendshapes_genes/nose_tip_size_max.mesh" }
+	blend_shape = { id = "nose_tip_size_min"    type = "blendshapes_genes/nose_tip_size_min.mesh" }
+	blend_shape = { id = "nose_width_max"    type = "blendshapes_genes/nose_width_max.mesh" }
+	blend_shape = { id = "nose_width_min"    type = "blendshapes_genes/nose_width_min.mesh" }
+
+	## Other misc blend shapes ##
+	blend_shape = { id = "eyelashes_length_max"    type = "blendshapes_genes/neutral.mesh" }
+
+	meshsettings = {
+		name = "female_headShape"
+		index = 0
+		texture_diffuse = "female_head_diffuse.dds"
+		texture_normal = "female_head_normal.dds"
+		texture_specular = "female_head_properties.dds"
+		texture = { file = "head_ssao_color_diffuse.dds" index = 3 }
+		shader = "portrait_skin_face"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+		# additional_shader_defines = {
+		# 	"TRANSLUCENCY"
+		# 	"THICKNESS_MAP"
+		# 	"PDX_DEBUG_TRANSLUCENCY"
+		# }
+	}
+}
+
+entity = {
+	name = "female_head_entity"
+	pdxmesh = "female_head_mesh"
+
+	default_state = "none"
+	state = {	name = "none"	animation = "head_bind_pose"}
+	state = {	name = "bind_pose"	animation = "head_bind_pose" 	chance = 10 looping = no next_state = "bind_pose" }
+	state = {	name = "pose_01"	animation = "head_pose_01" 	chance = 10 looping = yes next_state = "pose" }
+	state = {	name = "pose_02"	animation = "head_pose_02" 	chance = 10 looping = yes next_state = "pose" }
+	state = {	name = "pose_03"	animation = "head_pose_03" 	chance = 10 looping = yes next_state = "pose" }
+	state = {	name = "pose_04"	animation = "head_pose_04" 	chance = 10 looping = yes next_state = "pose" }
+	state = {	name = "pose_05"	animation = "head_pose_04" 	chance = 10 looping = yes next_state = "pose" }
+
+	## Additive animations ##
+	attribute = { name = "chin_height"		additive_animation = "chin_height" default = 0.5 }
+	attribute = { name = "chin_length"		additive_animation = "chin_length" default = 0.5 }
+	attribute = { name = "chin_size"		additive_animation = "chin_size" default = 0.5 }
+	attribute = { name = "ear_angle"		additive_animation = "ear_angle" default = 0.5 }
+	attribute = { name = "ear_out"		additive_animation = "ear_out" default = 0.5 }
+	attribute = { name = "ear_size"		additive_animation = "ear_size" default = 0.5 }
+	attribute = { name = "eye_forward"		additive_animation = "eye_forward" default = 0.5 }
+	attribute = { name = "eye_height"		additive_animation = "eye_height" default = 0.5 }
+	attribute = { name = "eye_open"		additive_animation = "eye_open" default = 0.5 }
+	attribute = { name = "eye_size"		additive_animation = "eye_size" default = 0.5 }
+	attribute = { name = "eye_spacing"		additive_animation = "eye_spacing" default = 0.5 }
+	attribute = { name = "forehead_angle"		additive_animation = "forehead_angle" default = 0.5 }
+	attribute = { name = "forehead_brow_angle"		additive_animation = "forehead_brow_angle" default = 0.5 }
+	attribute = { name = "forehead_brow_curve"		additive_animation = "forehead_brow_curve" default = 0.5 }
+	attribute = { name = "forehead_brow_height"		additive_animation = "forehead_brow_height" default = 0.5 }
+	attribute = { name = "forehead_height"		additive_animation = "forehead_height" default = 0.5 }
+	attribute = { name = "head_face_forward"		additive_animation = "head_face_forward" default = 0.5 }
+	attribute = { name = "head_height"		additive_animation = "head_head_height" default = 0.5 }
+	attribute = { name = "head_size"		additive_animation = "head_head_size" default = 0.5 }
+	attribute = { name = "head_width"		additive_animation = "head_head_width" default = 0.5 }
+	attribute = { name = "jaw_angle"		additive_animation = "jaw_angle" default = 0.5 }
+	attribute = { name = "jaw_forward"		additive_animation = "jaw_forward" default = 0.5 }
+	attribute = { name = "jaw_height"		additive_animation = "jaw_height" default = 0.5 }
+	attribute = { name = "jaw_width"		additive_animation = "jaw_width" default = 0.5 }
+	attribute = { name = "mouth_corner_height"		additive_animation = "mouth_corner_height" default = 0.5 }
+	attribute = { name = "mouth_forward"		additive_animation = "mouth_forward" default = 0.5 }
+	attribute = { name = "mouth_height"		additive_animation = "mouth_height" default = 0.5 }
+	attribute = { name = "mouth_width"		additive_animation = "mouth_width" default = 0.5 }
+	attribute = { name = "neck_length"		additive_animation = "neck_length" default = 0.5 }
+	attribute = { name = "neck_width"		additive_animation = "neck_width" default = 0.5 }
+	attribute = { name = "skull_depth"		additive_animation = "skull_depth" default = 0.5 }
+	attribute = { name = "skull_height"		additive_animation = "skull_height" default = 0.5 }
+	attribute = { name = "skull_width"		additive_animation = "skull_width" default = 0.5 }
+
+	attribute = { name = "child_proportions"		additive_animation = "child_proportions" }
+	attribute = { name = "infant_proportions"		additive_animation = "infant_proportions" }
+	attribute = { name = "old_posture"		additive_animation = "old_posture" }
+
+	## Additive animations - Expressions ##
+	attribute = { name = "expression_brow_frown_angry_01"		additive_animation = "expression_brow_frown_angry_01" default = 0.0 }
+	attribute = { name = "expression_brow_frown_neutral_01"		additive_animation = "expression_brow_frown_neutral_01" default = 0.0 }
+	attribute = { name = "expression_brow_frown_worry_01"		additive_animation = "expression_brow_frown_worry_01" default = 0.0 }
+	attribute = { name = "expression_eyes_squint_01"		additive_animation = "expression_eyes_squint_01" default = 0.0 }
+	attribute = { name = "expression_forehead_raise_01"		additive_animation = "expression_forehead_raise_01" default = 0.0 }
+	attribute = { name = "expression_forehead_raise_01_left"		additive_animation = "expression_forehead_raise_01_left" default = 0.0 }
+	attribute = { name = "expression_forehead_raise_01_right"		additive_animation = "expression_forehead_raise_01_right" default = 0.0 }
+	attribute = { name = "expression_mouth_displeased_01"		additive_animation = "expression_mouth_displeased_01" default = 0.0 }
+	attribute = { name = "expression_mouth_open_01"		additive_animation = "expression_mouth_open_01" default = 0.0 }
+	attribute = { name = "expression_mouth_pout_01"		additive_animation = "expression_mouth_pout_01" default = 0.0 }
+	attribute = { name = "expression_mouth_smile_01"		additive_animation = "expression_mouth_smile_01" default = 0.0 }
+	attribute = { name = "expression_mouth_smile_01_left"		additive_animation = "expression_mouth_smile_01_left" default = 0.0 }
+	attribute = { name = "expression_mouth_smile_01_right"		additive_animation = "expression_mouth_smile_01_right" default = 0.0 }
+
+	## Corrective blend shapes ##
+	attribute = { name = "nbs_chin_length_max"    blend_shape = "nbs_chin_length_max" }
+	attribute = { name = "nbs_chin_length_min"    blend_shape = "nbs_chin_length_min" }
+	attribute = { name = "nbs_eye_forward_max"    blend_shape = "nbs_eye_forward_max" }
+	attribute = { name = "nbs_eye_forward_min"    blend_shape = "nbs_eye_forward_min" }
+	attribute = { name = "nbs_head_face_forward_max"    blend_shape = "nbs_head_face_forward_max" }
+	attribute = { name = "nbs_head_face_forward_min"    blend_shape = "nbs_head_face_forward_min" }
+	attribute = { name = "nbs_jaw_forward_max"    blend_shape = "nbs_jaw_forward_max" }
+	attribute = { name = "nbs_jaw_forward_min"    blend_shape = "nbs_jaw_forward_min" }
+	attribute = { name = "nbs_jaw_width_max"    blend_shape = "nbs_jaw_width_max" }
+	attribute = { name = "nbs_jaw_width_min"    blend_shape = "nbs_jaw_width_min" }
+
+	attribute = { name = "abs_child_1"    blend_shape = "abs_child_1" }
+	attribute = { name = "abs_infant_1"    blend_shape = "abs_infant_1" }
+
+	## Aging and fatness blend shapes
+	attribute = { name = "bs_old_1"		blend_shape = "old_1" }
+	attribute = { name = "bs_old_2"		blend_shape = "old_2" }	
+	attribute = { name = "bs_old_3"		blend_shape = "old_3" }	
+	attribute = { name = "bs_old_mouth_1_early"		blend_shape = "old_mouth_1_early" }
+	attribute = { name = "bs_old_mouth_2_early"		blend_shape = "old_mouth_2_early" }
+	attribute = { name = "bs_old_mouth_3_early"		blend_shape = "old_mouth_3_early" }
+
+	attribute = { name = "bs_fat_1"		blend_shape = "fat_1" }
+	attribute = { name = "bs_gaunt_1"		blend_shape = "gaunt_1" }
+
+	## Regular blend shapes ##
+	attribute = { name = "bs_cheek_def_max"    blend_shape = "cheek_def_max" }
+	attribute = { name = "bs_cheek_def_2_max"    blend_shape = "cheek_def_2_max" }
+	attribute = { name = "bs_cheek_def_min"    blend_shape = "cheek_def_min" }
+	attribute = { name = "bs_cheek_fat_1_max"    blend_shape = "cheek_fat_1_max" }
+	attribute = { name = "bs_cheek_fat_1_min"    blend_shape = "cheek_fat_1_min" }
+	attribute = { name = "bs_cheek_fat_2_max"    blend_shape = "cheek_fat_2_max" }
+	attribute = { name = "bs_cheek_fat_3_max"    blend_shape = "cheek_fat_3_max" }
+	attribute = { name = "bs_cheek_forward_max"    blend_shape = "cheek_forward_max" }
+	attribute = { name = "bs_cheek_forward_min"    blend_shape = "cheek_forward_min" }
+	attribute = { name = "bs_cheek_height_max"    blend_shape = "cheek_height_max" }
+	attribute = { name = "bs_cheek_height_min"    blend_shape = "cheek_height_min" }
+	attribute = { name = "bs_cheek_width_max"    blend_shape = "cheek_width_max" }
+	attribute = { name = "bs_cheek_width_min"    blend_shape = "cheek_width_min" }
+
+	attribute = { name = "bs_chin_cleft"    blend_shape = "chin_cleft" }
+	attribute = { name = "bs_chin_def_max"    blend_shape = "chin_def_max" }
+	attribute = { name = "bs_chin_def_min"    blend_shape = "chin_def_min" }
+	attribute = { name = "bs_chin_dimple"    blend_shape = "chin_dimple" }
+
+	attribute = { name = "bs_eye_angle_max"    blend_shape = "eye_angle_max" }
+	attribute = { name = "bs_eye_angle_min"    blend_shape = "eye_angle_min" }
+	attribute = { name = "bs_eye_lower_lid_def_max"    blend_shape = "eye_lower_lid_def_max" }
+	attribute = { name = "bs_eye_lower_lid_def_2_max"    blend_shape = "eye_lower_lid_def_2_max" }
+	attribute = { name = "bs_eye_lower_lid_def_min"    blend_shape = "eye_lower_lid_def_min" }
+	attribute = { name = "bs_eye_socket_1_max"    blend_shape = "eye_socket_1_max" }
+	attribute = { name = "bs_eye_socket_2_max"    blend_shape = "eye_socket_2_max" }
+	attribute = { name = "bs_eye_upper_lid_shape_max"    blend_shape = "eye_upper_lid_shape_max" }
+	attribute = { name = "bs_eye_upper_lid_shape_min"    blend_shape = "eye_upper_lid_shape_min" }
+	attribute = { name = "bs_eye_upper_lid_size_max"    blend_shape = "eye_upper_lid_size_max" }
+	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eye_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eye_upper_lid_size_2_min" }
+
+	attribute = { name = "bs_forehead_brow_forward_max"    blend_shape = "forehead_brow_forward_max" }
+	attribute = { name = "bs_forehead_brow_forward_min"    blend_shape = "forehead_brow_forward_min" }
+	attribute = { name = "bs_forehead_roundness_max"    blend_shape = "forehead_roundness_max" }
+	attribute = { name = "bs_forehead_roundness_min"    blend_shape = "forehead_roundness_min" }
+
+	attribute = { name = "bs_jaw_def_max"    blend_shape = "jaw_def_max" }
+	attribute = { name = "bs_jaw_def_min"    blend_shape = "jaw_def_min" }
+
+	attribute = { name = "bs_mouth_lower_lip_pad_max"    blend_shape = "mouth_lower_lip_pad_max" }
+	attribute = { name = "bs_mouth_lower_lip_pad_min"    blend_shape = "mouth_lower_lip_pad_min" }
+	attribute = { name = "bs_mouth_lower_lip_size_max"    blend_shape = "mouth_lower_lip_size_max" }
+	attribute = { name = "bs_mouth_lower_lip_size_min"    blend_shape = "mouth_lower_lip_size_min" }
+	attribute = { name = "bs_mouth_upper_lip_shape_max"    blend_shape = "mouth_upper_lip_shape_max" }
+	attribute = { name = "bs_mouth_upper_lip_shape_min"    blend_shape = "mouth_upper_lip_shape_min" }
+	attribute = { name = "bs_mouth_upper_lip_size_max"    blend_shape = "mouth_upper_lip_size_max" }
+	attribute = { name = "bs_mouth_upper_lip_size_min"    blend_shape = "mouth_upper_lip_size_min" }
+	attribute = { name = "bs_mouth_philtrum_def_max"    blend_shape = "mouth_philtrum_def_max" }
+	attribute = { name = "bs_mouth_philtrum_def_min"    blend_shape = "mouth_philtrum_def_min" }
+	attribute = { name = "bs_mouth_philtrum_width_max"    blend_shape = "mouth_philtrum_width_max" }
+	attribute = { name = "bs_mouth_philtrum_width_min"    blend_shape = "mouth_philtrum_width_min" }
+	attribute = { name = "bs_mouth_area_width_max"    blend_shape = "mouth_area_width_max" }
+
+	attribute = { name = "bs_neck_def_max"    blend_shape = "neck_def_max" }
+
+	attribute = { name = "bs_nose_forward_max"    blend_shape = "nose_forward_max" }
+	attribute = { name = "bs_nose_forward_min"    blend_shape = "nose_forward_min" }
+	attribute = { name = "bs_nose_height_max"    blend_shape = "nose_height_max" }
+	attribute = { name = "bs_nose_height_min"    blend_shape = "nose_height_min" }
+	attribute = { name = "bs_nose_length_max"    blend_shape = "nose_length_max" }
+	attribute = { name = "bs_nose_length_min"    blend_shape = "nose_length_min" }
+	attribute = { name = "bs_nose_nostril_height_max"    blend_shape = "nose_nostril_height_max" }
+	attribute = { name = "bs_nose_nostril_height_min"    blend_shape = "nose_nostril_height_min" }
+	attribute = { name = "bs_nose_nostril_width_max"    blend_shape = "nose_nostril_width_max" }
+	attribute = { name = "bs_nose_nostril_width_min"    blend_shape = "nose_nostril_width_min" }
+	attribute = { name = "bs_nose_ridge_angle_max"    blend_shape = "nose_ridge_angle_max" }
+	attribute = { name = "bs_nose_ridge_angle_min"    blend_shape = "nose_ridge_angle_min" }
+	attribute = { name = "bs_nose_ridge_shape_max"    blend_shape = "nose_ridge_shape_max" }
+	attribute = { name = "bs_nose_ridge_shape_min"    blend_shape = "nose_ridge_shape_min" }
+	attribute = { name = "bs_nose_ridge_def_max"    blend_shape = "nose_ridge_def_max" }
+	attribute = { name = "bs_nose_ridge_def_min"    blend_shape = "nose_ridge_def_min" }
+	attribute = { name = "bs_nose_root_def_max"    blend_shape = "nose_root_def_max" }
+	attribute = { name = "bs_nose_root_def_min"    blend_shape = "nose_root_def_min" }
+	attribute = { name = "bs_nose_tip_angle_max"    blend_shape = "nose_tip_angle_max" }
+	attribute = { name = "bs_nose_tip_angle_min"    blend_shape = "nose_tip_angle_min" }
+	attribute = { name = "bs_nose_tip_def_max"    blend_shape = "nose_tip_def_max" }
+	attribute = { name = "bs_nose_tip_forward_max"    blend_shape = "nose_tip_forward_max" }
+	attribute = { name = "bs_nose_tip_forward_min"    blend_shape = "nose_tip_forward_min" }
+	attribute = { name = "bs_nose_tip_size_max"    blend_shape = "nose_tip_size_max" }
+	attribute = { name = "bs_nose_tip_size_min"    blend_shape = "nose_tip_size_min" }
+	attribute = { name = "bs_nose_width_max"    blend_shape = "nose_width_max" }
+	attribute = { name = "bs_nose_width_min"    blend_shape = "nose_width_min" }
+
+	## Other misc blend shapes ##
+	attribute = { name = "bs_eyelashes_length_max"    blend_shape = "eyelashes_length_max" }
+
+    game_data = {
+        portrait_entity_user_data = {
+            color_mask_remap_interval = {
+                interval = {0.0 1.0}
+            }
+	        portrait_decal = {
+	            body_part = head
+	        }
+		}
+	}
+
+}
+

@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "resource_asia_elephant_a_mesh"
+	file = "resource_asia_elephant_a.mesh"
+
+	animation = { id = "idle_animation" type = "resource_asia_elephant_a_idle.anim" }
+
+	meshsettings = {
+		name = "|resource_asia_elephant_a|resource_asia_elephant_a|resource_asi"
+		index = 0
+		texture_diffuse = "resource_asia_elephant_a_diffuse.dds"
+		texture_normal = "resource_asia_elephant_a_normal.dds"
+		texture_specular = "resource_asia_elephant_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+

@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "Sm_BasicGrass_estepe_01_mesh"
+	file = "Sm_BasicGrass_estepe_01.mesh"
+	scale = 1.5
+
+	meshsettings = {
+		name = "pPlane92Shape"
+		index = 0
+		texture_diffuse = "GrassMesh_diffuse.dds"
+		texture_normal = "GrassMesh_normal.dds"
+		texture_specular = "GrassMesh_properties.dds"
+		texture = { file = "tint_estepe_grass.dds" index = 3 srgb = yes }
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "Sm_BasicGrass_02_entity"
+	pdxmesh = "Sm_BasicGrass_01_mesh"
+}

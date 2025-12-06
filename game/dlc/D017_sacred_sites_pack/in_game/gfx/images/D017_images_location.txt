@@ -1,0 +1,109 @@
+﻿D017_sacred_sites = { #Holy Sites
+	tag = "monuments2"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+
+	#ASIAN#
+
+	#Temple confucius
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/asian/temple_confucius_metadata_os5115x848_d2500x125.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:qufu
+		}
+	}
+
+	#enrykuji temple
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/asian/enryakuji_temple_metadata_os5115x848_d2500x200.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:kurita
+		}
+	}
+
+	#SYRIAN#
+
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/syrian/kaaba_metadata_os5115x848_d2400x370.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:mecca
+		}
+	}
+
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/syrian/church_holy_sepulchre_metadata_os5115x848_d2300x185.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:jerusalem
+		}
+	}
+
+	#AZTEC#
+
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/aztec/great_pyramid_cholula_metadata_os5115x848_d2000x125.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:cholollan
+		}
+	}
+
+	#DECCAN#
+
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/deccan/ranganathaswamy_metadata_os5115x848_d2300x100.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:srirangam
+		}
+	}
+
+	illustration_image = {
+	 	texture_file = "gfx/interface/illustrations/location/holy_sites/deccan/mahabodhi_metadata_os5115x848_d2500x50.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:gaya
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/location/holy_sites/north_german/peters_basilica_metadata_os5115x848_d1900x120.dds"
+	 	priority = 10
+	 	scope = location
+		trigger = {
+			has_local_dlc = "Sacred Sites"
+			this = location:rome
+		}
+	}
+}
+
+D017_monuments3 = {
+	tag = "monuments3"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/illustrations/assets/location_view/test/empty.dds"
+		priority = 1
+		scope = location
+	}
+}

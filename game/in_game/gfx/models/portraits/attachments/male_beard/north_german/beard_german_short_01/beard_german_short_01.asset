@@ -1,0 +1,36 @@
+﻿pdxmesh = {
+	name = "beard_german_short_01_mesh"
+	file = "beard_german_short_01.mesh"
+
+	# blend_shape = { id = "beard_german_short_wide_bs"		type = "beard_german_short_01_bs.mesh" }
+	# blend_shape = { id = "beard_german_short_thin_bs"		type = "beard_german_short_05_bs.mesh" }
+
+	meshsettings = {
+		name = "beard_german_short_01Shape"
+		index = 0
+		texture_diffuse = "beard_base_hair_diffuse.dds"
+		texture_normal = "beard_base_hair_normal.dds"
+		texture_specular = "beard_base_hair_properties.dds"
+		texture = { file = "sheep_0102_properties.dds" index = 3 }
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "beard_german_short_01_entity"
+	pdxmesh = "beard_german_short_01_mesh"
+
+	# attribute = { name = "male_head_north_german_bs02"					blend_shape = "beard_german_short_wide_bs" }
+	# attribute = { name = "male_head_north_german_bs04"					blend_shape = "beard_german_short_thin_bs" }
+	# attribute = { name = "male_head_north_german_bs05"					blend_shape = "beard_german_short_thin_bs" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+

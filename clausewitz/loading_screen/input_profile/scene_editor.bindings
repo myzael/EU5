@@ -1,0 +1,82 @@
+binding = {
+    input_action = "scene_editor_delete_entity"
+    keycode = "del"
+}
+
+binding = {
+    input_action = "scene_editor_rename_entity"
+    keycode = "f2"
+}
+
+binding = {
+    input_action = "scene_editor_duplicate_entity"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "scene_editor_duplicate_entity_hierarchy"
+    keycode = "d"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "scene_editor_group_entities"
+    keycode = "g"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "scene_editor_toggle_grid"
+    keycode = "g"
+}
+
+binding = {
+    input_action = "scene_editor_fit_camera"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "scene_editor_pan_mode"
+    keycode = "q"
+}
+
+binding = {
+    input_action = "scene_editor_translation_mode"
+    keycode = "w"
+}
+
+binding = {
+    input_action = "scene_editor_rotation_mode"
+    keycode = "e"
+}
+
+binding = {
+    input_action = "scene_editor_scale_mode"
+    keycode = "r"
+}
+
+binding = {
+    input_action = "scene_editor_toggle_gizmo_space"
+    keycode = "l"
+}
+
+binding = {
+    input_action = "scene_editor_cycle_translation_mode"
+    keycode = "n"
+}
+
+binding = {
+    input_action = "scene_editor_align_objects_with_viewport_camera"
+    keycode = "f"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "scene_editor_align_viewport_camera_with_object"
+    keycode = "f"
+    modifier = alt
+    modifier = shift
+}

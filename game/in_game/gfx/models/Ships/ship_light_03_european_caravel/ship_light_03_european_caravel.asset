@@ -1,0 +1,183 @@
+pdxmesh = {
+	name = "ship_light_03_european_caravel_mesh"
+	file = "ship_light_03_european_caravel.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_light_03_european_caravel_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_light_03_european_caravel_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_light_03_european_caravel_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_light_03_european_caravel_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_light_03_european_caravel|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_03_european_caravel|folded_sails|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_03_european_caravel|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_03_european_caravel|folded_sails|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_03_european_caravel|sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_03_european_caravel|folded_sails|folded_sails|"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_03_european_caravel|ship_hull|ship_hull_lct|sh"
+		index = 0
+		texture_diffuse = "ship_light_3_european_caravel_diffuse.dds"
+		texture_normal = "ship_light_3_european_caravel_normal.dds"
+		texture_specular = "ship_light_3_european_caravel_properties.dds"
+		texture = { file = "ship_light_3_european_caravel_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_03_european_caravel|ship_hull|ship_hull_lct|sh"
+		index = 0
+		texture_diffuse = "ship_light_3_european_caravel_diffuse.dds"
+		texture_normal = "ship_light_3_european_caravel_normal.dds"
+		texture_specular = "ship_light_3_european_caravel_properties.dds"
+		texture = { file = "ship_light_3_european_caravel_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_03_european_caravel|ship_hull|ship_hull_lct|sh"
+		index = 0
+		texture_diffuse = "ship_light_3_european_caravel_diffuse.dds"
+		texture_normal = "ship_light_3_european_caravel_normal.dds"
+		texture_specular = "ship_light_3_european_caravel_properties.dds"
+		texture = { file = "ship_light_3_european_caravel_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_light_03_european_caravel_entity"
+	pdxmesh = "ship_light_03_european_caravel_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "move"
+    	animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "move2"
+    	animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+		event = {
+			entity_editor_id = "1"
+			time = 2.214
+			node = "cannon_door_right_lct_001"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.254
+			node = "cannon_door_right_lct_002"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.314
+			node = "cannon_door_right_lct_003"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}		
+		event = {
+			entity_editor_id = "1"
+			time = 2.354
+			node = "cannon_door_right_lct_004"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+		event = {
+			entity_editor_id = "1"
+			time = 2.414
+			node = "cannon_door_right_lct_005"
+			keep_particle = yes
+			particle = "cannon_explosion_v2"
+		}
+	}
+
+	attach = { cannon_door_left_lct_001 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_002 = "cannon_door_left_entity" }
+	attach = { cannon_door_left_lct_003 = "cannon_door_left_entity" }
+	attach = { cannon_door_right_lct_001 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_002 = "cannon_door_right_entity" }
+	attach = { cannon_door_right_lct_003 = "cannon_door_right_entity" }
+	attach = { ensign_flag_lctr = "ship_flag_entity" }
+}

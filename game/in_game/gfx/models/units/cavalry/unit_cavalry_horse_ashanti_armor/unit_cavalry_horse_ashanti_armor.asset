@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "unit_cavalry_horse_ashanti_armor_mesh"
+	file = "unit_cavalry_horse_ashanti_armor.mesh"
+
+	meshsettings = {
+		name = "unit_cavalry_horse_ashanti_armorShape"
+		index = 0
+		texture_diffuse = "unit_ashanti_horse_armor_diffuse.dds"
+		texture_normal = "unit_ashanti_horse_armor_normal.dds"
+		#texture_specular = "unit_ashanti_horse_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_ashanti_horse_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_ashanti_horse_sadleShape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_saddle_a_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_saddle_a_normal.dds"
+		#texture_specular = "unit_cavalry_horse_saddle_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_saddle_a_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+entity = {
+	name = "unit_cavalry_horse_ashanti_armor_entity"
+	pdxmesh = "unit_cavalry_horse_ashanti_armor_mesh"
+}

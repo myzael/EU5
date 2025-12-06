@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_northgerman_bastion_a_mesh"
+	file = "building_northgerman_bastion_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.5 }
+		lod = { index = 2 percent = 8.5 }
+	}
+
+	meshsettings = {
+		name = "building_northgerman_newbastion_aShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_bastion_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_northgerman_bastion_a|decal_large_bastion|decal_"
+		index = 0
+		texture_diffuse = "military_01_decal_diffuse.dds"
+		texture_normal = "military_01_decal_normal.dds"
+		texture_specular = "military_01_decal_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_newbastion_a1Shape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_bastion_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_northgerman_bastion_a|decal_large_bastion|decal_"
+		index = 0
+		texture_diffuse = "military_01_decal_diffuse.dds"
+		texture_normal = "military_01_decal_normal.dds"
+		texture_specular = "military_01_decal_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_newbastion_a2Shape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_bastion_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_northgerman_bastion_a|decal_large_bastion|decal_"
+		index = 0
+		texture_diffuse = "military_01_decal_diffuse.dds"
+		texture_normal = "military_01_decal_normal.dds"
+		texture_specular = "military_01_decal_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_northgerman_bastion_a_entity"
+	pdxmesh = "building_northgerman_bastion_a_mesh"
+}

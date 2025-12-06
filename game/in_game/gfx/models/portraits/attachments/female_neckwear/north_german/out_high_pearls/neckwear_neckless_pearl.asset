@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "neckwear_neckless_pearl_mesh"
+	file = "neckwear_neckless_pearl.mesh"
+	
+	meshsettings = {
+		name = "neckwear_neckless_pearlShape"
+		index = 0
+		texture_diffuse = "neckwear_necklace_big_ruby_diffuse.dds"
+		texture_normal = "neckwear_neckless_pearl_normal.dds"
+		texture_specular = "neckwear_neckless_pearl_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "neckwear_neckless_pearl_entity"
+	pdxmesh = "neckwear_neckless_pearl_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+

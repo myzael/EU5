@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "syrian_female_neckwear_noble_neckless_topez_mesh"
+	file = "syrian_female_neckwear_noble_neckless_topez.mesh"
+	
+	meshsettings = {
+		name = "syrian_female_neckwear_noble_neckless_topezShape"
+		index = 0
+		texture_diffuse = "syrian_female_neckwear_noble_neckless_topez_diffuse.dds"
+		texture_normal = "syrian_female_neckwear_noble_neckless_topez_normal.dds"
+		texture_specular = "syrian_female_neckwear_noble_neckless_topez_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "syrian_female_neckwear_noble_neckless_topez_entity"
+	pdxmesh = "syrian_female_neckwear_noble_neckless_topez_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+

@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "unit_legs_pants_shield_belt_mesh"
+	file = "unit_legs_pants_shield_belt.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_legs_pants_shield_belt0Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_shield_belt_diffuse.dds"
+		texture_normal = "unit_legs_pants_shield_belt_normal.dds"
+		#texture_specular = "unit_legs_pants_shield_belt.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_shield_belt_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_legs_pants_shield_belt1Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_shield_belt_diffuse.dds"
+		texture_normal = "unit_legs_pants_shield_belt_normal.dds"
+		#texture_specular = "unit_legs_pants_shield_belt.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_shield_belt_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_pants_shield_belt2Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_shield_belt_diffuse.dds"
+		texture_normal = "unit_legs_pants_shield_belt_normal.dds"
+		#texture_specular = "unit_legs_pants_shield_belt.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_shield_belt_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

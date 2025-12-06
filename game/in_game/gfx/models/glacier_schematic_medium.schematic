@@ -1,0 +1,82 @@
+﻿name="e7b560a2-2734-46ab-8b18-5f6172bf3657"
+graph={
+	nodes={
+		pdxns:ecs:MeshType={
+			id=0
+			node={
+				mesh_name="glacier_medium_mesh"
+				inputs={ "Lod_Override_0" "Lod_Override_1" }
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:MeshType={
+			id=1
+			node={
+				mesh_name="glacier_medium_mesh"
+				inputs={ "Lod_Override_0" "Lod_Override_1" }
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:MeshType={
+			id=2
+			node={
+				mesh_name="glacier_small_mesh"
+				inputs={ "Lod_Override_0" "Lod_Override_1" }
+			}
+			inputs={
+			}
+		}
+		pdxns:ecs:assemble_entity={
+			id=3
+			node={
+			}
+			inputs={
+				link={
+					pin_id="components"
+					linked_node=4
+					linked_pin="local_transform"
+				}
+				link={
+					pin_id="components"
+					linked_node=0
+					linked_pin="mesh_components"
+				}
+			}
+		}
+		pdxns:ecs:create_local_transform={
+			id=4
+			node={
+			}
+			inputs={
+				link={
+					pin_id="translation"
+					linked_node=5
+					linked_pin="value"
+				}
+				link={
+					pin_id="scale"
+					linked_node=6
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:values:ConstVector3f={
+			id=5
+			node={
+				value={ 0.000000 0.000000 0.000000 }
+			}
+			inputs={
+			}
+		}
+		pdxns:values:Float={
+			id=6
+			node={
+				value=2.000000
+			}
+			inputs={
+			}
+		}
+	}
+}

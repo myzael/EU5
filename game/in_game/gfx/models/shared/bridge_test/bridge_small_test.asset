@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "bridge_small_test_mesh"
+	file = "bridge_small_test.mesh"
+	scale = 0.6
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "bridge_small_test_entity"
+	pdxmesh = "bridge_small_test_mesh"
+}

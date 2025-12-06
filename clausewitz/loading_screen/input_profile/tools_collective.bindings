@@ -1,0 +1,82 @@
+binding = {
+    input_action = "tools_new"
+    keycode = "n"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_open"
+    keycode = "o"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_save"
+    keycode = "s"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_save_as"
+    keycode = "s"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "tools_copy"
+    keycode = "c"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_cut"
+    keycode = "x"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_paste"
+    keycode = "v"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_search"
+    keycode = "f"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_close_search"
+    keycode = "escape"
+}
+
+binding = {
+    input_action = "tools_search_go_to_next"
+    keycode = "f3"
+}
+
+binding = {
+    input_action = "tools_search_go_to_prev"
+    keycode = "f3"
+    modifier = shift
+}
+
+binding = {
+    input_action = "history_tool_undo"
+    keycode = "z"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "history_tool_redo"
+    keycode = "y"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "tools_history"
+    keycode = "h"
+    modifier = ctrl
+}

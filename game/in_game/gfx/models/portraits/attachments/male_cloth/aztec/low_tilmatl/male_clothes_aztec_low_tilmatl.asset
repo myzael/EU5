@@ -1,0 +1,57 @@
+﻿pdxmesh = {
+	name = "male_clothes_aztec_low_tilmatl_mesh"
+	file = "male_clothes_aztec_low_tilmatl.mesh"
+
+	meshsettings = {
+		name = "male_clothes_aztec_low_tilmatlShape"
+		index = 0
+		texture_diffuse = "male_clothes_aztec_low_tilmatl_diffuse.dds"
+		texture_normal = "male_clothes_aztec_low_tilmatl_normal.dds"
+		texture_specular = "male_clothes_aztec_low_tilmatl_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_aztec_low_tilmatl_entity"
+	pdxmesh = "male_clothes_aztec_low_tilmatl_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/aztec/low_tilmatl/male_clothes_aztec_low_tilmatl_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_low_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+pdxmesh = {
+	name = "male_clothes_aztec_common_tilmatl_mesh"
+	file = "male_clothes_aztec_low_tilmatl.mesh"
+
+	meshsettings = {
+		name = "male_clothes_aztec_low_tilmatlShape"
+		index = 0
+		texture_diffuse = "male_clothes_aztec_low_tilmatl_diffuse.dds"
+		texture_normal = "male_clothes_aztec_low_tilmatl_normal.dds"
+		texture_specular = "male_clothes_aztec_low_tilmatl_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_aztec_common_tilmatl_entity"
+	pdxmesh = "male_clothes_aztec_common_tilmatl_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/aztec/low_tilmatl/male_clothes_aztec_low_tilmatl_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

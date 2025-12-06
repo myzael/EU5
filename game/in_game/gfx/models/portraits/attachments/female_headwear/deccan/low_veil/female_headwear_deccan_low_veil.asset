@@ -1,0 +1,31 @@
+﻿pdxmesh = {
+	name = "female_headwear_deccan_low_veil_mesh"
+	file = "female_headwear_deccan_low_veil.mesh"
+
+	meshsettings = {
+		name = "female_headwear_deccan_low_veilShape"
+		index = 0
+		texture_diffuse = "female_headwear_deccan_low_veil_diffuse.dds"
+		texture_normal = "female_headwear_deccan_low_veil_normal.dds"
+		texture_specular = "female_headwear_deccan_low_veil_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headwear_deccan_low_veil_entity"
+	pdxmesh = "female_headwear_deccan_low_veil_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/deccan/low_veil/female_headwear_deccan_low_veil_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "deccan_low_clothes_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+		}
+	}
+}

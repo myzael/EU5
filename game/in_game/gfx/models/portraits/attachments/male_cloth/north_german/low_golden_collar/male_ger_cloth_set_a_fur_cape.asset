@@ -1,0 +1,30 @@
+﻿pdxmesh = {
+	name = "male_ger_cloth_set_a_fur_cape_mesh"
+	file = "male_ger_cloth_set_a_fur_cape.mesh"
+
+	meshsettings = {
+		name = "male_ger_cloth_set_a_fur_capeShape"
+		index = 0
+		texture_diffuse = "male_ger_cloth_set_a_fur_cape_diffuse.dds"
+		texture_normal = "male_ger_cloth_set_a_fur_cape_normal.dds"
+		texture_specular = "male_ger_cloth_set_a_fur_cape_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+		meshsettings = {
+		name = "male_ger_cloth_set_a_furShape"
+		index = 0
+		texture_diffuse = "male_ger_cloth_set_a_fur_cape_diffuse.dds"
+		texture_normal = "male_ger_cloth_set_a_fur_cape_normal.dds"
+		texture_specular = "male_ger_cloth_set_a_fur_cape_properties.dds"
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	
+}
+
+entity = {
+	name = "male_ger_cloth_set_a_fur_cape_entity"
+	pdxmesh = "male_ger_cloth_set_a_fur_cape_mesh"
+}

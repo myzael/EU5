@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_hayfork_mesh"
+	file = "unit_weapon_hayfork.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_hayforkShape"
+		index = 0
+		texture_diffuse = "unit_weapon_hayfork_diffuse.dds"
+		texture_normal = "unit_weapon_hayfork_normal.dds"
+		#texture_specular = "unit_weapon_hayfork_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_hayfork_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

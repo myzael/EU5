@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "male_headwear_chinese_commoner_wangjin_mesh"
+	file = "male_headwear_chinese_commoner_wangjin.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_chinese_commoner_wangjinShape"
+		index = 0
+		texture_diffuse = "male_headwear_chinese_commoner_wangjin_diffuse.dds"
+		texture_normal = "male_headwear_chinese_commoner_wangjin_normal.dds"
+		texture_specular = "male_headwear_chinese_commoner_wangjin_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_chinese_commoner_wangjin_entity"
+	pdxmesh = "male_headwear_chinese_commoner_wangjin_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

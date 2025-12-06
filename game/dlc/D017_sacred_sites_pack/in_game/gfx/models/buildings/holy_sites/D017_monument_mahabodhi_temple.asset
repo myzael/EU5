@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "D017_monument_mahabodhi_temple_mesh"
+	file = "D017_monument_mahabodhi_temple.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "mahabodhi_temple_lod0Shape"
+		index = 0
+		texture_diffuse = "monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "monument_mahabodhi_temple_normal.dds"
+		texture_specular = "monument_mahabodhi_temple_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_mahabodhi_templeShape"
+		index = 0
+		texture_diffuse = "decal_monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "decal_monument_mahabodhi_temple_normal.dds"
+		texture_specular = "decal_monument_mahabodhi_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "mahabodhi_temple_lod1Shape"
+		index = 0
+		texture_diffuse = "monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "monument_mahabodhi_temple_normal.dds"
+		texture_specular = "monument_mahabodhi_temple_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_mahabodhi_temple1Shape"
+		index = 0
+		texture_diffuse = "decal_monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "decal_monument_mahabodhi_temple_normal.dds"
+		texture_specular = "decal_monument_mahabodhi_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "mahabodhi_temple_lod2Shape"
+		index = 0
+		texture_diffuse = "monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "monument_mahabodhi_temple_normal.dds"
+		texture_specular = "monument_mahabodhi_temple_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_mahabodhi_temple2Shape"
+		index = 0
+		texture_diffuse = "decal_monument_mahabodhi_temple_diffuse.dds"
+		texture_normal = "decal_monument_mahabodhi_temple_normal.dds"
+		texture_specular = "decal_monument_mahabodhi_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "D017_monument_mahabodhi_temple_entity"
+	pdxmesh = "D017_monument_mahabodhi_temple_mesh"
+}

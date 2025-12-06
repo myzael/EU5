@@ -1,0 +1,73 @@
+pdxmesh = {
+	name = "resource_dromedary_camel_a_mesh"
+	file = "resource_dromedary_camel_a.mesh"
+
+	animation = { id = "moving_animation" type = "resource_dromedary_camel_a_walking.anim" }
+	animation = { id = "idle_animation" type = "resource_dromedary_camel_a_idle.anim" }
+
+	meshsettings = {
+		name = "resource_dromedary_camel_aShape"
+		index = 0
+		texture_diffuse = "resource_dromedary_camel_a_diffuse.dds"
+		texture_normal = "resource_dromedary_camel_a_normal.dds"
+		#texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "resource_dromedary_camel_a_mask.dds" }
+		#shader = "snap_to_terrain_no_deform"
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+#entity = {
+#	name = "resource_dromedary_camel_a_entity"
+#	pdxmesh = "resource_dromedary_camel_a_mesh"
+#	
+#	default_state = "idle"
+#	state = {
+#		name = "idle"
+#		animation = "idle_animation"
+#	}
+#	state = {
+#		name = "moving"
+#		animation = "moving_animation"
+#	}
+#    
+#    game_data = {
+#		unit_texture_variations = {
+#			10 = animal_fur_colors
+#		}
+#	}
+#}
+#
+#entity = {
+#	name = "unitgfx_camel_a_entity"
+#	pdxmesh = "resource_dromedary_camel_a_mesh"
+#	default_state = "idle"
+#	state = {
+#		name = "idle"
+#		animation = "idle_animation"
+#	}
+#	state = {
+#		name = "moving"
+#		animation = "moving_animation"
+#	}
+#
+#	meshsettings = {
+#		name = "resource_dromedary_camel_aShape"
+#		index = 0
+#		texture_diffuse = "resource_dromedary_camel_a_diffuse.dds"
+#		texture_normal = "resource_dromedary_camel_a_normal.dds"
+#		#texture_specular = "resource_dromedary_camel_a_properties.dds"
+#		texture = { index = 3 srgb = no file = "resource_dromedary_camel_a_mask.dds" }
+#		#shader = "snap_to_terrain_no_deform"
+#		shader = "unit_material_repaint"
+#		shader_file = "gfx/FX/units.shader"
+#	}
+#    
+#    game_data = {
+#		unit_texture_variations = {
+#			10 = animal_fur_colors
+#		}
+#	}
+#    
+# }   

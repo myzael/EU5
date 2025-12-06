@@ -1,0 +1,28 @@
+﻿pdxmesh = {
+	name = "beard_asian_full_manchu_mesh"
+	file = "beard_asian_full_manchu.mesh"
+
+	meshsettings = {
+		name = "beard_asian_full_manchuShape"
+		index = 0
+		texture_diffuse = "beard_base_hair_diffuse.dds"
+		texture_normal = "beard_base_hair_normal.dds"
+		texture_specular = "beard_base_hair_properties.dds"
+		texture = { file = "sheep_0102_properties.dds" index = 3 }
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "beard_asian_full_manchu_entity"
+	pdxmesh = "beard_asian_full_manchu_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

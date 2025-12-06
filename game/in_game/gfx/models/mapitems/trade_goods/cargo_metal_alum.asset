@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_metal_alum_mesh"
+	file = "cargo_metal_alum.mesh"
+
+	meshsettings = {
+		name = "cargo_metal_alumShape"
+		index = 0
+		texture_diffuse = "cargo_alum_diffuse.dds"
+		texture_normal = "cargo_alum_normal.dds"
+		texture_specular = "cargo_alum_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_metal_alum_entity"
+	pdxmesh = "cargo_metal_alum_mesh"
+}

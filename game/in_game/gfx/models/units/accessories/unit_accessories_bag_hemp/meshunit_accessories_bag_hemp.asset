@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "meshunit_accessories_bag_hemp_mesh"
+	file = "meshunit_accessories_bag_hemp.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_bag_hempShape"
+		index = 0
+		texture_diffuse = "unit_accessories_bag_hemp_mask.dds"
+		texture_normal = "unit_accessories_bag_hemp_normal.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "meshunit_accessories_bag_hemp_entity"
+	pdxmesh = "meshunit_accessories_bag_hemp_mesh"
+}

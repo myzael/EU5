@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "capital_flag_mesh"
+	file = "capital_flag.mesh"
+
+	meshsettings = {
+		name = "capital_flag|decal_mili|decal_miliShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "pCylinderShape2"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "capital_flag_entity"
+	pdxmesh = "capital_flag_mesh"
+}

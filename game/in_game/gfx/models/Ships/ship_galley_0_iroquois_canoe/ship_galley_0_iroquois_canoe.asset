@@ -1,0 +1,90 @@
+pdxmesh = {
+	name = "ship_galley_0_iroquois_canoe_mesh"
+	file = "ship_galley_0_iroquois_canoe.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_galley_0_iroquois_canoe_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_galley_0_iroquois_canoe_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_galley_0_iroquois_canoe_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_galley_0_iroquois_canoe_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_0_iroquois_canoe|ship_hull|ship_hull_lct|ship"
+		index = 0
+		texture_diffuse = "ship_galley_0_iroquois_Canoe_diffuse.dds"
+		texture_normal = "ship_galley_0_iroquois_Canoe_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_0_iroquois_Canoe_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_0_iroquois_canoe|ship_hull|ship_hull_lct|ship"
+		index = 0
+		texture_diffuse = "ship_galley_0_iroquois_Canoe_diffuse.dds"
+		texture_normal = "ship_galley_0_iroquois_Canoe_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_0_iroquois_Canoe_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_0_iroquois_canoe|ship_hull|ship_hull_lct|ship"
+		index = 0
+		texture_diffuse = "ship_galley_0_iroquois_Canoe_diffuse.dds"
+		texture_normal = "ship_galley_0_iroquois_Canoe_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_0_iroquois_Canoe_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_galley_0_iroquois_canoe_entity"
+	pdxmesh = "ship_galley_0_iroquois_canoe_mesh"
+	scale = 2
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "moving"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "moving"
+	}
+
+attach = { deck_oar_right_lctr_001 = "oars_small_right_entity"  }
+attach = { deck_oar_right_lctr_002 = "oars_small_right_entity" }
+attach = { deck_oar_right_lctr_003 = "oars_small_right_entity" }
+attach = { deck_oar_left_lctr_001 = "oars_small_left_entity" }
+attach = { deck_oar_left_lctr_002 = "oars_small_left_entity" }
+attach = { deck_oar_left_lctr_003 = "oars_small_left_entity" }
+ 
+
+}

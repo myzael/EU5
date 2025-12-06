@@ -1,0 +1,98 @@
+﻿## LOW
+pdxmesh = {
+	name = "female_clothes_aztec_low_noble_huipilli_mesh"
+	file = "female_clothes_aztec_low_noble_huipilli.mesh"
+
+	meshsettings = {
+		name = "female_clothes_aztec_low_noble_huipilliShape"
+		index = 0
+		texture_diffuse = "female_clothes_aztec_noble_huipilli_diffuse.dds"
+		texture_normal = "female_clothes_aztec_noble_huipilli_normal.dds"
+		texture_specular = "female_clothes_aztec_noble_huipilli_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_aztec_low_noble_huipilli_entity"
+	pdxmesh = "female_clothes_aztec_low_noble_huipilli_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/aztec/noble_huipilli/female_clothes_aztec_noble_huipilli_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_female_low_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+## HIGH
+pdxmesh = {
+	name = "female_clothes_aztec_high_noble_huipilli_mesh"
+	file = "female_clothes_aztec_high_noble_huipilli.mesh"
+
+	meshsettings = {
+		name = "female_clothes_aztec_high_noble_huipilliShape"
+		index = 0
+		texture_diffuse = "female_clothes_aztec_noble_huipilli_diffuse.dds"
+		texture_normal = "female_clothes_aztec_noble_huipilli_normal.dds"
+		texture_specular = "female_clothes_aztec_noble_huipilli_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_aztec_high_noble_huipilli_entity"
+	pdxmesh = "female_clothes_aztec_high_noble_huipilli_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/aztec/noble_huipilli/female_clothes_aztec_noble_huipilli_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_female_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+## COMMON
+pdxmesh = {
+	name = "female_clothes_aztec_common_huipilli_mesh"
+	file = "female_clothes_aztec_low_noble_huipilli.mesh"
+
+	meshsettings = {
+		name = "female_clothes_aztec_low_noble_huipilliShape"
+		index = 0
+		texture_diffuse = "female_clothes_aztec_noble_huipilli_diffuse.dds"
+		texture_normal = "female_clothes_aztec_noble_huipilli_normal.dds"
+		texture_specular = "female_clothes_aztec_noble_huipilli_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_aztec_common_huipilli_entity"
+	pdxmesh = "female_clothes_aztec_common_huipilli_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/aztec/noble_huipilli/female_clothes_aztec_noble_huipilli_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "male_neckwear_aztec_in_clergy_pearls_mesh"
+	file = "male_neckwear_aztec_in_clergy_pearls.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_aztec_in_clergy_pearlsShape"
+		index = 0
+		texture_diffuse = "male_neckwear_aztec_in_clergy_pearls_diffuse.dds"
+		texture_normal = "male_neckwear_aztec_in_clergy_pearls_normal.dds"
+		texture_specular = "male_neckwear_aztec_in_clergy_pearls_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_neckwear_aztec_in_clergy_pearls_entity"
+	pdxmesh = "male_neckwear_aztec_in_clergy_pearls_mesh"
+}
+

@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "sm_rock_a_01_mesh"
+	file = "sm_rock_a_01.mesh"
+
+	meshsettings = {
+		name = "sm_rock_a_01|Group64109|Group64109Shape"
+		index = 0
+		texture_diffuse = "rock_mesh_01_diffuse.dds"
+		texture_normal = "rock_mesh_01_normal.dds"
+		texture_specular = "rock_mesh_01_properties.dds"
+		shader = "standard"
+	}
+}
+
+entity = {
+	name = "sm_rock_a_01_entity"
+	pdxmesh = "sm_rock_a_01_mesh"
+}

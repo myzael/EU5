@@ -1,0 +1,14 @@
+pdxmesh = {
+	name = "horse_skeleton_mesh"
+	file = "horse_skeleton.mesh"
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+	
+	meshsettings = {
+		name = "horse_skeleton_meshShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}

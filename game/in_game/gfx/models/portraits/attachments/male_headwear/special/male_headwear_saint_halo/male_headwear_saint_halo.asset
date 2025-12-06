@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "male_headwear_saint_halo_mesh"
+	file = "male_headwear_saint_halo.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_saint_haloShape"
+		index = 0
+		texture_diffuse = "male_headwear_saint_halo_diffuse.dds"
+		texture_normal = "male_headwear_saint_halo_normal.dds"
+		texture_specular = "male_headwear_saint_halo_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage_billboarded"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_saint_halo_entity"
+	pdxmesh = "male_headwear_saint_halo_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+
+}

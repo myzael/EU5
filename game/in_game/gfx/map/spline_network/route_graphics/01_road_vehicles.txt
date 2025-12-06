@@ -1,0 +1,25 @@
+﻿horse_carts = {
+	valid_spline_styles = { "gravel_road" "paved_road" "modern_road" "rail_road" }
+
+	speed = 0.5
+	min_caravan_distance = 3.0
+	max_count = 600
+	max_path_length = 4
+
+	route_entities = {
+		horse_cart_01 = {
+			entity = "wagon_entity"
+			position = 0
+			entity_length = 3.0
+	
+			possible = {
+				scope:region = {
+				}
+			}
+			
+			count = {
+				value = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+﻿pdxmesh = {
+	name = "male_clothes_iroquois_imperial_shirt_mesh"
+	file = "male_clothes_iroquois_imperial_shirt.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_imperial_shirtShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_imperial_shirt_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_imperial_shirt_normal.dds"
+		texture_specular = "male_clothes_iroquois_imperial_shirt_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_iroquois_imperial_shirt_entity"
+	pdxmesh = "male_clothes_iroquois_imperial_shirt_mesh"
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/iroquois/imperial_shirt/male_clothes_iroquois_imperial_shirt_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "iroquois_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

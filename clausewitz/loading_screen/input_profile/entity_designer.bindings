@@ -1,0 +1,20 @@
+
+binding = {
+    input_action = "entity_designer_toggle_grid"
+    keycode = "g"
+}
+
+binding = {
+    input_action = "entity_designer_fit_camera"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "entity_designer_play_pause"
+    keycode = "space"
+}
+
+binding = {
+    input_action = "entity_designer_loop"
+    keycode = "l"
+}

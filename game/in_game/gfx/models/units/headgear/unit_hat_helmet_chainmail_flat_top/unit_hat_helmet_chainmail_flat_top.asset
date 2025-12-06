@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_hat_helmet_chainmail_flat_top_mesh"
+	file = "unit_hat_helmet_chainmail_flat_top.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_helmet_chainmail_flat_top_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hat_helmet_chainmail_flat_top_diffuse.dds"
+		texture_normal = "unit_hat_helmet_chainmail_flat_top_normal.dds"
+		#texture_specular = "unit_hat_helmet_chainmail_flat_top_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_helmet_chainmail_flat_top_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hat_helmet_chainmail_flat_top_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_hat_helmet_chainmail_flat_top_diffuse.dds"
+		texture_normal = "unit_hat_helmet_chainmail_flat_top_normal.dds"
+		#texture_specular = "unit_hat_helmet_chainmail_flat_top_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_helmet_chainmail_flat_top_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_helmet_chainmail_flat_top_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_hat_helmet_chainmail_flat_top_diffuse.dds"
+		texture_normal = "unit_hat_helmet_chainmail_flat_top_normal.dds"
+		#texture_specular = "unit_hat_helmet_chainmail_flat_top_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_helmet_chainmail_flat_top_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

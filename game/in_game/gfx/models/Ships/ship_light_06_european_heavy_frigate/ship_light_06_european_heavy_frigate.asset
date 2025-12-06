@@ -1,0 +1,138 @@
+pdxmesh = {
+	name = "ship_light_06_european_heavy_frigate_mesh"
+	file = "ship_light_06_european_heavy_frigate.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.5 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_light_06_european_heavy_frigate_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_light_06_european_heavy_frigate_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_light_06_european_heavy_frigate_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_light_06_european_heavy_frigate_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_light_06_european_heavy_frigate|Sails|sails|sailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_06_european_heavy_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_06_european_heavy_frigate|Sails|sails|sailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_06_european_heavy_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_06_european_heavy_frigate|Sails|sails|sailsSha"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_06_european_heavy_frigate|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_light_06_european_heavy_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_06_european_heavy_frigate_diffuse.dds"
+		texture_normal = "ship_light_06_european_heavy_frigate_normal.dds"
+		texture_specular = "ship_light_06_european_heavy_frigate_properties.dds"
+		texture = { file = "ship_light_06_european_heavy_frigate_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_light_06_european_heavy_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_06_european_heavy_frigate_diffuse.dds"
+		texture_normal = "ship_light_06_european_heavy_frigate_normal.dds"
+		texture_specular = "ship_light_06_european_heavy_frigate_properties.dds"
+		texture = { file = "ship_light_06_european_heavy_frigate_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_light_06_european_heavy_frigate|ship_hull|ship_hull_"
+		index = 0
+		texture_diffuse = "ship_light_06_european_heavy_frigate_diffuse.dds"
+		texture_normal = "ship_light_06_european_heavy_frigate_normal.dds"
+		texture_specular = "ship_light_06_european_heavy_frigate_properties.dds"
+		texture = { file = "ship_light_06_european_heavy_frigate_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_light_06_european_heavy_frigate_entity"
+	pdxmesh = "ship_light_06_european_heavy_frigate_mesh"
+	scale = 1.2
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+}

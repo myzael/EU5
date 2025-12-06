@@ -1,0 +1,16 @@
+﻿{
+	"tags":	[],
+	"strength":	0.150000,
+	"ground_level":	0,
+	"height_blend_mode":	0,
+	"rotation":	33.026340,
+	"fade_margin":	0,
+	"position.x":	29993,
+	"position.y":	25951,
+	"scale.x":	0.150000,
+	"scale.y":	0.150000,
+	"depth_priority":	356,
+	"locked":	false,
+	"disabled":	false,
+	"dynamic":	false
+}

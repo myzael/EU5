@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "building_syrian_small_clergy_mesh"
+	file = "building_syrian_small_clergy.mesh"
+
+	meshsettings = {
+		name = "Small_SizeShape"
+		index = 0
+		texture_diffuse = "decal_syrian_clergy_small_diffuse.dds"
+		texture_normal = "decal_syrian_clergy_small_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_small_clergyShape"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_clergy_small_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_syrian_small_clergy_entity"
+	pdxmesh = "building_syrian_small_clergy_mesh"
+}

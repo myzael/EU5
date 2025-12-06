@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "cargo_pearl_mesh"
+	file = "cargo_pearl.mesh"
+
+	meshsettings = {
+		name = "cargo_pearlShape"
+		index = 0
+		texture_diffuse = "cargo_pearl_diffuse.dds"
+		texture_normal = "cargo_generic_fine_normal.dds"
+		texture_specular = "cargo_pearl_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_pearlShape"
+		index = 1
+		texture_diffuse = "wagon_cart_diffuse.dds"
+		texture_normal = "wagon_cart_normal.dds"
+		texture_specular = "wagon_cart_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_pearl_entity"
+	pdxmesh = "cargo_pearl_mesh"
+}

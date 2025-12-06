@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_war_axe_one_handed_mesh"
+	file = "unit_weapon_war_axe_one_handed.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_war_axe_one_handedShape"
+		index = 0
+		texture_diffuse = "unit_weapon_war_axe_one_handed_diffuse.dds"
+		texture_normal = "unit_weapon_war_axe_one_handed_normal.dds"
+		#texture_specular = "unit_weapon_war_axe_one_handed_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_war_axe_one_handed_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

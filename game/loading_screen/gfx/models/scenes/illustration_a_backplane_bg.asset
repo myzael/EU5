@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "illustration_a_backplane_bg_mesh"
+	file = "illustration_a_backplane_bg.mesh"
+
+	meshsettings = {
+		name = "illustration_a_backplane_bgShape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_0"
+	}
+}
+
+entity = {
+	name = "illustration_a_backplane_bg_entity"
+	pdxmesh = "illustration_a_backplane_bg_mesh"
+}

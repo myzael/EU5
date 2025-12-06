@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "mountainous_rocks_01_a_mesh"
+	file = "mountainous_rocks_01_a.mesh"
+
+	meshsettings = {
+		name = "boulders_lowShape"
+		index = 0
+		texture_diffuse = "mountainous_rocks_01_a_diffuse.dds"
+		texture_normal = "mountainous_rocks_01_a_normal.dds"
+		texture_specular = "mountainous_rocks_01_a_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "mountainous_rocks_01_a_entity"
+	pdxmesh = "mountainous_rocks_01_a_mesh"
+}

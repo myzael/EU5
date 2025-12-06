@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "resource_decal_raw_coal_mesh"
+	file = "resource_decal_raw_coal.mesh"
+
+	meshsettings = {
+		name = "resource_decal_raw_coalShape"
+		index = 0
+		texture_diffuse = "resource_decal_raw_coal_decal_diffuse.dds"
+		texture_normal = "resource_decal_raw_coal_decal_normal.dds"
+		texture_specular = "resource_decal_raw_coal_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resource_decal_raw_coal_entity"
+	pdxmesh = "resource_decal_raw_coal_mesh"
+}

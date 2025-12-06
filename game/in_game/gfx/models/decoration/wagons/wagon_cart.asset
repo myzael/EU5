@@ -1,0 +1,220 @@
+pdxmesh = {
+	name = "wagon_cart_mesh"
+	file = "wagon_cart.mesh"
+
+	animation = { id = "cart_moving_anim_animation" type = "wagon_cart_cart_moving_anim.anim" }
+
+	meshsettings = {
+		name = "wagon_cartShape"
+		index = 0
+		texture_diffuse = "wagon_cart_diffuse.dds"
+		texture_normal = "wagon_cart_normal.dds"
+		texture_specular = "wagon_cart_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "wagon_cart_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { horse_lctr = "resource_horse_a_entity" }
+
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_copper_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_metal_copper_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_silver_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_metal_silver_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_gold_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_metal_gold_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+entity = {
+	name = "wagon_cart_iron_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_metal_iron_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_cloth_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_cloth_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_fine_cloth_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_fine_cloth_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_generic_bags_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_bags_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_fish_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_fish_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_generic_boxes_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_generic_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_hay_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_hay_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_weapons_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_weapons_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_wood_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_wood_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_ivory_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_ivory_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_jewels_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_jewels_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_wine_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_wine_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+
+entity = {
+	name = "wagon_cart_meat_entity"
+	pdxmesh = "wagon_cart_mesh"
+	attach = { cargo_lctr = "cargo_meat_entity" }
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "cart_moving_anim"
+	state = {
+		name = "cart_moving_anim"
+		animation = "cart_moving_anim_animation"
+	}
+}
+

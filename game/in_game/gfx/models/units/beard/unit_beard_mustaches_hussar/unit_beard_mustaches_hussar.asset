@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_beard_mustaches_hussar_mesh"
+	file = "unit_beard_mustaches_hussar.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_beard_mustaches_hussar_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_beard_mustaches_hussar_diffuse.dds"
+		texture_normal = "unit_beard_mustaches_hussar_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_beard_mustaches_hussar_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_beard_mustaches_hussar_diffuse.dds"
+		texture_normal = "unit_beard_mustaches_hussar_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_beard_mustaches_hussar_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_beard_mustaches_hussar_diffuse.dds"
+		texture_normal = "unit_beard_mustaches_hussar_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

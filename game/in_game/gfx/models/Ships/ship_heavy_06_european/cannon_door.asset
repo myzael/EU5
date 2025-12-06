@@ -1,0 +1,70 @@
+pdxmesh = {
+	name = "cannon_door_mesh"
+	file = "cannon_door.mesh"
+
+	animation = { id = "idle_animation" type = "cannon_door_idle.anim" }
+	animation = { id = "attack_r_animation" type = "cannon_door_attack_r.anim" }
+	animation = { id = "attack_l_animation" type = "cannon_door_attack_l.anim" }
+
+	meshsettings = {
+		name = "Canon_DoorShape"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "canon_external_doorShape"
+		index = 0
+		texture_diffuse = "ship_heavy_06_european_diffuse.dds"
+		texture_normal = "ship_heavy_06_european_normal.dds"
+		texture_specular = "ship_heavy_06_european_properties.dds"
+		texture = { file = "ship_heavy_06_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+
+entity = {
+	name = "cannon_door_right_entity"
+	pdxmesh = "cannon_door_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "attack_l"
+		animation = "attack_l_animation"
+	}
+}
+
+entity = {
+	name = "cannon_door_left_entity"
+	pdxmesh = "cannon_door_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "attack_r"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "attack_l"
+		animation = "idle_animation"
+	}
+}

@@ -1,0 +1,60 @@
+
+binding = {
+    input_action = "animation_editor_remove"
+    keycode = "del"
+}
+
+binding = {
+    input_action = "animation_editor_fit"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "animation_editor_100%"
+    keycode = "0"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "animation_editor_rename"
+    keycode = "f2"
+}
+
+binding = {
+    input_action = "animation_editor_cancel_drag"
+    keycode = "escape"
+}
+
+binding = {
+    input_action = "animation_editor_select_all"
+    keycode = "a"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "animation_editor_selection_clear"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "animation_editor_selection_invert"
+    keycode = "i"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "animation_editor_pause_play"
+    keycode = "space"
+}
+
+binding = {
+    input_action = "animation_editor_next_frame"
+    keycode = "RIGHT"
+}
+
+binding = {
+    input_action = "animation_editor_prev_frame"
+    keycode = "LEFT"
+}

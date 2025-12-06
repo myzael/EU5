@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "unit_weapon_flintlock_blunderbuss_mesh"
+	file = "unit_weapon_flintlock_blunderbuss.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_flintlock_blunderbussShape"
+		index = 0
+		texture_diffuse = "unit_weapon_flintlock_blunderbuss_diffuse.dds"
+		texture_normal = "unit_weapon_flintlock_blunderbuss_normal.dds"
+		#texture_specular = "unit_hat_armour_steel_feather_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_flintlock_blunderbuss_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+
+pdxmesh = {
+	name = "unit_weapon_test_mesh"
+	file = "unit_weapon_flintlock_blunderbuss.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_flintlock_blunderbussShape"
+		index = 0
+		texture_diffuse = "unit_weapon_flintlock_blunderbuss_diffuse.dds"
+		texture_normal = "unit_weapon_flintlock_blunderbuss_normal.dds"
+		texture_specular = "unit_head_01_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_flintlock_blunderbuss_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_deccan_fortress_mesh"
+	file = "building_deccan_fortress.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.5 }
+		lod = { index = 2 percent = 8.5 }
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_lod0Shape"
+		index = 0
+		texture_diffuse = "building_deccan_castles_diffuse.dds"
+		texture_normal = "building_deccan_castles_normal.dds"
+		texture_specular = "building_deccan_castles_properties.dds"
+		texture = { file = "building_deccan_fortress_ao_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "building_deccan_fortress_decal_diffuse.dds"
+		texture_normal = "building_ashanti_fortress_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_lod1Shape"
+		index = 0
+		texture_diffuse = "building_deccan_castles_diffuse.dds"
+		texture_normal = "building_deccan_castles_normal.dds"
+		texture_specular = "building_deccan_castles_properties.dds"
+		texture = { file = "building_deccan_fortress_ao_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "building_deccan_fortress_decal_diffuse.dds"
+		texture_normal = "building_ashanti_fortress_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_lod2Shape"
+		index = 0
+		texture_diffuse = "building_deccan_castles_diffuse.dds"
+		texture_normal = "building_deccan_castles_normal.dds"
+		texture_specular = "building_deccan_castles_properties.dds"
+		texture = { file = "building_deccan_fortress_ao_unique.dds" index = 5 }
+		shader = "standard_atlas"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_deccan_fortress_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "building_deccan_fortress_decal_diffuse.dds"
+		texture_normal = "building_ashanti_fortress_decal_normal.dds"
+		texture_specular = "building_ashanti_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_deccan_fortress_entity"
+	pdxmesh = "building_deccan_fortress_mesh"
+}

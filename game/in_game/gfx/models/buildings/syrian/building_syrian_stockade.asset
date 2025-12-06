@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_syrian_stockade_mesh"
+	file = "building_syrian_stockade.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.5 }
+		lod = { index = 2 percent = 8.5 }
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_stockade|building_syrian_stockade|buildin"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_diffuse.dds"
+		texture_normal = "building_syrian_stockade_normal.dds"
+		texture_specular = "building_syrian_stockade_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_stockade_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_stockade|decal_syrian_stockade|decal_syri"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_decal_diffuse.dds"
+		texture_normal = "building_syrian_stockade_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_stockade1|building_syrian_stockade|building_syr"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_diffuse.dds"
+		texture_normal = "building_syrian_stockade_normal.dds"
+		texture_specular = "building_syrian_stockade_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_stockade_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_stockade1|decal_syrian_stockade|decal_syrian_st"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_decal_diffuse.dds"
+		texture_normal = "building_syrian_stockade_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_syrian_stockade2|building_syrian_stockade|building_syr"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_diffuse.dds"
+		texture_normal = "building_syrian_stockade_normal.dds"
+		texture_specular = "building_syrian_stockade_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_stockade_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_stockade2|decal_syrian_stockade|decal_syrian_st"
+		index = 0
+		texture_diffuse = "building_syrian_stockade_decal_diffuse.dds"
+		texture_normal = "building_syrian_stockade_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_syrian_stockade_entity"
+	pdxmesh = "building_syrian_stockade_mesh"
+}

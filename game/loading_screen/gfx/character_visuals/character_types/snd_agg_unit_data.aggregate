@@ -1,0 +1,60 @@
+﻿snd_agg_unit_data = {
+	aggregate_members = {
+
+		agg_UnitArmor = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "cloth"
+				possible_values = {
+					"cloth"
+					"leather"
+					"mail"
+					"metal"
+				}
+				description = "Selects the armor of the unit."
+			}
+		}
+
+		agg_UnitWeaponGun = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "pistol"
+				possible_values = {
+					"pistol"
+					"rifle"
+				}
+				description = "Selects the weapon of the unit."
+			}
+		}
+
+		agg_UnitWeaponMelee = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "sword"
+				possible_values = {
+					"sword"
+					"hammer"
+					"spear"
+					"staff"
+				}
+				description = "Selects the weapon of the unit."
+			}
+		}
+
+		agg_UnitWeaponProj = {
+			type_name = String
+			metadata = {
+				editor_gui_type = simple_dropdown
+				default = "bow"
+				possible_values = {
+					"bow"
+					"crossbow"
+				}
+				description = "Selects the weapon of the unit."
+			}
+		}
+    }
+}

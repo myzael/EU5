@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "D017_monument_enryakuji_temple_mesh"
+	file = "D017_monument_enryakuji_temple.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.0 }
+		lod = { index = 2 percent = 6.0 }
+	}
+
+	meshsettings = {
+		name = "building_monument_enryakuji_temple_lod0Shape"
+		index = 0
+		texture_diffuse = "monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "monument_enryakuji_temple_normal.dds"
+		texture_specular = "monument_enryakuji_temple_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "monument_enryakuji_temple_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_monument_enryakuji_temple_lod0Shape"
+		index = 0
+		texture_diffuse = "decal_monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "decal_monument_enryakuji_temple_normal.dds"
+		texture_specular = "decal_monument_enryakuji_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_enryakuji_temple_lod1Shape"
+		index = 0
+		texture_diffuse = "monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "monument_enryakuji_temple_normal.dds"
+		texture_specular = "monument_enryakuji_temple_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "monument_enryakuji_temple_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_monument_enryakuji_temple_lod1Shape"
+		index = 0
+		texture_diffuse = "decal_monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "decal_monument_enryakuji_temple_normal.dds"
+		texture_specular = "decal_monument_enryakuji_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_enryakuji_temple_lod2Shape"
+		index = 0
+		texture_diffuse = "monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "monument_enryakuji_temple_normal.dds"
+		texture_specular = "monument_enryakuji_temple_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "monument_enryakuji_temple_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_monument_enryakuji_temple_lod2Shape"
+		index = 0
+		texture_diffuse = "decal_monument_enryakuji_temple_diffuse.dds"
+		texture_normal = "decal_monument_enryakuji_temple_normal.dds"
+		texture_specular = "decal_monument_enryakuji_temple_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "D017_monument_enryakuji_temple_entity"
+	pdxmesh = "D017_monument_enryakuji_temple_mesh"
+}

@@ -1,0 +1,123 @@
+## Plain
+
+pdxmesh = {
+	name = "male_headwear_german_high_plain_berret_right_mesh"
+	file = "male_headwear_german_high_berret_right.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_german_high_berret_rightShape"
+		index = 0
+		texture_diffuse = "male_headwear_german_high_plain_berret_diffuse.dds"
+		texture_normal = "male_headwear_german_high_plain_berret_normal.dds"
+		texture_specular = "male_headwear_german_high_plain_berret_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "male_headwear_german_high_plain_berret_left_mesh"
+	file = "male_headwear_german_high_berret_left.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_german_high_berret_leftShape"
+		index = 0
+		texture_diffuse = "male_headwear_german_high_plain_berret_diffuse.dds"
+		texture_normal = "male_headwear_german_high_plain_berret_normal.dds"
+		texture_specular = "male_headwear_german_high_plain_berret_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_high_plain_berret_right_entity"
+	pdxmesh = "male_headwear_german_high_plain_berret_right_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+entity = {
+	name = "male_headwear_german_high_plain_berret_left_entity"
+	pdxmesh = "male_headwear_german_high_plain_berret_left_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+## Stripped
+
+pdxmesh = {
+	name = "male_headwear_german_high_stripped_berret_right_mesh"
+	file = "male_headwear_german_high_berret_right.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_german_high_berret_rightShape"
+		index = 0
+		texture_diffuse = "male_headwear_german_high_stripped_berret_diffuse.dds"
+		texture_normal = "male_headwear_german_high_stripped_berret_normal.dds"
+		texture_specular = "male_clothes_chinese_commoner_yi_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "male_headwear_german_high_stripped_berret_left_mesh"
+	file = "male_headwear_german_high_berret_left.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_german_high_berret_leftShape"
+		index = 0
+		texture_diffuse = "male_headwear_german_high_stripped_berret_diffuse.dds"
+		texture_normal = "male_headwear_german_high_stripped_berret_normal.dds"
+		texture_specular = "male_clothes_chinese_commoner_yi_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_german_high_stripped_berret_right_entity"
+	pdxmesh = "male_headwear_german_high_stripped_berret_right_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/north_german/high_berret/male_headwear_german_high_stripped_berret_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+		}
+	}
+}
+
+entity = {
+	name = "male_headwear_german_high_stripped_berret_left_entity"
+	pdxmesh = "male_headwear_german_high_stripped_berret_left_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/north_german/high_berret/male_headwear_german_high_stripped_berret_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+		}
+	}
+}

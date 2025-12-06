@@ -1,0 +1,31 @@
+﻿pdxmesh = {
+	name = "child_flathat_a_mesh"
+	file = "child_flathat_a.mesh"
+
+	scale = 1.0
+
+
+	meshsettings = {
+		name = "child_flathat_aShape"
+		index = 0
+		texture_diffuse = "child_flathat_a_diffuse.dds"
+		texture_normal = "child_flathat_a_normal.dds"
+		texture_specular = "child_flathat_a_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "child_flathat_a_entity"
+	pdxmesh = "child_flathat_a_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/child_headwear/north_german/child_flathat_a/child_flathat_a_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_low_nobility_hat_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

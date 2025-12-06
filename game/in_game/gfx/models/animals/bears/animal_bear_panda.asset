@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "animal_bear_panda_mesh"
+	file = "animal_bear_panda.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "animal_bear_idle_animation" type = "animal_bear_panda_animal_bear_idle.anim" }
+
+	meshsettings = {
+		name = "animal_bear_panda_lod0Shape"
+		index = 0
+		texture_diffuse = "animal_bear_panda_diffuse.dds"
+		texture_normal = "animal_bear_panda_normal.dds"
+		texture_specular = "animal_bear_panda_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "animal_bear_panda_lod1Shape"
+		index = 0
+		texture_diffuse = "animal_bear_panda_diffuse.dds"
+		texture_normal = "animal_bear_panda_normal.dds"
+		texture_specular = "animal_bear_panda_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "animal_bear_panda_lod2Shape"
+		index = 0
+		texture_diffuse = "animal_bear_panda_diffuse.dds"
+		texture_normal = "animal_bear_panda_normal.dds"
+		texture_specular = "animal_bear_panda_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "animal_bear_panda_entity"
+	pdxmesh = "animal_bear_panda_mesh"
+
+	default_state = "animal_bear_idle"
+	state = {
+		name = "animal_bear_idle"
+		animation = "animal_bear_idle_animation"
+	}
+}

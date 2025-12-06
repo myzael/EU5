@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "resource_dyes_indigo_a_mesh"
+	file = "resource_dyes_indigo_a.mesh"
+
+	meshsettings = {
+		name = "pPlane3Shape"
+		index = 0
+		texture_diffuse = "indigo_plant_diffuse.dds"
+		texture_normal = "indigo_plant_normal.dds"
+		texture_specular = "indigo_plant_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_dyes_indigo_a_entity"
+	pdxmesh = "resource_dyes_indigo_a_mesh"
+}

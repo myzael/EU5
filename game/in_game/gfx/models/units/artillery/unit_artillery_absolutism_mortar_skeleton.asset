@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "unit_artillery_absolutism_mortar_skeleton_mesh"
+	file = "unit_artillery_absolutism_mortar_skeleton.mesh"	
+
+	animation = { id = "moving_artillery_mortar_animation" type = "animations/unit_artillery_absolutism_mortar_ani/unit_artillery_absolutism_mortar_walk.anim" }
+	animation = { id = "attack_artillery_mortar_animation" type = "animations/unit_artillery_absolutism_mortar_ani/unit_artillery_absolutism_mortar_attack.anim" }
+	animation = { id = "idle_artillery_mortar_animation" type = "animations/unit_artillery_absolutism_mortar_ani/unit_artillery_absolutism_mortar_idle.anim" }
+
+	meshsettings = {
+		name = "unit_artillery_absolutism_mortar_skeletonShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}

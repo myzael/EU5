@@ -1,0 +1,113 @@
+pdxmesh = {
+	name = "building_monument_parthenon_mesh"
+	file = "building_monument_parthenon.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 20.0 }
+		lod = { index = 2 percent = 8.0 }
+	}
+
+	meshsettings = {
+		name = "building_parthenon_wall_lod0Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_wall_diffuse.dds"
+		texture_normal = "building_parthenon_wall_normal.dds"
+		texture_specular = "building_parthenon_wall_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_parthenon_wall_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_parthenon_lod0Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_diffuse.dds"
+		texture_normal = "building_parthenon_normal.dds"
+		texture_specular = "building_parthenon_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_parthenon_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_parthenon_lod0Shape"
+		index = 0
+		texture_diffuse = "decal_parthenon_diffuse.dds"
+		texture_normal = "decal_parthenon_normal.dds"
+		texture_specular = "decal_parthenon_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_parthenon_wall_lod1Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_wall_diffuse.dds"
+		texture_normal = "building_parthenon_wall_normal.dds"
+		texture_specular = "building_parthenon_wall_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_parthenon_wall_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_parthenon_lod1Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_diffuse.dds"
+		texture_normal = "building_parthenon_normal.dds"
+		texture_specular = "building_parthenon_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_parthenon_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_parthenon_lod1Shape"
+		index = 0
+		texture_diffuse = "decal_parthenon_diffuse.dds"
+		texture_normal = "decal_parthenon_normal.dds"
+		texture_specular = "decal_parthenon_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_parthenon_wall_lod2Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_wall_diffuse.dds"
+		texture_normal = "building_parthenon_wall_normal.dds"
+		texture_specular = "building_parthenon_wall_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_parthenon_wall_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_parthenon_lod2Shape"
+		index = 0
+		texture_diffuse = "building_parthenon_diffuse.dds"
+		texture_normal = "building_parthenon_normal.dds"
+		texture_specular = "building_parthenon_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_parthenon_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_parthenon_lod2Shape"
+		index = 0
+		texture_diffuse = "decal_parthenon_diffuse.dds"
+		texture_normal = "decal_parthenon_normal.dds"
+		texture_specular = "decal_parthenon_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_monument_parthenon_entity"
+	pdxmesh = "building_monument_parthenon_mesh"
+}

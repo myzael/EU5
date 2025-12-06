@@ -1,0 +1,103 @@
+﻿@scale = 20.0
+
+entity = {
+	name = "test_unit_attachment_blue_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_blue.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "test_unit_attachment_green_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_green.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+entity = {
+	name = "test_unit_attachment_orange_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_orange.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+entity = {
+	name = "test_unit_attachment_pink_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_pink.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+entity = {
+	name = "test_unit_attachment_purple_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_purple.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+entity = {
+	name = "test_unit_attachment_red_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_red.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+entity = {
+	name = "test_unit_attachment_yellow_entity"
+	pdxmesh = "test_object_mesh"
+	scale = @scale
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_yellow.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+# 

@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "cargo_wool_mesh"
+	file = "cargo_wool.mesh"
+
+	meshsettings = {
+		name = "cargo_woolShape"
+		index = 0
+		texture_diffuse = "cargo_wool_diffuse.dds"
+		texture_normal = "cargo_wool_normal.dds"
+		texture_specular = "cargo_wool_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_woolShape"
+		index = 1
+		texture_diffuse = "wagon_cart_diffuse.dds"
+		texture_normal = "wagon_cart_normal.dds"
+		texture_specular = "wagon_cart_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_wool_entity"
+	pdxmesh = "cargo_wool_mesh"
+}

@@ -1,0 +1,316 @@
+﻿namespace = ambrosian_republic
+
+ambrosian_republic.1 = {
+	type = country_event
+	category = disaster_event
+
+	title = ambrosian_republic.1.title
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { has_variable = chose_ally_union }
+					is_subject = no
+				}
+				desc = ambrosian_republic.1.desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_variable = chose_ally_union
+				}
+				desc = ambrosian_republic.1.b.desc
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = ambrosian_republic.1.desc
+			}
+		}
+	}
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+
+	immediate = {
+		random_related_country = {
+			type = alliance
+			limit = { in_union_with = ROOT }
+			save_scope_as = target_country 
+		}
+	}
+
+	option = {
+		name = ambrosian_republic.1.a
+		add_stability = stability_extreme_bonus
+		add_prestige = prestige_extreme_bonus
+	}
+}
+
+ambrosian_republic.2 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	hide_portraits = yes
+	type = country_event
+	category = disaster_event
+	fire_only_once = yes
+	title = ambrosian_republic.2.title
+	desc = ambrosian_republic.2.desc
+	trigger = {
+		has_reform = government_reform:ambrosian_republic_reform
+		country_exists = c:FRA
+		exists = international_organization:hre.leader_country
+		c:FRA = {
+			is_subject = no
+			government_type = government_type:monarchy
+		}
+		international_organization:hre.leader_country = {
+			government_type = government_type:monarchy
+		}
+	}
+
+	immediate = {
+		c:FRA.ruler_or_regent ?= { save_scope_as = target_character }
+		international_organization:hre.leader_country ?= { 
+			ruler_or_regent = { save_scope_as = target_character2 } 
+		}
+	}
+
+	option = {
+		name = ambrosian_republic.2.a
+		c:FRA = {
+			trigger_event_silently = { id = ambrosian_republic.3 }
+		}
+		international_organization:hre.leader_country = {
+			trigger_event_silently = { id = ambrosian_republic.4 }
+		}
+	}
+}
+
+ambrosian_republic.3 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	type = country_event
+	category = disaster_event
+	title = ambrosian_republic.3.title
+	desc = ambrosian_republic.3.desc
+	option = {
+		name = ambrosian_republic.3.a
+		add_casus_belli = {	target = c:MLO	type = casus_belli:cb_claim_throne	}
+	}
+	option = {
+		name = ambrosian_republic.3.b
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+ambrosian_republic.4 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	type = country_event
+	category = disaster_event
+
+	title = ambrosian_republic.4.title
+	desc = ambrosian_republic.4.desc
+	option = {
+		name = ambrosian_republic.4.a
+		add_casus_belli = {	target = c:MLO	type = casus_belli:cb_claim_throne	}
+	}
+	option = {
+		name = ambrosian_republic.4.b
+		add_prestige = prestige_weak_bonus
+	}
+}
+
+ambrosian_republic.5 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	hide_portraits = yes
+	type = country_event
+	category = disaster_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:target_character }
+				desc = ambrosian_republic.5.title
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = ambrosian_republic.5.title.fallback
+			}
+		}
+	}
+	desc = ambrosian_republic.5.desc
+	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+
+	fire_only_once = yes
+
+	trigger = {
+		character:mlo_sforza_script ?= { is_alive = yes }
+	}
+
+	immediate = {
+		character:mlo_sforza_script = {
+			save_scope_as = target_character
+		}
+	}
+
+	option = {
+		name = ambrosian_republic.5.a
+		
+		custom_tooltip = mlo_sforza_given_influence_tt
+		trigger_event_silently = {
+			id = ambrosian_republic.6
+			days = { 250 400 }
+		}
+	}
+
+	option = {
+		name = ambrosian_republic.5.b 
+
+		add_stability = stability_mild_bonus
+		add_government_power = government_power_mild_bonus
+	}
+}
+
+scripted_effect sforza_gains_support = {
+	create_rebel = {
+		category = pretender
+		name = sforza_rebellion
+		save_scope_as = sforza_rebellion_scope
+	}
+	character:mlo_sforza_script = { change_character_allegiance = scope:sforza_rebellion_scope }
+	random_owned_location = {
+		limit = {
+			is_capital = no 
+		}
+		every_pop = {
+			limit = {
+				owner = root
+			}
+			add_pop_satisfaction = pop_satisfaction_radical_penalty
+			change_pop_allegiance = scope:sforza_rebellion_scope
+		}
+	}
+	random_province = {
+		limit = {
+			this != root.capital.province
+		}
+		every_location_in_province = {
+			every_pop = {
+				limit = {
+					owner = root
+				}
+				add_pop_satisfaction = pop_satisfaction_radical_penalty
+				change_pop_allegiance = scope:sforza_rebellion_scope
+			}
+		}
+	}
+	scope:sforza_rebellion_scope = {
+		add_rebel_progress = 0.9
+	}
+}
+
+ambrosian_republic.6 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	type = country_event
+	category = disaster_event
+	title = ambrosian_republic.6.title
+	desc = ambrosian_republic.6.desc
+
+	trigger = {
+		exists = character:mlo_sforza_script
+		character:mlo_sforza_script = {
+			is_alive = yes
+		}
+	}
+
+	immediate = {
+		character:mlo_sforza_script = {
+			save_scope_as = target_character
+		}
+	}
+ 
+	option = {
+		name = ambrosian_republic.6.a
+		historical_option = yes
+		add_stability = stability_mild_penalty
+		set_new_ruler = character:mlo_sforza_script
+		change_heir_selection = heir_selection:military_dictatorship
+		
+		trigger_event_silently = {
+			id = ambrosian_republic.7
+			days = { 500 1000 }
+		}
+	}
+	option = {
+		name = ambrosian_republic.6.b
+		add_stability = stability_ultimate_penalty
+		custom_tooltip = {
+		 	text = sforza_gains_support.tt
+			sforza_gains_support = yes
+		}
+	}
+}
+
+ambrosian_republic.7 = {
+	image = "gfx/interface/illustrations/disaster/ambrosian_republic_disaster.dds"
+	hide_portraits = yes
+	type = country_event
+	category = disaster_event
+
+	title = ambrosian_republic.7.title
+	desc = ambrosian_republic.7.desc
+
+	trigger = {
+		exists = character:mlo_sforza_script
+		character:mlo_sforza_script = {
+			is_alive = yes
+			OR = { 
+				this = root.ruler
+				this = root.heir
+			}
+		}
+	}
+
+	immediate = {
+		random_character = {
+			limit = {
+				is_adult = yes
+				is_ruler = no
+			}
+			save_scope_as = target_new_ruler
+		}
+		character:mlo_sforza_script = {
+			save_scope_as = target_character
+		}
+	}
+
+	option = {
+		name = ambrosian_republic.7.a
+		historical_option = yes
+		change_government_type = government_type:monarchy
+		remove_reform = government_reform:ambrosian_republic_reform
+		add_legitimacy = legitimacy_ultimate_bonus
+		add_stability = stability_extreme_bonus
+		hidden_effect = { destroy_rebel = scope:sforza_rebellion_scope }
+
+	}
+	option = {
+		name = ambrosian_republic.7.b
+		set_new_ruler = scope:target_new_ruler
+		custom_tooltip = {
+			text = sforza_gains_support.tt
+			sforza_gains_support = yes
+		}
+	}
+	option = {
+		name = ambrosian_republic.7.c
+		trigger = {
+			has_reform = government_reform:ambrosian_republic_reform
+			NOT = { succession_law = heir_selection:oligarchic_elective }
+		}
+		change_heir_selection = heir_selection:oligarchic_elective
+		set_new_ruler = scope:target_new_ruler
+		custom_tooltip = {
+			text = sforza_gains_support.tt
+			sforza_gains_support = yes
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,59 @@
+pdxmesh = {
+	name = "resource_european_elk_mesh"
+	file = "resource_european_elk.mesh"
+	
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_european_elk_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_european_elk_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|resource_european_elk|resource_european_elk|resource_euro"
+		index = 0
+		texture_diffuse = "resource_european_elk_diffuse.dds"
+		texture_normal = "resource_european_elk_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"	
+	}
+
+	meshsettings = {
+		name = "LOD_1|resource_european_elk|resource_european_elk|resource_euro"
+		index = 0
+		texture_diffuse = "resource_european_elk_diffuse.dds"
+		texture_normal = "resource_european_elk_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"	
+	}
+
+	meshsettings = {
+		name = "LOD_2|resource_european_elk|resource_european_elk|resource_euro"
+		index = 0
+		texture_diffuse = "resource_european_elk_diffuse.dds"
+		texture_normal = "resource_european_elk_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"	
+	}
+}
+
+entity = {
+	name = "resource_european_elk_entity"
+	pdxmesh = "resource_european_elk_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}

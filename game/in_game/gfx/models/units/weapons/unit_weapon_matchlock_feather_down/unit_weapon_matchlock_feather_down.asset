@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_matchlock_feather_down_mesh"
+	file = "unit_weapon_matchlock_feather_down.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_matchlock_feather_downShape"
+		index = 0
+		texture_diffuse = "unit_weapon_matchlock_feather_down_diffuse.dds"
+		texture_normal = "unit_weapon_matchlock_feather_down_normal.dds"
+		#texture_specular = "unit_weapon_matchlock_feather_down_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_matchlock_feather_down_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

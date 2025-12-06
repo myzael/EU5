@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "resource_deer_male_mesh"
+	file = "resource_deer_male.mesh"
+
+	animation = { id = "resource_deer_idle_animation" type = "resource_deer_male_resource_deer_idle.anim" }
+
+	meshsettings = {
+		name = "resource_reender_maleShape"
+		index = 0
+		texture_diffuse = "resource_deer_diffuse.dds"
+		texture_normal = "resource_deer_normal.dds"
+		texture_specular = "resource_deer_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_deer_male_entity"
+	pdxmesh = "resource_deer_male_mesh"
+
+	default_state = "resource_deer_idle"
+	state = {
+		name = "resource_deer_idle"
+		animation = "resource_deer_idle_animation"
+	}
+}

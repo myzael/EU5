@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_silk_mesh"
+	file = "cargo_silk.mesh"
+
+	meshsettings = {
+		name = "cargo_silkShape"
+		index = 0
+		texture_diffuse = "cargo_cotton_diffuse.dds"
+		texture_normal = "cargo_cotton_normal.dds"
+		texture_specular = "cargo_silk_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_silk_entity"
+	pdxmesh = "cargo_silk_mesh"
+}

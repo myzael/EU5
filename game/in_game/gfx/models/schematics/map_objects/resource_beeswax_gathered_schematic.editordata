@@ -1,0 +1,74 @@
+﻿node_editor_meta={
+	view={
+		position={ 13.623642 361.508545 }
+		zoom=0.419164
+	}
+	nodes={
+		1={
+			position={ 910.727234 244.298447 }
+		}
+		0={
+			position={ 1464.949341 -17.550781 }
+		}
+		2={
+			position={ 293.892578 -810.520935 }
+		}
+		3={
+			position={ 346.625641 -680.582947 }
+		}
+		4={
+			position={ 851.895264 -721.501587 }
+		}
+		5={
+			position={ 328.288361 -162.282898 }
+		}
+		6={
+			position={ 886.290405 -73.263550 }
+		}
+		7={
+			position={ 381.021118 -32.345154 }
+		}
+		16={
+			position={ 243.288422 -247.282928 }
+			name="Bee VFX for single schematics"
+			size={ 1129.725098 406.019501 }
+		}
+		17={
+			position={ 208.892609 -895.520996 }
+			name="Bee VFX for RGO cluster"
+			size={ 1129.725830 406.019196 }
+		}
+		8={
+			position={ 3482.012207 641.016907 }
+			inlined=yes
+		}
+		9={
+			position={ 5431.553223 687.381897 }
+			inlined=yes
+		}
+		10={
+			position={ 5431.553223 687.381897 }
+			inlined=yes
+		}
+		11={
+			position={ 1133.880127 -618.813293 }
+			inlined=yes
+		}
+		12={
+			position={ 3436.407471 1248.345947 }
+			inlined=yes
+		}
+		13={
+			position={ 1088.275635 -11.484192 }
+			inlined=yes
+		}
+		14={
+			position={ 5385.948242 1294.710938 }
+			inlined=yes
+		}
+		15={
+			position={ 5385.948242 1294.710938 }
+			inlined=yes
+		}
+	}
+}

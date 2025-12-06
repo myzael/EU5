@@ -1,0 +1,84 @@
+binding = {
+    input_action = "entity_editor_play_pause"
+    keycode = "space"
+}
+
+binding = {
+    input_action = "entity_editor_loop"
+    keycode = "l"
+}
+
+binding = {
+    input_action = "entity_editor_rollforward"
+    keycode = "t"
+}
+
+binding = {
+    input_action = "entity_editor_rollback"
+    keycode = "r"
+}
+
+binding = {
+    input_action = "entity_editor_step_forward"
+    keycode = "RIGHT"
+}
+
+binding = {
+    input_action = "entity_editor_step_backwards"
+    keycode = "LEFT"
+}
+
+binding = {
+    input_action = "entity_editor_mute"
+    keycode = "m"
+}
+
+binding = {
+    input_action = "entity_editor_add_keyframe_on_needle"
+    keycode = "a"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "entity_editor_add_keyframe_on_mouse"
+    keycode = "m"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "entity_editor_fit_camera"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "entity_editor_keyframe_needle_lock_toggle"
+    keycode = "n"
+}
+
+binding = {
+    input_action = "entity_editor_add_audio_layer"
+    keycode = "a"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "entity_editor_add_vfx_layer"
+    keycode = "v"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "entity_editor_add_spawn_layer"
+    keycode = "e"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "entity_editor_add_removal_layer"
+    keycode = "r"
+    modifier = ctrl
+    modifier = shift
+}

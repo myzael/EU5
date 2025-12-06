@@ -1,0 +1,81 @@
+pdxmesh = {
+	name = "building_syrian_noble_c_mesh"
+	file = "building_syrian_noble_c.mesh"
+	scale = 0.7
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_noble_c|Big_Size|Big_SizeShape"
+		index = 0
+		texture = { index = 0 srgb = no file = "decal_syrian_noble_c_diffuse.dds" }
+		texture_normal = "decal_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_noble_c|building_syrian_noble_c|building_"
+		index = 0
+		texture = { index = 0 srgb = no file = "building_syrian_noble_c_diffuse.dds" }
+		texture_normal = "building_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_noble_c_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_noble_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_syrian_noble_c|Big_Size|Big_SizeShape"
+		index = 0
+		texture_diffuse = "decal_syrian_noble_c_diffuse.dds"
+		texture_normal = "decal_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_syrian_noble_c|building_syrian_noble_c|building_"
+		index = 0
+		texture = { index = 0 srgb = no file = "building_syrian_noble_c_diffuse.dds" }
+		texture_normal = "building_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_noble_c_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_noble_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_syrian_noble_c|Big_Size|Big_SizeShape"
+		index = 0
+		texture_diffuse = "decal_syrian_noble_c_diffuse.dds"
+		texture_normal = "decal_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_syrian_noble_c|building_syrian_noble_c|building_"
+		index = 0
+		texture = { index = 0 srgb = no file = "building_syrian_noble_c_diffuse.dds" }
+		texture_normal = "building_syrian_noble_c_normal.dds"
+		texture_specular = "building_syrian_noble_c_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_noble_c_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_syrian_noble_c_entity"
+	pdxmesh = "building_syrian_noble_c_mesh"
+}

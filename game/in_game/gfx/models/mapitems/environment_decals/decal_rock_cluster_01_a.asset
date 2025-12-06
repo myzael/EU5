@@ -1,0 +1,100 @@
+pdxmesh = {
+	name = "decal_rock_cluster_01_a_mesh"
+	file = "decal_base.mesh"
+
+	meshsettings = {
+		name = "meshShape"
+		index = 0
+		texture_diffuse = "decal_rock_cluster_01_a_diffuse.dds"
+		texture_normal = "decal_rock_cluster_01_a_normal.dds"
+		texture_specular = "decal_rock_cluster_01_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rock_cluster_01_a_entity"
+	pdxmesh = "decal_rock_cluster_01_a_mesh"
+}
+pdxmesh = {
+	name = "decal_rock_cluster_01_b_mesh"
+	file = "decal_base.mesh"
+
+	meshsettings = {
+		name = "meshShape"
+		index = 0
+		texture_diffuse = "decal_rock_cluster_01_b_diffuse.dds"
+		texture_normal = "decal_rock_cluster_01_b_normal.dds"
+		texture_specular = "decal_rock_cluster_01_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rock_cluster_01_b_entity"
+	pdxmesh = "decal_rock_cluster_01_b_mesh"
+}
+pdxmesh = {
+	name = "decal_rock_cluster_01_c_mesh"
+	file = "decal_base.mesh"
+
+	meshsettings = {
+		name = "meshShape"
+		index = 0
+		texture_diffuse = "decal_rock_cluster_01_c_diffuse.dds"
+		texture_normal = "decal_rock_cluster_01_c_normal.dds"
+		texture_specular = "decal_rock_cluster_01_c_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rock_cluster_01_c_entity"
+	pdxmesh = "decal_rock_cluster_01_c_mesh"
+}
+pdxmesh = {
+	name = "decal_rock_cluster_01_d_mesh"
+	file = "decal_base.mesh"
+
+	meshsettings = {
+		name = "meshShape"
+		index = 0
+		texture_diffuse = "decal_rock_cluster_01_d_diffuse.dds"
+		texture_normal = "decal_rock_cluster_01_d_normal.dds"
+		texture_specular = "decal_rock_cluster_01_d_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rock_cluster_01_d_entity"
+	pdxmesh = "decal_rock_cluster_01_d_mesh"
+}
+pdxmesh = {
+	name = "decal_rock_cluster_01_e_mesh"
+	file = "decal_base.mesh"
+
+	meshsettings = {
+		name = "meshShape"
+		index = 0
+		texture_diffuse = "decal_rock_cluster_01_e_diffuse.dds"
+		texture_normal = "decal_rock_cluster_01_e_normal.dds"
+		texture_specular = "decal_rock_cluster_01_e_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rock_cluster_01_e_entity"
+	pdxmesh = "decal_rock_cluster_01_e_mesh"
+}

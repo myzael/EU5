@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "illustration_c_castle_mesh"
+	file = "illustration_c_castle.mesh"
+
+	meshsettings = {
+		name = "illustration_c_castle|illustration_b_castle|illustration_b_cast"
+		index = 0
+		texture_diffuse = "illustration_C_frontplane.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_c_castle_entity"
+	pdxmesh = "illustration_c_castle_mesh"
+}

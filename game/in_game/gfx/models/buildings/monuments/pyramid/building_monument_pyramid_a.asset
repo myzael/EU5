@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "building_monument_pyramid_a_mesh"
+	file = "building_monument_pyramid_a.mesh"
+
+	meshsettings = {
+		name = "decal_building_monument_pyramid_aShape"
+		index = 0
+		texture_diffuse = "decal_resource_monument_pyramid_diffuse.dds"
+		texture_normal = "decal_resource_monument_pyramid_normal.dds"
+		texture_specular = "decal_resource_monument_pyramid_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_pyramid_aShape"
+		index = 0
+		texture_diffuse = "resource_monument_pyramid_diffuse.dds"
+		texture_normal = "resource_monument_pyramid_normal.dds"
+		texture_specular = "resource_monument_pyramid_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_monument_pyramid_a_entity"
+	pdxmesh = "building_monument_pyramid_a_mesh"
+}

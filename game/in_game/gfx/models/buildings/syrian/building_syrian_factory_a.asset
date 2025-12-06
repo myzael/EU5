@@ -1,0 +1,120 @@
+pdxmesh = {
+	name = "building_syrian_factory_a_mesh"
+	file = "building_syrian_factory_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 10.0 }
+		lod = { index = 2 percent = 6.0 }
+	}
+
+	animation = { id = "idle_animation" type = "building_syrian_factory_a_idle.anim" }
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_factory_a_building_syrian_factory_a_decal"
+		index = 0
+		texture_diffuse = "building_syrian_factory_a_decal_diffuse.dds"
+		texture_normal = "building_syrian_factory_a_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+	meshsettings = {
+		name = "LOD_0|building_syrian_factory_a_building_syrian_factory_a_build"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|building_syrian_factory_a_building_syrian_factory_a_wheel"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_syrian_factory_a_building_syrian_factory_a_wheel"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_syrian_factory_a_building_syrian_factory_a_build"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|building_syrian_factory_a_building_syrian_factory_a_decal"
+		index = 0
+		texture_diffuse = "building_syrian_factory_a_decal_diffuse.dds"
+		texture_normal = "building_syrian_factory_a_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_syrian_factory_a_building_syrian_factory_a_wheel"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_syrian_factory_a_building_syrian_factory_a_build"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_syrian_factory_a_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|building_syrian_factory_a_building_syrian_factory_a_decal"
+		index = 0
+		texture_diffuse = "building_syrian_factory_a_decal_diffuse.dds"
+		texture_normal = "building_syrian_factory_a_decal_normal.dds"
+		texture_specular = "building_syrian_general_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_syrian_factory_a_entity"
+	pdxmesh = "building_syrian_factory_a_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

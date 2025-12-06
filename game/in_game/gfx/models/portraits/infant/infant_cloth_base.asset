@@ -1,0 +1,185 @@
+﻿pdxmesh = {
+	name = "infant_cloth_base_mesh"
+	file = "infant_cloth_base.mesh"
+
+	#scale = 0.85
+
+	animation = { id = "infant_idle"				type = "infant_cloth_base_idle.anim" }
+
+	#additive_animation = { id = "body_pose_1" type = "pose/male_body_test_pose01_idle.anim" }
+	#additive_animation = { id = "body_pose_2" type = "pose/male_body_test_pose02_idle.anim" }
+
+	#blend_shape = { id = "male_body_test_bs_female"		type = "blendshapes/male_body_test_bs_female.mesh" }
+
+	meshsettings = {
+		name = "infant_cloth_baseShape"
+		index = 0
+		texture_diffuse = "infant_diffuse.dds"
+		texture_normal = "infant_normal.dds"
+		texture_specular = "infant_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "infant_cloth_base_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "chinese_peasant_01"	#A "variation" object in gfx/portraits/accessory_variations/
+	        }
+		}
+	}
+
+}
+
+entity = {
+	name = "infant_cloth_noble_ger_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_royalty_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_ash_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "ashanti_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_azt_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_han_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "chinese_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_iro_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "iroquois_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_syr_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "syrian_high_nobility_clothes_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "infant_cloth_noble_dec_entity"
+	pdxmesh = "infant_cloth_base_mesh"
+
+	scale = 0.8
+
+	default_state = "idle"
+	state = {	name = "idle"	animation = "infant_idle"}
+	state = {	name = "idle"	animation = "infant_idle" 	chance = 10 looping = no next_state = "idle" }
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/infant_cloth/north_german/shared/infant_swaddle_noble_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "deccan_high_clothes_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

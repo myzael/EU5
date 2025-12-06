@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "male_ashanti_hair_big_afro_mesh"
+	file = "male_ashanti_hair_big_afro.mesh"
+
+	meshsettings = {
+		name = "male_ashanti_hair_big_afroShape"
+		index = 0
+		texture_diffuse = "male_hair_big_afro_diffuse.dds"
+		texture_normal = "female_hair_short_afro_normal.dds"
+		texture_specular = "female_hair_short_afro_properties.dds"
+		shader = "portrait_hair_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_ashanti_hair_big_afro_entity"
+	pdxmesh = "male_ashanti_hair_big_afro_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

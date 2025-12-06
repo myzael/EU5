@@ -1,0 +1,78 @@
+pdxmesh = {
+	name = "resource_livestock_gathered_mesh"
+	file = "resource_livestock_gathered.mesh"
+	scale= 0.7
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_normal.dds"
+		texture_specular = "resource_livestock_gathered_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_decal_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_decal_normal.dds"
+		texture_specular = "resource_livestock_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_decal_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_decal_normal.dds"
+		texture_specular = "resource_livestock_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_normal.dds"
+		texture_specular = "resource_livestock_gathered_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_decal_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_decal_normal.dds"
+		texture_specular = "resource_livestock_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_livestock_gathered_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_livestock_gathered_diffuse.dds"
+		texture_normal = "resource_livestock_gathered_normal.dds"
+		texture_specular = "resource_livestock_gathered_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_livestock_gathered_entity"
+	pdxmesh = "resource_livestock_gathered_mesh"
+}

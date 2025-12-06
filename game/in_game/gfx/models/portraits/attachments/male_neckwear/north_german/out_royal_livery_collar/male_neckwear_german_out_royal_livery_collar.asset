@@ -1,0 +1,183 @@
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collarShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_plateermine_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_plateermine.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_plateermineShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_plate_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_plate.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_plateShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_tabard_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_tabard.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_tabardShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_platetabard_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_platetabard.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_platetabardShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_ermine_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_ermine.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_ermineShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "male_neckwear_german_out_royal_livery_collar_platecloak_mesh"
+	file = "male_neckwear_german_out_royal_livery_collar_platecloak.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_german_out_royal_livery_collar_platecloakShape"
+		index = 0
+		texture_diffuse = "male_neckwear_german_out_royal_livery_collar_diffuse.dds"
+		texture_normal = "male_neckwear_german_out_royal_livery_collar_normal.dds"
+		texture_specular = "male_neckwear_german_out_royal_livery_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_plateermine_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_plateermine_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_plate_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_plate_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_tabard_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_tabard_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_platetabard_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_platetabard_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_ermine_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_ermine_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}
+entity = {
+	name = "male_neckwear_german_out_royal_livery_collar_platecloak_entity"
+	pdxmesh = "male_neckwear_german_out_royal_livery_collar_platecloak_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}

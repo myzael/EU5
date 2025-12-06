@@ -1,0 +1,57 @@
+pdxmesh = {
+	name = "resource_walrus_mesh"
+	file = "resource_walrus.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "idle_a_animation" type = "resource_walrus_idle_a.anim" }
+	animation = { id = "idle_b_animation" type = "resource_walrus_idle_b.anim" }
+
+	meshsettings = {
+		name = "resource_walrus_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_walrus_diffuse.dds"
+		texture_normal = "resource_walrus_normal.dds"
+		texture_specular = "resource_walrus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_walrus_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_walrus_diffuse.dds"
+		texture_normal = "resource_walrus_normal.dds"
+		texture_specular = "resource_walrus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_walrus_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_walrus_diffuse.dds"
+		texture_normal = "resource_walrus_normal.dds"
+		texture_specular = "resource_walrus_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_walrus_entity"
+	pdxmesh = "resource_walrus_mesh"
+
+	default_state = "idle_a"
+	state = {
+		name = "idle_a"
+		animation = "idle_a_animation"
+	}
+	state = {
+		name = "idle_b"
+		animation = "idle_b_animation"
+	}
+}

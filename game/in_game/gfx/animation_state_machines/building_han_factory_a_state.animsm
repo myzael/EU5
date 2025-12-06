@@ -1,0 +1,40 @@
+﻿local_variables={
+}
+
+behavioral_states={
+	"idle"={
+		timeline_layer={
+			timeline="building_han_factory_a_animation"
+		}
+	}
+ }
+
+events={
+	behavioral_state_transition={
+		name="Lane 1"
+		behavioral_state="idle"
+		transition_interval=0.000000
+	}
+ }
+
+timelines={
+	"building_han_factory_a_animation"={
+		boundary_behavior=loop
+		duration=1.946181
+		starttime_offset=0.000000
+		playback_rate=0.200000
+		layer=0
+		animation="building_han_factory_a_animation"
+		duration_source=animation
+	}
+ }
+
+starting_timeline={
+	on_enter={
+		"Lane 1"
+	}
+	boundary_behavior=loop
+	starttime_offset=0.000000
+	playback_rate=1.000000
+	layer=0
+}

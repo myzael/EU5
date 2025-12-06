@@ -1,0 +1,25 @@
+pdxmesh = {
+	name = "illustration_a_backplane_clouds_mesh"
+	file = "illustration_a_backplane_clouds.mesh"
+
+	animation = { id = "idle_animation" type = "illustration_a_backplane_clouds_idle.anim" }
+
+	meshsettings = {
+		name = "illustration_a_backplane_cloudsShape"
+		index = 0
+		texture_diffuse = "illustration_A_clouds.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_a_backplane_clouds_entity"
+	pdxmesh = "illustration_a_backplane_clouds_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

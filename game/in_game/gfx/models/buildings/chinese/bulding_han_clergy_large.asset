@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "bulding_han_clergy_large_mesh"
+	file = "bulding_han_clergy_large.mesh"
+	scale = 0.5
+
+	meshsettings = {
+		name = "building_han_clergy_largeShape"
+		index = 0
+		texture_diffuse = "building_han_large_clergy_diffuse.dds"
+		texture_normal = "building_han_large_clergy_normal.dds"
+		texture_specular = "building_han_large_clergy_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "han_clergy_large_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_decalShape"
+		index = 0
+		texture_diffuse = "decal_han_large_clergy_diffuse.dds"
+		texture_normal = "decal_han_large_clergy_normal.dds"
+		texture_specular = "decal_han_large_clergy_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "bulding_han_clergy_large_entity"
+	pdxmesh = "bulding_han_clergy_large_mesh"
+}

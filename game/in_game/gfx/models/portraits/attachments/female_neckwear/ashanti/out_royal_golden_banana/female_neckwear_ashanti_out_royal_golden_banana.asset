@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "female_neckwear_ashanti_out_royal_golden_banana_mesh"
+	file = "female_neckwear_ashanti_out_royal_golden_banana.mesh"
+	
+	meshsettings = {
+		name = "female_neckwear_ashanti_out_royal_golden_bananaShape"
+		index = 0
+		texture_diffuse = "female_neckwear_ashanti_out_royal_golden_banana_diffuse.dds"
+		texture_normal = "female_neckwear_ashanti_out_royal_golden_banana_normal.dds"
+		texture_specular = "female_neckwear_ashanti_out_royal_golden_banana_properties.dds"
+		shader = "portrait_attachment_alpha"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_neckwear_ashanti_out_royal_golden_banana_entity"
+	pdxmesh = "female_neckwear_ashanti_out_royal_golden_banana_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}

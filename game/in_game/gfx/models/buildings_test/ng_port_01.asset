@@ -1,0 +1,37 @@
+@tile_scaling = 1
+pdxmesh = {
+	name = "ng_port_01_mesh"
+	file = "ng_port_01.mesh"
+	
+
+	meshsettings = {
+		name = "ng_port_01|pCube183|pCube183Shape"
+		index = 0
+		texture_diffuse = "atlas_master_old_diffuse.dds"
+		texture_normal = "atlas_master_old_normal.dds"
+		texture_specular = "atlas_master_old_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "port_01_ao_unique.dds" index = 5 }
+	}
+
+	scale = @tile_scaling
+}
+
+entity = {
+	name = "ng_port_01_entity"
+	pdxmesh = "ng_port_01_mesh"
+	scale = @[1.0 / tile_scaling]
+}
+
+
+entity = {
+	name = "roman_gfx_port_entity"
+	pdxmesh = "ng_port_01_mesh"
+	scale = @[1.0 / tile_scaling]
+	default_state = "default"
+	state = {
+	name = default
+
+		#TODO SOUNDstart_event = { trigger_once = yes sound = { soundeffect = "event:/SFX/Ambience/3DMapEmitters/Naval/sfx_amb_3d_naval_port" } }
+	}
+}

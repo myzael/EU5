@@ -1,0 +1,18 @@
+pdxmesh = {
+	name = "unit_weapon_bow_feather_iroquois_mesh"
+	file = "unit_weapon_bow_feather_iroquois.mesh"
+
+	# animation = { id = "unit_bow_arrow_attack_animation"			type = "unit_bow_arrow_attack_01.anim" }
+	# animation = { id = "unit_bow_arrow_idle_animation"			type = "unit_bow_arrow_idle_01.anim" }
+
+	meshsettings = {
+		name = "unit_weapon_bow_feather_iroquoisShape"
+		index = 0
+		texture_diffuse = "unit_weapon_bow_feather_iroquois_diffuse.dds"
+		texture_normal = "unit_weapon_bow_feather_iroquois_normal.dds"
+#		texture_specular = "unit_weapon_bow_feather_iroquois_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_bow_feather_iroquois_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

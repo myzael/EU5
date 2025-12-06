@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_legs_pants_boots_ma_xue_mesh"
+	file = "unit_legs_pants_boots_ma_xue.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_legs_pants_boots_ma_xue_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_boots_ma_xue_diffuse.dds"
+		texture_normal = "unit_legs_pants_boots_ma_xue_normal.dds"
+		#texture_specular = "unit_legs_pants_boots_ma_xue_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_boots_ma_xue_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_pants_boots_ma_xue_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_boots_ma_xue_diffuse.dds"
+		texture_normal = "unit_legs_pants_boots_ma_xue_normal.dds"
+		#texture_specular = "unit_legs_pants_boots_ma_xue_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_boots_ma_xue_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_pants_boots_Ma_Xue2Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_boots_ma_xue_diffuse.dds"
+		texture_normal = "unit_legs_pants_boots_ma_xue_normal.dds"
+		#texture_specular = "unit_legs_pants_boots_ma_xue_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_boots_ma_xue_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

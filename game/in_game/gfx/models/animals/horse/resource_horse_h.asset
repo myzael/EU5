@@ -1,0 +1,92 @@
+pdxmesh = {
+	name = "resource_horse_h_mesh"
+	file = "resource_horse_h.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_h_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_horse_h_entity"
+	pdxmesh = "resource_horse_h_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+	}
+}
+
+
+entity = {
+	name = "unitgfx_horse_h_entity"
+	pdxmesh = "resource_horse_h_mesh"
+	default_state = "idle"
+	state = { name = "idle" animation = "idle_animation" }
+
+	meshsettings = {
+		name = "resource_horse_h_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

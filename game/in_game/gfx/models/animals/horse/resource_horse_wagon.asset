@@ -1,0 +1,319 @@
+pdxmesh = {
+	name = "resource_horse_a_wagon_mesh"
+	file = "resource_horse_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_a_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_a_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_a_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_a_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_a_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_a_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_b_wagon_mesh"
+	file = "resource_horse_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+	
+		animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_b_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_b_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_b_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_b_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_b_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_b_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+	
+pdxmesh = {
+	name = "resource_horse_c_wagon_mesh"
+	file = "resource_horse_c.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_c_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_c_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_c_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_c_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_c_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_c_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_d_wagon_mesh"
+	file = "resource_horse_d.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_d_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_d_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_d_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_d_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_d_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_d_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_e_wagon_mesh"
+	file = "resource_horse_e.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_e_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_e_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_e_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_e_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_e_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_e_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_f_wagon_mesh"
+	file = "resource_horse_f.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_f_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_f_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_f_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_f_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_f_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_f_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_g_wagon_mesh"
+	file = "resource_horse_g.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_g_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_g_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_g_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_g_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_g_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_g_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}
+
+pdxmesh = {
+	name = "resource_horse_h_wagon_mesh"
+	file = "resource_horse_h.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 2 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	animation = { id = "idle_animation" type = "resource_horse_idle.anim" }
+	animation = { id = "moving_animation" type = "resource_horse_moving.anim" }
+
+	meshsettings = {
+		name = "resource_horse_h_lod0Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod1Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "resource_horse_h_lod2Shape"
+		index = 0
+		texture_diffuse = "horse_h_diffuse.dds"
+		texture_normal = "horse_normal.dds"
+		texture_specular = "horse_properties.dds"
+		shader = "standard"
+	}
+}

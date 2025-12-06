@@ -1,0 +1,26 @@
+pdxmesh = {
+	name = "background2_mesh"
+	file = "background2.mesh"
+
+	animation = { id = "idle_animation" type = "background2_idle.anim" }
+
+	meshsettings = {
+		name = "backgroundShape2"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_23"
+	}
+}
+
+entity = {
+	name = "background2_entity"
+	pdxmesh = "background2_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

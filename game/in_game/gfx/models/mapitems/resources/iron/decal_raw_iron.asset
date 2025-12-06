@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "decal_raw_iron_mesh"
+	file = "decal_raw_iron.mesh"
+
+	meshsettings = {
+		name = "decal_raw_ironShape"
+		index = 0
+		texture_diffuse = "decal_raw_iron_diffuse.dds"
+		texture_normal = "decal_raw_iron_normal.dds"
+		texture_specular = "decal_raw_iron_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_raw_iron_entity"
+	pdxmesh = "decal_raw_iron_mesh"
+}

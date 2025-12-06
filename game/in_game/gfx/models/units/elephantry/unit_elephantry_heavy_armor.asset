@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_elephantry_heavy_armor_mesh"
+	file = "unit_elephantry_heavy_armor.mesh"
+
+	meshsettings = {
+		name = "unit_elephantry_heavy_armorShape"
+		index = 0
+		texture_diffuse = "unit_elephant_heavy_armor_diffuse.dds"
+		texture_normal = "unit_elephant_heavy_armor_normal.dds"
+		#texture_specular = "unit_elephant_heavy_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_elephant_heavy_armor_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

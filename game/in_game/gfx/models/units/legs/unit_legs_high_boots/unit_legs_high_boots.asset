@@ -1,0 +1,44 @@
+pdxmesh = {
+	name = "unit_legs_high_boots_mesh"
+	file = "unit_legs_high_boots.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_legs_high_boots_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_legs_hight_boots_diffuse.dds"
+		texture_normal = "unit_legs_hight_boots_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_hight_boots_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_legs_high_boots_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_wool_fabric_diffuse.dds"
+		texture_normal = "unit_legs_hight_boots_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_wool_fabric_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_legs_high_boots_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_legs_pants_wool_fabric_diffuse.dds"
+		texture_normal = "unit_legs_hight_boots_normal.dds"
+		#texture_specular = "unit_backpack_simple_leather_straps_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_legs_pants_wool_fabric_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

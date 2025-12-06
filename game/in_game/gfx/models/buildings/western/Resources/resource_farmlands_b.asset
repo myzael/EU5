@@ -1,0 +1,21 @@
+pdxmesh = {
+	name = "resource_farmlands_b_mesh"
+	file = "resource_farmlands_b.mesh"
+	scale = 0.6
+
+	meshsettings = {
+		name = "pPlaneShape18"
+		index = 0
+		texture_diffuse = "farms_variation_cultivated_02_diffuse.dds"
+		texture_normal = "farms_variation_cultivated_02_normal.dds"
+		texture_specular = "farms_variation_cultivated_02_properties.dds"
+		shader = "city_grid_decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resource_farmlands_b_entity"
+	pdxmesh = "resource_farmlands_b_mesh"
+}

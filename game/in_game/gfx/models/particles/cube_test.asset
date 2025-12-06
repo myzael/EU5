@@ -1,0 +1,25 @@
+pdxmesh = {
+	name = "cube_test_mesh"
+	file = "cube_test.mesh"
+	
+	meshsettings = {
+		name = "pCubeShape2"
+		index = 0
+		shader = "standard"
+	}
+	
+	scale = 0.5
+}
+
+pdxmesh = {
+	name = "cube_long_mesh"
+	file = "cube_long.mesh"
+	
+	meshsettings = {
+		name = "pCubeShape2"
+		index = 0
+		shader = "standard"
+	}
+	
+	scale = 0.5
+}

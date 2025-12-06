@@ -1,0 +1,59 @@
+﻿pdxmesh = {
+	name = "male_clothes_iroquois_low_beadwork_mesh"
+	file = "male_clothes_iroquois_low_beadwork.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_low_beadworkShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_low_beadwork_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_low_beadwork_normal.dds"
+		texture_specular = "male_clothes_iroquois_low_beadwork_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "male_clothes_iroquois_low_beadwork_noshirt_mesh"
+	file = "male_clothes_iroquois_low_beadwork_noshirt.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_low_beadwork_noshirtShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_low_beadwork_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_low_beadwork_normal.dds"
+		texture_specular = "male_clothes_iroquois_low_beadwork_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "male_clothes_iroquois_low_beadwork_shirt_mesh"
+	file = "male_clothes_iroquois_low_beadwork_shirt.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_low_beadwork_shirtShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_low_beadwork_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_low_beadwork_normal.dds"
+		texture_specular = "male_clothes_iroquois_low_beadwork_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_iroquois_low_beadwork_entity"
+	pdxmesh = "male_clothes_iroquois_low_beadwork_mesh"
+}
+
+entity = {
+	name = "male_clothes_iroquois_low_beadwork_noshirt_entity"
+	pdxmesh = "male_clothes_iroquois_low_beadwork_noshirt_mesh"
+}
+
+entity = {
+	name = "male_clothes_iroquois_low_beadwork_shirt_entity"
+	pdxmesh = "male_clothes_iroquois_low_beadwork_shirt_mesh"
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_musket_matchlock_brass_mesh"
+	file = "unit_weapon_musket_matchlock_brass.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_musket_matchlock_brassShape"
+		index = 0
+		texture_diffuse = "unit_weapon_musket_matchlock_brass_diffuse.dds"
+		texture_normal = "unit_weapon_musket_matchlock_brass_normal.dds"
+		#texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_musket_matchlock_brass_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

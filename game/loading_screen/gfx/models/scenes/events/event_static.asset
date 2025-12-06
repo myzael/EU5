@@ -1,0 +1,25 @@
+pdxmesh = {
+	name = "event_static_mesh"
+	file = "event_static.mesh"
+
+	meshsettings = {
+		name = "illustration_010Shape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_25"
+		
+	}
+
+}
+
+entity = {
+	name = "event_static_entity"
+	pdxmesh = "event_static_mesh"
+
+	# locator = {
+	# 	name = scene_locator
+	# 	position = { 0.0 0.0 0.0 }
+	# }
+}

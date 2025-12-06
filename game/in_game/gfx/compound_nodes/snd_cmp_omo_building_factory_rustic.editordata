@@ -1,0 +1,30 @@
+﻿node_editor_meta={
+	view={
+		position={ -735.461365 -181.230804 }
+		zoom=1.000000
+	}
+	nodes={
+		0={
+			position={ 585.000061 467.043945 }
+		}
+		1={
+			position={ 1783.539185 445.043945 }
+		}
+		2={
+			position={ 977.000000 438.000000 }
+		}
+		3={
+			position={ 771.000000 277.000000 }
+		}
+		4={
+			position={ 668.000000 342.000000 }
+			inlined=yes
+		}
+		5={
+			position={ 668.000000 342.000000 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

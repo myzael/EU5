@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "resource_llama_b_mesh"
+	file = "resource_llama_b.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "llama_idle_animation" type = "resource_llama_b_llama_idle.anim" }
+
+	meshsettings = {
+		name = "resource_llama_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_llama_b_diffuse.dds"
+		texture_normal = "resource_llama_a_normal.dds"
+		texture_specular = "resource_llama_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_llama_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_llama_b_diffuse.dds"
+		texture_normal = "resource_llama_a_normal.dds"
+		texture_specular = "resource_llama_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_llama_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_llama_b_diffuse.dds"
+		texture_normal = "resource_llama_a_normal.dds"
+		texture_specular = "resource_llama_a_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_llama_b_entity"
+	pdxmesh = "resource_llama_b_mesh"
+
+	default_state = "llama_idle"
+	state = {
+		name = "llama_idle"
+		animation = "llama_idle_animation"
+	}
+}

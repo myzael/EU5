@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_mustaches_wavy_long_mesh"
+	file = "unit_mustaches_wavy_long.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_mustaches_wavy_long_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_mustaches_wavy_long_diffuse.dds"
+		texture_normal = "unit_mustaches_wavy_long_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_mustaches_wavy_long_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_mustaches_wavy_long_diffuse.dds"
+		texture_normal = "unit_mustaches_wavy_long_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_mustaches_wavy_long_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_mustaches_wavy_long_diffuse.dds"
+		texture_normal = "unit_mustaches_wavy_long_normal.dds"
+		texture_specular = "unit_beard_bushy_beard_moustache_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

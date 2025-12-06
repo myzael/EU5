@@ -1,0 +1,138 @@
+pdxmesh = {
+	name = "resources_sugar_gathered_mesh"
+	file = "resources_sugar_gathered.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "gathered_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_sugar_diffuse.dds"
+		texture_normal = "resource_sugar_normal.dds"
+		texture_specular = "resource_sugar_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "wood_lod0Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+	meshsettings = {
+		name = "props_lod0Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_b_diffuse.dds"
+		texture_normal = "resources_gather_props_b_normal.dds"
+		texture_specular = "resources_gather_props_b_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_sugar_gathered|LOD_0|gathered_lod0|decal_lod0|decal_l"
+		index = 0
+		texture_diffuse = "resource_sugar_gathered_decal_diffuse.dds"
+		texture_normal = "resource_sugar_gathered_decal_normal.dds"
+		texture_specular = "resource_sugar_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "gathered_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_sugar_diffuse.dds"
+		texture_normal = "resource_sugar_normal.dds"
+		texture_specular = "resource_sugar_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "wood_lod1Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "props_lod1Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_b_diffuse.dds"
+		texture_normal = "resources_gather_props_b_normal.dds"
+		texture_specular = "resources_gather_props_b_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_sugar_gathered|LOD_1|gathered_lod1|decal_lod1|decal_l"
+		index = 0
+		texture_diffuse = "resource_sugar_gathered_decal_diffuse.dds"
+		texture_normal = "resource_sugar_gathered_decal_normal.dds"
+		texture_specular = "resource_sugar_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "gathered_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_sugar_diffuse.dds"
+		texture_normal = "resource_sugar_normal.dds"
+		texture_specular = "resource_sugar_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "wood_lod2Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "props_lod2Shape"
+		index = 0
+		texture_diffuse = "resources_gather_props_b_diffuse.dds"
+		texture_normal = "resources_gather_props_b_normal.dds"
+		texture_specular = "resources_gather_props_b_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resources_sugar_gathered|LOD_2|gathered_lod2|decal_lod2|decal_l"
+		index = 0
+		texture_diffuse = "resource_sugar_gathered_decal_diffuse.dds"
+		texture_normal = "resource_sugar_gathered_decal_normal.dds"
+		texture_specular = "resource_sugar_gathered_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resources_sugar_gathered_entity"
+	pdxmesh = "resources_sugar_gathered_mesh"
+}

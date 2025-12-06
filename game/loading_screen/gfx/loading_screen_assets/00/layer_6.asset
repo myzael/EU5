@@ -1,0 +1,37 @@
+pdxmesh = {
+	name = "layer_6_mesh"
+	file = "layer_6.mesh"
+
+	animation = { id = "idle_animation" type = "layer_6_idle.anim" }
+	animation = { id = "layer_6_animation" type = "layer_6_layer_6.anim" }
+
+	meshsettings = {
+		name = "layer_Shape6"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_3"
+	}
+}
+
+entity = {
+	name = "layer_6_entity"
+	pdxmesh = "layer_6_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+		animation_speed = 0.5
+		looping = no
+	}
+	state = {
+		name = "layer_6"
+		animation = "layer_6_animation"
+	}
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}

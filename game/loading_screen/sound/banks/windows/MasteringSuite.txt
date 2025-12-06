@@ -1,0 +1,8 @@
+Effect plug-ins	ID	Name	Type				Notes
+	465211496	PDX_Speakers	Mastering Suite			
+	465606845	PDX_NightMode	Mastering Suite			
+	1252584708	PDX_TV	Mastering Suite			
+	2116481717	PDX_Off	Mastering Suite			
+	2767704715	PDX_Headphones	Mastering Suite			
+	3088688550	PDX_HomeCinema	Mastering Suite			
+

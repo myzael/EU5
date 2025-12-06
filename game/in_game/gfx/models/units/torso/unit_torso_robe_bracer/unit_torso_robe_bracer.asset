@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_torso_robe_bracer_mesh"
+	file = "unit_torso_robe_bracer.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_torso_robe_bracer_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_torso_robe_bracer_diffuse.dds"
+		texture_normal = "unit_torso_robe_bracer_normal.dds"
+		#texture_specular = "unit_torso_robe_bracer_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_torso_robe_bracer_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_torso_robe_bracer_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_torso_robe_bracer_diffuse.dds"
+		texture_normal = "unit_torso_robe_bracer_normal.dds"
+		#texture_specular = "unit_torso_robe_bracer_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_torso_robe_bracer_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_torso_robe_bracer_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_torso_robe_bracer_diffuse.dds"
+		texture_normal = "unit_torso_robe_bracer_normal.dds"
+		#texture_specular = "unit_torso_robe_bracer_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_torso_robe_bracer_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

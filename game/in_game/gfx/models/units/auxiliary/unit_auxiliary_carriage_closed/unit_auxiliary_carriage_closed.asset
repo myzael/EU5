@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "unit_auxiliary_carriage_closed_mesh"
+	file = "unit_auxiliary_carriage_closed.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 6.0 }
+		lod = { index = 2 percent = 3.8 }
+	}
+	
+	animation = { id = "moving_auxiliary_carriage_animation" type = "../animations/unit_auxiliary_carriage_walk.anim" }
+
+	meshsettings = {
+		name = "unit_auxiliary_carriage_closed_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_auxiliary_carriage_closed_diffuse.dds"
+		texture_normal = "unit_auxiliary_carriage_closed_normal.dds"
+		texture_specular = "unit_auxiliary_carriage_closed_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_auxiliary_carriage_closed_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_auxiliary_carriage_closed_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_auxiliary_carriage_closed_diffuse.dds"
+		texture_normal = "unit_auxiliary_carriage_closed_normal.dds"
+		texture_specular = "unit_auxiliary_carriage_closed_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_auxiliary_carriage_closed_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_auxiliary_carriage_closed_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_auxiliary_carriage_closed_diffuse.dds"
+		texture_normal = "unit_auxiliary_carriage_closed_normal.dds"
+		texture_specular = "unit_auxiliary_carriage_closed_properties.dds"
+		#texture = { index = 3 srgb = no file = "unit_auxiliary_carriage_closed_mask.dds" }
+		shader = "standard_show_in_papermap"
+		#shader = "unit_material_repaint"
+		#shader_file = "gfx/FX/units.shader"
+	}
+
+}

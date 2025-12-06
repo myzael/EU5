@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "resource_saltpepper_a_mesh"
+	file = "resource_saltpepper_a.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_diffuse.dds"
+		texture_normal = "resource_saltpepper_normal.dds"
+		texture_specular = "resource_saltpepper_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_decal_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_a_decal_diffuse.dds"
+		texture_normal = "resource_saltpepper_a_decal_normal.dds"
+		texture_specular = "resource_saltpepper_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_diffuse.dds"
+		texture_normal = "resource_saltpepper_normal.dds"
+		texture_specular = "resource_saltpepper_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_decal_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_a_decal_diffuse.dds"
+		texture_normal = "resource_saltpepper_a_decal_normal.dds"
+		texture_specular = "resource_saltpepper_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_diffuse.dds"
+		texture_normal = "resource_saltpepper_normal.dds"
+		texture_specular = "resource_saltpepper_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_saltpeter_a_decal_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_saltpepper_a_decal_diffuse.dds"
+		texture_normal = "resource_saltpepper_a_decal_normal.dds"
+		texture_specular = "resource_saltpepper_a_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resource_saltpepper_a_entity"
+	pdxmesh = "resource_saltpepper_a_mesh"
+}

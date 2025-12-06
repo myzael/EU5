@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_shield_peasant_syrian_mesh"
+	file = "unit_weapon_shield_peasant_syrian.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_shield_peasant_syrianShape"
+		index = 0
+		texture_diffuse = "unit_weapon_spear_shield_metal_buckel_diffuse.dds"
+		texture_normal = "unit_weapon_spear_shield_metal_buckel_normal.dds"
+	#	texture_specular = "unit_weapon_spear_shield_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_spear_shield_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

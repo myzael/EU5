@@ -1,0 +1,144 @@
+pdxmesh = {
+	name = "ship_transport_03_european_flute_mesh"
+	file = "ship_transport_03_european_flute.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_transport_03_european_flute_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_transport_03_european_flute_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_transport_03_european_flute_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_transport_03_european_flute_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_transport_03_european_flute|Sails|Sails|SailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_transport_03_european_flute|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_transport_03_european_flute|Sails|Sails|SailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_transport_03_european_flute|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_transport_03_european_flute|Sails|Sails|SailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_transport_03_european_flute|folded_sails|folded_sail"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_transport_03_european_flute|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_transport_3_european_flute_diffuse.dds"
+		texture_normal = "ship_transport_3_european_flute_normal.dds"
+		texture_specular = "ship_transport_3_european_flute_properties.dds"
+		texture = { file = "ship_transport_3_european_flute_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_transport_03_european_flute|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_transport_3_european_flute_diffuse.dds"
+		texture_normal = "ship_transport_3_european_flute_normal.dds"
+		texture_specular = "ship_transport_3_european_flute_properties.dds"
+		texture = { file = "ship_transport_3_european_flute_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_transport_03_european_flute|ship_hull|ship_hull_lct|"
+		index = 0
+		texture_diffuse = "ship_transport_3_european_flute_diffuse.dds"
+		texture_normal = "ship_transport_3_european_flute_normal.dds"
+		texture_specular = "ship_transport_3_european_flute_properties.dds"
+		texture = { file = "ship_transport_3_european_flute_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_transport_03_european_flute_entity"
+	pdxmesh = "ship_transport_03_european_flute_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+
+	attach = { ensign_flag_lctr = "ship_flag_entity" }
+	attach = { pennant_flag_lctr_001 = "flag_pennant_entity" }
+
+}

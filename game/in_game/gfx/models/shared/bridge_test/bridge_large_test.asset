@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "bridge_large_test_mesh"
+	file = "bridge_large_test.mesh"
+
+	meshsettings = {
+		name = "bridge_large_testShape"
+		index = 0
+		texture_diffuse = "bridge_large_diffuse.dds"
+		texture_normal = "bridge_large_normal.dds"
+		texture_specular = "bridge_large_properties.dds"
+		shader = "bridge"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "bridge_large_test_entity"
+	pdxmesh = "bridge_large_test_mesh"
+}

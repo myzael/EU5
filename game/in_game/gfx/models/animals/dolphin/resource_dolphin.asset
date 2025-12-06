@@ -1,0 +1,49 @@
+pdxmesh = {
+	name = "resource_dolphin_mesh"
+	file = "resource_dolphin.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "animal_dolphin_idle_animation" type = "resource_dolphin_animal_dolphin_idle.anim" }
+
+	meshsettings = {
+		name = "resource_dolphin_lod_0Shape"
+		index = 0
+		texture_diffuse = "resource_dolphin_diffuse.dds"
+		texture_normal = "resource_dolphin_normal.dds"
+		texture_specular = "resource_dolphin_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_dolphin_lod_1Shape"
+		index = 0
+		texture_diffuse = "resource_dolphin_diffuse.dds"
+		texture_normal = "resource_dolphin_normal.dds"
+		texture_specular = "resource_dolphin_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "resource_dolphin_lod_2Shape"
+		index = 0
+		texture_diffuse = "resource_dolphin_diffuse.dds"
+		texture_normal = "resource_dolphin_normal.dds"
+		texture_specular = "resource_dolphin_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "resource_dolphin_entity"
+	pdxmesh = "resource_dolphin_mesh"
+
+	default_state = "animal_dolphin_idle"
+	state = {
+		name = "animal_dolphin_idle"
+		animation = "animal_dolphin_idle_animation"
+	}
+}

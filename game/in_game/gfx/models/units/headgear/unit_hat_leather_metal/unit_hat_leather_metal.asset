@@ -1,0 +1,45 @@
+pdxmesh = {
+	name = "unit_hat_leather_metal_mesh"
+	file = "unit_hat_leather_metal.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 1.5 }
+		lod = { index = 2 percent = 1.0 }
+	}
+
+	meshsettings = {
+		name = "unit_hat_leather_metal_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_hat_leather_metal_diffuse.dds"
+		texture_normal = "unit_hat_leather_metal_normal.dds"
+		#texture_specular = "unit_hat_leather_metal_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_leather_metal_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+
+	meshsettings = {
+		name = "unit_hat_leather_metal_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_hat_leather_metal_diffuse.dds"
+		texture_normal = "unit_hat_leather_metal_normal.dds"
+		#texture_specular = "unit_hat_leather_metal_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_leather_metal_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_hat_leather_metal_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_hat_leather_metal_diffuse.dds"
+		texture_normal = "unit_hat_leather_metal_normal.dds"
+		#texture_specular = "unit_hat_leather_metal_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_hat_leather_metal_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

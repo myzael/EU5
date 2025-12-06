@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_elephantry_auxiliary_mesh"
+	file = "unit_elephantry_auxiliary.mesh"
+
+	meshsettings = {
+		name = "unit_elephantry_auxiliaryShape"
+		index = 0
+		texture_diffuse = "unit_elephantry_elephant_auxiliary_diffuse.dds"
+		texture_normal = "unit_elephantry_elephant_auxiliary_normal.dds"
+		texture_specular = "unit_elephantry_elephant_auxiliary_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_elephantry_elephant_auxiliary_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

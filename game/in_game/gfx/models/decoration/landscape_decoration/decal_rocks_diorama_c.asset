@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "decal_rocks_diorama_c_mesh"
+	file = "decal_resource_rocks_diorama_c.mesh"
+
+	meshsettings = {
+		name = "resource_rocks_diorama_cShape"
+		index = 0
+		texture_diffuse = "diorama_rocks_b_diffuse.dds"
+		texture_normal = "diorama_rocks_c_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_resource_rocks_diorama_cShape"
+		index = 0
+		texture_diffuse = "decal_diorama_rocks_b_diffuse.dds"
+		texture_normal = "decal_diorama_rocks_c_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "decal_rocks_diorama_c_entity"
+	pdxmesh = "decal_rocks_diorama_c_mesh"
+}

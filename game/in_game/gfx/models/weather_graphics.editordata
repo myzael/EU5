@@ -1,0 +1,55 @@
+﻿node_editor_meta={
+	view={
+		position={ -953.750610 205.918137 }
+		zoom=0.560582
+	}
+	nodes={
+		0={
+			position={ 3170.371826 -76.763824 }
+		}
+		1={
+			position={ 3559.012207 409.071320 }
+		}
+		2={
+			position={ 2685.250000 464.398560 }
+		}
+		3={
+			position={ 2019.350586 4.165861 }
+		}
+		4={
+			position={ 2527.867188 199.149078 }
+		}
+		5={
+			position={ 1915.810669 265.028503 }
+		}
+		6={
+			position={ 1355.740356 -24.946222 }
+		}
+		7={
+			position={ 3562.530273 381.150177 }
+			inlined=yes
+		}
+		8={
+			position={ 3138.191895 -61.475441 }
+			inlined=yes
+		}
+		9={
+			position={ 3433.000000 540.663086 }
+			inlined=yes
+		}
+		10={
+			position={ 3138.191895 -61.475441 }
+			inlined=yes
+		}
+		11={
+			position={ 2537.971924 676.714844 }
+			inlined=yes
+		}
+		12={
+			position={ 3199.819824 178.143890 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

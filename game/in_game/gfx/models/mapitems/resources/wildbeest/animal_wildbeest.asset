@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "animal_wildbeest_mesh"
+	file = "animal_wildbeest.mesh"
+
+
+	meshsettings = {
+		name = "animal_wildbeestShape"
+		index = 0
+		texture_diffuse = "resource_wildbeest_diffuse.dds"
+		texture_normal = "resource_wildbeest_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "animal_wildbeest_entity"
+	pdxmesh = "animal_wildbeest_mesh"
+}

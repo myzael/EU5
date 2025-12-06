@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_chinese_arquebus_mesh"
+	file = "unit_weapon_chinese_arquebus.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_chinese_arquebusShape"
+		index = 0
+		texture_diffuse = "unit_weapon_chinese_arquebus_diffuse.dds"
+		texture_normal = "unit_weapon_chinese_arquebus_normal.dds"
+		#texture_specular = "unit_weapon_chinese_arquebus_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_chinese_arquebus_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

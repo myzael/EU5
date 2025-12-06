@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "sm_palm_tree_01_mesh"
+	file = "sm_palm_tree_01.mesh"
+	scale = 1.2
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod0Shape"
+		index = 0
+		texture_diffuse = "palm_tree_01_diffuse.dds"
+		texture_normal = "palm_tree_01_normal.dds"
+		texture_specular = "palm_tree_01_properties.dds"
+		texture = { file = "tint_tree_palm.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod0Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod1Shape"
+		index = 0
+		texture_diffuse = "palm_tree_01_diffuse.dds"
+		texture_normal = "palm_tree_01_normal.dds"
+		texture_specular = "palm_tree_01_properties.dds"
+		texture = { file = "tint_tree_palm.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod1Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod2Shape"
+		index = 0
+		texture_diffuse = "palm_tree_01_diffuse.dds"
+		texture_normal = "palm_tree_01_normal.dds"
+		texture_specular = "palm_tree_01_properties.dds"
+		texture = { file = "tint_tree_palm.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "sm_palm_tree_01_lod2Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "sm_palm_tree_01_entity"
+	pdxmesh = "sm_palm_tree_01_mesh"
+}

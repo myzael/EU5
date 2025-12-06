@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "female_german_low_goldhaube_mesh"
+	file = "female_german_low_goldhaube.mesh"
+
+	meshsettings = {
+		name = "female_german_low_goldhaubeShape"
+		index = 0
+		texture_diffuse = "female_german_low_goldhaube_diffuse.dds"
+		texture_normal = "female_german_low_goldhaube_normal.dds"
+		texture_specular = "female_german_low_goldhaube_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "female_german_low_goldhaube_hairShape"
+		index = 0
+		texture_diffuse = "female_hair_long_basic_diffuse.dds"
+		texture_normal = "female_hair_long_basic_normal.dds"
+		texture_specular = "female_hair_long_basic_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_german_low_goldhaube_entity"
+	pdxmesh = "female_german_low_goldhaube_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/north_german/low_goldhaube/female_german_low_goldhaube_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "female_german_low_goldhaube_nocap_mesh"
+	file = "female_german_low_goldhaube_nocap.mesh"
+
+	meshsettings = {
+		name = "female_german_low_goldhaube_nocapShape"
+		index = 0
+		texture_diffuse = "female_german_low_goldhaube_diffuse.dds"
+		texture_normal = "female_german_low_goldhaube_normal.dds"
+		texture_specular = "female_german_low_goldhaube_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+
+	meshsettings = {
+		name = "female_german_low_goldhaube_hairShape"
+		index = 0
+		texture_diffuse = "female_hair_long_basic_diffuse.dds"
+		texture_normal = "female_hair_long_basic_normal.dds"
+		texture_specular = "female_hair_long_basic_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_german_low_goldhaube_nocap_entity"
+	pdxmesh = "female_german_low_goldhaube_nocap_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/north_german/low_goldhaube/female_german_low_goldhaube_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

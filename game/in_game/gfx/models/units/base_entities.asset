@@ -1,0 +1,163 @@
+entity = {
+	name = "unit_animation_controller"
+	cull_radius = 1
+
+	default_state = "idle"
+	state = { name = "idle" }
+}
+
+#entity = {
+#	name = "unit_default_skeleton"
+#	pdxmesh = "unit_01_bundle_mesh"
+#
+#	default_state = "idle"
+#	state = { name = "idle" animation = "unit_01_bundle_idle" looping = yes }
+#
+#	scale = 0.08
+#}
+
+entity = {
+	name = "unit_formation_01"
+	clone = "unit_animation_controller"
+	locator = { name = "pos_0" position = { 0 0 0 } rotation = { 0 0 0 } }
+}
+
+#entity = {
+#	name = "unit_formation_08"
+#	clone = "unit_animation_controller"
+#
+#	@formation_scale = 10.0
+#
+#	@unit_rows = 2
+#	@unit_cols = 4
+#
+#	@width = @[ unit_cols * formation_scale ]
+#	@depth = @[ unit_rows * formation_scale ]
+#
+#	@unit_x_start = @[ -width / 2 ]
+#	@unit_x_step = @[ width / unit_cols ]
+#	@unit_z_start = @[ -depth / 2 ]
+#	@unit_z_step = @unit_x_step
+#
+#	locator = { name = "pos_0" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_1" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_2" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_3" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#
+#	locator = { name = "pos_4" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_5" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_6" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_7" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }	
+#}
+#
+#entity = {
+#	name = "test_formation"
+#	clone = "unit_formation_08"
+#
+#	attach = { pos_0 = "unit_01_bundle_entity" }
+#	attach = { pos_1 = "unit_01_bundle_entity" }
+#	attach = { pos_2 = "unit_01_bundle_entity" }
+#	attach = { pos_3 = "unit_01_bundle_entity" }
+#	attach = { pos_4 = "unit_01_bundle_entity" }
+#	attach = { pos_5 = "unit_01_bundle_entity" }
+#	attach = { pos_6 = "unit_01_bundle_entity" }
+#	attach = { pos_7 = "unit_01_bundle_entity" }
+#}
+
+entity = {
+	name = "test_canon_entity"
+	pdxmesh = "test_object_mesh"
+	locator = { name = "left_wheel" position = { -0.5 0.0 0.0 } rotation = { 0 0 0 } }
+	locator = { name = "right_wheel" position = { 0.5 0.0 0.0 } rotation = { 0 0 0 } }
+}
+
+#entity = {
+#	name = "unit_formation_64"
+#	clone = "unit_animation_controller"
+#
+#	@formation_scale = 10
+#	scale = 0.5
+#
+#	@unit_rows = 8
+#	@unit_cols = 8
+#
+#	@width = @[ unit_cols * formation_scale ]
+#	@depth = @[ unit_rows * formation_scale ]
+#
+#	@unit_x_start = @[ -width / 2 ]
+#	@unit_x_step = @[ width / unit_cols ]
+#	@unit_z_start = @[ -depth / 2 ]
+#	@unit_z_step = @unit_x_step
+#
+#	locator = { name = "pos_0" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_1" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_2" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_3" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_4" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_5" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_6" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_7" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 0] } rotation = { 0 0 0 } }
+#
+#	locator = { name = "pos_8" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_9" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_10" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_11" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_12" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_13" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_14" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_15" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 1] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_16" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_17" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_18" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_19" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_20" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_21" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_22" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_23" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 2] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_24" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_25" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_26" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_27" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_28" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_29" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_30" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_31" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 3] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_32" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_33" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_34" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_35" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_36" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_37" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_38" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_39" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 4] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_40" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_41" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_42" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_43" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_44" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_45" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_46" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_47" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 5] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_48" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_49" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_50" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_51" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_52" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_53" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_54" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_55" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 6] } rotation = { 0 0 0 } }
+#	
+#	locator = { name = "pos_56" position = { @[unit_x_start + unit_x_step * 0] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_57" position = { @[unit_x_start + unit_x_step * 1] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_58" position = { @[unit_x_start + unit_x_step * 2] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_59" position = { @[unit_x_start + unit_x_step * 3] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_60" position = { @[unit_x_start + unit_x_step * 4] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_61" position = { @[unit_x_start + unit_x_step * 5] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_62" position = { @[unit_x_start + unit_x_step * 6] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#	locator = { name = "pos_63" position = { @[unit_x_start + unit_x_step * 7] 0 @[unit_z_start + unit_z_step * 7] } rotation = { 0 0 0 } }
+#}

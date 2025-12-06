@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "resource_raw_iron_c_mesh"
+	file = "resource_raw_iron_c.mesh"
+
+	meshsettings = {
+		name = "decal_raw_iron_cShape"
+		index = 0
+		texture_diffuse = "resource_iron_raw_c_decal_diffuse.dds"
+		texture_normal = "resource_iron_raw_c_decal_normal.dds"
+		texture_specular = "resource_iron_raw_c_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resources_raw_iron_cShape"
+		index = 0
+		texture_diffuse = "resource_iron_diffuse.dds"
+		texture_normal = "resource_iron_normal.dds"
+		texture_specular = "resource_iron_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_raw_iron_c_entity"
+	pdxmesh = "resource_raw_iron_c_mesh"
+}

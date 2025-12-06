@@ -1,0 +1,59 @@
+pdxmesh = {
+	name = "spheres_lighting_mesh"
+	file = "spheres_lighting.mesh"
+
+	meshsettings = {
+		name = "sphere_whiteShape"
+		index = 0
+		texture_diffuse = "utility_swhite_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "utility_swhite_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "sphere_lightgreyShape"
+		index = 0
+		texture_diffuse = "utility_slightgrey_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "utility_sblack_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "sphere_greyShape"
+		index = 0
+		texture_diffuse = "utility_sgrey_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "utility_sblack_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "sphere_blackShape"
+		index = 0
+		texture_diffuse = "utility_sblack_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "utility_black_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "sphere_reflectionShape"
+		index = 0
+		texture_diffuse = "utility_sreflection_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "utility_sreflection_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "spheres_lighting_entity"
+	pdxmesh = "spheres_lighting_mesh"
+}

@@ -1,0 +1,462 @@
+binding = {
+    input_action = "map_editor_exit"
+    keycode = "f12"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "map_editor_save_all"
+    keycode = "s"
+    modifier = ctrl
+    modifier = alt
+    modifier = shift
+}
+
+binding = {
+    input_action = "map_editor_export_workspace"
+    keycode = "e"
+    modifier = ctrl
+    modifier = shift
+}
+
+binding = {
+    input_action = "map_editor_import_workspace"
+    keycode = "i"
+    modifier = ctrl
+    modifier = shift
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "map_editor_settings"
+#     keycode = ""
+# }
+
+binding = {
+    input_action = "map_editor_camera_toggle_limits"
+    keycode = "l"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mask_painter_tool"
+    keycode = "0"
+}
+
+binding = {
+    input_action = "mapobjects_tool"
+    keycode = "7"
+}
+
+binding = {
+    input_action = "map_object_painter"
+    keycode = "8"
+}
+
+binding = {
+    input_action = "spline_strip_tool"
+    keycode = "9"
+}
+
+binding = {
+    input_action = "spline_adjustment_tool"
+    keycode = "9"
+    modifier = alt
+}
+
+binding = {
+    input_action = "brush_settings_tooloption_1"
+    keycode = "1"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "new_anchor_tooloption_2"
+    keycode = "2"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mode_strip_tooloption_3"
+    keycode = "3"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "blend_mode_tooloption_4"
+    keycode = "4"
+    modifier = ctrl
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "river_tool"
+#     keycode = ""
+# }
+
+################ Decals Editor ######################
+
+binding = {
+    input_action = "decals_editor_select_mode"
+    keycode = "q"
+}
+
+binding = {
+    input_action = "decals_editor_free_transform_mode"
+    keycode = "t"
+}
+
+binding = {
+    input_action = "decals_editor_move_mode"
+    keycode = "m"
+}
+
+binding = {
+    input_action = "decals_editor_rotate_mode"
+    keycode = "r"
+}
+
+binding = {
+    input_action = "decals_editor_scale_mode"
+    keycode = "x"
+}
+
+binding = {
+    input_action = "decals_editor_strength_mode"
+    keycode = "v"
+}
+
+binding = {
+    input_action = "decals_editor_ground_level_mode"
+    keycode = "g"
+}
+
+binding = {
+    input_action = "decals_editor_create_new_mode"
+    keycode = "n"
+}
+
+binding = {
+    input_action = "decals_editor_live_update_toggle"
+    keycode = "u"
+}
+
+binding = {
+    input_action = "decals_editor_lock_selected"
+    keycode = "l"
+}
+
+binding = {
+    input_action = "decals_editor_hide_selected"
+    keycode = "h"
+}
+
+binding = {
+    input_action = "decals_editor_clone_selected"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "decals_editor_delete_instance"
+    keycode = "DEL"
+}
+
+binding = {
+    input_action = "decals_editor_bake"
+    keycode = "return"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "decals_editor_toggle_settings"
+    keycode = "o"
+}
+
+################ Map Content Editor ######################
+
+binding = {
+    input_action = "map_content_editor_select_mode"
+    keycode = "q"
+}
+
+binding = {
+    input_action = "map_content_editor_brush_tool"
+    keycode = "b"
+}
+
+binding = {
+    input_action = "map_content_editor_apply_changes"
+    keycode = "return"
+}
+
+binding = {
+    input_action = "map_content_editor_discard_changes"
+    keycode = "escape"
+}
+
+binding = {
+    input_action = "map_content_editor_property_paint_cancel"
+    keycode = "escape"
+}
+
+binding = {
+    input_action = "map_content_editor_add_to_group_tool"
+    scancode = 87  # KP_PLUS
+}
+
+binding = {
+    input_action = "map_content_editor_add_to_group_tool"
+    scancode = 46  # =
+    modifier = shift
+}
+
+binding = {
+    input_action = "map_content_editor_remove_from_group_tool"
+    scancode = 86  # KP_MINUS
+}
+
+binding = {
+    input_action = "map_content_editor_remove_from_group_tool"
+    scancode = 12  # -
+    modifier = shift
+}
+
+binding = {
+    input_action = "map_content_editor_auto_select"
+    keycode = "q"
+    modifier = ctrl
+}
+
+################ Mask Painter ######################
+
+binding = {
+    input_action = "mask_painter_new"
+    keycode = "n"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mask_painter_clone"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mask_painter_rename"
+    keycode = "r"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mask_painter_clear"
+    keycode = "DEL"
+    modifier = shift
+}
+
+binding = {
+    input_action = "mask_painter_delete"
+    keycode = "DEL"
+}
+
+binding = {
+    input_action = "mask_painter_select_map_content"
+    keycode = "t"
+}
+
+binding = {
+    input_action = "mask_painter_brush_tool"
+    keycode = "b"
+}
+
+binding = {
+    input_action = "mask_painter_eraser_tool"
+    keycode = "e"
+}
+
+################ Map Object Tool ######################
+
+binding = {
+    input_action = "mapobjects_tool_add_objects"
+    keycode = "a"
+}
+
+binding = {
+    input_action = "mapobjects_tool_select_map_content"
+    keycode = "t"
+}
+
+binding = {
+    input_action = "mapobjects_tool_select_objects"
+    keycode = "q"
+}
+
+binding = {
+    input_action = "mapobjects_tool_move_objects"
+    keycode = "w"
+}
+
+binding = {
+    input_action = "mapobjects_tool_rotate_objects"
+    keycode = "e"
+}
+
+binding = {
+    input_action = "mapobjects_tool_scale_objects"
+    keycode = "r"
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "mapobjects_tool_objects_render_underwater"
+#     keycode = ""
+# }
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "mapobjects_tool_objects_clamp_to_water_level"
+#     keycode = ""
+# }
+
+binding = {
+    input_action = "mapobjects_tool_delete"
+    keycode = "DEL"
+}
+
+binding = {
+    input_action = "mapobjects_tool_deselect"
+    keycode = "d"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mapobjects_tool_select_all"
+    keycode = "a"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mapobjects_tool_hide_selection"
+    keycode = "h"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mapobjects_tool_rotate_random"
+    keycode = "r"
+    modifier = ctrl
+}
+
+binding = {
+    input_action = "mapobjects_tool_focus_view"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "map_editor_tool_mode_positive"
+    keycode = "z"
+}
+
+binding = {
+    input_action = "map_editor_tool_mode_negative"
+    keycode = "x"
+}
+
+binding = {
+    input_action = "mapobjects_tool_auto_nudge"
+    keycode = "n"
+}
+
+binding = {
+    input_action = "mapobject_painter_blur"
+    keycode = "c"
+}
+
+binding = {
+    input_action = "mapobjects_tool_show_progress"
+    keycode = "tab"
+}
+
+binding = {
+    input_action = "mapobjects_tool_toggle_progress"
+    keycode = "space"
+}
+
+################ Spline Tool ######################
+
+binding = {
+    input_action = "spline_tool_select_anchor"
+    keycode = "q"
+}
+
+binding = {
+    input_action = "spline_river_tool_decrease_width_large"
+    scancode = 86 # KP_MINUS
+}
+
+binding = {
+    input_action = "spline_river_tool_decrease_width_large"
+    scancode = 12 # -
+    modifier = shift
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "spline_river_tool_decrease_width_small"
+#     keycode = ""
+# }
+
+binding = {
+    input_action = "spline_river_tool_increase_width_large"
+    scancode = 87 # KP_PLUS
+}
+
+binding = {
+    input_action = "spline_river_tool_increase_width_large"
+    scancode = 46 # =
+    modifier = shift
+}
+
+binding = {
+    input_action = "spline_tool_select_map_content"
+    keycode = "t"
+}
+
+binding = {
+    input_action = "spline_tool_error_focus"
+    keycode = "e"
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "spline_tool_mergenotes_toggle_all"
+#     keycode = ""
+# }
+
+#TODO [PG]:  PSGE-8829  Add keycode
+# binding = {
+#     input_action = "spline_tool_mergenotes_toggle_conflicts"
+#     keycode = ""
+# }
+
+binding = {
+    input_action = "spline_tool_focus_on_selection"
+    keycode = "f"
+}
+
+binding = {
+    input_action = "terrain_toggle_reference_overlay"
+    keycode = "g"
+}
+
+#TODO [PG]:  PSGE-8829  Add keycode
+#[PG]: PSGE-8829  Add keycode
+# binding = {
+#     input_action = "terrain_show_reference_overlay_options"
+#     keycode = ""
+# }
+
+binding = {
+    input_action = "brush_toggle_pixel_snap"
+    keycode = "p"
+}

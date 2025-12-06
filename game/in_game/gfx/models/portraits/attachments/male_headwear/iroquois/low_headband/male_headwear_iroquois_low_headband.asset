@@ -1,0 +1,121 @@
+pdxmesh = {
+	name = "male_headwear_iroquois_low_headband_mesh"
+	file = "male_headwear_iroquois_low_headband.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_iroquois_low_headbandShape"
+		index = 0
+		texture_diffuse = "male_headwear_iroquois_low_headband_diffuse.dds"
+		texture_normal = "male_headwear_iroquois_low_headband_normal.dds"
+		texture_specular = "male_headwear_iroquois_low_headband_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_iroquois_low_headband_entity"
+	pdxmesh = "male_headwear_iroquois_low_headband_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/iroquois/low_headband/male_headwear_iroquois_low_headband_masks.dds" #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+    }
+}
+
+#########
+
+pdxmesh = {
+	name = "male_headwear_iroquois_low_headband_mirrored_mesh"
+	file = "male_headwear_iroquois_low_headband_mirrored.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_iroquois_low_headband_mirroredShape"
+		index = 0
+		texture_diffuse = "male_headwear_iroquois_low_headband_diffuse.dds"
+		texture_normal = "male_headwear_iroquois_low_headband_normal.dds"
+		texture_specular = "male_headwear_iroquois_low_headband_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_iroquois_low_headband_mirrored_entity"
+	pdxmesh = "male_headwear_iroquois_low_headband_mirrored_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/iroquois/low_headband/male_headwear_iroquois_low_headband_masks.dds" #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+    }
+}
+
+#########
+
+pdxmesh = {
+	name = "male_headwear_iroquois_low_headband_feathered_mesh"
+	file = "male_headwear_iroquois_low_headband_feathered.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_iroquois_low_headband_featheredShape"
+		index = 0
+		texture_diffuse = "male_headwear_iroquois_low_headband_diffuse.dds"
+		texture_normal = "male_headwear_iroquois_low_headband_normal.dds"
+		texture_specular = "male_headwear_iroquois_low_headband_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_iroquois_low_headband_feathered_entity"
+	pdxmesh = "male_headwear_iroquois_low_headband_feathered_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head
+			}
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/iroquois/low_headband/male_headwear_iroquois_low_headband_masks.dds" #Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_commoner_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+    }
+}
+
+#########
+
+pdxmesh = {
+	name = "male_headwear_iroquois_low_feathered_bun_mesh"
+	file = "male_headwear_iroquois_low_feathered_bun.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_iroquois_low_feathered_bunShape"
+		index = 0
+		texture_diffuse = "male_headwear_iroquois_low_headband_02_diffuse.dds"
+		texture_normal = "male_headwear_iroquois_low_headband_normal.dds"
+		texture_specular = "male_headwear_iroquois_low_headband_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_iroquois_low_feathered_bun_entity"
+	pdxmesh = "male_headwear_iroquois_low_feathered_bun_mesh"
+}

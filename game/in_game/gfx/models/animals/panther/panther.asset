@@ -1,0 +1,32 @@
+pdxmesh = {
+	name = "panther_mesh"
+	file = "panther.mesh"
+
+	animation = { id = "tired_animation" type = "resource_panther_tired.anim" }
+	animation = { id = "idle_animation" type = "resource_panther_idle.anim" }
+
+	meshsettings = {
+		name = "resource_lionessShape"
+		index = 0
+		texture_diffuse = "resource_panther_diffuse.dds"
+		texture_normal = "resource_jaguar_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+
+entity = {
+	name = "panther_entity"
+	pdxmesh = "panther_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "tired"
+		animation = "tired_animation"
+	}
+}

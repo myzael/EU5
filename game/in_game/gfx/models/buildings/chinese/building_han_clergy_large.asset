@@ -1,0 +1,85 @@
+pdxmesh = {
+	name = "building_han_clergy_large_mesh"
+	file = "building_han_clergy_large.mesh"
+	scale = 50
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_lod0"
+		index = 0
+		texture_diffuse = "building_han_large_clergy_diffuse.dds"
+		texture_normal = "building_han_large_clergy_normal.dds"
+		texture_specular = "building_han_large_clergy_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_clergy_large_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_decal_lod0"
+		index = 0
+		texture_diffuse = "decal_han_large_clergy_diffuse.dds"
+		texture_normal = "decal_han_large_clergy_normal.dds"
+		texture_specular = "decal_han_large_clergy_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_lod1"
+		index = 0
+		texture_diffuse = "building_han_large_clergy_diffuse.dds"
+		texture_normal = "building_han_large_clergy_normal.dds"
+		texture_specular = "building_han_large_clergy_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_clergy_large_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_decal_lod1"
+		index = 0
+		texture_diffuse = "decal_han_large_clergy_diffuse.dds"
+		texture_normal = "decal_han_large_clergy_normal.dds"
+		texture_specular = "decal_han_large_clergy_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_lod2"
+		index = 0
+		texture_diffuse = "building_han_large_clergy_diffuse.dds"
+		texture_normal = "building_han_large_clergy_normal.dds"
+		texture_specular = "building_han_large_clergy_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "han_clergy_large_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_clergy_large_decal_lod2"
+		index = 0
+		texture_diffuse = "decal_han_large_clergy_diffuse.dds"
+		texture_normal = "decal_han_large_clergy_normal.dds"
+		texture_specular = "decal_han_large_clergy_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	
+
+	
+}
+
+entity = {
+	name = "building_han_clergy_large_entity"
+	pdxmesh = "building_han_clergy_large_mesh"
+}

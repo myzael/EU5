@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_carpet_woolen_mesh"
+	file = "unit_accessories_carpet_woolen.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_carpet_woolenShape"
+		index = 0
+		texture_diffuse = "unit_accessories_carpet_woolen_diffuse.dds"
+		texture_normal = "unit_accessories_carpet_woolen_normal.dds"
+		#texture_specular = "unit_accessories_carpet_woolen_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_carpet_woolen_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

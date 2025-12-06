@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "simple_plane_F_mesh"
+	file = "simple_plane_F.mesh"
+
+	meshsettings = {
+		name = "pPlaneShape2"
+		index = 0
+		shader = "standard"
+	}
+}
+
+entity = {
+	name = "simple_plane_F_entity"
+	pdxmesh = "simple_plane_F_mesh"
+}

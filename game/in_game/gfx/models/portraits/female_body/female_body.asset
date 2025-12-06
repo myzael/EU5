@@ -1,0 +1,64 @@
+pdxmesh = {
+	name = "female_body_mesh"
+	file = "female_body.mesh"
+
+	animation = { id = "body_bind_pose"				type = "animations/female_body_bind_pose.anim" }
+	animation = { id = "body_pose_01"				type = "animations/female_body_pose_01.anim" }
+	animation = { id = "body_pose_02"				type = "animations/female_body_pose_02.anim" }
+	animation = { id = "body_pose_03"				type = "animations/female_body_pose_03.anim" }
+	animation = { id = "body_pose_04"				type = "animations/female_body_pose_04.anim" }
+	# animation = { id = "body_pose_05"				type = "animations/male_body_pose_05.anim" }
+	# animation = { id = "body_pose_06"				type = "animations/male_body_pose_06.anim" }
+	# animation = { id = "body_pose_07"				type = "animations/male_body_pose_07.anim" }
+	# animation = { id = "body_pose_08"				type = "animations/male_body_pose_08.anim" }
+
+	# additive_animation = { id = "male_body_height" type = "additive_animations/male_body_height.anim" }
+	additive_animation = { id = "female_body_infant_proportions" type = "additive_animations/female_body_infant_proportions.anim" }
+	additive_animation = { id = "female_body_old_posture" type = "additive_animations/female_body_old_posture.anim" }
+
+	blend_shape = { id = "no_clothes"    type = "blendshapes/female_body_bs_no_clothes.mesh" }
+	blend_shape = { id = "bs_old_body"		type = "blendshapes/female_body_bs_old.mesh" }
+
+	meshsettings = {
+		name = "female_bodyShape"
+		index = 0
+		texture_diffuse = "female_body_diffuse.dds"
+		texture_normal = "female_body_normal.dds"
+		texture_specular = "female_body_properties.dds"
+		texture = { file = "head_ssao_color.dds" index = 3 }
+		shader = "portrait_skin"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_body_entity"
+	pdxmesh = "female_body_mesh"
+
+	default_state = "none"
+	state = {	name = "none"	animation = "body_bind_pose"}
+	state = {	name = "bind_pose"	animation = "body_bind_pose" 	chance = 10 looping = no next_state = "bind_pose" }
+
+	state = {	name = "pose_01"	animation = "body_pose_01" 	chance = 80 looping = yes next_state = "pose" }
+	state = {	name = "pose_02"	animation = "body_pose_02" 	chance = 80 looping = yes next_state = "pose" }
+	state = {	name = "pose_03"	animation = "body_pose_03" 	chance = 80 looping = yes next_state = "pose" }
+	state = {	name = "pose_04"	animation = "body_pose_04" 	chance = 80 looping = yes next_state = "pose" }
+	state = {	name = "pose_05"	animation = "body_pose_04" 	chance = 80 looping = yes next_state = "pose" }
+	# state = {	name = "pose_06"	animation = "body_pose_06" 	chance = 80 looping = yes next_state = "pose" }
+	# state = {	name = "pose_07"	animation = "body_pose_07" 	chance = 80 looping = yes next_state = "pose" }
+	# state = {	name = "pose_08"	animation = "body_pose_08" 	chance = 80 looping = yes next_state = "pose" }
+
+	attribute = { name = "body_infant_proportions"	additive_animation = "female_body_infant_proportions" }
+	attribute = { name = "body_old_posture"	additive_animation = "female_body_old_posture" }
+
+	attribute = { name = "bs_no_clothes"    blend_shape = "no_clothes" }
+	attribute = { name = "bs_old_body"		blend_shape = "bs_old_body" }
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+pdxmesh = {
+	name = "w_building_a_mesh"
+	file = "w_building_a.mesh"
+
+	meshsettings = {
+		name = "pCubeShape4"
+		index = 0
+		texture_diffuse = "building_test_diffuse.dds"
+		texture_normal = "building_test_normal.dds"
+		texture_specular = "building_test_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Decal_Size3Shape"
+		index = 0
+		texture_diffuse = "decal_building_wester_a_diffuse.dds"
+		texture_normal = "decal_building_wester_a_normal.dds"
+		texture_specular = "decal_building_wester_a_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "w_building_a_entity"
+	pdxmesh = "w_building_a_mesh"
+	scale = 10
+}

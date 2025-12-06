@@ -1,0 +1,22 @@
+﻿{
+	"name":	"Ancient Monument Pack",
+	"localizable_name":	"D015_ancient_monuments_pack",
+	"path":	"dlc/D015_ancient_monuments_pack",
+	"picture":	"thumbnail.dds",
+	"checksum":	"3510d4c5d170c9e6a42244e8ebbbf2cb",
+	"description":	"",
+	"supported_version":	"",
+	"dependencies":	[],
+	"replace_path":	[],
+	"tags":	[],
+	"pops_id":	"D015_ancient_monuments_pack",
+	"msgr_id":	"",
+	"steam_id":	0,
+	"review_steam_id":	0,
+	"affects_save_compatibility":	false,
+	"mp_synced":	false,
+	"third_party_content":	false,
+	"enabled":	true,
+	"hidden":	false,
+	"verify":	false
+}

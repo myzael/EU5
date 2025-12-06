@@ -1,0 +1,38 @@
+pdxmesh = {
+	name = "event_foreground_mesh"
+	file = "event_foreground.mesh"
+
+	animation = { id = "idle_animation" type = "event_foreground_idle.anim" }
+	animation = { id = "event_foreground_animation" type = "event_foreground_event_foreground.anim" }
+
+	meshsettings = {
+		name = "event_foregroundShape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		subpass = "Illustration_27"
+	}
+}
+
+entity = {
+	name = "event_foreground_entity"
+	pdxmesh = "event_foreground_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+		looping = no
+		animation_speed = 0.9
+	}
+	state = {
+		name = "event_foreground"
+		animation = "event_foreground_animation"
+		looping = no
+	}
+	locator = {
+		name = scene_locator
+		position = { 0.0 0.0 0.0 }
+	}
+}

@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "male_neckwear_aztec_out_imperial_emerald_mesh"
+	file = "male_neckwear_aztec_out_imperial_emerald.mesh"
+	
+	meshsettings = {
+		name = "male_neckwear_aztec_out_imperial_emeraldShape"
+		index = 0
+		texture_diffuse = "male_neckwear_aztec_out_imperial_emerald_diffuse.dds"
+		texture_normal = "male_neckwear_aztec_out_imperial_emerald_normal.dds"
+		texture_specular = "male_neckwear_aztec_out_imperial_emerald_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_neckwear_aztec_out_imperial_emerald_entity"
+	pdxmesh = "male_neckwear_aztec_out_imperial_emerald_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso			
+			}
+		}
+	}
+}

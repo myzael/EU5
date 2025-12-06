@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_han_grandshipyard_mesh"
+	file = "building_han_grandshipyard.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_lod0Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "han_grandshipyard_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "decal_han_shipyard_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "decal_han_shipyard_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_lod1Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "han_grandshipyard_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "decal_han_shipyard_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "decal_han_shipyard_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_lod2Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "han_grandshipyard_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_grandshipyard_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "decal_han_shipyard_diffuse.dds"
+		texture_normal = "decal_building_han_dock_normal.dds"
+		texture_specular = "decal_han_shipyard_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "building_han_grandshipyard_entity"
+	pdxmesh = "building_han_grandshipyard_mesh"
+}

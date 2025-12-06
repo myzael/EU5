@@ -1,0 +1,963 @@
+﻿press_claims = {
+	type = situation
+	show_message = no
+	potential = {
+	}
+
+	allow = {
+		scope:actor = {
+			at_war = no
+		}
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_tick = monthly
+	ai_tick_frequency = 3
+	price = price:rto_press_claims_price
+
+	cooldown = {
+		type = press_claims_cooldown_key
+		years = 2
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+			var:strongest_beylik_variable = scope:actor
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = province
+		target_flag = target
+		name = "choose_province"
+		none_available_msg_key = "no_provinces_available"
+		column = { data = owner_flag }
+		column = { data = name }
+		column = { data = population }
+		visible = {
+			trigger_if = {
+				limit = {
+					scope:actor ?= { 
+						num_locations < 120 
+						has_presence_in = region:balkan_region
+					}
+				}
+				region = region:anatolia_region
+			}
+			trigger_else = {
+				OR = {
+					region = region:anatolia_region
+					region = region:balkan_region
+				}
+			}
+			any_location_in_province = {
+				is_neighbor_of = scope:actor
+			}
+			NOT = {
+				owner = {
+					OR = {
+						this = scope:actor
+						overlord ?= scope:actor
+						has_mutual_scripted_relation = {
+							type = relation_type:alliance
+							target = scope:actor
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				exists = scope:target
+				scope:actor ?= { num_locations <= 120 }
+			}
+			custom_tooltip = {
+				text = roto_press_claims_explanation_tt
+				scope:actor = {
+					trigger_event_silently = rise_of_the_ottomans.100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					exists = scope:target
+				}
+				scope:actor ?= { num_locations <= 120 }
+			}
+			custom_tooltip = roto_press_claims_explanation_tt
+		}
+		if = {
+			limit = {
+				scope:actor ?= { num_locations > 120 }
+				exists = scope:target
+			}
+			custom_tooltip = {
+				text = roto_press_claims_extra_explanation_tt
+				scope:actor = {
+					trigger_event_silently = rise_of_the_ottomans.100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					exists = scope:target
+				}
+				scope:actor ?= { num_locations > 120 }
+			}
+			custom_tooltip = roto_press_claims_extra_explanation_tt
+		}
+	}
+
+	ai_will_do = {
+		add = 20
+		if = {
+			limit = { exists = scope:target }
+			add = {
+				desc = "RELATIVE_STRENGTH"
+				value = 100
+				multiply = "scope:actor.relative_strength(scope:target.owner)"
+				divide = 10
+			}
+		}
+		add = {
+			desc = "CURRENT_MANPOWER_TOOLTIP"
+			value = scope:actor.manpower_percentage
+			multiply = 10
+		}
+		add = {
+			desc = "CURRENT_MANPOWER_TOOLTIP"
+			value = scope:actor.army_size
+		}
+		add = {
+			desc = "NUM_LOANS_TOOLTIP"
+			value = scope:actor.num_loans
+			multiply = -10
+		}
+		add = {
+			desc = "CURRENT_TREASURY_TOOLTIP"
+			value = {
+				add = scope:actor.gold
+				divide = scope:actor.monthly_income_total
+			}
+			multiply = 5
+		}
+		if = {
+			limit = { 
+				scope:actor = { is_during_bankruptcy = yes }
+			}
+			subtract = 1000
+		}
+	}
+}
+
+raise_bey_fortress = {
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			is_during_bankruptcy = no
+			at_war = no
+			is_during_bankruptcy = no
+			num_loans < 1
+		}
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	price = price:p_expensive_building_age_1_traditions
+
+	
+	cooldown = { 
+		type = raise_bey_fortress_key 
+		months = 6
+	}
+	
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = location
+		source = actor
+		target_flag = target
+		name = "choose_location"
+		none_available_msg_key = "no_locations_available"
+		column = { data = name }
+		column = { data = population }
+		visible = {
+			region = region:anatolia_region
+			location_rank = location_rank:city
+			NOT = { has_building = building_type:bey_fortress }
+			NOT = { has_location_modifier = stronghold_city_modifier }
+			NOT = { has_variable = recently_elevanted_stronghold_variable }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				exists = scope:target
+			}
+			scope:target = {
+				construct_building = {
+					building_type = building_type:bey_fortress
+					cost_multiplier = 0
+					cost_multiplier_reason = "royal_sponsorship"
+				}
+			}
+			scope:actor = { add_army_tradition = army_tradition_mild_bonus }
+		}
+		custom_tooltip = raise_bey_fortress_tt		
+	}
+
+	ai_will_do = {
+		value = -400
+
+		add = scope:actor.gold						#Healthy treasury
+		add = scope:actor.monthly_balance			#Monthly balance 
+
+		if = {
+			limit = { exists = scope:target }
+			add = scope:target.proximity			#Proximity of the selected location	
+		}
+	}
+}
+
+seek_relations_with_the_byzantines = {
+	type = situation
+	show_message = no	
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+		country_exists = c:BYZ
+		c:BYZ ?= {
+			is_subject = no
+			owns = location:constantinople
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			relative_strength = {
+				target = c:BYZ
+				value > 0.5
+			}
+			government_power > 60
+			NOT = { is_at_war_with = c:BYZ }
+		}
+		custom_tooltip = {
+			text = byz_not_considering_proposal_from_another_beylik
+			c:BYZ ?= {
+				NOR = {
+					has_variable = beylik_requests_official_sponsorship_var
+					has_variable = beylik_requests_money_var
+					has_variable = beylik_requests_royal_gifts_var
+				}
+			}
+		}
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	
+	price = price:seek_relations_with_the_byzantines_price
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			trigger_event_non_silently = rise_of_the_ottomans.108
+		}
+	}
+	cooldown = { type = seek_relations_with_the_byzantines_cooldown_key years = 5 }
+	ai_will_do = {
+		add = 10
+	}
+}
+
+examine_our_fortifications = {
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			any_fort_in_country = { count > 0 }
+			at_war = no
+		}	
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	
+	price = price:examine_our_fortifications_price
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = area
+		source = actor
+		target_flag = target
+		name = "choose_fortification_to_inspect"
+		none_available_msg_key = "no_fortifications_available"
+		column = {
+			data = name
+		}
+		visible = {
+			any_location_in_area = {
+				owner ?= scope:actor
+				OR = {
+					has_building = building_type:stockade
+					has_building = building_type:castle 
+					has_building = building_type:bastion
+					has_building = building_type:star_fort
+					has_building = building_type:fortress
+					has_building = building_type:bey_fortress
+				}
+				NOT = { has_location_modifier = recently_inspected_fortifications_modifier }
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { 
+				exists = scope:target
+			}
+			scope:target = {
+				every_location_in_area = {
+					limit = {
+						has_owner = yes
+						owner = scope:actor
+						OR = {
+							has_building = building_type:stockade
+							has_building = building_type:castle 
+							has_building = building_type:bastion
+							has_building = building_type:star_fort
+							has_building = building_type:fortress
+							has_building = building_type:bey_fortress
+						}
+						NOT = { has_location_modifier = recently_inspected_fortifications_modifier }
+					}
+					if = {
+						limit = { has_location_modifier = decaying_defenses_modifier }
+						remove_location_modifier = decaying_defenses_modifier
+					}
+					add_location_modifier = { 
+						modifier = recently_inspected_fortifications_modifier 
+						years = 10
+						mode = add_and_extend 
+					}
+				}
+			}
+		}
+		else = {
+			custom_tooltip = inspect_fortifications_location_tt
+		}
+	}
+	cooldown = { type = examine_our_fortifications_key years = 3 }
+	ai_will_do = {
+		add = 10
+	}
+}
+
+offer_diplomatic_protection = { 
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			at_war = no
+			has_regent = no
+			ruler ?= {
+				has_dynasty = yes
+			}
+		}	
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	
+	price = price:offer_diplomatic_protection_price
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		source_global_list = eligible_beylik_list
+		cache_interaction_source_list = yes
+		target_flag = target
+		name = "choose_a_country"
+		none_available_msg_key = "no_suitable_countries"
+		column = {
+			data = name
+		}
+		visible = {
+			has_reform = government_reform:anatolian_beylik
+			this != scope:actor
+			NOT = { is_rival_of = scope:actor }
+			NOT = { is_enemy_of = scope:actor }
+			at_war = no
+			is_subject = no
+			is_neighbor_of = scope:actor
+			relative_strength = {
+				target = scope:actor
+				value <= 0.5
+			}
+			NOT = { 
+				has_variable = recently_gave_territory
+			}
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = character
+		source = actor
+		interaction_source_list = {
+			scope:actor = {
+				ruler ?= {
+					dynasty = {
+						every_character_in_dynasty = {
+							limit = {
+								owner = scope:actor
+							}
+							add_to_list = source
+						}
+					}
+				}
+			}
+		}
+		target_flag = target_1
+		name = "select_character_to_marry_into_them"
+		none_available_msg_key = "no_character_to_marry_into_them"
+		column = {
+			data = character_info
+		}
+		visible = {
+			is_ruler = no
+			is_female = no
+			is_adult = yes
+			has_available_marriage_slot = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = location
+		source = target
+		target_flag = target_2
+		name = "request_location_in_exchange"
+		none_available_msg_key = "no_locations_available"
+		column = {
+			data = name
+		}
+		visible = {
+			is_neighbor_of = scope:actor
+			is_capital = no
+			controller = scope:target
+		}
+	}
+	cooldown = { type = offer_diplomatic_protection_key years = 1 }
+	effect = {
+		if = {
+			limit = {
+				exists = scope:target
+				exists = scope:target_1
+				exists = scope:target_2
+			}
+			custom_tooltip = {
+				text = exchange_location_for_guarantee_marriage_alliance_tt
+				scope:target = {
+					trigger_event_non_silently = rise_of_the_ottomans.106
+				}
+			}
+		}
+		else = { custom_tooltip = no_link_exchange_location_for_guarantee_marriage_alliance_tt }
+	}
+	
+	ai_will_do = {
+		add = 10
+	}
+}
+
+invade_neighbor_beylik = {
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			at_war = no
+			has_regent = no
+		}	
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	
+	price = price:invade_neighbor_beylik_price
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		source_global_list = eligible_beylik_list
+		target_flag = target
+		name = "choose_a_country"
+		none_available_msg_key = "no_suitable_countries_invade_neighbor_beylik"
+		column = {
+			data = name
+		}
+		visible = {
+			this != scope:actor
+			is_neighbor_of = scope:actor
+			OR = { 
+				stability < 0
+				in_civil_war = yes
+				has_regent = yes
+			}
+			is_subject = no
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				exists = scope:target
+			}
+			scope:actor = {
+				add_casus_belli = {
+					type = casus_belli:cb_insulted_us
+					target = scope:target
+				}
+			}
+		}
+		else = {
+			custom_tooltip = rott_get_cb_against_them_tt
+		}
+	}
+	cooldown = { type = invade_neighbor_beylik years = 2 }
+	ai_will_do = {
+		add = 10
+	}
+}
+
+invite_turkic_migration = {
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_variable = enable_turkic_migration_variable
+			culture = { has_culture_group = culture_group:turkic_group }
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			any_province = {
+				culture_percentage = {
+					culture = scope:actor.culture
+					value > 0.5
+				}
+			}
+		}
+	}
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	ai_tick = monthly
+	ai_tick_frequency = 6
+	price = price:rto_press_claims_price
+
+	cooldown = {
+		type = invite_turkic_migration
+		years = 2
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		interaction_source_list = {
+			situation:rise_of_the_ottomans = {
+				add_to_list = source
+			}
+		}
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+			var:strongest_beylik_variable = scope:actor
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = culture
+		target_flag = target_culture
+		source = actor
+		name = "promote_culture_select_culture"
+		none_available_msg_key = "promote_culture_no_culture"
+		column = {
+			data = name
+		}
+		column = {
+			data = culture_percentage_in_country
+		}
+		default_sort = culture_percentage_in_country
+		visible = {
+			root = scope:actor.culture
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = province
+		target_flag = target_province_destination
+		name = "choose_province"
+		none_available_msg_key = "no_provinces_available"
+		column = { data = name }
+		column = { data = population }
+		column = { data = province_culture_percentage }
+		visible = {
+			owner ?= scope:actor
+			culture_percentage = {
+				culture = scope:actor.culture
+				value < 0.5
+			}
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				exists = scope:target_province_destination
+			}
+			scope:actor = { trigger_event_non_silently = rise_of_the_ottomans.216 }
+		}
+		else = {
+			custom_tooltip = roto_turkic_migration_tt
+		}
+	}
+
+	ai_will_do = {
+		add = -10
+		if = {
+			limit = { exists = scope:target_province_destination }
+			add = {	#More likely to migrate towards high tax base provinces
+				value = scope:target_province_destination.province_tax_base
+				divide = 10
+			}
+			if = {
+				limit = { scope:target_province_destination.province_average_control > 0.5 }
+				add = {
+					value = 20
+					multiply = scope:target_province_destination.province_average_control
+				}
+			}
+			else = {
+				subtract = {	#AI will never populate low control provinces
+					value = 20
+					divide = scope:target_province_destination.province_average_control
+				}
+			}
+			add = {
+				value = scope:target_province_destination.population
+				multiply = 250
+				divide = scope:actor.total_population
+			}
+		}
+	}
+}
+
+create_uc_bey = {
+	type = situation
+	show_message = no
+	potential = {
+		scope:actor = {
+			has_reform = government_reform:anatolian_beylik
+		}
+	}
+
+	allow = {
+		scope:actor = {
+			any_political_border_location = {
+				province = {
+					custom_tooltip = {
+						text = no_location_is_capital_tt
+						NOT = {
+							any_location_in_province = { is_capital = yes }
+						}
+					}
+					custom_tooltip = {
+						text = urban_manpower_location_tt
+						any_location_in_province = {
+							OR = {
+								location_rank = location_rank:city
+								location_rank = location_rank:town
+							}
+							any_buildings_in_location = {
+								owner ?= scope:actor
+								building_level >= 1
+								building_type = {
+									building_manpower_produced > 0
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_tick = monthly
+	ai_tick_frequency = 12
+
+	automation_tick = never
+	automation_tick_frequency = 12
+	price = price:rto_press_claims_price
+
+	cooldown = {
+		type = create_uc_bey
+		years = 5
+	}
+
+	select_trigger = {
+		looking_for_a = situation
+		target_flag = recipient
+		name = "choose_situation"
+		column = {
+			data = name
+		}
+		visible = {
+			situation:rise_of_the_ottomans = this
+			situation_is_active = yes
+			var:strongest_beylik_variable = scope:actor
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = province
+		source = actor
+		target_flag = target_province
+		name = "choose_province"
+		none_available_msg_key = "no_provinces_available"
+		column = { data = name }
+		column = { data = population }
+		visible = {
+			any_location_in_province = {
+				OR = {
+					location_rank = location_rank:city
+					location_rank = location_rank:town
+				}
+				any_buildings_in_location = {
+					owner = scope:actor
+					building_level >= 1
+					building_type = {
+						building_manpower_produced > 0
+					}
+				}
+			}
+			any_location_in_province = { is_border = yes }
+			NOT = {
+				any_location_in_province = { is_capital = yes }
+			}
+		}
+	}
+	
+	effect = { 
+		if = {
+			limit = {
+				exists = scope:target_province
+			}
+			scope:actor = { trigger_event_non_silently = rise_of_the_ottomans.217 }
+		}
+		else = { custom_tooltip = create_uc_bey_tt }
+	}
+
+	ai_will_do = {
+		add = -20
+		if = {
+			limit = { exists = scope:target_province }
+			if = {
+				limit = { exists = scope:actor.capital }
+				add = {	#They are less likely to give up great land tax-wise
+					value = scope:actor.capital.province.province_tax_base
+					subtract = {
+						value = scope:target_province.province_tax_base
+						multiply = 1.2
+					}
+					min = -20
+					max = 20
+				}
+			}
+			if = {
+				limit = {
+					scope:target_province = {
+						any_location_in_province = {
+							any_neighbor_location = {
+								owner ?= {
+									OR = { 
+										is_rival_of = scope:actor
+										is_enemy_of = scope:actor
+									}
+								}
+							}
+						}
+					}
+				}
+				add = 10
+			}
+			add = {
+				value = scope:actor.num_loans
+				multiply = -5
+			}
+			add = {	#Try to have 1 of these subjects for every 5 provinces you have
+				value = scope:actor.num_provinces
+				divide = 2
+			}
+			if = {
+				limit = { scope:target_province.province_satisfaction < 0.3 }
+				add = 5 #It's good to get rid of very disloyal provinces
+			}
+			if = {	#The AI should be relatively stable balance-wise to do this
+				limit = { scope:actor.monthly_balance < 5 }
+				add = -20
+			}
+			if = {
+				limit = { scope:actor.modifier:diplomatic_capacity > 1 }
+				#More likely if they have positive diplomatic capacity
+				add = {
+					value = scope:actor.modifier:diplomatic_capacity
+					multiply = 2
+				}
+			}
+			#If the AI has between 0 and 1 diplomatic capacity, we can let it decide...
+			else_if = {
+				limit = { scope:actor.modifier:diplomatic_capacity < 0 }
+				#More likely if they have positive 
+				add = {
+					value = scope:actor.modifier:diplomatic_capacity
+					multiply = 10
+				}
+			}
+		}
+	}
+}
+

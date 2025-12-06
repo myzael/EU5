@@ -1,0 +1,109 @@
+﻿# Intended for coa & flag triggers (using _coa suffix)
+
+central_american_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = central_american_coa_gfx
+}
+
+caribbean_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = caribbean_coa_gfx
+}
+
+aztec_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = aztec_coa_gfx
+}
+
+sinaloa_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = sinaloa_coa_gfx
+}
+
+maya_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = maya_coa_gfx
+}
+
+purepecha_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = purepecha_coa_gfx
+}
+
+mixtec_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = mixtec_coa_gfx
+}
+
+totonac_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = totonac_coa_gfx
+}
+
+huastec_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = huastec_coa_gfx
+}
+
+chichimec_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = chichimec_coa_gfx
+}
+
+pueblo_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = pueblo_coa_gfx
+}
+
+# Gulf & Mississippi Ceremonialism
+gulf_mississippi_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = gulf_mississippi_coa_gfx
+}
+
+# Eastern Coast, Woodlands & Great Lakes
+eastern_woodlands_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = eastern_woodlands_coa_gfx
+}
+
+# Central & Plains
+central_plains_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = central_plains_coa_gfx
+}
+
+ugrian_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = ugrian_coa_gfx
+}
+
+altai_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = altai_coa_gfx
+}
+
+tungusic_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = tungusic_coa_gfx
+}
+
+mongolian_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = mongolian_coa_gfx
+}
+
+greater_sunda_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = greater_sunda_coa_gfx
+}
+
+lesser_sunda_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = lesser_sunda_coa_gfx
+}
+
+filipino_coa_gfx = {
+	priority = 1 # coa
+	culture_tag = filipino_coa_gfx
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_artillery_renaissance_field_cannon_skeleton_mesh"
+	file = "unit_artillery_renaissance_field_cannon_skeleton.mesh"
+	
+	animation = { id = "moving" type = "animations/unit_artillery_renaissance_field_cannon_ani/unit_artillery_renaissance_field_cannon_walk.anim" }
+	animation = { id = "attack" type = "animations/unit_artillery_renaissance_field_cannon_ani/unit_artillery_renaissance_field_cannon_attack.anim" }
+	animation = { id = "idle" type = "animations/unit_artillery_renaissance_field_cannon_ani/unit_artillery_renaissance_field_cannon_idle.anim" }
+
+	meshsettings = {
+		name = "unit_artillery_renaissance_field_cannon_skeletonShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+

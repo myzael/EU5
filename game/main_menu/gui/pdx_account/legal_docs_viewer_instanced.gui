@@ -1,0 +1,42 @@
+caesar_legal_docs_viewer = {
+    blockoverride "sdk_window" { 
+        using = sdk_window_template 
+        movable = no
+    }
+    blockoverride "sdk_button_size" { using = sdk_button_size_template }
+    blockoverride "sdk_button_style" { using = sdk_button_style_template }
+    blockoverride "sdk_text_style" { using = sdk_text_style_template }
+    blockoverride "sdk_vertical_scrollbar" { using = Scrollbar_Vertical }
+    blockoverride "close_button_obj" {}
+    blockoverride "legal_docs_vbox_properties" {
+        layoutpolicy_vertical = expanding
+        layoutpolicy_horizontal = expanding
+        margin = { 10 10 }
+        spacing =  20
+    }
+    blockoverride "legal_docs_scrollarea_size" { minimumsize = { 615 768 } }
+    blockoverride "legal_docs_text_size" {
+        minimumsize = { 600 768 }
+        maximumsize = { 600 -1 }
+
+        background = {
+            using = bg_round_corners
+            alpha = 0.5
+        }
+
+        margin = { 10 10 }
+    }
+}
+
+types CaesarSDK
+{
+	type caesar_legal_docs_viewer = window {
+		name = "legal_docs_viewer"
+        layer = confirmation
+        using = caesar_sdk_modal_template
+
+        legal_docs_viewer = {
+            name = "legal_docs_viewer_inner"
+        }
+	}
+}

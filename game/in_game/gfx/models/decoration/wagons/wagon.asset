@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "wagon_mesh"
+	file = "wagon.mesh"
+
+	meshsettings = {
+		name = "polySurface3Shape"
+		index = 0
+		texture_diffuse = "atlas_master_diffuse.dds"
+		texture_normal = "atlas_master_normal.dds"
+		texture_specular = "atlas_master_properties.dds"
+		shader = "standard"
+	}
+}
+
+entity = {
+	name = "wagon_entity"
+	pdxmesh = "wagon_mesh"
+	attach = { horse_lctr = "resource_horse_a_entity" }
+	default_state = "moving"
+	
+	state = {
+		name = "moving"
+	}
+}
+
+entity = {
+	name = "wagon_entity_no_horse"
+	pdxmesh = "wagon_mesh"
+}

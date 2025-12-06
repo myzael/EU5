@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_weapon_long_pike_mesh"
+	file = "unit_weapon_long_pike.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_long_pikeShape"
+		index = 0
+		texture_diffuse = "unit_weapon_long_pike_diffuse.dds"
+		texture_normal = "unit_weapon_long_pike_normal.dds"
+		#texture_specular = "unit_weapon_long_pike_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_long_pike_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

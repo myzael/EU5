@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "unit_cavalry_horse_saddle_reins_mesh"
+	file = "unit_cavalry_horse_saddle_reins.mesh"
+
+	meshsettings = {
+		name = "unit_cavalry_horse_reinsShape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_reins_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_reins_normal.dds"
+		#texture_specular = "unit_crusader_horse_armor_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_reins_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_cavalry_horse_saddleShape"
+		index = 0
+		texture_diffuse = "unit_cavalry_horse_saddle_a_diffuse.dds"
+		texture_normal = "unit_cavalry_horse_saddle_a_normal.dds"
+		#texture_specular = "unit_cavalry_horse_saddle_a_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_cavalry_horse_saddle_a_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

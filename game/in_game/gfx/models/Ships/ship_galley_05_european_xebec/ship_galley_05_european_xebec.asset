@@ -1,0 +1,71 @@
+pdxmesh = {
+	name = "ship_galley_05_european_xebec_mesh"
+	file = "ship_galley_05_european_xebec.mesh"
+
+	animation = { id = "idle_animation" type = "ship_galley_05_european_xebec_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_galley_05_european_xebec_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_galley_05_european_xebec_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_galley_05_european_xebec_moving.anim" }
+
+	meshsettings = {
+		name = "sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "folded_sailsShape"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "ship_hullShape"
+		index = 0
+		texture_diffuse = "ship_galley_5_european_xebec_diffuse.dds"
+		texture_normal = "ship_galley_5_european_xebec_normal.dds"
+		texture_specular = "ship_galley_5_european_xebec_properties.dds"
+		texture = { file = "ship_galley_5_european_xebec_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_galley_05_european_xebec_entity"
+	pdxmesh = "ship_galley_05_european_xebec_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+
+	attach = { ensign_flag_lctr = "ship_flag_entity" }
+	attach = { mainmast_flag_lctr = "ship_flag_entity" }
+}

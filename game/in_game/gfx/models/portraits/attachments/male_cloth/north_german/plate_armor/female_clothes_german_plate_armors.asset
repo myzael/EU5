@@ -1,0 +1,19 @@
+﻿pdxmesh = {
+	name = "female_clothes_german_armor_silver_mesh"
+	file = "female_clothes_german_plate_armor.mesh"
+
+	meshsettings = {
+		name = "female_clothes_german_plate_armorShape"
+		index = 0
+		texture_diffuse = "male_clothes_german_armor_silver_diffuse.dds"
+		texture_normal = "male_clothes_german_armor_silver_normal.dds"
+		texture_specular = "male_clothes_german_armor_silver_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_german_armor_silver_entity"
+	pdxmesh = "female_clothes_german_armor_silver_mesh"
+}

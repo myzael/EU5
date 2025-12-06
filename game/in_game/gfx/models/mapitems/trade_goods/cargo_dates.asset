@@ -1,0 +1,29 @@
+pdxmesh = {
+	name = "cargo_dates_mesh"
+	file = "cargo_dates.mesh"
+
+	meshsettings = {
+		name = "cargo_datesShape"
+		index = 0
+		texture_diffuse = "wagon_cart_diffuse.dds"
+		texture_normal = "wagon_cart_normal.dds"
+		texture_specular = "wagon_cart_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_datesShape"
+		index = 1
+		texture_diffuse = "cargo_dates_diffuse.dds"
+		texture_normal = "cargo_dates_normal.dds"
+		texture_specular = "cargo_dates_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_dates_entity"
+	pdxmesh = "cargo_dates_mesh"
+}

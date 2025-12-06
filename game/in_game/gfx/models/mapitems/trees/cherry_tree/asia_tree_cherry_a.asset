@@ -1,0 +1,77 @@
+pdxmesh = {
+	name = "asia_tree_cherry_a_mesh"
+	file = "asia_tree_cherry_a.mesh"
+	scale = 1.7
+	lod_percentages = {
+		lod = { index = 1 percent = 5 }
+		lod = { index = 2 percent = 2 }
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod0Shape"
+		index = 0
+		texture_diffuse = "cherry_tree_diffuse.dds"
+		texture_normal = "cherry_tree_normal.dds"
+		texture_specular = "cherry_tree_properties.dds"
+		texture = { file = "tint_cherry_tree.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod0Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod1Shape"
+		index = 0
+		texture_diffuse = "cherry_tree_diffuse.dds"
+		texture_normal = "cherry_tree_normal.dds"
+		texture_specular = "cherry_tree_properties.dds"
+		texture = { file = "tint_cherry_tree.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod1Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod2Shape"
+		index = 0
+		texture_diffuse = "cherry_tree_diffuse.dds"
+		texture_normal = "cherry_tree_normal.dds"
+		texture_specular = "cherry_tree_properties.dds"
+		texture = { file = "tint_cherry_tree.dds" index = 3 srgb = yes }
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+
+	meshsettings = {
+		name = "asia_tree_cherry_a_lod2Shape"
+		index = 1
+		texture_diffuse = "tree_wood_diffuse.dds"
+		texture_normal = "tree_wood_normal.dds"
+		texture_specular = "tree_wood_properties.dds"
+		shader = "tree"
+		shader_file = "gfx/FX/tree.shader"
+	}
+}
+
+entity = {
+	name = "asia_tree_cherry_a_entity"
+	pdxmesh = "asia_tree_cherry_a_mesh"
+}

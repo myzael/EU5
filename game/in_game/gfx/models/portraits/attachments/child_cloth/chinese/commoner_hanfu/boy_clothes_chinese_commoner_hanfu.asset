@@ -1,0 +1,59 @@
+﻿pdxmesh = {
+	name = "boy_clothes_chinese_commoner_hanfu_mesh"
+	file = "boy_clothes_chinese_commoner_hanfu.mesh"
+
+	meshsettings = {
+		name = "boy_clothes_chinese_commoner_hanfuShape"
+		index = 0
+		texture_diffuse = "boy_clothes_chinese_commoner_hanfu_diffuse.dds"
+		texture_normal = "boy_clothes_chinese_commoner_hanfu_normal.dds"
+		texture_specular = "boy_clothes_chinese_commoner_hanfu_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "boy_clothes_chinese_commoner_hanfu_entity"
+	pdxmesh = "boy_clothes_chinese_commoner_hanfu_mesh"
+
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/child_cloth/chinese/commoner_hanfu/boy_clothes_chinese_commoner_hanfu_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "chinese_peasant_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+pdxmesh = {
+	name = "girl_clothes_chinese_commoner_hanfu_mesh"
+	file = "girl_clothes_chinese_commoner_hanfu.mesh"
+
+	meshsettings = {
+		name = "girl_clothes_chinese_commoner_hanfuShape"
+		index = 0
+		texture_diffuse = "boy_clothes_chinese_commoner_hanfu_diffuse.dds"
+		texture_normal = "boy_clothes_chinese_commoner_hanfu_normal.dds"
+		texture_specular = "boy_clothes_chinese_commoner_hanfu_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "girl_clothes_chinese_commoner_hanfu_entity"
+	pdxmesh = "girl_clothes_chinese_commoner_hanfu_mesh"
+
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/child_cloth/chinese/commoner_hanfu/boy_clothes_chinese_commoner_hanfu_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "chinese_peasant_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

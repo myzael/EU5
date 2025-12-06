@@ -1,0 +1,83 @@
+﻿pdxmesh = {
+	name = "male_ger_cloth_set_a_chain_jewellery_mesh"
+	file = "male_ger_cloth_set_a_chain_jewellery.mesh"
+
+	meshsettings = {
+		name = "male_ger_cloth_set_a_chain_jewelleryShape"
+		index = 0
+		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
+		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
+		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
+		shader = "portrait_hair_double_sided"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_ger_cloth_set_a_chain_jewellery_entity"
+	pdxmesh = "male_ger_cloth_set_a_chain_jewellery_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "male_ger_cloth_set_b_chain_jewellery_mesh"
+	file = "male_ger_cloth_set_b_chain_jewellery.mesh"
+
+	meshsettings = {
+		name = "male_ger_cloth_set_b_chain_jewelleryShape"
+		index = 0
+		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
+		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
+		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
+		shader = "portrait_hair_double_sided"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_ger_cloth_set_b_chain_jewellery_entity"
+	pdxmesh = "male_ger_cloth_set_b_chain_jewellery_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "male_ger_cloth_set_c_chain_jewellery_mesh"
+	file = "male_ger_cloth_set_c_chain_jewellery.mesh"
+
+	meshsettings = {
+		name = "male_ger_cloth_set_c_chain_jewelleryShape"
+		index = 0
+		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
+		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
+		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
+		shader = "portrait_hair_double_sided"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_ger_cloth_set_c_chain_jewellery_entity"
+	pdxmesh = "male_ger_cloth_set_c_chain_jewellery_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}

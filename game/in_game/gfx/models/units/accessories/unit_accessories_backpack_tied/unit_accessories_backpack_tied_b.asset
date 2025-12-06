@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_backpack_tied_b_mesh"
+	file = "unit_accessories_backpack_tied_b.mesh"
+
+	meshsettings = {
+		name = "unit_accessories_backpack_tied_bShape"
+		index = 0
+		texture_diffuse = "unit_accessories_backpack_tied_diffuse.dds"
+		texture_normal = "unit_accessories_backpack_tied_normal.dds"
+		#texture_specular = "unit_accessories_backpack_tied_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_backpack_tied_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

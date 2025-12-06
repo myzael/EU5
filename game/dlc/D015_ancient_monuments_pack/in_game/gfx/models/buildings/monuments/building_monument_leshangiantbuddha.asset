@@ -1,0 +1,113 @@
+pdxmesh = {
+	name = "building_monument_leshangiantbuddha_mesh"
+	file = "building_monument_leshangiantbuddha.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 20.0 }
+		lod = { index = 2 percent = 14.0 }
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_statue_lod0Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_statue_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_statue_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_statue_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_monument_leshangiantbuddha_statue_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_decal_lod0Shape"
+		index = 0
+		texture_diffuse = "decal_monument_leshangiantbuddha_diffuse.dds"
+		texture_normal = "decal_monument_leshangiantbuddha_normal.dds"
+		texture_specular = "decal_monument_leshangiantbuddha_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_mountain_lod0Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_mountain_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_mountain_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_mountain_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_monument_leshangiantbuddha_mountain_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_statue_lod1Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_statue_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_statue_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_statue_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_monument_leshangiantbuddha_statue_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_decal_lod1Shape"
+		index = 0
+		texture_diffuse = "decal_monument_leshangiantbuddha_diffuse.dds"
+		texture_normal = "decal_monument_leshangiantbuddha_normal.dds"
+		texture_specular = "decal_monument_leshangiantbuddha_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_mountain_lod1Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_mountain_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_mountain_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_mountain_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_monument_leshangiantbuddha_mountain_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_statue_lod2Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_statue_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_statue_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_statue_properties.dds"
+		shader = "standard"
+		#texture = { file = "building_monument_leshangiantbuddha_statue_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_decal_lod2Shape"
+		index = 0
+		texture_diffuse = "decal_monument_leshangiantbuddha_diffuse.dds"
+		texture_normal = "decal_monument_leshangiantbuddha_normal.dds"
+		texture_specular = "decal_monument_leshangiantbuddha_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_monument_leshangiantbuddha_mountain_lod2Shape"
+		index = 0
+		texture_diffuse = "building_monument_leshangiantbuddha_mountain_diffuse.dds"
+		texture_normal = "building_monument_leshangiantbuddha_mountain_normal.dds"
+		texture_specular = "building_monument_leshangiantbuddha_mountain_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		#texture = { file = "building_monument_leshangiantbuddha_mountain_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_monument_leshangiantbuddha_entity"
+	pdxmesh = "building_monument_leshangiantbuddha_mesh"
+}

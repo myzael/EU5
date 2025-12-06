@@ -1,0 +1,71 @@
+﻿node_editor_meta={
+	view={
+		position={ -28.672882 -93.928284 }
+		zoom=0.569231
+	}
+	nodes={
+		0={
+			position={ 182.294189 272.588074 }
+			name="Slash and stab sparks"
+			size={ 1491.229980 841.614136 }
+		}
+		1={
+			position={ 202.326782 354.457764 }
+			name="Tip of Spear"
+			size={ 591.836304 287.000000 }
+		}
+		2={
+			position={ 1722.772827 534.779602 }
+		}
+		3={
+			position={ 813.520752 638.892700 }
+		}
+		4={
+			position={ 1824.930176 798.184937 }
+		}
+		5={
+			position={ 813.203613 874.064575 }
+		}
+		6={
+			position={ 1192.861572 638.893066 }
+		}
+		7={
+			position={ 1187.956177 869.476440 }
+		}
+		8={
+			position={ 287.324951 439.458252 }
+		}
+		9={
+			position={ 258.202332 678.497314 }
+		}
+		10={
+			position={ 251.766907 904.492493 }
+		}
+		11={
+			position={ 963.544067 1145.562500 }
+			inlined=yes
+		}
+		12={
+			position={ 1270.638306 1420.499023 }
+			inlined=yes
+		}
+		13={
+			position={ 1212.803833 968.692505 }
+			inlined=yes
+		}
+		14={
+			position={ 1212.803833 968.692505 }
+			inlined=yes
+		}
+		15={
+			position={ 1977.395020 658.314026 }
+			inlined=yes
+		}
+		16={
+			position={ 2284.489258 933.250549 }
+			inlined=yes
+		}
+	}
+	disabled_links={
+	}
+}

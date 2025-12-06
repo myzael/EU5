@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_mustaches_beard_thin_mesh"
+	file = "unit_mustaches_beard_thin.mesh"
+
+	meshsettings = {
+		name = "unit_mustaches_beard_thinShape"
+		index = 0
+		texture_diffuse = "unit_mustaches_beard_thin_diffuse.dds"
+		texture_normal = "unit_mustaches_beard_thin_normal.dds"
+		texture_specular = "unit_beard_cutted_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_beard_bushy_beard_moustache_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

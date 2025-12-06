@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_glass_mesh"
+	file = "cargo_glass.mesh"
+
+	meshsettings = {
+		name = "cargo_glass120Shape"
+		index = 0
+		texture_diffuse = "cargo_glass_diffuse.dds"
+		texture_normal = "cargo_glass_normal.dds"
+		texture_specular = "cargo_glass_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_glass_entity"
+	pdxmesh = "cargo_glass_mesh"
+}

@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_throwing_knife_mesh"
+	file = "unit_weapon_throwing_knife.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_throwing_knifeShape"
+		index = 0
+		texture_diffuse = "unit_weapon_throwing_knife_diffuse.dds"
+		texture_normal = "unit_weapon_throwing_knife_normal.dds"
+		#texture_specular = "unit_weapon_throwing_knife_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_throwing_knife_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

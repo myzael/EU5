@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_sword_wood_mesh"
+	file = "unit_weapon_sword_wood.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_sword_woodShape"
+		index = 0
+		texture_diffuse = "unit_weapon_sword_wood_diffuse.dds"
+		texture_normal = "unit_weapon_sword_wood_normal.dds"
+		#texture_specular = "unit_weapon_sword_wood_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_sword_wood_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

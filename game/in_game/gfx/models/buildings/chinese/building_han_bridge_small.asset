@@ -1,0 +1,80 @@
+pdxmesh = {
+	name = "building_han_bridge_small_mesh"
+	file = "building_han_bridge_small.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "decal_han_bridge_bShape"
+		index = 0
+		texture_diffuse = "building_han_bridge_b_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "building_han_bridge_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_bridge_b_lod_0Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_han_bridge_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_han_bridge_b1Shape"
+		index = 0
+		texture_diffuse = "building_han_bridge_b_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "building_han_bridge_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_bridge_b_lod_01Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_han_bridge_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_han_bridge_b2Shape"
+		index = 0
+		texture_diffuse = "building_han_bridge_b_diffuse.dds"
+		texture_normal = "building_han_bridge_b_normal.dds"
+		texture_specular = "building_han_bridge_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "building_han_bridge_b_lod_02Shape"
+		index = 0
+		texture_diffuse = "chinese_atlas_master_diffuse.dds"
+		texture_normal = "chinese_atlas_master_normal.dds"
+		texture_specular = "chinese_atlas_master_properties.dds"
+		shader = "snap_to_terrain_atlas"
+		texture = { file = "building_han_bridge_small_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "building_han_bridge_small_entity"
+	pdxmesh = "building_han_bridge_small_mesh"
+}

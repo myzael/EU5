@@ -1,0 +1,28 @@
+﻿pdxmesh = {
+	name = "male_capes_aztec_war_flags_mesh"
+	file = "male_capes_aztec_war_flags.mesh"
+
+	meshsettings = {
+		name = "male_capes_aztec_war_flagsShape"
+		index = 0
+		texture_diffuse = "male_capes_aztec_war_flags_diffuse.dds"
+		texture_normal = "male_capes_aztec_war_flags_normal.dds"
+		texture_specular = "male_capes_aztec_war_flags_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_capes_aztec_war_flags_entity"
+	pdxmesh = "male_capes_aztec_war_flags_mesh"
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_capes/aztec/war_flags/male_capes_aztec_war_flags_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "aztec_war_01"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

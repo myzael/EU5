@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "flag_mesh"
+	file = "flag.mesh"
+
+	meshsettings = {
+		name = "pPlaneShape6"
+		index = 0
+		texture_diffuse = "flag_cloth_diffuse.dds"
+		texture_normal = "flag_cloth_normal.dds"
+		texture_specular = "flag_cloth_properties.dds"
+		shader = "standard_waving_flag_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "flag_entity"
+	pdxmesh = "flag_mesh"
+}

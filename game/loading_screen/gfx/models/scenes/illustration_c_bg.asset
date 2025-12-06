@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "illustration_c_bg_mesh"
+	file = "illustration_c_bg.mesh"
+
+	meshsettings = {
+		name = "illustration_c_bg|illustration_b_backplane|illustration_b_backp"
+		index = 0
+		texture_diffuse = "illustration_C_sky.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+	}
+}
+
+entity = {
+	name = "illustration_c_bg_entity"
+	pdxmesh = "illustration_c_bg_mesh"
+}

@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "resource_clay_raw_c_mesh"
+	file = "resource_clay_raw_c.mesh"
+
+	meshsettings = {
+		name = "resource_clay_raw_cShape"
+		index = 0
+		texture_diffuse = "resource_clay_raw_c_diffuse.dds"
+		texture_normal = "resource_clay_raw_c_normal.dds"
+		texture_specular = "resource_clay_raw_c_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "resource_clay_raw_c_entity"
+	pdxmesh = "resource_clay_raw_c_mesh"
+}

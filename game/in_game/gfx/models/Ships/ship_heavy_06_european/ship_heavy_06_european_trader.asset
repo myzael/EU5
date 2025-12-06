@@ -1,0 +1,374 @@
+pdxmesh = {
+	name = "ship_heavy_06_european_trader_mesh"
+	file = "ship_heavy_06_european.mesh"
+
+	animation = { id = "idle_animation" type = "ship_heavy_06_european_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_heavy_06_european_unfold.anim" }
+	animation = { id = "moving_animation" type = "ship_heavy_06_european_moving.anim" }
+	animation = { id = "attack_r_animation" type = "ship_heavy_06_european_attack_r.anim" }
+
+	meshsettings = {
+		name = "folded_sailsShape"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard"
+	}
+
+	meshsettings = {
+		name = "SailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_hullShape"
+		index = 0
+		texture_diffuse = "ship_heavy_06_european_diffuse.dds"
+		texture_normal = "ship_heavy_06_european_normal.dds"
+		texture_specular = "ship_heavy_06_european_properties.dds"
+		texture = { file = "ship_heavy_06_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull"
+	}
+}
+
+entity = {
+	name = "ship_heavy_06_european_trader_entity"
+	pdxmesh = "ship_heavy_06_european_trader_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "move"
+    	animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "move2"
+    	animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+		event = {
+            entity_editor_id = "1"
+            time = 2.214
+            node = "cannon_door_right_lct_001"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.224
+            node = "cannon_door_right_lct_022"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.234
+            node = "cannon_door_right_lct_024"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.254
+            node = "cannon_door_right_lct_002"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.264
+            node = "cannon_door_right_lct_020"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.274
+            node = "cannon_door_right_lct_025"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.314
+            node = "cannon_door_right_lct_003"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.324
+            node = "cannon_door_right_lct_019"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.334
+            node = "cannon_door_right_lct_028"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.354
+            node = "cannon_door_right_lct_004"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.364
+            node = "cannon_door_right_lct_018"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.374
+            node = "cannon_door_right_lct_029"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.414
+            node = "cannon_door_right_lct_005"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.424
+            node = "cannon_door_right_lct_017"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.434
+            node = "cannon_door_right_lct_033"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.454
+            node = "cannon_door_right_lct_006"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.464
+            node = "cannon_door_right_lct_016"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.474
+            node = "cannon_door_right_lct_023"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.514
+            node = "cannon_door_right_lct_007"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.524
+            node = "cannon_door_right_lct_015"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.534
+            node = "cannon_door_right_lct_032"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.554
+            node = "cannon_door_right_lct_008"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.564
+            node = "cannon_door_right_lct_014"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.574
+            node = "cannon_door_right_lct_027"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.614
+            node = "cannon_door_right_lct_009"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.624
+            node = "cannon_door_right_lct_013"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.634
+            node = "cannon_door_right_lct_031"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		
+		event = {
+            entity_editor_id = "1"
+            time = 2.654
+            node = "cannon_door_right_lct_010"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.664
+            node = "cannon_door_right_lct_012"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.674
+            node = "cannon_door_right_lct_030"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+		event = {
+            entity_editor_id = "1"
+            time = 2.714
+            node = "cannon_door_right_lct_011"
+            keep_particle = yes
+            particle = "cannon_explosion_v2"
+        }
+
+	}
+		attach = { cannon_door_left_lct_001 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_002 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_003 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_004 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_005 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_006 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_007 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_008 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_009 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_010 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_011 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_012 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_013 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_014 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_015 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_016 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_017 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_018 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_019 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_020 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_021 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_022 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_023 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_024 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_025 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_026 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_027 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_028 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_029 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_030 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_031 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_032 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_left_lct_033 = "cannon_door_left_trader_entity" }
+		attach = { cannon_door_right_lct_001 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_002 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_003 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_004 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_005 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_006 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_007 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_008 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_009 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_010 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_011 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_012 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_013 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_014 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_015 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_016 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_017 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_018 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_019 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_020 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_021 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_022 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_023 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_024 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_025 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_026 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_027 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_028 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_029 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_030 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_031 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_032 = "cannon_door_right_trader_entity" }
+		attach = { cannon_door_right_lct_033 = "cannon_door_right_trader_entity" }
+		attach = { deck_cannon_left_lctr_001 = "cannon_trader_entity" }
+		attach = { deck_cannon_left_lctr_002 = "cannon_trader_entity" }
+		attach = { deck_cannon_left_lctr_003 = "cannon_trader_entity" }
+		attach = { deck_cannon_left_lctr_004 = "cannon_trader_entity" }
+		attach = { deck_cannon_right_lctr_004 = "cannon_trader_entity" }
+		attach = { deck_cannon_right_lctr_001 = "cannon_trader_entity" }
+		attach = { deck_cannon_right_lctr_003 = "cannon_trader_entity" }
+		attach = { deck_cannon_right_lctr_002 = "cannon_trader_entity" }
+		attach = { deck_cannon_right_lctr_004 = "cannon_trader_entity" }
+		attach = { ensign_flag_lctr = "ship_flag_trader_entity" }
+		attach = { mainmast_flag_lctr = "ship_flag_trader_entity" }
+		attach = { pennant_flag_lctr_001 = "flag_pennant_trader_entity" }
+		attach = { pennant_flag_lctr_002 = "flag_pennant_trader_entity" }	
+}

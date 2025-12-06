@@ -1,0 +1,49 @@
+
+# Meshes
+## Animated flag
+pdxmesh = {
+	name = "ui_flag_01_aimated_mesh"
+	file = "ui_flag_01.mesh"
+
+	meshsettings = {
+		name = "flag_01Shape"
+		index = 0
+		texture_diffuse = "ui_flag_01_diffuse.dds"
+		texture_normal = "ui_flag_01_normal.dds"
+		texture_specular = "ui_flag_01_properties.dds"
+		shader = "gui_flag_textured_vertex_anim"
+		shader_file = "gfx/FX/gui_flag_3d.shader"
+
+	}
+}
+
+## Static flag
+pdxmesh = {
+	name = "ui_flag_01_mesh"
+	file = "ui_flag_01.mesh"
+
+	meshsettings = {
+		name = "flag_01Shape"
+		index = 0
+		texture_diffuse = "ui_flag_01_diffuse.dds"
+		texture_normal = "ui_flag_01_normal.dds"
+		texture_specular = "ui_flag_01_properties.dds"
+		shader = "gui_flag_textured"
+		shader_file = "gfx/FX/gui_flag_3d.shader"
+
+	}
+}
+
+
+# Entities
+## Animated flag
+entity = {
+	name = "ui_flag_01_anim_entity"
+	pdxmesh = "ui_flag_01_aimated_mesh"
+}
+
+## Static flag
+entity = {
+	name = "ui_flag_01_entity"
+	pdxmesh = "ui_flag_01_mesh"
+}

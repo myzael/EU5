@@ -1,0 +1,48 @@
+pdxmesh = {
+	name = "Vineyard_mesh"
+	file = "Vineyard.mesh"
+	scale = 1.2
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	meshsettings = {
+		name = "Vineyard_lod0Shape"
+		index = 0
+		texture_diffuse = "Vineyards_diffuse.dds"
+		texture_normal = "Vineyards_normal.dds"
+		texture_specular = "Vineyards_properties.dds"
+		texture = { file = "tint_resource_vineyard.dds" index = 3 srgb = yes }
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Vineyard_lod1Shape"
+		index = 0
+		texture_diffuse = "Vineyards_diffuse.dds"
+		texture_normal = "Vineyards_normal.dds"
+		texture_specular = "Vineyards_properties.dds"
+		texture = { file = "tint_resource_vineyard.dds" index = 3 srgb = yes }
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "Vineyard_lod2Shape"
+		index = 0
+		texture_diffuse = "Vineyards_diffuse.dds"
+		texture_normal = "Vineyards_normal.dds"
+		texture_specular = "Vineyards_properties.dds"
+		texture = { file = "tint_resource_vineyard.dds" index = 3 srgb = yes }
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "Vineyard_entity"
+	pdxmesh = "Vineyard_mesh"
+}

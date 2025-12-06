@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "male_headwear_iroquois_imperial_silver_crown_mesh"
+	file = "male_headwear_iroquois_imperial_silver_crown.mesh"
+	
+	meshsettings = {
+		name = "male_headwear_iroquois_imperial_silver_crownShape"
+		index = 0
+		texture_diffuse = "male_headwear_iroquois_imperial_silver_crown_diffuse.dds"
+		texture_normal = "male_headwear_iroquois_imperial_silver_crown_normal.dds"
+		texture_specular = "male_headwear_iroquois_imperial_silver_crown_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headwear_iroquois_imperial_silver_crown_entity"
+	pdxmesh = "male_headwear_iroquois_imperial_silver_crown_mesh"
+}

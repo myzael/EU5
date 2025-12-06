@@ -1,0 +1,74 @@
+﻿abrahamic_gfx = {
+	priority = 1
+	culture_tag = abrahamic_gfx
+}
+
+muslim_gfx = {
+	priority = 100 # religion group
+	culture_tag = muslim_gfx
+}
+
+judaism_gfx = {
+	priority = 100 # religion group
+	culture_tag = judaism_gfx
+}
+
+christian_gfx = {
+	priority = 100 # religion group
+	culture_tag = christian_gfx
+}
+
+folk_african_gfx = {
+	priority = 100 # religion group
+	culture_tag = folk_african_gfx
+}
+
+western_christian_gfx = {
+	priority = 150 # religion group
+	culture_tag = western_christian_gfx
+}
+
+eastern_christian_gfx = {
+	priority = 150 # religion group
+	culture_tag = eastern_christian_gfx
+}
+
+orthodox_gfx = {
+	priority = 200 # religion
+	culture_tag = orthodox_gfx
+}
+
+catholic_gfx = {
+	priority = 200 # religion
+	culture_tag = catholic_gfx
+}
+
+protestant_gfx = {
+	priority = 200 # religion
+	culture_tag = protestant_gfx
+}
+
+shinto_gfx = {
+	priority = 200 # religion
+	culture_tag = shinto_gfx
+}
+
+dharmic_gfx = {
+	priority = 100 # religion group
+	culture_tag = dharmic_gfx
+}
+
+tonal_gfx = {
+	priority = 100 # religion group
+	culture_tag = tonal_gfx
+}
+
+sikhism_gfx = {
+	priority = 100 # religion group
+	culture_tag = sikhism_gfx
+}
+
+buddhist_gfx = {
+	priority = 100 # religion group
+	culture_tag = buddhist_gfx
+}

@@ -1,0 +1,20 @@
+pdxmesh = {
+	name = "unit_view_plane_007_mesh"
+	file = "unit_view_plane_007.mesh"
+
+	meshsettings = {
+		name = "illustration_007Shape"
+		index = 0
+		texture_diffuse = "illustration_a_sky_.dds"
+		shader = "standard_added_alphas"
+		shader_file = "gfx/FX/pdxmesh_without_terrain.shader"
+		#you want to render the ones closest to camera the latest in order alphas to work correctly, 
+		#being Illustration_1 the first and  _32 the latest
+		subpass = "Illustration_18"
+	}
+}
+
+entity = {
+	name = "unit_view_plane_007_entity"
+	pdxmesh = "unit_view_plane_007_mesh"
+}

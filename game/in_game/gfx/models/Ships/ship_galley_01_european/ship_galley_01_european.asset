@@ -1,0 +1,162 @@
+pdxmesh = {
+	name = "ship_galley_01_european_mesh"
+	file = "ship_galley_01_european.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "idle_animation" type = "ship_galley_01_european_idle.anim" }
+	animation = { id = "unfold_animation" type = "ship_galley_01_european_unfold.anim" }
+	animation = { id = "attack_r_animation" type = "ship_galley_01_european_attack_r.anim" }
+	animation = { id = "moving_animation" type = "ship_galley_01_european_moving.anim" }
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_01_european|Sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_01_european|folded_sails|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_01_european|Sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_01_european|folded_sails|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_01_european|Sails|sails|sailsShape"
+		index = 0
+		texture_diffuse = "ship_atlas_master_diffuse.dds"
+		texture_normal = "ship_atlas_master_normal.dds"
+		texture_specular = "ship_atlas_master_properties.dds"
+		shader = "ship_sail_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_01_european|folded_sails|folded_sails|folded_"
+		index = 0
+		texture_diffuse = "ship_alt_diffuse.dds"
+		texture_normal = "ship_alt_normal.dds"
+		texture_specular = "ship_alt_properties.dds"
+		shader = "standard_show_in_papermap"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|ship_galley_01_european|ship_hull|ship_hull_lct|ship_hull"
+		index = 0
+		texture_diffuse = "ship_galley_1_european_diffuse.dds"
+		texture_normal = "ship_galley_1_european_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_1_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_1|ship_galley_01_european|ship_hull|ship_hull_lct|ship_hull"
+		index = 0
+		texture_diffuse = "ship_galley_1_european_diffuse.dds"
+		texture_normal = "ship_galley_1_european_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_1_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+
+	meshsettings = {
+		name = "LOD_2|ship_galley_01_european|ship_hull|ship_hull_lct|ship_hull"
+		index = 0
+		texture_diffuse = "ship_galley_1_european_diffuse.dds"
+		texture_normal = "ship_galley_1_european_normal.dds"
+		texture_specular = "ship_galley_1_european_properties.dds"
+		texture = { file = "ship_galley_1_european_mask.dds" index = 5 }
+		texture = { file = "ship_trim_diffuse.dds" index = 6 }
+		texture = { file = "ship_trim_normal.dds" index = 7 }
+		texture = { file = "ship_trim_properties.dds" index = 8 }
+		shader = "ship_hull_show_in_papermap"
+	}
+}
+
+entity = {
+	name = "ship_galley_01_european_entity"
+	pdxmesh = "ship_galley_01_european_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+		
+	}
+	state = {
+		name = "unfold"
+		animation = "unfold_animation"
+		looping = no
+		next_state = "move2"
+	}
+	state = {
+		name = "attack_r"
+		animation = "attack_r_animation"
+		event = {
+            entity_editor_id = "1"
+            time = 2.214
+            node = "deck_oar_right_lctr_001"
+            keep_particle = no
+            particle = "particle_effects/Arrow_attack"
+        }
+	}
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		next_state = "move2"
+	}
+
+	attach = { deck_oar_right_lctr_001 = "oars_small_right_entity" }
+	attach = { deck_oar_right_lctr_002 = "oars_small_right_entity" }
+	attach = { deck_oar_right_lctr_003 = "oars_small_right_entity" }
+	attach = { deck_oar_right_lctr_004 = "oars_small_right_entity" }
+	attach = { deck_oar_right_lctr_005 = "oars_small_right_entity" }
+	attach = { deck_oar_left_lctr_001 = "oars_small_left_entity" }
+	attach = { deck_oar_left_lctr_002 = "oars_small_left_entity" }
+	attach = { deck_oar_left_lctr_003 = "oars_small_left_entity" }
+	attach = { deck_oar_left_lctr_004 = "oars_small_left_entity" }
+	attach = { deck_oar_left_lctr_005 = "oars_small_left_entity" }
+	attach = { mainmast_flag_lctr = "ship_flag_entity" }
+
+}
+	

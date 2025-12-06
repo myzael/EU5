@@ -1,0 +1,259 @@
+﻿mesh_list = 
+{
+	name = "D017_the_kaaba_mesh"
+	scale_settings_large = { bias = 0 min = 1 max = 1 }
+	should_spawn_flags = no	
+	D017_building_monument_the_kaaba_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_mahabodhi_mesh"
+	scale_settings_large = { bias = 0 min = 0.8 max = 0.8 }
+	should_spawn_flags = no	
+	D017_monument_mahabodhi_temple_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_ranganathaswamy_mesh"
+	scale_settings_large = { bias = 0 min = 0.6 max = 0.6 }
+	should_spawn_flags = no	
+	D017_monument_ranganathaswamy_temple_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_confucius_mesh"
+	scale_settings_large = { bias = 0 min = 0.7 max = 0.7 }
+	should_spawn_flags = no	
+	D017_building_monument_temple_of_confuncious_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_holy_sepulchre_mesh"
+	scale_settings_large = { bias = 0 min = 0.9 max = 1.0 }
+	should_spawn_flags = no	
+	D017_monument_church_of_the_holy_sepulchre_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_cholula_mesh"
+	scale_settings_large = { bias = 0 min = 0.7 max = 0.8 }
+	should_spawn_flags = no	
+	D017_building_monument_the_great_pyramid_of_cholula_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_enryakuji_mesh"
+	scale_settings_large = { bias = 0 min = 0.6 max = 0.6 }
+	should_spawn_flags = no	
+	D017_monument_enryakuji_temple_mesh = 1
+}
+
+mesh_list = 
+{
+	name = "D017_st_peters_basilica_mesh"
+	scale_settings_large = { bias = 0 min = 1.3 max = 1.3 }
+	should_spawn_flags = no	
+	D017_monument_st_peters_basilica_mesh = 1
+}
+
+
+template unique_buildings
+{
+	code =
+	[[
+		D017_the_kaaba = {
+			dlc = "Sacred Sites"
+			only_in_location = mecca
+			order = -1 
+			size = large
+			mesh_list = D017_the_kaaba_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {9509.036 4.282192 4530.233}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = kaaba
+			}
+		}
+
+		D017_mahabodhi = {
+
+			dlc = "Sacred Sites"
+			only_in_location = gaya
+			order = -1 
+			size = large
+			mesh_list = D017_mahabodhi_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {11557.258 3.1834335 4724.2695}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = bodh_gaya
+			}
+		}
+
+		D017_ranganathaswamy = {
+
+			dlc = "Sacred Sites"
+			only_in_location = srirangam
+			order = -1 
+			size = large
+			mesh_list = D017_ranganathaswamy_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {11274.105 3.1183262 3951.8098}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = ranganathaswamy_temple
+			}
+		}
+
+		D017_confucius = {
+
+			dlc = "Sacred Sites"
+			only_in_location = qufu
+			order = 7 
+			size = large
+			mesh_list = D017_confucius_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {13019.907 3.1254196 5377.486}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = temple_of_confucius
+			}
+		}
+
+		D017_holy_sepulchre = {
+
+			dlc = "Sacred Sites"
+			only_in_location = jerusalem
+			order = 6
+			size = large
+			mesh_list = D017_holy_sepulchre_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {9302.959 4.0647726 5140.689}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = jerusalem_the_holy_city_catholic
+			}
+			link_tooltip = {
+				type = holy_site
+				data = jerusalem_episcopal_see_nestorian
+			}
+			link_tooltip = {
+				type = holy_site
+				data = jerusalem_episcopal_see_orthodox
+			}
+			link_tooltip = {
+				type = holy_site
+				data = jerusalem_the_holy_city_islam
+			}
+		}
+
+		D017_cholula = {
+
+			dlc = "Sacred Sites"
+			only_in_location = cholollan
+			order = -1 
+			size = large
+			mesh_list = D017_cholula_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {3224.0193 11.546908 4400.2085}
+			allow_demote = no
+			link_tooltip = {
+				type = holy_site
+				data = cholula_holy_city
+			}
+		}
+
+		D017_enryakuji = {
+
+			dlc = "Sacred Sites"
+			only_in_location = kurita
+			order = -1 
+			size = large
+			mesh_list = D017_enryakuji_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {13877.967 3.4258728 5329.4844}
+			allow_demote = no
+			link_tooltip = 
+			{
+				type = holy_site
+				data = enryaku_ji
+			}
+		}
+
+		D017_st_peters_basilica = {
+
+			dlc = "Sacred Sites"
+			only_in_location = rome
+			order = -1 
+			size = large
+			mesh_list = D017_st_peters_basilica_mesh
+			contributors = 
+			{	
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights 
+
+			filter_data = {8259.082 2.9309483 5746.059}
+			allow_demote = no
+			link_tooltip = 
+			{
+				type = holy_site
+				data = the_vatican
+			}
+		}
+	]]
+}

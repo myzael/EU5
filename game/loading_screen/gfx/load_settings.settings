@@ -1,0 +1,40 @@
+#This file determines which folders are available to be loaded at a lower resolution. 
+#all *.dds files will be loaded in at a lower resolution. png & tga files are kept at same resolution
+#The order of the settings matter
+#The array signifies how many mipmaps will be skipped loading at low/medium/high/ultra quality
+
+"_preserve_quality.dds" = { 0 0 0 0 } #Anything implementing this suffix will not loose quality when switching options
+
+#specific stuff on top, algorithm will stop at first hit
+"gfx/map/environment" = { -2 -1 0 0 }
+"gfx/map/rivers" = { -1 0 0 0 }
+"gfx/map/surround_map/surround_mask.dds" = { -3 -1 0 0 }
+"gfx/map/surround_map" = { -1 0 0 0 }
+"gfx/map/textures" = { -4 -2 -1 0 }
+"gfx/map/water" = { -2 -1 0 0 }
+"gfx/map/water/watercolor_rgb_waterspec_a.dds" = { -2 -1 -1 0 }
+"gfx/map" = { 0 0 0 0 }
+
+"gfx/portraits/accessory_variations/textures/patterns" = { -1 0 0 0 }
+
+"gfx/models/portraits" = { -4 -2 -1 0 }
+
+"gfx/interface/illustrations/loading_screens/frontend_bg_1.dds" = { 0 0 0 0 }
+"gfx/interface/illustrations/societal_values" = {-1 0 0 0} # These look very blurry ingame on any lower lod
+"gfx/interface/illustrations" = {-2 -1 0 0}
+"gfx/interface/advance" = {-2 -1 0 0}
+"gfx/interface/icons/trade_goods/illustrations" = {-2 -1 0 0}
+"gfx/interface/icons/gov_reforms" = {-2 -1 0 0}
+"gfx/interface/icons/international_organizations/big_icons"   = {-2 -1 0 0}
+"gfx/interface/component_overlay" = {-2 -1 0 0}
+"gfx/interface" = {0 0 0 0}
+
+"gfx/coat_of_arms" = { -1 0 0 0 }
+
+"gfx/terrain2" = {-4 -2 -1 0}
+
+"gfx/unit_graphics/materials/textures" = {-1 0 0 0}
+
+"_mask.dds" =  { 0 0 0 0} #Any thing that is a mask should not lose quality
+
+"gfx/models" = { -2 -1 0 0 } #Any texture coming from the gfx/models folder will be loaded with skipping 4 mipmaps at low quality, or 2 at medium, or 1 at high, or 0 at ultra settings

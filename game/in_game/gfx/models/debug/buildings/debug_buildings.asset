@@ -1,0 +1,113 @@
+
+pdxmesh = {
+	name = "debug_building_blue_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_blue.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_yellow_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_yellow.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_red_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_red.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_pink_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_pink.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_purple_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_purple.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_orange_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_orange.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}
+pdxmesh = {
+	name = "debug_building_green_mesh"
+	file = "test_cube.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "debug_green.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+	scale = 1.0
+	cull_distance = 5000
+}

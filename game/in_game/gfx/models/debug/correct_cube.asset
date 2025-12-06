@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "correct_cube_mesh"
+	file = "correct_cube.mesh"
+
+	meshsettings = {
+		name = "pCube3Shape"
+		index = 0
+		texture_diffuse = "test_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "correct_cube_entity"
+	pdxmesh = "correct_cube_mesh"
+}

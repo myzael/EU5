@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "resource_asia_elephant_mesh"
+	file = "resource_asia_elephant.mesh"
+
+	animation = { id = "elephant_idle_animation" type = "resource_asia_elephant_elephant_idle.anim" }
+
+	meshsettings = {
+		name = "resource_asia_elephant|elephant_a|elephant_a"
+		index = 0
+		texture_diffuse = "resource_asia_elephant_a_diffuse.dds"
+		texture_normal = "resource_asia_elephant_a_normal.dds"
+		texture_specular = "resource_asia_elephant_a_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_asia_elephant_entity"
+	pdxmesh = "resource_asia_elephant_mesh"
+
+	default_state = "elephant_idle"
+	state = {
+		name = "elephant_idle"
+		animation = "elephant_idle_animation"
+	}
+}

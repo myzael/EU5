@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_accessories_mantle_simple_mesh"
+	file = "unit_accessories_mantle_simple.mesh"
+	
+
+	meshsettings = {
+		name = "unit_accessories_mantle_simpleShape"
+		index = 0
+		texture_diffuse = "unit_accessories_mantle_simple_diffuse.dds"
+		texture_normal = "unit_accessories_mantle_simple_normal.dds"
+		#texture_specular = "unit_accessories_mantle_simple_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_mantle_simple_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

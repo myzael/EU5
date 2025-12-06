@@ -1,0 +1,25 @@
+pdxmesh = {
+	name = "mm_sheep_0101_mesh"
+	file = "mm_sheep_0101.mesh"
+
+	animation = { id = "idle_animation" type = "mm_sheep_0101_idle.anim" }
+
+	meshsettings = {
+		name = "mm_sheep_0101Shape"
+		index = 0
+		texture_diffuse = "sheep_0101_diffuse.dds"
+		texture_normal = "sheep_0101_normal.dds"
+		texture_specular = "sheep_0101_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+	}
+}
+entity = {
+	name = "mm_sheep_0101_entity"
+	pdxmesh = "mm_sheep_0101_mesh"
+
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+}

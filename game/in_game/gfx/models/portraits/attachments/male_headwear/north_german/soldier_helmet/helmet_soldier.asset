@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "helmet_soldier_mesh"
+	file = "helmet_soldier.mesh"
+
+	meshsettings = {
+		name = "helmet_soldierShape"
+		index = 0
+		texture_diffuse = "soldier_helmet_diffuse.dds"
+		texture_normal = "soldier_helmet_normal.dds"
+		texture_specular = "soldier_helmet_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_soldier_round_kettle_helmet_entity"
+	pdxmesh = "helmet_soldier_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/north_german/soldier_helmet/soldier_helmet_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_war_headwear_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

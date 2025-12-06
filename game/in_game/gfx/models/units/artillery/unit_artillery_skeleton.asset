@@ -1,0 +1,37 @@
+pdxmesh = {
+	name = "unit_artillery_skeleton_mesh"
+	file = "unit_artillery_skeleton.mesh"
+	
+
+	animation = { id = "idle_animation" type = "unit_artillery_skeleton_idle.anim" }
+	animation = { id = "moving_animation" type = "unit_artillery_skeleton_moving.anim" }
+	animation = { id = "attack_animation" type = "unit_artillery_skeleton_attack.anim" }
+
+	meshsettings = {
+		name = "unit_artillery_skeletonShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "unit_artillery_skeleton_entity"
+	pdxmesh = "unit_artillery_skeleton_mesh"
+	
+
+	default_state = "idle"
+	
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+	}
+	state = {
+		name = "move"
+		animation = "moving_animation"
+	}
+	state = {
+		name = "attack"
+		animation = "attack_animation"
+	}
+}

@@ -1,0 +1,19 @@
+﻿pdxmesh = {
+	name = "male_clothes_iroquois_royal_bear_hunter_mesh"
+	file = "male_clothes_iroquois_royal_bear_hunter.mesh"
+
+	meshsettings = {
+		name = "male_clothes_iroquois_royal_bear_hunterShape"
+		index = 0
+		texture_diffuse = "male_clothes_iroquois_royal_bear_hunter_diffuse.dds"
+		texture_normal = "male_clothes_iroquois_royal_bear_hunter_normal.dds"
+		texture_specular = "male_clothes_iroquois_royal_bear_hunter_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_iroquois_royal_bear_hunter_entity"
+	pdxmesh = "male_clothes_iroquois_royal_bear_hunter_mesh"
+}

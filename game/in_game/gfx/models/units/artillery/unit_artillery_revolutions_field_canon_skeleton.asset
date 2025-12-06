@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "unit_artillery_revolutions_field_canon_skeleton_mesh"
+	file = "unit_artillery_revolutions_field_canon_skeleton.mesh"	
+
+	animation = { id = "moving_artillery_field_canon_animation" type = "animations/unit_artillery_revolutions_field_canon_ani/unit_artillery_revolutions_field_canon_walk.anim" }
+	animation = { id = "attack_artillery_field_canon_animation" type = "animations/unit_artillery_revolutions_field_canon_ani/unit_artillery_revolutions_field_canon_attack.anim" }
+	animation = { id = "idle_artillery_field_canon_animation" type = "animations/unit_artillery_revolutions_field_canon_ani/unit_artillery_revolutions_field_canon_idle.anim" }
+
+	meshsettings = {
+		name = "unit_artillery_revolutions_field_canon_skeletonShape"
+		index = 0
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}

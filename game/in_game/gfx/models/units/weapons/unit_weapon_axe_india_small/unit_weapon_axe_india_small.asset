@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_axe_india_small_mesh"
+	file = "unit_weapon_axe_india_small.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_axe_india_smallShape"
+		index = 0
+		texture_diffuse = "unit_weapon_axe_india_small_diffuse.dds"
+		texture_normal = "unit_weapon_axe_india_small_normal.dds"
+		#texture_specular = "unit_weapon_axe_india_small_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_axe_india_small_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

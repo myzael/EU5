@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "female_neckwear_ashanti_out_high_coral_gold_mesh"
+	file = "female_neckwear_ashanti_out_high_coral_gold.mesh"
+	
+	meshsettings = {
+		name = "female_neckwear_ashanti_out_high_coral_goldShape"
+		index = 0
+		texture_diffuse = "female_neckwear_ashanti_out_high_coral_gold_diffuse.dds"
+		texture_normal = "female_neckwear_ashanti_out_high_coral_gold_normal.dds"
+		texture_specular = "female_neckwear_ashanti_out_high_coral_gold_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_neckwear_ashanti_out_high_coral_gold_entity"
+	pdxmesh = "female_neckwear_ashanti_out_high_coral_gold_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}

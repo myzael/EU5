@@ -1,0 +1,52 @@
+pdxmesh = {
+	name = "resource_antelope_mesh"
+	file = "resource_antelope.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	animation = { id = "antelope_idle_animation" type = "resource_antelope_antelope_idle.anim" }
+
+	meshsettings = {
+		name = "resource_antelope_LOD0Shape"
+		index = 0
+		texture_diffuse = "resource_antelope_diffuse.dds"
+		texture_normal = "resource_antelope_normal.dds"
+		texture_specular = "resource_antelope_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_antelope_LOD1Shape"
+		index = 0
+		texture_diffuse = "resource_antelope_diffuse.dds"
+		texture_normal = "resource_antelope_normal.dds"
+		texture_specular = "resource_antelope_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_antelope_LOD2Shape"
+		index = 0
+		texture_diffuse = "resource_antelope_diffuse.dds"
+		texture_normal = "resource_antelope_normal.dds"
+		texture_specular = "resource_antelope_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "resource_antelope_entity"
+	pdxmesh = "resource_antelope_mesh"
+
+	default_state = "antelope_idle"
+	state = {
+		name = "antelope_idle"
+		animation = "antelope_idle_animation"
+	}
+}

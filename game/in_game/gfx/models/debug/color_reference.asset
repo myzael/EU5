@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "color_reference_mesh"
+	file = "color_reference.mesh"
+
+	meshsettings = {
+		name = "pCubeShape1"
+		index = 0
+		texture_diffuse = "color_debug.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "color_reference_entity"
+	pdxmesh = "color_reference_mesh"
+}

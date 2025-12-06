@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "cargo_metal_iron_mesh"
+	file = "cargo_metal_iron.mesh"
+
+	meshsettings = {
+		name = "cargo_metal_ironShape"
+		index = 0
+		texture_diffuse = "cargo_iron_diffuse.dds"
+		texture_normal = "cargo_metal_normal.dds"
+		texture_specular = "cargo_metal_properties.dds"
+		shader = "standard_two_sided"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "cargo_metal_iron_entity"
+	pdxmesh = "cargo_metal_iron_mesh"
+}

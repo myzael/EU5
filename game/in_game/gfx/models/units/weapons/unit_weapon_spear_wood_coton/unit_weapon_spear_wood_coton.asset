@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_spear_wood_coton_mesh"
+	file = "unit_weapon_spear_wood_coton.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_spear_wood_cotonShape"
+		index = 0
+		texture_diffuse = "unit_weapon_spear_wood_coton_diffuse.dds"
+		texture_normal = "unit_weapon_spear_wood_coton_normal.dds"
+		#texture_specular = "unit_weapon_spear_wood_coton_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_spear_wood_coton_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

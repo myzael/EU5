@@ -1,0 +1,90 @@
+
+entity = {
+	name = "volcano_eruption_entity"
+	
+	locator = { name = root }
+	
+	default_state = "start"
+	state = { name = "start" state_time = 110 looping = no }
+	
+	attach = { root = "volcano_eruption_effect_entity" }
+}
+
+entity = {
+	name = "volcano_eruption_effect_entity"
+
+	locator = {	name = pos	position = { 0.0 3.6 0.0 }}
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 20 looping = no next_state = buildup
+		event = { time = 0 node = "pos" particle = "environment/volcano_idle" keep_particle = yes trigger_once = yes}
+	}
+
+	state = { name = "buildup" state_time = 15 looping = no next_state = eruption
+		event = { time = 0 node = "pos" particle = "environment/volcano_buildup" keep_particle = yes trigger_once = yes}
+	}
+		
+	state = { name = "eruption" state_time = 20 looping = no next_state = eruption_looping
+		event = { time = 0 node = "pos" particle = "environment/volcano_eruption" keep_particle = yes trigger_once = yes}	
+	}
+
+	state = { name = "eruption_looping" state_time = 40 looping = no next_state = cooldown
+		event = { time = 0 node = "pos" particle = "environment/volcano_eruption_looping" keep_particle = yes trigger_once = yes}
+	}	
+	
+	state = { name = "cooldown" state_time = 16 looping = no
+		event = { time = 0 node = "pos" particle = "environment/volcano_cooldown" keep_particle = yes trigger_once = yes}
+	}	
+}
+
+entity = {
+	name = "legacy_volcano_eruption_effect_entity"
+	
+	locator = { name = part1 }
+	
+	get_state_from_parent = no
+	
+	default_state = "start"
+	state = { name = "start" state_time = 10 looping = no next_state = eruption
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava_buildup" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_buildup" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava" keep_particle = yes trigger_once = yes}
+		start_event = { trigger_once = yes 
+		}
+		
+	}
+
+	state = { name = "eruption" state_time = 8 looping = no next_state = idle
+		event = { time = 0 node = "part1" particle = "legacy/volcano_eruption_effect" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava" keep_particle = yes trigger_once = yes}
+		start_event = { trigger_once = yes 
+			}
+		
+	}
+	
+	state = { name = "idle" state_time = 35 looping = no next_state = cooldown
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava_splash" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_continued" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava" keep_particle = yes trigger_once = yes}
+		start_event = { trigger_once = yes 
+			}
+
+		
+	}
+	
+	state = { name = "cooldown" state_time = 30 looping = no next_state = end
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava" keep_particle = yes trigger_once = yes}
+		event = { time = 0 node = "part1" particle = "legacy/volcano_cooldown" keep_particle = yes trigger_once = yes}
+		start_event = { trigger_once = yes 
+			}
+		
+	}	
+	
+	state = { name = "end" state_time = 30 looping = no
+		event = { time = 0 node = "part1" particle = "legacy/volcano_lava_gone" keep_particle = yes trigger_once = yes}
+		
+	}	
+}
+
+
+

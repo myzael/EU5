@@ -1,0 +1,30 @@
+pdxmesh = {
+	name = "w_building_b_mesh"
+	file = "w_building_b.mesh"
+
+	meshsettings = {
+		name = "Decal_SizeShape"
+		index = 0
+		texture_diffuse = "decal_building_western_b_diffuse.dds"
+		texture_normal = "decal_building_western_b_normal.dds"
+		texture_specular = "decal_building_western_b_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "pCubeShape5"
+		index = 0
+		texture_diffuse = "building_test_diffuse.dds"
+		texture_normal = "building_test_normal.dds"
+		texture_specular = "building_test_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "w_building_b_entity"
+	pdxmesh = "w_building_b_mesh"
+}
