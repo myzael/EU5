@@ -26,6 +26,14 @@ heavy_torsos_clothes = {
 	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_brigandine_tabard_mesh" add_tags = "UnitArmor_chainmail" add_tags = "crotch_covered" } }
 	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_plates_long_tabard_mesh" add_tags = "UnitArmor_chainmail" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } }
 	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_gamberson_chainmail_shoulder_plates_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_long_tabard_coa_side_mesh" add_tags = "UnitArmor_chainmail" add_tags = "crotch_covered" } }
+}
+
+crusader_clothes = {
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_tabard_mesh" add_tags = "UnitArmor_chainmail" } }
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_long_tabard_mesh" add_tags = "UnitArmor_chainmail" add_tags = "crotch_covered" } }
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_plates_long_tabard_mesh" add_tags = "UnitArmor_chainmail" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_chainmail_long_tabard_coa_side_mesh" add_tags = "UnitArmor_chainmail" add_tags = "crotch_covered" } }
 }
 
 

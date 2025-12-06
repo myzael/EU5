@@ -181,6 +181,7 @@ template ReorgUnit {
 										expand = {}
 
 										hbox = {
+											datacontext = "[TransferUnit.GetSubUnit]"
 											margin_left = 2
 											header_button_left = {
 												size = { 24 36 }
@@ -199,7 +200,8 @@ template ReorgUnit {
 													click_mode = single
 													click_modifier = shift
 													enabled = "[TransferUnit.CanTransfer]"
-													title = "[TransferUnit.GetTransferCategoryInfo]"
+													# title = "[TransferUnit.GetTransferCategoryInfo]"
+													title = "TRANSFER_SUBUNIT_CATEGORY_TT"
 													on_action = "[TransferUnit.TransferCategory]"
 												}			
 												action_tooltip = {
@@ -207,7 +209,8 @@ template ReorgUnit {
 													click_mode = single
 													click_modifier = ctrl
 													enabled = "[TransferUnit.CanTransfer]"
-													title = "[TransferUnit.GetTransferTypeInfo]"
+													# title = "[TransferUnit.GetTransferTypeInfo]"
+													title = "TRANSFER_SUBUNIT_TYPE_TT"
 													on_action = "[TransferUnit.TransferType]"
 												}
 				

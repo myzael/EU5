@@ -16,6 +16,13 @@ porcelain = {
 	demand_multiply = {
 		nobles = 20
 	}
+	
+	development_threshold = 30
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
+
 }
 
 naval_supplies = { #All things required for ships to run
@@ -33,6 +40,10 @@ firearms = { #Guns, Gunpowder, Grenades
 	demand_add = {
 		nobles = 0.2
 		soldiers = 0.001
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.2
 	}
 
 }
@@ -53,6 +64,10 @@ weaponry = { #Swords, clubs, spears, halberds, bows, crossbows, etc
 	demand_add = {
 		nobles = 0.1
 		soldiers = 0.0025
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.1
 	}
 }
 glass = {	#Everything from beads and bottles to fine Lenses
@@ -82,6 +97,10 @@ cloth = {		#Daily clothing, Canvas, Uniforms, Course table cloth, etc
 		burghers = 0.025
 		clergy = 0.05
 	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
 }
 
 
@@ -95,6 +114,14 @@ fine_cloth = {	#Embroidery, Silks, Luxury Clothing, etc
 		burghers = 0.025
 		clergy = 0.025
 	}
+	
+	
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.25
+	}
+
 }
 
 liquor = { 		#What it says
@@ -110,6 +137,10 @@ liquor = { 		#What it says
 		upper = 5
 		nobles = 2
 	}	
+	
+	wealth_impact_threshold = {
+		all = 0.5
+	}
 }
 
 beer = { 		#the nectar of the gods
@@ -125,6 +156,10 @@ beer = { 		#the nectar of the gods
 		upper = 5
 		nobles = 2
 	}	
+	
+	wealth_impact_threshold = {
+		all = 0.75
+	}
 }
 
 
@@ -138,6 +173,12 @@ paper = {		#Paper
 		burghers = 0.02
 		clergy = 0.1
 	}	
+	
+	development_threshold = 20
+	
+	wealth_impact_threshold = {
+		all = 1.2
+	}
 }
 
 books = { #books, newspapers, booklets, pamphlets, etc
@@ -145,13 +186,17 @@ books = { #books, newspapers, booklets, pamphlets, etc
 	color = goods_books
 	default_market_price = 5
 	
-	
-	
 	demand_add = {
 		nobles = 0.01
 		burghers = 0.02
 		clergy = 0.1
 	}	
+	
+	development_threshold = 30
+	
+	wealth_impact_threshold = {
+		all = 1.1
+	}
 }
 
 
@@ -165,6 +210,10 @@ jewelry = {
 	demand_add = {
 		nobles = 0.1
 		burghers = 0.005
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.2
 	}
 }
 
@@ -184,6 +233,9 @@ tools = {
 		laborers = 0.001
 	}	
 	
+	wealth_impact_threshold = {
+		all = 0.75
+	}
 }
 
 masonry = {		# basically bricks etc..
@@ -197,6 +249,12 @@ masonry = {		# basically bricks etc..
 	demand_multiply = {
 		upper = 1.5
 	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
+	
+	
 	ai_rgo_expansion_priority = 0.25
 }
 
@@ -208,6 +266,11 @@ lacquerware = {
 		nobles =  0.5
 		burghers =  0.02
 	}	
+	
+	development_threshold = 20
+	wealth_impact_threshold = {
+		all = 1.2
+	}
 }
 
 
@@ -223,6 +286,10 @@ pottery  = {
 		laborers = 1.1
 		burghers = 1.2
 	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
+	}
 }
 
 furniture  = {
@@ -236,6 +303,10 @@ furniture  = {
 	demand_multiply = {
 		upper = 10
 		nobles = 2
+	}
+	
+	wealth_impact_threshold = {
+		all = 1.0
 	}
 	
 }

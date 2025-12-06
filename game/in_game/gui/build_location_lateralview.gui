@@ -1450,16 +1450,18 @@ template build_location_entry {
 							size = { 80 30 }
 							
 							hbox = { #built
-								visible = "[And(LocationToBuildItem.ShowProfit, LocationToBuildItem.HasBuilding)]"
+								visible = "[And(LocationToBuildItem.ShowProfit, LocationToBuildItem.HasConstructedBuildingLevels)]"
 								spacing = 5
+								datacontext = "[LocationToBuildItem.GetBuildingType]"
+								datacontext = "[LocationToBuildItem.GetBuilding]"
 		
 								text_single = { #profitable
-									visible = "[Or(Not(LocationToBuildItem.ShouldShowProductionMethods),GreaterThan_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, '(CFixedPoint)0'))]"
+									visible = "[GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0')]"
 									maximumsize = { 50 18 }
 									fontsize = 15
-									raw_text = "[LocationToBuildItem.GetNetProfitPerLevel|+=<2]@gold!"
+									raw_text = "[Building.GetNetProfitValuePerLevel|+=2]@tax_base!"
 									tooltipwidget = {
-										using = Building_profit_per_level_tooltip
+										using = BuildingProfit_Tooltip
 									}
 					
 									sort_by_highlight = {
@@ -1469,15 +1471,13 @@ template build_location_entry {
 								}
 		
 								text_single = { #unprofitable and not subsidized
-									visible = "[And(LocationToBuildItem.ShouldShowProductionMethods,And(LessThanOrEqualTo_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, '(CFixedPoint)0'), Not(LocationToBuildItem.GetBuilding.IsSubsidized)))]"
+									visible = "[And(LessThanOrEqualTo_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'), Not(Building.IsSubsidized))]"
 									maximumsize = { 50 18 }
 									fontsize = 15
-									# raw_text = "[LocationToBuildItem.GetProfitValue|+=<2]"
-									# raw_text = "[LocationToBuildItem.GetBuilding.GetProfit|+=<2]"
-									raw_text = "[Divide_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, LocationToBuildItem.GetBuilding.GetLevel)|+=<2]@gold!"
+									raw_text = "[Building.GetNetProfitValuePerLevel|+=2]@tax_base!"
 		
 									tooltipwidget = {
-										using = Building_profit_per_level_tooltip
+										using = BuildingProfit_Tooltip
 									}
 					
 									sort_by_highlight = {
@@ -1487,14 +1487,12 @@ template build_location_entry {
 								}
 		
 								text_single = { # subsidized
-									visible = "[And(LocationToBuildItem.ShouldShowProductionMethods,And(LessThanOrEqualTo_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, '(CFixedPoint)0'), LocationToBuildItem.GetBuilding.IsSubsidized))]"
+									visible = "[And(LessThanOrEqualTo_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'), Building.IsSubsidized)]"
 									maximumsize = { 50 18 }
 									fontsize = 15
-									# raw_text = "#L [LocationToBuildItem.GetBuilding.GetProfit|<2]#!"
-									raw_text = "#L [Divide_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, LocationToBuildItem.GetBuilding.GetLevel)|<2]#!@gold!"
-		
+									raw_text = "#L [Building.GetNetProfitValuePerLevel|2]#!@tax_base!"
 									tooltipwidget = {
-										using = Building_profit_per_level_tooltip
+										using = BuildingProfit_Tooltip
 									}
 					
 									sort_by_highlight = {
@@ -1505,35 +1503,16 @@ template build_location_entry {
 							}
 		
 							hbox = { #unbuilt
-								visible = "[And(LocationToBuildItem.ShowProfit, Not(LocationToBuildItem.HasBuilding))]"
+								visible = "[And(LocationToBuildItem.ShowProfit, Not(LocationToBuildItem.HasConstructedBuildingLevels))]"
 								spacing = 5
 		
-								text_single = { #profitable
-									visible = "[GreaterThan_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0')]"
+								text_single = {
 									maximumsize = { 50 18 }
 									fontsize = 15
-									raw_text = "[LocationToBuildItem.GetNetProfitValue|+=<2]@gold!"
+									raw_text = "[GetBuildingTypeProfitInLocation(BuildingType.Self, Location.Self)|+=<2]@tax_base!"
+									datacontext = "[LocationToBuildItem.GetBuildingType]"
 									tooltipwidget = {
-										using = Building_profit_per_level_tooltip
-									}
-					
-									sort_by_highlight = {
-										size = { 105% 200% }
-										name = "profit"
-									}
-								}
-		
-								text_single = { #unprofitable
-									visible = "[LessThanOrEqualTo_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0')]"
-									maximumsize = { 50 18 }
-									fontsize = 15
-									# raw_text = "[LocationToBuildItem.GetProfitValue|+=<2]"
-									# raw_text = "[LocationToBuildItem.GetBuilding.GetProfit|+=<2]"
-									# raw_text = "[Divide_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, LocationToBuildItem.GetBuilding.GetLevel)|+=<2]"
-									raw_text = "[LocationToBuildItem.GetProfitValue|+=<2]@gold!"
-		
-									tooltipwidget = {
-										using = Building_profit_per_level_tooltip
+										using = BuildingTypeProfit_Tooltip
 									}
 					
 									sort_by_highlight = {
@@ -1570,6 +1549,8 @@ template build_location_entry {
 										enabled = "[CanSubsidizeBuilding(LocationToBuildItem.GetBuilding.Self)]"
 										on_action = "[BuildInLocationLateralView.SubsidizeAllBuildings]"
 									}
+
+									datacontext = "[LocationToBuildItem.GetBuilding]"
 
 									tooltipwidget = {
 										using = Location_Building_Subsidized_Tooltip											
@@ -1880,7 +1861,7 @@ template build_location_entry {
 		# widget = {
 		# 	layoutpolicy_horizontal = expanding
 		# 	size = { -1 35 }
-		# 	visible = "[LocationToBuildItem.ShouldShowProductionMethods]"
+		# 	visible = "[LocationToBuildItem.HasConstructedBuildingLevels]"
 		# 	datacontext = "[LocationToBuildItem.GetLocation]"
 
 		# 	card_list_button = {
@@ -2067,7 +2048,7 @@ template build_location_entry {
 		# }
 
 		# vbox = {
-		# 	visible = "[LocationToBuildItem.ShouldShowProductionMethods]"
+		# 	visible = "[LocationToBuildItem.HasConstructedBuildingLevels]"
 		# 	layoutpolicy_horizontal = expanding
 		# 	datamodel = "[LocationToBuildItem.GetProductionMethods]"
 		# 	item = {
@@ -2379,7 +2360,7 @@ template build_location_entry {
 		# }
 		
 		# card_list_button = {
-		# 	visible = "[Not(LocationToBuildItem.ShouldShowProductionMethods)]"
+		# 	visible = "[Not(LocationToBuildItem.HasConstructedBuildingLevels)]"
 		# 	layoutpolicy_horizontal = expanding
 		# 	size = { -1 35 }
 		# 	enabled = no

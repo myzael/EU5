@@ -10355,7 +10355,7 @@ flavor_fra.330 = { # The Edict of Fontainebleau # Based on Francis I
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		religion:lutheran = { is_religion_enabled = yes }
@@ -10438,7 +10438,7 @@ flavor_fra.331 = { # The Waldensians of Marindol # Massacre of Merindol #aix-en-
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		NOT = { has_policy = reformist_tolerance }
@@ -10489,7 +10489,7 @@ flavor_fra.332 = { # Rise of the Huguenots (French Calvinists)
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		religion:calvinist = { is_religion_enabled = yes}
@@ -10579,7 +10579,7 @@ flavor_fra.333 = { # Edict of Chateaubriant
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		NOT = { has_policy = reformist_tolerance }
@@ -10644,7 +10644,7 @@ flavor_fra.340 = { # Rise of the Queen Consort # Catherine de Medici inspired
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		has_consort = yes
 		at_war = no
@@ -10734,7 +10734,7 @@ flavor_fra.341 = { # Declining authority of the Crown
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		has_consort = yes
 		at_war = no
@@ -10797,7 +10797,7 @@ flavor_fra.342 = { # Conspiracy of Amboise
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
  	}
@@ -10888,7 +10888,7 @@ flavor_fra.351 = { # <Ruler> converts to Calvinism
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		religion:calvinist = { is_religion_enabled = yes }
@@ -10983,7 +10983,7 @@ flavor_fra.352 = { # Calvinist Ruler repairs relations with Protestants
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		ruler = { religion = religion:calvinist }
@@ -11032,7 +11032,7 @@ flavor_fra.353 = { # Council Demands Conversion # Henry IV reconversion
 	}
 
  	trigger = {
-		any_active_disaster = { disaster_type = disaster_type:french_wars_of_religion }
+		any_active_disaster = { disaster_type = disaster_type:french_wars_religion }
 		has_ruler = yes
 		at_war = no
 		ruler = { religion = religion:calvinist }

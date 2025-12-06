@@ -51,7 +51,7 @@ dissolve_monasteries = {
 				}
 				order_by = population
 				max = 5
-				
+				check_range_bounds = no
 				change_building_level_in_location = {
 					building = building_type:monastery
 					value = -1

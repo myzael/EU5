@@ -60,7 +60,7 @@ general_adm = {
 	siege_ability = 0.001
 	possible_frontage_modifier = 0.001
 	army_logistics_distance_modifier = 0.01
-	correct_box_chance = 0.005
+	correct_box_chance = 0.001
 }
 
 
@@ -92,7 +92,7 @@ admiral_adm = {
 	blockade_efficiency = 0.005
 	possible_frontage_modifier = 0.001
 	navy_maintenance_cost = -0.002
-	correct_box_chance = 0.005
+	correct_box_chance = 0.001
 }
 
 admiral_dip = {
@@ -1038,6 +1038,16 @@ restricted_to_teaching = {
 	artist_monthly_start_chance = -1.0
 }
 
+sbl_heir_of_empty_coat = {
+	game_data = {
+		category = character 
+	}
+	character_life_expectancy = 15
+	parliament_base_support = 0.20
+	mil = 5
+	dip = 5
+}
+
 fra_authoritative_consort = {
 	game_data = {
 		category = character 
@@ -1313,8 +1323,6 @@ fra_advisor_promoted_at_court = {
 	mil = 5
 	character_cabinet_efficiency = 0.15
 }
-
-# End France
 
 bra_false_waldemar = {
 	game_data = {
@@ -1963,7 +1971,6 @@ granted_cabinet_right = {
 		category = character
 	}
 	ignore_gender_block_cabinet = yes
-	blocked_from_character_interactions = yes
 }
 
 rtr_support_of_the_people = {

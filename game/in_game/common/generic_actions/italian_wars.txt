@@ -45,7 +45,7 @@
 
 	cooldown = {
 		type = join_a_league
-		years = 2
+		years = 5
 	}
 
 	select_trigger = {
@@ -87,13 +87,16 @@
 				can_join_international_organization = root
 			}
 		}
+		enabled = {
+			scope:actor = { 
+				NOT = { is_member_of_international_organization = scope:target }
+			}
+		}
 	}
 
 	effect = {
 		if = {
-			limit = {
-				exists = scope:target
-			}
+			limit = { exists = scope:target }
 			scope:target = {
 				add_country_to_international_organization = scope:actor
 			}
@@ -101,22 +104,44 @@
 	}
 
 	ai_will_do = {
-		add = -25
+		add = {
+			value = 20
+			desc = BASE_VALUE
+		}
 		if = {
-			limit = { 
-				exists = scope:target
-			}
+			limit = { exists = scope:target }
 			if = {
 				limit = {
 					scope:actor = {
-						opinion = { 
-							target = scope:target.leader_country
-							value < 0
+						NOR = {
+							is_member_of_international_organization = international_organization:italian_league_1
+							is_member_of_international_organization = international_organization:italian_league_2
+							is_member_of_international_organization = international_organization:italian_league_3
+							is_leader_of_international_organization = international_organization:foreign_league_france
+							is_leader_of_international_organization = international_organization:foreign_league_hre
+							is_leader_of_international_organization = international_organization:foreign_league_iberia
 						}
 					}
 				}
-				subtract = -100	#They are very unlikely to join if they have a negative opinion of the leader country
+				add = {
+					value = 40
+					desc = BASE_VALUE
+				}
 			}
+			add = {
+				desc = "Our opinion of target IO Leader"
+				scope:actor = {
+					value = "opinion(scope:target.leader_country)"
+					#divide = 5
+				}
+			}
+			scope:target.leader_country = {
+				add = {
+					value = modifier:diplomatic_reputation
+					multiply = 5
+					desc = "IO_LEADER_DIP_REP"
+				}
+            }
 			if = {
 				limit = {
 					scope:target = {
@@ -128,136 +153,324 @@
 					}
 				}
 				add = {
+					value = -25
+					desc = "FOREIGN_LEAGUE"
+				}
+				add = {
 					desc = "IW_BALANCE_OF_POWER"
 					value = scope:target.total_members
-					multiply = -2
+					multiply = -5
 				}
 			}
-			if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							count > 5
-							giving_scripted_relation = {
-								type = relation_type:alliance
-								target = scope:recipient
-							}
+			scope:target = {
+				every_international_organization_member = {
+					limit = {
+						giving_scripted_relation = {
+							type = relation_type:alliance
+							target = scope:actor
 						}
 					}
-				}
-				add = {
-					desc = "IO_HOSTS_FRIENDS"
-					value = 25
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							count > 4
-							giving_scripted_relation = {
-								type = relation_type:alliance
-								target = scope:recipient
-							}
-						}
+					add = {
+						value = 5
+						desc = "IO_HOSTS_FRIENDS"
 					}
 				}
-				add = {
-					desc = "IO_HOSTS_FRIENDS"
-					value = 20
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							count > 3
-							giving_scripted_relation = {
-								type = relation_type:alliance
-								target = scope:recipient
-							}
+				every_international_organization_member = {
+					limit = {
+						OR = {
+							is_rival_of = scope:actor
+							is_enemy_of = scope:actor
 						}
 					}
-				}
-				add = {
-					desc = "IO_HOSTS_FRIENDS"
-					value = 15
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							count > 2
-							giving_scripted_relation = {
-								type = relation_type:alliance
-								target = scope:recipient
-							}
-						}
+					add = {
+						value = -20
+						desc = "IO_HOSTS_ENEMIES_OR_RIVALS"
 					}
 				}
-				add = {
-					desc = "IO_HOSTS_FRIENDS"
-					value = 10
-				}
 			}
-			else_if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							count = 1
-							giving_scripted_relation = {
-								type = relation_type:alliance
-								target = scope:recipient
-							}
-						}
-					}
-				}
-				add = {
-					desc = "IO_HOSTS_FRIENDS"
-					value = 5
-				}
-			}
-			if = {
-				limit = {
-					scope:target = {
-						any_international_organization_member = {
-							OR = {
-								is_rival_of = scope:actor
-								is_enemy_of = scope:actor
-							}
-						}
-					}
-				}
-				add = {
-					desc = "IO_HOSTS_ENEMIES_OR_RIVALS"
-					value = -100
-				}
-			}
-			add = {
+			subtract = {
 				desc = "IO_LEADER_ANTAGONISM"
 				scope:target = {
 					leader_country = {
 						scope:actor = {
 							value = this_antagonism_towards_prev
-							multiply = -5
+							multiply = 2
 						}
 					}
 				}
 			}
-			add = {
-				desc = "IO_LEADER_DIP_REP"
-				scope:target = {
+			if = {
+				limit = { 
+					scope:actor = { is_member_of_international_organization = international_organization:italian_league_1 }
+				}
+				international_organization:italian_league_1 = {
 					leader_country = {
-						value = modifier:diplomatic_reputation
-						multiply = 2
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
 					}
 				}
 			}
-			add = {
-				desc = "OUR_OPINION_OF_IO_LEADER"
-				value = "scope:actor.opinion(scope:target.leader_country)"
-				divide = 10
+			else_if = {
+				limit = { 
+					scope:actor = { is_member_of_international_organization = international_organization:italian_league_2 }
+				}
+				international_organization:italian_league_2 = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					scope:actor = { is_member_of_international_organization = international_organization:italian_league_3 }
+				}
+				international_organization:italian_league_3 = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					scope:actor = { is_member_of_international_organization = international_organization:foreign_league_france }
+				}
+				international_organization:foreign_league_france = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					scope:actor = { is_member_of_international_organization = international_organization:foreign_league_iberia }
+				}
+				international_organization:foreign_league_iberia = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
+			}
+			else = {
+				international_organization:foreign_league_hre = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							scope:actor = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = scope:actor
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != scope:actor
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
 		}
 	}
@@ -710,25 +923,16 @@ plan_campaign_in_italy = {
 		column = { data = population }
 		visible = {
 			region = region:italy_region
-			trigger_if = {
-				limit = {
-					scope:actor = { is_leader_of_international_organization = international_organization:foreign_league_france }
-				}
-				any_location_in_province = {
-					is_neighbor_of_international_organization = international_organization:foreign_league_france
-				}
-			}
-			trigger_else_if = {
-				limit = {
-					scope:actor = { is_leader_of_international_organization = international_organization:foreign_league_hre }
-				}
-				any_location_in_province = {
-					is_neighbor_of_international_organization = international_organization:foreign_league_hre
-				}
-			}
-			trigger_else = {
-				any_location_in_province = {
-					is_neighbor_of_international_organization = international_organization:foreign_league_iberia
+			owner = {
+				NOT = {
+					any_international_organizations_member_of = {
+						leader_country ?= scope:actor
+						OR = {
+							this = international_organization:foreign_league_france
+							this = international_organization:foreign_league_iberia
+							this = international_organization:foreign_league_hre
+						}
+					}
 				}
 			}
 		}
@@ -754,32 +958,33 @@ plan_campaign_in_italy = {
 	}
 
 	ai_will_do = {
+		add = 10
 		if = {
 			limit = { exists = scope:target }
+			add = {
+				desc = "we want their land"
+				value = "scope:actor.conquer_desire(scope:target.owner)"
+			}
+			if = {
+				limit = { 
+					scope:actor = { wants_casus_belli_with = scope:target.owner }
+				}
+				add = {
+					desc = "wants casus belli on target owner"
+					value = 10
+				}
+			}
 			add = {
 				desc = "RELATIVE_STRENGTH"
 				value = 100
 				multiply = "scope:actor.relative_strength(scope:target.owner)"
 				divide = 10
 			}
-			if = {
-				limit = {
-					scope:target = {
-						any_location_in_province = {
-							is_neighbor_of = scope:actor
-						}
-					}
-				}
-				add = {
-					desc = "NEIGHBOR_PROVINCE_TOOLTIP"
-					value = 50
-				}
-			}
-			else = {
-				add = {
-					desc = "NOT_NEIGHBOR_PROVINCE_TOOLTIP"
-					value = -50
-				}
+			add = {
+				desc = "DISTANCE_FROM_FRANCE_LEADER"
+				value = "scope:actor.border_distance_to(scope:target.owner)"
+				multiply = -0.25
+				min = -1000
 			}
 			add = {
 				desc = "CURRENT_MANPOWER_TOOLTIP"
@@ -787,24 +992,19 @@ plan_campaign_in_italy = {
 				multiply = 10
 			}
 			add = {
-				desc = "CURRENT_MANPOWER_TOOLTIP"
+				desc = "army_size"
 				value = scope:actor.army_size
 			}
-			add = {
-				desc = "NUM_LOANS_TOOLTIP"
-				value = scope:actor.num_loans
-				multiply = -10
+			scope:target.owner = {
+				subtract = {
+					desc = "defensive alliance"
+					value = this.defensive_alliance_strength
+				}
 			}
 			add = {
-				desc = "CURRENT_TREASURY_TOOLTIP"
-				value = {
-					add = scope:actor.gold
-					divide = {
-						value = scope:actor.monthly_income_total
-						max = 1
-					}
-				}
-				multiply = 5
+				desc = "offensive alliance"
+				value = scope:actor.offensive_alliance_strength
+				divide = 10
 			}
 		}
 	}

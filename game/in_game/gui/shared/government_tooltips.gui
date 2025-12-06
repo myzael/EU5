@@ -1315,7 +1315,7 @@ template HeirSelectionCandidate_tooltip {
 							autoresize = yes
 							maximumsize = { 250 -1 }
 							align = left|nobaseline
-							text = "[HeirSelectionValue.GetHeir.GetName]"
+							text = "[HeirSelectionValue.GetHeir.GetNameToFit('(int32)25', '(bool)yes')]"
 						}
 
 						expand = {}
@@ -2281,79 +2281,56 @@ template Estate_tooltip {
 			TooltipStringPairList = {
 				textcontext = "ESTATE_BREAKDOWN"
 			}
-			
-			margin_widget = {
-				layoutpolicy_horizontal = expanding
-				margin_left = 8
-				margin_right = 8
-				visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
-				size = { 440 28 }
-				using = fake_table_dark_background
-				text_single = {
-					text = "ESTATE_INCOME"
-				}
-				text_single = {
-					parentanchor = right
-					align = right
-					raw_text = "[Estate.GetLastMonthsIncomeAfterTaxWithTooltip]@gold!"
-				}
-				tooltipwidget = {
-					using = estate_expense_tooltip
-				}
-			}	
-			margin_widget = {
-				layoutpolicy_horizontal = expanding
-				margin_left = 8
-				margin_right = 8
-				visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
-				size = { 440 28 }
-				using = fake_table_light_background
-				text_single = {
-					text = "ESTATE_FOOD_INCOME"
-				}
-				text_single = {
-					parentanchor = right
-					align = right
-					raw_text = "[Estate.GetFoodIncome|+=2]@gold!"
-				}
-			}	
-			margin_widget = {
-				layoutpolicy_horizontal = expanding
-				margin_left = 8
-				margin_right = 8
-				visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
-				size = { 440 28 }
-				using = fake_table_dark_background
-				text_single = {
-					text = "ESTATE_TRADE_INCOME"
-				}
-				text_single = {
-					parentanchor = right
-					align = right
-					raw_text = "[Estate.GetTradeIncome|+=2]@gold!"
+
+			TooltipListBase = {
+				TooltipManualTableField = {
+					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
+					text_single = {
+						text = "ESTATE_INCOME"
+					}
+					expand = {}
+					text_single = {
+						raw_text = "[Estate.GetLastMonthsIncomeAfterTaxWithTooltip]@gold!"
+					}
+
+					tooltipwidget = {
+						using = estate_expense_tooltip
+					}
 				}
 
-			}	
-			
-			margin_widget = {
-				layoutpolicy_horizontal = expanding
-				margin_left = 8
-				margin_right = 8
-				visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
-				size = { 440 28 }
-				using = fake_table_light_background
-				text_single = {
-					text = "ESTATE_EXPENSES"
+				TooltipManualTableField = {
+					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
+					text_single = {
+						text = "ESTATE_FOOD_INCOME"
+					}
+					expand = {}
+					text_single = {
+						raw_text = "[Estate.GetFoodIncome|+=2]@gold!"
+					}
 				}
-				text_single = {
-					parentanchor = right
-					align = right
-					raw_text = "#R -[Estate.GetLastMonthsExpense|2]@gold!#!"
+
+				TooltipManualTableField = {
+					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
+					text_single = {
+						text = "ESTATE_TRADE_INCOME"
+					}
+					expand = {}
+					text_single = {
+						raw_text = "[Estate.GetTradeIncome|+=2]@gold!"
+					}
 				}
-				tooltipwidget = {
-					using = estate_expense_tooltip
+				TooltipManualTableField = {
+					visible = "[Not(Estate.GetType.IsAlwaysLoyal)]"
+					text_single = {
+						text = "ESTATE_EXPENSES"
+					}
+					expand = {}
+					text_single = {
+						raw_text = "#R -[Estate.GetLastMonthsExpense|2]@gold!#!"
+					}
 				}
-			}	
+			}
+	
 
 			TooltipTextBlock = {
 				visible = "[Estate.IsNextBuildSetUp]"
@@ -2471,7 +2448,7 @@ template LanguagePower_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
-			TooltipBlockList = {
+			TooltipScrolledBlockList = {
 				textcontext = "[Language.GetDetailedPowerInfo]"
 			}
 		}

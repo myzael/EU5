@@ -121,8 +121,20 @@ template relation_list_tooltip {
 											}
 
 											icon = {
+												using = bg_circle_piechart
 												texture = "gfx/interface/icons/diplomatic_status/truce.dds"
-												size = { 80% 80% }
+												blockoverride "frame_color" {
+													modify_texture = {
+														using = color_new_gold_texture
+														blend_mode = multiply
+													}
+													modify_texture = {
+														using = color_gold_texture
+														# blend_mode = multiply
+														alpha = 0.5
+													}
+												}
+												size = { 75% 75% }
 												parentanchor = center
 											}
 										}
@@ -2666,7 +2678,7 @@ types diplomacy_cards {
 		using = bg_cabinet_card_frame
 
 		blockoverride "header_color" {
-			texture = "gfx/interface/colors/mid_green.dds"
+			texture = "gfx/interface/colors/purple.dds"
 		}
 		blockoverride "header_pattern" {
 			texture = "gfx/interface/cards/headers/header_pattern_07.dds"
@@ -2928,10 +2940,23 @@ types diplomacy_cards {
 												}
 				
 												icon = {
+													using = bg_circle_piechart
 													texture = "gfx/interface/icons/diplomatic_status/truce.dds"
 													visible = "[RelationTypeItem.IsRelationType('truce')]"
-													size = { 80% 80% }
+													size = { 75% 75% }
 													parentanchor = center
+													blockoverride "frame_color" {
+														modify_texture = {
+															using = color_new_gold_texture
+															blend_mode = multiply
+														}
+														modify_texture = {
+															using = color_gold_texture
+															# blend_mode = multiply
+															alpha = 0.5
+														}
+													}
+			
 												}
 
 												icon = {

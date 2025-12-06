@@ -51,6 +51,9 @@
 			category = building_maintenance
 		}
 	}
+
+	graphical_tags = { palace }
+
 	construction_demand = early_capital_building_construction
 }
 
@@ -109,6 +112,8 @@ house_of_parliament = {
 		}
 	}
 
+	graphical_tags = { palace }
+
 	construction_demand = early_capital_building_construction
 }
 
@@ -135,6 +140,7 @@ order_headquarters = {
 
 	country_potential = {
 		has_reform = government_reform:military_order_reform
+		country_rank_level >= 2
 	}
 	
 	remove_if = {
@@ -169,6 +175,8 @@ order_headquarters = {
 			category = building_maintenance
 		}
 	}
+
+	graphical_tags = { palace }
 
 	construction_demand = early_capital_building_construction
 }
@@ -492,6 +500,8 @@ republican_assembly = {
 			category = building_maintenance
 		}
 	}
+
+	graphical_tags = { palace }
 
 	construction_demand = early_capital_building_construction
 }

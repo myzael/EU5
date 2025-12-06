@@ -1178,7 +1178,7 @@ republic_factions.22 = { #The Family Act
 			limit = { has_policy = no_censorship }
 			add_policy = policy:limited_censorship
 		}
-		add_stability = stability_radical_penalty
+		add_stability = stability_severe_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
 	}
 }

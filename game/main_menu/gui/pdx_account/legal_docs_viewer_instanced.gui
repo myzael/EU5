@@ -30,13 +30,89 @@ caesar_legal_docs_viewer = {
 
 types CaesarSDK
 {
-	type caesar_legal_docs_viewer = window {
-		name = "legal_docs_viewer"
-        layer = confirmation
-        using = caesar_sdk_modal_template
+    type caesar_legal_docs_viewer = window {
+        name = "legal_docs_viewer"
 
-        legal_docs_viewer = {
-            name = "legal_docs_viewer_inner"
+        using = bg_window_default_alt
+        alwaystransparent = no
+        reorder_on_mouse = never
+        resizable = no
+        movable = no
+        parentanchor = center
+        allow_outside = yes
+
+        size = { 700 720 }
+
+        widget = {
+            parentanchor = right
+            position = { -5 5 }
+            size = { 40 40 }
         }
-	}
+
+        vbox = {
+            using = layoutpolicy_expanding
+            using = window_margin_alt
+            
+            window_header_alt = {
+                blockoverride "header_text" {
+                    text = "REVIEW_LEGAL_DOCUMENT"
+                }
+            }
+
+            vbox = {
+                using = layoutpolicy_expanding
+                using = bg_main_inner_alt
+
+                spacing = 20
+
+                margin = { 0 10 }
+
+                scroll_list = {
+                    size = { 674 600 }
+
+                    blockoverride "scroll_list_layout" {
+                        vbox = {
+                            using = layoutpolicy_expanding
+
+                            textbox = {
+                                minimumsize = { 600 768 }
+                                maximumsize = { 600 -1 }
+
+                                align = left
+                                multiline = yes
+                                autoresize = yes
+
+                                raw_text = "[LegalDocsViewer.GetDocumentText]"
+
+                                using = Font_Type_Standard
+                                using = text_multi_template
+                                default_format = "#medium"
+                            }
+                        }
+                    }
+
+                    scrollbar_vertical = {
+                        using = sdk_vertical_scrollbar
+                    }
+                }
+
+                settings_save_button = {
+                    size = { 100 30 }
+                    text_single = {
+                        align = center
+                        parentanchor = center
+                        size = { 96% 100% }
+                        autoresize = no
+                        text = "POPS_OK"
+                    }
+                    tooltipwidget = {
+                        LeftClickButtonTooltip = {
+                            blockoverride "onclick_text" { text = "AGREE_LEGAL_DOCUMENT" } 
+                        }
+                    }
+                    onclick = "[LegalDocsViewer.Agree]"
+                }
+            }
+        }
+    }
 }

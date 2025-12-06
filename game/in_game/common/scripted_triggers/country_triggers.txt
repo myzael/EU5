@@ -178,12 +178,6 @@ alliance_can_exist = {
 	}
 }
 
-can_create_subjects = {
-	at_war = no
-	modifier:allow_subjects = yes
-	modifier:blocked_from_creating_subjects = no
-}
-
 
 can_change_primary_culture = {
 	$country$ = {
@@ -1150,7 +1144,15 @@ military_order_can_declare_wars_trigger = {
 				NOT = { exists = scope:defender }
 				scope:defender = {
 					is_neighbor_of = scope:attacker
-					religion.group != scope:attacker.religion.group
+					religion ?= {
+						OR = {
+							NOT = { group = scope:attacker.religion.group }
+							reverse_religious_view = {
+								target = scope:attacker.religion
+								value <= negative
+							}
+						}					
+					}
 				}
 			}
 		}

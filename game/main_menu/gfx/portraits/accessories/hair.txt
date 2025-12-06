@@ -86,7 +86,7 @@
 	male_north_german_hair_crown_long = {
 		entity = { required_tags = "no_hair"					shared_pose_entity = head }
 		entity = { required_tags = "ears_covered"				shared_pose_entity = head  entity = male_north_german_hair_short_curly_entity }
-		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = male_north_german_hair_crown_long_entity }
+		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = male_north_german_hair_crown_long_no_top_entity }
 		entity = { required_tags = "hair_covered_long"			shared_pose_entity = head  entity = male_north_german_hair_crown_long_entity }
 		entity = { required_tags = "not(hair_covered)"			shared_pose_entity = head  entity = male_north_german_hair_crown_long_entity }
 	}

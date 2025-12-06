@@ -277,16 +277,89 @@
 					has_autocephalous_patriarchates = yes
 				}
 			}
-			create_international_organization = {
-				type = international_organization_type:autocephalous_patriarchate
-				add_country_to_international_organization = prev
-				set_leader_country = prev
+			if = { #See if we can join an existing AP before creating one
+				limit = {
+					religion = {
+						any_religion_international_organization = {
+							international_organization_type = international_organization_type:autocephalous_patriarchate
+							io_within_diplomatic_range = root
+							root = { country_can_join_international_organization = prev }
+							leader_country ?= {
+								opinion = { target = root value >= 0 }
+								root = { this_opinion_of_prev >= 0 }
+							}
+						}
+					}
+				}
+				religion = {
+					random_religion_international_organization = {
+						limit = {
+							international_organization_type = international_organization_type:autocephalous_patriarchate
+							io_within_diplomatic_range = root
+							root = { country_can_join_international_organization = prev }
+							leader_country ?= {
+								opinion = { target = root value >= 0 }
+								root = { this_opinion_of_prev >= 0 }
+							}
+						}
+						add_country_to_international_organization = root
+					}
+				}
+			}
+			else = {
+				create_international_organization = {
+					type = international_organization_type:autocephalous_patriarchate
+					add_country_to_international_organization = prev
+					set_leader_country = prev
+				}
 			}
 		}
 		set_variable = {
 			name = left_autocephalous_patriarchate
 			value = scope:recipient
 			years = 5
+		}
+	}
+	
+	on_disband = {
+		every_international_organization_member = {
+			save_temporary_scope_as = country_to_add
+			if = { #See if we can join an existing AP before creating one
+				limit = {
+					religion = {
+						any_religion_international_organization = {
+							international_organization_type = international_organization_type:autocephalous_patriarchate
+							io_within_diplomatic_range = scope:country_to_add
+							scope:country_to_add = { country_can_join_international_organization = prev }
+							leader_country ?= {
+								opinion = { target = scope:country_to_add value >= 0 }
+								scope:country_to_add = { this_opinion_of_prev >= 0 }
+							}
+						}
+					}
+				}
+				religion = {
+					random_religion_international_organization = {
+						limit = {
+							international_organization_type = international_organization_type:autocephalous_patriarchate
+							io_within_diplomatic_range = scope:country_to_add
+							scope:country_to_add = { country_can_join_international_organization = prev }
+							leader_country ?= {
+								opinion = { target = scope:country_to_add value >= 0 }
+								scope:country_to_add = { this_opinion_of_prev >= 0 }
+							}
+						}
+						add_country_to_international_organization = scope:country_to_add
+					}
+				}
+			}
+			else = {
+				create_international_organization = {
+					type = international_organization_type:autocephalous_patriarchate
+					add_country_to_international_organization = prev
+					set_leader_country = prev
+				}
+			}
 		}
 	}
 	

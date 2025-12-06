@@ -219,6 +219,7 @@ expand_forestry_operations = {
 				multiply = 0.05
 				add = 1
 			}
+			check_range_bounds = no
 			change_max_raw_material_workers = 1
 			change_prosperity = prosperity_mild_bonus
 		}
@@ -385,6 +386,7 @@ expand_diplomatic_corps_religion = {
                 NOT = { is_subject_of = ROOT }
                 NOT = { is_rival_of = ROOT }
                 NOT = { is_enemy_of = ROOT }
+				NOT = { this = ROOT }
             }
         }
 	}
@@ -437,6 +439,7 @@ expand_diplomatic_corps_religion = {
                     NOT = {
                         is_enemy_of = ROOT
                     }
+					NOT = { this = ROOT }
                 }
                 max = 3
                 check_range_bounds = no

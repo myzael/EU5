@@ -76,7 +76,7 @@ muslim_flavor.2 = {
 	}
 	option = {
 		name = muslim_flavor.2.b
-		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_tiny_move_to_right }
+		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_minor_move_to_right }
 		change_gold_effect = { scale = -1.20 }
 	}
 	option = {

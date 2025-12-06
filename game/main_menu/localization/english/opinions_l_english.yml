@@ -17,7 +17,7 @@
  COUNTRY_LOYALTY_OF_SELF: "#T $WHO$ Loyalty#!\nClearly $TARGET|Y$ is loyal to themselves."
  COUNTRY_LOYALTY_OF_SELF_PLAYER: "#T $WHO$ Loyalty#!\n$TARGET|Y$ is our own country!"
  COUNTRY_LOYALTY_OF: "#T $WHO$ Loyalty#!\nThe $WHO|Y$ [subject_loyalty|e] of $TARGET|Y$ ($LOYALTY|2+=$) is due to the following factors:"
- COUNTRY_VOTING_BIAS_OF_SELF: "#T $WHO$ Voting Bias#!\nClearly $TARGET|Y$ will vote for themselves if it's an option."
+ COUNTRY_VOTING_BIAS_OF_SELF: "#T $WHO$ Voting Bias#!\nClearly $TARGET|Y$ will vote for themselves if it is an option."
  COUNTRY_VOTING_BIAS_OF_SELF_PLAYER: "#T Voting bias towards $TARGET$#!\n$TARGET|Y$ is our own country!"
  COUNTRY_VOTING_BIAS_OF: "#T Voting bias towards $TARGET$#!\nThe $WHO|Y$ voting bias towards $TARGET|Y$ ($VOTINGBIAS|+=$) is due to the following factors:"
  COUNTRY_OPINION_OF_MYSELF: "Amandi te ipsum non est vanitas. Est sanitatem reducamus."
@@ -47,15 +47,15 @@
  OPINION_RELIGION_GENERAL_VIEW_ENTRY: "[RELIGION.GetAdjective] view of [TARGET_RELIGION.GetName]: $VAL|0=+$\n"
  OPINION_RELIGION_ENTRY: "[COUNTRY.GetAdjective] view of [TARGET_RELIGION.GetAdjective] countries: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|L0=+$#!\n"
  CULTURE_BREAKDOWN_TOOLTIP: "#T Distribution of [CULTURE.GetNameWithNoTooltip]#!\n[CULTURE.GetName] [pops|e] are spread among the following [provinces|e]:"
- CULTURE_BREAKDOWN_TOOLTIP_ENTRY: "[PROVINCE.GetName]: #TOOLTIP:$BREAKDOWN_TAG$ $POP_SIZE|L$#!"
+ CULTURE_BREAKDOWN_TOOLTIP_ENTRY: "@province! [PROVINCE.GetName]: #TOOLTIP:$BREAKDOWN_TAG$ $POP_SIZE|L$#!"
  ICI_HEADER: "[CULTURE.GetNameWithNoTooltip] in [PROVINCE.GetNameWithNoTooltip]"
- ICI_POP_ENTRY: "[POP.GetName]: [POP.GetSize]"
+ ICI_POP_ENTRY: "[POP.GetName]: [POP.GetSize] [POP.GetType.GetIcon]"
 
  OPINION_CULTURE_TOOLTIP: "#T [CULTURE.GetNameWithNoTooltip] view of [TARGET_CULTURE.GetNameWithNoTooltip]#!\n$TITLE$ opinion gives the following:\n[CULTURE.GetName] countries' view of [TARGET_CULTURE.GetName] countries: $VAL|0=+$"
  OPINION_CULTURE_POP_TOOLTIP: "[pop_satisfaction|e] of [CULTURE.GetNameWithNoTooltip] [pops|e]: $VAL|=+2%$"
 
  RELIGION_BREAKDOWN_TOOLTIP: "#T Distribution of [RELIGION.GetNameWithNoTooltip]#!\n[RELIGION.GetName] [pops|e] are spread among the following [provinces|e]:"
- RELIGION_BREAKDOWN_TOOLTIP_ENTRY: "[PROVINCE.GetName]: $POP_SIZE$ people"
+ RELIGION_BREAKDOWN_TOOLTIP_ENTRY: "@province! [PROVINCE.GetName]: $POP_SIZE$ [population_icon]"
  OPINION_RELIGION_TOOLTIP: "#T [RELIGION.GetNameWithNoTooltip] view of [TARGET_RELIGION.GetNameWithNoTooltip] #!\n$TITLE$ opinion gives the following:\n[RELIGION.GetAdjective] countries' view of [TARGET_RELIGION.GetAdjective] countries: $VAL|0=+$"
 
 

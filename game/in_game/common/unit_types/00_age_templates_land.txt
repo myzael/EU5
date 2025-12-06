@@ -53,7 +53,7 @@ a_age_1_traditions_artillery = {
 	max_strength = 0.01
 	combat_power = 2
 	
-	bombard_efficiency = 0.025
+	bombard_efficiency = 0.1
 	
 	artillery_barrage = 1
 
@@ -108,7 +108,7 @@ a_age_2_renaissance_artillery = {
 	buildable = no
 	max_strength = 0.05
 	combat_power = 3
-	bombard_efficiency = 0.05
+	bombard_efficiency = 0.125
 	
 	artillery_barrage = 3
 	age = "age_2_renaissance"
@@ -158,7 +158,7 @@ a_age_3_discovery_artillery = {
 	buildable = no
 	max_strength = 0.1
 	combat_power = 4
-	bombard_efficiency = 0.1
+	bombard_efficiency = 0.15
 	
 	artillery_barrage = 4
 

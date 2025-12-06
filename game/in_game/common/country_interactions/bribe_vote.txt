@@ -136,12 +136,7 @@
 		target_flag = target_value
 		name = "bribe_voter_for_policy_select_gold_amount"
 		min = 1
-		max = {
-			value = scope:recipient.monthly_income_total
-			multiply = 24
-			max = scope:actor.gold
-			min = 1
-		}
+		max = scope:actor.gold
 		step = scope:recipient.monthly_income_total
 		default = {
 			value = scope:recipient.monthly_income_total

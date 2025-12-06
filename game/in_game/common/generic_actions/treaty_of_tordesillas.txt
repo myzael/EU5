@@ -1732,16 +1732,17 @@ tordesillas_demand_transfer_colony = {
 	}
 	
 	select_trigger = {
-		looking_for_a = province
+		looking_for_a = province_definition
 		source = target_area
-		target_flag = selected_province
+		target_flag = selected_province_definition
 		name = "tordesillas_demand_colony_select_title.province"
 		none_available_msg_key = "increase_control_no_provinces"
 		column = { data = name }
 		column = { data = population }
 		column = { data = province_tax_base }
 		visible = {
-			any_location_in_province = {
+			any_location_in_province_definition = {
+				has_owner = yes
 				NOT = { is_owned_or_owned_by_subjects_or_below_of = scope:actor }
 			}			
 		}
@@ -1753,8 +1754,8 @@ tordesillas_demand_transfer_colony = {
 	select_trigger = {
 		looking_for_a = country
 		interaction_source_list = {
-			scope:selected_province = {
-				every_location_in_province = {
+			scope:selected_province_definition = {
+				every_location_in_province_definition = {
 					limit = {
 						has_owner = yes
 					}
@@ -1769,12 +1770,12 @@ tordesillas_demand_transfer_colony = {
 		none_available_msg_key = "break_others_alliance_no_countries"
 		column = { data = name }
 		visible = {
+			scope:actor = {
+				within_diplomatic_range = prev
+			}
 		}
 		enabled = {
 			NOT = { is_subject_or_below_of = scope:actor }
-			scope:actor = {
-				within_diplomatic_range = scope:selected_country
-			}	
 		}
 		map_color = {
 			value = owner.country_color

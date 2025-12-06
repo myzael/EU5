@@ -97,6 +97,12 @@ coa_def_at_war_trigger = {
 	}
 }
 
+coa_def_shogunate_subject_trigger = {
+	scope:actor ?= {
+		is_member_of_international_organization = international_organization:japanese_shogunate
+	}
+}
+
 # Vassal ensigns
 
 coa_def_ARA_ensign_trigger = { # Aragon
@@ -2642,6 +2648,10 @@ coa_def_hainaut_ownership_trigger = {
 			any_subject_or_below = { this = c:HAI }
 		}
 	}
+}
+
+coa_def_KOJ_cyprus_trigger = {
+	scope:actor ?= { has_or_had_tag = CYP }
 }
 
 # Formable Great Britain

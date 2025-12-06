@@ -68,6 +68,7 @@
 		}
 		visible = {
 			is_member_of_international_organization = international_organization:japanese_shogunate
+			is_japanese_emperor_or_shogun = no
 		}
 		enabled = {
 			NOT = { is_at_war_with = scope:actor }

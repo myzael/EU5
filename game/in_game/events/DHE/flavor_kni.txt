@@ -1261,7 +1261,8 @@ flavor_kni.120 = {
 				random_pop = {
 					limit = {
 						owner = root
-						pop_type = pop_type:burghers}
+						pop_type = pop_type:burghers
+					}
 					add_pop_size = {
 						value = pop_size
 						add = 0.25

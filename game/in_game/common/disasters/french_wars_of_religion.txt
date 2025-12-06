@@ -1,4 +1,4 @@
-﻿french_wars_of_religion = {
+﻿french_wars_religion = {
 
 	image = "gfx/interface/illustrations/disaster/french_wars_of_religion.dds"
 	

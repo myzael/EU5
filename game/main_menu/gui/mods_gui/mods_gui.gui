@@ -88,22 +88,18 @@ types ModsPlayset
         
     type playset_compatibility = widget {
         size = {16 16}
+
         icon = {
-            visible = "[And(ModsPlayset.IsChecksumCompatibilityCalculated, ModsPlayset.IsAffectingChecksum)]"
+            visible = "[ModsPlayset.HasPlaysetIssues]"
             size = {100% 100%}
             using = warning_icon_texture
             tooltipwidget = {
                 ChecksumErrorTooltip = {
                     blockoverride "checksum_erro_tooltip_text" {
-                       text = "MODS_GUI_INNER_CHECKSUM_WARNINGS"
+                       text = "[ModsPlayset.GetPlaysetIssuesDesc]"
                     }
                 }
             }
-        }
-        icon = {
-            visible = "[Not(ModsPlayset.IsChecksumCompatibilityCalculated)]"
-            size = {100% 100%}
-            texture = "gfx/interface/icons/mods/calculate.dds"
         }
     }
             
@@ -131,9 +127,7 @@ types ModsPlayset
                         hbox = {
                             margin = { 10 0 }
 
-                            playset_compatibility = {
-                                visible = "[Or(Not(ModsPlayset.IsChecksumCompatibilityCalculated), And(ModsPlayset.IsChecksumCompatibilityCalculated, ModsPlayset.IsAffectingChecksum))]"
-                            }
+                            playset_compatibility = {}
         
                             text_single = {
 
@@ -845,8 +839,9 @@ types ModsGui
                         setitemsizefromcell = yes
     
                         item = {
-                            selected_mod_item = {}
-                        }
+                            selected_mod_item = {
+                            }
+                        }                        
                     }
                     vbox = {
                         margin_right = 15
@@ -915,6 +910,7 @@ types ModsGui
                         title = "MODS_GUI_ADD_MOD_TO_PLAYSET"
                         on_action = "[ModsGui.ActivePlayset.AddMod( LocalMod.Id )]"
                         enabled = "[And3(ModsGui.ActivePlayset.IsEditable, ModsGui.InteractionsAllowed, Not(ModsGui.ActivePlayset.ContainsMod(LocalMod.Id)))]"
+						conditions = "MODS_GUI_CANNOT_ADD_IN_DEFAULT_PLAYSET"
                     }
                 }
     
@@ -950,11 +946,12 @@ types ModsGui
                         }
         
                         tooltipwidget = { BasicFunctionalTooltip = {} }
-                        action_tooltip = {
-                            click_type = left
-                            click_mode = single
-                            title = "MOD_OPEN_IN_FOLDER"
-                            block "mod_open_folder_action" {
+
+                        block "mod_open_folder_action_tooltip" {
+                            action_tooltip = {
+                                click_type = left
+                                click_mode = single
+                                title = "MOD_OPEN_IN_FOLDER"
                                 on_action = "[LocalMod.OpenInFolder]"
                             }
                         }
@@ -976,11 +973,16 @@ types ModsGui
     
                     block "mod_issues" {
                         icon = {
-                            visible = "[And(LocalMod.IsChecksumCompatibilityCalculated, LocalMod.IsAffectingChecksum)]"
+                            visible = "[LocalMod.HasIssues]"
                             size = {20 20}
                             using = warning_icon_texture
                             tooltipwidget = {
-                                ChecksumErrorTooltip = {}
+                                ChecksumErrorTooltip = {
+                                    blockoverride "checksum_erro_tooltip_text"
+                                    {
+                                        text = "[LocalMod.GetIssues]"
+                                    }
+                                }
                             }
                         }
                         icon = {
@@ -1118,9 +1120,7 @@ types ModsGui
                                 click_type = left
                                 click_mode = single
                                 title = "MOD_OPEN_IN_FOLDER"
-                                block "mod_open_folder_action" {
-                                    on_action = "[LocalMod.OpenInFolder]"
-                                }
+                                on_action = "[LocalMod.OpenInFolder]"
                             }
                         }
 					}
@@ -1363,6 +1363,7 @@ types ModsGui
         }
     }
 
+    #for multiplayer
     type mod_ingame_card = mod_icon_card {
         blockoverride "mod_image" {
             texture = "[ModsPlaysetEntry.GetDisplayImage]"
@@ -1377,11 +1378,16 @@ types ModsGui
         }
         blockoverride "mod_issues" {
             icon = {
-                visible = "[And(ModsPlaysetEntry.IsChecksumCompatibilityCalculated, ModsPlaysetEntry.IsAffectingChecksum)]"
+                visible = "[ModsPlaysetEntry.HasIssues]"
                 size = {20 20}
                 using = warning_icon_texture
                 tooltipwidget = {
-                    ChecksumErrorTooltip = {}
+                    ChecksumErrorTooltip = {
+                        blockoverride "checksum_erro_tooltip_text"
+                        {
+                            text = "[ModsPlaysetEntry.GetIssues]"
+                        }
+                    }
                 }
             }
             icon = {
@@ -1445,6 +1451,7 @@ types ModsGui
         }
     }
 
+    #Those who added to the playset and marked as selected
     type selected_mod_item = mod_card {
         blockoverride "mod_left_text" {
             editbox_single_alt = {
@@ -1564,19 +1571,32 @@ types ModsGui
                 enabled = "[And( ModsPlaysetEntry.Playset.IsEditable, ModsGui.InteractionsAllowed )]"
             }
         }
-        blockoverride "mod_open_folder_action" {
-            on_action = "[ModsPlaysetEntry.OpenInFolder]"
+        blockoverride "mod_open_folder_action_tooltip" {
+            action_tooltip = {
+                click_type = left
+                click_mode = single
+                title = "MOD_OPEN_IN_FOLDER"                
+                on_action = "[ModsPlaysetEntry.OpenInFolder]"
+            }
         }
+        #blockoverride "mod_open_folder_action" {
+            #on_action = "[ModsPlaysetEntry.OpenInFolder]"
+        #}
         blockoverride "mod_name" {
             text = "[ModsPlaysetEntry.Name]"
         }
         blockoverride "mod_issues" {
             icon = {
-                visible = "[And(ModsPlaysetEntry.IsChecksumCompatibilityCalculated, ModsPlaysetEntry.IsAffectingChecksum)]"
+                visible = "[ModsPlaysetEntry.HasIssues]"
                 size = {20 20}
                 using = warning_icon_texture
                 tooltipwidget = {
-                    ChecksumErrorTooltip = {}
+                    ChecksumErrorTooltip = {
+                        blockoverride "checksum_erro_tooltip_text"
+                        {
+                            text = "[ModsPlaysetEntry.GetIssues]"
+                        }
+                    }
                 }
             }
             icon = {
@@ -2221,17 +2241,18 @@ window = {
                                                 expand = {}
         
                                                 icon = {
-                                                    visible = "[And(ModsGui.GetPlayset( ModsGui.SelectedPlaysetId ).IsChecksumCompatibilityCalculated, ModsGui.GetPlayset( ModsGui.SelectedPlaysetId ).IsAffectingChecksum)]"
+                                                    visible = "[ModsGui.GetPlayset( ModsGui.SelectedPlaysetId ).HasPlaysetIssues]"
                                                     size = {16 16}
                                                     using = warning_icon_texture
                                                     tooltipwidget = {
                                                         ChecksumErrorTooltip = {
                                                             blockoverride "checksum_erro_tooltip_text" {
-                                                            text = "MODS_GUI_INNER_CHECKSUM_WARNINGS"
+                                                                text = "[ModsGui.GetPlayset( ModsGui.SelectedPlaysetId ).GetPlaysetIssuesDesc]"
                                                             }
                                                         }
                                                     }
                                                 }
+
                                                 icon = {
                                                     visible = "[Not(ModsGui.GetPlayset( ModsGui.SelectedPlaysetId ).IsChecksumCompatibilityCalculated)]"
                                                     size = {16 16}

@@ -113,6 +113,7 @@ norn_culture = {
 
 	culture_groups = {
 		scandinavian_group
+		scottish_group
 	}
 	
 	use_patronym = yes

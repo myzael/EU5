@@ -82,6 +82,7 @@
 			peasants_estate_max_tax = 0.1
 			peasants_estate_agenda_impact = 0.1
 			global_peasants_food_consumption = 0.1
+			global_laborers_food_consumption = 0.1
 			court_language_is_common_language_importance_modifier = 0.5
 			monthly_towards_free_subjects = societal_value_monthly_move
 			monthly_towards_liberalism = societal_value_monthly_move
@@ -353,6 +354,7 @@
 	}
 
 	dop_office_of_the_eristavi = {
+		unique = yes
 		potential = {
 			tag = GEO
 		}

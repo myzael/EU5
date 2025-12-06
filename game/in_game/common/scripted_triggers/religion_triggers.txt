@@ -14,6 +14,7 @@ excommunicate_allow_trigger = {
 }
 excommunicate_target_trigger = {
 	religion ?= religion:catholic
+	is_subject = no
 	exists = ruler
 	has_regent = no
 	custom_tooltip = {
@@ -233,6 +234,7 @@ has_access_to_god_holy_site = {
 						OR = {
 							this = root
 							is_allied_with = { target = root }
+							top_overlord ?= root
 						}
 					}			
 				}

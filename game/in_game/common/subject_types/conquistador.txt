@@ -16,6 +16,8 @@
 	can_change_rank = no
 	can_change_heir_selection = no
 	
+	allow_subjects = no
+	
 	minimum_opinion_for_offer = 150
 	
 	has_limited_diplomacy = no

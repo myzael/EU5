@@ -787,7 +787,7 @@ template build_rgo_entry {
 					text_single = {
 						maximumsize = { 70 18 }
 						fontsize = 15
-						raw_text = "[RawGoodLocationItem.GetProfit|2+=]@gold!"
+						raw_text = "[RawGoodLocationItem.GetProfit|2+=]@tax_base!"
 						datacontext = "[RawGoodLocationItem.GetLocation]"
 						datacontext = "[RawGoodLocationItem]"
 						tooltipwidget = {

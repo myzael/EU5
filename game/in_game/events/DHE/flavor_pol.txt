@@ -717,7 +717,7 @@ flavor_pol.9 = {
 
 	trigger = {
 		NOT = { has_estate_privilege = estate_privilege:nieszawa_privileges }
-		"estate_power(estate_type:crown_estate)" < 0.5
+		"estate_power(estate_type:crown_estate)" < "estate_power(estate_type:nobles_estate)"
 		has_ruler = yes
 	}
 
@@ -894,16 +894,12 @@ flavor_pol.11 = { #https://en.wikipedia.org/wiki/Pacta_conventa
 		NOT = {
 			has_estate_privilege = estate_privilege:pacta_conventa
 		}
+		"estate_power(estate_type:crown_estate)" < "estate_power(estate_type:nobles_estate)"
 		OR = {
 			has_estate_privilege = estate_privilege:golden_liberty
-			AND = {
-				"estate_power(estate_type:nobles_estate)" > 0.7
-				"estate_power(estate_type:crown_estate)" < 0.5
-			}
-			OR = {
-				succession_law = heir_selection:elective_succession
-				succession_law = heir_selection:dynastic_elective_succession
-			}
+			"estate_power(estate_type:nobles_estate)" > 0.35
+			succession_law = heir_selection:elective_succession
+			succession_law = heir_selection:dynastic_elective_succession
 		}
 	}
 

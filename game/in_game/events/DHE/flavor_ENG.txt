@@ -77,50 +77,35 @@ flavor_eng.1 = {
 			}
 		}
 
-		every_pop = {
-			limit = {
-				location.region = region:great_britain_region
-				owner = root
-				religion = religion:catholic
-				culture = root.culture
-			}
-			random_list = {
-				10 = {}
-				40 = {
-					split_pop = {
-						fraction = 0.05
-						religion = religion:lollardy
-					}
+		every_owned_location = {
+			limit = { region = region:great_britain_region }
+			every_pop = {
+				limit = {
+					owner = root
+					religion = religion:catholic
+					dialect = dialect:english_dialect
 				}
-				20 = {
-					split_pop = {
-						fraction = 0.10
-						religion = religion:lollardy
+				split_pop = {
+					fraction = {
+						value = 0
+						add = {
+							value = 1
+							subtract = pop_satisfaction
+							multiply = 0.5
+						}
+						add = {
+							value = location.development
+							divide = 100 # scale is 0 to 100
+							multiply = 0.5
+						}
+						add = {
+							value = pop_literacy
+							divide = 100 # scale is 0 to 100
+							multiply = 0.5
+						}
+						add = { -0.6 0.2 }
 					}
-				}
-				15 = {
-					split_pop = {
-						fraction = 0.20
-						religion = religion:lollardy
-					}
-				}
-				10 = {
-					split_pop = {
-						fraction = 0.30
-						religion = religion:lollardy
-					}
-				}
-				4 = {
-					split_pop = {
-						fraction = 0.40
-						religion = religion:lollardy
-					}
-				}
-				1 = {
-					split_pop = {
-						fraction = 0.50
-						religion = religion:lollardy
-					}
+					religion = religion:lollardy
 				}
 			}
 		}
@@ -4497,10 +4482,103 @@ flavor_eng.46 = {
 		scope:target = {
 			change_dynasty = dynasty:lancaster_dynasty
 			marry_character = scope:target_female
+
+			every_descendant = {
+				change_dynasty = dynasty:lancaster_dynasty
+			}
 		}
 		add_prestige = prestige_extreme_bonus
 	}
 
+	after = {
+		trigger_event_silently = {
+			id = flavor_eng.666
+			months = { 400 500 }
+		}
+	}
+}
+
+scripted_trigger basic_checks_character = {
+	is_alive = yes
+	is_married = no
+	is_female = no
+	is_adult = yes
+	owner = root
+	is_ruler = no
+	is_heir = no
+}
+
+flavor_eng.666 = {
+	type = country_event
+
+	fire_only_once = yes
+
+	title = flavor_eng.46.title
+	desc = flavor_eng.46.desc
+	hidden = yes
+
+
+	trigger = {
+		NOR = {
+			current_year > 1500
+			any_active_disaster = { disaster_type = disaster_type:war_of_the_roses }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				dynasty:lancaster_dynasty ?= {
+					any_character_in_dynasty = { basic_checks_character = yes }
+				}
+			}
+			dynasty:lancaster_dynasty = {
+				every_character_in_dynasty = {
+					limit = { basic_checks_character = yes }
+					save_temporary_scope_as = target_guy
+					root = {
+						create_character = {
+							female = yes
+							birth_location = location:lancaster
+							marry_character = scope:target_guy
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				dynasty:york_dynasty ?= {
+					any_character_in_dynasty = { basic_checks_character = yes }
+				}
+			}
+			dynasty:lancaster_dynasty = {
+				every_character_in_dynasty = {
+					limit = { basic_checks_character = yes }
+					save_temporary_scope_as = target_guy
+					root = {
+						create_character = {
+							female = yes
+							birth_location = location:york
+							marry_character = scope:target_guy
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavor_eng.46.a
+		
+	}
+
+	after = {
+		trigger_event_silently = {
+			id = flavor_eng.666
+			months = { 400 500 }
+		}
+	}
 }
 
 # Isabella of Castile

@@ -1596,6 +1596,11 @@ flavor_tur.27 = {
 				save_scope_as = escape_target
 			}
 		}
+
+		if = {
+			limit = { owns = location:bursa }
+			location:bursa = { save_scope_as = old_capital_scope }
+		}
 	}
 
 	option = {
@@ -1627,6 +1632,24 @@ flavor_tur.27 = {
 				order_by = pop_size
 				max = 3
 				add_pop_satisfaction = pop_satisfaction_extreme_bonus
+			}
+		}
+
+		scope:old_capital_scope = {
+			if = {
+				limit = { has_location_modifier = influence_of_the_old_capital_modifier }
+				add_location_modifier = {
+					modifier = influence_of_the_old_capital_modifier
+					years = 30
+					mode = extend
+				}
+			}
+			else = {
+				add_location_modifier = {
+					modifier = influence_of_the_old_capital_modifier
+					years = 30
+					mode = replace
+				}
 			}
 		}
 	}
@@ -1815,13 +1838,24 @@ flavor_tur.30 = {
 	option = {
 		name = flavor_tur.30.a
 		historical_option = yes
-		change_gold_effect = { scale = -2 }
-		add_government_power = government_power_mild_bonus
+
+		ai_will_select = { value = 1 }
+
+		change_gold_effect = { scale = -1 }
+
+		add_country_modifier = {
+			modifier = coins_in_our_name_modifier
+			years = modifier_duration_years_long
+			mode = replace
+		}
 	}
 
 	option = {
 		name = flavor_tur.30.b
-		add_government_power = government_power_weak_bonus
+
+		ai_will_select = { value = 0 }
+
+		add_government_power = government_power_mild_bonus
 	}
 }
 
@@ -2124,6 +2158,8 @@ flavor_tur.36 = {
 
 	immediate = {
 		location:edirne = { save_scope_as = target_location }
+
+		capital = { save_scope_as = old_capital_scope }
 	}
 
 	option = {
@@ -2159,6 +2195,24 @@ flavor_tur.36 = {
 				every_pop = {
 					limit = { owner = root }
 					add_pop_satisfaction = pop_satisfaction_mild_penalty
+				}
+			}
+		}
+
+		scope:old_capital_scope = {
+			if = {
+				limit = { has_location_modifier = influence_of_the_old_capital_modifier }
+				add_location_modifier = {
+					modifier = influence_of_the_old_capital_modifier
+					years = 30
+					mode = extend
+				}
+			}
+			else = {
+				add_location_modifier = {
+					modifier = influence_of_the_old_capital_modifier
+					years = 30
+					mode = replace
 				}
 			}
 		}
@@ -2238,6 +2292,16 @@ flavor_tur.38 = {
 
 	historical_info = flavor_tur.38.historical_info
 
+	trigger = {
+		culture = culture:turkish_culture
+		location:iznik = {
+			owner = root
+			any_pop = {
+				culture = culture:turkish_culture
+			}
+		}
+	}
+
 	immediate = {
 		create_named_dynasty = candarli_dynasty
 
@@ -2248,6 +2312,7 @@ flavor_tur.38 = {
 			dip = { 33 100 }
 			mil = { 33 100 }
 			estate = estate_type:nobles_estate
+			culture = culture:turkish_culture
 			birth_date = 1330
 			birth_location = location:iznik
 			dynasty = dynasty:candarli_dynasty
@@ -2313,6 +2378,8 @@ flavor_tur.39 = { #The Mosques of Bursa
 		name = flavor_tur.39.a
 		historical_option = yes
 
+		ai_will_select = { value = 90 }
+
 		scope:target_location = {
 			if = {
 				limit = {
@@ -2328,21 +2395,49 @@ flavor_tur.39 = { #The Mosques of Bursa
 				change_development = development_mild_bonus
 				change_prosperity = prosperity_severe_bonus
 			}
+
+			ordered_pop = {
+				limit = {
+					religion != root.religion
+					culture != root.culture
+				}
+				order_by = pop_size
+				max = 1
+				split_pop = {
+					fraction = { 0.05 0.2 }
+					religion = root.religion
+				}
+				split_pop = {
+					fraction = { 0.1 0.2 }
+					culture = root.culture
+				}
+			}
 		}
 
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_extreme_bonus }
-		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_tiny_move_to_right }
+		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_move_to_right }
 	}
 
 	option = {
 		name = flavor_tur.39.b
 
+		ai_will_select = { value = 10 }
+
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_penalty }
 		change_societal_value = {
 			type = spiritualist_vs_humanist
-			value = societal_value_move_to_left
+			value = societal_value_large_move_to_left
 		}
-		change_societal_value = { type =mysticism_vs_jurisprudence value = societal_value_tiny_move_to_left }
+		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_large_move_to_left }
+		ordered_pop = {
+			limit = {
+				religion != root.religion
+				culture != root.culture
+			}
+			order_by = pop_size
+			max = 1
+			add_pop_satisfaction = pop_satisfaction_mild_bonus
+		}
 	}
 }
 
@@ -17700,6 +17795,9 @@ flavor_tur.1001 = {
 	}
 
 	immediate = {
+		location:elbasan = {
+			create_dynasty_from_location = kastrioti_dynasty
+		}
 		create_character = {
 			first_name = name_george
 			nickname = nick_skanderbeg

@@ -5684,6 +5684,25 @@ BTN = { # Buton
 		instance = { position = { 0.5 0.875 } scale = { 1.0 0.25 } }		
 	}			
 }
+BTN_sultanate = { # Buton Sultanate
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_per_pale_checky_border_buton.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color1
+	}
+	colored_emblem = {
+		texture = "ce_arabic_buton.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.185 0.5 } rotation = -90 scale = { 0.35 0.8 } }
+	}
+}
 
 BUD = { # Budingen
 	pattern = "pattern_solid.dds"
@@ -6799,6 +6818,28 @@ CDL = { # Dali
 	}	
 }
 
+CDN = { # Dongguan TODO
+	pattern = "pattern_solid.dds"
+	color1 = "black_secondary"
+	color2 = "white"
+	color3 =  hsv360 	{	205	60	65	}
+	color4 = hsv360 	{	08	80	64	}
+
+	colored_emblem = {
+		texture = "ce_chinese_constellation_chariot.dds"
+		color1 = color2
+		color2 = color4
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+
 CEL = { # Celtica
 	pattern = "pattern_solid.dds"
 	color1 = "green"
@@ -7086,7 +7127,7 @@ CET = { # Chester
 	}	
 }
 
-CEV = { # Ceva
+CEV = { # Ceva - TODO identical to Mantua
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
@@ -7209,27 +7250,6 @@ CGU_dragon = { # Guo - Imperial
 		texture = "te_dragon_flaming_pearl_clouds_gold_azure_variant.dds"
 		instance = { position = { 0.5 0.5 } scale = { 0.88 0.82 } }
 	}
-}
-
-CGZ = { # Changzhou TODO
-	pattern = "pattern_solid.dds"
-	color1 = "black_secondary"
-	color2 = "white"
-	color3 =  hsv360 	{	205	65	50	}	
-			
-	colored_emblem = {
-		texture = "ce_chinese_constellation_chariot.dds"
-		color1 = color2
-		color2 = "red_scarlet"
-		color3 = color1
-		instance = { position = { 0.5 0.5 } scale = { 0.80 0.80 } }
-	}			
-	colored_emblem = {
-		texture = "ce_border_thin.dds"
-		color1 = color3
-		color2 = color3
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
-	}				
 }
 
 CHA = { # Champa
@@ -7853,36 +7873,50 @@ CKL = { # Minyag
 	}			
 }
 
-CKO = { # Koke Temur TODO
+CKO = { # Koke Temur
 	pattern = "pattern_solid.dds"
-	color1 = hsv360 	{	80 	70	40	}
-	color2 = hsv360 	{	40 	70	80	}
+	color1 = hsv360 	{	200	90	45	}
+	color2 = hsv360 	{	40 	75	85	}
 	color3 = hsv360 	{	08 	80	50	}
-	color4 = hsv360 	{	08	80	64	}	
+	color4 = hsv360 	{	30 	05	85	}
 
 	colored_emblem = {
-		texture = "ce_roundel.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.45 0.5 } scale = { 0.84 0.84 } }	
-	}
-	colored_emblem = {
-		texture = "ce_roundel.dds"
-		color1 = color3
-		color2 = color3
-		instance = { position = { 0.45 0.5 } scale = { 0.76 0.76 } }	
-	}
-	colored_emblem = {
-		texture = "ce_chinese_dragon_shield.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.45 0.5 } scale = { 0.525 0.525 } }	
-	}	
-	colored_emblem = {
-		texture = "ce_border_of_3_thin.dds"
+		texture = "ce_frame_circle.dds"
 		color1 = color4
 		color2 = color4
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 0.675 0.675 } }
+	}
+	colored_emblem = {
+		texture = "ce_chinese_yuan_frame_circle.dds"
+		color1 = color4
+		color2 = "black_secondary"
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.78 0.78 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color3
+		color2 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.515 0.515 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.475 0.475 } }
+	}
+	colored_emblem = {
+		texture = "ce_crescent_moon_flametip.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color3
+		instance = { position = { 0.5 0.5 } scale = { 0.5 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_thin_line_inner.dds"
+		color1 = color4
+		color2 = color3
+	}
 }
 
 CLA = { # Clandeboye
@@ -7933,7 +7967,40 @@ CLC = { # Chalco
 		texture = "te_glyph_chalco.dds"
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }				
 	}
-} 
+}
+
+CLE = { # Chelei
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	30	5	80	}
+	color2 = hsv360 	{	188	90	42	}
+	color3 = hsv360 	{	40 	70	80	}
+
+	colored_emblem = {
+		texture = "ce_border_yi_04.dds"
+		color1 = color2
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_chinese_ming_ruyi_head_frame_circle.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.36 0.36 } }
+	}
+	colored_emblem = {
+		texture = "ce_yi_crosss_star_08.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.375 0.375 } }
+	}
+}
 
 CLI = { # Heunburg/Celje - Only arms the Sanneck used from adoption 1322 until the mid 15th c.
 	pattern = "pattern_solid.dds"
@@ -8283,6 +8350,39 @@ CMS = { # Kemeys (Audley)
 		color2 = color1
 		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }		
 	}	
+}
+
+CNA = { # Naghachu
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	200	90	48	}
+	color2 = hsv360 	{	30 	05	80	}
+	color3 = hsv360 	{	08 	80	64	}
+	color4 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = hsv360 	{	04 	80	52	}
+		color2 = hsv360 	{	04 	80	52	}
+		instance = { position = { 0.5 0.5 } scale = { 0.675 0.675 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.60 0.60 } }
+	}
+	colored_emblem = {
+		texture = "ce_tibetan_crescent_moon_flametip_variant.dds"
+		color1 = color4
+		color2 = hsv360 	{	20 	78	64	}
+		color3 = hsv360 	{	04 	80	52	}
+		instance = { position = { 0.5 0.5 } scale = { 0.7 0.7 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_yi_04.dds"
+		color1 = color2
+		color2 = hsv360 	{	04 	80	52	}
+	}
 }
 
 CND = { # Candar
@@ -9032,6 +9132,55 @@ CSA = { # Casma
 		color1 = color2
 		color2 = color1		
 	}		
+}
+
+CSI = { # Li Siqi
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	40 	70	80	}
+	color2 = "black"
+	color3 = hsv360 	{	04	80	64	}
+
+	colored_emblem = {
+		texture = "ce_chinese_ming_ruyi_head_frame_circle.dds"
+		color1 = hsv360 	{	40 	78	72	}
+		color2 = color3
+		color3 = "black_secondary"
+		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = hsv360 	{	40 	70	84	}
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 0.4 0.4 } }
+	}
+	colored_emblem = {
+		texture = "ce_rtr_li.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.45 0.45 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_thin_line_inner.dds"
+		color1 = hsv360 	{	200	62	56	}
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+}
+CSI_dragon = { # Li Siqi - Imperial
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	40	65	80	}
+	color2 = "white_secondary"
+	color3 = "black_secondary"
+
+	colored_emblem = {
+		texture = "ce_border_thin.dds"
+		color1 = color3
+		color2 = color3
+	}
+	textured_emblem = {
+		texture = "te_dragon_flaming_pearl_clouds_red_azure_variant.dds"
+		instance = { position = { 0.5 0.5 } scale = { 0.85 0.8 } }
+	}
 }
 
 CSM = { # Cozamaloapan
@@ -19654,6 +19803,18 @@ KLR = { # Kalhor
 	}		
 }
 
+KLS = { # Kalisusu - Colours of modern ruling dynasty
+	pattern = "pattern_solid.dds"
+	color1 = "black"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bars_04.dds"
+		color1 = color2
+		color2 = color2
+	}
+}
+
 KLT = { # Kolathunadu
 	pattern = "pattern_solid.dds"
 	color1 = "white"
@@ -19948,7 +20109,7 @@ KOD = { # Kodan people
 	}	
 }
 
-KOJ = { #Kingdom of Jerusalem
+KOJ = { # Kingdom of Jerusalem
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "yellow_mid"
@@ -19958,6 +20119,37 @@ KOJ = { #Kingdom of Jerusalem
 		color1 = color2
 		color2 = color2		
 	}	
+}
+KOJ_eagle = { # Variant with Saladin's eagle - Shouldn't be used unless tag converting after formation
+	pattern = "pattern_solid.dds"
+	color1 = "yellow_mid"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_border_thin_line_inner.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_eagle_mena_saladin.dds"
+		color1 = color2
+		color2 = color2
+		color3 = hsv360 	{	30	80	50	}
+		instance = { position = { 0.5 0.51 } scale = { 0.85 0.85 } }
+	}
+}
+KOJ_lusignan = { # Kingdom of Jerusalem with Lusignan variant of the cross
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_cross_jerusalem_lusignan_wide.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }
+	}
 }
 
 KOL = { # Cologne - Diapering for difference
@@ -21174,6 +21366,19 @@ LDA = { # Landau - Modern variant otherwise the same as Lichtenberg (Moha/Dagsbu
 	}	
 }
 
+LDB = { # Landsberg
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_pales_02.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }			
+	}
+}
+
 LEI = { # Leinster
 	pattern = "pattern_solid.dds"
 	color1 = "red"
@@ -22155,6 +22360,47 @@ LUN_quarterly = { # Lüneburg-Brunswick (inverse quartering of historical)
     }
 }
 
+LUR = { # Laur/Khasi
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_border_thin_dotted_small.dds"
+		color1 = color2
+		color2 = color1
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		#instance = { position = { 0.5 0.15 } scale = { 0.23 0.265 } }
+		instance = { position = { 1.5 0.125 } scale = { 0.34 0.42 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color1
+		color2 = color1
+		#instance = { position = { 0.5 0.125 } scale = { 0.24 0.24 } }
+		instance = { position = { 1.5 0.10 } scale = { 0.36 0.36 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 1.5 0.18 } scale = { 0.11 0.11 } }
+		#instance = { position = { 0.5 0.15 } scale = { 0.07 0.07 } }
+	}
+	colored_emblem = {
+		texture = "ce_khasi_shield_bow.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color1
+		instance = { position = { 0.5 0.51 } scale = { 0.875 0.875 } }
+	}
+}
+
 LUW = { # Luwu
 	pattern = "pattern_fringe.dds"
 	color1 = "black"
@@ -22906,19 +23152,6 @@ MED = { # Medri Bahri
 		color3 = color1	
 		instance = { position = { 0.5 0.5 } scale = { 0.95 0.95 } }					
 	}	
-}
-
-LDB = { # Landsberg
-	pattern = "pattern_solid.dds"
-	color1 = "yellow"
-	color2 = "blue"
-	
-	colored_emblem = {
-		texture = "ce_pales_02.dds"
-		color1 = color2
-		color2 = color2
-		instance = { position = { 0.5 0.5 }  scale = { 1.0 1.0 } }			
-	}
 }
 
 MEI = { # Meissen TODO identical to Flanders & Julich
@@ -24933,7 +25166,7 @@ MRN = { # Moronene
 	}	
 }
 
-MRS = { # Mörs
+MRS = { # Moers
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
@@ -41855,6 +42088,46 @@ WNA = { # Wanga
 	}		
 }
 
+WNG = { # Wumeng
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	04	80	64	}
+	color2 = "black_secondary"
+	color3 = hsv360 	{	30	5	80	}
+	color4 = hsv360 	{	40 	70	80	}
+
+	colored_emblem = {
+		texture = "ce_chinese_ming_ruyi_head_frame_circle_02.dds"
+		color1 = color4
+		color2 = color2
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_yi_03.dds"
+		color1 = color2
+		color2 = color4
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.35 0.35 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.30 0.30 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_08_yi.dds"
+		color1 = color3
+		color2 = color3
+		color3 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.3 0.3 } }
+	}
+}
+
 WNT = { # Wuntho
 	pattern = "pattern_solid.dds"
 	color1 = "black"
@@ -43469,6 +43742,46 @@ ZNK = { # Zanskar
 		color1 = "orange"
 		color2 = "yellow"	
 	}		
+}
+
+ZNX = { # Zhenxiong
+	pattern = "pattern_solid.dds"
+	color1 = hsv360 	{	205	70	48	}
+	color2 = "black_secondary"
+	color3 = hsv360 	{	280	65	60	}
+	color4 = hsv360 	{	40 	70	80	}
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color4
+		color2 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.7 0.7 } }
+	}
+	colored_emblem = {
+		texture = "ce_chinese_yuan_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = color2
+		color2 = color2
+		instance = { position = { 0.5 0.5 } scale = { 0.485 0.485 } }
+	}
+	colored_emblem = {
+		texture = "ce_border_fringe.dds"
+		color1 = color4
+		color2 = color3
+	}
+	colored_emblem = {
+		texture = "ce_yi_crosss_star_08.dds"
+		color1 = color2
+		color2 = color2
+		color3 = color4
+		instance = { position = { 0.5 0.5 } scale = { 0.51 0.51 } }
+	}
 }
 
 ZOM = { # Tzompanco - Zumpango

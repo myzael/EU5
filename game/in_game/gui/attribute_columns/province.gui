@@ -91,9 +91,9 @@
 				texture = "gfx/interface/icons/location_icons/new/population.dds"
 			}			
 			
-			tooltipwidget = {
-				using = province_population_tooltip
-			}
+		}
+		tooltipwidget = {
+			using = province_population_tooltip
 		}
 	}
 

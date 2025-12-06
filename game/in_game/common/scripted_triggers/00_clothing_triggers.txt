@@ -116,12 +116,26 @@ portrait_wear_armor_trigger = {
 
 portrait_wear_helmet_trigger = {
 	exists = this
-	NOR = { 
-		portrait_cannot_wear_armor_trigger = yes
+	NOR = {
+		portrait_wear_armor_trigger = no # The character must have an armor to wear an helmet
 		any_ruling_countries = { has_reform = government_reform:military_order_reform }
+		AND = {
+			any_ruling_countries = { country_rank_level >= 3 }
+			gfx_culture_applicable = european_gfx
+		}
 	}
 	OR = {
-		is_general = yes		
+		is_general = yes
+		is_mercenary_leader = yes
+		any_ruling_countries = { country_type = army }
+	}
+}
+
+portrait_wear_crowned_helmet_trigger = {
+	exists = this
+	portrait_wear_armor_trigger = yes # The character must have an armor to wear an helmet
+	OR = {
+		is_general = yes
 		is_mercenary_leader = yes
 		any_ruling_countries = { country_type = army }
 	}

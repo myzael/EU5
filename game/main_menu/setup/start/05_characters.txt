@@ -1593,6 +1593,12 @@ character_db={
 		mother = sco_isabella_warenne
 		dynasty = balliol_dynasty
 		tag = SBL
+		timed_modifier = { # Heir of Empty Coat
+			modifier = "sbl_heir_of_empty_coat"
+			start_date = 1337.1.1
+			date = 9999.1.1
+			size = 1
+		}
 	}
 	
 	eng_maud_balliol = {
@@ -17500,7 +17506,7 @@ character_db={
 	stp_marie_chatillon = {
 		first_name = { name = name_mary }
 		culture = picard
-		religion = sunni
+		religion = catholic
 		estate = nobles_estate
 		female = yes
 		birth_date = 1303.1.1
@@ -72232,7 +72238,7 @@ adm = 31 dip = 34 mil = 24
 			modifier = "healthy_character"
 			start_date = 1330.1.1
 			date = 9999.1.1
-			size = 1
+			size = 2
 		}
 	}
 
@@ -73237,7 +73243,7 @@ adm = 31 dip = 34 mil = 24
 	skn_zayd_ibn_abi_numayy_ibn_ajlan = {	
 		first_name = { name = name_zayd }
 		culture = hijazi_culture
-		religion = sunni
+		religion = shia
 		adm = 30 dip = 29 mil = 41
 		birth_date = 1280.1.1 #Unknown
 		birth = mecca
@@ -80321,6 +80327,19 @@ adm = 31 dip = 34 mil = 24
 		child_trait = child_gregarious
 	}
 
+	#City of Nürnberg
+	nur_rappold_von_kulsheim = { #Reichsschultheiß (Imperial Advocate) of Nürnberg
+		first_name = { name = name_rappold }
+		last_name = { name = von_kulsheim }
+		culture = east_franconian
+		religion = catholic
+		estate = burghers_estate
+		adm = 68 dip = 66 mil = 62
+		birth_date = 1280.1.1 #unknown
+		birth = nuremberg
+		tag = NUR
+	}
+
 	# Mother of the Count of Leuchtenberg & Sister of the Burgrave of Nürnberg
 	leu_anna_von_nurnberg = {
 		first_name = { name = name_anna }
@@ -84166,7 +84185,7 @@ adm = 31 dip = 34 mil = 24
 		culture = saxon
 		religion = catholic
 		birth_date = 1304.1.1
-		birth = arnstadt
+		birth = blankenburg
 		dynasty = schwarzburg_dynasty
 		father = swz_heinrich_vi_schwarzburg
 		tag = SWZ
@@ -85676,7 +85695,7 @@ adm = 31 dip = 34 mil = 24
 		tag = WTG
 	}
 
-	#Mörs
+	#Moers
 	mrs_dietrich_iii_moers = { #Father of Ruler
 		first_name = { name = name_theodoric }
 		culture = westphalian
@@ -94152,6 +94171,12 @@ adm = 31 dip = 34 mil = 24
 		birth_date = 1290.1.1
 		birth = trowulan
 		tag = MAJ
+		timed_modifier = {
+			modifier = "healthy_character"
+			start_date = 1330.1.1
+			date = 9999.1.1
+			size = 2
+		}
 	}
 
 	maj_dara_petak = {
@@ -97023,7 +97048,66 @@ adm = 31 dip = 34 mil = 24
 		tag = MGE
 	}
 
-		#-------------------------- Bengal ----------------------------
+	hugeci_borjigin = { #https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%B2%E3%83%81
+		first_name = { name = name_hugeci }
+		dynasty = borjigin_dynasty
+		culture = mongolian_culture
+		religion = tibetan_buddhism
+		birth_date = 1245.1.1 #Unknown but already adult in 1267 but younger than Zhenjin
+		birth = dadu
+		death_date = 1271.2.11
+		father = kublai_khan
+		tag = LNG
+	}
+
+	esen_temur_borjigin = { #https://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%BB%E3%83%B3%E3%83%BB%E3%83%86%E3%83%A0%E3%83%AB
+		first_name = { name = name_esen.name_temur }
+		dynasty = borjigin_dynasty
+		culture = mongolian_culture
+		religion = tibetan_buddhism
+		birth_date = 1265.1.1 #Unknown
+		birth = kunming
+		death_date = 1332.2.29
+		father = hugeci_borjigin
+		tag = LNG
+	}
+
+	tughluq_borjigin = { #https://zh.wikipedia.org/wiki/%E9%98%BF%E9%B2%81_(%E4%BA%91%E5%8D%97%E7%8E%8B)
+		first_name = { name = name_tughluq }
+		dynasty = borjigin_dynasty
+		culture = mongolian_culture
+		religion = tibetan_buddhism
+		birth_date = 1300.1.1 #Unknown
+		birth = kunming
+		father = esen_temur_borjigin
+		spouse = "random"
+		tag = LNG
+	}
+
+	bolot_borjigin = { #https://zh.wikipedia.org/wiki/%E5%AD%9B%E7%BD%97_(%E4%BA%91%E5%8D%97%E7%8E%8B)
+		first_name = { name = name_bolot }
+		dynasty = borjigin_dynasty
+		culture = mongolian_culture
+		religion = tibetan_buddhism
+		birth_date = 1310.1.1 #Unknown
+		birth = kunming
+		father = esen_temur_borjigin
+		spouse = "random"
+		tag = LNG
+	}
+
+	vajravarmi_borjigin = { #Basalawarmi https://en.wikipedia.org/wiki/Basalawarmi
+		first_name = { name = name_vajravarmi }
+		dynasty = borjigin_dynasty
+		culture = mongolian_culture
+		religion = tibetan_buddhism
+		birth_date = 1335.1.1 #Unknown
+		birth = kunming
+		father = bolot_borjigin
+		tag = LNG
+	}
+
+	#-------------------------- Bengal ----------------------------
 	
 	#Sonargaon
 	sgn_bahram_khan = { #Governor

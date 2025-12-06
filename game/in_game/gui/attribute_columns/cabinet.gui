@@ -3,6 +3,7 @@ types CabinetColumns
 	type cabinet_name = widget {
 		layoutpolicy_horizontal = expanding
 		size = { 530 145 }
+		alwaystransparent = no
 
 		vbox = {
 			layoutpolicy_horizontal = expanding
@@ -24,25 +25,7 @@ types CabinetColumns
 				}
 				blockoverride "no_advisor_portrait" {}
 				blockoverride "cabinet_action_tt" {
-					using = select_interaction_target_action_provider
-					using = snd_UI_confirm
-					tooltipmeta = {
-						texture = "gfx/interface/icons/alerts_icons/cabinet.dds"
-						title = "[UIAction.GetTitle]"
-						game_concept = "[cabinet|E]"
-					}
-					# tooltipwidget = {
-					# 	ContextualTooltipType = {
-					# 		blockoverride "tooltip_content" {
-					# 			using = action_tooltip_inner_content
-					# 		}
-					# 	}
-					# }
-					# action_tooltip = {
-					# 	click_type = left
-					# 	click_mode = confirm
-					# 	title = "[UIAction.GetDescription]"
-					# }
+					using = cabinet_select_card_tooltip
 				}
 			}
 
@@ -56,22 +39,52 @@ types CabinetColumns
 					visible = no
 				}
 				blockoverride "cabinet_action_tt" {
-					using = select_interaction_target_action_provider
-					using = snd_UI_confirm
-					tooltipmeta = {
-						texture = "gfx/interface/icons/alerts_icons/cabinet.dds"
-						title = "[Cabinet.GetName]"
-						game_concept = "[cabinet|E]"
-					}
-					# tooltipwidget = {
-					# 	ContextualTooltipType = {
-					# 		blockoverride "tooltip_content" {
-					# 			using = action_tooltip_inner_content
-					# 		}
-					# 	}
-					# }
+					using = cabinet_select_card_tooltip
 				}
 			}
 		}		
+	}
+}
+
+template cabinet_select_card_tooltip {
+	using = select_interaction_target_action_provider_base
+	using = snd_UI_confirm
+	tooltipwidget = {
+		ContextualTooltipType = {
+			blockoverride "title_text" {
+				text = "[UIAction.GetTitle]"
+			}
+
+			blockoverride "tooltip_content" {
+				using = action_tooltip_inner_content
+			}
+
+			blockoverride "tooltip_ui_action_block" {
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					ignoreinvisible = yes
+
+					TooltipConditionList = {
+						using = tooltip_left_click_conditions_template
+
+						visible = "[And3(UIAction.IsLeftClickAndConfirmVisible, Not(UIAction.IsLeftClickAndConfirmEnabled), Not(StringIsEmpty(StringToConditionListOnlyFail(UIAction.GetLeftClickAndConfirmTooltip).GetOutput)))]"
+						tooltip_enabled = "[IsBuildDebug]"
+						tooltip = "[UIAction.GetLeftClickAndConfirmTooltip]"
+
+						ontextcontextchanged = "[SetConditionListOnlyFailCollapseRequirementFromTextContext(PdxGuiWidget.AccessSelf)]"
+						textcontext = "[UIAction.GetLeftClickAndConfirmTooltip]"
+					}
+
+					# Confirm click
+					TooltipFunctionalBlock = {
+						visible = "[And(UIAction.IsLeftClickAndConfirmVisible, Not(UIAction.IsRightClickAndConfirmVisible))]"
+						using = tooltip_left_click_template
+					}
+					blockoverride "action_left_text" {
+						text = "[UIAction.GetDescription]"
+					}
+				}
+			}
+		}
 	}
 }

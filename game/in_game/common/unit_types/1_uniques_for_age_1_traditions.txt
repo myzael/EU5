@@ -35,7 +35,7 @@ a_crusader_knights_base = {
 	strength_damage_taken = -0.05
 	morale_damage_taken = -0.05
 
-	gfx_tags = { crusader_tag heavy_tag }
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
 
 }
 
@@ -45,12 +45,15 @@ a_crusader_knights_levy = {
 	copy_from = a_crusader_knights_base
 	buildable = no
 	levy = yes
+
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
 }
 
 a_crusader_knights = {
 	category = army_infantry
 	
 	copy_from = a_crusader_knights_base
+	upgrades_to = a_late_crusader_knights
 
 	buildable = yes
 	country_potential = {
@@ -73,6 +76,51 @@ a_crusader_knights = {
 		pop_type = nobles
 		multiply = 0.3
 	}
+
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
+}
+
+a_caterans = {
+	category = army_infantry
+	
+	copy_from = a_age_1_traditions_infantry
+	light = yes
+
+	buildable = no
+	levy = yes
+
+	combat_speed = 0.05
+	flanking_ability = 1.5
+	initiative = 5
+
+	#root = location. Checks location_potential first so don't need that scripting in
+	mercenaries_per_location = {
+		pop_type = peasants
+		multiply = 0.01
+	}
+
+	gfx_tags = { sword_tag light_tag }
+}
+
+a_kerns = {
+	category = army_infantry
+	copy_from = a_age_1_traditions_infantry
+	light = yes
+
+	buildable = no
+	levy = yes
+	
+
+	combat_speed = 0.1
+	initiative = 6
+
+	#root = location. Checks location_potential first so don't need that scripting in
+	mercenaries_per_location = {
+		pop_type = peasants
+		multiply = 0.01
+	}
+
+	gfx_tags = { light_tag }
 }
 
 a_lour_lances = {
@@ -92,7 +140,10 @@ a_lour_lances = {
 	initiative = 2
 
 	location_potential = {
-		dominant_culture = culture:welsh
+		OR = {
+			dominant_culture = culture:welsh
+			dominant_culture = culture:cornish
+		}
 	}
 
 	#root = location. Checks location_potential first so don't need that scripting in
@@ -100,7 +151,7 @@ a_lour_lances = {
 		pop_type = nobles
 		multiply = 0.1
 	}
-	gfx_tags = { spear_tag light_tag }
+	gfx_tags = { light_tag }
 }
 a_schiltron = {
 	category = army_infantry
@@ -132,17 +183,7 @@ a_schiltron = {
 	color = unit_rifle_green 
 }
 
-a_serbian_hussars = {
-	category = army_cavalry
-	
-	copy_from = a_age_1_traditions_cavalry
-	
-	buildable = yes
-	
-	initiative = 4
 
-	gfx_tags = { medium_tag }
-}
 
 a_steppe_horse_archers = {
 	category = army_cavalry

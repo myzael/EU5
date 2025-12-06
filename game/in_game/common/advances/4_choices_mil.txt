@@ -303,7 +303,7 @@ absolutism_control_decline_advance = {
 	age = age_5_absolutism
 	for = mil
 
-	global_monthly_control_decline = -0.002
+	global_monthly_control_decline = 0.002
 }
 
 

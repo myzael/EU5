@@ -414,22 +414,26 @@ types DynastyTreeLateralView
                                                     layoutpolicy_horizontal = expanding
                                                     character_abilities = {
                                                         blockoverride "abilities_bg" {}
-
                                                         blockoverride "abilities_format" {
                                                             margin_left = 4
                                                             spacing = 10
+															margin_bottom = 5
+															margin_top = 4
                                                         }
                                                     }
                                                 }
+												
+												vbox = {
+													icon = {
+														size = { 222 5 }
+														using = bg_cabinet_inner_frame
+														visible =  "[And(Not(IsDataModelEmpty(DynastyNodeItem.GetTraits)), Not(DynastyNodeItem.ShowSimplifiedVersion))]"
+												 	}
+												}
 
-
-                                                hbox = {
+												hbox = {
                                                     layoutpolicy_horizontal = expanding
-                                                    using = bg_paper_card
-                                                    using = bg_cabinet_card_frame
-                                                    visible =  "[And(Not(IsDataModelEmpty(DynastyNodeItem.GetTraits)), Not(DynastyNodeItem.ShowSimplifiedVersion))]"
-
-
+                                                 	visible =  "[And(Not(IsDataModelEmpty(DynastyNodeItem.GetTraits)), Not(DynastyNodeItem.ShowSimplifiedVersion))]"
                                                     margin = {0 5}
 
                                                     dynamicgridbox = {
@@ -448,14 +452,9 @@ types DynastyTreeLateralView
                                                         }
                                                     }
                                                 }
-
-
                                             }
                                         }
-
-
                                     }
-
                                     expand = {}
                                 }
                             }
@@ -1328,28 +1327,13 @@ lateralview_full = {
 				}
 			}
 
-			dynasty_shield_bigger = {
+			dynasty_shield_bigger_custom_frame = {
 				parentanchor = hcenter|top
 				datacontext = "[DynastyTreeView.GetDynasty]"
 
 				blockoverride "show_as_button" { visible = no }
 				blockoverride "show_as_icon" { visible = yes }
 
-				background = {
-					texture = "gfx/interface/component_masks/mask_coat_of_arms.dds"
-					texture_density = 2
-					margin = {2 1}
-					margin_bottom = 2
-					margin_top = -2
-					alpha = 0.5
-
-					glow = {
-						name = "drop_shadow"
-						glow_radius = 8
-						color = {0.0 0.0 0.0 1.0}
-						alpha = 0.8
-					}
-				}
 			}
 		}
 

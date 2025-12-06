@@ -15,3 +15,12 @@ LIV_a_order_knights = {
 	
 	requires = LIV_crusader_forts
 }
+
+LIV_a_order_knights_2 = {
+	age = age_2_renaissance
+	unlock_unit = a_order_knights_2
+	
+	potential = { has_or_had_tag = LIV }
+	
+	requires = professional_armies_advance
+}

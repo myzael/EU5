@@ -32,6 +32,7 @@
 			is_ruler = no
 			is_heir = no
 			is_consort = no
+			is_regent = no
 			trigger_if = {
 				limit = {
 					has_dynasty = yes

@@ -8,8 +8,8 @@ types Frontend
 		blockoverride "header_button_text_layout" {}
 
 		blockoverride "icon_texture" {
-			texture = "gfx/interface/buttons/flats/history.dds"
-			texture_density = 2
+			texture = "gfx/interface/icons/dlc/dlc_shield.dds"
+			# texture_density = 2
 		}
 
 		name = "mods_gui_button"
@@ -22,6 +22,12 @@ types Frontend
 		tooltipwidget = { 
 			SimpleContextualTooltipType = {
 				lowpriotextcontext = "MAIN_MENU_MODS_AND_DLCS_TOOLTIP"
+				blockoverride "title_icon" {
+					icon = {
+						using = tooltip_title_icon_size
+						texture = "gfx/interface/icons/dlc/dlc_shield.dds"												
+					}
+				}
 			}
 		}
 
@@ -560,6 +566,8 @@ widget = {
 								blockoverride "click" {}
 								blockoverride "double_click" {}
 								blockoverride "hover" {}
+								blockoverride "show_as_icon" { visible = yes }
+								blockoverride "show_as_button" { visible = no }
 							}
 						}
 					

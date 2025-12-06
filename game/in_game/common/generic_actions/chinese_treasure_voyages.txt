@@ -11,12 +11,11 @@
 
 
 	potential = {
-		always = no
-		#scope:actor ?= {
-		#	has_variable = enabled_treasure_voyages
-		#	exists = international_organization:middle_kingdom
-		#	is_leader_of_international_organization = international_organization:middle_kingdom
-		#}
+		scope:actor ?= {
+			has_variable = enabled_treasure_voyages
+			exists = international_organization:middle_kingdom
+			is_leader_of_international_organization = international_organization:middle_kingdom
+		}
 	}
 
 	allow = {

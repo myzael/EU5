@@ -506,10 +506,10 @@ template location_rank_tooltip {
             #     textcontext = "[Location.GetRank.GetRankTooltip]"
             # }
 
-            TooltipBlockList = {
-                visible = "[Not(StringIsEmpty(Location.GetUpgradeRankEffects))]"
-                textcontext = "[Location.GetUpgradeRankEffects]"
-            }
+            # TooltipBlockList = {
+            #     visible = "[Not(StringIsEmpty(Location.GetUpgradeRankEffects))]"
+            #     textcontext = "[Location.GetUpgradeRankEffects]"
+            # }
 
             TooltipFlavorTextBlock = {
                 blockoverride "text" {
@@ -1129,7 +1129,7 @@ template AverageSatisfaction_tooltip {
 
         blockoverride "title_text" {
             datacontext = "[Location]"
-            text = "AVERAGE_SATISFACTION_TITLE"
+            text = "AVERAGE_L_SATISFACTION_TITLE"
         }
         blockoverride "concept_link" {
             text = [pop_satisfaction|E]
@@ -1335,8 +1335,19 @@ template LocationProximity_tooltip {
                     }
                 }
             }
-            TooltipScrolledStringPairList = {
-                visible = "[Not(Location.IsCapital)]"
+            TooltipTextBlock = { #PROXIMITY = 0
+                visible = "[And(Not(Location.IsCapital), EqualTo_CFixedPoint(Location.GetProximityToOwnerCapital, '(CFixedPoint)0'))]"
+                blockoverride "text" {
+                    text = "NO_PROXIMITY_TT_TEXT"
+                }
+                blockoverride "textblock_background_tint"  {
+                    modify_texture = {
+                        using = color_dark_red_texture
+                    }
+                }
+            }
+            TooltipScrolledStringPairList = { #PROXIMITY PATH
+                visible = "[And(Not(Location.IsCapital), Not(EqualTo_CFixedPoint(Location.GetProximityToOwnerCapital, '(CFixedPoint)0')))]"
                 blockoverride "block_title" {
                     text = "PROXIMITY_LIST_TITLE"
                 }
@@ -1344,9 +1355,9 @@ template LocationProximity_tooltip {
                 textcontext = "[Location.GetProximityInfo]"
             }
 
-            TooltipStringPairList = {
+            TooltipStringPairList = { #EFFECTS
                 datacontext = "[Location]"
-                visible = "[Not(Location.IsCapital)]"
+                visible = "[And(Not(Location.IsCapital), Not(StringIsEmpty(Location.GetProximityEffect)))]"
                 blockoverride "block_title" {
                     text = "LIST_TITLE_EFFECTS"
                 }
@@ -1460,10 +1471,8 @@ template location_food_tooltip {
                                     }
 
                                     blockoverride "tooltip_content" {
-                                        TooltipTextBlock = {
-                                            blockoverride "text" {
-                                                text = "[Location.GetFoodConsumptionInfo(PopType.Self)]"
-                                            }
+										TooltipStringPairList = {
+											textcontext = "[Location.GetFoodConsumptionInfo(PopType.Self)]"
                                         }
                                     }
                                 }
@@ -2397,15 +2406,12 @@ template location_control_tooltip {
                 TooltipListRowContent = {
                     TooltipManualTableField = {
                         blockoverride "field_content" {
-                            # tooltipwidget = {
-                            #     using = location_tax_base_tooltip
-                            # }
                             text_single = {
                                 raw_text = "[max_tax_base|e]:"
                             }
                             expand = {}
                             text_single = {
-                                raw_text = "[Location.GetTotalPossibleTaxBase|2]@gold!"
+                                raw_text = "[Location.GetTotalPossibleTaxBase|2] [max_tax_base_icon]"
                             }
                         }
                     }
@@ -2417,7 +2423,7 @@ template location_control_tooltip {
                             }
                             expand = {}
                             text_single = {
-                                raw_text = "[Location.GetTotalTaxBase|W2L]@gold!"
+                                raw_text = "[Location.GetTotalTaxBase|W2L]@tax_base!"
                             }
                         }
                     }
@@ -2481,7 +2487,7 @@ template location_tax_base_details {
                         }
                         expand = {}
                         text_single = {
-                            raw_text = "[Location.GetTotalPossibleTaxBase|W2]@gold!"
+                            raw_text = "[Location.GetTotalPossibleTaxBase|W2] [max_tax_base_icon]"
                             tagtooltip_enabled = yes
                             tooltip = "[max_tax_base|e]"
                         }
@@ -2717,8 +2723,15 @@ template location_prosperity_tooltip {
 
         blockoverride "title_icon" {
             icon = {
+                visible = "[Not(LessThan_CFixedPoint(Location.GetProsperity, '(CFixedPoint)0.0'))]"
                 using = tooltip_title_icon_size
                 texture = "gfx/interface/icons/location_icons/new/prosperity.dds"
+            }
+
+            icon = {
+                visible = "[LessThan_CFixedPoint(Location.GetProsperity, '(CFixedPoint)0.0')]"
+                using = tooltip_title_icon_size
+                texture = "gfx/interface/icons/location_icons/prosperity_low.dds"
             }
         }
 
@@ -2883,6 +2896,12 @@ template MigrationAttraction_tooltip {
                     text = "MIGRATION_ATTRACTION_TT_TEXT"
                 }
                 textcontext = "[Location.GetLocalMigrationAttractionInfo]"
+            }
+
+            TooltipScrolledRowList = {
+                blockoverride "block_scrollarea" { maximumsize = { -1 200 }}
+                visible = "[Not(StringIsEmpty(Location.GetMigrationInformation))]"
+                textcontext = "[Location.GetMigrationInformation]"
             }
         }
     }

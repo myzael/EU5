@@ -161,6 +161,7 @@
  change_subject_policy_effect_text: "[SCOPE.sCountry('actor').GetName] make [SCOPE.sCountry('recipient').GetName] adopt [SCOPE.sPolicy('target').GetName]"
  change_subject_policy_effect_text_past: "[SCOPE.sCountry('actor').GetName] made [SCOPE.sCountry('recipient').GetName] adopt [SCOPE.sPolicy('target').GetName]"
  PROPOSE_change_subject_policy: "Change [policy|e] in $RECIPIENT$?\n$INFO$."
+ change_subject_policy_of_our_choice_tt: "Enacts a [policy|e] of our choice for one of their [laws|e]"
  #
  demand_additional_tribute: "Demand Additional Tribute"
  demand_additional_tribute_act: "Demand Additional Tribute from [SCOPE.sCountry('recipient').GetName]"
@@ -325,6 +326,7 @@
  #
  demand_unlawful_territory: "Demand Unlawful Territory"
  dip_demand_unlawful_territory_CATEGORY: "CATEGORY_HRE_ACTIONS"
+ demand_unlawful_territory_no_hre_province: "@trigger_no! [SCOPE.sCountry('recipient').GetName] does NOT own any non-core [location|e] in the [GetUniqueInternationalOrganization('hre').GetName]"
  demand_unlawful_territory_act: "Demand Unlawful Territory from [SCOPE.sCountry('recipient').GetName], forcing them to return [SCOPE.sProvince('target').GetName] to the previous owner."
  demand_unlawful_territory_desc: "We will demand that they return Unlawful Territory within the [GetUniqueInternationalOrganization('hre').GetName] to its former owner. If they refuse, we will gain a [ShowCasusBelliName('cb_following_through_on_threat')] [casus_belli|e] against them."
  demand_unlawful_territory_effect_text: "[SCOPE.sCountry('recipient').GetName] returns [SCOPE.sProvince('target').GetName] to the previous owner."

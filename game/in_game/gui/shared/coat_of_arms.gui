@@ -415,6 +415,109 @@ types CoATypes
 		}
 	}
 
+	type dynasty_shield_custom_frame = widget {
+		block "size" {
+			size = { 120 120 }
+		}
+
+		widget = {
+			size = { 100% 100% }
+
+			icon = {
+				size = { 100% 100% }
+				block "show_as_icon" { visible = no }
+				block "flag_contents" {}
+			}
+
+			block "tooltip_contents" {}
+		}
+
+		button = {
+			size = { 100% 100% }
+			inherit_visual_state = no
+			distribute_visual_state = no
+			using = snd_UI_hover_shield
+
+			block "dynasty_click" { 
+				action_tooltip = {
+					click_type = left
+					click_mode = single
+
+					# block "dynasty_click_action" {
+						title = "DYNASTY_TT_OPEN"
+						on_action = "[ShowDynasty(Dynasty.Self)]"
+					# }
+				}
+			}
+
+			block "hover" {
+				onmousehierarchyenter = "[PdxGuiWidget.SetHighlightDynasty( Dynasty.Self )]"
+				block "hover_leave" {}
+			}
+
+			block "show_as_button" { visible = yes }
+			block "flag_contents" {}
+			block "tooltip_contents" {}
+		}
+		
+		blockoverride "flag_contents" {
+			block "flag" {
+				# Added to avoid error for missing texture "flag"
+				texture = "gfx/interface/debug/placeholder_flag.dds" 
+				framesize = { 120 120 }
+			}
+
+			modify_texture = {
+				name = "area"
+				texture = "gfx/interface/component_masks/mask_coat_of_arms.dds"
+				texture_density = 2
+				blend_mode = alphamultiply
+			}
+		}
+
+		blockoverride "tooltip_contents" {
+			block "tooltip" {
+				tagtooltip_enabled = yes
+				tooltip = "[Dynasty.GetName]"
+			}
+		}
+
+		icon = {
+			size = { 100% 100% }
+			texture = "gfx/interface/component_masks/mask_coat_of_arms_shadow.dds"
+			texture_density = 2
+			alpha = 0.8
+		}
+		icon = { # Replacing the frame
+			size = { 144 147 } # size = { 100% 100% }
+			texture = "gfx/interface/component_tiles/dynasty_tree/dynasty_coa_shield_frame_lighter.dds"
+			texture_density = 2
+			parentanchor = hcenter|top
+
+			position = { 0 -13 }			
+
+			glow = {
+				name = "drop_shadow"
+				glow_radius = 4
+				color = {0.0 0.0 0.0 1.0}
+				alpha = 0.75
+			}
+		}		
+	}	
+
+	type dynasty_shield_bigger_custom_frame = dynasty_shield_custom_frame {
+		blockoverride "flag" {
+			texture = "[GetDynastyCoatOfArms(Dynasty.Self).GetTexture('(int32)360','(int32)240')]"
+			frame = "[GetDynastyCoatOfArms(Dynasty.Self).GetFrame('(int32)360','(int32)240')]"
+			framesize = { 360 240 }
+			texture_density = 2
+		}
+
+		blockoverride "size" {
+			size = { 180 120 }
+		}
+	}
+
 	type dynasty_shield_bigger = dynasty_shield {
 		blockoverride "flag" {
 			datacontext = "[GetDynastyCoatOfArms(Dynasty.Self)]"

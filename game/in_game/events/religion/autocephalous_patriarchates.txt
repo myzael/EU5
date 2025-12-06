@@ -54,7 +54,7 @@ autocephalous_patriarchates.1 = {
 			autocephalous_patriarchate = {
 				add_international_organization_modifier = {
 					modifier = destroying_another_autocephalous_patriarchate
-					mode = add_and_extend
+					mode = replace
 					#effect doubled if it's an Ecumenical Patriarchate
 					size = {
 						if = {
@@ -181,7 +181,7 @@ autocephalous_patriarchates.2 = {
 			else = {
 				add_country_modifier = {
 					modifier = destroying_heathen_autocephalous_patriarchate
-					mode = add_and_extend
+					mode = replace
 					#effect doubled if it's an Ecumenical Patriarchate
 					size = {
 						if = {
@@ -243,7 +243,7 @@ autocephalous_patriarchates.2 = {
 				}
 				add_country_modifier = {
 					modifier = maintaining_heretic_autocephalous_patriarchate
-					mode = extend
+					mode = replace
 					#effect doubled if it's an Ecumenical Patriarchate
 					size = {
 						if = {
@@ -272,7 +272,7 @@ autocephalous_patriarchates.2 = {
 			else = {
 				add_country_modifier = {
 					modifier = maintaining_heathen_autocephalous_patriarchate
-					mode = extend
+					mode = replace
 					#effect doubled if it's an Ecumenical Patriarchate
 					size = {
 						if = {

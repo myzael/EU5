@@ -339,6 +339,7 @@ rise_of_the_ottomans.101 = {
 				NOT = { has_variable = rise_of_the_ottomans_vassal_cooldown_variable }
 			}
 			max = 5
+			check_range_bounds = no
 			order_by = {
 				value = total_population
 				multiply = -1
@@ -350,11 +351,29 @@ rise_of_the_ottomans.101 = {
 			add_to_list = potential_vassal_list
 		}
 
-		random_in_list = {
-			list = potential_vassal_list
-			
-			save_scope_as = target_country
+		if = {
+			limit = {
+				any_in_list = {
+					list = potential_vassal_list
+					has_variable = more_likely_to_accept_vassalization_variable
+				}
+			}
+			random_in_list = {
+				list = potential_vassal_list
+				limit = { has_variable = more_likely_to_accept_vassalization_variable }
+				
+				save_scope_as = target_country
+			}
 		}
+		
+		else = {
+			random_in_list = {
+				list = potential_vassal_list
+				
+				save_scope_as = target_country
+			}
+		}
+
 		save_scope_as = target_country2
 	}
 
@@ -885,17 +904,20 @@ rise_of_the_ottomans.111 = {
 			factor = 10
 		}
 		add_government_power = government_power_extreme_penalty
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = belligerent_diplomacy
-		}
-		scope:target_country = {
-			add_country_modifier = {
-				modifier = sovereign_of_anatolia
-				years = 10
-				mode = replace
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = belligerent_diplomacy
 			}
-			set_variable = got_modifier_var
+			scope:target_country = {
+				add_country_modifier = {
+					modifier = sovereign_of_anatolia
+					years = 10
+					mode = replace
+				}
+				set_variable = got_modifier_var
+			}
 		}
 	}
 
@@ -906,9 +928,12 @@ rise_of_the_ottomans.111 = {
 		}
 
 		add_government_power = government_power_weak_bonus
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = refused_diplomatic_offer
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = refused_diplomatic_offer
+			}
 		}
 	}
 	after = {
@@ -938,18 +963,24 @@ rise_of_the_ottomans.112 = {
 			factor = 10
 		}
 		add_government_power = government_power_extreme_penalty
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = belligerent_diplomacy
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = belligerent_diplomacy
+			}
 		}
 
 		change_gold_effect = { scale = -6 }
-		scope:target_country = {
-			add_gold = {
-				value = root.monthly_income_total
-				multiply = 6
+		if = {
+			limit = { exists = scope:target_country }
+			scope:target_country = {
+				add_gold = {
+					value = root.monthly_income_total
+					multiply = 6
+				}
+				set_variable = got_money_var
 			}
-			set_variable = got_money_var
 		}
 
 	}
@@ -961,9 +992,12 @@ rise_of_the_ottomans.112 = {
 		}
 
 		add_government_power = government_power_weak_bonus
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = refused_diplomatic_offer
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = refused_diplomatic_offer
+			}
 		}
 	}
 	after = {
@@ -993,11 +1027,15 @@ rise_of_the_ottomans.113 = {
 			factor = 10
 		}
 		add_government_power = government_power_extreme_penalty
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = belligerent_diplomacy
+
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = belligerent_diplomacy
+			}
 		}
-		scope:target_character3 = { move_country = scope:target_country }
+		scope:target_character3 ?= { move_country = scope:target_country }
 		c:TUR = { set_variable = got_character_var }
 	}
 
@@ -1008,9 +1046,12 @@ rise_of_the_ottomans.113 = {
 		}
 
 		add_government_power = government_power_weak_bonus
-		add_opinion_mutual_effect = {
-			target = scope:target_country
-			modifier = refused_diplomatic_offer
+		if = {
+			limit = { exists = scope:target_country }
+			add_opinion_mutual_effect = {
+				target = scope:target_country
+				modifier = refused_diplomatic_offer
+			}
 		}
 	}
 	after = {
@@ -2772,6 +2813,10 @@ rise_of_the_ottomans.216 = {
 					culture = root.culture
 					value > 0.5
 				}
+				religion_percentage = {
+					religion = root.religion
+					value > 0.5
+				}
 			}
 			order_by = {
 				value = population
@@ -2796,6 +2841,7 @@ rise_of_the_ottomans.216 = {
 			from = scope:target_province_origin.province_definition
 			to = scope:target_province_destination.province_definition
 			culture = root.culture
+			religion = root.religion
 			amount = {
 				value = scope:target_province_origin.population
 				multiply = 0.001
@@ -2833,55 +2879,12 @@ rise_of_the_ottomans.217 = {
 	image = "gfx/interface/illustrations/event/backgrounds/exterior/soldiers/syrian_soldiers_exterior.dds"
 
 	immediate = {
-		scope:target_province = {
-			ordered_location_in_province = {
-				order_by = population
-				save_scope_as = target_capital
-			}
-			create_location_country_from_province = {
-				subject_type = subject_type:uc_bey
-				set_capital = scope:target_capital
-				change_culture = root.culture
-				change_religion = root.religion
-				change_religion_for_ruler_and_family = { country = this religion = root.religion }
-				set_court_language = root.court_dialect
-				capital = {
-					construct_building = {
-						building_type = building_type:sergeantry
-						cost_multiplier = 0
-						instant = yes
-						cost_multiplier_reason = "military_cheap_sponsorship"
-					}
-					if = {
-						limit = {
-							NOR = {
-								has_building = building_type:stockade
-								has_building = building_type:castle
-								has_building = building_type:bastion
-								has_building = building_type:star_fort
-								has_building = building_type:fortress
-							}
-						}
-						construct_building = {
-							building_type = building_type:castle
-							cost_multiplier = 0
-							cost_multiplier_reason = "military_cheap_sponsorship"
-							payer = root
-						}
-					}
-					province = { save_scope_as = target_province }
-				}
-				change_societal_value = {	#Its primary purpose is to defend borders
-					type = offensive_vs_defensive
-					value = 200
-				}
-				save_scope_as = target_country
-				ruler_or_regent = { save_scope_as = target_character }
-				while =  {
-					count = 2
-					capital = { create_sub_unit_of_category = sub_unit_category:army_infantry }
-				}
-				change_country_type = army
+		scope:target_subject = {
+			ruler_or_regent = { save_scope_as = target_character }
+
+			while =  {
+				count = 2
+				capital = { create_sub_unit_of_category = sub_unit_category:army_infantry }
 			}
 		}
 	}
@@ -2889,11 +2892,17 @@ rise_of_the_ottomans.217 = {
 	option = {
 		name = rise_of_the_ottomans.217.a
 
-		if = {
-			limit = { exists = scope:target_country }
-			custom_tooltip = uc_bey_spawns_tt
+		scope:target_subject = {
+
+			show_as_tooltip = {
+				while =  {
+					count = 2
+					capital = { create_sub_unit_of_category = sub_unit_category:army_infantry }
+				}
+			}
+			add_reform = government_reform:uc_bey_reform
+			change_subject_type = subject_type:uc_bey
 		}
-		else = { custom_tooltip = create_uc_bey_tt }
 	}
 }
 

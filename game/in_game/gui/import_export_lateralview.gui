@@ -180,7 +180,7 @@ template imports_exports_entry {
 				autoresize = no
 				align = center|nobaseline
 				using = Font_Size_Small
-				raw_text = "[Select_CFixedPoint(PossibleItem.IsExport, Market.GetSurplus(ImportExportLateralView.GetGoods), PossibleItem.GetPossibleSurplus)|+=2]@balance!"
+				raw_text = "[Subtract_CFixedPoint(Market.GetSupply(ImportExportLateralView.GetGoods.Self), Market.GetDemand(ImportExportLateralView.GetGoods.Self))|+=2]"
 			
 				sort_by_highlight = {
 					name = "surplus"

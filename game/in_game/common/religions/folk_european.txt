@@ -44,7 +44,7 @@ karachay_balkar_paganism = {
 	
 	definition_modifier = {
 		global_defensive = 0.1
-        retreat_delay = -2
+        retreat_delay = -5
 	}
 
 	tags = {

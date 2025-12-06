@@ -1616,9 +1616,7 @@ types ContextualTooltipTypes
 						block "table_field_margin" {
 							margin = { 10 0 }
 						}
-						block "table_field_spacing" {
-							spacing = 5
-						}
+						spacing = 5
 
 						block "field_left" {}
 

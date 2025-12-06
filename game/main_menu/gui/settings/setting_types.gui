@@ -375,7 +375,7 @@ types Settings
 		fontsize = 16
 		size = { 300 34 }
 		autoresize = no
-		text = "[PdxSetting.GetTitle]"
+		text = "[Trim(DecayToString(PdxSetting.GetTitle))]"
 
 		tooltipwidget ={
 			ContextualTooltipType = {
@@ -658,7 +658,7 @@ types Settings
 
 			item = {
 				flowcontainer = {
-					visible = "[JominiSettingsWindow.IsInputPopUpEnabled]"
+					visible = "[And(JominiSettingsWindow.IsInputPopUpEnabled, Not(EqualTo_string(GetInputActionKey(InputActionBinding.Self), 'mapmode_graphical_culture_name')))]"
 					spacing = 20
 
 					text_single = {

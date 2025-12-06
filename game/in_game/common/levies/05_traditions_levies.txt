@@ -57,9 +57,13 @@ levy_a_early_longbowmen = {
 
 levy_schiltron = {
 	size = 0.1
+	
+	allowed_pop_type = peasants
+	allowed_pop_type = laborers
 
-	allowed_culture = highland
 	allowed_culture = scottish
+	allowed_culture = highland
+	allowed_culture = norse_gael
 	
 	unit = a_schiltron
 }
@@ -67,6 +71,12 @@ levy_schiltron = {
 
 levy_a_gallowglass = {
 	size = 0.02
+
+	allowed_pop_type = soldiers
+
+	allowed_culture = scottish
+	allowed_culture = highland
+	allowed_culture = norse_gael
 	
 	allow = {
 		unit_gallowglass_pop_trigger = yes
@@ -78,8 +88,10 @@ levy_a_gallowglass = {
 
 levy_kerns = {
 	size = 0.02
-
+	
 	allowed_pop_type = peasants
+	allowed_pop_type = laborers
+	allowed_pop_type = tribesmen
 
 	allow = {
 		unit_kerns_pop_trigger = yes
@@ -91,8 +103,10 @@ levy_kerns = {
 
 levy_caterans = {
 	size = 0.02
-
+	
 	allowed_pop_type = peasants
+	allowed_pop_type = laborers
+	allowed_pop_type = tribesmen
 
 	allow = {
 		unit_caterans_pop_trigger = yes
@@ -104,6 +118,8 @@ levy_caterans = {
 
 levy_a_lour_lances = {
 	size = 0.1
+
+	allowed_pop_type = laborers
 
 	allowed_culture = cornish
 	allowed_culture = welsh
@@ -153,7 +169,7 @@ levy_noble_cavalry = {
 levy_a_footmen = {
 	size = 0.05
 	
-	allowed_pop_type = burghers
+	allowed_pop_type = soldiers
 	
 	unit = a_footmen_levy
 }
@@ -162,7 +178,7 @@ levy_a_feudal_levy = {
 	size = 0.02
 	
 	allowed_pop_type = peasants
-	allowed_pop_type = clergy
+	allowed_pop_type = laborers
 	
 	unit = a_feudal_levy
 }
@@ -179,6 +195,7 @@ levy_a_villagers = {
 	size = 0.02
 	
 	allowed_pop_type = peasants
+	allowed_pop_type = laborers
 	
 	unit = a_villagers
 }

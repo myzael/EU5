@@ -66,6 +66,7 @@ pa_resist_legalism = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:legalism
 				value = institution_progress_mild_penalty
@@ -104,6 +105,7 @@ pa_resist_meritocracy = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:meritocracy
 				value = institution_progress_mild_penalty
@@ -179,6 +181,7 @@ pa_resist_banking = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:banking
 				value = institution_progress_mild_penalty
@@ -217,6 +220,7 @@ pa_resist_professional_armies = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:professional_armies
 				value = institution_progress_mild_penalty
@@ -255,6 +259,7 @@ pa_resist_new_world = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:new_world
 				value = institution_progress_mild_penalty
@@ -293,6 +298,7 @@ pa_resist_printing_press = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:printing_press
 				value = institution_progress_mild_penalty
@@ -331,6 +337,7 @@ pa_resist_pike_and_shot = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:pike_and_shot
 				value = institution_progress_mild_penalty
@@ -369,6 +376,7 @@ pa_resist_confessionalism = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:confessionalism
 				value = institution_progress_mild_penalty
@@ -407,6 +415,7 @@ pa_resist_global_trade = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:global_trade
 				value = institution_progress_mild_penalty
@@ -483,6 +492,7 @@ pa_resist_manufactories = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:manufactories
 				value = institution_progress_mild_penalty
@@ -521,6 +531,7 @@ pa_resist_scientific_revolution = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:scientific_revolution
 				value = institution_progress_mild_penalty
@@ -559,6 +570,7 @@ pa_resist_military_revolution = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:military_revolution
 				value = institution_progress_mild_penalty
@@ -597,6 +609,7 @@ pa_resist_enlightenment = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:enlightenment
 				value = institution_progress_mild_penalty
@@ -635,6 +648,7 @@ pa_resist_industrialization = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:industrialization
 				value = institution_progress_mild_penalty
@@ -673,6 +687,7 @@ pa_resist_levee_en_masse = {
 					divide = 20
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = {
 				type = institution:levee_en_masse
 				value = institution_progress_mild_penalty

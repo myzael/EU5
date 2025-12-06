@@ -1283,7 +1283,7 @@ french_wars_religion.12 = {	#Ending through signing the edict of Nantes
 	title = french_wars_religion.12.title
 	desc = french_wars_religion.12.desc
 	image = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
-	historical_info = french_wars_of_religion.12.historical_info
+	historical_info = french_wars_religion.12.historical_info
 	immediate = {
 		ruler_or_regent = { save_scope_as = target_character }
 		set_variable = had_french_wars_religion_disaster_variable

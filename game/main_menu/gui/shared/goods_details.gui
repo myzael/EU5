@@ -110,6 +110,11 @@ template goods_details {
 		visible = "[Goods.IsRawMaterial]"
 		textcontext = "[Goods.GetRawMaterialMethodInfo]"
 	}
+	
+	TooltipStringPairList = {
+		visible = "[Goods.HasPopsDemandInfo]"
+		textcontext = "[Goods.GetPopsDemandInfo]"
+	}
 }
 
 template good_sources_tooltip {

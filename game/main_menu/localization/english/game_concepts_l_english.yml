@@ -550,7 +550,7 @@
 
  game_concept_cultural_influence: "Cultural Influence"
  game_concept_cultural_influence_short: "Influence"
- game_concept_cultural_influence_desc: "This is the attack power of a [culture|e] in the context of [culture_war|e], representing how impressive it appears to other cultures, and the reach it has beyond its own borders.\n\nIt has a monthly increases upon the completion of a [work_of_art|e] and has some monthly increase from many sources such as [prestige|e], and certain [buildings|e], [advances|e], [laws|e], and many others. But beware, it also has a natural monthly decay."
+ game_concept_cultural_influence_desc: "This is the attack power of a [culture|e] in the context of [culture_war|e], representing how impressive it appears to other cultures, and the reach it has beyond its own borders.\n\nIt has a monthly increase upon the completion of a [work_of_art|e] and has some monthly increase from many sources such as [prestige|e], and certain [buildings|e], [advances|e], [laws|e], and many others. But beware, it also has a natural monthly decay."
 
  game_concept_culture_war_power: "Culture War Power"
  game_concept_culture_war: "Culture War"
@@ -757,7 +757,7 @@
  game_concept_power_projection_desc: "[countries|e] with higher $game_concept_power_projection$ can exploit nations with less. If ours is higher than another nation's, then we will be able to build a [ShowBuildingTypeName('trade_office')], [ShowBuildingTypeName('slave_center')], [ShowBuildingTypeName('missionary_building')], or other specific buildings in their [locations|e]. The higher our $game_concept_power_projection$ is, the quicker our [colonial_charters|e] can take control over locations. Having a higher $game_concept_power_projection$ than another country also reduces the [stability|e] cost of declaring [war|e] upon them, as well as the [war_exhaustion|e]."
 
  game_concept_proximity: "Proximity"
- game_concept_proximity_desc: "Proximity is how close a [location|e] is to the [capital|e] of its [owner|e]. Tracing a path through [roads|e] or [maritime_presence|e] from [coastal|e] locations increases the proximity.\n\nProximity has a direct impact on the [control|e] a [country|e] can exert over a [location]."
+ game_concept_proximity_desc: "The Proximity of a [location_with_icon|e] measures how close it is to the [capital_with_icon|e] of its [owner|e], and it determines how much [control_with_icon|e] [locations] can have.\n\n[proximity] starts at #high 100%#! in the [capital] of every [country|e], and jumps to nearby [locations], giving them [proximity]. Some [proximity] is lost with every subsequent jump, depending on the terrain and the infrastructure present in the [location]. The [proximity] that is lost in jumping from one [location] to the next is called Proximity Cost.\n\nThe Proximity cost between [locations] varies greately with [topography_with_icon|e] and [vegetation_with_icon|e]. On land, it can be reduced by building [roads_with_icon|e], increasing [development_with_icon|e], and the [ShowSocietyDirectionName('land')] [societal_value_with_icon|e]. On sea, it can be reduced by [harbor_capacity_with_icon|e], [maritime_presence_with_icon|e] and the [ShowSocietyDirectionName('naval')] [societal_value]."
 
  game_concept_output: "Output"
  game_concept_produce: "Produce"
@@ -784,6 +784,9 @@
 
  game_concept_supported_building_levels: "Supported Building Levels"
  game_concept_supported_building_levels_desc: "Every [location|e] has a soft limit on the number of [building|e] levels it can contain. Surpassing that limit will incur progressively higher construction prices.\n\nThe number of $game_concept_supported_building_levels$ depends primarily on the [location_rank|e] and the [development|e] of the [location].\n\n[buildings] without workers do not count towards the building level limit."
+
+ game_concept_building_maintenance: "Building Maintenance"
+ game_concept_building_maintenance_desc: "[buildings] that do not produce [goods|e] incur an upkeep cost for their [owner]. The cost depends on the [market|e] price of the [goods] used by the building, and is affected by the [crown_power|e] of the owner."
  
  game_concept_employ: "Employ" 
  game_concept_employed: "Employed" 
@@ -811,13 +814,13 @@
 
  ### FOOD ###
  game_concept_food: "Food"
- game_concept_food_desc: "What [armies|e] march on, and what [pops|e] survive on. Without $game_concept_food$, armies will suffer [attrition|e] and $game_concept_pops$ will suffer [starvation|e]. [food_raw_materials|e] are the primary source of $game_concept_food$, although some [buildings|e] also play a role.\n\nThere are 3 layers involved in the production and distribution of $game_concept_food$:\n\n@location! [local_food|e]:\n$game_concept_food$ is produced and consumed in the [locations|e], and any excess or deficit is added to the $game_concept_provincial_food$.\n\n@province! [provincial_food|e]:\nThe $game_concept_provincial_food$ is the most important layer. If a [province|e] does not produce enough $game_concept_food$ to sustain the consumption of all its $game_concept_locations$, the Provincial storage will decrease. When it depletes, all $game_concept_locations$ inside a $game_concept_province$ will suffer [starvation|e]. But before that happens, the $game_concept_province$ will try to [buy_food|e] from its $game_concept_market$.\n\n@market! [market_food|e]:\nAll $game_concept_provinces$ in a [market|e] will try to [sell_food|e] when their storage is full, and try to [buy_food] when it's low. As long as there is enough $game_concept_food$ inside a $game_concept_market$, no one will starve."
+ game_concept_food_desc: "What [armies|e] march on, and what [pops|e] survive on. Without $game_concept_food$, armies will suffer [attrition|e] and $game_concept_pops$ will suffer [starvation|e]. [food_raw_materials|e] are the primary source of $game_concept_food$, although some [buildings|e] also play a role.\n\nThere are 3 layers involved in the production and distribution of $game_concept_food$:\n\n@location! [local_food|e]:\n$game_concept_food$ is produced and consumed in the [locations|e], and any excess or deficit is added to the $game_concept_provincial_food$.\n\n@province! [provincial_food|e]:\nThe $game_concept_provincial_food$ is the most important layer. If a [province|e] does not produce enough $game_concept_food$ to sustain the consumption of all its $game_concept_locations$, the Provincial storage will decrease. When it depletes, all $game_concept_locations$ inside a $game_concept_province$ will suffer [starvation|e]. But before that happens, the $game_concept_province$ will try to [buy_food|e] from its $game_concept_market$.\n\n@market! [market_food|e]:\nAll $game_concept_provinces$ in a [market|e] will try to [sell_food|e] when their storage is full, and try to [buy_food] when it is low. As long as there is enough $game_concept_food$ inside a $game_concept_market$, no one will starve."
 
  game_concept_monthly_food: "Monthly Food" 
  game_concept_monthly_food_desc: "Any [food|e] that is not consumed by the Pops in a territory is contributed to the [provincial_food|e] storage."
 
  game_concept_local_food: "Local Food" 
- game_concept_local_food_desc: "This is the amount of [food|e] that a [location|e] contributes to the [provincial_food|e]. If it's negative, the $game_concept_location$ will simply take $game_concept_food$ from other $game_concept_locations$ in its [province|e].\n\nEvery $game_concept_location$ produces some $game_concept_food$ depending on its [subsistence_agriculture|e] and its [food_productivity|e], but the bulk of the $game_concept_food$ production happens in $game_concept_locations$ with [food_raw_materials|e].\n\nEvery $game_concept_location$ will also have some [pop_food_consumption|e] depending on the [population|e] living therein.\n\n[towns_and_cities|e] will often have negative $game_concept_local_food$ balances, but that is not a problem as long as the $game_concept_provincial_food$ is positive."
+ game_concept_local_food_desc: "This is the amount of [food|e] that a [location|e] contributes to the [provincial_food|e]. If it is negative, the $game_concept_location$ will simply take $game_concept_food$ from other $game_concept_locations$ in its [province|e].\n\nEvery $game_concept_location$ produces some $game_concept_food$ depending on its [subsistence_agriculture|e] and its [food_productivity|e], but the bulk of the $game_concept_food$ production happens in $game_concept_locations$ with [food_raw_materials|e].\n\nEvery $game_concept_location$ will also have some [pop_food_consumption|e] depending on the [population|e] living therein.\n\n[towns_and_cities|e] will often have negative $game_concept_local_food$ balances, but that is not a problem as long as the $game_concept_provincial_food$ is positive."
 
  game_concept_provincial_food: "Provincial Food" 
  game_concept_provincial_food_desc: "This is the amount of [food|e] that a [province|e] has stored. If the [monthly_food|e] is negative, it will eventually be depleted. If there is a deficit, the province will [buy_food|e] from the local [market|e] and if there is a surplus, it will [sell_food|e].\n\nAny [food] that is not consumed by the [pops|e] in a [location|e] is contributed to the Provincial Food storage.\n\nAll territories in the Province can draw from this storage to feed their inhabitants. [armies|e] in the province can also consume stored food if they would otherwise suffer [attrition|e]."
@@ -1340,6 +1343,10 @@
  game_concept_levies: "Levies" 
  game_concept_levy_desc: "A levy is a military unit that a [pop|e] will raise when called. It is either an [army_levy|e] or a [navy_levy|e]."
 
+ game_concept_levy_combat_efficiency: "Levy Combat Efficiency"
+ game_concept_levy_combat_efficiency_desc: "This impacts how effective will a [regiment|e] of [levies|e] perform in [combat|e] compared the a [regular|e] regiment."
+
+
  game_concept_weather_system: "Weather System" 
  game_concept_weather_systems: "Weather Systems" 
  game_concept_weather_system_desc: "These are weather patterns that can bring high winds, rain, snow and sandstorms to [locations|e] around the world, occasionally wreaking havoc."
@@ -1485,7 +1492,7 @@
  game_concept_profit_desc: "This is the amount that a [building|e] or a [rgo|e] contributes to the [tax_base|e] of its [location], already taking [control|e] into account. In other words, it is the [gold|e] that are actually created from the [building]."
 
  game_concept_potential_profit: "Potential Profit"
- game_concept_potential_profit_desc: "This is the difference between the income and expenses of a [building|e], not taking [control|e] into account.\n\nIf it's negative, the building will be considered unprofitable and stop working."
+ game_concept_potential_profit_desc: "This is the difference between the income and expenses of a [building|e], not taking [control|e] into account.\n\nIf it is negative, the building will be considered unprofitable and stop working."
 
  game_concept_tax: "Tax"
  game_concept_taxes: "Taxes"
@@ -2139,6 +2146,10 @@
  game_concept_great_power_score: "Great Power $game_concept_great_power_score_short$"
  game_concept_great_power_score_short: "Score"
  game_concept_great_power_score_desc: "Great Power Score is the indisputable measure of which [country|e] is the best. The top highest scoring $game_concept_countries$ are the [great_powers|e]. The total number of Great Powers varies depending on the Score of the top Great Power compared with the rest.\n\n$game_concept_countries$ earn $game_concept_great_power_score_short$ by owning more [population|e], having higher [prestige|e], increasing [country_rank|e], and various other sources.\n\n[subjects|e] also forfeit a certain percentage of their Score to their [overlord|e], depending on their [subject_type|e]."
+
+ game_concept_great_power_rank: "Great Power $game_concept_great_power_rank_short$"
+ game_concept_great_power_rank_short: "Rank"
+ game_concept_great_power_rank_desc: "Great Power Rank shows the current position a [country|e] holds in the race for final victory. The Rank is decided by the sum of the [great_power_score|e]."
 
  game_concept_event: "Event"
  game_concept_events: "Events"

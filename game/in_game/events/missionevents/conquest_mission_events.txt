@@ -370,9 +370,14 @@ conquest_mission_events.5 = {
 
 	trigger = {
 		war_exhaustion_percentage > 0.1
+		NOT = { has_variable = conquest_mission_events5_variable }
 	}
 
 	immediate = {
+		set_variable = {
+			name = conquest_mission_events5_variable
+			months = 6
+		}
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		ruler_or_regent = { save_scope_as = target_character }
 	}

@@ -7,10 +7,42 @@
 		NOT = { scope:actor ?= { is_subject_of = scope:recipient } }
 	}
 	join_offensive_wars_can_call = {
-		always = yes
+		trigger_if = {
+			limit = {
+				scope:recipient = {
+					is_subject_of = scope:actor
+				}
+			}
+			scope:recipient ?= {
+				NOT = {
+					any_international_organizations_member_of = {
+						international_organization_type = international_organization_type:colonial_federation
+					}
+				}
+			}
+		}
+		trigger_else = {
+			always = yes
+		}
 	}
 	join_defensive_wars_always = {
-		always = yes
+		trigger_if = {
+			limit = {
+				scope:recipient = {
+					is_subject_of = scope:actor
+				}
+			}
+			scope:recipient ?= {
+				NOT = {
+					any_international_organizations_member_of = {
+						international_organization_type = international_organization_type:colonial_federation
+					}
+				}
+			}
+		}
+		trigger_else = {
+			always = yes
+		}
 	}
 	
 	has_overlords_ruler = no
@@ -33,6 +65,8 @@
 	fleet_basing_rights = yes
 	
 	overlord_share_exploration = yes
+	
+	allow_subjects = no
 	
 	can_change_rank = yes
 	can_change_heir_selection = no

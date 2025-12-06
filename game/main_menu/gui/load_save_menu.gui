@@ -184,6 +184,13 @@ template slot_icons_playthroughitem {
 				text = "SAVE_GAME"
 			}
 
+			blockoverride "title_icon" {
+				icon = {
+					texture = "gfx/interface/settings/on_save.dds"
+					using = tooltip_title_icon_size
+				}
+			}
+
 			blockoverride "tooltip_content" {
 				TooltipTextBlock = {
 					visible = "[PlaythroughItem.IsIronman]"
@@ -983,6 +990,8 @@ types LoadSaveTypes
 								blockoverride "click" {}
 								blockoverride "double_click" {}
 								blockoverride "hover" {}
+								blockoverride "show_as_icon" { visible = yes }
+								blockoverride "show_as_button" { visible = no }
 							}
 
 							text_single = {

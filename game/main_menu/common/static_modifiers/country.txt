@@ -9,9 +9,8 @@ is_bankrupt = {
 	
 	total_loan_capacity_modifier = -0.5
 	
-	nobles_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
-	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
-	burghers_estate_target_satisfaction = big_permanent_target_satisfaction_penalty
+	
+	global_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
 	
 	global_crown_estate_power = -0.9
 	
@@ -4121,8 +4120,6 @@ sicily_in_safe_hands = {
 	global_integration_speed_modifier = 0.20
 }
 
-# France
-
 fra_end_of_the_guilds = {
 	game_data = {
 		category = country
@@ -5140,7 +5137,7 @@ fra_john_law_mississippi_company_limit = {
 	stability_investment = small_stability_investment_penalty
 }
 
-fra_general_private_bank_benefits = { # This modifier is intended to be deceptively strong, as it will quickly be removed from another event
+fra_general_private_bank_benefits = {
 	game_data = {
 		category = country
 	}
@@ -5418,8 +5415,6 @@ necker_reforms = {
 	nobles_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
 }
 
-# Scotland
-
 sco_civil_war_aggressive = {
 	game_data = {
 		category = country
@@ -5446,10 +5441,10 @@ sbl_english_backing = {
 	game_data = {
 		category = country
 	}
-	monthly_gold_income = 8
+	monthly_gold_income = 10
 	global_defensive = 0.10
-	hire_mercenary_premium_cost_modifier = -0.25
-	monthly_legitimacy = -0.25
+	levy_combat_efficiency_modifier = 0.10
+	monthly_legitimacy = -0.15
 	stability_investment = small_stability_investment
 }	
 
@@ -5457,9 +5452,9 @@ sco_desertion_among_balliol = {
 	game_data = {
 		category = country 
 	}
-	global_defensive = -0.33
-	siege_ability = -0.33
-	army_movement_speed = -0.33
+	global_defensive = -0.25
+	siege_ability = -0.25
+	army_movement_speed = -0.25
 	discipline = -0.10
 }	
 
@@ -5545,8 +5540,11 @@ sco_purging_enclaves = {
 	game_data = {
 		category = country 
 	}
-	army_maintenance_cost = 0.15
-	antagonism_monthly_change_modifier = 0.08
+	antagonism_received_modifier = 0.05
+	declaring_war_cost_modifier = -0.2
+	army_infantry_power = 0.10
+	monthly_towards_offensive = societal_value_minor_monthly_move
+	monthly_towards_belligerent = societal_value_minor_monthly_move
 }
 
 sco_introduction_of_artillery = {
@@ -5723,10 +5721,6 @@ sco_darien_scheme = {
 	colonial_range_modifier = 0.2
 	monthly_gold_expense = 4
 }	
-
-
-# End Scotland
-
 
 wool_imports_banned = {
 	game_data = {
@@ -6124,9 +6118,9 @@ infrastructure_funds_modifier = {
 		category = country 
 	}
 
-	global_urban_build_buildings_cost = -0.1
-	global_monthly_development = 0.001
-	stability_investment = small_stability_investment
+	global_build_buildings_cost = -0.1
+	town_upgrade_cost_modifier = -0.1
+	city_upgrade_cost_modifier = -0.1
 }
 
 warrior_banners_modifier = {
@@ -6134,7 +6128,7 @@ warrior_banners_modifier = {
 		category = country 
 	}
 	
-	global_levy_size_modifier = 0.1
+	global_levy_size_modifier = 0.05
 	army_maintenance_cost = -0.2
 	expected_army_size_modifier = 0.1
 }
@@ -6145,8 +6139,8 @@ foreign_donations_modifier = {
 	}
 
 	country_cabinet_efficiency = 0.1
-	tax_income_efficiency = large_tax_income_efficiency_bonus
-	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	monthly_diplomats = 0.2
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
 }
 
 jerusalem_resurgent_modifier = {
@@ -9990,7 +9984,6 @@ fra_noble_crushing_rebellions = {
 	monthly_rebel_growth = 0.001
 	monthly_towards_serfdom = societal_value_monthly_move
 }
-# Iroquois
 
 iro_memory_of_the_great_peacemaker = {
 	game_data = {
@@ -10229,6 +10222,7 @@ chk_new_golden_age = {
 	global_monthly_development = 0.003
 	stability_investment = large_stability_investment	
 	government_size = 1
+	monthly_gold_income = 6
 }
 
 chk_restricted_construction = {
@@ -10863,4 +10857,15 @@ chinese_architectural_influences_modifier = {
 
 	global_build_buildings_cost = -0.1
 	monthly_towards_sinicized = societal_value_significant_monthly_move
+}
+
+coins_in_our_name_modifier = {
+	game_data = { 
+		category = country
+		decaying = yes
+	}
+
+	minting_inflation_threshold = 0.05
+	monthly_legitimacy = 0.25
+
 }

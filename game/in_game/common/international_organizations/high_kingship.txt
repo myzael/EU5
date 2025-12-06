@@ -57,7 +57,6 @@
 
 	leader_modifier = {		
 		great_power_score_exempt_from_forfeit = 50
-		monthly_prestige = 0.1
 	}
 	
 	can_lead_trigger = {

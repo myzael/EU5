@@ -410,19 +410,20 @@ diplomacy_manager = {
 
     #-------------Persia------------
     dependency = { first = HLG second = HLL subject_type = vassal }
-    dependency = { first = GRG second = HDN subject_type = vassal }
-    dependency = { first = GRG second = QOM subject_type = vassal }
-    dependency = { first = GRG second = KSA subject_type = vassal }
     dependency = { first = GRG second = ASR subject_type = vassal }
+    dependency = { first = GRG second = HDN subject_type = vassal }
     dependency = { first = GRG second = JKR subject_type = vassal }
-    dependency = { first = GRG second = SFR subject_type = vassal }
-    dependency = { first = GRG second = SBZ subject_type = vassal }
     dependency = { first = GRG second = KHT subject_type = vassal }
-    dependency = { first = GRG second = MZN subject_type = vassal }
     dependency = { first = GRG second = KRT subject_type = vassal }
+    dependency = { first = GRG second = KSA subject_type = vassal }
+    dependency = { first = GRG second = MZN subject_type = vassal }
+    dependency = { first = GRG second = QOM subject_type = vassal }
+    dependency = { first = GRG second = SBZ subject_type = vassal }
+    dependency = { first = GRG second = SFR subject_type = vassal }
     dependency = { first = KRT second = MRV subject_type = vassal }
     dependency = { first = KRT second = KHF subject_type = vassal }
 
+    scripted_mutual = { first = HLG second = GRG type = alliance }
     scripted_mutual = { first = KRT second = GRG type = alliance }
 
     #-------------Caucasus------------
@@ -555,6 +556,7 @@ diplomacy_manager = {
     dependency = { first = CHI second = HEZ subject_type = vassal }
     dependency = { first = CHI second = JIZ subject_type = vassal }
     dependency = { first = CHI second = SYG subject_type = vassal }
+    dependency = { first = CHI second = LNG subject_type = vassal }
     dependency = { first = CHI second = CHH subject_type = tusi }
     dependency = { first = CHI second = CDL subject_type = tusi }
     dependency = { first = CHI second = LJG subject_type = tusi }
@@ -772,5 +774,8 @@ diplomacy_manager = {
     dependency = { first = SHN second = SOU subject_type = vassal }
     scripted_mutual = { first = JAP second = NTC type = alliance }
     scripted_oneway = { first = JAP second = NTC type = guarantee }
+    scripted_mutual = { first = STC second = KTB type = alliance }
+    scripted_mutual = { first = STC second = KSN type = alliance }
+    scripted_mutual = { first = STC second = NIT type = alliance }
 
 }

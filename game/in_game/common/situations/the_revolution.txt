@@ -1,5 +1,6 @@
 ﻿the_revolution = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_the_revolution
 	
 	can_start = {
 		current_age = age_6_revolutions

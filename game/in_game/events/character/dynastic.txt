@@ -556,7 +556,14 @@ dynastic.8 = {
 	option = {
 		name = dynastic.8.a
 		trigger = {
-			ruler ?= { is_female = no }
+			OR = {
+				ruler ?= {
+					is_female = no
+				}
+				ruler ?= {
+					is_married = no
+				}
+			}
 		}
 		ruler = {
 			adopt_character = scope:reed_child_char

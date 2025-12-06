@@ -716,7 +716,13 @@ country_ru_flavor = {
 	text = {
 		localization_key = rank_confederation
 		trigger = {
-			has_reform = government_reform:livonian_confederation
+			OR = {
+				has_reform = government_reform:livonian_confederation
+				AND = {
+					tag = SWI
+					government_type = government_type:republic
+				}
+			}
 		}
 	}
 
@@ -767,6 +773,16 @@ country_ru_flavor = {
 	}
 
 	# Republic
+
+	text = {
+		localization_key = rank_county_republic_maya
+		trigger = {
+
+			country_rank_is_county = yes
+			government_type = government_type:republic
+			court_language ?= language:maya_language
+		}
+	}
 
 	text = {
 		localization_key = rank_empire_pirate_republic
@@ -1312,6 +1328,14 @@ country_ru_flavor = {
 
 			country_rank_is_kingdom = yes
 			culture = culture:maori_culture
+		}
+	}
+
+	text = {
+		localization_key = rank_kingdom_maya
+		trigger = {
+			country_rank_is_kingdom = yes
+			court_language ?= language:maya_language
 		}
 	}
 
@@ -1887,6 +1911,23 @@ country_ru_flavor = {
 			country_rank_is_duchy = yes
 			government_type = government_type:republic
 			tag = NED
+		}
+	}
+	
+	text = {
+		localization_key = rank_duchy_ajawil
+		trigger = {
+			country_rank_is_duchy = yes
+			court_language ?= language:maya_language
+		}
+	}
+
+	text = {
+		localization_key = rank_duchy_irechikwa
+		trigger = {
+
+			country_rank_is_duchy = yes
+			court_language ?= language:purepecha_language
 		}
 	}
 
@@ -2647,6 +2688,16 @@ country_ru_flavor = {
 	}
 
 	text = {
+		localization_key = rank_county_theocracy_maya
+		trigger = {
+
+			country_rank_is_county = yes
+			government_type = government_type:theocracy
+			court_language ?= language:maya_language
+		}
+	}
+
+	text = {
 		localization_key = rank_county_order
 		trigger = {
 
@@ -2818,6 +2869,23 @@ country_ru_flavor = {
 			culture = { has_culture_group = culture_group:scottish_group }
 			court_language ?= language:gaelic_language
 			has_reform = government_reform:celtic_traditions_reform
+		}
+	}
+
+	text = {
+		localization_key = rank_county_kuchkabal
+		trigger = {
+			court_language ?= language:maya_language
+		}
+	}
+
+	text = {
+		localization_key = rank_county_iya
+		trigger = {
+			OR = {
+				court_language ?= language:eastern_otomanguean_language
+				court_language ?= language:otopamean_language
+			}
 		}
 	}
 
@@ -3734,103 +3802,103 @@ endlong_fem = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_fem"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_fem_def
 }
 endlong_enna = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_enna"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_enna_def
 }
 endlong_etut = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_etut"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_etut_def
 }
 endlong_etyut = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_etyut"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_etyut_def
 }
 endlong_gegu = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_gegu"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_gegu_def
 }
 endlong_itat = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_itat"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_itat_def
 }
 endlong_ityat = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_ityat"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_ityat_def
 }
 endlong_assya = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endlong_assya"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_assya_def
 }
 endrank_fem = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_fem"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_fem_def
 }
 endrank_enna = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_enna"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_enna_def
 }
 endrank_etut = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_etut"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_etut_def
 }
 endrank_etyut = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_etyut"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_etyut_def
 }
 endrank_gegu = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_gegu"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_gegu_def
 }
 endrank_itat = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_itat"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_itat_def
 }
 endrank_ityat = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_ityat"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_ityat_def
 }
 endrank_assya = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_endrank_assya"
-	if_invalid_loc = return_empty
+	if_invalid_loc = endlong_assya_def
 }
 rank_ru_GEN = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_GEN"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_GEN
 }
 prefix_ru_GEN = {
 	log_loc_errors = no
@@ -3842,19 +3910,19 @@ longname_ru_GEN = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnameGEN"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_GEN
 }
 longname_ru_wntt_GEN = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamewnttGEN"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_GEN
 }
 rank_ru_DAT = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_DAT"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_DAT
 }
 prefix_ru_DAT = {
 	log_loc_errors = no
@@ -3866,19 +3934,19 @@ longname_ru_DAT = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnameDAT"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_DAT
 }
 longname_ru_wntt_DAT = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamewnttDAT"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_DAT
 }
 rank_ru_ACC = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_ACC"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_ACC
 }
 prefix_ru_ACC = {
 	log_loc_errors = no
@@ -3890,19 +3958,19 @@ longname_ru_ACC = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnameACC"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_ACC
 }
 longname_ru_wntt_ACC = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamewnttACC"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_ACC
 }
 rank_ru_INST = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_INST"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_INST
 }
 prefix_ru_INST = {
 	log_loc_errors = no
@@ -3914,19 +3982,19 @@ longname_ru_INST = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnameINST"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_INST
 }
 longname_ru_wntt_INST = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamewnttINST"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_INST
 }
 rank_ru_PREP = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_PREP"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_PREP
 }
 prefix_ru_PREP = {
 	log_loc_errors = no
@@ -3938,41 +4006,41 @@ longname_ru_PREP = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamePREP"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_PREP
 }
 longname_ru_wntt_PREP = {
 	log_loc_errors = no
 	parent = country_ru_flavor
 	suffix = "_longnamewnttPREP"
-	if_invalid_loc = return_empty
+	if_invalid_loc = rank_county_PREP
 }
 parliament_ru_GEN = {
 	log_loc_errors = no
 	parent = country_ru_flavor_parliament
 	suffix = "_GEN"
-	if_invalid_loc = return_empty
+	if_invalid_loc = country_flavor_parliament_GEN
 }
 parliament_ru_DAT = {
 	log_loc_errors = no
 	parent = country_ru_flavor_parliament
 	suffix = "_DAT"
-	if_invalid_loc = return_empty
+	if_invalid_loc = country_flavor_parliament_DAT
 }
 parliament_ru_ACC = {
 	log_loc_errors = no
 	parent = country_ru_flavor_parliament
 	suffix = "_ACC"
-	if_invalid_loc = return_empty
+	if_invalid_loc = country_flavor_parliament_ACC
 }
 parliament_ru_INST = {
 	log_loc_errors = no
 	parent = country_ru_flavor_parliament
 	suffix = "_INST"
-	if_invalid_loc = return_empty
+	if_invalid_loc = country_flavor_parliament_INST
 }
 parliament_ru_PREP = {
 	log_loc_errors = no
 	parent = country_ru_flavor_parliament
 	suffix = "_PREP"
-	if_invalid_loc = return_empty
+	if_invalid_loc = country_flavor_parliament_PREP
 }

@@ -180,7 +180,7 @@ join_autocephalous_patriarchate = {
 		name = "join_autocephalous_patriarchate_choose_ap"
 		none_available_msg_key = "join_autocephalous_patriarchate_no_ios"
 		column = {
-			data = name
+			data = international_organization_select_column
 		}
 		visible = {
 			international_organization_type = international_organization_type:autocephalous_patriarchate
@@ -434,7 +434,7 @@ relocate_ecumenical_patriarchate = {
 	potential = {
 	}
 	allow = {
-		var:seat ?= {
+		scope:recipient.var:seat ?= {
 			NOT = { is_location_holy_site_for = "scope:recipient.var:religion" }
 		}
 		scope:actor ?= {

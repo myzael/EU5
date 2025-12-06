@@ -48,3 +48,27 @@ failed_loading_savegame_errors = {
 	text = FAILED_LOADING_SAVEGAME_ERRORS_DESC
 	accept_text = CLOSE
 }
+
+failed_saving_savegame_errors = {
+	level = alert
+	category = system
+	window_file = @default_window_file
+	window_name = @default_window_name
+
+	title_text = FAILED_SAVING_SAVEGAME_ERRORS
+	text = FAILED_SAVING_SAVEGAME_ERRORS_DESC
+	accept_text = CLOSE
+}
+
+
+confirm_continue_playset_issues = {
+	level = alert
+	category = mods
+	window_file = @default_window_file
+	window_name = @default_window_name
+
+	title_text = MODS_GUI_CONFIRM_CONTINUE_PLAYSET_ISSUES
+	text = MODS_GUI_CONFIRM_CONTINUE_PLAYSET_ISSUES_DESC
+	accept_text = OK
+	decline_text = CANCEL
+}

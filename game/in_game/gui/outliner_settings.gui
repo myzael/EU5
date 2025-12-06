@@ -205,7 +205,10 @@ types OutlinerMapMarkerSettingsTypes
 						size = { 20 20 }
 					}
 
-					blockoverride "checkbox_frame" {  frame = "[Select_int32(MapMarkerSettingItem.IsPinned, '(int32)2', '(int32)1')]" }
+					blockoverride "checkbox_frame" {
+						frame = "[Select_int32(MapMarkerSettingItem.IsPinned, '(int32)2', '(int32)1')]"
+						enabled = "[MapMarkerSettingItem.IsEnabled]"
+					}
 					blockoverride "text" { text = "[MapMarkerSettingItem.GetName]" }
 
 					action_tooltip = {
@@ -287,8 +290,8 @@ window = {
 
 	datacontext = "[OutlinerSettings.GetOutliner]"
 
-	position = { -335 135 }
-	alpha = 0
+	position = { -435 135 }
+	alpha = 1
 
 	movable = no
 	allow_outside = yes
@@ -296,25 +299,23 @@ window = {
 
 	using = Animation_Show_Hide_UI
 	state = {
-		name = _show
+		using = outliner_show_animation_template
 		block "on_show_ui" {}
 	}
 
 	state = {
-		name = _hide
+		using = outliner_hide_animation_template
 		block "on_hide_ui" {}
 	}
 
 	blockoverride "on_hide_ui" {
 		duration = 0.2
-		bezier = { 1.0 0.0 1.0 0.0 }
 		alpha = 0
 		position = { -335 135 }
 	}
 
 	blockoverride "on_show_ui" {
 		duration = 0.2
-		bezier = { 0.0 1.0 0.0 1.0 }
 		alpha = 1
 		position = { -435 135 }
 	}

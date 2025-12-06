@@ -8,7 +8,7 @@
 		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
 		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
 		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
-		shader = "portrait_hair_double_sided"
+		shader = "portrait_attachment_alpha_to_coverage"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
 }
@@ -36,7 +36,7 @@ pdxmesh = {
 		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
 		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
 		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
-		shader = "portrait_hair_double_sided"
+		shader = "portrait_attachment_alpha_to_coverage"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
 }
@@ -64,7 +64,7 @@ pdxmesh = {
 		texture_diffuse = "male_ger_cloth_set_a_chain_jewellery_diffuse.dds"
 		texture_normal = "male_ger_cloth_set_a_chain_jewellery_normal.dds"
 		texture_specular = "male_ger_cloth_set_a_chain_jewellery_properties.dds"
-		shader = "portrait_hair_double_sided"
+		shader = "portrait_attachment_alpha_to_coverage"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
 }

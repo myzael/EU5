@@ -1353,7 +1353,7 @@ lateralview = {
 													}
 		
 													icon = {
-														position = { 10 0 }
+														position = { 8 0 }
 														size = { 25 25 }
 														parentanchor = left|vcenter
 														texture = "[GetPeaceOfferIcon(PeaceOfferCategory.Self)]"
@@ -1688,6 +1688,7 @@ lateralview = {
 												button_square_minus = {
 													size = { 18 18 }
 													onclick = "[PeaceOfferWarScoreTreatyGlue.OnDecLeftClick]"
+													enabled = "[PeaceOfferWarScoreTreatyGlue.IsDecWarScoreEnabled]"
 													action_tooltip = {
 														click_type = left
 														click_mode = single
@@ -1740,6 +1741,7 @@ lateralview = {
 												button_square_plus = {
 													size = { 18 18 }
 													onclick = "[PeaceOfferWarScoreTreatyGlue.OnIncLeftClick]"
+													enabled = "[PeaceOfferWarScoreTreatyGlue.IsIncWarScoreEnabled]"
 													action_tooltip = {
 														click_type = left
 														click_mode = single

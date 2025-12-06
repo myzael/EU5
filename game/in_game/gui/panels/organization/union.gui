@@ -543,9 +543,16 @@ organization_geodiplomatic_theme = {
 																								text = [action|E]
 																							}
 																							blockoverride "tooltip_content" {
+																								TooltipBlockList = {
+																									visible = "[StringIsEmpty(UIAction.GetDescription)]"
+																									textcontext = "union_bribe_not_possible"
+																								}
 																								TooltipFlavorTextBlock = {
-																									blockoverride "text" {
+																									blockoverride "set_textcontext" {
+																										ontextcontextchanged = "[SetCStringFromTextContext(PdxGuiWidget.AccessSelf)]"
 																										visible = "[Not(StringIsEmpty(UIAction.GetDescription))]"
+																									}
+																									blockoverride "text" {
 																										text = "[UIAction.GetDescription]"
 																										# blockoverride "tooltip_text_block_size" {}
 																									}
@@ -603,9 +610,16 @@ organization_geodiplomatic_theme = {
 																								text = [action|E]
 																							}
 																							blockoverride "tooltip_content" {
+																								TooltipBlockList = {
+																									visible = "[StringIsEmpty(UIAction.GetDescription)]"
+																									textcontext = "union_bribe_not_possible"
+																								}
 																								TooltipFlavorTextBlock = {
-																									blockoverride "text" {
+																									blockoverride "set_textcontext" {
+																										ontextcontextchanged = "[SetCStringFromTextContext(PdxGuiWidget.AccessSelf)]"
 																										visible = "[Not(StringIsEmpty(UIAction.GetDescription))]"
+																									}
+																									blockoverride "text" {
 																										text = "[UIAction.GetDescription]"
 																										# blockoverride "tooltip_text_block_size" {}
 																									}
@@ -663,9 +677,16 @@ organization_geodiplomatic_theme = {
 																								text = [action|E]
 																							}
 																							blockoverride "tooltip_content" {
+																								TooltipBlockList = {
+																									visible = "[StringIsEmpty(UIAction.GetDescription)]"
+																									textcontext = "union_bribe_not_possible"
+																								}
 																								TooltipFlavorTextBlock = {
-																									blockoverride "text" {
+																									blockoverride "set_textcontext" {
+																										ontextcontextchanged = "[SetCStringFromTextContext(PdxGuiWidget.AccessSelf)]"
 																										visible = "[Not(StringIsEmpty(UIAction.GetDescription))]"
+																									}
+																									blockoverride "text" {
 																										text = "[UIAction.GetDescription]"
 																										# blockoverride "tooltip_text_block_size" {}
 																									}

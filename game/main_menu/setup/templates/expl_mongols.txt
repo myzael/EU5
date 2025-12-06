@@ -137,4 +137,5 @@ discovered_provinces = {
 	thaton_province
 	#southeast_asian_coasts_area
 	vietnam_coast_province
+	thanh_hoa_coast_sea_province
 }

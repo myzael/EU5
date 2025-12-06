@@ -570,6 +570,19 @@ template maritime_presence_tooltip {
 					alpha = 0.3
 				}
 		}
+
+		blockoverride "title_button" {
+            mapmode_tooltip_button = {
+                datacontext = "[GetMapMode('maritime')]"
+            }
+
+            hint_button = {
+                action_tooltip = {
+                    title = "OPEN_HINT"
+                    on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_maritime')]"
+                }
+            }
+        }
 		
 		blockoverride "concept_link" {
 			text = [maritime_presence|E]

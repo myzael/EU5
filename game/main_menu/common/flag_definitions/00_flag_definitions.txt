@@ -1188,6 +1188,20 @@ BRU = { # Brunswick
 	}
 }
 
+BTN = { # Buton
+	flag_definition = {
+		coa = BTN
+		priority = 1
+	}
+	flag_definition = {
+		coa = BTN_sultanate
+		priority = 50
+		trigger = {
+			coa_def_muslim_trigger = yes
+		}
+	}
+}
+
 BUL = { # Bulgaria
 	flag_definition = {
 		coa = BUL
@@ -3589,6 +3603,30 @@ KIE = { # Kiev
 			}
 		}
 	}		
+}
+
+KOJ = { # Jerusalem
+	flag_definition = {
+		coa = KOJ
+		priority = 1
+	}
+	flag_definition = {
+		coa = KOJ_lusignan
+		priority = 2
+		trigger = {
+			OR = {
+				coa_def_lusignan_dynasty_trigger = yes
+				coa_def_KOJ_cyprus_trigger = yes
+			}
+		}
+	}	
+	flag_definition = {
+		coa = KOJ_eagle
+		priority = 10
+		trigger = {
+			coa_def_christian_trigger = no # Fallback design in case of conversion
+		}
+	}
 }
 
 KOL = { # Cologne
@@ -9178,3 +9216,31 @@ CKO = { # Koke Temur
 		}
 	}
 }
+
+CNA = { # Naghachu
+	flag_definition = {
+		coa = CNA
+		priority = 1
+	}
+	flag_definition = {
+		coa = CHI_Yuan
+		priority = 100
+		trigger = {
+			coa_def_empire_trigger = yes
+		}
+	}
+}
+
+CSI = { # Li Siqi
+	flag_definition = {
+		coa = CSI
+		priority = 1
+	}
+	flag_definition = {
+		coa = CSI_dragon
+		priority = 100
+		trigger = {
+			coa_def_empire_trigger = yes
+		}
+	}
+}                                             

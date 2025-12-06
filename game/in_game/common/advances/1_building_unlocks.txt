@@ -696,7 +696,7 @@ dock_advance = {
 				has_ports = yes
 			}
 			add = {
-				value = 100
+				value = 200
 				multiply = num_of_ports
 				divide = num_locations
 			}

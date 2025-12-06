@@ -850,7 +850,7 @@ lateralview = {
 																		}
 
 																		text_single = {
-																			maximumsize = {150 20}
+																			maximumsize = {250 20}
 																			align = left|nobaseline
 																			using = Font_Type_Headers
 																			using = Font_Size_Small

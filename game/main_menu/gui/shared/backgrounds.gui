@@ -3275,6 +3275,21 @@ template bg_control_romboid {
 		}
 	}
 }
+template bg_cabinet_inner_frame {
+	background = {
+		texture = "gfx/interface/component_tiles/cabinet/cabinet_inner_frame.dds"
+		texture_density = 2
+		spritetype = corneredstretched
+		spriteBorder = {20 0}
+		block "cabinet_card_frame_color" {
+			modify_texture = {
+				using = color_wood_brown_texture
+				blend_mode = multiply
+			}			
+		}		
+	}
+}
+
 template bg_cabinet_card_frame {
 	background = {
 		texture = "gfx/interface/component_tiles/cabinet/cabinet_card_frame.dds"

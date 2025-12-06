@@ -1,5 +1,6 @@
 ﻿little_ice_age = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_little_ice_age
 	
 	can_start = {
 		current_year >= 1645
@@ -130,7 +131,6 @@
 				2 = { trigger_event_non_silently = little_ice_age.15  }
 				2 = { trigger_event_non_silently = little_ice_age.17  }
 				2 = { trigger_event_non_silently = little_ice_age.18  }
-				2 = { trigger_event_non_silently = little_ice_age.100 }
 				2 = { trigger_event_non_silently = little_ice_age.101 }
 				2 = { trigger_event_non_silently = little_ice_age.102 }
 				2 = { trigger_event_non_silently = little_ice_age.103 }

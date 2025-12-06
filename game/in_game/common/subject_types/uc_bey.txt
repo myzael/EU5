@@ -9,7 +9,7 @@
 	visible_through_treaty = { always = no }
 	subject_creation_enabled = { always = no }
 	release_country_enabled = { always = no }
-	type = army
+	type = location
 	join_offensive_wars_always = {
 		always = yes
 	}
@@ -49,7 +49,7 @@
 		monthly_towards_decentralization = societal_value_tiny_monthly_move
 	}
 	subject_modifier = {
-		always_allow_levies = yes
+		always_allow_army_levies = yes
 	}
 	
 	

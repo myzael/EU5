@@ -1,6 +1,7 @@
 ﻿guelphs_and_ghibellines = {
 	voters = guelphs_and_ghibellines_voters
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_guelphs_and_ghibellines
 	
 	can_start = {
 		game_is_initialized = yes

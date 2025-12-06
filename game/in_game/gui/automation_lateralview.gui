@@ -791,7 +791,8 @@ lateralview = {
 																layoutpolicy_horizontal = expanding
 																align = left|nobaseline
 																using = Font_Type_Headers
-
+																autoresize = no
+																size = { -1 30}
 																text = "[AutomatedSystemsItem.GetName]"
 															}
 

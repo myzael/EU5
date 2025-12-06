@@ -231,6 +231,11 @@ mil_order_request_funds = {
 			}
 		}
 	}
+
+	cooldown = {
+		type = mil_order_request_funds
+		years = 1
+	}
 	
 	effect = {
         scope:recipient = {

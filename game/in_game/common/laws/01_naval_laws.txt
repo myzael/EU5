@@ -11,6 +11,7 @@ maritime_law = {
 	forestry_ordinance = {
 		country_modifier = {
 			global_naval_supplies_output_modifier = 0.10
+			monthly_towards_traditional_economy = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -21,6 +22,7 @@ maritime_law = {
 	mandatory_impressment = {
 		country_modifier = {
 			global_sailors_modifier = 0.10
+			monthly_towards_serfdom = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			nobles_estate
@@ -31,6 +33,7 @@ maritime_law = {
 	navy_audits = {
 		country_modifier = {
 			navy_maintenance_cost = -0.05
+			monthly_towards_naval = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			peasants_estate
@@ -42,6 +45,7 @@ maritime_law = {
 	  	country_modifier = {
 			burghers_estate_target_satisfaction = small_permanent_target_satisfaction
 			trade_range_modifier = 0.10
+			monthly_towards_free_trade = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -52,6 +56,7 @@ maritime_law = {
 	shipwright_standard_regulation = {
 		country_modifier = {
 			ship_build_speed = 0.10
+			monthly_towards_capital_economy = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -60,7 +65,8 @@ maritime_law = {
 	}
 
 	#Country Specific
-	ara_consulate_sea = {		
+	ara_consulate_sea = {	
+		unique = yes	
     	potential = {
 			tag = ARA
 			has_unlocked_policy_trigger = { type = ara_consulate_sea }
@@ -77,7 +83,7 @@ maritime_law = {
 	}
 
 	nav_maritime_code = {
-		
+		unique = yes
     	potential = {
 			tag = NAV
 		}
@@ -97,7 +103,7 @@ maritime_law = {
 	}
 
 	kilwan_merchant_navy = {
-		
+		unique = yes
 		potential = {
 			tag = ZAN
 		}
@@ -318,6 +324,7 @@ naval_doctrine_law = {
 
 
 	wooden_wall = {
+		unique = yes
         potential = {
 			OR = {
 				tag = ENG
@@ -337,6 +344,7 @@ naval_doctrine_law = {
 	}
 
 	grand_armada = {
+		unique = yes
 		potential = {
 			OR = {
 				tag = CAS
@@ -360,6 +368,7 @@ naval_doctrine_law = {
 	}
 
 	portuguese_marines = {
+		unique = yes
 		potential = {
 			OR = {
 				tag = POR
@@ -407,6 +416,7 @@ naval_doctrine_law = {
 	}
 
 	danish_admirality = {
+		unique = yes
 		potential = {
 			tag = DAN
 		}
@@ -420,6 +430,7 @@ naval_doctrine_law = {
 	}
 
 	norwegian_sailors = {
+		unique = yes
 		potential = {
 			tag = NOR
 		}
@@ -434,6 +445,7 @@ naval_doctrine_law = {
 	}
 
 	venetian_galleys = {
+		unique = yes
 		potential = {
 			tag = VEN
 		}
@@ -465,6 +477,7 @@ naval_doctrine_law = {
 
 
 	dutch_trade_fleet = {
+		unique = yes
 		potential = {
 			tag = NED
 		}

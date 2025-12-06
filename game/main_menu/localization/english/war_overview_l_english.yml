@@ -85,7 +85,7 @@
  WAR_ARMY_LOSSES_TT: "Army losses"
  WAR_NAVAL_LOSSES_TT: "Naval losses"
  WAR_PARTICIPATION_LABEL: "[war_participation|e]" 
- WAR_SELECT_COUNTRY: "Select this country to make a peace offer.\nSelecting the war leader will include all it's allies."
+ WAR_SELECT_COUNTRY: "Select this country to make a peace offer.\nSelecting the war leader will include all its allies."
  
  WAR_FR_L_A_D: "[COUNTRY.GetLongNameWithFlag]: [COUNTRY.GetTotalStrength]@army_strength!"
  WAR_FR_N_A_D: "[COUNTRY.GetLongNameWithFlag]: [COUNTRY.GetTotalShips]@navy_strength!"

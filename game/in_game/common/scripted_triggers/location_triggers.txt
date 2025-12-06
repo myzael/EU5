@@ -225,7 +225,10 @@ is_capital_mesoamerica = {
 }
 
 can_clan_get_this_location_when_turning_into_normal_tag = {
-	owner ?= { is_member_of_international_organization = international_organization:japanese_shogunate }
+	owner ?= {
+		is_member_of_international_organization = international_organization:japanese_shogunate
+		num_locations > 1
+	}
 	OR = {
 		any_foreign_building_countries_in_location = {
 			NOT = { this = scope:target_clan }

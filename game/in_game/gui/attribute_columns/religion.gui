@@ -22,7 +22,6 @@
 		hbox = {
 			margin = { 10 0 }
 			spacing = 5
-
 			icon = {
 				layoutpolicy_vertical = expanding
 				layoutpolicy_horizontal = fixed
@@ -33,13 +32,14 @@
 			}
 
 			text_single = {
-				layoutpolicy_vertical = fixed
-				layoutpolicy_horizontal = expanding
-				autoresize = no
 				align = nobaseline
 				default_format = "#yellow_titles"
-				text = "[InteractionTarget.GetReligion.GetName]"
+				text = "[InteractionTarget.GetReligion.GetNameWithNoTooltip]"
+				datacontext = "[InteractionTarget.GetReligion]"
+				tooltipwidget = { using = religion_tooltip	}
 			}
+			
+			expand = {}
 		}
 	}
 
@@ -53,7 +53,7 @@
 		}
 
 		hbox = {
-			margin = { 5 0 }
+			margin = { 10 0 }
 			spacing = 5
 			icon = {
 				visible = no
@@ -64,7 +64,7 @@
 			text_single = {
 				using = layoutpolicy_expanding
 				autoresize = no
-				align = nobaseline
+				align = right|nobaseline
 				text = "[SelectInteractionTargetView.GetCurrentParams.GetActor.GetReligionPercentage(InteractionTarget.GetReligion)|%]"
 			}
 		}

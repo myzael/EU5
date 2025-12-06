@@ -21,7 +21,7 @@ german_language = {
 		name_mark name_matthias name_maurice name_maximilian 
 		name_nicholas
 		name_philip name_peter
-		name_reginar name_richard name_robert name_reginald
+		name_reginar name_richard name_robert name_reginald name_rappold
 		name_simeon name_stephen name_sigfrid
 		name_theodoric name_thomas name_theobald
 		name_victor name_walter
@@ -329,7 +329,7 @@ german_language = {
 				name_mark name_matthias name_maurice name_maximilian 
 				name_nicholas
 				name_philip name_peter
-				name_reginar name_richard name_robert name_reginald
+				name_reginar name_richard name_robert name_reginald name_rappold
 				name_simeon name_stephen name_sigfrid
 				name_theodoric name_thomas name_theobald
 				name_victor name_walter
@@ -466,7 +466,7 @@ german_language = {
 				name_mark name_matthias name_maurice name_maximilian 
 				name_nicholas
 				name_philip name_peter
-				name_reginar name_richard name_robert name_reginald
+				name_reginar name_richard name_robert name_reginald name_rappold
 				name_simeon name_stephen name_sigfrid
 				name_theodoric name_thomas name_theobald
 				name_victor name_walter

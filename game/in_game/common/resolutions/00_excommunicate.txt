@@ -61,6 +61,7 @@
 			}
 		}
 		enabled = {
+			NOT = { has_cooldown = excommunicate }
 		}
 	}
 
@@ -157,18 +158,18 @@
 
 	effect = {
 		if = {
-			limit = {
-				exists = scope:target
-			}
-			scope:target = {
-				excommunicate_effect = yes
-			}
-			if = {
-				limit = { exists = scope:recipient }
-				scope:recipient = {
-					remove_variable = excommunication_target
+			limit = { exists = scope:recipient }
+			scope:recipient = {
+				remove_variable = excommunication_target
+				add_cooldown = {
+					type = excommunicate
+					years = 20
 				}
 			}
+		}
+		if = {
+			limit = { exists = scope:target }
+			scope:target = { excommunicate_effect = yes }
 		}
 		else = {
 			custom_tooltip = cc_excommunicate_target_tt
@@ -183,6 +184,10 @@
 			limit = { exists = scope:recipient }
 			scope:recipient = {
 				remove_variable = excommunication_target
+				add_cooldown = {
+					type = excommunicate
+					years = 20
+				}
 			}
 		}
 	}

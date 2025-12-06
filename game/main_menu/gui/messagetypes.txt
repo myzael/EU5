@@ -5592,6 +5592,36 @@ pausepopup=no
 message_category = government
 }
 
+WE_PERFORM_exempt_from_tribute_ACTION={
+log=yes
+onmap=no
+popup=yes
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+OTHER_PERFORMS_exempt_from_tribute_ACTION={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
+ACTION_exempt_from_tribute_PERFORMED_ON_US={
+log=yes
+onmap=no
+popup=no
+idle=no
+option=yes
+pausepopup=no
+message_category = government
+}
+
 # WE_PERFORM_revoke_law_in_international_organization_ACTION={
 # log=yes
 # onmap=no

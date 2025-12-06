@@ -141,6 +141,7 @@ market_manager = {
 
 	#Andes
 	add_market = chinchay
+	add_market = hatunqulla
 		
 	#Oceania
 	add_market = o_ahu

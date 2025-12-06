@@ -90,6 +90,7 @@ organization_geodiplomatic_theme = {
 	
 	blockoverride "payment_block" {
 		text_single = {
+			align = center
 			using = layoutpolicy_expanding
 			raw_text = "-[Payment.GetFirstPayerPrice(InternationalOrganization.Self)]"
 			fontsize = 14
@@ -98,11 +99,13 @@ organization_geodiplomatic_theme = {
 
 	blockoverride "payers_list_block" {
 		text_single = {
+			align = right
 			using = layoutpolicy_expanding
 			raw_text = "[Localize('PAYEES')]:"
 			fontsize = 14
 		}
 		text_single = {
+			align = right
 			using = layoutpolicy_expanding
 			text = "[Payment.GetCountryPayeeNum(InternationalOrganization.Self)]"
 			fontsize = 14

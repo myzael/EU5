@@ -187,7 +187,7 @@ types OrganizationPanel
 												visible = "[Law.IsUnique]"
 											}
 											blockoverride "laws_list_button_visible" {
-												visible = no
+												visible = yes
 											}
 											blockoverride "laws_list_action_button_visible" {
 												visible = yes

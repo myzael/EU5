@@ -46,7 +46,7 @@
 	total_votes_needed = {
 		add = {
 			value = "religion:catholic.total_cardinals"
-			multiply = 300
+			multiply = 250
 		}
 	}
 

@@ -46,11 +46,10 @@
 				heir != scope:actor.heir
 			}
 			trigger_else = {
-				scope:actor = { has_heir = no }
+				has_heir = no
 			}
 			OR = {
 				AND = {
-					scope:actor = { union = { international_organization_has_policy = policy:union_aligned_legislature_policy } }
 					has_law = heir_religion_law
 					"law_policy(law:heir_religion_law)" = {
 						this != "scope:actor.law_policy(law:heir_religion_law)"
@@ -84,7 +83,6 @@
 				}
 				if = {
 					limit = {
-						union = { international_organization_has_policy = policy:union_aligned_legislature_policy }
 						has_law = heir_religion_law
 						scope:recipient = {
 							"law_policy(law:heir_religion_law)" = {
@@ -115,15 +113,7 @@
 		}
 		else = {
 			custom_tooltip = negotiate_succession_law_tt
-			if = {
-				limit = {
-					scope:actor = {
-						exists = union
-						union = { international_organization_has_policy = policy:union_aligned_legislature_policy }
-					}
-				}
-				custom_tooltip = negotiate_succession_law_bt
-			}
+			custom_tooltip = negotiate_succession_law_bt
 		}
 	}
 	reject_effect = {

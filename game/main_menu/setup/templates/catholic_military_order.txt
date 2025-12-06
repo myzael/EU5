@@ -26,7 +26,6 @@ government = {
 		#Nobles
 		nobles_land_rights
 		noble_fortification_licenses
-		noble_leaders_only
 		
 		#clergy
 		clergy_literacy_rights

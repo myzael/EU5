@@ -6,68 +6,8 @@ disaster_panel = {
 
 	##################################### MAIN IMAGE #####################################
 
-	blockoverride "main_image"{
-		
-		# Display Character Information here
-		one_character_header = {
-			blockoverride "CharacterContext" {
-				datacontext = "[GetCharacter('flo_savonarola')]"
-			}
-			blockoverride "CharacterRole" {
-				country_character = {
-					blockoverride "country_header_orientation" {
-
-					}
-					blockoverride "country_government_character_labels_align" {
-						align = center|nobaseline
-					}
-					blockoverride "character_name_maximumsize" {
-						maximumsize = { 200 -1 }
-					}
-					blockoverride "character_name_text"{
-						text = "[GetCharacter('flo_savonarola').GetShortNameWithNoTooltip]"
-					}
-					blockoverride "character_title" {
-						visible = "[Character.HasNickName]"
-						text = "[Character.GetNickname]"
-					}
-				}
-			}
-			# blockoverride "history_button_anchor" { visible = no }
-			blockoverride "character_name_maximumsize" { maximumsize = { 270 -1 } }
-			blockoverride "country_header_extra" {
-				hbox = {
-					layoutpolicy_horizontal = expanding
-					layoutpolicy_vertical = expanding
-					margin = { 10 10 }
-					spacing = 8
-					expand = {}
-				}
-			}
-
-			blockoverride "abilities" {
-				widget = {
-					layoutpolicy_horizontal = expanding
-					hbox = {
-						datacontext = "[GetCharacter('flo_savonarola')]"
-						character_abilities = {}
-						expand = {}
-						blockoverride "abilities_bg" {
-							background = {
-								texture = "gfx/interface/component_tiles/square_tile.dds"
-								texture_density = 2
-								alpha = 0.3
-								blend_mode = overlay
-								modify_texture = {
-									using = color_black_texture
-									blend_mode = multiply
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+	blockoverride "one_country_header_disaster_character" {
+		datacontext = "[GetCharacter('flo_savonarola')]"
 	}
 
 	##################################### TAB NAME #####################################

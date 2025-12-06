@@ -627,10 +627,12 @@
 						limit = {
 							scope:recipient = {
 								international_organization_has_law = scope:target
-								"law_policy(scope:target)" != scope:vote
+								"law_policy(scope:target)" = {
+									this != scope:vote
+								}
 							}
 						}
-						subtract = "scope:recipient.law_policy(scope:target).ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
+						subtract = "scope:recipient.law_policy(scope:target).ai_policy_resolution_keep_bias(scope:actor|scope:recipient)"
 					}
 				}
 			}

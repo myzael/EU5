@@ -1,5 +1,6 @@
 ﻿treaty_of_tordesillas = {
 	monthly_spawn_chance = 0
+	hint_tag = hint_treaty_of_tordesillas
 
 	can_start = {
 		#Activated by treaty_of_tordesillas.2

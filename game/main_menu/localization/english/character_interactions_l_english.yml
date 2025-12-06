@@ -133,7 +133,7 @@
  pap_reassign_cleric_select_title: "Select Destination [country]"
 
  commission_art: "Commission Art"
- commission_art_concept: "[art|e]"
+ commission_art_concept: "[work_of_art|e]"
  commission_art_act: "$commission_art$"
  commission_art_desc_specific: "[recipient.GetName] starts creating a [work_of_art|e]."
  commission_art_desc: "The [character|e] will create a [work_of_art|e]."

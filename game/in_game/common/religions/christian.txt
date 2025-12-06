@@ -56,7 +56,7 @@ bogomilism = {
 		global_clergy_estate_power = -0.5
 		global_peasants_estate_power = 0.5
 		is_battles_preordained = yes
-		retreat_delay = 10
+		retreat_delay = 20
 		
 		monthly_religious_influence = 0.1
 
@@ -117,7 +117,7 @@ calvinist = {
 		clergy_estate_target_satisfaction = large_permanent_target_satisfaction
 		
 		is_battles_preordained = yes
-		retreat_delay = 10
+		retreat_delay = 20
 
 		global_monthly_art_start_chance = -0.1
 		discipline = 0.05

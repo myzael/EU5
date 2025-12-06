@@ -15,6 +15,7 @@ hre.100 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country
 		save_ruler_regent_as_target_character = yes
+		ruler_or_regent = { save_scope_as = target_emperor }
 	}
 
 	option = {
@@ -50,11 +51,6 @@ hre.101 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		international_organization:hre = {
-			leader_country = {
-				ruler_or_regent = { save_scope_as = target_emperor }
-			}
-		}
 	}
 
 	option = {
@@ -100,16 +96,11 @@ hre.101 = {
 					modifier = left_empire
 				}
 			}
+			remove_country_from_international_organization = root
 		}
 		add_opinion = {
 			target = international_organization:hre.leader_country
 			modifier = united_empire
-		}
-		international_organization:hre = {
-			international_organization_remove_special_status = {
-				type = special_status:elector
-				country = root
-			}
 		}
 	}
 }
@@ -421,6 +412,8 @@ hre.801 = {
 
 	option = {
 		name = hre.801.a
+
+		custom_tooltip = hre_the_emperor_is_dead_tt
 	}
 }
 
@@ -537,7 +530,7 @@ hre.902 = {
 		hidden_effect = {
 			set_variable = {
 				name = imperial_authority_change
-				value = scope:heretic_country.total_population
+				value = "scope:heretic_country.total_population_in_international_organization(international_organization:hre)"
 			}
 			if = {
 				limit = {
@@ -560,6 +553,9 @@ hre.902 = {
 				max = 0.2
 				min = 0.01
 				multiply = -100
+			}
+			international_organization:hre = {
+				leader_country.ruler ?= { save_scope_as = hre_ruler }
 			}
 		}
 	}

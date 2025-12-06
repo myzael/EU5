@@ -12,6 +12,21 @@
 @outliner_icon_size = @outliner_collapsed_width
 @outliner_entry_spacing = 1
 
+@animation_show_duration = 0.25
+@animation_hide_duration = 0.1
+
+template outliner_hide_animation_template {
+	name = _hide_removed
+	bezier = { 1.0 0.0 1.0 0.0 }
+	duration = @animation_show_duration
+}
+
+template outliner_show_animation_template {
+	name = _show_removed
+	bezier = { 0.0 1.0 0.0 1.0 }
+	duration = @animation_hide_duration
+}
+
 types OutlinerTypes
 {
 	type outliner_toggle_button = widget {
@@ -320,16 +335,12 @@ window = {
 					alpha = 0.5
 
 					state = {
-						name = _hide
-						bezier = { 1.0 0.0 1.0 0.0 }
-						duration = 0.25
+						using = outliner_hide_animation_template
 						alpha = 0.0
 					}
 
 					state = {
-						name = _show
-						bezier = { 0.0 1.0 0.0 1.0 }
-						duration = 0.1
+						using = outliner_show_animation_template
 						alpha = 0.5
 					}
 
@@ -353,16 +364,12 @@ window = {
 					parentanchor = right
 
 					state = {
-						name = _hide
-						bezier = { 1.0 0.0 1.0 0.0 }
-						duration = 0.25
+						using = outliner_hide_animation_template
 						position = { @outliner_width 0 }
 					}
 
 					state = {
-						name = _show
-						bezier = { 0.0 1.0 0.0 1.0 }
-						duration = 0.1
+						using = outliner_show_animation_template
 						position = { 0 0 }
 					}
 
@@ -437,16 +444,12 @@ window = {
 					parentanchor = right
 
 					state = {
-						name = _hide
-						bezier = { 1.0 0.0 1.0 0.0 }
-						duration = 0.25
+						using = outliner_hide_animation_template
 						position = { @outliner_width 0 }
 					}
 
 					state = {
-						name = _show
-						bezier = { 0.0 1.0 0.0 1.0 }
-						duration = 0.1
+						using = outliner_show_animation_template
 						position = { 0 0 }
 					}
 
@@ -507,16 +510,12 @@ window = {
 						parentanchor = right
 
 						state = {
-							name = _hide
-							bezier = { 1.0 0.0 1.0 0.0 }
-							duration = 0.25
+							using = outliner_hide_animation_template
 							position = { @[outliner_width * 0.885] 0 }
 						}
 
 						state = {
-							name = _show
-							bezier = { 0.0 1.0 0.0 1.0 }
-							duration = 0.1
+							using = outliner_show_animation_template
 							position = { 0 0 }
 						}
 
@@ -1109,16 +1108,12 @@ window = {
 						parentanchor = right
 
 						state = {
-							name = _hide
-							bezier = { 1.0 0.0 1.0 0.0 }
-							duration = 0.25
+							using = outliner_hide_animation_template
 							position = { @outliner_width 0 }
 						}
 
 						state = {
-							name = _show
-							bezier = { 0.0 1.0 0.0 1.0 }
-							duration = 0.1
+							using = outliner_show_animation_template
 							position = { 0 0 }
 						}
 
@@ -1200,13 +1195,11 @@ window = {
 					size = { -1 240 }
 
 					state = {
-						name = _hide
-						duration = 0.25
+						using = outliner_hide_animation_template
 					}
 				
 					state = {
-						name = _show
-						duration = 0.1
+						using = outliner_show_animation_template
 					}
 				}
 			}

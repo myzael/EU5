@@ -404,7 +404,7 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 		c:POL = {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = root
+				target = c:HAL
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
@@ -455,15 +455,19 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 		name = flavor_vol.1001.a
 
 		show_as_tooltip = {
-			add_casus_belli = {
-				type = casus_belli:cb_claim_throne
-				target = scope:target_country
-				years = 20
+			c:LIT = {
+				add_casus_belli = {
+					type = casus_belli:cb_claim_throne
+					target = c:VOL
+					years = 20
+				}
 			}
-			add_casus_belli = {
-				type = casus_belli:cb_claim_throne
-				target = scope:target_country_2
-				years = 20
+			c:POL = {
+				add_casus_belli = {
+					type = casus_belli:cb_claim_throne
+					target = c:HAL
+					years = 20
+				}
 			}
 		}
 	}

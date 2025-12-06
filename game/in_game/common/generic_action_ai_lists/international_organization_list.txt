@@ -13,5 +13,6 @@
 		change_organization_parliament_type
 		leave_international_organization
 		vote_in_organization_parliament
+		overrule_imperial_diet
 	}
 }

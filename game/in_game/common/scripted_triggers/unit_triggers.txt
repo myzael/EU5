@@ -8,7 +8,7 @@
 
 unit_caterans_pop_trigger = {
 	culture = { 
-		# irish
+		# scottish gaelic
 		has_culture_group = culture_group:scottish_group
 		has_culture_group = culture_group:celtic_group
 	}

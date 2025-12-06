@@ -34,6 +34,7 @@ toll_castle = {
 		local_nobles_food_consumption = 1.0
 	}
 	
+	graphical_tags = { small_military }
 }
 
 nobility_fortifications = {
@@ -69,6 +70,7 @@ nobility_fortifications = {
 		local_nobles_desired_pop = 0.01
 		local_defensive = 0.25
 	}
+	graphical_tags = { small_military }
 	
 }
 
@@ -362,7 +364,7 @@ spiritual_retreat = {
 
 	build_time = estate_build_time
 	
-	graphical_tags = { medium_religious }
+	graphical_tags = { small_religious }
 
 	
 	estate = clergy_estate	

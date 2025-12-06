@@ -456,6 +456,31 @@ lateralview = {
 									using = DisciplineTooltip
 								}
 							}
+							
+								icon_text_2rows = {
+								blockoverride "icon_setup" {
+									texture = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds"
+									glow = {
+										name = "drop_shadow"
+										glow_radius = 3
+										color = {0.0 0.0 0.0 1.0}
+										alpha = 0.3
+									}
+								}
+								blockoverride "top_text_setup" {
+									text = "game_concept_levy_combat_efficiency"
+									default_format = "#explanation_link_overview"
+								}
+								blockoverride "bottom_text_setup" {
+									text = "[Player.GetModifierValueNoFormat('levy_combat_efficiency_modifier')]"
+								}
+								
+								datacontext = "[Player]"
+								tooltipwidget = {
+									using = LevyCombatEfficiencyTooltip
+								}
+								
+							}
 
 							icon_text_2rows = {
 								# blockoverride "background_animation"{
@@ -488,6 +513,8 @@ lateralview = {
 									using = MilitaryTacticsTooltip
 								}
 							}
+							
+						
 						}
 
 						expand = {}
@@ -652,7 +679,7 @@ lateralview = {
 								blockoverride "text_bottom" {
 									autoresize = yes
 									maximumsize = { 100 15 }
-									raw_text = "[UnitOverview.GetArmyLeviesStrength] #G +[UnitOverview.GetArmyLeviesInProgress]#! / [Player.GetArmyLevyPower]"
+									raw_text = "[UnitOverview.GetArmyLeviesStrength] #G +[UnitOverview.GetArmyLeviesInProgress]#! / [Player.GetArmyLevyPotentialStrength]"
 								}
 
 								tooltipwidget = {
@@ -984,7 +1011,7 @@ lateralview = {
 
 						expand = {}
 					}
-
+	
 					hbox = {
 						layoutpolicy_horizontal = expanding
 						layoutstretchfactor_horizontal = 2
@@ -992,6 +1019,8 @@ lateralview = {
 						expand = {}
 						datacontext = "[Player]"
 						fort_limit_right_info = {}
+						
+						
 					}
 				}
 
@@ -1259,6 +1288,7 @@ lateralview = {
 								blockoverride "text_top" {
 									text = "LEVIES_BUTTON"
 									fontsize = 13
+									maximumsize = { 120 15 }
 								}
 
 								blockoverride "text_bottom" {
@@ -1302,6 +1332,7 @@ lateralview = {
 								blockoverride "text_top" {
 									text = "RECRUIT_S_BUTTON"
 									fontsize = 13
+									maximumsize = { 120 15 }
 								}
 
 								blockoverride "text_bottom" {
@@ -1354,6 +1385,7 @@ lateralview = {
 								blockoverride "text_top" {
 									text = "hire_mercenary_label"
 									fontsize = 13
+									maximumsize = { 120 15 }
 								}
 
 								blockoverride "text_bottom" {
@@ -1727,7 +1759,7 @@ types UnitOverviewTypes
 							
 							tooltipwidget = {
 								SimpleContextualStringPairTooltipType = {
-									lowpriotextcontext =   "[SingleUnitWindow.GetSelectedUnit.GetAttritionTooltip]"
+									lowpriotextcontext = "[Unit.GetAttritionTooltip]"
 									blockoverride "title_icon" {
 										icon = {
 											using = tooltip_title_icon_size
@@ -2940,7 +2972,7 @@ types UnitOverviewTypes
 						visible = "[UnitActionItem.HasSingleLeftAction]"
 						title = "[UnitActionItem.GetName]"
 						on_action = "[UnitActionItem.SingleLeftClick]"
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
 						enabled = "[UnitActionItem.CanSingleLeftClick]"
 						description = "[UnitActionItem.GetLeftClickDescription]"
 					}

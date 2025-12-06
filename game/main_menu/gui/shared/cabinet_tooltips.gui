@@ -266,7 +266,8 @@ template action_progress_tooltip {
 			TooltipContentSection = {
 				datamodel = "[Cabinet.GetActionProgressTooltipSections]"
 				item = {
-					TooltipBlockList = {
+					TooltipScrolledBlockList = {
+						blockoverride "block_scrollarea" { maximumsize = { -1 450 }}
 						textcontext = "[CabinetActionProgressTooltipSection.GetString]"
 					}
 				}

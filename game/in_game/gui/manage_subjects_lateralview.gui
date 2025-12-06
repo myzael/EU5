@@ -599,7 +599,7 @@ template subjects_header_content {
 		click_type = left
 		click_mode = single
 		title = "[Select_CString(SubjectItem.GetEnabled, SubjectItem.GetTooltip, Localize('NO_POSSIBLE_SUBJECT_TYPES_ACTION_TT_TITLE'))]"
-		conditions = "[MakeItFailIfLoc(Not(SubjectItem.GetEnabled), SubjectItem.GetTooltip)]"
+		conditions = "[MakeItFailIf(Not(SubjectItem.GetEnabled), SubjectItem.GetTooltip)]"
 		on_action = "[SubjectItem.OnClick]"
 		enabled = "[SubjectItem.GetEnabled]"
 	}					

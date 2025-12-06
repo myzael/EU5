@@ -7,6 +7,7 @@
 		start_a_treasure_voyage
 		conduct_keju_examination
 		proclaim_decree
+		exempt_from_tribute
 	}
 }
 

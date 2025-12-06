@@ -15,7 +15,7 @@ dominion = { # like a personal union except the subject has much less power
 	}
 	has_overlords_ruler = yes
 	annexation_speed = 1
-	annexation_min_years_before = 100
+	annexation_min_years_before = 50
 	annexation_min_opinion = 150
 	annexation_stall_opinion = 125
 	subject_can_cancel = no

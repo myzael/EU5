@@ -248,6 +248,7 @@ scripted_trigger is_port_valid_for_stay = {
 			this = scope:expedition_initiator
 			is_subject_or_below_of = scope:expedition_initiator
 		}
+		in_civil_war = no #To avoid weird things happening
 	}
 	# No location in province definition has been visited before
 	NOT = {
@@ -266,6 +267,24 @@ scripted_trigger is_port_valid_for_stay = {
 		is_capital = yes
 		location_rank = location_rank:town
 		location_rank = location_rank:city
+	}
+}
+
+# Script effects for setting the variables to the visited country when visiting
+scripted_effect set_visiting_variables = {
+	if = {
+		limit = {
+			NOT = { has_variable = visited_by_expedition }
+		}
+		set_variable = { name = visited_by_expedition years = 50 } #Giving it time limit in case the port changes hands before the expedition returns and the variable is not able to be cleared at the end
+	}
+	set_variable = {
+		name = chinese_expedition_opinion
+		value = 0
+	}
+	set_variable = {
+		name = being_visited_by_expedition_from
+		value = scope:expedition_initiator
 	}
 }
 
@@ -446,6 +465,18 @@ scripted_effect visitation_event_pulse = {
 			set_variable = {
 				name = visitation_event_count  
 				value = 0
+			}
+
+			#Reset the visiting variables in case something weird has happened
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_variable = visited_by_expedition }
+						NOT = { has_variable = chinese_expedition_opinion }
+						NOT = { has_variable = being_visited_by_expedition_from }
+					}
+				}
+				set_visiting_variables = yes
 			}
 		}
 
@@ -691,9 +722,8 @@ flavor_chi.2000 = {
 	}
 
 	trigger = {
-		always = no	#disabled for 1.0
-		#is_leader_of_international_organization = international_organization:middle_kingdom	
-		#character:chi_zheng_he ?= { owner ?= root }
+		is_leader_of_international_organization = international_organization:middle_kingdom	
+		character:chi_zheng_he ?= { owner ?= root }
 	}
 
 	immediate = {
@@ -894,9 +924,29 @@ flavor_chi.2003 = {
 	hidden = yes
 
 	immediate = {
-		set_variable = {
-			name = chinese_treasure_fleet_location
-			value = scope:next_tile
+		if = {
+			limit = { exists = scope:next_tile }
+			set_variable = {
+				name = chinese_treasure_fleet_location
+				value = scope:next_tile
+			}
+		}
+		else_if = { # Failsafe for if the next_tile scope fails to pass when visited country is annexed
+			limit = {
+				has_variable = chinese_treasure_fleet_location
+				var:chinese_treasure_fleet_location = {
+					has_variable = chinese_expedition_route_deviation_return
+				}
+			}
+			var:chinese_treasure_fleet_location = {
+				var:chinese_expedition_route_deviation_return = {
+					save_scope_as = next_tile
+				}
+			}
+			set_variable = {
+				name = chinese_treasure_fleet_location
+				value = scope:next_tile
+			}
 		}
 
 		on_chinese_expedition_location_move = yes
@@ -932,15 +982,7 @@ flavor_chi.2004 = {
 		}
 		
 		chinese_expedition_calculate_gift_for_this = yes
-		set_variable = { name = visited_by_expedition years = 50 } #Giving it time limit in case the port changes hands before the expedition returns and the variable is not able to be cleared at the end
-		set_variable = {
-			name = chinese_expedition_opinion
-			value = 0
-		}
-		set_variable = {
-			name = being_visited_by_expedition_from
-			value = scope:expedition_initiator
-		}
+		set_visiting_variables = yes
 	}
 
 	illustration_tags = {
@@ -2464,10 +2506,23 @@ flavor_chi.2206 = {
 			}
 		}
 		
-		ordered_army = {
-			order_by = "unit_location.distance_to(scope:expedition_initiator.var:chinese_treasure_fleet_location)"
-			max = 1
-			save_scope_as = target_unit
+		if = {
+			limit = {
+				exists = scope:expedition_initiator
+				scope:expedition_initiator = {
+					has_variable = chinese_treasure_fleet_location
+				}
+			}
+			ordered_army = {
+				order_by = "unit_location.distance_to(scope:expedition_initiator.var:chinese_treasure_fleet_location)"
+				max = 1
+				save_scope_as = target_unit
+			}
+		}
+		else = {
+			random_army = {
+				save_scope_as = target_unit
+			}
 		}
 	}
 
@@ -2559,18 +2614,28 @@ flavor_chi.2207 = {
 
 	option = {
 		name = flavor_chi.2207.a
-		
-		create_mercenary = {
-			name = chi_sailor_company
-			home = scope:expedition_initiator.var:chinese_treasure_fleet_location
-			categories = {
-				army_infantry = 5
+		if = {
+			limit = {
+				exists = scope:expedition_initiator
+				scope:expedition_initiator = {
+					has_variable = chinese_treasure_fleet_location
+				}
 			}
-			cost_multiplier = 0.5
-			save_scope_as = target_mercenary
-		}
+			create_mercenary = {
+				name = chi_sailor_company
+				home = scope:expedition_initiator.var:chinese_treasure_fleet_location
+				categories = {
+					army_infantry = 5
+				}
+				cost_multiplier = 0.5
+				save_scope_as = target_mercenary
+			}
 
-		hire_mercenary = scope:target_mercenary
+			hire_mercenary = scope:target_mercenary
+		}
+		else = {
+			add_yearly_manpower = 1
+		}
 
 
 		scope:target_country = {
@@ -2840,14 +2905,31 @@ flavor_chi.2211 = {
 
 	option = {
 		name = flavor_chi.2211.a
-		
-		add_migration = {
-			owner = ROOT
-			from = scope:expedition_initiator.province_definition
-			to = scope:expedition_initiator.var:chinese_treasure_fleet_location.province_definition
-			type = pop_type:burghers
-			amount = { 0.001 0.005 }
-			months = 12
+		if = {
+			limit = {
+				exists = scope:expedition_initiator
+				scope:expedition_initiator = {
+					has_variable = chinese_treasure_fleet_location
+					this != var:chinese_treasure_fleet_location.province_definition
+				}
+			}
+			add_migration = {
+				owner = ROOT
+				from = scope:expedition_initiator.province_definition
+				to = scope:expedition_initiator.var:chinese_treasure_fleet_location.province_definition
+				type = pop_type:burghers
+				amount = { 0.001 0.005 }
+				months = 12
+			}
+		}
+		else_if = {
+			limit = { exists = scope:expedition_initiator }
+			random_pop = {
+				limit = { pop_type = pop_type:burghers }
+				add_pop_size = {
+					value = 0.3
+				}
+			}
 		}
 	}
 	
@@ -3071,7 +3153,7 @@ flavor_chi.2215 = {
 	desc = flavor_chi.2215.desc
 
 	trigger = {
-		scope:expedition_initiator = {
+		scope:expedition_initiator ?= {
 			has_variable_list = potential_enemy_list
 		}
 		any_neighbor_country = {

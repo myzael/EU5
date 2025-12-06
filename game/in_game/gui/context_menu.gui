@@ -448,7 +448,7 @@
 						title = "[UnitActionItem.GetName]"
 						visible = "[UnitActionItem.HasHoldLeftAction]"
 						on_action = "[UnitActionItem.HoldLeftClick]"
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 						enabled = "[UnitActionItem.CanHoldLeftClick]"
 						description = "[UnitActionItem.GetLeftClickDescription]"
 					}
@@ -456,7 +456,7 @@
 					action_tooltip = {
 						click_type = right
 						click_mode = confirm
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 						visible = "[UnitActionItem.HasHoldRightAction]"
 						title = "[UnitActionItem.GetSecondaryName]"
 						on_action = "[UnitActionItem.HoldRightClick]"
@@ -469,7 +469,7 @@
 						title = "[UnitActionItem.GetName]"
 						on_action = "[UnitActionItem.SingleLeftClick]"
 						enabled = "[UnitActionItem.CanSingleLeftClick]"
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
 						description = "[UnitActionItem.GetLeftClickDescription]"
 					}
 
@@ -502,7 +502,7 @@
 								title = "[UnitActionItem.GetName]"
 								visible = "[UnitActionItem.HasHoldLeftAction]"
 								on_action = "[UnitActionItem.HoldLeftClick]"
-								conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+								conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 								enabled = "[UnitActionItem.CanHoldLeftClick]"
 								description = "[UnitActionItem.GetLeftClickDescription]"
 							}
@@ -510,7 +510,7 @@
 							action_tooltip = {
 								click_type = right
 								click_mode = confirm
-								conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+								conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 								visible = "[UnitActionItem.HasHoldRightAction]"
 								title = "[UnitActionItem.GetSecondaryName]"
 								on_action = "[UnitActionItem.HoldRightClick]"
@@ -523,7 +523,7 @@
 								title = "[UnitActionItem.GetName]"
 								on_action = "[UnitActionItem.SingleLeftClick]"
 								enabled = "[UnitActionItem.CanSingleLeftClick]"
-								conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
+								conditions = "[MakeItFailIf(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
 								description = "[UnitActionItem.GetLeftClickDescription]"
 							}
 
@@ -556,7 +556,7 @@
 						title = "[UnitActionItem.GetName]"
 						visible = "[UnitActionItem.HasHoldLeftAction]"
 						on_action = "[UnitActionItem.HoldLeftClick]"
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 						enabled = "[UnitActionItem.CanHoldLeftClick]"
 						description = "[UnitActionItem.GetLeftClickDescription]"
 					}
@@ -564,7 +564,7 @@
 					action_tooltip = {
 						click_type = right
 						click_mode = confirm
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanHoldLeftClick), UnitActionItem.GetTooltip)]"
 						visible = "[UnitActionItem.HasHoldRightAction]"
 						title = "[UnitActionItem.GetSecondaryName]"
 						on_action = "[UnitActionItem.HoldRightClick]"
@@ -577,7 +577,7 @@
 						title = "[UnitActionItem.GetName]"
 						on_action = "[UnitActionItem.SingleLeftClick]"
 						enabled = "[UnitActionItem.CanSingleLeftClick]"
-						conditions = "[MakeItFailIfLoc(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
+						conditions = "[MakeItFailIf(Not(UnitActionItem.CanSingleLeftClick), UnitActionItem.GetTooltip)]"
 						description = "[UnitActionItem.GetLeftClickDescription]"
 					}
 

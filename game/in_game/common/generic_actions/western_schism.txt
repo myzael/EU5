@@ -95,7 +95,6 @@
 	}
 
 	ai_will_do = {
-		add = -20
 		if = {
 			limit = {
 				exists = scope:target
@@ -114,6 +113,7 @@
 				situation:western_schism.var:schism_opponent_country = {
 					subtract = { value = scope:actor.this_opinion_of_prev }
 				}
+				add = -20
 			}
 			else = {
 				c:PAP = {
@@ -122,6 +122,7 @@
 				situation:western_schism.var:schism_opponent_country = {
 					add = { value = scope:actor.this_opinion_of_prev }
 				}
+				add = -20
 			}
 			if = {
 				limit = { 

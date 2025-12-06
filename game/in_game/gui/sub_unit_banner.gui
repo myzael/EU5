@@ -605,6 +605,7 @@ types SubUnitHelpers {
 
 		vbox = {
 			hbox = {
+				datacontext = "[SubUnit]"
 				layoutpolicy_horizontal = expanding
 				margin = {3 0}
 				margin_top = 4

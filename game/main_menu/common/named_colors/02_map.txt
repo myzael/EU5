@@ -2456,6 +2456,7 @@ colors = {
 	map_ZLD = rgb { 10 150 150 }
 	map_HZH = rgb { 190 190 140 }
 	map_XSY = rgb { 75 60 160 }
+	map_LNG = rgb { 175 115 45 }
 	map_CDL = rgb { 245 245 220 }
 	map_CHH = rgb { 235 220 60 }
 	map_sherpa = rgb { 165 180 200 }

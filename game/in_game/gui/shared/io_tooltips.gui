@@ -547,20 +547,23 @@ template Resolution_tooltip {
 		blockoverride "title_text" {
 			text = "[Resolution.GetNameWithNoTooltip]"
 		}
+		blockoverride "title_icon" {
+			icon = {
+				using = tooltip_title_icon_size
+				texture = "gfx/interface/icons/alerts_icons/active_io_resolution.dds"
+			}
+		}
 
 		blockoverride "concept_link" {
 			text = [resolution|E]
 		}
 		blockoverride "tooltip_content" {
-			TooltipTextBlock = {
-				blockoverride "text" {
-					text = "[Resolution.GetBasicTooltip]"
-				}
+			TooltipConditionList = {
+				textcontext = "[Resolution.GetBasicTooltip]"
 			}
-			TooltipTextBlock = {
-				blockoverride "text" {
-					text = "[Resolution.GetSuccessEffect]"
-				}
+			TooltipConditionList = {
+				visible = "[Not(StringIsEmpty(Resolution.GetSuccessEffect))]"
+				textcontext = "[Resolution.GetSuccessEffect]"
 			}
 		}
 	}

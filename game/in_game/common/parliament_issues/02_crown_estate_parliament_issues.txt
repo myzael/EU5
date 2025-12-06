@@ -471,6 +471,7 @@ increase_our_control = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:counting_house }
 				OR = {

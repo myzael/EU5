@@ -254,6 +254,458 @@ war_manager = {
 			}
 		}
 	}
+	
+	war = {
+		war_name={
+			name="UNIFY_ILKHANATE_WAR_NAME"
+			ordinal=1
+			first = {
+				name="HLG"
+			}
+			SECOND = {
+				name="JAL"
+			}
+		}
+		
+		superiority = {
+			type = unify_ilkhanate_wargoal
+			casus_belli = cb_unify_ilkahante
+		}
+		
+		start_date = 1336.7.24
+		action = 1337.3.1
+		attacker = {
+			country = HLG #Huleguids
+			request = {
+				reason = Instigator
+			}
+		}
+
+		attacker = {
+			country = HLL #Hillah
+			request = {
+				caller = HLG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = GRG #Gurgan
+			request = {
+				caller = HLG
+				reason = Scripted
+				which = alliance
+			}
+		}
+
+		attacker = {
+			country = ASR #Astarad
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = HDN #Hamedan
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = JKR #Jauni Kurban
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = KHT #Kuhistan
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = KSA #Kashan
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = MZN #Tabaristan
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = QOM #Qom
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = SBZ #Sabzevar
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = SFR #Esfarayan
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = KRT #Kartids
+			request = {
+				caller = GRG
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = KHF #Khaf
+			request = {
+				caller = KRT
+				reason = Subject
+			}
+		}
+
+		attacker = {
+			country = MRV #Merv
+			request = {
+				caller = KRT
+				reason = Subject
+			}
+		}
+
+		defender = {
+			country = JAL #Jalayirids
+			request = {
+				reason = Target
+			}
+		}
+		
+		defender = {
+			country = ARD #Ardalan
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = ATZ #Artaz
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = DML #Domboli
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HBN #Hasbani
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HDR #Hadhur
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HNY #Hasnuya
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = IHB #Ispahad
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KEL #Kelali
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KKL #Khalkhal
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KLR #Kalhor
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KRI #Kurani
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KTW #Kartawi
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = MKW #Merkewan
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = RKL #Rankali
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = SLI #Sabuli
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = SYY #Saqiyya
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = ZBR #Zebari
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = ERE #Eretnids
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = BFR #Bafra
+			request = {
+				caller = ERE
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HCI #Haciemirids
+			request = {
+				caller = ERE
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = KBD #Kubadids
+			request = {
+				caller = ERE
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = TDJ #Tacettinids
+			request = {
+				caller = ERE
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = SUT #Sutayids
+			request = {
+				caller = JAL
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = BHT #Bohtan
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = BIN #Çapakçur
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = BIT #Bitlis
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = CEM #Çemişgezek
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = DIL #Dilmaçids
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = DMB #Domboli-Bosht
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = DSN #Dasni
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = EGL #Egil
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HKK #Hakkari
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = HZR #Hazro
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = JLM #Jolemark
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = MZJ #Mazenjani
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = SOH #Sohri
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = ZRQ #Zirqan
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+		
+		defender = {
+			country = ZZR #Zerzari
+			request = {
+				caller = SUT
+				reason = Subject
+			}
+		}
+	}
+
 	truce = { #Polish-Teutonic War of 1326-1332
 		#Teutons and Vassals
 		attacker = TEU

@@ -349,24 +349,6 @@ mesh_list = {
 
 mesh_list = 
 {
-	name = "haga_sofia_meshes"
-	scale_settings_large = { bias = 0 min = 1 max = 1 }
-	should_spawn_flags = no
-	
-	test_cube_mesh = 1
-}
-
-mesh_list = 
-{
-	name = "haga_sofia_mosque_meshes"
-	scale_settings_large = { bias = 0 min = 1 max = 1 }
-	should_spawn_flags = no
-	
-	test_cube_mesh = 1
-}
-
-mesh_list = 
-{
 	name = "building_unique_sitges_church_mesh"
 	scale_settings_large = { bias = 0 min = 1 max = 1 }
 	should_spawn_flags = no

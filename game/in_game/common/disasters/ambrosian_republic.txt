@@ -37,10 +37,10 @@
 	}
 	
 	on_start = {
-		trigger_event_non_silently = flavor_mlo.1
+		trigger_event_non_silently = ambrosian_republic_disaster.10
 	}
 	on_end = {
-		trigger_event_non_silently = ambrosian_republic.1
+		trigger_event_non_silently = ambrosian_republic_disaster.1
 	}
 	
 	on_monthly = {
@@ -51,9 +51,9 @@
 		}
 		hidden_effect = {
 			random_list = {
-				2 = { trigger_event_silently =  flavor_mlo.2 }
-				2 = { trigger_event_silently =  flavor_mlo.31 }
-				2 = { trigger_event_silently =  ambrosian_republic.5 }
+				2 = { trigger_event_silently =  ambrosian_republic_disaster.20 }
+				2 = { trigger_event_silently =  ambrosian_republic_disaster.31 }
+				2 = { trigger_event_silently =  ambrosian_republic_disaster.5 }
 				95 = { }
 			}
 		}

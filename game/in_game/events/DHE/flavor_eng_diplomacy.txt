@@ -1613,7 +1613,7 @@ flavor_eng_diplomacy.1500 = {
 	dynamic_historical_event = {
 		tag = ENG
         tag = GBR
-		from = 1372.1.1
+		from = 1337.1.1
 		to = 1500.1.1
 		monthly_chance = 5
 	}

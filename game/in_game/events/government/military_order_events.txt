@@ -80,7 +80,15 @@ military_order_events.2 = {
 	}
 
 	option = {
-		name = military_order_events.2.a #Ask for Infrastructure help
+		name = military_order_events.2.a #Accept the Order's request
+
+		ai_will_select = {
+			value = 1
+			add = {
+				value = gold
+				divide = monthly_income_trade_and_tax
+			}
+		}
 
 		change_gold_effect = { scale = -1 }
 		if = {
@@ -92,9 +100,13 @@ military_order_events.2 = {
 	}
 
 	option = {
-		name = military_order_events.2.b #Ask for Levies or troops
+		name = military_order_events.2.b #Decline the Order's request
 
-		add_government_power = government_power_extreme_penalty
+		ai_will_select = {
+			value = 1
+		}
+
+		add_government_power = government_power_mild_penalty
 		if = {
 			limit = { exists = scope:target_order }
 			scope:target_order = {
@@ -382,9 +394,7 @@ military_order_events.9 = { #The Banners of KOJremer
 		owns = location:damascus
 		religion = religion:catholic
 		has_reform = government_reform:military_order_reform
-		c:KOJ = {
-			exists = no 
-		}
+		NOT = { country_exists = c:KOJ }
 	}
 
 	illustration_tags = {

@@ -13,12 +13,15 @@ brothers_in_arms = {
 
 	happened = {
 		any_current_war = {
-			root = { NOT = { is_war_leader_of = prev } }
-		}
-		any_country_together_in_war_with = {
-			war_score_in_war = {
-				war = prev
-				value > 90
+			save_temporary_scope_as = target_war
+			root = {
+				NOT = { is_war_leader_of = scope:target_war }
+				any_country_together_in_war_with = {
+					war_score_in_war = {
+						war = scope:target_war
+						value >= 90
+					}
+				}
 			}
 		}
 	}
@@ -132,7 +135,7 @@ here_i_stand = {
 #Achievements Easy
 
 rule_britannia = {
-	possible = { tag = ENG }
+	possible = { has_or_had_tag = ENG }
 
 	happened = {
 		tag = GBR
@@ -141,7 +144,7 @@ rule_britannia = {
 }
 
 plus_ultra = {
-	possible = { tag = CAS }
+	possible = { has_or_had_tag = CAS }
 
 	happened = {
 		OR = {
@@ -157,7 +160,7 @@ plus_ultra = {
 }
 
 city_of_mans_desire = {
-	possible = { tag = TUR }
+	possible = { has_or_had_tag = TUR }
 
 	happened = {
 		owns = location:constantinople
@@ -278,7 +281,7 @@ crusader_kings = {
 }
 
 lingua_franca = {
-	possible = { tag = FRA }
+	possible = { has_or_had_tag = FRA }
 
 	happened = { is_hegemon_type = hegemony:cultural_hegemon }
 }
@@ -286,36 +289,36 @@ lingua_franca = {
 break_the_yoke = {
 	possible = {
 		OR = {
-			tag = MOS
-			tag = BLO
-			tag = DMI
-			tag = GLM
-			tag = KCH
-			tag = KOS
-			tag = MRM
-			tag = NSL
-			tag = NZH
-			tag = RSO
-			tag = RYA
-			tag = SKY
-			tag = SMO
-			tag = TRS
-			tag = TVE
-			tag = YAR
-			tag = YRV
-			tag = FMB
-			tag = GRS
-			tag = KAS
-			tag = KLN
-			tag = KZK
-			tag = MOG
-			tag = MSV
-			tag = PRK
-			tag = SZL
-			tag = UGL
-			tag = VLR
-			tag = VYA
-			tag = ZUB
+			has_or_had_tag = MOS
+			has_or_had_tag = BLO
+			has_or_had_tag = DMI
+			has_or_had_tag = GLM
+			has_or_had_tag = KCH
+			has_or_had_tag = KOS
+			has_or_had_tag = MRM
+			has_or_had_tag = NSL
+			has_or_had_tag = NZH
+			has_or_had_tag = RSO
+			has_or_had_tag = RYA
+			has_or_had_tag = SKY
+			has_or_had_tag = SMO
+			has_or_had_tag = TRS
+			has_or_had_tag = TVE
+			has_or_had_tag = YAR
+			has_or_had_tag = YRV
+			has_or_had_tag = FMB
+			has_or_had_tag = GRS
+			has_or_had_tag = KAS
+			has_or_had_tag = KLN
+			has_or_had_tag = KZK
+			has_or_had_tag = MOG
+			has_or_had_tag = MSV
+			has_or_had_tag = PRK
+			has_or_had_tag = SZL
+			has_or_had_tag = UGL
+			has_or_had_tag = VLR
+			has_or_had_tag = VYA
+			has_or_had_tag = ZUB
 		}
 	}
 
@@ -327,7 +330,7 @@ break_the_yoke = {
 }
 
 felix_austria = {
-	possible = { tag = HAB }
+	possible = { has_or_had_tag = HAB }
 
 	happened = {
 		international_organization:hre.leader_country = root
@@ -336,7 +339,7 @@ felix_austria = {
 }
 
 hongwu_di = {
-	possible = { tag = CHI }
+	possible = { has_or_had_tag = CHI }
 
 	happened = {
 		international_organization:middle_kingdom.leader_country = root
@@ -359,7 +362,7 @@ hongwu_di = {
 				top_owner ?= root 
 			}
 		}
-		region:south_china_region = {
+		region:east_china_region = {
 			any_ownable_location_in_region = {
 				percent = 1
 				top_owner ?= root 
@@ -398,7 +401,7 @@ three_mountains = {
 }
 
 doge_coins = {
-	possible = { tag = VEN }
+	possible = { has_or_had_tag = VEN }
 
 	happened = { is_hegemon_type = hegemony:economic_hegemon }
 }
@@ -413,7 +416,7 @@ je_maintiendrai = {
 
 lion_of_the_north = {
 	possible = {
-		tag = SWE
+		has_or_had_tag = SWE
 	}
 
 	happened = {
@@ -426,7 +429,7 @@ lion_of_the_north = {
 }
 
 the_navigator = {
-	possible = { tag = POR }
+	possible = { has_or_had_tag = POR }
 
 	happened = {
 		has_presence_in = continent:africa
@@ -443,7 +446,7 @@ the_navigator = {
 }
 
 house_of_hus = {
-	possible = { tag = BOH }
+	possible = { has_or_had_tag = BOH }
 
 	happened = {
 		religion = religion:hussite
@@ -521,7 +524,7 @@ welfare_state = {
 
 	happened = {
 		any_market_present_in_country = {
-			market_max_food > 20000
+			market_max_food > 60000
 			market_food_percentage > 0.99
 		}
 	}

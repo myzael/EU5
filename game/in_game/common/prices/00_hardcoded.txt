@@ -760,6 +760,11 @@ proclaim_decree = {
 	stability = 10
 }
 
+exempt_from_tribute = {
+	legitimacy = 30
+	prestige = 50
+}
+
 rtr_grant_titles_price = {
 	legitimacy = 5
 }
@@ -797,7 +802,7 @@ create_italian_league_price = {
 }
 
 plan_italian_campaign_wars_price = {
-	scaled_gold = 4
+	scaled_gold = 2
 }
 
 attract_condottieri_price = {
@@ -893,7 +898,11 @@ claim_shugo_office = {
 }
 
 rto_press_claims_price = {
-	scaled_gold = 3
+	scaled_gold = 2
+}
+
+rto_create_uc_bey = {
+	gold = 100
 }
 
 succession_crisis_price = {

@@ -126,6 +126,8 @@ location_scene = {
 		pdxmesh = "location12_mesh"
 		list = "fortifications"
 		uv_random_seed = 39489
+		uv_random_min = 0.4
+		uv_random_max = 0.67
 	}
 	
 	ecs_illustration_image = {
@@ -133,7 +135,9 @@ location_scene = {
 		name = "illustration_override"
 		pdxmesh = "location13_mesh"
 		list = "factories"
-		uv_random_seed = 39487
+		uv_random_seed = 39488
+		uv_random_min = 0.36
+		uv_random_max = 0.68
 	}
 	
 	ecs_illustration_image = {
@@ -142,6 +146,8 @@ location_scene = {
 		pdxmesh = "location14_mesh"
 		list = "religious_buildings"
 		uv_random_seed = 39487
+		uv_random_min = 0.38
+		uv_random_max = 0.67
 	}
 	
 	

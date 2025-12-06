@@ -497,6 +497,11 @@ lateralview = {
 																	TooltipStringPairList = { 
 																		textcontext = "[GoodsDetailsLateralView.GetPopsNeedingInfo(PopType.Self)]"
 																	}
+																	
+																	TooltipStringPairList = { 
+																		textcontext = "[GoodsDetailsLateralView.GetGoods.GetPopsDemandInfo]"
+																	}
+																	
 																}
 															}
 														}

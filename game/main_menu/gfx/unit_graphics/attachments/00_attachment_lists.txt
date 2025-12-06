@@ -22,6 +22,11 @@ heavy_tag:torsos = {
 	10 = heavy_torsos_clothes
 }
 
+crusader_tag:torsos = {
+	10 = crusader_clothes
+}
+
+
 
 
 

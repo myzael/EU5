@@ -77,6 +77,12 @@ wheat = {
 	demand_multiply = {
 		upper = 2
 	}
+	
+	wealth_impact_threshold = {
+		peasants = 1.0
+		laborers = 1.0
+	}
+
 
 	custom_tags = { old_world_goods }
 }
@@ -197,6 +203,12 @@ livestock = {
 		 burghers = 5
 	}
 	
+	wealth_impact_threshold = {
+		peasants = 1.0
+		laborers = 1.0
+	}
+
+	
 	custom_tags = { old_world_goods }
 }
 
@@ -254,6 +266,12 @@ beeswax = {
 	demand_multiply = {
 		upper = 2
 	}
+	
+	wealth_impact_threshold = {
+		peasants = 1.1
+		laborers = 1.1
+	}
+
 
 	
 }

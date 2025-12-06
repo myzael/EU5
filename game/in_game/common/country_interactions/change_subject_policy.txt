@@ -62,7 +62,15 @@
 
 	effect = {
 		scope:recipient = {	
-			add_policy = scope:target
+			if = {
+				limit = { exists = scope:target }
+				add_policy = scope:target
+			}
+			else = {
+				custom_tooltip = {
+					text = change_subject_policy_of_our_choice_tt
+				}
+			}
 			add_country_modifier = {
 				modifier = forced_us_to_use_their_policy
 				years = 50

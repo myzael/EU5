@@ -292,6 +292,7 @@ scripted_trigger valid_female_of_ruler_dynasty = {
 	is_married = no
 	is_heir = no
 	is_ruler =  no
+	modifier:blocked_from_marriage = no
 }
 
 scripted_trigger valid_dynasty_head = {

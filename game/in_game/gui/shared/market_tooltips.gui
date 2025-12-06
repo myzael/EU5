@@ -940,10 +940,10 @@ template SpecificGoodsFromMarketContent {
 						parentanchor = center
 						size = { 5 22 }
 						using = progress_bar_green_alt
-						value = "[FixedPointToFloat(GoodsMarketEntry.GetStockpile)]"
 						min = 0
 						max = "[FixedPointToFloat(Market.GetCenterLocation.GetModifierValueFixed('maximum_stockpile_capacity'))]"
 						direction = vertical
+						value = "[FixedPointToFloat(GoodsMarketEntry.GetStockpile)]"
 					}
 					tooltipwidget = {
 						using = GoodsMarketEntry_template
@@ -1055,10 +1055,10 @@ template SpecificGoodsToMarketContent {
 						parentanchor = center
 						size = { 5 22 }
 						using = progress_bar_green_alt
-						value = "[FixedPointToFloat(GoodsMarketEntry.GetStockpile)]"
 						min = 0
 						max = "[FixedPointToFloat(Market.GetCenterLocation.GetModifierValueFixed('maximum_stockpile_capacity'))]"
 						direction = vertical
+						value = "[FixedPointToFloat(GoodsMarketEntry.GetStockpile)]"
 					}
 					tooltipwidget = {
 						using = GoodsMarketEntry_template

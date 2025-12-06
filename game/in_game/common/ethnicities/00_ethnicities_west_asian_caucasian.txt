@@ -31,10 +31,6 @@ west_asian_caucasian_ethnicity = {
 		}
 	}
 
-	beards = {
-		10 = { name = armenian_beards 		range = { 0.0 1.0 } }
-	}
-
 	eyelashes = {
 		0 = { name = all_eyelashes		range = { 0.0 1.0 } }
 		10 = { name = standard_eyelashes		range = { 0.0 1.0 } }

@@ -304,26 +304,32 @@ types FoodProductionTypes {
 	
 								vbox = {
 									layoutpolicy_horizontal = expanding
-									text_single = {
+									hbox = {
 										layoutpolicy_horizontal = expanding
-										size = {-1 21}
-										autoresize = no
-										align = left|nobaseline
-										text = "[FoodProvinceItem.GetProvince.GetName]"
-																
-										sort_by_left_fade_highlight = {
-											position = { -5 0 }
-											name = "name"
+										text_single = {
+											maximumsize = { 220 -1 }
+											autoresize = yes
+											align = left|nobaseline
+											text = "[FoodProvinceItem.GetProvince.GetName]"
+																	
+											sort_by_left_fade_highlight = {
+												position = { -5 0 }
+												name = "name"
+											}
 										}
+										expand = {}
 									}
 	
-									text_single = {
+									hbox = {
 										layoutpolicy_horizontal = expanding
-										size = {-1 18}
-										fontsize = 13
-										autoresize = no
-										align = left|nobaseline
-										text = "[FoodProvinceItem.GetProvince.GetCapital.GetMarket.GetName]"
+										text_single = {
+											maximumsize = { 220 -1 }
+											autoresize = yes
+											fontsize = 13
+											align = left|nobaseline
+											text = "[FoodProvinceItem.GetProvince.GetCapital.GetMarket.GetName]"
+										}
+										expand = {}
 									}
 								}
 														
@@ -537,6 +543,7 @@ types FoodProductionTypes {
 				hbox = {
 					margin_right = 5
 					layoutpolicy_vertical = expanding
+					spacing = 5
 					widget = {
 						layoutpolicy_vertical = expanding
 						size = { 80 -1 }
@@ -545,21 +552,21 @@ types FoodProductionTypes {
 							using = food_productivity_tooltip
 						}
 						text_single = {
-							parentanchor = right|vcenter
-							maximumsize = { 80 -1 }
-							align = nobaseline
-							text = "[FoodLocationItem.GetLocation.GetFoodsOutputModifiers|+=%]"
-							using = bg_number_container_bckg
-							blockoverride "number_container_extra" {
-								alpha = 0.4
-								margin = {3 3}
-							}
+							parentanchor = center
+							size = { 95% 100% }
+							autoresize = no
+							align = center
+							text = "[FoodLocationItem.GetLocation.GetFoodsOutputModifiers|+=%]"	
+						}
+						using = bg_number_container_bckg
+						blockoverride "number_container_extra" {
+							alpha = 0.4
+							margin = {0 -5}
 						}
 
 						sort_by_small_highlight = {
 							name = "food"
 							size = { 75% 70% }
-							position = { 13 0 }
 						}								
 					}
 
@@ -567,19 +574,19 @@ types FoodProductionTypes {
 						layoutpolicy_vertical = expanding
 						size = { 80 -1 }
 						text_single = {
-							parentanchor = right|vcenter
-							maximumsize = { 80 -1 }
-							align = nobaseline
+							parentanchor = center
+							size = { 95% 100% }
+							autoresize = no
+							align = center
 							raw_text = "[FoodLocationItem.GetLocation.GetFoodsOutputWithLabel]@food!"
 
 									
 						}
 						using = bg_number_container_bckg
-							blockoverride "number_container_extra" {
-								alpha = 0.4
-								margin = {3 -5}
-								margin_left = -7
-							}
+						blockoverride "number_container_extra" {
+							alpha = 0.4
+							margin = {0 -5}
+						}
 					}
 				}
 

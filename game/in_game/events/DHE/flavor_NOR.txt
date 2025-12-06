@@ -68,10 +68,11 @@ flavor_nor.2 = {
 
 		create_character = {
 			first_name = Inger
-			last_name = Henriksson
+			last_name = Romer
 			adm = 85
 			dip = 85
 			mil = 85
+			female = yes
 			fertility = 100
 			estate = estate_type:nobles_estate
 			culture = culture:norwegian

@@ -872,3 +872,129 @@ proclaim_decree = {
 		}
 	}
 }
+
+exempt_from_tribute = {
+	type = internationalorganization
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = diplomacy
+
+	potential = {
+		exists = international_organization:middle_kingdom
+		scope:actor = { is_leader_of_international_organization = international_organization:middle_kingdom }
+	}
+
+	allow = {
+	}
+	
+	price = price:exempt_from_tribute
+
+	cooldown = {
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:middle_kingdom
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = country
+		target_flag = target
+		name = "choose_country"
+		none_available_msg_key = "no_valid_countries"
+		column = {
+			data = name
+		}
+		interaction_source_list = {
+			international_organization:middle_kingdom = {
+				every_international_organization_member = {
+					limit = {
+						this != scope:actor
+					}
+					add_to_list = source
+				}
+			}
+		}
+		visible = {
+		}
+		enabled = {
+			OR = {
+				NOT = { is_subject_of = scope:actor }
+				is_subject_type = tributary
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target }
+			scope:recipient = { remove_country_from_international_organization = scope:target }
+			scope:target ?= {
+				if = {
+					limit = {
+						is_subject_of = scope:actor
+						is_subject_type = tributary
+					}
+					scope:actor = { cancel_subject = prev }
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = -1000
+		add = {
+			desc = "IS_BANKRUPT_TOOLTIP"
+			if = {
+				limit = {	
+					scope:actor = { 
+						is_during_bankruptcy = yes
+					}
+				}
+				value = 1000
+			}
+		}
+		add = {
+			desc = "game_concept_opinion"
+			scope:actor = {
+				value = "opinion(scope:target)"
+				divide = -5
+			}
+		}
+		add = {
+			desc = "game_concept_trust"
+			scope:actor = {
+				value = "trust(scope:target)"
+				divide = -5
+			}
+		}
+
+		add = {
+			desc = "RELATIVE_INCOME"
+			value = {
+				value = scope:target.monthly_income_trade_and_tax
+				multiply = {
+					value = 1
+					add = "scope:target.modifier:tribute_payment_received_modifier"
+				}
+			}
+			divide = {
+				value = scope:actor.monthly_income_trade_and_tax
+				min = 1 
+			}
+
+		}
+	}
+}

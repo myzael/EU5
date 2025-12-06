@@ -98,7 +98,7 @@ development = {
 	south_china_region = 27
 	tibet_region = 10
 	west_china_region = 28
-	xinjiang_region = 7
+	xinjiang_region = 10
 	hindustan_region = 28
 	bengal_region = 30
 	western_india_region = 23
@@ -219,7 +219,7 @@ development = {
 	#Manchuria
 	liaodong_area = 5
 	#Xinjiang
-	tarim_area = 3
+	tarim_area = 5
 	#Japan
 	ou_area = -5
 	ezo_area = -25

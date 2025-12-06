@@ -330,9 +330,9 @@ kurultai = {
 	
 	unique_production_methods = {
 		kurultai_maintenance = {
-			horses = 0.5
-			leather = 0.1
-			weaponry = 0.2
+			horses = 0.2
+			leather = 0.05
+			weaponry = 0.02
 			category = building_maintenance
 		}
 	}
@@ -347,7 +347,7 @@ gallowglass_sept = {
 	pop_type = soldiers
 	
 	max_levels = guild_max_level
-	employment_size = tiny_rural_peasant_produce_employment
+	employment_size = tiny_soldier_employment
 	
 	category = military_category
 	
@@ -379,11 +379,13 @@ gallowglass_sept = {
 		local_tribes_estate_power = 0.5
 		local_defensive = 0.1
 		local_mercenaries_modifier = 0.25
+		local_nobles_desired_pop = 0.005
 	}
 	
 	possible_production_methods = {
 		early_soldier_building_maintenance
 	}
+	graphical_tags = { small_military }
 	construction_demand = early_soldier_building_construction
 }
 
@@ -505,6 +507,7 @@ order_commandery = {
 	possible_production_methods = {
 		order_commandery_maintenance
 	}
+	graphical_tags = { small_military }
 }
 
 
@@ -775,7 +778,7 @@ cinque_port = {
 	
 
 	modifier = {
-		max_ships_built_at_same_time = 1
+		local_navy_levy_size_modifier = 1.0
 		local_sailors = 0.003
 		local_burghers_estate_power = 1.0
 	}
@@ -1988,6 +1991,7 @@ peel_towers = {
 		local_garrison_size = 0.1
 		local_monthly_prosperity = 0.01
 	}
+	graphical_tags = { small_military }
 	
 }
 
@@ -2002,9 +2006,7 @@ dun_fort = {
 	
 	rural_settlement = yes
 	town = yes
-	city = yes
-
-	
+	city = yes	
 	
 	build_time = small_fort_building
 	
@@ -2034,6 +2036,7 @@ dun_fort = {
 		local_tribes_estate_power = 2.0
 	}
 	
+	graphical_tags = { small_military }
 
 }
 
@@ -2306,9 +2309,16 @@ shoen = {
 			tools = 0.15
 			category = building_maintenance
 		}
+		shoen_masonry_maintenance = {
+			produced = masonry
+			output = 0.8
+			lumber = 0.3
+			tools = 0.07
+			category = building_maintenance
+		}
 	}
 
-	construction_demand = workshop_construction
+	construction_demand = japanese_clan_building_construction
 }
 
 tatara = {
@@ -2363,7 +2373,7 @@ tatara = {
 		}
 	}
 
-	construction_demand = workshop_construction
+	construction_demand = japanese_clan_building_construction
 }
 
 clan_shipyards = {
@@ -2464,7 +2474,7 @@ clan_family_shrine = {
 		manpower_to_building_owner = 0.001
 	}
 
-	construction_demand = workshop_construction
+	construction_demand = japanese_clan_building_construction
 }
 
 korean_gunnery_land_defense = {
@@ -2520,7 +2530,7 @@ kremlin = {
 	pop_type = soldiers
 	
 	max_levels = kremlin_max_level
-	employment_size = huge_capital_peasants_employment
+	employment_size = large_capital_employment
 	
 	category = defense_category
 	
@@ -4236,7 +4246,7 @@ por_feitoria = {
 		is_port = yes
 		custom_tooltip = {
 			text = not_on_same_continent_as_capital
-			NOT = { continent = owner.capital.continent }
+			continent != scope:actor.capital.continent
 		}
 	}
 	
@@ -4399,10 +4409,10 @@ zhixian = {
 	
 	unique_production_methods = {
 		zhixian_maintenance = {
-			paper = 1.0
-			weaponry = 0.5
-			tools = 0.2
-			fine_cloth = 0.1
+			paper = 0.25
+			weaponry = 0.1
+			tools = 0.05
+			fine_cloth = 0.05
 			category = building_maintenance
 		}
 	}

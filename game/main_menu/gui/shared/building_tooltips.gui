@@ -242,14 +242,14 @@ template BuildingType_tooltip {
 						size = { 27 27 }
 						datacontext = "[BuildingType]"
 						visible = "[BuildingType.BuildOnlyInCapital]"
-						texture = "gfx/interface/icons/location_icons/capital.dds"
+						texture = "[GetConceptTexture('capital')]"
 						
 						tooltipwidget = {
 							SimpleContextualTooltipType = {
 								blockoverride "title_icon" {
 									icon = {
 										using = tooltip_title_icon_size
-										texture = "gfx/interface/icons/location_icons/capital.dds"
+										texture = "[GetConceptTexture('capital')]"
 									}
 								}
 								blockoverride "concept_link" {
@@ -265,14 +265,14 @@ template BuildingType_tooltip {
 						size = { 27 27 }
 						datacontext = "[BuildingType]"
 						visible = "[BuildingType.IsForeign]"
-						texture = "gfx/interface/icons/flat_icons/foreigncountry/opinion.dds"
+						texture = "[GetConceptTexture('foreign_building')]"
 
 						tooltipwidget = {
 							SimpleContextualTooltipType = {
 								blockoverride "title_icon" {
 									icon = {
 										using = tooltip_title_icon_size
-										texture = "gfx/interface/icons/flat_icons/foreigncountry/opinion.dds"
+										texture = "[GetConceptTexture('foreign_building')]"
 									}
 								}
 								blockoverride "concept_link" {
@@ -901,6 +901,7 @@ template building_tooltip_detail {
 				}
 				
 				  TooltipManualTableField = {
+					visible = "[Not(Building.IsProducing)]"
                     blockoverride "field_content" {
                         text_single = {
                             text = "BUILDING_UPKEEP"
@@ -920,7 +921,7 @@ template building_tooltip_detail {
 								}
 
 								blockoverride "concept_link" {
-									text = "[building|e]"
+									text = "[building_maintenance|e]"
 								}
 								lowpriotextcontext = "[Building.GetUpkeepInfo]"
 							}
@@ -1570,8 +1571,168 @@ template BuildingProfit_Tooltip {
 		}
 		
 		blockoverride "tooltip_content" {
-			TooltipStringPairList = {
-				textcontext = "[Building.GetMarketInfo]"
+			datacontext = "[Building.GetType]"
+			datacontext = "[Building.GetLocation]"
+			TooltipTextBlock = {
+				visible = "[Not(GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)1'))]"
+				blockoverride "text" {
+					text = "BUILDING_PROFIT_TT_TEXT_NO_BUILDING"
+				}
+			}
+
+			TooltipTextBlock = {
+				visible = "[GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)1')]"
+				blockoverride "text" {
+					text = "BUILDING_PROFIT_TT_TEXT_WITH_BUILDING"
+				}
+			}
+
+			TooltipListBase = { 
+				visible = "[GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0')]"
+				blockoverride "block_title" {
+					visible = "[GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0')]"
+					text = "BUILDING_PROFIT_TT_LIST_TITLE"
+				}
+				TooltipListRowContent = {
+					TooltipManualTableField = {
+						blockoverride "field_content" {
+							text_single = {
+								text = "BUILDING_PROFIT_TT_LIST"
+							}
+							expand = {}									
+							text_single = {
+								visible = "[GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)1')]"
+								default_format = "#bold"
+								# raw_text = "[LocationToBuildItem.GetProfitValue|+=<2]@gold!"
+								raw_text = "[Divide_CFixedPoint(Building.GetProfit, Building.GetLevel)|+=<2]"
+							}
+							text_single = {
+								visible = "[Not(GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)1'))]"
+								default_format = "#bold"
+								raw_text = "[Building.GetProfit|+=<2]@gold!"
+							}
+							tooltipwidget = {
+								ContextualTooltipType = {
+									blockoverride "title_icon" {
+										icon = {
+											using = tooltip_title_icon_size
+											texture = "gfx/interface/icons/resources/gold.dds"
+										}
+									}
+								
+									blockoverride "title_text" {
+										text = "LOCATION_TO_BUILD_PROFIT_TITLE_TOOLTIP_TEXT"
+									}
+														
+									blockoverride "concept_link" {
+										text = [building|E]
+									}
+								
+									blockoverride "tooltip_content" {
+										TooltipTextBlock = {
+											blockoverride "text" {
+												text = "[GetBuildingTypeProfitInLocationInfo(BuildingType.Self, Location.Self)]"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+	
+					TooltipManualTableField = {
+						visible = "[And(GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'), LessThan_CFixedPoint(Location.GetControl, '(CFixedPoint)1'))]"
+						blockoverride "field_content" {
+							tooltipwidget = {
+								using = location_control_tooltip
+							}
+							text_single = {
+								text = "TAX_BASE_TT_LIST"
+							}
+							expand = {}									
+							text_single = {
+								raw_text = "[Subtract_CFixedPoint(Location.GetControl, '(CFixedPoint)1.0')|%2+]"
+							}
+						}
+					}
+				}
+			}
+
+			TooltipListBase = { ### SIDE TABLE
+				TooltipStringPairList = {
+					textcontext = "[Building.GetMarketInfo]"
+				}
+				TooltipListRowContent = {
+					visible = "[Building.IsProducing]"
+					TooltipManualTableField = {
+						blockoverride "field_content" {
+							text_single = {
+								text = "TOTAL_POTENTIAL_PROFIT"
+								default_format = "#color_white"
+							}
+							expand = {}									
+							text_single = {
+								raw_text = "[Building.GetProfit|2+=L]@gold!"
+							}
+						}
+					}
+				}
+			}
+
+			TooltipTextBlock = { #TOTAL PROFIT
+				visible = "[And(GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)0'), GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'))]"
+				blockoverride "text" {
+					text = "BUILDING_PROFIT_TT_TEXT_BOTTOM"
+				}		
+			}
+
+			TooltipTextBlock = {
+				visible = "[LessThan_CFixedPoint(Building.GetInputGoodsAccess,'(CFixedPoint)1.0')]"
+				blockoverride "text" {
+					text = "[Building.GetInputGoodsInformation]"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
+			}
+		
+			TooltipTextBlock = {
+				visible = "[Not(GreaterThan_CFixedPoint(Location.GetMarketAccess,'(CFixedPoint)0'))]"
+				blockoverride "text" {
+					text = "BUILDING_LACK_MARKET_ACCESS"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
+			}
+		
+			TooltipTextBlock = {
+				visible = "[Not(Building.IsOpen)]"
+				blockoverride "text" {
+					text = "[GetToggleBuildingInfo(Building.Self)]"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
+			}
+
+			TooltipTextBlock = {
+				visible = "[And(LessThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'), Not(Building.IsSubsidized))]"
+				blockoverride "text" {
+					text = "BUILDING_PROFIT_TT_TEXT_UNPROFITABLE"
+				}
+
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
 			}
 
 			TooltipTextBlock = {
@@ -1586,12 +1747,130 @@ template BuildingProfit_Tooltip {
 					}
 				}
 			}
+		}
+	}
+}
 
-			TooltipTextBlock = { #TOTAL PROFIT
-				visible = "[And(GreaterThan_CFixedPoint(Building.GetLevel, '(CFixedPoint)0'), GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'))]"
+template BuildingTypeProfit_Tooltip {
+	ContextualTooltipType = {
+		blockoverride "title_icon" {
+			icon = {
+				using = tooltip_title_icon_size
+				texture = "[GetBuildingIcon(BuildingType.Self)]"
+				
+				tooltipwidget = {
+					using = BuildingType_tooltip
+				}
+			}
+		}
+
+		blockoverride "title_text" {
+			text = "PROFIT_FOR_BUILDING_TYPE"
+		}
+
+		blockoverride "concept_link" {
+			text = "[building|e]"
+		}
+		
+		blockoverride "tooltip_content" {
+			TooltipTextBlock = {
 				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_BOTTOM"
-				}		
+					text = "BUILDING_PROFIT_TT_TEXT_NO_BUILDING_PREDICTION"
+				}
+			}
+
+			TooltipListBase = { 
+				visible = "[GreaterThan_CFixedPoint(GetBuildingTypePotentialProfitInLocation(BuildingType.Self, Location.Self), '(CFixedPoint)0')]"
+				blockoverride "block_title" {
+					text = "BUILDING_PROFIT_TT_LIST_TITLE_PREDICTION"
+				}
+				TooltipListRowContent = {
+					TooltipManualTableField = {
+						blockoverride "field_content" {
+							text_single = {
+								text = "BUILDING_PROFIT_TT_LIST"
+							}
+							expand = {}
+							text_single = {
+								default_format = "#bold"
+								raw_text = "[GetBuildingTypePotentialProfitInLocation(BuildingType.Self, Location.Self)|+=<2]@gold!"
+							}
+							tooltipwidget = {
+								ContextualTooltipType = {
+									blockoverride "title_icon" {
+										icon = {
+											using = tooltip_title_icon_size
+											texture = "gfx/interface/icons/resources/gold.dds"
+										}
+									}
+								
+									blockoverride "title_text" {
+										text = "LOCATION_TO_BUILD_PROFIT_TITLE_TOOLTIP_TEXT"
+									}
+														
+									blockoverride "concept_link" {
+										text = [building|E]
+									}
+								
+									blockoverride "tooltip_content" {
+										TooltipTextBlock = {
+											blockoverride "text" {
+												text = "[GetBuildingTypeProfitInLocationInfo(BuildingType.Self, Location.Self)]"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+	
+					TooltipManualTableField = {
+						visible = "[And(GreaterThan_CFixedPoint(GetBuildingTypeProfitInLocation(BuildingType.Self, Location.Self), '(CFixedPoint)0'), LessThan_CFixedPoint(Location.GetControl, '(CFixedPoint)1'))]"
+						blockoverride "field_content" {
+							tooltipwidget = {
+								using = location_control_tooltip
+							}
+							text_single = {
+								text = "TAX_BASE_TT_LIST"
+							}
+							expand = {}									
+							text_single = {
+								raw_text = "[Subtract_CFixedPoint(Location.GetControl, '(CFixedPoint)1.0')|%2+]"
+							}
+						}
+					}
+				}
+			}
+
+			TooltipTextBlock = {
+				blockoverride "text" {
+					text = "[GetBuildingTypeProfitInLocationInfo(BuildingType.Self, Location.Self)|+=2]"
+				}
+			}
+
+			TooltipTextBlock = {
+				visible = "[Not(GreaterThan_CFixedPoint(Location.GetMarketAccess,'(CFixedPoint)0'))]"
+				blockoverride "text" {
+					text = "BUILDING_LACK_MARKET_ACCESS"
+				}
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
+			}
+
+			TooltipTextBlock = {
+				visible = "[LessThan_CFixedPoint(GetBuildingTypeProfitInLocation(BuildingType.Self, Location.Self), '(CFixedPoint)0')]"
+				blockoverride "text" {
+					text = "BUILDING_PROFIT_TT_TEXT_UNPROFITABLE_AND_UNBUILT"
+				}
+
+				blockoverride "textblock_background_tint"  {
+					modify_texture = {
+						using = color_red_texture
+					}
+				}
 			}
 		}
 	}
@@ -1725,162 +2004,4 @@ template UpgradeNextBuildingType_Tooltip {
 			}
 		}				
 	}	
-}
-
-template Building_profit_per_level_tooltip {
-	ContextualTooltipType = {
-		blockoverride "title_icon" {
-			icon = {
-				using = tooltip_title_icon_size
-				texture = "gfx/interface/icons/treaty_type/gold.dds"
-			}
-		}
-	
-		blockoverride "title_text" {
-			text = "LOCATION_TO_BUILD_PROFIT_TITLE_TOOLTIP_TEXT"
-		}
-							
-		blockoverride "concept_link" {
-			text = [profit|E]
-		}
-	
-		blockoverride "tooltip_content" {
-			TooltipTextBlock = {
-				visible = "[Not(LocationToBuildItem.ShouldShowProductionMethods)]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_NO_BUILDING"
-				}
-			}
-
-			TooltipTextBlock = {
-				visible = "[LocationToBuildItem.ShouldShowProductionMethods]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_WITH_BUILDING"
-				}
-			}
-			TooltipTextBlock = {
-				textcontext = "[LocationToBuildItem.GetProfitInfoShort]"
-			}
-
-
-			TooltipTextBlock = {
-				visible = "[And3(LessThanOrEqualTo_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0'), Not(LocationToBuildItem.GetBuilding.IsSubsidized), LocationToBuildItem.HasBuilding)]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_UNPROFITABLE"
-				}
-
-				blockoverride "textblock_background_tint"  {
-					modify_texture = {
-						using = color_red_texture
-					}
-				}
-			}
-
-			TooltipTextBlock = {
-				visible = "[And(LessThan_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0'), Not(LocationToBuildItem.HasBuilding))]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_UNPROFITABLE_AND_UNBUILT"
-				}
-
-				blockoverride "textblock_background_tint"  {
-					modify_texture = {
-						using = color_red_texture
-					}
-				}
-			}
-
-			TooltipTextBlock = {
-				visible = "[LocationToBuildItem.GetBuilding.IsSubsidized]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_UNPROFITABLE_AND_SUBSIDIZED"
-				}
-
-				blockoverride "textblock_background_tint"  {
-					modify_texture = {
-						using = color_yellow_texture
-					}
-				}
-			}
-
-			TooltipListBase = { 
-				visible = "[GreaterThan_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0')]"
-				blockoverride "block_title" {
-					visible = "[GreaterThan_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0')]"
-					text = "BUILDING_PROFIT_TT_LIST_TITLE"
-				}
-				TooltipListRowContent = {
-					TooltipManualTableField = {
-						blockoverride "field_content" {
-							text_single = {
-								text = "BUILDING_PROFIT_TT_LIST"
-							}
-							expand = {}									
-							text_single = {
-								visible = "[LocationToBuildItem.ShouldShowProductionMethods]"
-								default_format = "#bold"
-								# raw_text = "[LocationToBuildItem.GetProfitValue|+=<2]@gold!"
-								raw_text = "[Divide_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, LocationToBuildItem.GetBuilding.GetLevel)|+=<2]"
-							}
-							text_single = {
-								visible = "[Not(LocationToBuildItem.ShouldShowProductionMethods)]"
-								default_format = "#bold"
-								raw_text = "[LocationToBuildItem.GetNetProfitValue|+=<2]@gold!"
-							}
-							tooltipwidget = {
-								ContextualTooltipType = {
-									blockoverride "title_icon" {
-										icon = {
-											using = tooltip_title_icon_size
-											texture = "gfx/interface/icons/resources/gold.dds"
-										}
-									}
-								
-									blockoverride "title_text" {
-										text = "LOCATION_TO_BUILD_PROFIT_TITLE_TOOLTIP_TEXT"
-									}
-														
-									blockoverride "concept_link" {
-										text = [building|E]
-									}
-								
-									blockoverride "tooltip_content" {
-										TooltipTextBlock = {
-											blockoverride "text" {
-												text = "[LocationToBuildItem.GetProfitInfo]"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-	
-					TooltipManualTableField = {
-						
-						visible = "[And(GreaterThan_CFixedPoint(LocationToBuildItem.GetProfitValue, '(CFixedPoint)0'), LessThan_CFixedPoint(Location.GetControl, '(CFixedPoint)1'))]"
-						blockoverride "field_content" {
-							tooltipwidget = {
-								using = location_control_tooltip
-							}
-							text_single = {
-								text = "TAX_BASE_TT_LIST"
-							}
-							expand = {}									
-							text_single = {
-								raw_text = "[Subtract_CFixedPoint(Location.GetControl, '(CFixedPoint)1.0')|%2+]"
-							}
-						}
-					}
-				}
-			}
-
-			TooltipTextBlock = { #TOTAL PROFIT
-				datacontext = "[LocationToBuildItem.GetBuilding]"
-				visible = "[And(GreaterThan_CFixedPoint(LocationToBuildItem.GetBuilding.GetLevel, '(CFixedPoint)0'), GreaterThan_CFixedPoint(LocationToBuildItem.GetBuilding.GetProfit, '(CFixedPoint)0'))]"
-				blockoverride "text" {
-					text = "BUILDING_PROFIT_TT_TEXT_BOTTOM"
-				}		
-			}
-		}
-	}
 }

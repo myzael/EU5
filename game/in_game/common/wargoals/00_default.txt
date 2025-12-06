@@ -500,7 +500,7 @@ excommunication_conquest = {
 
 
 hundred_years_war_wargoal = {
-	type = take_capital
+	type = superiority
 	war_name = "HUNDRED_YEARS_WAR_NAME" #uses none
 	war_name_is_country_order_agnostic = yes
 	
@@ -609,6 +609,14 @@ red_turban_rebellions_wargoal = {
 		conquer_cost = 0.02
 		subjugate_cost = 0.02
 		antagonism = 0.02
+		allowed_locations = {
+			OR = {
+				region = region:east_china_region
+				region = region:north_china_region
+				region = region:south_china_region
+				region = region:west_china_region
+			}
+		}
 	}
 	defender = {
 		conquer_cost = 0.02
@@ -625,6 +633,14 @@ red_turban_rebellions_against_other_rebels_wargoal = {
 		conquer_cost = 0.02
 		subjugate_cost = 0.02
 		antagonism = 0.02
+		allowed_locations = {
+			OR = {
+				region = region:east_china_region
+				region = region:north_china_region
+				region = region:south_china_region
+				region = region:west_china_region
+			}
+		}
 	}
 	defender = {
 		conquer_cost = 0.02
@@ -722,7 +738,12 @@ superiority_claim_china = {
 		conquer_cost = 0.5
 		subjugate_cost = 0.5
 		allowed_locations = {
-			sub_continent = sub_continent:east_asia
+			OR = {
+				region = region:east_china_region
+				region = region:north_china_region
+				region = region:south_china_region
+				region = region:west_china_region
+			}
 		}
 	}
 	defender = {
@@ -864,6 +885,20 @@ high_kingship_reclamation_wargoal = {
 		conquer_cost = 2
 		subjugate_cost = 2
 		antagonism = 2
+	}
+	ticking_war_score = 0.5
+}
+
+take_capital_liberate_hre_member = {
+	type = take_capital
+
+	attacker = {
+		conquer_cost = 2
+		subjugate_cost = 1
+	}
+	defender = {
+		conquer_cost = 2
+		subjugate_cost = 2
 	}
 	ticking_war_score = 0.5
 }

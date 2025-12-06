@@ -5,6 +5,7 @@
 	}
 	icon = diplomatic_range_age_1
 	monthly_diplomats = 0.1
+	diplomatic_capacity = 1
 
 	requires = medieval_administration
 }
@@ -15,39 +16,20 @@ sav_house_of_savoy = {
 		has_or_had_tag = SAV
 	}
 	icon = glorious_arms
-	diplomatic_annexation_cost = -0.15
+	land_cost_on_distance_from_capital_modifier = -0.1
 
-	requires = guilds
+	requires = codified_laws
 }
 
-sav_fight_the_vaudois = {
+sav_the_shroud_of_turin = {
 	age = age_2_renaissance
 	potential = {
 		has_or_had_tag = SAV
-		religion = religion:catholic
 	}
-	icon = scholasticism
-	global_pop_conversion_speed_modifier = 0.1
+	icon = genoese_banking_traditions
+	tax_income_efficiency = large_tax_income_efficiency_bonus
 
-	requires = global_clergy_max_literacy_advance
-	allow_children = no
-}
-
-sav_embrace_the_vaudois = {
-	age = age_2_renaissance
-	potential = {
-		has_or_had_tag = SAV
-		OR = {
-			religion = religion:waldensian
-			religion = religion:calvinist
-			religion = religion:lutheran
-		}
-	}
-	icon = smooth_administration
-	tolerance_own = 1
-
-	requires = global_clergy_max_literacy_advance
-	allow_children = no
+	requires = patron_of_art
 }
 
 sav_alpine_pass_control = {
@@ -62,15 +44,34 @@ sav_alpine_pass_control = {
 	requires = paved_road_advance
 }
 
-sav_the_shroud_of_turin = {
+sav_fight_the_vaudois = {
 	age = age_4_reformation
 	potential = {
 		has_or_had_tag = SAV
+		religion = religion:catholic
 	}
-	icon = genoese_banking_traditions
-	tax_income_efficiency = large_tax_income_efficiency_bonus
+	icon = scholasticism
+	global_pop_conversion_speed_modifier = 0.1
 
 	requires = confessional_court
+	allow_children = no
+}
+
+sav_embrace_the_vaudois = {
+	age = age_4_reformation
+	potential = {
+		has_or_had_tag = SAV
+		OR = {
+			religion = religion:waldensian
+			religion = religion:calvinist
+			religion = religion:lutheran
+		}
+	}
+	icon = smooth_administration
+	tolerance_own = 1
+
+	requires = confessional_court
+	allow_children = no
 }
 
 sav_repopulate_the_valleys = {

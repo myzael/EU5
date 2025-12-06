@@ -36,8 +36,10 @@
 	
 	#By recognizing the Emperor of China as the overlord, no one can match its position.
 	modifier = {
-		block_from_change_to_empire_rank = yes
 		monthly_towards_sinicized = societal_value_monthly_move
+	}
+	non_leader_modifier = {
+		block_from_change_to_empire_rank = yes
 	}
 
 	#If any Tributary is attacked, the Emperor gets the option to join.

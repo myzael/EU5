@@ -1462,7 +1462,7 @@ template advance_button_info {
 		title = "REMOVE_FROM_RESEARCH_QUEUE"
 		enabled = "[AdvanceNode.GetItem.CanRemoveFromResearchQueue]"
 		description = "REMOVE_FROM_RESEARCH_QUEUE_DESC"
-		conditions = "[MakeItFailIfLoc(Not(AdvanceNode.GetItem.CanRemoveFromResearchQueue), AdvanceNode.GetItem.GetRemoveFromResearchQueueConditions)]"
+		conditions = "[MakeItFailIf(Not(AdvanceNode.GetItem.CanRemoveFromResearchQueue), AdvanceNode.GetItem.GetRemoveFromResearchQueueConditions)]"
 		cost = "[AdvanceNode.GetItem.GetRemoveFromResearchQueueCost]"
 		on_action = "[AdvanceNode.GetItem.RemoveFromResearchQueue]"
 	}

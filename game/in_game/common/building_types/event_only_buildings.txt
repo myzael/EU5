@@ -290,7 +290,7 @@ great_temple_of_tenochtitlan = {
 	}
 	remove_if = {
 		owner ?= {
-			religion = religion:nahuatl
+			NOT = { religion = religion:nahuatl }
 		}
 	}
 	

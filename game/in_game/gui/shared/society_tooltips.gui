@@ -650,7 +650,7 @@ template primary_culture_tooltip {
 		blockoverride "title_icon" {
 			icon = {
 				using = tooltip_title_icon_size
-				texture = "gfx/interface/icons/flat_icons/cultural_primary.dds"
+				texture = "gfx/interface/icons/culture/primary_culture.dds"
 				glow = {
 					name = "drop_shadow"
 					glow_radius = 3
@@ -901,7 +901,7 @@ template CulturalCapacity_tooltip {
 	ContextualTooltipType = {
 		blockoverride "title_icon" {
 			icon = {
-				texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+				texture = "gfx/interface/icons/culture/accepted_culture.dds"
 				using = tooltip_title_icon_size
 
 				glow = {

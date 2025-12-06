@@ -22,7 +22,7 @@
 			data = name
 		}
 		visible = {
-			culture = culture:prussian
+			capital.region = region:baltic_region
 			has_reform = government_reform:military_order_reform
 			religion = religion:catholic
 		}
@@ -52,6 +52,7 @@
 			not = { has_character_modifier = on_prussian_crusade }
 			not = { has_character_modifier = completed_prussian_crusade }
 			modifier:blocked_from_character_interactions = no
+			modifier:blocked_from_being_leader = no
 		}
 	}	
 	
@@ -121,7 +122,7 @@ invite_to_prussian_crusade =  {
 	type = diplomacy	
 	potential = {
 		scope:actor = {
-			culture = culture:prussian
+			capital.region = region:baltic_region
 			has_reform = government_reform:military_order_reform
 			religion = religion:catholic
 		}
@@ -168,6 +169,7 @@ invite_to_prussian_crusade =  {
 			not = { has_character_modifier = on_prussian_crusade }
 			not = { has_character_modifier = completed_prussian_crusade }
 			modifier:blocked_from_character_interactions = no
+			modifier:blocked_from_being_leader = no
 		}
 	}	
 	

@@ -5687,12 +5687,6 @@ global_levy_size_modifier={
 	}
 }
 
-levy_combat_efficiency={
-	percent=yes
-	game_data={
-		category=unit
-	}
-}
 
 levy_combat_efficiency_modifier={
 	percent=yes
@@ -9137,6 +9131,20 @@ can_colonize={
 	}
 }
 
+always_allow_navy_levies={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+always_allow_army_levies={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
 rural_migration_attraction={
 	game_data={
 		category=country
@@ -10426,7 +10434,7 @@ landfriede_cooldown={
 allow_overrule_imperial_diet={
 	boolean=yes
 	game_data={
-		category=country
+		category=internationalorganization
 	}
 }
 
@@ -11171,6 +11179,14 @@ proclaim_decree_cost_modifier={
 	}
 }
 
+exempt_from_tribute_cost_modifier={
+	color=bad
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
 can_create_red_turban_rebellions_cb={
 	boolean=yes
 	game_data={
@@ -11690,6 +11706,14 @@ enable_pest_house={
 }
 
 rto_press_claims_price_cost_modifier={
+	color=bad
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+rto_create_uc_bey_cost_modifier={
 	color=bad
 	percent=yes
 	game_data={

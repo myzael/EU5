@@ -286,7 +286,7 @@
 		requires = { a_great_capital }
 		enabled = {
 			capital = {
-				province = { province_average_control >= root.var:target_capital_province_control_variable }
+				province = { province_average_control > root.var:target_capital_province_control_variable }
 			}
 		}
 		duration = 0

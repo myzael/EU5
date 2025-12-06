@@ -49,6 +49,7 @@
 		column = { data = name }
 		column = { data = population }
 		visible = {
+			scope:actor = { can_declare_war_on = root.owner }
 			trigger_if = {
 				limit = {
 					scope:actor ?= { 
@@ -127,43 +128,96 @@
 	}
 
 	ai_will_do = {
-		add = 20
 		if = {
-			limit = { exists = scope:target }
+			limit = { 
+				exists = scope:target
+			}
+
+			if = {
+				limit = { 
+					scope:target.owner = {
+						top_overlord = scope:actor
+					}
+				}
+
+				add = {
+					value = -1000
+					desc = "our subject"
+				}
+			}
+
+			if = {
+				limit = { 
+					scope:actor = { has_casus_belli_on = scope:target.owner }
+				}
+				add = {
+					value = -1000
+					desc = "We already have a cb on them"
+				}
+			}
+
 			add = {
 				desc = "RELATIVE_STRENGTH"
-				value = 100
-				multiply = "scope:actor.relative_strength(scope:target.owner)"
-				divide = 10
+				value = "scope:actor.relative_strength(scope:target.owner)"
+				multiply = 100
+				subtract = 50
+			}
+
+			add = {
+				desc = "we want their land"
+				value = "scope:actor.conquer_desire(scope:target.owner)"
+				divide = 5
+			}
+
+			if = {
+				limit = { 
+					scope:actor = { wants_casus_belli_with = scope:target.owner }
+				}
+				add = {
+					desc = "wants casus belli on target owner"
+					value = 5
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target.owner = {
+						num_locations < 5
+					}
+				}
+				divide = {
+					value = 3
+					desc = "very small enemy"
+				}
 			}
 		}
-		add = {
-			desc = "CURRENT_MANPOWER_TOOLTIP"
-			value = scope:actor.manpower_percentage
-			multiply = 10
-		}
-		add = {
-			desc = "CURRENT_MANPOWER_TOOLTIP"
-			value = scope:actor.army_size
-		}
-		add = {
-			desc = "NUM_LOANS_TOOLTIP"
-			value = scope:actor.num_loans
-			multiply = -10
-		}
-		add = {
-			desc = "CURRENT_TREASURY_TOOLTIP"
-			value = {
-				add = scope:actor.gold
-				divide = scope:actor.monthly_income_total
+		else = {
+			add = {
+				value = 25
+				desc = BASE_VALUE
 			}
-			multiply = 5
 		}
+
 		if = {
 			limit = { 
 				scope:actor = { is_during_bankruptcy = yes }
 			}
-			subtract = 1000
+			subtract = {
+				desc = "[bankruptcy|e]"
+				value = 1000
+			}
+		}
+
+		if = {
+			limit = {
+				scope:actor = {
+					has_truce_with = scope:target.owner
+				}
+			}
+			add = {
+				value = -1000
+				desc = "truce"
+			}
 		}
 	}
 }
@@ -179,10 +233,8 @@ raise_bey_fortress = {
 
 	allow = {
 		scope:actor = {
-			is_during_bankruptcy = no
 			at_war = no
 			is_during_bankruptcy = no
-			num_loans < 1
 		}
 	}
 
@@ -192,12 +244,12 @@ raise_bey_fortress = {
 	ai_tick = monthly
 	ai_tick_frequency = 12
 
-	price = price:p_expensive_building_age_1_traditions
+	price = price:p_building_age_2_renaissance
 
 	
 	cooldown = { 
 		type = raise_bey_fortress_key 
-		months = 6
+		months = 12
 	}
 	
 	select_trigger = {
@@ -220,7 +272,30 @@ raise_bey_fortress = {
 
 	select_trigger = {
 		looking_for_a = location
-		source = actor
+		interaction_source_list = {
+			scope:actor = {
+				every_owned_non_rural_location = {
+					limit = { location_rank = location_rank:city }
+					add_to_list = source
+				}
+				every_subject = {
+					limit = {
+						is_disloyal_subject = no
+						OR = {
+							is_subject_type = vassal
+							is_subject_type = uc_bey
+						}
+						any_owned_non_rural_location = {
+							location_rank = location_rank:city
+						}
+					}
+					every_owned_non_rural_location = {
+						limit = { location_rank = location_rank:city }
+						add_to_list = source
+					}
+				}
+			}
+		}
 		target_flag = target
 		name = "choose_location"
 		none_available_msg_key = "no_locations_available"
@@ -253,14 +328,32 @@ raise_bey_fortress = {
 	}
 
 	ai_will_do = {
-		value = -400
-
-		add = scope:actor.gold						#Healthy treasury
-		add = scope:actor.monthly_balance			#Monthly balance 
 
 		if = {
-			limit = { exists = scope:target }
-			add = scope:target.proximity			#Proximity of the selected location	
+			limit = { exists = scope:target } 
+			add = {
+				desc = "[target.GetName] [proximity|e]"
+				value = scope:target.proximity			#Proximity of the selected location	
+			}
+			add = {
+				desc = "[target.GetName] [development|e]"
+				value = scope:target.development			#Proximity of the selected location	
+			}
+			if = {
+				limit = {
+					scope:target.owner ?= { is_subject_of = scope:actor }
+				}
+				add = {
+					desc = "owned by a subject"
+					value = -25
+				}
+			}
+		}
+		else = {
+			add = {
+				value = 50
+				desc = BASE_VALUE
+			}
 		}
 	}
 }
@@ -384,14 +477,7 @@ examine_our_fortifications = {
 		visible = {
 			any_location_in_area = {
 				owner ?= scope:actor
-				OR = {
-					has_building = building_type:stockade
-					has_building = building_type:castle 
-					has_building = building_type:bastion
-					has_building = building_type:star_fort
-					has_building = building_type:fortress
-					has_building = building_type:bey_fortress
-				}
+				has_fort = yes
 				NOT = { has_location_modifier = recently_inspected_fortifications_modifier }
 			}
 		}
@@ -407,14 +493,7 @@ examine_our_fortifications = {
 					limit = {
 						has_owner = yes
 						owner = scope:actor
-						OR = {
-							has_building = building_type:stockade
-							has_building = building_type:castle 
-							has_building = building_type:bastion
-							has_building = building_type:star_fort
-							has_building = building_type:fortress
-							has_building = building_type:bey_fortress
-						}
+						has_fort = yes
 						NOT = { has_location_modifier = recently_inspected_fortifications_modifier }
 					}
 					if = {
@@ -435,7 +514,38 @@ examine_our_fortifications = {
 	}
 	cooldown = { type = examine_our_fortifications_key years = 3 }
 	ai_will_do = {
-		add = 10
+		add = {
+			value = 5
+			desc = BASE_VALUE
+		}
+
+		if = {
+			limit = { scope:actor.fort_maintenance > 0 }
+			add = {
+				value = scope:actor.fort_maintenance
+				multiply = 10
+				desc = "[fort_maintenance|e]"
+			}
+		}
+		else = {
+			add = {
+				value = -100
+				desc = "[fort_maintenance|e]"
+			}
+		}
+
+		if = {
+			limit = { exists = scope:target }
+			scope:target = {
+				every_ownable_location_in_area = {
+					limit = {
+						owner = scope:actor
+						has_fort = yes
+					}
+					add = this.development
+				}
+			}
+		}
 	}
 }
 
@@ -460,6 +570,8 @@ offer_diplomatic_protection = {
 
 	automation_tick = never
 	automation_tick_frequency = 12
+	ai_tick = monthly
+	ai_tick_frequency = 6
 	
 	price = price:offer_diplomatic_protection_price
 
@@ -536,7 +648,9 @@ offer_diplomatic_protection = {
 			is_ruler = no
 			is_female = no
 			is_adult = yes
+			is_heir = no
 			has_available_marriage_slot = yes
+			total_abilities < 150
 		}
 	}
 
@@ -574,7 +688,7 @@ offer_diplomatic_protection = {
 	}
 	
 	ai_will_do = {
-		add = 10
+		add = -10
 	}
 }
 
@@ -656,7 +770,46 @@ invade_neighbor_beylik = {
 	}
 	cooldown = { type = invade_neighbor_beylik years = 2 }
 	ai_will_do = {
-		add = 10
+		add = {
+			value = 13
+			desc = "base chance"
+		}
+
+		if = {
+			limit = {
+				scope:actor = {
+					has_truce_with = scope:target
+				}
+			}
+			add = {
+				value = -200
+				desc = "truce"
+			}
+		}
+
+
+		if = {
+			limit = { exists = scope:target }
+
+			if = {
+				limit = { 
+					scope:actor = { has_casus_belli_on = scope:target }
+				}
+				add = {
+					value = -1000
+					desc = "We already have a cb on them"
+				}
+			}
+			if = {
+				limit = { 
+					scope:actor = { has_cooldown = press_claims_cooldown_key }
+				}
+				add = {
+					value = scope:actor.stability
+					desc = "[stability|e]"
+				}
+			}
+		}
 	}
 }
 
@@ -758,30 +911,56 @@ invite_turkic_migration = {
 	}
 
 	ai_will_do = {
-		add = -10
+		add = 15
 		if = {
 			limit = { exists = scope:target_province_destination }
+			subtract = 35
 			add = {	#More likely to migrate towards high tax base provinces
+				desc = "[target_province_destination.GetName] [tax_base|e]" 
 				value = scope:target_province_destination.province_tax_base
-				divide = 10
+				multiply = 1
+			}
+			add = {
+				desc = "[target_province_destination.GetName] [control|e]"
+				value = 10
+				multiply = scope:target_province_destination.province_average_control
+			}
+			add = {
+				desc = "[target_province_destination.GetName] [population|e]"
+				value = scope:target_province_destination.population
+				multiply = 100
+				divide = scope:actor.total_population
 			}
 			if = {
-				limit = { scope:target_province_destination.province_average_control > 0.5 }
+				limit = {
+					scope:target_province_destination = {
+						culture_percentage = {
+							culture = scope:actor.culture
+							value > 0
+						}
+					}
+				}
 				add = {
-					value = 20
-					multiply = scope:target_province_destination.province_average_control
+					desc = "[target_province_destination.GetName] [target_culture.GetName]"
+					value = "scope:target_province_destination.culture_percentage(scope:target_culture)"
+					divide = 0.01
 				}
 			}
 			else = {
-				subtract = {	#AI will never populate low control provinces
+				add = {
+					desc = "[target_province_destination.GetName] [target_culture.GetName]"
 					value = 20
-					divide = scope:target_province_destination.province_average_control
 				}
 			}
-			add = {
-				value = scope:target_province_destination.population
-				multiply = 250
-				divide = scope:actor.total_population
+			if = {
+				limit = {
+					scope:target_province_destination = { has_province_modifier = cultural_intermixing_modifier }
+				}
+
+				add = {
+					desc = "cultural_intermixing_modifier"
+					value = -50
+				}
 			}
 		}
 	}
@@ -798,40 +977,22 @@ create_uc_bey = {
 
 	allow = {
 		scope:actor = {
-			any_political_border_location = {
-				province = {
-					custom_tooltip = {
-						text = no_location_is_capital_tt
-						NOT = {
-							any_location_in_province = { is_capital = yes }
-						}
-					}
-					custom_tooltip = {
-						text = urban_manpower_location_tt
-						any_location_in_province = {
-							OR = {
-								location_rank = location_rank:city
-								location_rank = location_rank:town
-							}
-							any_buildings_in_location = {
-								owner ?= scope:actor
-								building_level >= 1
-								building_type = {
-									building_manpower_produced > 0
-								}
-							}
-						}
-					}
-				}
+			at_war = no
+			any_subject = {
+				religion.group = religion_group:muslim
+				is_subject_type = vassal
+				is_disloyal_subject = no
+				monthly_manpower > 0
+				at_war = no
 			}
 		}
 	}
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 12
 
 	automation_tick = never
 	automation_tick_frequency = 12
-	price = price:rto_press_claims_price
+	price = price:rto_create_uc_bey
 
 	cooldown = {
 		type = create_uc_bey
@@ -853,109 +1014,76 @@ create_uc_bey = {
 	}
 
 	select_trigger = {
-		looking_for_a = province
-		source = actor
-		target_flag = target_province
-		name = "choose_province"
-		none_available_msg_key = "no_provinces_available"
-		column = { data = name }
-		column = { data = population }
-		visible = {
-			any_location_in_province = {
-				OR = {
-					location_rank = location_rank:city
-					location_rank = location_rank:town
-				}
-				any_buildings_in_location = {
-					owner = scope:actor
-					building_level >= 1
-					building_type = {
-						building_manpower_produced > 0
+		looking_for_a = country
+		interaction_source_list = {
+			scope:actor = {
+				every_subject = {
+					limit = {
+						is_subject_type = vassal 
+						religion.group = religion_group:muslim
 					}
+					add_to_list = source
 				}
 			}
-			any_location_in_province = { is_border = yes }
-			NOT = {
-				any_location_in_province = { is_capital = yes }
-			}
+		}
+		target_flag = target_subject
+		name = "choose_country"
+		column = { data = name }
+		column = { data = expected_army_size }
+		column = { data = expected_navy_size }
+		enabled = {
+			is_disloyal_subject = no
+			monthly_manpower > 0
+			at_war = no
 		}
 	}
 	
-	effect = { 
+	effect = {
 		if = {
-			limit = {
-				exists = scope:target_province
-			}
-			scope:actor = { trigger_event_non_silently = rise_of_the_ottomans.217 }
+			limit = { exists = scope:target_subject }
+			scope:actor ?= { trigger_event_non_silently = rise_of_the_ottomans.217 }
 		}
-		else = { custom_tooltip = create_uc_bey_tt }
+		custom_tooltip = create_uc_bey_tt
 	}
 
 	ai_will_do = {
-		add = -20
+		# Disabled via ai tick never for now as it causes problems
+		add = 25
 		if = {
-			limit = { exists = scope:target_province }
-			if = {
-				limit = { exists = scope:actor.capital }
-				add = {	#They are less likely to give up great land tax-wise
-					value = scope:actor.capital.province.province_tax_base
-					subtract = {
-						value = scope:target_province.province_tax_base
-						multiply = 1.2
-					}
-					min = -20
-					max = 20
-				}
-			}
-			if = {
-				limit = {
-					scope:target_province = {
-						any_location_in_province = {
-							any_neighbor_location = {
-								owner ?= {
-									OR = { 
-										is_rival_of = scope:actor
-										is_enemy_of = scope:actor
-									}
-								}
-							}
-						}
+			limit = { exists = scope:target_subject }
+			subtract = {
+				desc = "current number of uc beys"
+				scope:actor = {
+					every_subject = {
+						limit = { is_subject_type = uc_bey }
+						add = 10
 					}
 				}
-				add = 10
 			}
 			add = {
-				value = scope:actor.num_loans
-				multiply = -5
+				desc = "RELATIVE_STRENGTH"
+				value = 100
+				multiply = "scope:target_subject.relative_strength(scope:actor)"
 			}
-			add = {	#Try to have 1 of these subjects for every 5 provinces you have
+			add = {
+				desc = "[target_subject.GetName] [monthly_manpower|e]"
+				value = scope:target_subject.monthly_manpower
+				multiply = 1000
+			}
+			add = {
+				desc = "Our [provinces|e]"
 				value = scope:actor.num_provinces
-				divide = 2
 			}
-			if = {
-				limit = { scope:target_province.province_satisfaction < 0.3 }
-				add = 5 #It's good to get rid of very disloyal provinces
+			subtract = {
+				desc = "we want less decentralization"
+				value = scope:actor.modifier:monthly_towards_decentralization
+				multiply = 20
 			}
-			if = {	#The AI should be relatively stable balance-wise to do this
-				limit = { scope:actor.monthly_balance < 5 }
-				add = -20
-			}
-			if = {
-				limit = { scope:actor.modifier:diplomatic_capacity > 1 }
-				#More likely if they have positive diplomatic capacity
-				add = {
-					value = scope:actor.modifier:diplomatic_capacity
-					multiply = 2
-				}
-			}
-			#If the AI has between 0 and 1 diplomatic capacity, we can let it decide...
-			else_if = {
-				limit = { scope:actor.modifier:diplomatic_capacity < 0 }
-				#More likely if they have positive 
-				add = {
-					value = scope:actor.modifier:diplomatic_capacity
-					multiply = 10
-				}
+		}
+		else = {
+			add = {
+				value = 25
+				desc = BASE_VALUE
 			}
 		}
 	}

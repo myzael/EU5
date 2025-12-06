@@ -1,5 +1,6 @@
 ﻿hussite_wars = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_hussite_wars
 	
 	can_start = {	
 		always = no #starts with event hussite_wars.2

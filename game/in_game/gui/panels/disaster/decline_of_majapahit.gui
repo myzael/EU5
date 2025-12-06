@@ -4,56 +4,6 @@ disaster_panel = {
 
 	##################################### MAIN IMAGE #####################################
 
-	blockoverride "main_image"{
-		one_character_header = {
-			blockoverride "CharacterContext" {
-				datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
-			}
-			blockoverride "character_portrait_anchor" {
-				parentanchor = bottom|hcenter
-			}
-			blockoverride "CharacterRole" {
-				country_character = {
-					blockoverride "country_header_orientation" {}
-					blockoverride "country_government_character_labels_align" {
-						align = center|nobaseline
-					}
-					blockoverride "character_name_maximumsize" {
-						maximumsize = { 200 -1 }
-					}
-					blockoverride "character_name_text"{
-						text = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent.GetShortNameWithNoTooltip]"
-					}
-					blockoverride "character_title" {
-						visible = "[Character.HasNickName]"
-						text = "[Character.GetNickname]"
-					}
-				}
-			}
-			# blockoverride "history_button_anchor" { visible = no }
-			blockoverride "character_name_maximumsize" { maximumsize = { 270 -1 } }
-			blockoverride "country_header_extra" {
-				hbox = {
-					layoutpolicy_horizontal = expanding
-					layoutpolicy_vertical = expanding
-					margin = { 10 10 }
-					spacing = 8
-					expand = {}
-				}
-			}
-			blockoverride "abilities" {
-				using = bg_war_situation_main_header
-				widget = {
-					layoutpolicy_horizontal = expanding
-					hbox = {
-						datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
-						character_abilities = {}
-						expand = {}
-					}
-				}
-			}
-		}
-	}
 
 	# ##################################### TAB NAME #####################################
 	blockoverride "disaster_secondary_tab" {

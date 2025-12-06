@@ -1,5 +1,6 @@
 ﻿council_of_trent = {
 	monthly_spawn_chance = monthly_spawn_chance_ultimate
+	hint_tag = hint_council_of_trent
 	international_organization_type = catholic_church
 	voters = council_of_trent_voters
 	can_start = {

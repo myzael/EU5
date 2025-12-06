@@ -885,11 +885,11 @@ signoria_selection = {
 			
 			if = {
 				limit = { 
-					scope:target = { 
-						any_ruler = { 
-							is_alive = no
-							root.father = this 
-						} 
+					root.father = {
+						is_alive = no
+						any_ruling_countries ?= {
+							this ?= scope:target
+						}
 					}
 				}
 				add = {
@@ -901,11 +901,11 @@ signoria_selection = {
 			if = {
 				limit = {
 					exists = root.father.father
-					scope:target = { 
-						any_ruler = { 
-							is_alive = no
-							root.father.father = this 
-						} 
+					root.father.father = {
+						is_alive = no
+						any_ruling_countries ?= {
+							this ?= scope:target
+						}
 					}
 				}
 				add = {
@@ -913,7 +913,6 @@ signoria_selection = {
 					value = 100
 				}
 			}
-
 		}
 	}
 

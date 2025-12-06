@@ -1227,7 +1227,7 @@ fortifications = {
 	tag = "fortifications"
 	###ASIAN castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_castle_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_castle_metadata_os2654x440_d0x50.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1237,7 +1237,7 @@ fortifications = {
 	}
 	###ASIAN bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_bastion_metadata_os2654x440_d0x80_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_bastion_metadata_os2654x440_d0x80.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1247,7 +1247,7 @@ fortifications = {
 	}
 	###ASIAN star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_starfort_metadata_os2654x440_d0x55_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_starfort_metadata_os2654x440_d0x55.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1257,7 +1257,7 @@ fortifications = {
 	}
 	###ASIAN fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_fortress_metadata_os2654x440_d0x20_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/asian/asian_fortress_metadata_os2654x440_d0x20.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1268,7 +1268,7 @@ fortifications = {
 	############################
 	###SYRIAN castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_castle_metadata_os2654x440_d0x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_castle_metadata_os2654x440_d0x60.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1278,7 +1278,7 @@ fortifications = {
 	}
 	###SYRIAN bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_bastion_metadata_os2654x440_d0x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_bastion_metadata_os2654x440_d0x40.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1288,7 +1288,7 @@ fortifications = {
 	}
 	###SYRIAN star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_starfort_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_starfort_metadata_os2654x440_d0x50.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1298,7 +1298,7 @@ fortifications = {
 	}
 	###SYRIAN fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_fortress_metadata_os2654x440_d0x20_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/syrian/syrian_fortress_metadata_os2654x440_d0x20.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1309,7 +1309,7 @@ fortifications = {
 	############################
 	###ASHANTI castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_castle_metadata_os2654x440_d0x85_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_castle_metadata_os2654x440_d0x85.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1319,7 +1319,7 @@ fortifications = {
 	}
 	###ASHANTI bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_bastion_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_bastion_metadata_os2654x440_d0x50.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1329,7 +1329,7 @@ fortifications = {
 	}
 	###ASHANTI star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_starfort_metadata_os2654x440_d0x80_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_starfort_metadata_os2654x440_d0x80.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1339,7 +1339,7 @@ fortifications = {
 	}
 	###ASHANTI fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_fortress_metadata_os2654x440_d0x85_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/ashanti/ashanti_fortress_metadata_os2654x440_d0x85.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1350,7 +1350,7 @@ fortifications = {
 	############################
 	###INDIAN castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_castle_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_castle_metadata_os2654x440_d0x50.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1360,7 +1360,7 @@ fortifications = {
 	}
 	###INDIAN bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_bastion_metadata_os2654x440_d0x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_bastion_metadata_os2654x440_d0x40.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1370,7 +1370,7 @@ fortifications = {
 	}
 	###INDIAN star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_starfort_metadata_os2654x440_d0x55_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_starfort_metadata_os2654x440_d0x55.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1380,7 +1380,7 @@ fortifications = {
 	}
 	###INDIAN fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_fortress_metadata_os2654x440_d0x35_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/indian/indian_fortress_metadata_os2654x440_d0x35.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1391,7 +1391,7 @@ fortifications = {
 	############################
 	###AZTEC castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_castle_metadata_os2654x440_d0x100_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_castle_metadata_os2654x440_d0x100.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1401,7 +1401,7 @@ fortifications = {
 	}
 	###AZTEC bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_bastion_metadata_os2654x440_d0x65_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_bastion_metadata_os2654x440_d0x65.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1411,7 +1411,7 @@ fortifications = {
 	}
 	###AZTEC star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_starfort_metadata_os2654x440_d0x80_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_starfort_metadata_os2654x440_d0x80.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1421,7 +1421,7 @@ fortifications = {
 	}
 	###AZTEC fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_fortress_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/aztec/aztec_fortress_metadata_os2654x440_d0x50.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1432,7 +1432,7 @@ fortifications = {
 	############################
 	###IROQUOIS castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_castle_metadata_os2654x440_d1440x70_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_castle_metadata_os2654x440_d0x70.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1442,7 +1442,7 @@ fortifications = {
 	}
 	###IROQUOIS bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_bastion_metadata_os2654x440_d1440x70_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_bastion_metadata_os2654x440_d0x70.dds"
 		priority = 11
 		scope = location
 		trigger = {
@@ -1452,7 +1452,7 @@ fortifications = {
 	}
 	###IROQUOIS star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_starfort_metadata_os2654x440_d1440x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_starfort_metadata_os2654x440_d0x50.dds"
 		priority = 12
 		scope = location
 		trigger = {
@@ -1462,7 +1462,7 @@ fortifications = {
 	}
 	###IROQUOIS fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_fortress_metadata_os2654x440_d1440x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/iroquois/iroquois_fortress_metadata_os2654x440_d0x50.dds"
 		priority = 13
 		scope = location
 		trigger = {
@@ -1474,7 +1474,7 @@ fortifications = {
 	############################
 	#STOCKADE
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/stockade/stockade_metadata_os2654x440_d0x90_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/stockade/stockade_metadata_os2654x440_d0x90.dds"
 		priority = 5
 		scope = location
 		trigger = {
@@ -1484,7 +1484,7 @@ fortifications = {
 
 	###NORTH GERMAN castle
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_castle_metadata_os2654x440_d1440x75_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_castle_metadata_os2654x440_d0x75.dds"
 		priority = 6
 		scope = location
 		trigger = {
@@ -1493,7 +1493,7 @@ fortifications = {
 	}
 	###NORTH GERMAN bastion
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_bastion_metadata_os2654x440_d0x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_bastion_metadata_os2654x440_d0x50.dds"
 		priority = 7
 		scope = location
 		trigger = {
@@ -1502,7 +1502,7 @@ fortifications = {
 	}
 	###NORTH GERMAN star fort
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_starfort_metadata_os2654x440_d0x80_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_starfort_metadata_os2654x440_d0x80.dds"
 		priority = 8
 		scope = location
 		trigger = {
@@ -1511,7 +1511,7 @@ fortifications = {
 	}
 	###NORTH GERMAN fortress
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_fortress_metadata_os2654x440_d0x95_t.dds"
+		texture_file = "gfx/interface/illustrations/location/fortifications/north_german/north_german_fortress_metadata_os2654x440_d0x95.dds"
 		priority = 9
 		scope = location
 		trigger = {
@@ -1564,7 +1564,7 @@ factories = {
 
 	#ASHANTI factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/ashanti_factory_metadata_os2654x440_d406x10_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/ashanti_factory_metadata_os2654x440_d0x10.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1574,7 +1574,7 @@ factories = {
 	}
 	#ASIAN factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/asian_factory_metadata_os2654x440_d406x10_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/asian_factory_metadata_os2654x440_d0x10.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1584,7 +1584,7 @@ factories = {
 	}
 	#INDIAN factories causing errors
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/indian_factory_metadata_os2654x440_d406x00_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/indian_factory_metadata_os2654x440_d0x00.dds"
 		priority = 10
 		scope = location
 		trigger = {
@@ -1594,7 +1594,7 @@ factories = {
 	}
 	#IROQUOIS factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/iroquois_factory_metadata_os2654x440_d406x0_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/iroquois_factory_metadata_os2654x440_d0x0.dds"
 		priority = 10
 		scope = location
 
@@ -1605,7 +1605,7 @@ factories = {
 	}
 	#AZTEC factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/aztec_factory_metadata_os2654x440_d406x00_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/aztec_factory_metadata_os2654x440_d0x00.dds"
 		priority = 9
 		scope = location
 		trigger = {
@@ -1615,7 +1615,7 @@ factories = {
 	}
 	#SYRIAN factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/syrian_factory_metadata_os2654x440_d406x00_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/syrian_factory_metadata_os2654x440_d0x00.dds"
 		priority = 9
 		scope = location
 		trigger = {
@@ -1625,7 +1625,7 @@ factories = {
 	}
 	#NORTH GERMAN factories
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/factories/north_german_factory_metadata_os2654x440_d406x00_t.dds"
+		texture_file = "gfx/interface/illustrations/location/factories/north_german_factory_metadata_os2654x440_d0x00.dds"
 		priority = 5
 		scope = location
 		trigger = {
@@ -1646,7 +1646,7 @@ religious_buildings = {
 
 	####CHRISTIAN
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious3_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious3_metadata_os2654x440_d0x40.dds"
 		priority = 32
 		scope = location
 
@@ -1657,7 +1657,7 @@ religious_buildings = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious2_metadata_os2654x440_d390x20_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious2_metadata_os2654x440_d0x20.dds"
 		priority = 31
 		scope = location
 
@@ -1667,7 +1667,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious1_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/north_german/north_german_religious1_metadata_os2654x440_d0x40.dds"
 		priority = 30
 		scope = location
 
@@ -1679,7 +1679,7 @@ religious_buildings = {
 
 	####MUSLIM
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious3_metadata_os2654x440_d390x15_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious3_metadata_os2654x440_d0x15.dds"
 		priority = 22
 		scope = location
 
@@ -1689,7 +1689,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious2_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious2_metadata_os2654x440_d0x40.dds"
 		priority = 21
 		scope = location
 
@@ -1699,7 +1699,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious1_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/syrian/syrian_religious1_metadata_os2654x440_d0x40.dds"
 		priority = 20
 		scope = location
 
@@ -1711,7 +1711,7 @@ religious_buildings = {
 
 	####INDIAN
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious1_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious1_metadata_os2654x440_d0x40.dds"
 		priority = 20
 		scope = location
 
@@ -1721,7 +1721,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious2_metadata_os2654x440_d390x55_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious2_metadata_os2654x440_d0x55.dds"
 		priority = 21
 		scope = location
 
@@ -1732,7 +1732,7 @@ religious_buildings = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious3_metadata_os2654x440_d390x30_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/deccan/deccan_religious3_metadata_os2654x440_d0x30.dds"
 		priority = 22
 		scope = location
 
@@ -1744,7 +1744,7 @@ religious_buildings = {
 
 	####ASIAN
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious1_metadata_os2654x440_d390x40_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious1_metadata_os2654x440_d0x40.dds"
 		priority = 20
 		scope = location
 
@@ -1754,7 +1754,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious2_metadata_os2654x440_d390x50_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious2_metadata_os2654x440_d0x50.dds"
 		priority = 21
 		scope = location
 
@@ -1764,7 +1764,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious3_metadata_os2654x440_d390x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/asian/asian_religious3_metadata_os2654x440_d0x60.dds"
 		priority = 22
 		scope = location
 
@@ -1775,7 +1775,7 @@ religious_buildings = {
 	}
 	####AZTEC
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious1_metadata_os2654x440_d390x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious1_metadata_os2654x440_d0x60.dds"
 		priority = 10
 		scope = location
 
@@ -1785,7 +1785,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious2_metadata_os2654x440_d390x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious2_metadata_os2654x440_d0x60.dds"
 		priority = 11
 		scope = location
 
@@ -1796,7 +1796,7 @@ religious_buildings = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious3_metadata_os2654x440_d390x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/aztec/aztec_religious3_metadata_os2654x440_d0x60.dds"
 		priority = 12
 		scope = location
 
@@ -1808,7 +1808,7 @@ religious_buildings = {
 
 	####ASHANTI
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/ashanti/ashanti_religious1_metadata_os2654x440_d600x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/ashanti/ashanti_religious1_metadata_os2654x440_d0x60.dds"
 		priority = 10
 		scope = location
 
@@ -1818,7 +1818,7 @@ religious_buildings = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/location/religious_buildings/ashanti/ashanti_religious2_metadata_os2654x440_d600x60_t.dds"
+		texture_file = "gfx/interface/illustrations/location/religious_buildings/ashanti/ashanti_religious2_metadata_os2654x440_d0x60.dds"
 		priority = 11
 		scope = location
 

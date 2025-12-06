@@ -1689,6 +1689,9 @@ personality_events.38 = {
 		custom_tooltip = {
 			text = personality_events.38.a.tt
 			every_neighbor_country = {
+				limit = {
+					ruler ?= { this != root.ruler }
+				}
 				add_army_tradition = army_tradition_mild_bonus
 				trigger_event_silently = {id = personality_events.58}
 			}

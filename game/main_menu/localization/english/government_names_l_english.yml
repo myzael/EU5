@@ -732,9 +732,17 @@
  rank_duchy_order_ruler_male: "Grandmaster"
  rank_duchy_order_ruler_female: "Grandmistress"
  #
+ rank_duchy_order_subject: "$rank_duchy_order$"
+ rank_duchy_order_subject_ruler_male: "Landmaster"
+ rank_duchy_order_subject_ruler_female: "Landmistress"
+ #
  rank_duchy_order_german: "$rank_duchy_order$"
  rank_duchy_order_german_ruler_male: "Hochmeister"
  rank_duchy_order_german_ruler_female: "Hochmeisterin"
+ #
+ rank_duchy_order_german_subject: "$rank_duchy_order$"
+ rank_duchy_order_german_subject_ruler_male: "Landmeister"
+ rank_duchy_order_german_subject_ruler_female: "Landmeisterin"
  #
  rank_duchy_abbey: "Abbey"
  rank_duchy_abbey_ruler_male: "Abbot"
@@ -921,9 +929,13 @@
  rank_county_tribe_ruler_male: "Chieftain"
  rank_county_tribe_ruler_female: "Chieftainess"
  #
- rank_county_order: "$rank_duchy_order$"
- rank_county_order_ruler_male: "$rank_duchy_order_ruler_male$"
- rank_county_order_ruler_female: "$rank_duchy_order_ruler_female$"
+ rank_county_order_german: "Ballei"
+ rank_county_order_german_ruler_male: "Landkomtur"
+ rank_county_order_german_ruler_female: "Landkomturin"
+ #
+ rank_county_order: "Bailiwick"
+ rank_county_order_ruler_male: "Commander"
+ rank_county_order_ruler_female: "Commander"
  #
  rank_county_theocracy_maya: "$rank_county_kuchkabal$"
  rank_county_theocracy_maya_ruler_male: "Ah K'in"

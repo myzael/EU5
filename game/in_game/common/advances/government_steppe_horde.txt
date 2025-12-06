@@ -14,7 +14,7 @@ horse_lords = {
 	army_cavalry_reinforce_cost_modifier = -0.33
 	army_cavalry_maintenance_cost_modifier = -0.33
 	
-	always_allow_levies = yes
+	always_allow_army_levies = yes
 	
 	unlock_unit = a_steppe_horse_archers
 	unlock_unit = a_a_urughs

@@ -494,6 +494,7 @@ expand_mining_operations = {
 				multiply = 0.05
 				add = 1
 			}
+			check_range_bounds = no
 			change_max_raw_material_workers = 1
 			change_prosperity = prosperity_mild_bonus
 			
@@ -676,6 +677,7 @@ expand_docks = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:dock }
 				is_coastal = yes
@@ -755,6 +757,7 @@ expand_dry_docks = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:dry_dock }
 				is_coastal = yes
@@ -833,6 +836,7 @@ expand_shipyards = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:shipyard }
 				is_coastal = yes
@@ -910,6 +914,7 @@ expand_grand_shipyards = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:grand_shipyard }
 				is_coastal = yes
@@ -984,6 +989,7 @@ expand_naval_bases = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:naval_base }
 				is_coastal = yes

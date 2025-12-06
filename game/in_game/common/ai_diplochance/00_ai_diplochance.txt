@@ -121,11 +121,11 @@ enforce_peace = {
 }
 
 threaten_war = {
+	yesman = 10000
+	relative_strength = 40
 	capital = -100
 	location_value = -1000
-}
-
-demand_access = {
+	recipient_at_war = 10
 }
 
 requestpeace = {

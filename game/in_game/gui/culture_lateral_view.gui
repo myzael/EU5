@@ -11,8 +11,11 @@ types CultureOverview {
 				tooltipwidget = {
 					using = primary_culture_tooltip
 				}
-				blockoverride "subheader_unified_icon_texture" {
-					texture = "gfx/interface/icons/flat_icons/cultural_primary.dds"
+				blockoverride "subheader_unified_icon" {
+					icon = {
+						size = { 40 40 }						
+						texture = "gfx/interface/icons/culture/primary_culture.dds"
+					}
 				}
 				blockoverride "subheader_unified_top_text" {
 					text = "game_concept_primary_culture"
@@ -236,7 +239,7 @@ types CultureOverview {
 
 
 				tooltipmeta = {
-					texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+					texture = "gfx/interface/icons/culture/accepted_culture.dds"
 				}
 				icon_text_2rows = {
 					datacontext = "[Player]"
@@ -251,12 +254,13 @@ types CultureOverview {
 						layoutstretchfactor_vertical = 1
 					}
 					blockoverride "icon_setup" {
-						texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+						texture = "gfx/interface/icons/culture/accepted_culture.dds"
+						size = { 40 40 }
 						glow = {
 							name = "drop_shadow"
-							glow_radius = 3
+							glow_radius = 2
 							color = {0.0 0.0 0.0 1.0}
-							alpha = 0.3
+							alpha = 0.2
 						}
 					}
 					blockoverride "text_align"{
@@ -612,10 +616,14 @@ types CultureOverview {
 									
 									tooltipwidget = {
 										SimpleContextualStringPairTooltipType = {
+											tooltipmeta = {
+												texture = "[GetConceptTexture('population')]"
+												game_concept = "[population|e]"
+											}
 											blockoverride "title_icon" {
 												icon = {
 													using = tooltip_title_icon_size
-													texture = "gfx/interface/icons/location_icons/new/population.dds"
+													texture = "[GetConceptTexture('population')]"
 												}
 											}
 											blockoverride "concept_link" {
@@ -829,6 +837,7 @@ types CultureOverview {
 				# HIRE ARTIST
 				header_action_button_left = {
 					size = { 38 38 }
+					blockoverride "icon_overlay" {}
 					blockoverride "button_icon_stretch_sprite" {}
 					blockoverride "header_button_frame_inner" {visible = no}
 					blockoverride "header_button_icon_size" { size = { 30 30 } }

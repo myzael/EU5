@@ -1,5 +1,6 @@
 ﻿italian_wars = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_italian_wars
 	
 	can_start = {
 		NOT = { is_situation_active = situation:guelphs_and_ghibellines }

@@ -197,7 +197,7 @@
  society_of_jesus: "Society of Jesus"
  society_of_jesus_desc: "The Society of Jesus, commonly known as the Jesuits, is a religious order founded by Ignatius of Loyola as part of the Counter-Reformation. Jesuits are distinguished from other Catholic orders by their emphasis on education, scholarship, and performing missionary work."
  jesuits_allowed: "Jesuits Allowed"
- jesuits_allowed_desc: "The Jesuits are a [ShowReligionGroupAdjective('catholic')] religious order, mostly of Iberian origin, that developed along with the Counter-Reformation. Through missionary work and aggressive conversion, their valuable influence and abilities will allow us to accelerate the conversion of our heathen and heretic population at the cost of reduced tolerance."
+ jesuits_allowed_desc: "The Jesuits are a [ShowReligionAdjective('catholic')] religious order, mostly of Iberian origin, that developed along with the Counter-Reformation. Through missionary work and aggressive conversion, their valuable influence and abilities will allow us to accelerate the conversion of our heathen and heretic population at the cost of reduced tolerance."
  jesuits_not_allowed: "Not Allowed"
  jesuits_not_allowed_desc: "Despite being able to call upon religious orders to convert our heretic population, we shall instead tolerate all our subjects and treat them as true equals rgardless of their beliefs. Jesuit meddling is not welcome in our realm."
  #
@@ -246,7 +246,7 @@
  inquisition_law: "Inquisition Law"
  inquisition_law_desc: "Originally established to combat the heresy of [ShowReligionName('catharism')], the Inquisition has become the [ShowReligionAdjective('catholic')] Church's primary tool for investigating and prosecuting heresy. Via specialized ecclesiastical courts, trained inquisitors investigate potential heretics, extract confessions of religious or moral transgression, and impose punishments ranging from penance to execution, for violating Catholic mores."
  papal_control: "Papal Control"
- papal_control_desc: "The mark of the Holy See carries unprecedented influence throughout the [ShowReligionAdjective('catholic')] world. By making the gravitas and authority of the [GetCountry('PAP').GetGovernment.GetRulerTitle] a driving force behind our state's religious policies, we will accelerate tconversion of the non-believers while maintaining general social order."
+ papal_control_desc: "The mark of the Holy See carries unprecedented influence throughout the [ShowReligionAdjective('catholic')] world. By making the gravitas and authority of the [GetCountry('PAP').GetGovernment.GetRulerTitle] a driving force behind our state's religious policies, we will accelerate the conversion of the non-believers while maintaining general social order."
  local_courts: "Local Courts"
  local_courts_desc: "For too long, heretics in our realm have enjoyed the same protections and privileges as the faithful. It is time to establish local courts with the authority to prosecute those who refuse our faith, regardless of the consequences to social harmony."
  state_inquisitors: "State Inquisitors"
@@ -304,6 +304,7 @@
 #
  heir_religion_law: "Heir Religion"
  heir_religion_law_desc: "The ability to decide the religion of the [heir|e] holds significant importance in matters of succession and governance. It allows rulers and governments to maintain religious stability, ensuring that the beliefs and practices of the ruler align with those of the majority of their subjects. Ultimately, the power to determine the religion of the heir represents an important element in the fine balance of religious freedom, governance, and societal harmony."
+ act_of_settlement_tt: "Has unlocked it through a [dynamic_historical_event|e]"
  heir_special_succession: "Special Succession"
  heir_special_succession_desc: "The religion of the [heir|e] is not determined by the laws but by the [heir_selection|e] itself."
  heir_same_religion: "Same Religion"
@@ -1213,7 +1214,7 @@
 
 
  power_of_the_emperor_law: "Power of the [GetUniqueInternationalOrganization('hre').GetLeaderTitle]"
- power_of_the_emperor_law_desc: "The Power of the [GetUniqueInternationalOrganization('hre').GetLeaderTitle] is a complicated topic. Members of the [GetInternationalOrganizationType('hre').GetName] and [ShowSpecialStatusNamePlural('elector')] alike have conflicting interests with those of the [GetUniqueInternationalOrganization('hre').GetLeaderTitleWithNoTooltip], yet they recognize that a powerless  [GetUniqueInternationalOrganization('hre').GetLeaderTitleWithNoTooltip] is in no position to protect the Empire."
+ power_of_the_emperor_law_desc: "The Power of the [GetUniqueInternationalOrganization('hre').GetLeaderTitle] is a complicated topic. Members of the [GetInternationalOrganizationType('hre').GetName] and [ShowSpecialStatusNamePlural('elector')] alike have conflicting interests with those of the [GetUniqueInternationalOrganization('hre').GetLeaderTitle], yet they recognize that a powerless  [GetUniqueInternationalOrganization('hre').GetLeaderTitle] is in no position to protect the Empire."
  renovatio_policy: "Renovatio Imperii"
  renovatio_policy_desc: "Decentralization in the [GetUniqueInternationalOrganization('hre').GetName] is no more. The entire Empire shall be united into a single nation-state, which will shape the fate of the world itself!"
  revoke_privilegia_policy: "Revoke Privilegia"
@@ -2117,6 +2118,7 @@
  union_sovereign_succession_law_desc: "No member within the [GetInternationalOrganizationType('union').GetName] can determine the legal rights of succession of another member. Each member's policies regarding the throne is a matter of own sovereignty."
  union_codified_inheritance_policy_at: "Every member of the [GetInternationalOrganizationType('union').GetName] adopts the [heir_selection|e] of the [ShowSpecialStatusName('senior_partner')] if possible"
  union_codified_inheritance_policy_bt: "#R Locked [heir_selections|e] can neither be applied nor overriden#!"
+ union_codified_inheritance_policy_ct: "Every member of the [GetInternationalOrganizationType('union').GetName] adopts the [ShowLawName('heir_religion_law')] of the [ShowSpecialStatusName('senior_partner')] if possible"
 
  union_economic_law: "Economy of the Union"
  union_economic_law_desc: "One monarch might rule over multiple thrones, yet the members of the [GetInternationalOrganizationType('union').GetName] are very separated in their economy. This law shall bring all of them closer to each other."
@@ -2154,7 +2156,7 @@
  union_rapid_crown_unification_policy: "Rapid Unification of Crowns"
  union_rapid_crown_unification_policy_desc: "Further improvements in the different parts of the bureaucracy of the [ShowSpecialStatusName('senior_partner')] have led to an optimization of the annexation process of the [ShowSpecialStatusNamePlural('junior_partner')]."
  union_swift_crown_unification_policy: "Swift Unification of Crowns"
- union_swift_crown_unification_policy_desc: "The diplomatic and administraive bureaucracy within the [ShowSpecialStatusName('senior_partner')] has been improved greatly, allowing for a quicker integration of the member states."
+ union_swift_crown_unification_policy_desc: "The diplomatic and administrative bureaucracy within the [ShowSpecialStatusName('senior_partner')] has been improved greatly, allowing for a quicker integration of the member states."
  union_crown_unification_policy: "Unification of Crowns"
  union_crown_unification_policy_desc: "The time has come to centralize the [GetInternationalOrganizationType('union').GetName] at last! Under the graceful watch of the [ShowSpecialStatusName('senior_partner')], the member states have agreed to processes of diplomatic annexation."
  union_federal_union_policy: "Federal Union"

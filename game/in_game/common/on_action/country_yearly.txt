@@ -637,7 +637,7 @@
 		250 = earthquake_events.87
 		250 = earthquake_events.88
 		250 = earthquake_events.89
-
+		250 = earthquake_events.93
 
 
 		50 = grand_embassy.1

@@ -761,7 +761,8 @@
  STATIC_MODIFIER_DESC_good_omen_modifier: "A period of renewal in conjunction with tame weather and ample food are some of the good signs set forth, the Gods are pleased."
 
  #Ottomans
-
+ STATIC_MODIFIER_NAME_coins_in_our_name_modifier: "Coins in Our Name"
+ STATIC_MODIFIER_NAME_influence_of_the_old_capital_modifier: "Influence of the Old Capital"
  STATIC_MODIFIER_NAME_osmans_dream_modifier: "Osman's Dream"
  STATIC_MODIFIER_DESC_osmans_dream_modifier: "It is our destiny to rule an empire that will last until the End of Days."
  STATIC_MODIFIER_NAME_ahi_bureaucrats: "Ahi Bureaucrats"
@@ -1094,7 +1095,7 @@
  STATIC_MODIFIER_NAME_fra_appeasing_norman_lords: "Appeasing Disloyal Norman Lords"
  STATIC_MODIFIER_NAME_fra_disloyal_norman_lords_appeased: "Disloyal Lords Appeased"
  STATIC_MODIFIER_NAME_fra_loyal_nrm_lands: "Autonomous Royal Domain of Normandy"
- STATIC_MODIFIER_NAME_fra_success_of_the_praguerie_faction: "Sucess of the Praguerie Faction"
+ STATIC_MODIFIER_NAME_fra_success_of_the_praguerie_faction: "Success of the Praguerie Faction"
  STATIC_MODIFIER_NAME_fra_royal_expenditure_managed: "Royal Expenditure Managed"
  STATIC_MODIFIER_NAME_fra_enterprising_nobles: "Enterprising Nobles"
  STATIC_MODIFIER_NAME_fra_louis_legal_reforms: "Legal Reform of the French Bureaucracy"
@@ -1272,6 +1273,7 @@
  STATIC_MODIFIER_NAME_iro_matriarchal_agriculture: "Matriarchal Agriculture"
 
 #Scotland
+ STATIC_MODIFIER_NAME_sbl_heir_of_empty_coat: "Heir of Empty Coat"
  STATIC_MODIFIER_NAME_sco_civil_war_aggressive: "Aggressive Push into Balliol Lands"
  STATIC_MODIFIER_NAME_sco_civil_war_defensive: "Forcing Balliol's Hand"
  STATIC_MODIFIER_NAME_sbl_english_backing: "Backing of the English Crown"
@@ -2132,6 +2134,7 @@
  
  #Denmark
  STATIC_MODIFIER_NAME_dan_integrating_scania: "Integrating Scania"
+ STATIC_MODIFIER_NAME_royal_dowry_modifier: "Royal Dowry"
 
  # Haudenosaunee/Iroquois
  STATIC_MODIFIER_NAME_iro_shikellamy_pennsylvania: "Administration of Pennsylvania"

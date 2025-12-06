@@ -1,53 +1,53 @@
 types DisasterPanel
 {
-	type abilities_block = widget {
-		layoutpolicy_horizontal = expanding
-		hbox = {
-			margin = { 10 0 }
-			spacing = 5
-			navigational_button_alt = {
-				using = bg_circle_alt_brown
-				size = { 30 30 }
-				blockoverride "button_icon_stretch_sprite" {}
+	# type abilities_block = widget {
+	# 	layoutpolicy_horizontal = expanding
+	# 	hbox = {
+	# 		margin = { 10 0 }
+	# 		spacing = 5
+	# 		navigational_button_alt = {
+	# 			using = bg_circle_alt_brown
+	# 			size = { 30 30 }
+	# 			blockoverride "button_icon_stretch_sprite" {}
 
-				blockoverride "icon_texture" {
-					texture = "gfx/interface/buttons/flats/history.dds"
-					texture_density = 2
-					using = icon_gold_texture_alt
-				}
+	# 			blockoverride "icon_texture" {
+	# 				texture = "gfx/interface/buttons/flats/history.dds"
+	# 				texture_density = 2
+	# 				using = icon_gold_texture_alt
+	# 			}
 
-				blockoverride "icon_size" {
-					size = { 60% 60% }
-				}
-				onclick = "[ShowRulingHistoryForCountry(DisasterView.GetDisaster.GetOwner)]"
-				tooltipwidget = {
-					basicfunctionaltooltip = {}
-				}
-				datacontext = "[DisasterView.GetDisaster.GetOwner]"
-				action_tooltip = {
-					title = "RULING_HISTORY_COUNTRY_SIDEMENU"
-				}
-			}
+	# 			blockoverride "icon_size" {
+	# 				size = { 60% 60% }
+	# 			}
+	# 			onclick = "[ShowRulingHistoryForCountry(DisasterView.GetDisaster.GetOwner)]"
+	# 			tooltipwidget = {
+	# 				basicfunctionaltooltip = {}
+	# 			}
+	# 			datacontext = "[DisasterView.GetDisaster.GetOwner]"
+	# 			action_tooltip = {
+	# 				title = "RULING_HISTORY_COUNTRY_SIDEMENU"
+	# 			}
+	# 		}
 
-			hbox = {
-				datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
-				character_abilities = {}
-				blockoverride "abilities_bg" {
-					background = {
-						texture = "gfx/interface/component_tiles/square_tile.dds"
-						texture_density = 2
-						alpha = 0.3
-						blend_mode = overlay
-						modify_texture = {
-							using = color_black_texture
-							blend_mode = multiply
-						}
-					}
-				}
-			}
-			expand = {}
-		}
-	}
+	# 		hbox = {
+	# 			datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
+	# 			character_abilities = {}
+	# 			blockoverride "abilities_bg" {
+	# 				background = {
+	# 					texture = "gfx/interface/component_tiles/square_tile.dds"
+	# 					texture_density = 2
+	# 					alpha = 0.3
+	# 					blend_mode = overlay
+	# 					modify_texture = {
+	# 						using = color_black_texture
+	# 						blend_mode = multiply
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 		expand = {}
+	# 	}
+	# }
 
 	type disaster_panel = lateralview {
 		name = "disaster_panel"
@@ -92,7 +92,7 @@ types DisasterPanel
 				using = bg_main_inner_notabs_alt
 				using = window_main_tabs_margin_alt
 				using = standard_disaster_panel
-				spacing = 3
+				spacing = 5
 			}
 		}
 	}
@@ -103,11 +103,11 @@ template standard_disaster_panel {
 		# Subheader
 		widget = {
 			layoutpolicy_horizontal = expanding
-			size = { -1 40 }
+			size = { -1 45 }
 
 			# COUNTRY
 			hbox = {
-				spacing = 5
+				spacing = 10
 				layoutpolicy_horizontal = expanding
 				position = {10 0}
 
@@ -172,15 +172,84 @@ template standard_disaster_panel {
 			}
 		}
 
-		vbox = {
+		hbox = {
 			using = layoutpolicy_expanding
-			block "main_image" {}
+			block "main_image" {
+				using = one_country_header_template
+
+				blockoverride "CountryContext" {
+					datacontext = "[DisasterView.GetDisaster.GetOwner]"
+				}
+				blockoverride "country_container_visible" {
+					visible = no
+				}
+				blockoverride "one_country_header_character" {
+					block "one_country_header_disaster_character" {
+						datacontext = "[DisasterView.GetDisaster.GetOwner.GetGovernment.GetRulerOrRegent]"
+					}
+				}
+				# blockoverride "history_button_anchor" {}
+				blockoverride "character_portrait_anchor" {}
+				blockoverride "character_name_maximumsize" {
+					maximumsize = { 270 -1 }
+				}
+				blockoverride "one_country_header_background" {}
+				
+				expand = {}
+			}
 		}
 	}
 
 	vbox = {
+		margin_top = -5
 		using = layoutpolicy_expanding
         using = bg_secondary_inner_alt
+
+		# TABS
+		header_secondary_tabs = {
+			blockoverride "content" {
+				icon = {
+					using = layoutpolicy_expanding
+					text_single = {
+						size = { 100% 100%}
+						autoresize = no
+						text = "DISASTER_BREAKDOWN"
+						align = center
+						using = Font_Type_Headers
+						using = Font_Size_Medium
+						parentanchor = center|vcenter
+						position = { 0 6 }
+					}
+					using = button_main_tab_texture
+					using = button_secondary_tab_alt_color
+					frame = 2
+
+					widget = {
+						size = { 100% 100% }
+			
+						background = {
+							using = tab_selection_texture
+							blend_mode = alphamultiply
+							alpha = 0.3
+			
+							modify_texture = {
+								using = color_dark_blue_texture
+							}
+							modify_texture = {
+								using = overlay_leather_texture
+								blend_mode = overlay
+								alpha = 0.7
+							}
+						}
+					}
+
+					hbox = {
+						using = button_secondary_tab_hbox_props
+						block "content" {}
+					}
+				}
+			}
+		}
 
 		scrollarea = {
 			using = layoutpolicy_expanding
@@ -202,7 +271,7 @@ template standard_disaster_panel {
 				vbox = {
 					layoutpolicy_horizontal = expanding
 					spacing = 10
-					margin = { 5 10 }
+					margin = { 5 0 }
 					#margin_right = 20
 
 					#expand = {}

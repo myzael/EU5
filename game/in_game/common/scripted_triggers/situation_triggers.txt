@@ -395,7 +395,12 @@ rtr_situation_end_requirements = {
 			legitimacy >= 90
 			stability >= 30
 			current_celestial_authority = { value = 50 }
-			international_organization:red_turban_rebels = { total_members < 1 }
+			trigger_if = {
+				limit = {
+					exists = international_organization:red_turban_rebels
+				}
+				international_organization:red_turban_rebels = { total_members < 1 }
+			}
 		}
 	}
 }
@@ -1073,12 +1078,18 @@ western_schism_end_trigger = {
 			}
 			OR = {
 				custom_tooltip = {
-					text = western_schism_2_tt 
+					text = western_schism_2_tt
 					var:western_schism_pope_score >= 2
+					situation:western_schism = {
+						has_variable = western_schism_ended_by_event
+					}
 				}
 				custom_tooltip = {
 					text = western_schism_3_tt
 					var:western_schism_anti_pope_score >= 2
+					situation:western_schism = {
+						has_variable = western_schism_ended_by_event
+					}
 				}
 			}
 		}

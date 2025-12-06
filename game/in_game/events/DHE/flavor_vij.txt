@@ -2071,6 +2071,7 @@ flavor_vij.33 = {
 
 
 flavor_vij.1000 = {
+	randomlog = yes #Tracking desynch from 20251103
 	hide_portraits = yes
 	type = country_event
 	title = flavor_vij.1000.title

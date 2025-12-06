@@ -2375,7 +2375,7 @@
  KLE_ADJ: "Clevian"
  WTG: "Wittgenstein"
  WTG_ADJ: "Wittgensteinian"
- MRS: "Mörs"
+ MRS: "Moers"
  MRS_ADJ: "Moersian"
  ANB: "Arnsberg"
  ANB_ADJ: "Arnsberger"
@@ -3186,6 +3186,8 @@
  HZH_ADJ: "Hóngzhōu"
  XSY: "Xīshānyáng" #西山阳
  XSY_ADJ: "Xīshānyáng"
+ LNG: "Liáng" #梁
+ LNG_ADJ: "Liáng"
  CDL: "Dali"
  CDL_ADJ: "Dali"
  CHH: "Chiang Hung"

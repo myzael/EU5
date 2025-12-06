@@ -86,8 +86,11 @@ situation_panel = {
 			}
 		}
 
-
 		horizontal_scroll_card = {
+			blockoverride "card_visible" {
+				visible = "[SituationView.GetPlayer.HasActiveRebels]"
+			}
+
 			blockoverride "text_top" {
 				text = "[SituationView.GetPlayer.GetHighestProgressRebel.GetNameWithNoTooltip]"
 				default_format = "#yellow_titles"

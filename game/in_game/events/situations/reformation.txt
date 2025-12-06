@@ -82,9 +82,6 @@ reformation.2 = {
 	desc = reformation.2.desc
 
 
-
-
-
 	option = {
 		name = reformation.2.a
 		add_country_modifier = {
@@ -831,7 +828,7 @@ reformation.13 = { #Migration of Minority
 		name = reformation.13.b
 
 		change_societal_value = { type = spiritualist_vs_humanist value = societal_value_minor_move_to_right }
-		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_penalty }
+		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_penalty }
 	}
 }
 

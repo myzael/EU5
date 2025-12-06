@@ -1401,6 +1401,7 @@ parliaments.24 = {
 			}
 			order_by = location_tax_base
 			max = 10
+			check_range_bounds = no
 			add_to_list = list_of_high_tax_base_locations
 		}
 		random_in_list = {

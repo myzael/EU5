@@ -11,7 +11,7 @@
  free_cities.3.b: "Scrape together what little men we have and deal with it ourselves."
  free_cities.4.title: "The [SCOPE.sCountry('riots_source').GetLongNameWithNoTooltip] Begs for Our Help"
  free_cities.4.desc: "We received an envoy this morning from the [SCOPE.sCountry('riots_source').GetLongName] detailing the city council's utter failure to satiate the needs of their working classes. The messenger spoke of fires smoldering and raging in the streets of [SCOPE.sCountry('riots_source').GetCapital.GetName] as a metaphor for the discontent that the [ShowSpecialStatusName('free_city')] struggles with, and claims that if nothing is done then the city's peasants will soon raise their pitchforks in rebellion. They humbly plead for soldiers and gold, so that they may be able to bring swift justice to those discontent citizens."
- free_cities.4.a: "It's a reasonable request, and one we will honor."
+ free_cities.4.a: "It is a reasonable request, and one we will honor."
  free_cities.4.b: "The problem is deep within themselves, we will not send help."
  free_cities.5.title: "The [GetUniqueInternationalOrganization('hre').GetLeaderTitle]'s Response"
  free_cities.5.desc: "For every day the discontent grows and no matter how we try to use the men we have at our disposal, once one fire is quenched another smolders into flames before our eyes. Where is that messenger? We hope our humble request to [SCOPE.sCountry('hre_leader').GetGovernment.GetRuler.GetName] will not anger [SCOPE.sCountry('hre_leader').GetGovernment.GetRuler.GetHimHerFormal], and that [SCOPE.sCountry('hre_leader').GetGovernment.GetRuler.GetSheHe] will agree to help us."

@@ -619,6 +619,7 @@ flavor_tim.8 = {
 	}
 
 	after = {
+		activate_situation = situation:rise_of_timur
 		scope:target_country = {
 			every_neighbor_country = {
 				limit = {

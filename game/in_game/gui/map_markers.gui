@@ -158,8 +158,7 @@ widget = {
 	size = { 50 50 }
 	position = { 0 2 }
 
-	datacontext = "[ParliamentMarker]"
-	datacontext = "[ParliamentMarker.GetGovernment]"
+	visible = "[ParliamentMarker.IsVisible]"
 
 	piechart = {
 		parentanchor = center
@@ -170,14 +169,14 @@ widget = {
 
 		pieslice_no_highlight = {
 			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
-			value = "[Government.GetParliament.GetParliamentDurationProgress]"
+			value = "[ParliamentMarker.GetCountry.GetGovernment.GetParliament.GetParliamentDurationProgress]"
 			color = { 0.01 0.6 0.9 1 }
 			alwaystransparent = yes
 		}
 
 		pieslice_no_highlight = {
 			texture = "gfx/interface/pie_charts/pie_chart_alpha_80.dds"
-			value = "[Subtract_float('(float)1.0', FixedPointToFloat(Government.GetParliament.GetParliamentDurationProgress))]"
+			value = "[Subtract_float('(float)1.0', FixedPointToFloat(ParliamentMarker.GetCountry.GetGovernment.GetParliament.GetParliamentDurationProgress))]"
 			color = { 0.0 0.1 0.1 1 }
 			alwaystransparent = yes
 		}
@@ -3494,19 +3493,29 @@ container = {
 	allow_outside = yes
 
 	datacontext = "[FortMarker.GetLocation]"
-	icon = {
-		parentanchor = center
-		texture = "[GetBuildingIcon(Location.GetBestFortBuilding.GetType)]"
-		size = { 30 30 }
-
-		glow = {
-			glow_radius = 2
-			color = {0.0 0.0 0.0 1.0}
-			alpha = 0.5
+	flowcontainer = {
+		location_rank_icon = {
+			visible = "[Or(Location.IsProvinceCapital, Location.IsCapital)]"
+			parentanchor = center
+			blockoverride "icon_size" {
+				size =  { 30 30 }
+				parentanchor = bottom
+			}
 		}
+		icon = {
+			parentanchor = center
+			texture = "[GetBuildingIcon(Location.GetBestFortBuilding.GetType)]"
+			size = { 30 30 }
 
-		tooltipwidget = {
-			using = Garrison_tooltip
+			glow = {
+				glow_radius = 2
+				color = {0.0 0.0 0.0 1.0}
+				alpha = 0.5
+			}
+
+			tooltipwidget = {
+				using = Garrison_tooltip
+			}
 		}
 	}
 }
@@ -4094,7 +4103,7 @@ widget = {
 ### BlockedVision Marker
 widget = {
 	name = "blocked_vision_marker"
-	size = { 25 25}
+	size = { 20 20 }
 	widgetanchor = left
 	position = { 0 2 }
 

@@ -182,7 +182,7 @@
 
  subject_interaction_events.47.title: "Corrupt Diplomats"
  subject_interaction_events.47.desc: "Our envoys in [target.GetCapital.GetName] have discovered that a number of key [target.GetAdjective] diplomats would be prepared to push through the union of our countries immediately—for a price."
- subject_interaction_events.47.a: "It's just business."
+ subject_interaction_events.47.a: "It is just business."
  subject_interaction_events.47.b: "We must do this honestly, or not at all!"
 
  subject_interaction_events.48.title: "[target.GetAdjectiveWithNoTooltip] Claimant"

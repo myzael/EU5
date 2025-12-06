@@ -24,7 +24,22 @@
 		}
  	}
 	connections={
-		"Connection 20"={
+		"Connection 17"={
+			use_length_from_source_state=yes
+		}
+ 		"Connection 9"={
+			use_length_from_source_state=yes
+		}
+ 		"Connection 11"={
+			use_length_from_source_state=yes
+		}
+ 		"Connection 13"={
+			use_length_from_source_state=yes
+		}
+ 		"Connection 15"={
+			use_length_from_source_state=yes
+		}
+ 		"Connection 20"={
 			use_length_from_source_state=yes
 		}
  		"Connection 22"={

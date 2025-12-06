@@ -19,6 +19,7 @@
     }
 
     relation_type_for_ai = friendly
+    show_break_alert = yes
 	
 	
 	diplomatic_capacity_cost = alliance_upkeep_cost
@@ -103,6 +104,7 @@
 
     cancel_effect = {
         scope:actor = {
+            custom_tooltip = cancel_alliance_custom_tt
             add_truce_with = {
                 target = scope:recipient
                 mutual = yes
@@ -197,11 +199,11 @@
                         limit = {
                             not = { is_subject_or_below_of = scope:actor }
                         }
-                        add = {
-                            value = military_strength
+                        subtract = {
+                            value = country_strength
                         }
                     }
-                    divide = military_strength
+                    divide = country_strength
                     multiply = 10
                 }
             }
@@ -240,64 +242,41 @@
             }
         }
 
-        if = {
-            limit = {
-                scope:recipient.num_relations_above_limit > 0
-            }
-            add = {
-                desc = "DIPLOREASON_MAX_RELATIONS"
-                value = scope:recipient.num_relations_above_limit           
-                multiply = -20
-                add = -40
-            }
-        }
-
         add = {
             desc = "RECIPIENT_WOULD_NEED_TO_PAY_FOR_DIPLOMACY"
             value = scope:recipient.diplomatic_capacity_without_maintenance
             subtract = scope:recipient.used_diplomatic_capacity
-            subtract = "scope:recipient.diplomatic_capacity_of_new_relation(scope:actor|scope:scripted_relation_type)"     
+            subtract = "scope:recipient.diplomatic_capacity_of_new_relation(scope:actor|scope:scripted_relation_type)"
+            divide = scope:recipient.diplomatic_capacity_without_maintenance 
             max = 0
-            multiply = 25
+            multiply = 100
         }
     }
 
     wants_to_keep_diplo_chance = {
         recipient_is_rival = -100
         recipient_overlord_is_rival = -100
-        base = 20
         trust_in_recipient = 1
         border_distance = -0.05
         same_court_language = 10
         royal_ties = 2
         strategic_interest = 1
         common_threat = 0.4
+        reverse_relative_strength = 50
     }
     wants_to_keep = {
         add = {
+            desc = "DIPLOREASON_NEGATIVE_OPINION"
             value = "scope:actor.opinion(scope:recipient)"
-            max = 0
+            max = 0        
         }
         add = {
+            desc = "DIPLOREASON_POSITIVE_OPINION"
             value = "scope:actor.opinion(scope:recipient)"
             multiply = 0.25
-            min = 0
+            min = 0       
         }
-        if = {
-            limit = {
-                scope:actor.num_relations_above_limit > 0
-            }
-            add = {
-                value = scope:actor.num_relations_above_limit           
-                multiply = -20
-                add = -40
-            }
-        }
-
-        add = {
-            value = "scope:actor.conquer_desire(scope:recipient)"
-            multiply = -1
-        }
+        
 
         if = {
             limit = {
@@ -314,15 +293,8 @@
             add = {
                 desc = "ACTOR_DESIRES_RECIPIENTS_LOCATIONS"
                 value = "scope:actor.conquer_desire(scope:recipient)"
-                multiply = -1
+                multiply = -0.5
             }
-        }
-
-        add = {
-            value = "scope:actor.relative_strength(scope:recipient)"
-            multiply = 2
-            add = -1
-            multiply = 50
         }
 
         if = {
@@ -339,36 +311,55 @@
                     }
                 }
             }
-            add = {
-                desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
-                # Check if the country needs allies at all
-                value = scope:actor.country_needs_allies_value
-                max = 25
-                min = 0
+
+            scope:actor = {         
+                add = {
+                    desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
+                    # Check if the country needs allies at all
+                    value = country_needs_allies_value
+                    max = 25
+                    min = 0
+                }
             }
         }
         scope:recipient = {
             add = {
-                desc = "COALITION_GRADE_ANTAGONISM_TOWARDS_THEM"
+                desc = "COALITION_GRADE_ANTAGONISM_TOWARDS_RECIPIENT"
                 value = {
                     every_country_with_coalition_grade_antagonism_against_us = {                    
                         limit = {
                             not = { is_subject_or_below_of = scope:recipient }
                         }
                         subtract = {
-                            value = military_strength
+                            value = country_strength
                         }
                     }
-                    divide = military_strength
+                    divide = country_strength
                     multiply = 10
                 }
             }
         }
+
         add = {
+            desc = "ACTOR_WOULD_NEED_TO_PAY_FOR_DIPLOMACY"
             value = scope:actor.diplomatic_capacity_without_maintenance
             subtract = scope:actor.used_diplomatic_capacity  
+            divide = scope:actor.diplomatic_capacity_without_maintenance
             max = 0
-            multiply = 25
+            multiply = 100
+        }
+
+        #Don't break alliances during wars
+        if = {
+            limit = {
+                scope:actor = {
+                    at_war = yes
+                }
+            }
+            add = {
+                desc = "ACTOR_IS_IN_DIFFERENT_WARS"
+                value = 100
+            }
         }
     }
 }	

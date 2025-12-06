@@ -5,6 +5,8 @@ tribes_land_rights = {	#oighreachd for the Scots
 	country_modifier = {
 		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
 		global_tribes_estate_power = 0.25
+		global_monthly_prosperity = 0.001
+		monthly_towards_decentralization = societal_value_monthly_move
 	}
 }
 
@@ -14,6 +16,8 @@ tribes_allow_gatherings = {
 	country_modifier = {
 		tribes_estate_target_satisfaction = medium_privilege_target_satisfaction
 		global_tribes_estate_power = 0.25
+		stability_cost = -0.1
+		monthly_towards_communalism = societal_value_monthly_move
 	}
 }
 

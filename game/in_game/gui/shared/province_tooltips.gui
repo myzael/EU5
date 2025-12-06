@@ -186,9 +186,15 @@ template province_tooltip {
                         blockoverride "column_title_right" { }
 
                         blockoverride "field_left" {
-                            icon = {
-                                size = { 25 25 }
-                                texture = "[Location.GetRankIcon]"
+                            widget = {
+                                size = { 20 20 }
+                                icon = {
+                                    size = { 100% 100% }
+                                    texture = "[Location.GetRankIcon]"
+                                }
+                                tooltipwidget = {
+                                    using = location_rank_tooltip
+                                }
                             }
                         }
 

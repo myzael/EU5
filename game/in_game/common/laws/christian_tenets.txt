@@ -6,7 +6,7 @@
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	locked = {
@@ -236,7 +236,7 @@ christology = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	high_christology = {
@@ -298,7 +298,7 @@ liturgical_practices = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	byzantine_rites = {
@@ -395,7 +395,7 @@ essence_tenet = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	accept_essence_tenet = {
@@ -461,7 +461,7 @@ person_tenet = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	accept_person_tenet = {
@@ -527,7 +527,7 @@ prosopon_tenet = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	accept_prosopon_tenet = {
@@ -595,7 +595,7 @@ christological_debates_tenet = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	allow_christological_debates_tenet = {
@@ -661,7 +661,7 @@ double_sabbath_tenet = {
 		international_organization_type = international_organization_type:autocephalous_patriarchate
 	}
 	allow = {
-		
+		leader_country ?= { can_pay_price = price:christian_tenet_price }
 	}
 
 	allow_double_sabbath_tenet = {

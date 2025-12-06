@@ -1,5 +1,6 @@
 ﻿rise_of_timur = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_rise_of_timur
 	can_start = {
 		has_enabled_situation_trigger = { type = rise_of_timur }
 		country_exists = c:TIM

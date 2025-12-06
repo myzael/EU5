@@ -1839,6 +1839,7 @@ recently_inspected_fortifications_modifier = {
 	}
 
 	local_defensive = 0.2
+	local_max_control = 0.1
 }
 
 decaying_defenses_modifier = {
@@ -1864,8 +1865,8 @@ sco_english_enclave = {
 		category = location
 		decaying = yes
 	}
-	local_defensive = -0.33
-	local_max_control = -0.33
+	local_defensive = -0.25
+	local_max_control = -0.20
 }
 
 fra_venus_tard_brigands_pacified = {
@@ -3311,4 +3312,17 @@ new_capital_modifier = {
 	local_migration_attraction = 1
 	local_unrest = -0.2
 	local_build_buildings_cost = -0.33
+}
+
+influence_of_the_old_capital_modifier = {
+	game_data = { category = location }
+	
+	local_proximity_source = 70
+}
+
+royal_dowry_modifier = {
+	game_data = { category = location }
+	
+	local_max_control = 0.2
+	local_monthly_control = 0.02
 }

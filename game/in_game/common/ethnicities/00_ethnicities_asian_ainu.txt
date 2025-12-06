@@ -86,10 +86,6 @@ asian_ainu_ethnicity = {
 		1 = { name = ainu_hair 		range = { 0.0 1.0 } }
 	}
 
-	beards = {
-		1 = { name = ainu_beards 		range = { 0.0 1.0 } }
-	}
-
 	# eyelashes = {
 	# 	60 = { name = no_eyelashes		range = { 0.0 1.0 } }
 	# 	2 = { name = standard_eyelashes		range = { 0.0 1.0 } }

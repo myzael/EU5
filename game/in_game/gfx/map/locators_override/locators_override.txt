@@ -256,3 +256,15 @@
 	province = malbork
 	type = vfx
 }
+
+43 = {  
+	position = {8349.87 3.5126057 6289.352}
+	province = prague
+	type = city
+}
+
+44 = {  
+	position = {8349.87 3.5126057 6289.352}
+	province = prague
+	type = vfx
+}

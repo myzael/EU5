@@ -5618,6 +5618,10 @@ proclaim_decree_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/middle_kingdom_tribute_price_cost_modifier.dds" 
 }
 
+exempt_from_tribute_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/middle_kingdom_tribute_price_cost_modifier.dds" 
+}
+
 can_create_red_turban_rebellions_cb = {
 	positive = "gfx/interface/icons/modifier_types/can_create_red_turban_rebellions_cb.dds"
 }
@@ -5980,6 +5984,16 @@ always_allow_levies = {
 	negative = "gfx/interface/icons/modifier_types/always_allow_levies_negative.dds"  
 }
 
+always_allow_navy_levies= {
+	positive = "gfx/interface/icons/modifier_types/always_allow_levies_positive.dds" 
+	negative = "gfx/interface/icons/modifier_types/always_allow_levies_negative.dds"
+}
+
+always_allow_army_levies= {
+	positive = "gfx/interface/icons/modifier_types/always_allow_levies_positive.dds" 
+	negative = "gfx/interface/icons/modifier_types/always_allow_levies_negative.dds"
+}
+
 excluded_from_paying_tithe = {
 	positive = "gfx/interface/icons/modifier_types/excluded_from_paying_tithe.dds" 
 }
@@ -6039,6 +6053,10 @@ rto_press_claims_price_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/rto_press_claims_price_cost_modifier.dds"
 }
 
+rto_create_uc_bey_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/uc_bey_pays_cost_modifier.dds" #
+}
+
 succession_crisis_price_cost_modifier = {
 	positive = "gfx/interface/icons/modifier_types/succession_crisis_price_cost_modifier.dds"
 }
@@ -6077,10 +6095,6 @@ can_promote_mamluks = {
 
 can_build_mamluk_barracks = {
 	positive = "gfx/interface/icons/modifier_types/can_build_mamluk_barracks.dds"
-}
-
-levy_combat_efficiency = {
-	positive = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds"
 }
 
 levy_combat_efficiency_modifier = {

@@ -11,7 +11,7 @@
 		ruler = { has_dynasty = yes }
 		any_rebel = {
 			rebel_name_key = war_of_succession_pretender
-			rebel_progress >= 25
+			rebel_progress >= 0.25
 	    }
 		any_character = {
 			is_alive = yes

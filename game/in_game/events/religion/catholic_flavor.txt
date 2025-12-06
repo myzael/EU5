@@ -635,9 +635,8 @@ catholic_flavor.12 = { #Sublimis Deus
 	}
 
 	immediate = {
-		
 		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-
+		get_pope_character_scope = yes
 	}
 
 	option = {

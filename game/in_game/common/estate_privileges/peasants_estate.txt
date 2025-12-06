@@ -187,6 +187,7 @@ partial_yield = {
 
 	country_modifier = {
 		global_peasants_food_consumption = -0.1
+		global_laborers_food_consumption = -0.1
 		monthly_towards_free_subjects = societal_value_monthly_move
 		global_max_rgo_size_modifier_in_rural = -0.1
 		global_peasants_estate_power = 0.33

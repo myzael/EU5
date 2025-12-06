@@ -1850,8 +1850,8 @@ flavor_hol.34 = {
 		tag = NED
 		tag = HOL
 		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		to = 1500.1.1
+		monthly_chance = 100
 	}
 
 	fire_only_once = yes
@@ -1868,10 +1868,10 @@ flavor_hol.34 = {
 		}
 		has_variable = ned_grain_trade_start_flag
 		location:lubeck.market = {
-			"merchant_power_in_market(root)" > 100
+			"merchant_power_in_market(root)" > 25
 		}
 		location:riga.market = {
-			"merchant_power_in_market(root)" > 100
+			"merchant_power_in_market(root)" > 25
 		}
 	}
 

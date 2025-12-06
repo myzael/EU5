@@ -1,14 +1,4 @@
-﻿home_of_hussars = {
-	age = age_1_traditions
-	potential = {
-		has_or_had_tag = SER
-	}
-	army_cavalry_power = 0.10
-	unlock_unit = a_serbian_hussars
-	
-	requires = cultural_traditions_law_advance
-}
-
+﻿
 serbian_mining = {
 	age = age_1_traditions
 	potential = {
@@ -28,6 +18,18 @@ mimic_the_phoenix = {
 	
 	requires = government_size_renaissance
 }
+
+home_of_hussars = {
+	age = age_2_renaissance
+	potential = {
+		has_or_had_tag = SER
+	}
+	army_cavalry_power = 0.10
+	unlock_unit = a_serbian_hussars
+	
+	requires = mimic_the_phoenix
+}
+
 
 rallying_the_troops = {
 	age = age_2_renaissance 

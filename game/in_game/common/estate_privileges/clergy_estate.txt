@@ -68,6 +68,7 @@ clergy_military_orders = {
 		OR = {
 			has_reform = government_reform:military_order_reform
 			any_neighbor_country = { NOT = { religion.group = root.religion.group } }
+			culture = { has_culture_group = culture_group:iberian_group }
 		}
 	}
 	allow = {

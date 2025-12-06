@@ -30,7 +30,7 @@
 			data = name
 		}
 		visible = {
-			disaster_type = disaster_type:french_wars_of_religion
+			disaster_type = disaster_type:french_wars_religion
 			disaster_is_active = yes
 		}
 	}

@@ -729,6 +729,7 @@ finance_the_armory = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
 				NOT = { has_building = building_type:armory }
@@ -813,6 +814,7 @@ expand_barracks = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
 				NOT = { has_building = building_type:barracks }

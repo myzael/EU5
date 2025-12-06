@@ -70,6 +70,16 @@
 				}
 			}
 		}
+		ai_interaction_source_list = {
+			continent:europe = {
+				every_country_with_capital_in_geography = {
+					limit = {
+						can_lead_international_organization = scope:recipient
+					}
+					add_to_list = source
+				}
+			}
+		}
 		target_flag = vote
 		allow_self = yes
 		name = "election_select_country"
@@ -159,6 +169,17 @@
 					change_character_religion = religion:calvinist
 				}
 			}
+		}
+	}
+	vote_effect = {
+		assert_if = {
+			limit = {
+				exists = scope:vote
+				scope:vote = {
+					NOT = { can_lead_international_organization = scope:recipient }
+				}
+			}
+			text = "Detective. Arriving. On the scene."
 		}
 	}
 
@@ -267,7 +288,18 @@
 						}
 					}
 					add = {
-						desc = "erbkaisertum"
+						desc = "erbkaisertum_policy"
+						value = 100000
+					}
+				}
+				else_if = {
+					limit = {
+						exists = scope:recipient
+						is_ai = no	#check ONLY the player as this is a very heavy trigger and the AI is incapable of voting for any non-eligible country anyways
+						NOT = { can_lead_international_organization = scope:recipient }
+					}
+					subtract = {
+						desc = "LEADERSHIP_CANNOT_LEAD_ORGANIZATION"
 						value = 100000
 					}
 				}

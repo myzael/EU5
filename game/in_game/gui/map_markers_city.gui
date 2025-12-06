@@ -1,3 +1,6 @@
+@city_marker_icon_size = 20
+@city_marker_fort_icon_size = 16
+
 template MapMarkerFlags
 {
 	country_flag_small = {
@@ -140,11 +143,47 @@ types map_marker_city {
 			}
 		}
 	}
+	
+	type location_rank_icon = widget {
+		block "icon_size" {
+			size =  { @city_marker_icon_size @city_marker_icon_size }
+		}
+		icon = {
+			parentanchor = center
+			visible = "[And(Location.GetRank.IsCity, Location.GetRank.IsMaxRank)]"
+			texture = "[Location.GetRankIcon]"
+			block "icon_size" {
+				size =  { @city_marker_icon_size @city_marker_icon_size }
+			}
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightProvince(Location.GetProvince)]"
+		}
+		icon = {
+			parentanchor = center
+			visible = "[And(Location.GetRank.IsCity, Not(Location.GetRank.IsMaxRank))]"
+			texture = "[Location.GetRankIcon]"
+			block "icon_size" {
+				size =  { @city_marker_icon_size @city_marker_icon_size }
+			}
+			scale = 0.8
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightProvince(Location.GetProvince)]"
+		}
+		icon = {
+			parentanchor = center
+			visible = "[Not(Location.GetRank.IsCity)]"
+			texture = "[Location.GetRankIcon]"
+			block "icon_size" {
+				size =  { @city_marker_icon_size @city_marker_icon_size }
+			}
+			scale = 0.7
+			onmousehierarchyenter = "[PdxGuiWidget.SetHighlightProvince(Location.GetProvince)]"
+		}
+		tooltipwidget = {
+			using = location_rank_tooltip
+		}
+	}
 }
 
 ### CITY
-@city_marker_icon_size = 24
-@city_marker_fort_icon_size = 16
 
 widget = {
 	name = "city_marker"
@@ -194,19 +233,10 @@ widget = {
 				minimumsize = { -1 @city_marker_icon_size }
 				set_parent_size_to_minimum = yes
 				ignoreinvisible = yes
-				spacing = 3 
+				spacing = 2
 
-				widget = {
-					size = { @city_marker_icon_size @city_marker_icon_size }
-					icon = {
-						texture = "[CityMarker.GetLocation.GetRankIcon]"
-						size = { @city_marker_icon_size @city_marker_icon_size }
-						onmousehierarchyenter = "[PdxGuiWidget.SetHighlightProvince(CityMarker.GetLocation.GetProvince)]"
-					}
+				location_rank_icon = {
 					datacontext = "[CityMarker.GetLocation]"
-					tooltipwidget = {
-						using = location_rank_tooltip
-					}
 				}
 
 				hbox = {

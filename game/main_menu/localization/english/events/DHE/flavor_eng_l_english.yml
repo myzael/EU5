@@ -1576,7 +1576,7 @@
  flavor_eng.202.title: "[young_roger.GetNameWithNoTooltip]"
  flavor_eng.202.desc: "In 1327, [GetCharacter('eng_roger_mortimer_1st_earl_of_march').GetName], one of the most influential nobles of his age, treasonously rebelled against [GetCharacter('eng_edward_ii').GetShortName] and murdered him. Soon after, he was hanged for his trouble.\n\nHis grandson [young_roger.GetName] survives as a young but exemplary knight. He would make a fine commander, though making an example of him might discourage future treason."
  flavor_eng.202.a: "Keep your enemies close."
- flavor_eng.202.b: "It's too dangerous."
+ flavor_eng.202.b: "It is too dangerous."
 
  flavor_eng.203.title: "[target_location.GetNameWithNoTooltip] Bridge is Falling Down"
  flavor_eng.203.desc: "The bustling [target_location.GetName] Bridge has stood as the only crossing point on the River Thames since 1209, but it is also one of the busiest commercial streets in the whole of the City. Festooned with haberdasheries, glovers, and other fashionable boutiques, the bridge attracts the wealthiest clientele in all [ROOT.GetCountry.GetName].\n\nHowever, several days after the bridge wardens discovered cracks in the masonry, two arches suddenly collapsed on the southern end, causing irreparable damage to the original structure.\n\nFortunately nobody was killed, but the bridge is in dire need of rebuilding, lest it will need to be completely dismantled. With which materials should we restore the arches?"

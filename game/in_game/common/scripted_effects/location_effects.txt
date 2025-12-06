@@ -294,10 +294,17 @@ create_some_heretics = {
 		40 = {
 			trigger = {
 				religion:lollardy = { is_religion_enabled = yes }
-				owner = { has_primary_or_accepted_culture = culture:english }
+				owner = {
+					any_primary_or_accepted_culture = {
+						language = language:english_language
+					}
+				}
 			}
 			ordered_pop = {
-				limit = { religion = religion:catholic }
+				limit = { 
+					religion = religion:catholic
+					culture.language = language:english_language
+				}
 				order_by = pop_size
 				max = 2
 				split_pop = {

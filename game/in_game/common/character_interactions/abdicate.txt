@@ -4,6 +4,28 @@
 	on_own_nation = yes
 
 	price = price:abdicate_price
+	
+	
+	price_modifier = {
+		add = 1
+		if = {
+			limit = { 
+				scope:recipient ?= {	
+					age_in_years > 40
+				}
+			}
+
+			subtract = {
+				desc = "CHAR_AGE_LABEL"
+				scope:recipient = {
+					value = age_in_years
+					subtract = 40
+					multiply = 0.02
+				}
+			}
+		}
+	}
+
 
 	potential = {
 	}

@@ -1,5 +1,6 @@
 ﻿golden_age_of_piracy = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_golden_age_of_piracy
 	
 	can_start = {
 		current_age_or_later = { age = age_5_absolutism }

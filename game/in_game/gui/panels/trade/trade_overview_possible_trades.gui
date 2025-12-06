@@ -188,7 +188,7 @@ types PossibleTrades {
 					click_modifier = default
 
 					title = "POSSIBLE_TRADE_CAPACITY_INCREASE"
-					conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+					conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 					enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"
 					on_action = "[PossibleTrade.IncreaseDesiredMerchantCapacity]"
 				}
@@ -199,7 +199,7 @@ types PossibleTrades {
 					click_modifier = alt
 
 					title = "POSSIBLE_TRADE_CAPACITY_INCREASE_SLOW"									
-					conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+					conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 					enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"
 					on_action = "[PossibleTrade.IncreaseDesiredMerchantCapacitySlower]"
 				}
@@ -210,7 +210,7 @@ types PossibleTrades {
 					click_modifier = shift
 
 					title = "POSSIBLE_TRADE_CAPACITY_INCREASE_MAX"					
-					conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+					conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 					enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"
 					on_action = "[PossibleTrade.IncreaseToMaxMerchantCapacity]"
 				}
@@ -846,7 +846,7 @@ types PossibleTrades {
 							click_type = left
 							click_mode = single
 							click_modifier = default
-							conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+							conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 							title = "POSSIBLE_GOODS_MOVED_INCREASE"
 							on_action = "[PossibleTrade.IncreaseDesiredGoodsMoved]"							
 							enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"
@@ -856,7 +856,7 @@ types PossibleTrades {
 							click_type = left
 							click_mode = single
 							click_modifier = alt
-							conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+							conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 							title = "POSSIBLE_GOODS_MOVED_INCREASE_SLOW"
 							on_action = "[PossibleTrade.IncreaseDesiredGoodsMovedSlower]"
 							enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"
@@ -866,7 +866,7 @@ types PossibleTrades {
 							click_type = left
 							click_mode = single
 							click_modifier = shift
-							conditions = "[MakeItFailIfLoc(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
+							conditions = "[MakeItFailIf(Not(And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))), SelectLocalization(Not(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity)), 'NO_SURPLUS_FROM_MARKET', Select_CString(GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity), '', 'NOT_ENOUGH_TRADE_CAPACITY')))]"
 							title = "POSSIBLE_GOODS_MOVED_INCREASE_MAX"
 							on_action = "[PossibleTrade.IncreaseToMaxMerchantCapacity]"
 							enabled = "[And(GreaterThan_CFixedPoint(PossibleTrade.GetMaxPossibleMarketSurplus, PossibleTrade.GetDesiredMerchantCapacity), GreaterThan_CFixedPoint(PossibleTrade.GetMaxMerchantCapacity, PossibleTrade.GetDesiredMerchantCapacity))]"

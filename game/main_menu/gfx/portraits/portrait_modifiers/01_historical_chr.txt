@@ -17,7 +17,7 @@
 			}
 		}
 		weight = {
-			base = 100
+			base = 0
 
 			modifier = {
 				add = 1000
@@ -761,6 +761,32 @@
 				template = no_beard
 				range = { 0 1 } # For the randomness to work correctly
 			}
+			# accessory = {
+			# 	mode = replace
+			# 	gene = hair_styles
+			# 	template = all_hair
+			# 	accessory = male_german_generic_crown_hair
+			# }
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:bra_ludwig_v_wittelsbach
+				this = character:bra_ludwig_v_wittelsbach
+			}
+		}
+	}
+
+	brandenbrug_ludwig_v_wittelsbach_hat = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
 			accessory = {
 				mode = replace
 				gene = hair_styles
@@ -781,6 +807,10 @@
 				exists = this
 				exists = character:bra_ludwig_v_wittelsbach
 				this = character:bra_ludwig_v_wittelsbach
+				NOT = { 
+					is_ruler = yes
+					any_ruling_countries = { country_rank_level > 1 }
+				}
 			}
 		}
 	}
@@ -2855,6 +2885,58 @@
 				exists = this
 				exists = character:pol_nicholas_copernicus
 				this = character:pol_nicholas_copernicus
+			}
+		}
+	}
+
+	pru_immanuel_kant = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_north_german_hair_short_curly
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:pru_immanuel_kant
+				this = character:pru_immanuel_kant
+			}
+		}
+	}
+
+	fra_francois_marie_voltaire = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hat_hair_b_01
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:fra_francois_marie_voltaire
+				this = character:fra_francois_marie_voltaire
 			}
 		}
 	}

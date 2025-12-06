@@ -706,6 +706,13 @@ jewish_district_construction = {
 	category = building_construction
 }
 
+japanese_clan_building_construction = {
+	masonry = 0.1
+	lumber = 0.5
+
+	category = building_construction
+}
+
 
 ###########################################################################
 # code will use the following as default if no scripted in the building

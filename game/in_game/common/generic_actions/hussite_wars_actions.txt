@@ -686,6 +686,7 @@ join_the_papal_side_hw_action = {
 		scope:actor = {
 			at_war = no
 			is_subject = no
+			is_during_bankruptcy = no
 			OR = {
 				capital.region = c:BOH.capital.region
 				capital.region = c:PAP.capital.region
@@ -709,15 +710,18 @@ join_the_papal_side_hw_action = {
 			}
 		}
 		c:PAP = {
-			any_current_war = {
-				OR = {
-					AND = {
-						attacker_leader = c:PAP
-						defender_leader = c:BOH
-					}
-					AND = {
-						attacker_leader = c:BOH
-						defender_leader = c:PAP
+			custom_tooltip = {
+				text = bohemia_and_pope_at_war_with_both_being_leaders_tt
+				any_current_war = {
+					OR = {
+						AND = {
+							attacker_leader = c:PAP
+							defender_leader = c:BOH
+						}
+						AND = {
+							attacker_leader = c:BOH
+							defender_leader = c:PAP
+						}
 					}
 				}
 			}
@@ -749,11 +753,6 @@ join_the_papal_side_hw_action = {
 
 	effect = { 
 		c:PAP = {
-			create_relation = {
-				first = this
-				second = scope:actor
-				type = relation_type:alliance
-			}
 			if = {
 				limit = {
 					any_current_war = {
@@ -771,7 +770,13 @@ join_the_papal_side_hw_action = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					any_current_war = {
+						defender_leader = c:PAP
+						attacker_leader = c:BOH
+					}
+				}
 				random_current_war = {
 					limit = { 
 						defender_leader = c:PAP
@@ -782,156 +787,41 @@ join_the_papal_side_hw_action = {
 					}
 				}
 			}
+			else = { custom_tooltip = join_current_war_against_bohemia_tt }
 		}
 	}
 
 	ai_will_do = {
-		value = -10
+		subtract = {
+			value = 75
+			desc = BASE_VALUE
+		}
+		if = {
+			limit = { scope:actor.war_exhaustion != 0 }
+			subtract = {
+				desc = war_exhaustion
+				value = scope:actor.war_exhaustion
+				multiply = 10
+			}
+		}
+		if = {
+			limit = { scope:actor.num_loans > 0 }
+			subtract = {
+				value = scope:actor.num_loans
+				multiply = -10
+			}
+		}
 		add = {
-			desc = "NUM_LOANS_TOOLTIP"
-			value = scope:actor.num_loans
-			multiply = -10
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					at_war = yes
-				}
-			}
-			add = {
-				desc = "IS_AT_WAR"
-				value = -25
-			}
-		}
-		add = {
-			desc = "IS_BANKRUPT_TOOLTIP"
-			if = {
-				limit = {	
-					scope:actor ?= { 
-						is_during_bankruptcy = yes
-					}
-				}
-				value = -1000
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					has_casus_belli_on = c:BOH
-				}
-			}
-			add = {
-				desc = "[casus_belli|e]"
-				value = 5
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					is_rival_of = c:BOH
-				}
-			}
-			add = {
-				desc = "[rival|e]"
-				value = 10
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					is_enemy_of = c:BOH
-				}
-			}
-			add = {
-				desc = "[enemy|e]"
-				value = 10
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					war_exhaustion != 0
-				}
-			}
-			add = {
-				desc = "[war_exhaustion|e]"
-				value = {
-					add = scope:actor.war_exhaustion
-					multiply = -2
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:BOH
-						value > 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_BOH_TT"
-				value = {
-					add = "scope:actor.opinion(c:BOH)"
-					multiply = -0.2
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:BOH
-						value < 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_BOH_TT"
-				value = {
-					add = "scope:actor.opinion(c:BOH)"
-					multiply = 0.2
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:PAP
-						value > 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_PAP_TT"
-				value = {
-					add = "scope:actor.opinion(c:PAP)"
-					multiply = 0.1
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:PAP
-						value < 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_BOH_TT"
-				value = {
-					add = "scope:actor.opinion(c:BOH)"
-					multiply = -0.3
-				}
-			}
+			value = "scope:actor.opinion(c:PAP)"
+			desc = "$PAP$ [opinion|e] of [actor.GetName]"
 		}
 		add = {
 			desc = "[GetCountry('PAP').GetAdjective] [diplomatic_reputation|e]"
 			value = c:PAP.modifier:diplomatic_reputation
+		}
+		subtract = {
+			value = "scope:actor.opinion(c:BOH)"
+			desc = "Our opinion of $BOH$"
 		}
 		subtract = {
 			desc = "[GetCountry('BOH').GetAdjective] [diplomatic_reputation|e]"
@@ -939,14 +829,12 @@ join_the_papal_side_hw_action = {
 		}
 		if = {
 			limit = {
-				scope:actor = {
-					religion.group = religion_group:christian
-					religion = religion:catholic
-				}
+				scope:actor = { religion = religion:catholic }
 			}
 			add = {
 				desc = "[GetCountry('BOH').GetAdjective] [heretic_tolerance|e]"
 				value = c:BOH.modifier:tolerance_heretic
+				multiply = 5
 			}
 		}
 		if = {
@@ -954,17 +842,17 @@ join_the_papal_side_hw_action = {
 				c:BOH = { has_country_modifier = promoted_radicals_modifier }
 			}
 			add = {
-			desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_radicals_modifier')]"
-				value = 3
+				desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_radicals_modifier')]"
+				value = 5
 			}
 		}
 		if = {
 			limit = {
 				c:BOH = { has_country_modifier = promoted_moderates_modifier }
 			}
-			add = {
-			desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_moderates_modifier')]"
-				value = -3
+			subtract = {
+				desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_moderates_modifier')]"
+				value = 5
 			}
 		}
 	}
@@ -1022,19 +910,24 @@ join_the_hussite_side_hw_action = {
 				}
 			}
 		}
-		c:BOH = {
-			any_current_war = {
-				OR = {
-					AND = {
-						attacker_leader = c:PAP
-						defender_leader = c:BOH
-					}
-					AND = {
-						attacker_leader = c:BOH
-						defender_leader = c:PAP
+		custom_tooltip = {
+			text = bohemia_and_pope_at_war_with_both_being_leaders_tt
+			c:BOH = {
+				any_current_war = {
+					OR = {
+						AND = {
+							attacker_leader = c:PAP
+							defender_leader = c:BOH
+						}
+						AND = {
+							attacker_leader = c:BOH
+							defender_leader = c:PAP
+						}
 					}
 				}
 			}
+		}
+		c:BOH = {
 			opinion = {
 				target = scope:actor
 				value > 0
@@ -1066,11 +959,6 @@ join_the_hussite_side_hw_action = {
 
 	effect = { 
 		c:BOH = {
-			create_relation = {
-				first = this
-				second = scope:actor
-				type = relation_type:alliance
-			}
 			if = {
 				limit = {
 					any_current_war = {
@@ -1088,7 +976,13 @@ join_the_hussite_side_hw_action = {
 					}
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					any_current_war = {
+						defender_leader = c:PAP
+						attacker_leader = c:BOH
+					}
+				}
 				random_current_war = {
 					limit = { 
 						defender_leader = c:PAP
@@ -1099,156 +993,38 @@ join_the_hussite_side_hw_action = {
 					}
 				}
 			}
+			else = { custom_tooltip = join_current_war_against_papal_states_tt }
 		}
 	}
 
 	ai_will_do = {
-		value = -10
-		add = {
-			desc = "NUM_LOANS_TOOLTIP"
-			value = scope:actor.num_loans
-			multiply = -10
+		subtract = {
+			value = 75
+			desc = BASE_VALUE
 		}
 		if = {
-			limit = { 
-				scope:actor ?= {
-					at_war = yes
-				}
-			}
-			add = {
-				desc = "IS_AT_WAR"
-				value = -25
-			}
-		}
-		add = {
-			desc = "IS_BANKRUPT_TOOLTIP"
-			if = {
-				limit = {	
-					scope:actor ?= { 
-						is_during_bankruptcy = yes
-					}
-				}
-				value = -1000
+			limit = { scope:actor.war_exhaustion != 0 }
+			subtract = {
+				desc = war_exhaustion
+				value = scope:actor.war_exhaustion
+				multiply = 10
 			}
 		}
 		if = {
-			limit = { 
-				scope:actor ?= {
-					has_casus_belli_on = c:PAP
-				}
-			}
-			add = {
-				desc = "[casus_belli|e]"
-				value = 5
+			limit = { scope:actor.num_loans > 0 }
+			subtract = {
+				value = scope:actor.num_loans
+				multiply = -10
 			}
 		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					is_rival_of = c:PAP
-				}
-			}
-			add = {
-				desc = "[rival|e]"
-				value = 10
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					is_enemy_of = c:PAP
-				}
-			}
-			add = {
-				desc = "[enemy|e]"
-				value = 10
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor = {
-					war_exhaustion != 0
-				}
-			}
-			add = {
-				desc = "[war_exhaustion|e]"
-				value = {
-					add = scope:actor.war_exhaustion
-					multiply = -2
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:BOH
-						value > 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_BOH_TT"
-				value = {
-					add = "scope:actor.opinion(c:BOH)"
-					multiply = 0.15
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:BOH
-						value < 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_BOH_TT"
-				value = {
-					add = "scope:actor.opinion(c:BOH)"
-					multiply = -0.2
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:PAP
-						value > 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_PAP_TT"
-				value = {
-					add = "scope:actor.opinion(c:PAP)"
-					multiply = -0.25
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:actor ?= {
-					opinion = {
-						target = c:PAP
-						value < 0
-					}
-				}
-			}
-			add = {
-				desc = "OUR_OPINION_OF_PAP_TT"
-				value = {
-					add = "scope:actor.opinion(c:PAP)"
-					multiply = 0.1
-				}
-			}
-		}
+		subtract = "scope:actor.opinion(c:PAP)"
 		subtract = {
 			desc = "[GetCountry('PAP').GetAdjective] [diplomatic_reputation|e]"
 			value = c:PAP.modifier:diplomatic_reputation
+		}
+		add = {
+			value = "scope:actor.opinion(c:BOH)"
+			desc = "Our [opinion|e] of $BOH$"
 		}
 		add = {
 			desc = "[GetCountry('BOH').GetAdjective] [diplomatic_reputation|e]"
@@ -1256,11 +1032,30 @@ join_the_hussite_side_hw_action = {
 		}
 		if = {
 			limit = {
-				scope:actor ?= { religion = religion:catholic }
+				scope:actor = { religion = religion:catholic }
 			}
 			add = {
 				desc = "[GetCountry('BOH').GetAdjective] [heretic_tolerance|e]"
 				value = c:BOH.modifier:tolerance_heretic
+				multiply = 5
+			}
+		}
+		if = {
+			limit = {
+				c:BOH = { has_country_modifier = promoted_radicals_modifier }
+			}
+			subtract = {
+				desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_radicals_modifier')]"
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				c:BOH = { has_country_modifier = promoted_moderates_modifier }
+			}
+			add = {
+				desc = "[GetCountry('BOH').GetAdjective] [ShowModifier('promoted_moderates_modifier')]"
+				value = 5
 			}
 		}
 	}

@@ -8,7 +8,7 @@
     
     definition_modifier = {
         global_pop_food_consumption = -0.1
-        retreat_delay = -2
+        retreat_delay = -5
     }
     
     opinions = {

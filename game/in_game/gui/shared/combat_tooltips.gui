@@ -310,6 +310,11 @@ template SubUnitType_tooltip {
 				}
 				textcontext = "[SubUnitType.GetModifierImpact]"
 			}
+			
+			TooltipStringPairList = {
+				visible = "[SubUnitType.IsForLevy]"
+				textcontext ="[SubUnitType.GetLevyCombatPowerInfo]"
+			}
 
 			TooltipColumnList = {
 				visible = "[Or(SubUnitType.HasCombatImpact, SubUnitType.HasModifierImpact)]"

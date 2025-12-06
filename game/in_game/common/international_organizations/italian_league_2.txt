@@ -17,10 +17,6 @@
 		block_from_change_to_empire_rank = yes
 	}
 
-	laws = {
-		mutual_defense_law = possible_defense_policy
-	}
-
 	on_creation = {
 		add_to_global_variable_list = {
 			name = iw_italian_leagues_list
@@ -34,7 +30,13 @@
 	
 	#Yes. but you will be removed from the League
 	can_declare_war = {
-		always = yes
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
 	}
 	
 	has_military_access = {
@@ -260,104 +262,312 @@
 	}
 
 	ai_desire_to_join = {
+		
 		add = {
-			desc = "VOTE_BASE_VALUE"
-			value = -50
-		}
-		add = {
-            desc = "RELATIVE_STRENGTH_ROOT"
-            value = 100
-            multiply = "scope:actor.relative_strength(root)"
-            divide = 10
-        }
-		if = {
-			limit = {
-				root = {
-					NOT = { is_neighbor_of = scope:actor }
-				}
-			}
-			add = {
-				desc = "NOT_NEIGHBORS_AI_WEIGHT"
-				value = -25
-			}
-		}
-		if = {
-			limit = {
-				has_positive_opinion = scope:actor
-			}
-			add = {
-				desc = "OPINION_OF_FRANCE_LEADER"
-				value = {
-					scope:recipient = {
-						leader_country = {
-							root = {
-								value = this_opinion_of_prev
-								multiply = 0.4
-							}
-						}
+			desc = "OPINION_OF_FRANCE_LEADER"
+			value = {
+				scope:actor = {
+					root = {
+						value = this_opinion_of_prev
+						multiply = 0.4
 					}
 				}
-			}
-		}
-		if = {
-			limit = {
-				opinion = {
-					target = scope:recipient.leader_country
-					value < -20
-				}
-			}
-			add = {
-				desc = "POOR_RELATIONS"
-				value = -1000
 			}
 		}
 		add = {
 			desc = "IO_LEADER_DIP_REP"
 			scope:recipient = {
-				value = leader_country.modifier:diplomatic_reputation
-				multiply = 2
+				value = scope:actor.modifier:diplomatic_reputation
+				multiply = 5
+			}
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					any_international_organization_member = {
+						giving_scripted_relation = {
+							type = relation_type:alliance
+							target = root
+						}
+					}
+				}
+				every_international_organization_member = {
+					limit = {
+						giving_scripted_relation = {
+							type = relation_type:alliance
+							target = root
+						}
+					}
+					add = {
+						value = 5
+						desc = "IO_HOSTS_FRIENDS"
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_rival_of = root
+						is_enemy_of = root
+					}
+				}
+				every_international_organization_member = {
+					limit = {
+						OR = {
+							is_rival_of = root
+							is_enemy_of = root
+						}
+					}
+					add = {
+						value = -20
+						desc = "IO_HOSTS_ENEMIES_OR_RIVALS"
+					}
+				}
+			}
+		}
+		subtract = {
+			desc = "IO_LEADER_ANTAGONISM"
+			scope:actor = {
+				root = {
+					value = this_antagonism_towards_prev
+					multiply = 2
+				}
 			}
 		}
 		if = {
 			limit = {
-				NOT = { within_diplomatic_range = scope:actor }
+				any_international_organizations_member_of = {
+					OR = {
+						this = international_organization:italian_league_1
+						this = international_organization:italian_league_3
+						this = international_organization:foreign_league_france
+						this = international_organization:foreign_league_hre
+						this = international_organization:foreign_league_iberia
+					}
+				}
 			}
-			add = {
-				desc = "OUTSIDE_OF_DIP_RANGE"
-				value = -1000
+			subtract = {
+				value = 10
+				desc = "ALREADY_MEMBER_OF_LEAGUE"
 			}
-		}
-		add = {
-			desc = "DISTANCE_FROM_FRANCE_LEADER"
-			value = "border_distance_to(scope:recipient.leader_country)"
-			multiply = -0.2
-			min = -1000
-		}
-		if = {
-			limit = { at_war = yes }
-			add = {
-				desc = "IS_AT_WAR"
-				value = -1000
+			if = {
+				limit = { is_member_of_international_organization = international_organization:italian_league_1 }
+				international_organization:italian_league_1 = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							root = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = root
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							OR = {
+								is_rival_of = root
+								is_enemy_of = root
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
-		}
-		if = {
-			limit = { 
-				is_subject_of = scope:actor 
-				is_disloyal_subject = yes
+			else_if = {
+				limit = { is_member_of_international_organization = international_organization:italian_league_3 }
+				international_organization:italian_league_3 = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							root = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = root
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							OR = {
+								is_rival_of = root
+								is_enemy_of = root
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
-			add = { 
-				desc = "[disloyal_subject|e]"
-				value = -1000
+			else_if = {
+				limit = { is_member_of_international_organization = international_organization:foreign_league_france }
+				international_organization:foreign_league_france = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							root = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = root
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							OR = {
+								is_rival_of = root
+								is_enemy_of = root
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
-		}
-		else_if = {
-			limit = {
-				is_subject = yes
-				NOT = { top_overlord ?= scope:actor }
+			else_if = {
+				limit = { is_member_of_international_organization = international_organization:foreign_league_iberia }
+				international_organization:foreign_league_iberia = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							root = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = root
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							OR = {
+								is_rival_of = root
+								is_enemy_of = root
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
-			add = { 
-				desc = "[subject|e]"
-				value = -1000
+			else = {
+				international_organization:foreign_league_hre = {
+					leader_country = {
+						subtract = {
+							desc = "CURRENT_LEAGUE_LEADER_OPINION"
+							root = {
+								value = "opinion(prev)"
+							}
+						}
+						subtract = {
+							value = modifier:diplomatic_reputation
+							multiply = 5
+							desc = "CURRENT_LEAGUE_LEADER_DIP_REP"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							giving_scripted_relation = {
+								type = relation_type:alliance
+								target = root
+							}
+						}
+						subtract = {
+							value = 5
+							desc = "CURRENT_IO_HOSTS_FRIENDS"
+						}
+					}
+					every_international_organization_member = {
+						limit = {
+							this != root
+							OR = {
+								is_rival_of = root
+								is_enemy_of = root
+							}
+						}
+						add = {
+							value = 20
+							desc = "CURRENTIO_HOSTS_ENEMIES_OR_RIVALS"
+						}
+					}
+				}
 			}
 		}
 	}
@@ -365,28 +575,11 @@
 	ai_desire_to_allow_new_member = {
 		add = {
 			desc = "WE_WANT_THE_ORGANIZATION_TO_GROW"
-			value = 20
+			value = 5
 		}
-		if = {
-			limit = {
-				root.leader_country = { is_during_bankruptcy = yes }
-			}
-			add = {
-				desc = "WE_EXPERIENCE_BANKRUPTCY"
-				value = -1000
-			}
-		}
-		if = {
-			limit = {
-				leader_country = { modifier:aggressiveness_modifier > 0 }
-			}
-			add = {
-				desc = "CURRENT_APPETITE_FOR_EXPANSION"
-				root.leader_country = { 
-					value = modifier:aggressiveness_modifier 
-					multiply = 100
-				}
-			}
+		subtract = {
+			desc = "CONQUEST_DESIRE_ON_US"
+			value = "root.leader_country.conquer_desire(scope:actor)"
 		}
 	}
 }

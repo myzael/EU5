@@ -32,14 +32,14 @@
 	}
 	
 	on_start = {
-		trigger_event_non_silently = savonarola.1
+		trigger_event_non_silently = savonarola_disaster.1
 	}
 	on_end = {
 		set_variable = {
 			name = had_savonarola_disaster
 			years = 100
 		}
-		trigger_event_non_silently = savonarola.11
+		trigger_event_non_silently = savonarola_disaster.11
 	}
 	
 	on_monthly = {
@@ -50,14 +50,14 @@
 		hidden_effect = {
 			random_list = {
 		
-				100 = { trigger_event_non_silently = savonarola.2 }
-				100 = { trigger_event_non_silently = savonarola.3 }
-				100 = { trigger_event_non_silently = savonarola.4 }
-				100 = { trigger_event_non_silently = savonarola.5 }
-				100 = { trigger_event_non_silently = savonarola.7 }
-				100 = { trigger_event_non_silently = savonarola.8 }
-				100 = { trigger_event_non_silently = savonarola.9 }
-				100 = { trigger_event_non_silently = savonarola.10 }
+				100 = { trigger_event_non_silently = savonarola_disaster.2 }
+				100 = { trigger_event_non_silently = savonarola_disaster.3 }
+				100 = { trigger_event_non_silently = savonarola_disaster.4 }
+				100 = { trigger_event_non_silently = savonarola_disaster.5 }
+				100 = { trigger_event_non_silently = savonarola_disaster.7 }
+				100 = { trigger_event_non_silently = savonarola_disaster.8 }
+				100 = { trigger_event_non_silently = savonarola_disaster.9 }
+				100 = { trigger_event_non_silently = savonarola_disaster.10 }
 				1000 = { custom_tooltip = no_event_occurs_tt }
 			}
 		}

@@ -270,13 +270,13 @@ corruption_event.9 = {
 	}
 
 	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		hidden_effect = {
 			random_owned_location = {
 				limit = {
 					NOT = { dominant_culture = owner.culture }
 				}
 				save_scope_as = culture_location
+				event_illustration_culture_effect = { culture = dominant_culture }
 			}
 		}
 	}

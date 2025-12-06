@@ -192,6 +192,7 @@ flavor_sco.3 = {
 			order_by = population
 			limit = { has_building = building_type:calvinist_preachers }
 			max = 3
+			check_range_bounds = no
 			destroy_all_buildings_of_type = building_type:calvinist_preachers
 		}
 	}
@@ -2151,10 +2152,20 @@ flavor_sco.111 = { # English Border Enclaves
  	option = { # These enclaves must be rooted out!
 		name = flavor_sco.111.a
 		historical_option = yes
+		add_prestige = prestige_mild_bonus
+		add_stability = stability_weak_penalty
 		c:ENG = {
 			add_opinion = { target = c:SCO modifier = opinion_sco_attacking_enclaves }
 		}
 		add_country_modifier = { modifier = sco_purging_enclaves years = 10 mode = add_and_extend }
+		change_societal_value = {
+			type = offensive_vs_defensive
+			value = societal_value_move_to_left
+		}
+		change_societal_value = {
+			type = belligerent_vs_conciliatory
+			value = societal_value_large_move_to_left
+		}
 		every_political_border_location = {
 			limit = { is_neighbor_of = c:ENG }
 			add_location_modifier = {
@@ -2170,11 +2181,21 @@ flavor_sco.111 = { # English Border Enclaves
 
  	option = { # Leave the enclaves uncontested for now
 		name = flavor_sco.111.b
+		add_prestige = prestige_mild_penalty
+		add_stability = stability_mild_bonus
+		change_societal_value = {
+			type = centralization_vs_decentralization
+			value = societal_value_move_to_right
+		}
+		change_societal_value = {
+			type = belligerent_vs_conciliatory
+			value = societal_value_move_to_right
+		}
 		every_political_border_location = {
 			limit = { is_neighbor_of = c:ENG }
 			add_location_modifier = {
  				modifier = sco_english_enclave
- 				years = 5
+ 				years = 10
  				mode = add_and_extend
  			}
 		}

@@ -3,8 +3,11 @@
 levy_a_scottish_highlander = {
 	size = 0.1
 	unit = a_scottish_highlander
-
+	
 	allowed_pop_type = peasants
+	allowed_pop_type = laborers
+	allowed_pop_type = tribesmen
+
 	allowed_culture = highland
 	allowed_culture = norse_gael
 }
@@ -22,8 +25,7 @@ levy_a_late_paik = {
 levy_a_militiamen = {
 	size = 0.01
 	unit = a_militiamen
-
+	
 	allowed_pop_type = peasants
-	allowed_pop_type = clergy
-	allowed_pop_type = burghers
+	allowed_pop_type = laborers
 }

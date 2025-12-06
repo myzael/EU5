@@ -585,42 +585,13 @@ lots_of_hussites = {
 		every_pop = {
 			limit = { religion = religion:catholic }
 			random_list = {
-				20 = {
-					split_pop = {
-						fraction = 0.1
-						religion = religion:hussite
-					}
-				}
-				20 = {
-					split_pop = {
-						fraction = 0.2
-						religion = religion:hussite
-					}
-				}
-				20 = {
-					split_pop = {
-						fraction = 0.4
-						religion = religion:hussite
-					}
-				}
-				20 = {
-					split_pop = {
-						fraction = 0.55
-						religion = religion:hussite
-					}
-				}
-				10 = {
-					split_pop = {
-						fraction = 0.70
-						religion = religion:hussite
-					}
-				}
-				10 = {
-					split_pop = {
-						fraction = 0.9
-						religion = religion:hussite
-					}
-				}
+				10 = { }																# ~10% no change
+				10 = { split_pop = { fraction = 0.05 religion = religion:hussite } }	# ~10% convert 5%
+				20 = { split_pop = { fraction = 0.1  religion = religion:hussite } }	# ~20% convert 10%
+				40 = { split_pop = { fraction = 0.2  religion = religion:hussite } }	# ~40% convert 20%
+				10 = { split_pop = { fraction = 0.4  religion = religion:hussite } }	# ~10% convert 40%
+				5  = { split_pop = { fraction = 0.55 religion = religion:hussite } }	# ~5% convert 55%
+				5  = { split_pop = { fraction = 0.7  religion = religion:hussite } }	# ~5% convert 70%
 			}
 		}
 	}
@@ -812,7 +783,7 @@ turn_japanese_clan_into_normal_tag = {
 				}
 				if = {
 					limit = {
-						NOR = {
+						NAND = {
 							location = location:kyoto
 							building_type = building_type:gosho
 						}
@@ -875,15 +846,19 @@ promote_to_head_of_cabinet_effect_base = {
 		}
 	}
 	$target$ = {
-		if = { 		limit = { has_estate = estate_type:crown_estate }		PREV = { add_head_of_cabinet_modifier = { estate = crown_estate } }		}
-		else_if = { limit = { has_estate = estate_type:nobles_estate }		PREV = { add_head_of_cabinet_modifier = { estate = nobles_estate } }	}
-		else_if = { limit = { has_estate = estate_type:burghers_estate }	PREV = { add_head_of_cabinet_modifier = { estate = burghers_estate } }	}
-		else_if = { limit = { has_estate = estate_type:clergy_estate }		PREV = { add_head_of_cabinet_modifier = { estate = clergy_estate } }	}
-		else_if = { limit = { has_estate = estate_type:peasants_estate }	PREV = { add_head_of_cabinet_modifier = { estate = peasants_estate } }	}
-		else_if = { limit = { has_estate = estate_type:dhimmi_estate }		PREV = { add_head_of_cabinet_modifier = { estate = dhimmi_estate } }	}
-		else_if = { limit = { has_estate = estate_type:tribes_estate }		PREV = { add_head_of_cabinet_modifier = { estate = tribes_estate } }	}
-		else_if = { limit = { has_estate = estate_type:cossacks_estate }	PREV = { add_head_of_cabinet_modifier = { estate = cossacks_estate } }	}
+		promote_to_head_of_cabinet_effect_apply_country_modifier = yes
 	}
+}
+
+promote_to_head_of_cabinet_effect_apply_country_modifier = {
+		if = { 		limit = { has_estate = estate_type:crown_estate }		owner = { add_head_of_cabinet_modifier = { estate = crown_estate } }	}
+		else_if = { limit = { has_estate = estate_type:nobles_estate }		owner = { add_head_of_cabinet_modifier = { estate = nobles_estate } }	}
+		else_if = { limit = { has_estate = estate_type:burghers_estate }	owner = { add_head_of_cabinet_modifier = { estate = burghers_estate } }	}
+		else_if = { limit = { has_estate = estate_type:clergy_estate }		owner = { add_head_of_cabinet_modifier = { estate = clergy_estate } }	}
+		else_if = { limit = { has_estate = estate_type:peasants_estate }	owner = { add_head_of_cabinet_modifier = { estate = peasants_estate } }	}
+		else_if = { limit = { has_estate = estate_type:dhimmi_estate }		owner = { add_head_of_cabinet_modifier = { estate = dhimmi_estate } }	}
+		else_if = { limit = { has_estate = estate_type:tribes_estate }		owner = { add_head_of_cabinet_modifier = { estate = tribes_estate } }	}
+		else_if = { limit = { has_estate = estate_type:cossacks_estate }	owner = { add_head_of_cabinet_modifier = { estate = cossacks_estate } }	}
 }
 
 promote_to_head_of_cabinet_effect = {
@@ -942,17 +917,30 @@ set_new_ruler_with_union_fratricide = {
 		custom_description = {
 			text = set_new_ruler_with_union
 			object = $character$
+			save_temporary_scope_as = union_country_event_scope
+			every_subject = {
+				limit = { subject_type = { has_overlords_ruler = yes } }
+				set_new_foreign_ruler_no_update = $character$
+			}
 			union ?= {
 				every_international_organization_member = {
 					limit = {
+						this != scope:union_country_event_scope
 						succession_law = heir_selection:fratricide_succesion
 					}
 					#don't update the unions....yet
 					set_new_foreign_ruler_no_update = $character$
+					every_subject = {
+						limit = { subject_type = { has_overlords_ruler = yes } }
+						set_new_foreign_ruler_no_update = $character$
+					}
 				}
 			}
 			#now we can update the unions
 			set_new_ruler = $character$
+			union ?= {
+				update_leadership = this
+			}
 		}
 	}
 	else = {
@@ -966,14 +954,27 @@ set_new_ruler_with_union = {
 		custom_description = {
 			text = set_new_ruler_with_union
 			object = $character$
+			save_temporary_scope_as = union_country_event_scope
+			every_subject = {
+				limit = { subject_type = { has_overlords_ruler = yes } }
+				set_new_foreign_ruler_no_update = $character$
+			}
 			union ?= {
 				every_international_organization_member = {
+					limit = { this != scope:union_country_event_scope }
 					#don't update the unions....yet
 					set_new_foreign_ruler_no_update = $character$
+					every_subject = {
+						limit = { subject_type = { has_overlords_ruler = yes } }
+						set_new_foreign_ruler_no_update = $character$
+					}
 				}
 			}
 			#now we can update the unions
 			set_new_ruler = $character$
+			union ?= {
+				update_leadership = this
+			}
 		}
 	}
 	else = {
@@ -1684,21 +1685,35 @@ disable_treasure_voyages = {
 chinese_treasure_sail_to = {
 
 	$to$ = { save_scope_as = next_tile } # Necessary for the variable calculation and for the next event in line to know where the fleet's location is supposed to be set to
-
 	set_local_variable = {
 		name = time_to_travel
 		value = {
-			value = "scope:next_tile.distance_to(scope:expedition_initiator.var:chinese_treasure_fleet_location)"
-			divide = 5
-			multiply = { # Leader's military skill can speed up the expedition travel time greatly
-				value = 1
-				subtract = {
-					value = scope:target_character.mil
-					divide = 100
-					multiply = 0.5
+			if = {
+				limit = {
+					exists = scope:expedition_initiator
+					scope:expedition_initiator = {
+						has_variable = chinese_treasure_fleet_location
+					}
+					exists = scope:next_tile
 				}
+				value = "scope:next_tile.distance_to(scope:expedition_initiator.var:chinese_treasure_fleet_location)"
+				divide = 5
+				if = {
+					limit = { exists = scope:target_character }
+					multiply = { # Leader's military skill can speed up the expedition travel time greatly
+						value = 1
+						subtract = {
+							value = scope:target_character.mil
+							divide = 100
+							multiply = 0.5
+						}
+					}
+				}
+				min = 1
 			}
-			min = 1
+			else = {
+				value = 1
+			}
 		}
 	}
 	trigger_event_silently = {
@@ -1858,24 +1873,28 @@ grant_effects_of_opinion = {
 	custom_tooltip = based_on_expedition_opinion
 	if = {
 		limit = {
+			has_variable = chinese_expedition_opinion
 			var:chinese_expedition_opinion >= 67
 		}
 		chi_expedition_resolution_very_positive = yes
 	}
 	else_if = {
 		limit = {
+			has_variable = chinese_expedition_opinion
 			var:chinese_expedition_opinion >= 33
 		}
 		chi_expedition_resolution_positive = yes
 	}
 	else_if = {
 		limit = {
+			has_variable = chinese_expedition_opinion
 			var:chinese_expedition_opinion <= -33
 		}
 		chi_expedition_resolution_negative = yes
 	}
 	else_if = {
 		limit = {
+			has_variable = chinese_expedition_opinion
 			var:chinese_expedition_opinion <= -67
 		}
 		chi_expedition_resolution_very_negative = yes

@@ -430,14 +430,11 @@ organization_panel = {
 }
  
 template hre_elector_flag_entry {
-	flowcontainer = {
-		margin = {2 0}
-		ignoreinvisible = yes
-		layoutpolicy_horizontal = expanding
-		allow_outside = yes
-		flowcontainer = {
-			ignoreinvisible = yes
-			direction = vertical		
+	widget = {
+		using = layoutpolicy_expanding
+		minimumsize = { 78 100 }
+		vbox = {
+			layoutpolicy_vertical = expanding	
 			country_flag_mid = {}
 			country_flag = {
 				size = { 36 24 }
@@ -448,7 +445,6 @@ template hre_elector_flag_entry {
 					framesize = "[CoatOfArmsWrapper.GetFrameSizeOrFallback('(int32)72','(int32)48','(float)0.5')]"
 					texture_density = 2
 				}
-				parentanchor = top|hcenter
 
 				blockoverride "click" {
 					action_tooltip = {
@@ -518,8 +514,6 @@ template hre_elector_flag_entry {
 			}
 			text_single = {
 				visible = "[InternationalOrganizationsView.PlayerCanBeVotedFor(Country.Self)]"
-				parentanchor = center
-				layoutpolicy_horizontal = expanding
 				autoresize = yes
 				tooltip_enabled = "[Country.IsValid]"
 				tooltipwidget = {
@@ -572,15 +566,14 @@ template hre_elector_flag_entry {
 			text_single = {
 				visible = "[Not(InternationalOrganizationsView.PlayerCanBeVotedFor(Country.Self))]"
 				margin_left = 13
-				layoutpolicy_horizontal = expanding
 				autoresize = yes
 				raw_text = "-"
 			}
 		}
-		flowcontainer = {
+		vbox = {
 			visible = "[EqualTo_string(MemberTypeItem.GetName, ShowSpecialStatusName('emperor'))]"
 			ignoreinvisible = yes
-			direction = vertical		
+			layoutpolicy_vertical = expanding		
 			country_flag_big = {}
 		}
 	}

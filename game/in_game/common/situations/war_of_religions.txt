@@ -1,5 +1,6 @@
 ﻿war_of_religions = {
 	monthly_spawn_chance = monthly_spawn_chance_ultimate
+	hint_tag = hint_war_of_religions
 	can_start = {
 		current_year >= 1590
 		situation:council_of_trent = {

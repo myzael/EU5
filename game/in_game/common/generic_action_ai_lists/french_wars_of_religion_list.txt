@@ -1,7 +1,7 @@
 ﻿french_wars_of_religion_list = {
 	potential = {
 		any_active_disaster = {
-			disaster_type = disaster_type:french_wars_of_religion
+			disaster_type = disaster_type:french_wars_religion
 		}
 	}
 	actions = {

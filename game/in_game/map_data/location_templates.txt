@@ -586,7 +586,7 @@ alands_hav = { topography = narrows climate = continental}
 north_baltic = { topography = inland_sea climate = continental}
 abo_skargard = { topography = narrows climate = continental}
 tralhavet = { topography = narrows climate = continental}
-stockholms_skargard = { topography = inland_sea climate = continental}
+stockholms_skargard = { topography = narrows climate = continental}
 braviken = { topography = inland_sea climate = continental}
 western_gotland_basin = { topography = inland_sea climate = continental}
 gotlands_hav = { topography = inland_sea climate = continental}
@@ -752,9 +752,9 @@ eindhoven = { topography = flatland vegetation = grasslands climate = oceanic re
 brussels = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = low_franconian raw_material = clay}
 leuven = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = low_franconian raw_material = millet}
 nivelles = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = walloon raw_material = wheat}
+borgloon = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = low_franconian raw_material = millet}
 hasselt = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = low_franconian raw_material = livestock}
 bree = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = low_franconian raw_material = legumes}
-borgloon = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = low_franconian raw_material = millet}
 ghent = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = low_franconian raw_material = wool}
 aalst = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = low_franconian raw_material = legumes}
 hulst = { topography = wetlands vegetation = farmland climate = oceanic religion = catholic culture = low_franconian raw_material = salt natural_harbor_suitability = 0.60}
@@ -2425,7 +2425,7 @@ annecy = { topography = hills vegetation = grasslands climate = continental reli
 evian = { topography = mountains vegetation = grasslands climate = continental religion = catholic culture = arpitan raw_material = livestock}
 faucigny = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = alum}
 la_roche_sur_foron = { topography = hills vegetation = grasslands climate = continental religion = catholic culture = arpitan raw_material = millet}
-moutiers = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = medicaments}
+moutiers = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = salt}
 saint_jean_de_maurienne = { topography = mountains vegetation = grasslands climate = continental religion = catholic culture = arpitan raw_material = lead}
 sallanches = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = stone}
 graian_alps1 = { topography = mountain_wasteland vegetation = sparse climate = arctic}
@@ -3154,8 +3154,8 @@ alessandria = { topography = flatland vegetation = grasslands climate = subtropi
 novi = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = ligurian raw_material = stone}
 rovegno = { topography = mountains vegetation = forest climate = continental religion = catholic culture = ligurian raw_material = wool}
 tortona = { topography = flatland vegetation = grasslands climate = subtropical religion = catholic culture = emilian raw_material = dyes}
-aosta = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = iron}
-chatillonaos = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = livestock}
+aosta = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = livestock}
+chatillonaos = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = iron}
 morgex = { topography = mountains vegetation = forest climate = continental religion = catholic culture = arpitan raw_material = lumber}
 pennine_alps2 = { topography = mountain_wasteland vegetation = desert climate = arctic}
 mondovi = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = piedmontese raw_material = livestock}
@@ -3401,7 +3401,7 @@ karcag = { topography = wetlands vegetation = grasslands climate = continental r
 szarvas = { topography = wetlands vegetation = farmland climate = continental religion = catholic culture = hungarian raw_material = livestock}
 hont = { topography = hills vegetation = woods climate = continental religion = catholic culture = hungarian raw_material = silver}
 banska_bystrica = { topography = hills vegetation = forest climate = continental religion = catholic culture = slovak raw_material = copper}
-kremnica = { topography = hills vegetation = forest climate = continental religion = catholic culture = slovak raw_material = goods_gold}
+kremnica = { modifier = kremnica_gold_mines topography = hills vegetation = forest climate = continental religion = catholic culture = slovak raw_material = goods_gold}
 krupina = { topography = hills vegetation = forest climate = continental religion = catholic culture = hungarian raw_material = wine}
 stary_tekov = { topography = hills vegetation = woods climate = continental religion = catholic culture = hungarian raw_material = fruit}
 zvolen = { topography = hills vegetation = forest climate = continental religion = catholic culture = slovak raw_material = lumber}
@@ -4650,7 +4650,7 @@ vasylivka = { topography = flatland vegetation = grasslands climate = continenta
 mius_liman = { topography = lakes climate = continental}
 bakhmut = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = salt}
 lysychansk = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = horses}
-kreminna = { modifier = kremnica_gold_mines topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = fiber_crops}
+kreminna = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = fiber_crops}
 oleksandrivka = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = fiber_crops}
 posad = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = wool}
 azok = { topography = flatland vegetation = grasslands climate = continental religion = sunni culture = crimean raw_material = clay natural_harbor_suitability = 0.50}
@@ -22419,7 +22419,7 @@ guaimas = { topography = flatland vegetation = sparse climate = arid religion = 
 soyopa = { topography = hills vegetation = woods climate = arid religion = cahita_religion culture = pima_culture raw_material = maize}
 sahuaripa = { topography = hills vegetation = woods climate = arid religion = cahita_religion culture = opata_culture raw_material = wild_game}
 batuco = { topography = hills vegetation = woods climate = mediterranean religion = cahita_religion culture = opata_culture raw_material = medicaments}
-oposura = { topography = mountains vegetation = woods climate = arid religion = cahita_religion culture = opata_culture raw_material = lumber}
+oposura = { topography = mountains vegetation = woods climate = arid religion = cahita_religion culture = opata_culture raw_material = tin}
 papigochic = { topography = mountains vegetation = sparse climate = cold_arid religion = cahita_religion culture = opata_culture raw_material = gems}
 babicora = { topography = mountains vegetation = woods climate = oceanic religion = cahita_religion culture = opata_culture raw_material = lumber}
 corodehuachi = { topography = mountains vegetation = sparse climate = cold_arid religion = cahita_religion culture = opata_culture raw_material = iron}
@@ -24607,10 +24607,10 @@ sangay_volcano = { topography = mountain_wasteland vegetation = sparse climate =
 alausi = { topography = mountains vegetation = grasslands climate = continental religion = pi_religion culture = puruha_culture raw_material = maize}
 hatun_kanar = { topography = mountains vegetation = grasslands climate = oceanic religion = pi_religion culture = kanari_culture raw_material = livestock}
 shabalula = { topography = mountains vegetation = grasslands climate = oceanic religion = pi_religion culture = kanari_culture raw_material = wool}
-cangochamba = { topography = mountains vegetation = woods climate = tropical religion = pi_religion culture = palta_culture raw_material = chili}
-malacatos = { topography = mountains vegetation = sparse climate = oceanic religion = pi_religion culture = palta_culture raw_material = stone}
-calvas = { topography = mountains vegetation = woods climate = tropical religion = pi_religion culture = palta_culture raw_material = beeswax}
-pukamuru = { topography = mountains vegetation = grasslands climate = oceanic religion = arutam_religion culture = pukamuru_culture raw_material = fruit}
+cangochamba = { topography = mountains vegetation = woods climate = tropical religion = pi_religion culture = palta_culture raw_material = potato}
+malacatos = { topography = mountains vegetation = sparse climate = oceanic religion = pi_religion culture = palta_culture raw_material = beeswax}
+calvas = { topography = mountains vegetation = woods climate = tropical religion = pi_religion culture = palta_culture raw_material = maize}
+pukamuru = { topography = mountains vegetation = grasslands climate = oceanic religion = arutam_religion culture = pukamuru_culture raw_material = stone}
 cajas_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 duco_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 solamaco_mountains = { topography = mountain_wasteland vegetation = sparse climate = tropical}
@@ -24630,7 +24630,7 @@ chira = { topography = flatland vegetation = sparse climate = arid religion = pi
 nariguala = { topography = flatland vegetation = sparse climate = arid religion = pi_religion culture = tallan_culture raw_material = fiber_crops natural_harbor_suitability = 0.00}
 nunura = { topography = flatland vegetation = sparse climate = arid religion = pi_religion culture = tallan_culture raw_material = salt natural_harbor_suitability = 0.00}
 xllang = { topography = flatland vegetation = sparse climate = arid religion = naylamp_religion culture = xllang_culture raw_material = chili natural_harbor_suitability = 0.00}
-ayahuacas = { topography = mountains vegetation = woods climate = continental religion = arutam_religion culture = guayacundo_culture raw_material = lumber}
+ayahuacas = { topography = mountains vegetation = woods climate = continental religion = arutam_religion culture = guayacundo_culture raw_material = chili}
 guayacundo = { topography = hills vegetation = grasslands climate = arid religion = arutam_religion culture = guayacundo_culture raw_material = livestock}
 apurlec = { topography = flatland vegetation = grasslands climate = arid religion = naylamp_religion culture = xllang_culture raw_material = wool}
 huancapampa = { topography = mountains vegetation = woods climate = continental religion = arutam_religion culture = huancapampa_culture raw_material = silver}
@@ -24638,12 +24638,12 @@ pakatnamu = { topography = flatland vegetation = sparse climate = arid religion 
 sana = { topography = flatland vegetation = sparse climate = arid religion = naylamp_religion culture = xllang_culture raw_material = sand natural_harbor_suitability = 0.00}
 farfan = { topography = flatland vegetation = sparse climate = arid religion = naylamp_religion culture = xllang_culture raw_material = salt natural_harbor_suitability = 0.00}
 chan_chan = { topography = flatland vegetation = sparse climate = arid religion = inti culture = chimu_culture raw_material = beeswax natural_harbor_suitability = 0.00}
-chao = { topography = flatland vegetation = sparse climate = arid religion = inti culture = chimu_culture raw_material = legumes natural_harbor_suitability = 0.00}
+chao = { topography = flatland vegetation = sparse climate = arid religion = inti culture = chimu_culture raw_material = maize natural_harbor_suitability = 0.00}
 huacatambo = { topography = flatland vegetation = sparse climate = arid religion = inti culture = casma_culture raw_material = sand natural_harbor_suitability = 0.00}
 manchan = { topography = flatland vegetation = sparse climate = arid religion = inti culture = casma_culture raw_material = salt natural_harbor_suitability = 0.00}
 huarmey = { topography = hills vegetation = sparse climate = arid religion = inti culture = wari_culture raw_material = fish natural_harbor_suitability = 0.00}
 ocro = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = wari_culture raw_material = marble}
-paramonga = { topography = hills vegetation = sparse climate = arid religion = inti culture = chimu_culture raw_material = cotton natural_harbor_suitability = 0.00}
+paramonga = { topography = hills vegetation = sparse climate = arid religion = inti culture = chimu_culture raw_material = maize natural_harbor_suitability = 0.00}
 guamanmayo = { topography = flatland vegetation = sparse climate = arid religion = inti culture = wari_culture raw_material = clay natural_harbor_suitability = 0.00}
 chancay = { topography = flatland vegetation = sparse climate = arid religion = naylamp_religion culture = chancay_culture raw_material = wool natural_harbor_suitability = 0.00}
 chiprac = { topography = flatland vegetation = sparse climate = arid religion = naylamp_religion culture = atavillos_culture raw_material = salt natural_harbor_suitability = 0.00}
@@ -24655,15 +24655,15 @@ ishma = { topography = hills vegetation = sparse climate = arid religion = inti 
 chilca = { topography = hills vegetation = sparse climate = arid religion = chincha_religion culture = huarco_culture raw_material = fish natural_harbor_suitability = 0.00}
 huarco = { topography = hills vegetation = sparse climate = arid religion = chincha_religion culture = huarco_culture raw_material = beeswax natural_harbor_suitability = 0.00}
 naupahuasi = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = yawyu_culture raw_material = legumes}
-incahuasi = { topography = mountains vegetation = sparse climate = cold_arid religion = chincha_religion culture = huarco_culture raw_material = livestock}
+incahuasi = { topography = mountains vegetation = sparse climate = cold_arid religion = chincha_religion culture = huarco_culture raw_material = potato}
 chuqlluqucha = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = anccara_culture raw_material = goods_gold}
 chinchay = { topography = flatland vegetation = sparse climate = arid religion = chincha_religion culture = chincha_culture raw_material = salt natural_harbor_suitability = 0.00}
 puka_tampu = { topography = flatland vegetation = desert climate = arid religion = chincha_religion culture = chincha_culture raw_material = fish natural_harbor_suitability = 0.20}
-ica = { topography = flatland vegetation = desert climate = arid religion = chincha_religion culture = chincha_culture raw_material = legumes natural_harbor_suitability = 0.00}
+ica = { topography = flatland vegetation = desert climate = arid religion = chincha_religion culture = chincha_culture raw_material = maize natural_harbor_suitability = 0.00}
 cahuachi = { topography = hills vegetation = desert climate = arid religion = inti culture = wari_culture raw_material = clay natural_harbor_suitability = 0.00}
 acari = { topography = flatland vegetation = desert climate = arid religion = inti culture = wari_culture raw_material = salt natural_harbor_suitability = 0.00}
 incawasi = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = alum}
-chullac = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = wari_culture raw_material = maize}
+chullac = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = wari_culture raw_material = potato}
 pukiupukio = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = wari_culture raw_material = fiber_crops}
 yauca = { topography = mountains vegetation = desert climate = cold_arid religion = inti culture = wari_culture raw_material = cotton natural_harbor_suitability = 0.00}
 atico = { topography = hills vegetation = desert climate = cold_arid religion = inti culture = churajon_culture raw_material = beeswax natural_harbor_suitability = 0.00}
@@ -24751,11 +24751,11 @@ pissis_mountains = { topography = mountain_wasteland vegetation = sparse climate
 inka_llaqta = { topography = flatland vegetation = jungle climate = tropical religion = mororuma_religion culture = chuwi_culture raw_material = lumber}
 ayopaya = { topography = mountains vegetation = sparse climate = continental religion = inti culture = aimara_culture raw_material = copper}
 paititi = { topography = mountains vegetation = jungle climate = oceanic religion = inti culture = aimara_culture raw_material = lumber}
-yungas = { topography = mountains vegetation = grasslands climate = continental religion = inti culture = aimara_culture raw_material = maize}
+yungas = { topography = mountains vegetation = grasslands climate = continental religion = inti culture = aimara_culture raw_material = tin}
 guanay = { topography = hills vegetation = jungle climate = tropical religion = pava_religion culture = kallawaya_culture raw_material = fruit}
 kallawaya = { topography = mountains vegetation = jungle climate = continental religion = pava_religion culture = kallawaya_culture raw_material = beeswax}
 caupolican = { topography = mountains vegetation = jungle climate = oceanic religion = pava_religion culture = kallawaya_culture raw_material = medicaments}
-sarkajpa = { topography = mountains vegetation = sparse climate = tropical religion = mororuma_religion culture = charka_culture raw_material = fiber_crops}
+sarkajpa = { topography = mountains vegetation = sparse climate = tropical religion = mororuma_religion culture = charka_culture raw_material = potato}
 yurakar = { topography = wetlands vegetation = jungle climate = tropical religion = mororuma_religion culture = yuracare_culture raw_material = chili}
 chimore_jungle = { topography = hills_wasteland vegetation = jungle climate = oceanic}
 tiraque_jungle = { topography = hills_wasteland vegetation = jungle climate = oceanic}
@@ -24767,12 +24767,12 @@ pomabamba = { topography = mountains vegetation = forest climate = continental r
 huacareta = { topography = mountains vegetation = forest climate = subtropical religion = tunpa_religion culture = ava_culture raw_material = chili}
 tomina = { topography = hills vegetation = forest climate = continental religion = tunpa_religion culture = ava_culture raw_material = lumber}
 takopaya = { topography = mountains vegetation = woods climate = arid religion = mororuma_religion culture = chuwi_culture raw_material = marble}
-yamparaez = { topography = mountains vegetation = woods climate = continental religion = mororuma_religion culture = yampara_culture raw_material = chili}
+yamparaez = { topography = mountains vegetation = woods climate = continental religion = mororuma_religion culture = yampara_culture raw_material = tin}
 samaipata = { topography = mountains vegetation = forest climate = continental religion = tunpa_religion culture = ava_culture raw_material = goods_gold}
 chuwi = { topography = hills vegetation = woods climate = arid religion = mororuma_religion culture = chuwi_culture raw_material = legumes}
 mizque = { topography = mountains vegetation = woods climate = continental religion = mororuma_religion culture = chuwi_culture raw_material = potato}
 sachchaa_mukku = { topography = plateau vegetation = woods climate = continental religion = mororuma_religion culture = charka_culture raw_material = fruit}
-arque = { topography = plateau vegetation = grasslands climate = continental religion = mororuma_religion culture = charka_culture raw_material = wool}
+arque = { topography = plateau vegetation = grasslands climate = continental religion = mororuma_religion culture = charka_culture raw_material = tin}
 incarraqay = { topography = mountains vegetation = sparse climate = continental religion = inti culture = aimara_culture raw_material = silver}
 lluska_mountain = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 aqush = { topography = mountains vegetation = sparse climate = arctic religion = naylamp_religion culture = pashash_culture raw_material = livestock}
@@ -24794,7 +24794,7 @@ gochacalla = { topography = mountains vegetation = sparse climate = oceanic reli
 waqurunchu_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 andaymarca = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = pashash_culture raw_material = cotton}
 pashas = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = pashash_culture raw_material = chili}
-tumshukaiko = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = huayla_culture raw_material = potato}
+tumshukaiko = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = huayla_culture raw_material = livestock}
 waricoto = { topography = mountains vegetation = sparse climate = arctic religion = naylamp_religion culture = huayla_culture raw_material = copper}
 choquerecuay = { topography = mountains vegetation = sparse climate = arctic religion = naylamp_religion culture = huayla_culture raw_material = stone}
 kasha_tampu = { topography = mountains vegetation = sparse climate = arctic religion = naylamp_religion culture = yawyu_culture raw_material = iron}
@@ -24814,14 +24814,14 @@ quilqi_hirka_mountains = { topography = mountain_wasteland vegetation = sparse c
 pariacaca_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 tanranioc_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 wari_willka = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = wanka_culture raw_material = potato}
-willka_ulo = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = wanka_culture raw_material = potato}
+willka_ulo = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = wanka_culture raw_material = livestock}
 tampu_machay = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = copper}
 churkampa = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = wool}
 tayaccasa = { topography = mountains vegetation = sparse climate = oceanic religion = chanka_religion culture = chanka_culture raw_material = clay}
 llacsapallanca = { modifier = huancavelica_base topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = mercury}
 wasi_qaqa_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 utcohuarco_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
-allpas = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = chili}
+allpas = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = tin}
 wari_peru = { topography = mountains vegetation = grasslands climate = arctic religion = inti culture = wari_culture raw_material = livestock}
 pariahuanca = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = wari_culture raw_material = wild_game}
 pampahuaylla = { topography = mountains vegetation = jungle climate = continental religion = chanka_religion culture = chanka_culture raw_material = lumber}
@@ -24836,9 +24836,9 @@ challwanqa = { topography = mountains vegetation = sparse climate = arctic relig
 millcca = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = iron}
 tukri_apu_apu = { topography = mountains vegetation = sparse climate = arctic religion = chanka_religion culture = chanka_culture raw_material = marble}
 willkawaman = { topography = mountains vegetation = grasslands climate = arctic religion = chanka_religion culture = chanka_culture raw_material = wool}
-soras = { topography = hills vegetation = grasslands climate = arctic religion = inti culture = wari_culture raw_material = cotton}
+soras = { topography = hills vegetation = grasslands climate = arctic religion = inti culture = wari_culture raw_material = potato}
 huaman_karpa = { topography = plateau vegetation = grasslands climate = arctic religion = chanka_religion culture = chanka_culture raw_material = maize}
-caniche = { topography = hills vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = potato}
+caniche = { topography = hills vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = cotton}
 seqse_qaqa = { topography = hills vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = cotton}
 yanahuara = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = killke_culture raw_material = gems}
 cotapampa = { topography = mountains vegetation = grasslands climate = arctic religion = inti culture = wari_culture raw_material = maize}
@@ -24848,8 +24848,8 @@ sara_sara = { topography = mountains vegetation = sparse climate = cold_arid rel
 sara_sara_volcano = { topography = mountain_wasteland vegetation = sparse climate = cold_arid}
 qurawiri_mountains = { topography = mountain_wasteland vegetation = sparse climate = oceanic}
 qilu_urqu_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
-raqchi = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = aimara_culture raw_material = livestock}
-sausaya = { topography = mountains vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = wool}
+raqchi = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = aimara_culture raw_material = wool}
+sausaya = { topography = mountains vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = livestock}
 kanamarca = { topography = hills vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = goods_gold}
 achachiwa = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = wari_culture raw_material = silver}
 uyo_uyo = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = chiribaya_culture raw_material = livestock}
@@ -24861,8 +24861,8 @@ andahua_volcanoes = { topography = mountain_wasteland vegetation = sparse climat
 kunturi_mountains = { topography = mountain_wasteland vegetation = sparse climate = cold_arid}
 oruro = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = wool}
 ayaviri = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = cotton}
-pukara = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = potato}
-macaya = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = clay}
+pukara = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = clay}
+macaya = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = potato}
 pumanota = { topography = mountains vegetation = jungle climate = continental religion = pava_religion culture = kallawaya_culture raw_material = lumber}
 puncune = { topography = hills vegetation = sparse climate = arctic religion = inti culture = aimara_culture raw_material = chili}
 wankani = { topography = mountains vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = livestock}
@@ -24880,7 +24880,7 @@ choquepata_mountains = { topography = mountain_wasteland vegetation = sparse cli
 parwayuni_mountains = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 machaqa = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = maize}
 axawiri = { topography = plateau vegetation = grasslands climate = cold_arid religion = inti culture = aimara_culture raw_material = potato}
-achacachi = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = livestock}
+achacachi = { topography = plateau vegetation = grasslands climate = arctic religion = inti culture = aimara_culture raw_material = potato}
 viacha = { topography = plateau vegetation = sparse climate = arctic religion = inti culture = aimara_culture raw_material = livestock}
 tiwanaku = { topography = plateau vegetation = grasslands climate = cold_arid religion = inti culture = aimara_culture raw_material = clay}
 calamarca = { topography = plateau vegetation = sparse climate = arctic religion = inti culture = aimara_culture raw_material = wool}
@@ -24943,7 +24943,7 @@ qusqu = { topography = mountains vegetation = sparse climate = arctic religion =
 pisaq = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = copper}
 paucartambo = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = inka_culture raw_material = beeswax}
 urupampa = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = goods_gold}
-quillarumiyoc = { topography = mountains vegetation = sparse climate = continental religion = inti culture = killke_culture raw_material = legumes}
+quillarumiyoc = { topography = mountains vegetation = sparse climate = continental religion = inti culture = killke_culture raw_material = maize}
 sahuasiray_mountains = { topography = mountain_wasteland vegetation = sparse climate = oceanic}
 salkantay_mountains = { topography = mountain_wasteland vegetation = sparse climate = oceanic}
 yanatile = { topography = mountains vegetation = sparse climate = continental religion = inti culture = wari_culture raw_material = silver}
@@ -24953,18 +24953,18 @@ picchu = { topography = mountains vegetation = sparse climate = continental reli
 willka_pampa = { topography = mountains vegetation = sparse climate = continental religion = inti culture = killke_culture raw_material = silver}
 chuyapi_jungle = { topography = hills_wasteland vegetation = jungle climate = continental}
 ilucan = { topography = mountains vegetation = grasslands climate = oceanic religion = inti culture = wari_culture raw_material = clay}
-chetilla = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = wari_culture raw_material = potato}
+chetilla = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = wari_culture raw_material = iron}
 huambos = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = wari_culture raw_material = stone}
 chumuch = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = wari_culture raw_material = maize}
-congona = { topography = mountains vegetation = sparse climate = continental religion = inti culture = sacha_p_qulla_culture raw_material = iron}
+congona = { topography = mountains vegetation = sparse climate = continental religion = inti culture = sacha_p_qulla_culture raw_material = potato}
 kuelap = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = sacha_p_qulla_culture raw_material = alum}
 huamanpata = { topography = mountains vegetation = sparse climate = oceanic religion = inti culture = sacha_p_qulla_culture raw_material = copper}
 olan = { topography = mountains vegetation = grasslands climate = oceanic religion = inti culture = sacha_p_qulla_culture raw_material = wild_game}
 shin_shin_mountains = { topography = mountain_wasteland vegetation = sparse climate = oceanic}
 illapa = { topography = mountains vegetation = sparse climate = arid religion = inti culture = wari_culture raw_material = goods_gold}
 kaxa_marca = { topography = mountains vegetation = sparse climate = continental religion = inti culture = wari_culture raw_material = silver}
-tantaricuy = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = xllang_culture raw_material = salt}
-chimu = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = chimu_culture raw_material = livestock}
+tantaricuy = { topography = mountains vegetation = sparse climate = cold_arid religion = naylamp_religion culture = xllang_culture raw_material = potato}
+chimu = { topography = mountains vegetation = sparse climate = cold_arid religion = inti culture = chimu_culture raw_material = potato}
 llucho = { topography = mountains vegetation = sparse climate = continental religion = inti culture = wari_culture raw_material = maize}
 markahuamachuco = { topography = mountains vegetation = sparse climate = continental religion = inti culture = wari_culture raw_material = wool}
 pirca_pirca = { topography = mountains vegetation = sparse climate = arctic religion = inti culture = wari_culture raw_material = marble}
@@ -24976,7 +24976,7 @@ huayabamba_mountains = { topography = mountain_wasteland vegetation = sparse cli
 awajun = { topography = flatland vegetation = jungle climate = tropical religion = arutam_religion culture = bagua_culture raw_material = medicaments}
 bagua = { topography = mountains vegetation = jungle climate = tropical religion = arutam_religion culture = bagua_culture raw_material = lumber}
 utkhupampa = { topography = flatland vegetation = jungle climate = tropical religion = inti culture = sacha_p_qulla_culture raw_material = fruit}
-namballe = { topography = mountains vegetation = grasslands climate = tropical religion = arutam_religion culture = pukamuru_culture raw_material = cotton}
+namballe = { topography = mountains vegetation = grasslands climate = tropical religion = arutam_religion culture = pukamuru_culture raw_material = tin}
 ingatambo = { topography = hills vegetation = grasslands climate = oceanic religion = arutam_religion culture = pukamuru_culture raw_material = maize}
 karajia = { topography = mountains vegetation = grasslands climate = oceanic religion = inti culture = sacha_p_qulla_culture raw_material = cotton}
 huancachaca = { topography = mountains vegetation = jungle climate = oceanic religion = inti culture = sacha_p_qulla_culture raw_material = fiber_crops}

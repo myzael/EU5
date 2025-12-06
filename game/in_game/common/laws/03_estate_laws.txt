@@ -145,6 +145,7 @@ burghers_rights_laws = {
 		country_modifier = {
 			global_burghers_estate_power = 0.05
 			colonial_migration_size_modifier = 0.25
+			monthly_towards_outward = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -190,6 +191,7 @@ clergy_rights_laws = {
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
 			global_clergy_estate_power = 0.1
 			global_pop_conversion_speed_modifier = 0.15
+			monthly_towards_traditionalist = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			clergy_estate
@@ -213,9 +215,7 @@ clergy_rights_laws = {
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
 			global_clergy_estate_power = -0.1
 			court_language_is_liturgical_language_importance_modifier = -0.5
-			monthly_towards_centralization = societal_value_minor_monthly_move
-			clergy_estate_blocked_from_cabinet = yes
-			
+			monthly_towards_humanist = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -301,7 +301,6 @@ crown_rights_laws = {
 	}
 	figurehead_position_policy = {
 		country_modifier = {
-			global_crown_estate_power = -0.2
 			nobles_estate_target_satisfaction = medium_permanent_target_satisfaction
 			burghers_estate_target_satisfaction = medium_permanent_target_satisfaction
 			clergy_estate_target_satisfaction = medium_permanent_target_satisfaction

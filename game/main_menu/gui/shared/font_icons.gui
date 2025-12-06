@@ -204,8 +204,8 @@ texticon = {
 	icon = population
 	iconsize = {
 		texture = "gfx/interface/icons/resources/total_population.dds"
-		size = { 18 18 }
-		offset = { 2 2 }
+		size = { 20 20 }
+		offset = { 3 3 }
 		fontsize = 16
 	}
 }
@@ -1320,7 +1320,7 @@ texticon = {
 texticon = {
 	icon = primary_culture
 	iconsize = {
-		texture = "gfx/interface/icons/flat_icons/cultural_primary.dds"
+		texture = "gfx/interface/icons/culture/primary_culture.dds"
 		size = { 18 18 }
 		offset = { 3 3 }
 		fontsize = 16
@@ -1330,7 +1330,7 @@ texticon = {
 texticon = {
 	icon = accepted_culture
 	iconsize = {
-		texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+		texture = "gfx/interface/icons/culture/accepted_culture.dds"
 		size = { 18 18 }
 		offset = { 3 3 }
 		fontsize = 16
@@ -2915,6 +2915,16 @@ texticon = {
 	icon = dynasty
 	iconsize = {
 		texture = "gfx/interface/icons/map_modes/dynasty.dds"
+		size = { 20 20 }
+		offset = { 0 4 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = restore_lombardy
+	iconsize = {
+		texture = "gfx/interface/icons/cabinet_actions/mlo_restore_kingdom_lombardy.dds"
 		size = { 20 20 }
 		offset = { 0 4 }
 		fontsize = 16

@@ -124,7 +124,7 @@ lateralview  = {
 						title = "MARRIAGE_FINDER"
 						visible = yes
 						enabled = "[SelectCharacterInteraction.CanOpenMarriageFinder]"
-						conditions = "[MakeItFailIfLoc(Not(SelectCharacterInteraction.CanOpenMarriageFinder), SelectCharacterInteraction.GetMarriageFinderInfo)]"
+						conditions = "[MakeItFailIf(Not(SelectCharacterInteraction.CanOpenMarriageFinder), SelectCharacterInteraction.GetMarriageFinderInfo)]"
 						on_action = "[SelectCharacterInteraction.MarriageFinder]"
 					}				
 				}

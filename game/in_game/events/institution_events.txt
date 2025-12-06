@@ -3150,6 +3150,7 @@ institution_events.152 = {
 					divide = 4
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = { type = institution:enlightenment value = institution_progress_severe_bonus }
 		}
 
@@ -3194,6 +3195,7 @@ institution_events.153 = {
 					divide = 4
 				}
 			}
+			check_range_bounds = no
 			change_institution_progress = { type = institution:enlightenment value = institution_progress_severe_bonus }
 		}
 		add_stability = stability_mild_penalty
@@ -3429,6 +3431,9 @@ institution_events.171 = {
 			limit = { is_levee_en_masse_valid = yes }
 			save_scope_as = target_location
 			province_definition = { save_scope_as = target_province }
+		}
+		random_country_at_war_with = {
+			save_scope_as = target_country
 		}
 	}
 	option = {

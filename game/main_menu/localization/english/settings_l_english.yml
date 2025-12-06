@@ -317,7 +317,7 @@
  SETTING_MAXIMIZE_TICK_SPEED_TOOLTIP: "#T $SETTING_MAXIMIZE_TICK_SPEED$#!\nPrioritize CPU usage for tick speed when at maximum game speed instead of keeping a smooth framerate. When activated will also make speed 4 act as speed 5 when deactivated."
  SETTING_DISABLE_3D_TERRAIN: "Disable 3D Terrain"
  SETTING_DISABLE_3D_TERRAIN_TOOLTIP: "#T $SETTING_DISABLE_3D_TERRAIN$#!\nDisables loading of the 3d terrain to increase performance."
- SETTING_FILL_IN_IMPASSABLE_TERRAIN: "Fill in impassible terrain"
+ SETTING_FILL_IN_IMPASSABLE_TERRAIN: "Fill in impassable terrain"
  SETTING_FILL_IN_IMPASSABLE_TERRAIN_TOOLTIP: "#T $SETTING_CAMERA_ROTATION_RESET$#!\nDetermines if impassable terrain is included within a nation's borders on the map." 
  SETTING_CAMERA_ROTATION_RESET: "Camera Rotation Reset"
  SETTING_CAMERA_ROTATION_RESET_TOOLTIP: "#T $SETTING_CAMERA_ROTATION_RESET$#!\nDetermines if the camera should automatically reset default position after being rotated by the user."

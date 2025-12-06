@@ -830,7 +830,6 @@
 
  request_aid: "Request Aid"
  request_aid_desc: "Our order is the bastion of our faith, defenders of true believers, and a shield against those who wish to harm our people. Granting aid to our cause should be the prime directive for the [GetCountry('PAP').GetGovernment.GetRulerTitle]."
- 10_years_cd: "This interaction is available every #Y 10#! years"
  request_aid_price: "Request Catholic Aid Cost"
 
  placitum_regium: "Placitum Regium"
@@ -1147,7 +1146,7 @@
  worship_coatlicue_god: "$worship_title1$ $coatlicue_god$ $worship_title2$"
  worship_coatlicue_god_desc: "$worship_desc1$ [ShowGodName('coatlicue_god')] $worship_desc2$"
  worship_huehueteotl_god: "$worship_title1$ $huehueteotl_god$ $worship_title2$"
- worship_huehueteotl_god_desc: "$worship_desc1$ [ShowGodName('huehueteotl_god')] $worship_desc2$"
+ worship_huehueteotl_god_desc: "$worship_desc1$ [ShowGodName('xiuhtecuhtli_god')] $worship_desc2$"
  worship_mesoamerican_quetzalcoatl_god: "$worship_title1$ $quetzalcoatl_god$ $worship_title2$"
  worship_mesoamerican_quetzalcoatl_god_desc: "$worship_desc1$ [ShowGodName('quetzalcoatl_god')] $worship_desc2$"
  worship_dzahui_god: "$worship_title1$ $dzahui_god$ $worship_title2$"
@@ -1155,9 +1154,9 @@
  worship_chaac_god: "$worship_title1$ $chaac_god$ $worship_title2$"
  worship_chaac_god_desc: "$worship_desc1$ [ShowGodName('tlaloc_god')] $worship_desc2$"
  worship_kukulkan_god: "$worship_title1$ $kukulkan_god$ $worship_title2$"
- worship_kukulkan_god_desc: "$worship_desc1$ [ShowGodName('kukulkan_god')] $worship_desc2$"
+ worship_kukulkan_god_desc: "$worship_desc1$ [ShowGodName('quetzalcoatl_god')] $worship_desc2$"
  worship_kawiil_god: "$worship_title1$ $kawiil_god$ $worship_title2$"
- worship_kawiil_god_desc: "$worship_desc1$ [ShowGodName('kawiil_god')] $worship_desc2$"
+ worship_kawiil_god_desc: "$worship_desc1$ [ShowGodName('xiuhtecuhtli_god')] $worship_desc2$"
 
 #Folk Asian
  worship_u_blei_nong_thaw_god: "$worship_title1$ $u_blei_nong_thaw_god$ $worship_title2$"
@@ -1383,7 +1382,7 @@
  vainakh_paganism_desc: "The $vainakh_paganism$ $common_folk_religion_desc$"
  yukaghir_shamanism_desc: "The $yukaghir_shamanism$ $common_folk_religion_desc$"
  yupik_shamanism_desc: "The $yupik_shamanism$ $common_folk_religion_desc$"
- yazidism_desc: "Emerging from an $iranian_group$ tradition, it also contains elements from $judaism$, $christian$, and $islam$. It beliefs that the universe was created by God but that he appointed the 'Peacock Angel' Tawûsî Melek to rule over it. Although it contains many influences by other religions, especially in its esoteric practices, its core is rooted in the ancient $iranian_group$ religions."
+ yazidism_desc: "Emerging from an $iranian_group$ tradition, it also contains elements from $judaism$, $christian$, and $muslim$. It beliefs that the universe was created by God but that he appointed the 'Peacock Angel' Tawûsî Melek to rule over it. Although it contains many influences by other religions, especially in its esoteric practices, its core is rooted in the ancient $iranian_group$ religions."
  zoroastrian_desc: "An ancient $iranian_group$ religion following the teachings of Zoroaster, also called Zarathustra, and the texts of the Avesta. It is based on a dualistic cosmology of good and evil, with the eternal conflict of the deity Ahura Mazdā and the destructive spirit Angra Mainyu, with a predicted ultimate triumph of good over evil."
  #
  common_folk_religion_desc: "religion refers to the indigenous beliefs, mythology, traditions, and practices maintained and transmitted by its followers since the beginning of time."
@@ -1392,7 +1391,7 @@
  bantu_religion_ADJ: "Bantu"
  bantu_religion_desc: "The $bantu_religion$ $common_folk_religion_desc$"
  nyambe_god: "Nyambe"
- nyambe_god_desc: "$nyambe_god$ is the main [gods|e] and Sky Father for many [ShowLanguageName('bantu_language_family')] speaking people."
+ nyambe_god_desc: "$nyambe_god$ is the main [gods|e] and Sky Father for many [ShowLanguageFamilyName('bantu_language_family')] speaking people."
  #
  bori_religion: "Bori"
  bori_religion_ADJ: "Bori"

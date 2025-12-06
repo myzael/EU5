@@ -4,6 +4,8 @@ disaster_panel = {
 
 	##################################### MAIN IMAGE #####################################
 
+	blockoverride "main_image" {}
+
 	##################################### TAB NAME #######################################
 
 	blockoverride "disaster_secondary_tab" {

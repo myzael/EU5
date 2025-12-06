@@ -7,22 +7,28 @@
 container = {
 	alwaystransparent = no
 	name = "LegitimacyExpenseSettingTooltip"
-	using = LegitimacyExpenseSettingParentTooltip
-	datacontext = "[Country.GetEconomy]"
+	container = {
+		datacontext = "[Country.GetEconomy]"
+		using = LegitimacyExpenseSettingParentTooltip
+	}
 }
 
 container = {
 	alwaystransparent = no
 	name = "PrestigeExpenseSettingTooltip"
-	using = PrestigeExpenseSettingParentTooltip
-	datacontext = "[Country.GetEconomy]"
+	container = {
+		datacontext = "[Country.GetEconomy]"
+		using = PrestigeExpenseSettingParentTooltip
+	}
 }
 
 container = {
 	alwaystransparent = no
 	name = "StabilityExpenseSettingTooltip"
-	using = StabilityExpenseSettingParentTooltip
-	datacontext = "[Country.GetEconomy]"
+	container = {
+		datacontext = "[Country.GetEconomy]"
+		using = StabilityExpenseSettingParentTooltip
+	}
 }
 
 container = {
@@ -1252,9 +1258,11 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "SpecificGoodsOnMarketWrapTooltip"
-	datacontext = "[SpecificGoodsOnMarketWrap.GetMarket]"
-	datacontext = "[SpecificGoodsOnMarketWrap.GetGoods]"
-	using = SpecificGoodsMarket_tooltip
+	container = {
+		datacontext = "[SpecificGoodsOnMarketWrap.GetMarket]"
+		datacontext = "[SpecificGoodsOnMarketWrap.GetGoods]"
+		using = SpecificGoodsMarket_tooltip
+	}
 }
 
 container = {
@@ -1313,7 +1321,6 @@ container = {
 		}
 
 		blockoverride "tooltip_content" {
-
 			TooltipStringPairList = {
 				datacontext = "[StringToStringPairList(LocationCountryModifierWrap.GetTooltip)]"
 			}
@@ -1432,8 +1439,10 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "TradesTooltip"
-	datacontext = "[TradesWrap.GetSelectedTrade]"
-	using = Trades_tooltip
+	container = {
+		datacontext = "[TradesWrap.GetSelectedTrade]"
+		using = Trades_tooltip
+	}
 }
 
 container = {
@@ -1442,12 +1451,13 @@ container = {
 	using = City_tooltip
 }
 
-container = 
-{
+container = {
 	alwaystransparent = no
 	name = "UnitSuppliesTooltip"
-	datacontext = "[UnitSuppliesWrap.GetSelectedUnit]"
-	using = UnitSupplies_tooltip
+	container = {
+		datacontext = "[UnitSuppliesWrap.GetSelectedUnit]"
+		using = UnitSupplies_tooltip
+	}
 }
 
 container = {
@@ -1920,17 +1930,19 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "CountryPopulationTooltip"
-
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = PopulationTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = PopulationTooltip
+	}
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationPopulationTooltip"
-
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationPopulationTooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationPopulationTooltip
+	}
 }
 
 container = {
@@ -2394,64 +2406,80 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_nobles"
-	datacontext = "[GetPopTypeByName('nobles')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('nobles')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_clergy"
-	datacontext = "[GetPopTypeByName('clergy')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('clergy')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_burghers"
-	datacontext = "[GetPopTypeByName('burghers')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('burghers')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_laborers"
-	datacontext = "[GetPopTypeByName('laborers')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('laborers')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_peasants"
-	datacontext = "[GetPopTypeByName('peasants')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('peasants')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_tribesmen"
-	datacontext = "[GetPopTypeByName('tribesmen')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('tribesmen')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_slaves"
-	datacontext = "[GetPopTypeByName('slaves')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('slaves')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_soldiers"
-	datacontext = "[GetPopTypeByName('soldiers')]"
-	using = LocationPopItem_Breakdown
+	container = {
+		datacontext = "[GetPopTypeByName('soldiers')]"
+		using = LocationPopItem_Breakdown
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2465,8 +2493,10 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_pop_types"
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationPopulationTooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationPopulationTooltip
+	}	
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2500,6 +2530,13 @@ container = {
 
 container = {
 	alwaystransparent = no
+	name = "AreaMapTooltip_area"
+	using = Area_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
 	name = "AreaMapTooltip_select_target_area"
 	using = select_interaction_target_map_tooltip
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
@@ -2508,6 +2545,13 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "RegionMapTooltipDefault"
+	using = Region_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "RegionMapTooltip_region"
 	using = Region_tooltip
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
@@ -2523,6 +2567,13 @@ container = {
 	alwaystransparent = no
 	name = "SeazoneMapTooltipDefault"
 	using = seazone_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "SeazoneWastelandMapTooltipDefault"
+	using = Wasteland_tooltip
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2601,6 +2652,58 @@ container = {
 					}
 
 					blockoverride "column_datamodel"  { datamodel = "[SiegeRollModifierWrap.GetRows]" }
+				}
+			}
+		}
+	}
+}
+
+container = {
+	alwaystransparent = no
+	name = "AnnexationCostTooltip"
+	using = Annexation_cost_tooltip
+}
+
+## CUSTOM TAGTOOLTIPS
+###############################################################################
+
+container = {
+	alwaystransparent = no
+	name = "SimpleCustomTagTooltip"
+	ContextualTooltipType = {
+		blockoverride "title_icon" {
+			icon = {
+				visible = "[SimpleCustomTagTooltipWrapper.HasIcon]"
+				using = tooltip_title_icon_size
+				texture = "[SimpleCustomTagTooltipWrapper.GetIcon]"
+			}
+		}
+
+		blockoverride "title_text" {
+			visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetTitle))]"
+			text = "[SimpleCustomTagTooltipWrapper.GetTitle]"
+		}
+
+		blockoverride "concept_link" {
+			visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetConcept))]"
+			text = "[SimpleCustomTagTooltipWrapper.GetConcept]"
+		}
+
+		blockoverride "tooltip_content" {
+			TooltipTextBlock = {
+				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetBody))]"
+				blockoverride "text" {
+					text = "[SimpleCustomTagTooltipWrapper.GetBody]"
+				}
+			}
+			TooltipStringPairList = {
+				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetList))]"
+				textcontext = "[SimpleCustomTagTooltipWrapper.GetList]"
+			}
+			TooltipFlavorTextBlock = {
+				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetFlavor))]"
+				blockoverride "text" {
+					text = "[SimpleCustomTagTooltipWrapper.GetFlavor]"
 				}
 			}
 		}
@@ -2697,55 +2800,69 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_culture"
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationPopulationCultureTooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationPopulationCultureTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_colonial"
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationColonial_Tooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationColonial_Tooltip
+	}	
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_location_religion"
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationPopulationReligionTooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationPopulationReligionTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_location_religion_group"
-	datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
-	using = LocationPopulationReligionTooltip
+	container = {
+		datacontext = "[Location.GetPopulationChart.GetPopsPiechartWidget]"
+		using = LocationPopulationReligionTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_climate"
-	datacontext = "[Location.GetClimate]"
-	using = Climate_tooltip
+	container = {
+		datacontext = "[Location.GetClimate]"
+		using = Climate_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_topography"
-	datacontext = "[Location.GetTopography]"
-	using = Topography_tooltip
+	container = {
+		datacontext = "[Location.GetTopography]"
+		using = Topography_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_vegetation"
-	datacontext = "[Location.GetVegetation]"
-	using = Vegetation_tooltip
+	container = {
+		datacontext = "[Location.GetVegetation]"
+		using = Vegetation_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2801,24 +2918,26 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_build"
-	datacontext = "[BuildModeGetConstructScoreRanking]"
 	container = {
-		visible = "[ConstructScoreRanking.IsValid]"
-		using = construct_building_ranking_tt
-	}
-	container = {
-		visible = "[Not(ConstructScoreRanking.IsValid)]"
-		datacontext = "[BuildModeGetBuildingType]"
-		using = construct_building_in_location_tt
+		datacontext = "[BuildModeGetConstructScoreRanking]"
+		container = {
+			visible = "[ConstructScoreRanking.IsValid]"
+			using = construct_building_ranking_tt
+		}
+		container = {
+			visible = "[Not(ConstructScoreRanking.IsValid)]"
+			datacontext = "[BuildModeGetBuildingType]"
+			using = construct_building_in_location_tt
 
-		blockoverride "construct_building_in_location_tt_extra"{
-			TooltipTextBlock = { #NOT FILTERED LOCATION
-				visible = "[BuildModeHasUnfilteredItem(Location.Self)]"
-				textcontext = "NOT_FILTERED_BUILDING"
-					
-				blockoverride "textblock_background_tint"  {
-					modify_texture = {
-						using = color_white_texture
+			blockoverride "construct_building_in_location_tt_extra"{
+				TooltipTextBlock = { #NOT FILTERED LOCATION
+					visible = "[BuildModeHasUnfilteredItem(Location.Self)]"
+					textcontext = "NOT_FILTERED_BUILDING"
+						
+					blockoverride "textblock_background_tint"  {
+						modify_texture = {
+							using = color_white_texture
+						}
 					}
 				}
 			}
@@ -2831,16 +2950,18 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_recruit"
-	datacontext = "[RecruitModeGetView]"
-	datacontext = "[RecruitModeGetRecruitScoreRanking]"
 	container = {
-		visible = "[RecruitScoreRanking.IsValid]"
-		using = unit_recruit_ranking_tt
-	}
-	container = {
-		visible = "[Not(RecruitScoreRanking.IsValid)]"
+		datacontext = "[RecruitModeGetView]"
+		datacontext = "[RecruitModeGetRecruitScoreRanking]"
 		container = {
-			using = unit_recruit_map_tt
+			visible = "[RecruitScoreRanking.IsValid]"
+			using = unit_recruit_ranking_tt
+		}
+		container = {
+			visible = "[Not(RecruitScoreRanking.IsValid)]"
+			container = {
+				using = unit_recruit_map_tt
+			}
 		}
 	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
@@ -2849,87 +2970,109 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_area"
-	datacontext = "[Location.GetArea]"
-	using = Area_tooltip
+	container = {
+		datacontext = "[Location.GetArea]"
+		using = Area_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "SeaZoneMapTooltip_area"
-	datacontext = "[Location.GetArea]"
-	using = Area_tooltip
+	container = {
+		datacontext = "[Location.GetArea]"
+		using = Area_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "AreaOnlyHighlight"
-	datacontext = "[Location.GetArea]"
-	using = Area_tooltip
+	container = {
+		datacontext = "[Location.GetArea]"
+		using = Area_tooltip
+	}
 	blockoverride "area_tooltip_visible"  { visible = no }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_region"
-	datacontext = "[Location.GetRegion]"
-	using = Region_tooltip
+	container = {
+		datacontext = "[Location.GetRegion]"
+		using = Region_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "SeazoneMapTooltip_region"
-	datacontext = "[Location.GetRegion]"
-	using = Region_tooltip
+	container = {
+		datacontext = "[Location.GetRegion]"
+		using = Region_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_sub_continent"
-	datacontext = "[Location.GetSubContinent]"
-	using = Sub_Continent_tooltip
+	container = {
+		datacontext = "[Location.GetSubContinent]"
+		using = Sub_Continent_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "SeazoneMapTooltip_sub_continent"
-	datacontext = "[Location.GetSubContinent]"
-	using = Sub_Continent_tooltip
+	container = {
+		datacontext = "[Location.GetSubContinent]"
+		using = Sub_Continent_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_continent"
-	datacontext = "[Location.GetSubContinent]"
-	using = Sub_Continent_tooltip
+	container = {
+		datacontext = "[Location.GetSubContinent]"
+		using = Sub_Continent_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "SeazoneMapTooltip_continent"
-	datacontext = "[Location.GetSubContinent]"
-	using = Sub_Continent_tooltip
+	container = {
+		datacontext = "[Location.GetSubContinent]"
+		using = Sub_Continent_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_provinces"
-	datacontext = "[Location.GetProvinceDefinition]"
-	using = ProvinceDefinition_tooltip
+	container = {
+		datacontext = "[Location.GetProvinceDefinition]"
+		using = ProvinceDefinition_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 container = {
 	alwaystransparent = no
 	name = "SeazoneMapTooltip_provinces"
-	datacontext = "[Location.GetProvinceDefinition]"
-	using = ProvinceDefinition_tooltip
+	container = {
+		datacontext = "[Location.GetProvinceDefinition]"
+		using = ProvinceDefinition_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2957,32 +3100,40 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_raw_material"
-	datacontext = "[Location.GetRawMaterial]"
-	using = Goods_tooltip
+	container = {
+		datacontext = "[Location.GetRawMaterial]"
+		using = Goods_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_language"
-	datacontext = "[Location.GetDominantLanguage]"
-	using = LanguageTooltip
+	container = {
+		datacontext = "[Location.GetDominantLanguage]"
+		using = LanguageTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_language_family"
-	datacontext = "[Location.GetDominantLanguage.GetFamily]"
-	using = language_family_tooltip
+	container = {
+		datacontext = "[Location.GetDominantLanguage.GetFamily]"
+		using = language_family_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_language_power"
-	datacontext = "[Location.GetDominantLanguage]"
-	using = LanguagePower_tooltip
+	container = {
+		datacontext = "[Location.GetDominantLanguage]"
+		using = LanguagePower_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -2992,23 +3143,27 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = Garrison_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_market_language"
-	datacontext = "[Location.GetMarket.GetLanguage]"
-	using = LanguageTooltip
+	container = {
+		datacontext = "[Location.GetMarket.GetLanguage]"
+		using = LanguageTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_dialect"
-	datacontext = "[Location.GetDominantDialect]"
-	using = dialect_tooltip
+	container = {
+		datacontext = "[Location.GetDominantDialect]"
+		using = dialect_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3019,8 +3174,8 @@ container = {
 		visible = "[Location.HasOwner]"
 		datacontext = "[Location.GetOwner.GetReligion]"
 		using = religion_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3031,8 +3186,8 @@ container = {
 		datacontext = "[Location.GetOwner]"
 		datacontext = "[Location.GetOwner.GetCommonLanguage]"
 		using = LanguageTooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3043,8 +3198,8 @@ container = {
 		datacontext = "[Location.GetOwner]"
 		datacontext = "[Location.GetOwner.GetLiturgicalLanguage]"
 		using = liturgical_language_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3053,8 +3208,8 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = LocationLiteracy_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3063,8 +3218,8 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = institution_in_location_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3073,8 +3228,8 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = offer_peace_location_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3084,12 +3239,10 @@ container = {
 		visible = "[Location.HasOwner]"
 		datacontext = "[Location.GetProvince]"
 		using = province_food_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
 	container = {
 		visible = "[Not(Location.HasOwner)]"
 		using = location_tooltip_alt
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 		blockoverride "location_not_owned" {
 			text_multi = {
 				max_width = 500
@@ -3098,6 +3251,7 @@ container = {
 			}
 		}
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3106,12 +3260,10 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = location_food_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
 	container = {
 		visible = "[Not(Location.HasOwner)]"
 		using = location_tooltip_alt
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 		blockoverride "location_not_owned" {
 			text_multi = {
 				max_width = 500
@@ -3120,6 +3272,7 @@ container = {
 			}
 		}
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3129,8 +3282,8 @@ container = {
 		datacontext = "[PdxGuiWidget]"
 		visible = "[Location.HasOwner]"
 		using = location_core_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3140,8 +3293,8 @@ container = {
 		visible = "[Location.HasOwner]"
 		datacontext = "[Location.GetOwner]"
 		using = StabilityResourceTooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3150,8 +3303,9 @@ container = {
 	container = {
 		visible = "[Location.HasOwner]"
 		using = AverageSatisfaction_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+			blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+
 }
 
 container = {
@@ -3161,8 +3315,8 @@ container = {
 		visible = "[Location.HasOwner]"
 		datacontext = "[Location.GetRank]"
 		using =  LocationRank_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3170,21 +3324,23 @@ container = {
 	name = "LocationMapTooltip_political"
 	container = {
 		using = location_tooltip_alt
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "LocationMapTooltip_build_rgo"
-	datacontext = "[ExpandModeGetConstructScoreRanking]"
 	container = {
-		visible = "[ConstructScoreRanking.IsValid]"
-		using = expand_rgo_ranking_tt
-	}
-	container = {
-		visible = "[Not(ConstructScoreRanking.IsValid)]"
-		using = location_rgo_button_tooltip
+		datacontext = "[ExpandModeGetConstructScoreRanking]"
+		container = {
+			visible = "[ConstructScoreRanking.IsValid]"
+			using = expand_rgo_ranking_tt
+		}
+		container = {
+			visible = "[Not(ConstructScoreRanking.IsValid)]"
+			using = location_rgo_button_tooltip
+		}
 	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
@@ -3305,7 +3461,7 @@ container = {
 			}
 		}
 	}
-	
+
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3340,8 +3496,10 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_pop_types"
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = CountryPopulationTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = CountryPopulationTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3350,11 +3508,10 @@ container = {
 	name = "CountryMapTooltip_government"
 	container = {
 		visible = "[Country.IsValid]"
-		
 		datacontext = "[Country.GetGovernment.GetGovernmentType]"
 		using = GovernmentType_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3377,7 +3534,6 @@ container = {
 	name = "CountryMapTooltip_country_rank"
 	container = {
 		visible = "[Country.IsValid]"
-		
 		datacontext = "[Country.GetRank]"
 		using = CountryRank_tooltip
 		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
@@ -3421,8 +3577,10 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_country_culture"
-	datacontext = "[Country.GetCulture]"
-	using = culture_tooltip
+	container = {
+		datacontext = "[Country.GetCulture]"
+		using = culture_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3450,68 +3608,78 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_location_religion"
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = CountryPopulationReligionTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = CountryPopulationReligionTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_location_religion_group"
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = CountryPopulationReligionTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = CountryPopulationReligionTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_country_religion"
-	datacontext = "[Country.GetReligion]"
-	using = religion_tooltip
+	container = {
+		datacontext = "[Country.GetReligion]"
+		using = religion_tooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_power_projection"
-
 	using = power_projection_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_population"
-
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = PopulationTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = PopulationTooltip
+	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_stability"
-	datacontext = "[Country.GetEconomy]"
-	using = StabilityResourceTooltip
+	container = {
+		datacontext = "[Country.GetEconomy]"
+		using = StabilityResourceTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_culture"
-	datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
-	using = CountryPopulationCultureTooltip
+	container = {
+		datacontext = "[Country.GetPopulationChart.GetPopsPiechartWidget]"
+		using = CountryPopulationCultureTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
 	alwaystransparent = no
 	name = "CountryMapTooltip_select_country_diplomacy"
-
 	container = {
 		visible = "[SelectCountryDiplomacy_HasDiplomaticActionItem(Country.Self)]"
 		datacontext = "[SelectCountryDiplomacy_GetDiplomaticActionItem(Country.Self)]"
 		using = DiploAcceptanceTooltip
 	}
-
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3523,8 +3691,8 @@ container = {
 		datacontext = "[Country]"
 		datacontext = "[Country.GetCourtLanguage]"
 		using = court_language_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3534,8 +3702,8 @@ container = {
 		visible = "[And(Country.IsValid, Country.GetGovernment.GetRuler.HasDynasty)]"
 		datacontext = "[Country.GetGovernment.GetRuler.GetDynasty]"
 		using =  Dynasty_tooltip
-		blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 	}
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
 container = {
@@ -3596,8 +3764,10 @@ container = {
 container = {
 	alwaystransparent = no
 	name = "MarketMapTooltip_market_language"
-	datacontext = "[Market.GetLanguage]"
-	using = LanguageTooltip
+	container = {
+		datacontext = "[Market.GetLanguage]"
+		using = LanguageTooltip
+	}
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }
 
@@ -3628,54 +3798,96 @@ container = {
 	blockoverride "contextmenu_precontent" { using = pinned_mapmodes }
 }
 
-container = {
-	alwaystransparent = no
-	name = "AnnexationCostTooltip"
-	using = Annexation_cost_tooltip
-}
-
-## CUSTOM TAGTOOLTIPS
+## OTHER MAP TOOLTIPS
 ###############################################################################
 
 container = {
 	alwaystransparent = no
-	name = "SimpleCustomTagTooltip"
-	ContextualTooltipType = {
-		blockoverride "title_icon" {
-			icon = {
-				visible = "[SimpleCustomTagTooltipWrapper.HasIcon]"
-				using = tooltip_title_icon_size
-				texture = "[SimpleCustomTagTooltipWrapper.GetIcon]"
-			}
-		}
+	name = "LanguageFamilyMapTooltipDefault"
+	using = language_family_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
 
-		blockoverride "title_text" {
-			visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetTitle))]"
-			text = "[SimpleCustomTagTooltipWrapper.GetTitle]"
-		}
+container = {
+	alwaystransparent = no
+	name = "LanguageFamilyMapTooltip_language_family"
+	using = language_family_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
 
-		blockoverride "concept_link" {
-			visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetConcept))]"
-			text = "[SimpleCustomTagTooltipWrapper.GetConcept]"
-		}
+container = {
+	alwaystransparent = no
+	name = "LanguageMapTooltipDefault"
+	using = LanguageTooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
 
-		blockoverride "tooltip_content" {
-			TooltipTextBlock = {
-				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetBody))]"
-				blockoverride "text" {
-					text = "[SimpleCustomTagTooltipWrapper.GetBody]"
-				}
-			}
-			TooltipStringPairList = {
-				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetList))]"
-				textcontext = "[SimpleCustomTagTooltipWrapper.GetList]"
-			}
-			TooltipFlavorTextBlock = {
-				visible = "[Not(StringIsEmpty(SimpleCustomTagTooltipWrapper.GetFlavor))]"
-				blockoverride "text" {
-					text = "[SimpleCustomTagTooltipWrapper.GetFlavor]"
-				}
-			}
-		}
-	}
+container = {
+	alwaystransparent = no
+	name = "LanguageMapTooltip_language"
+	using = LanguageTooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "LanguageMapTooltip_common_language"
+	using = LanguageTooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "LanguageMapTooltip_liturgical_language"
+	using = LanguageTooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "CultureMapTooltipDefault"
+	using = culture_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "CultureMapTooltip_culture"
+	using = culture_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "ReligionMapTooltipDefault"
+	using = religion_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "ReligionMapTooltip_location_religion"
+	using = religion_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "ReligionMapTooltip_country_religion"
+	using = religion_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "DialectMapTooltipDefault"
+	using = dialect_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
+	name = "DialectMapTooltip_dialect"
+	using = dialect_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
 }

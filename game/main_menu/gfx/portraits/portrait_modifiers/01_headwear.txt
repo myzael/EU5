@@ -299,7 +299,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 400
+				add = 800
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
 			}
@@ -318,7 +318,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 500
+				add = 900
 				exists = this
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
@@ -343,7 +343,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 900
+				add = 1000
 				exists = this
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
@@ -799,6 +799,24 @@
 		}
 	}
 
+	shogun_no_headwear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = no_headwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				portrait_is_ruler_of_trigger = { COUNTRY = JAP }
+			}
+		}
+	}
+
 	## SYRIAN ##
 	syrian_commoner = {
 		dna_modifiers = {
@@ -819,7 +837,7 @@
 				}
 			}
 			modifier = {
-				add = 1000
+				add = 600
 				portrait_muslim_trigger = { RANK = commoner }
 			}
 		}
@@ -844,7 +862,7 @@
 				}
 			}
 			modifier = {
-				add = 1000
+				add = 700
 				portrait_muslim_trigger = { RANK = low_nobility }
 			}
 		}
@@ -869,7 +887,7 @@
 				}
 			}
 			modifier = {
-				add = 1000
+				add = 800
 				portrait_muslim_trigger = { RANK = high_nobility }
 			}
 		}
@@ -894,7 +912,7 @@
 				}
 			}
 			modifier = {
-				add = 1000
+				add = 900
 				portrait_muslim_trigger = { RANK = royalty }
 			}
 		}

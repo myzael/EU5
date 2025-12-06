@@ -163,6 +163,15 @@ template CasusBelli_tooltip {
 			text = [casus_belli|E]
 		}
 
+		blockoverride "title_button" {
+			hint_button = {
+				action_tooltip = {
+					title = "OPEN_HINT"
+					on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_casus_belli')]"
+				}
+			}
+		}
+
 		blockoverride "tooltip_content" {
 
 			TooltipStringPairList = { 
@@ -600,6 +609,9 @@ template CountryTooltip_DiplomacyStatBars {
 				}
 			}
 			TooltipStatBarIconTextItem = { # OUR OPINION
+				blockoverride "item_icon_coa" {
+					datacontext = "[Player]"
+				}
 				blockoverride "item_icon" {
 					size = { 20 20 }
 					texture = "gfx/interface/icons/flat_icons/foreigncountry/opinion.dds"

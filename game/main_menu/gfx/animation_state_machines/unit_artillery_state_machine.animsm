@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"Attack"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Attack_editor_timeline"
 		}
 		timeline_layer={
@@ -17,7 +17,7 @@ behavioral_states={
 		}
 	}
  	"Move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Move_editor_timeline"
 		}
 		timeline_layer={
@@ -25,7 +25,7 @@ behavioral_states={
 		}
 	}
  	"Retreat"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Retreat_editor_timeline"
 		}
 		timeline_layer={
@@ -33,7 +33,7 @@ behavioral_states={
 		}
 	}
  	"Charge"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Charge_editor_timeline"
 		}
 		timeline_layer={
@@ -44,7 +44,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 1"
+		name="Lane 95"
 		behavioral_state="Idle"
 		transition_interval=0.000000
 	}
@@ -189,15 +189,25 @@ events={
 
 timelines={
 	"L_relative_Attack_editor_timeline"={
+		on_enter={
+			"snd_AnimState_attack"
+		}
 		boundary_behavior=loop
 		duration=6.735000
 		events={
+			"artillery_muzzle_end_vfx"
+			"artillery_muzzle_start_vfx"
+			"snd_attack_ignition"
+			"snd_attack_fire"
+			"snd_attack_reload"
 			"Connection 17"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="attack_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_default_Idle_editor_timeline"={
 		boundary_behavior=loop
@@ -211,8 +221,12 @@ timelines={
 		playback_rate=1.000000
 		layer=0
 		duration_source=group_max
+		generated_timeline=yes
 	}
  	"L_relative_Move_editor_timeline"={
+		on_enter={
+			"snd_AnimState_move"
+		}
 		boundary_behavior=loop
 		duration=1.901111
 		events={
@@ -221,9 +235,14 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Retreat_editor_timeline"={
+		on_enter={
+			"snd_AnimState_retreat"
+		}
 		boundary_behavior=loop
 		duration=1.901111
 		events={
@@ -232,9 +251,14 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Charge_editor_timeline"={
+		on_enter={
+			"snd_AnimState_charge"
+		}
 		boundary_behavior=loop
 		duration=2.934783
 		events={
@@ -243,7 +267,9 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="attack_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"Attack"={
 		on_enter={
@@ -258,7 +284,7 @@ timelines={
 			"snd_attack_fire"
 			"snd_attack_reload"
 		}
-		starttime_offset=-1.345000
+		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
 		animation="attack_animation"
@@ -315,7 +341,7 @@ timelines={
 
 starting_timeline={
 	on_enter={
-		"Lane 1"
+		"Lane 95"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

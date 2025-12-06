@@ -131,12 +131,9 @@ hre_default_diplo_action_acceptance = {
 		value = scope:actor.prestige
 	}
 	add = {
-		desc = "OUR_OPINION_TOOLTIP"
-		value = "scope:actor.opinion(scope:actor)"
-	}
-	add = {
 		desc = "THEIR_OPINION_TOOLTIP"
-		value = "scope:actor.opinion(scope:recipient)"
+		value = "scope:recipient.opinion(scope:actor)"
+		divide = 4
 	}
 	if = {
 		limit = { scope:actor.culture.language = scope:recipient.culture.language }

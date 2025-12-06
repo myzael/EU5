@@ -1,7 +1,7 @@
 ﻿# Unique Levies
 
 levy_a_late_longbowmen = {
-	size = 0.02
+	size = 0.03
 	
 	allowed_pop_type = peasants
 
@@ -35,10 +35,9 @@ levy_a_paik = {
 levy_a_matchlock_levy = {
 	size = 0.01
 	unit = a_matchlock_levy
-
+	
 	allowed_pop_type = peasants
-	allowed_pop_type = clergy
-	allowed_pop_type = burghers
+	allowed_pop_type = laborers
 
 }
 

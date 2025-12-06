@@ -13,6 +13,7 @@ terraces_advance = {
 		culture = { has_culture_group = culture_group:andean_group }
 	}
 	unlock_building = terraces
+	global_potato_output_modifier = 0.25
 	requires = agriculture_advance
 }
 

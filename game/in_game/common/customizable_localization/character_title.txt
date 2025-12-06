@@ -295,6 +295,10 @@ character_title_prefix_captain = {
 		trigger = { dialect ?= { this = dialect:slovak_dialect } }
 	}
 	text = {
+		localization_key = captain_latvian
+		trigger = { dialect ?= { this = dialect:latvian_dialect } }
+	}
+	text = {
 		localization_key = captain_estonian
 		trigger = { dialect ?= { this = dialect:estonian_dialect } }
 	}
@@ -347,6 +351,10 @@ character_title_prefix_captain = {
 	text = {
 		localization_key = captain_german
 		trigger = { language ?= { this = language:german_language } }
+	}
+	text = {
+		localization_key = captain_lithuanian
+		trigger = { language ?= { this = language:baltic_language } }
 	}
 	text = {
 		localization_key = captain_finnish

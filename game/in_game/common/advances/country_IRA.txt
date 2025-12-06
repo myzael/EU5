@@ -114,36 +114,37 @@ ira_persian_rug_production = {
 	global_cloth_output_modifier = 0.33
 	requires = rgo_logistics_discovery
 }
+ira_safaviyya_order_hall = {
+	age = age_3_discovery
+	potential = {
+		has_or_had_tag = IRA
+		religion = religion:shia
+	}
+	requires = supply_depot_advance_age_3_discovery
+    unlock_building = safaviyya_order_hall
+}
+ira_the_qizilbash = {
+	age = age_3_discovery
+	potential = {
+		has_or_had_tag = IRA
+		religion = religion:shia
+	}
+	requires = training_fields_advance
+	unlock_unit = a_discovery_qizilbash
+	tribes_estate_target_satisfaction = medium_permanent_target_satisfaction
+}
 
 ############################
 # age_4_reformation
 ############################
-ira_safaviyya_order_hall = {
-	age = age_4_reformation
-	potential = {
-		has_or_had_tag = IRA
-		religion = religion:shia
-	}
-	requires = supply_depot_advance_age_4_reformation
-    unlock_building = safaviyya_order_hall
-}
-ira_the_qizilbash = {
-	age = age_4_reformation
-	potential = {
-		has_or_had_tag = IRA
-		religion = religion:shia
-	}
-	requires = unlock_pistoleers_advance
-	unlock_unit = a_discovery_qizilbash
-	tribes_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
+
 ira_the_qurchi = {
 	age = age_4_reformation
 	potential = {
 		has_or_had_tag = IRA
 		religion = religion:shia
 	}
-	requires = ira_the_qizilbash
+	requires = barracks_advance
 	discipline = 0.05
 }
 ira_religious_state = {

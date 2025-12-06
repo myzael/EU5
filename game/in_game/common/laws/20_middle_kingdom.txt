@@ -155,7 +155,7 @@
 				}
 			}
 			loyalty_to_overlord = -10
-			global_monthly_control_decline = -0.002
+			global_monthly_control_decline = 0.002
 		}
 		country_modifier = {
 			#Tributary benefits
@@ -171,7 +171,7 @@
 				NOT = { is_leader_of_international_organization = international_organization:middle_kingdom }
 			}
 			loyalty_to_overlord = -5
-			global_monthly_control_decline = -0.001
+			global_monthly_control_decline = 0.001
 		}
 		wants_this_policy_bias = {
 			if = {

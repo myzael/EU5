@@ -3231,6 +3231,7 @@ CHI_f = {
 	}
 
 	allow = {
+		NOT = { is_situation_active = situation:red_turban_rebellions }
 	}
 
 	tag = CHI
@@ -3250,6 +3251,7 @@ IRO_f = { # Haudenosaunee / Iroquois Confederacy
 
 	level = 3
 	required_locations_fraction = 0.80
+	capital_required = no
 	rule = historical
 
 	potential = {
@@ -3283,6 +3285,7 @@ PUE_f = { # United Pueblo
 
 	level = 2
 	required_locations_fraction = 1
+	capital_required = no
 	rule = historical
 
 	potential = {

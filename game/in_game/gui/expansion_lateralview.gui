@@ -1064,7 +1064,6 @@ template exploration_item {
 
 					# no exploration yet
 					hbox = {
-						spacing = 10
 						visible = "[Not(PossibleExplorationItem.HasExploration)]"
 						using = layoutpolicy_expanding
 
@@ -1125,8 +1124,6 @@ template exploration_item {
 						using = layoutpolicy_expanding
 						visible = "[PossibleExplorationItem.HasExploration]"
 						spacing = 10
-
-						expand = {}	
 
 						# character widget
 						widget = {
@@ -1266,6 +1263,8 @@ template exploration_item {
 								}
 							}
 						}
+
+						expand = {}	
 
 						# constructing
 						text_single = {
@@ -2058,14 +2057,14 @@ lateralview = {
 							blockoverride "scroll_list_layout" {
 								fixedgridbox = {
 									addcolumn = 100%
-									addrow = 72
+									addrow = 76
 									datamodel_reuse_widgets = yes
 									datamodel = "[ExpansionLateralView.GetProvinces]"
 									item = {
 										widget = {
 											size = { 100% 72 }
 											widget = {
-												size = { 100% 70 }
+												size = { 98% 72 }
 												parentanchor = center
 												card_common = {
 													blockoverride "header_size" {

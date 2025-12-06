@@ -1044,6 +1044,7 @@ hundred_years_war.206 = {
 			base = 20
 		}
 
+		custom_tooltip = IF_THEY_ACCEPT
 		custom_tooltip = scope_actor_exempted_from_offensive_wars_tt
 
 		c:FRA = { trigger_event_silently = hundred_years_war.208 }
@@ -1178,11 +1179,15 @@ hundred_years_war.208 = {
 		}	
 		add_gold = {
 			value = root.monthly_income_total
-			multiply = 2.5
+			multiply = -2.5
 		}
 		scope:actor = {
 			hidden_effect = { remove_variable = demanded_payment_variable }
 			
+			add_gold = {
+				value = root.monthly_income_total
+				multiply = 2.5
+			}
 			add_country_modifier = {
 				modifier = reduced_payment_obligations
 				years = 10

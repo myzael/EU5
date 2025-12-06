@@ -668,7 +668,7 @@ lateralview = {
 																click_type = left
 																click_mode = single
 																enabled = "[And( GoodsProductionLateralView.IsMarketFilterEnabled, GoodItem.CanImportFromSelectedMarket )]"
-																conditions = "[MakeItFailIfLoc(Not(And(GoodsProductionLateralView.IsMarketFilterEnabled, GoodItem.CanImportFromSelectedMarket )), GoodsProductionLateralView.GetSelectedMarket.GetImportInfo(Player.Self,GoodItem.GetGoods))]"
+																conditions = "[MakeItFailIf(Not(And(GoodsProductionLateralView.IsMarketFilterEnabled, GoodItem.CanImportFromSelectedMarket )), GoodsProductionLateralView.GetSelectedMarket.GetImportInfo(Player.Self,GoodItem.GetGoods))]"
 																title = "[SelectLocalization(And(GoodsProductionLateralView.IsMarketFilterEnabled, GoodItem.CanImportFromSelectedMarket ), 'IMPORT_BUTTON_ACTION_TT', 'CANNOT_EXPORT_BUTTON_ACTION_TT')]"
 																on_action = "[SetupImportWithNeedsRight(GoodsProductionLateralView.GetSelectedMarket.Self,GoodItem.GetGoods,'(CFixedPoint)0')]"
 															}
@@ -728,7 +728,7 @@ lateralview = {
 																click_type = left
 																click_mode = single
 																enabled = "[GoodItem.CanExportToSelectedMarket]"
-																conditions = "[MakeItFailIfLoc(Not(GoodItem.CanExportToSelectedMarket), GoodsProductionLateralView.GetSelectedMarket.GetExportInfo(Player.Self,GoodItem.GetGoods))]"
+																conditions = "[MakeItFailIf(Not(GoodItem.CanExportToSelectedMarket), GoodsProductionLateralView.GetSelectedMarket.GetExportInfo(Player.Self,GoodItem.GetGoods))]"
 																title = "[SelectLocalization(GoodItem.CanExportToSelectedMarket, 'EXPORT_BUTTON_ACTION_TT', 'CANNOT_EXPORT_BUTTON_ACTION_TT')]"																
 																on_action = "[SetupExportWithNeedsRight(GoodsProductionLateralView.GetSelectedMarket.Self,GoodItem.GetGoods,'(CFixedPoint)0')]"
 															}
@@ -802,7 +802,7 @@ lateralview = {
 															maximumsize = {55 -1}
 															align = nobaseline
 															fontsize = 14
-															raw_text = "[GoodItem.GetMaxBuildingProfit|+2]@gold!"
+															raw_text = "[GoodItem.GetMaxBuildingProfit|+2]@tax_base!"
 														}
 
 														text_single = {
@@ -896,7 +896,7 @@ lateralview = {
 															maximumsize = {55 -1}
 															align = nobaseline
 															fontsize = 14
-															raw_text = "[GoodItem.GetMaxRGOProfit|+2] @gold!"
+															raw_text = "[GoodItem.GetMaxRGOProfit|+2] @tax_base!"
 														}
 
 														text_single = {

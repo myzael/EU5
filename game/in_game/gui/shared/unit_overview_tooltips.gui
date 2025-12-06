@@ -503,6 +503,41 @@ template MilitaryTacticsTooltip {
 }
 
 
+template LevyCombatEfficiencyTooltip {
+	ContextualTooltipType = {
+        blockoverride "title_text" {
+            text = "TT_LEVY_COMBAT_EFFICIENCY_TITLE"
+        }
+       
+        blockoverride "title_icon" {
+            icon = {
+                using = tooltip_title_icon_size
+					texture = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds"
+        	}
+		}
+
+        blockoverride "concept_link" {
+            text = [levy_combat_efficiency|e]
+        }
+
+        blockoverride "tooltip_content" {
+
+            TooltipTextBlock = {
+                blockoverride "text" {
+                    text = "TT_LEVY_COMBAT_EFFICIENCY_TEXT"
+                }
+            }
+
+			TooltipStringPairList = {
+                blockoverride "block_title" {
+                    text = "LIST_TITLE_SOURCES"
+                }
+				textcontext = "[Country.GetDescriptionFor('levy_combat_efficiency_modifier')]"
+			}
+        }
+    }
+}
+
 template NavalDamageTooltip {
 	ContextualTooltipType = {
         blockoverride "title_text" {

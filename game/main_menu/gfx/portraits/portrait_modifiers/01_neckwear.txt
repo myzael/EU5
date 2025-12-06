@@ -133,7 +133,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 500
+				add = 800
 				exists = this
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_armor_trigger = yes
@@ -150,17 +150,11 @@
 				template = european_war
 				range = { 0.51 1 } # For the randomness to work correctly
 			}
-			accessory = {
-				mode = add
-				gene = neckware_outer
-				template = no_neckware_outer
-				range = { 0 1 } # For the randomness to work correctly
-			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 900
+				add = 1000
 				exists = this
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_armor_trigger = yes

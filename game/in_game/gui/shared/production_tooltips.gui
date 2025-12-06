@@ -56,7 +56,8 @@ template multiple_constructions_list {
 
 					blockoverride "column_datamodel"  { 
 						block "multiple_constructions_datamodel" {
-							datamodel = "[Construction.GetLocation.GetCivilConstructions]" 
+							# datamodel = "[Construction.GetLocation.GetCivilConstructions]" 
+							datamodel = "[DataModelFirst(Construction.GetLocation.GetCivilConstructions, '(int32)20')]"
 						}
 					}
 				}
@@ -209,7 +210,8 @@ template Construction_tooltip {
 				Construction.IsArmy)]"
 				using = multiple_constructions_list
 				blockoverride "multiple_constructions_datamodel" {
-					datamodel = "[Construction.GetLocation.GetArmyConstructions]" 
+					# datamodel = "[Construction.GetLocation.GetArmyConstructions]"
+					datamodel = "[DataModelFirst(Construction.GetLocation.GetArmyConstructions, '(int32)20')]"
 				}
 			}
 
@@ -218,7 +220,8 @@ template Construction_tooltip {
 				Construction.IsNavy)]"
 				using = multiple_constructions_list
 				blockoverride "multiple_constructions_datamodel" {
-					datamodel = "[Construction.GetLocation.GetNavyConstructions]" 
+					# datamodel = "[Construction.GetLocation.GetNavyConstructions]" 
+					datamodel = "[DataModelFirst(Construction.GetLocation.GetNavyConstructions, '(int32)20')]"
 				}
 			}
 			TooltipContentSection = {
@@ -226,9 +229,11 @@ template Construction_tooltip {
 				Construction.IsConquistador)]"
 				using = multiple_constructions_list
 				blockoverride "multiple_constructions_datamodel" {
-					datamodel = "[Construction.GetLocation.GetGeopoliticConstructions]" 
+					# datamodel = "[Construction.GetLocation.GetGeopoliticConstructions]" 
+					datamodel = "[DataModelFirst(Construction.GetLocation.GetGeopoliticConstructions, '(int32)20')]"
 				}
 			}
+
 
 			TooltipRowList = {
 				visible = "[Construction.IsLevy]"
@@ -689,8 +694,8 @@ template Location_Building_Subsidized_Tooltip {
 		blockoverride "title_icon" {
 			button_checkbox_subsidized = {
 				using = tooltip_title_icon_size
-				checked = "[LocationToBuildItem.GetBuilding.IsSubsidized]"
-				enabled = "[CanSubsidizeBuilding(LocationToBuildItem.GetBuilding.Self)]"
+				checked = "[Building.IsSubsidized]"
+				enabled = "[CanSubsidizeBuilding(Building.Self)]"
 			}
 		}
 
@@ -701,7 +706,7 @@ template Location_Building_Subsidized_Tooltip {
 		blockoverride "tooltip_content" {
 			TooltipConditionList = {
 				visible = "[ConditionList.HasItems]"
-				textcontext = "[StringToConditionListOnlyPassedAndNeutralIfNot(CanSubsidizeBuilding(LocationToBuildItem.GetBuilding.Self), GetSubsidizeBuildingInfo(LocationToBuildItem.GetBuilding.Self)).GetOutput]"
+				textcontext = "[StringToConditionListOnlyPassedAndNeutralIfNot(CanSubsidizeBuilding(Building.Self), GetSubsidizeBuildingInfo(Building.Self)).GetOutput]"
 			}
 		}
 	}	

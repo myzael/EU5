@@ -3,10 +3,10 @@
 	allow_multiple = no
 	years = 10
 	potential = {
+		NOT = { is_dominant_country_of = culture }
 	}
 	allow = {
 		in_civil_war = no
-		NOT = { is_dominant_country_of = culture }
 		OR = {
 			country_rank = country_rank:rank_kingdom
 			country_rank = country_rank:rank_empire
@@ -20,8 +20,6 @@
 					is_colonial_subject = yes
 					is_disloyal_subject = yes
 				}
-				capital.continent = continent:america
-				capital.continent = continent:oceania
 			}
 		}
 	}

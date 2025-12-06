@@ -63,7 +63,7 @@ template production_view_subtabs {
 					using = header_button_template
 					blockoverride "header_button_template_push_properties"{using = button_tab_toggle_properties_template}
 					blockoverride "header_button_full_content"{}
-					blockoverride "header_button_template_texture"{using = pressed_button_texture}
+					blockoverride "header_button_template_texture"{using = pressed_button_texture_light}
 					tooltipwidget = {
 						LeftClickButtonTooltip = {
 							blockoverride "onclick_text" { text = "DISPLAY_LISTS" }
@@ -85,7 +85,7 @@ template production_view_subtabs {
 					using = header_button_template
 					blockoverride "header_button_template_push_properties"{using = button_tab_toggle_properties_template}
 					blockoverride "header_button_full_content"{}
-					blockoverride "header_button_template_texture"{using = pressed_button_texture}
+					blockoverride "header_button_template_texture"{using = pressed_button_texture_light}
 					tooltipwidget = {
 						LeftClickButtonTooltip = {
 							blockoverride "onclick_text" { text = "DISPLAY_CARDS" }
@@ -107,7 +107,7 @@ template production_view_subtabs {
 					using = header_button_template
 					blockoverride "header_button_template_push_properties"{using = button_tab_toggle_properties_template}
 					blockoverride "header_button_full_content"{}
-					blockoverride "header_button_template_texture"{using = pressed_button_texture}
+					blockoverride "header_button_template_texture"{using = pressed_button_texture_light}
 					tooltipwidget = {
 						LeftClickButtonTooltip = {
 							blockoverride "onclick_text" { text = "DISPLAY_FOREIGN" }
@@ -120,7 +120,7 @@ template production_view_subtabs {
 					icon = {
 						size = {70% 70%}
 						parentanchor = center
-						texture = "[GetConceptTexture('foreign_building')]"
+						texture = "[GetConceptTexture('foreign')]"
 					}
 				}
 
@@ -129,7 +129,7 @@ template production_view_subtabs {
 					using = header_button_template
 					blockoverride "header_button_template_push_properties"{using = button_tab_toggle_properties_template}
 					blockoverride "header_button_full_content"{}
-					blockoverride "header_button_template_texture"{using = pressed_button_texture}
+					blockoverride "header_button_template_texture"{using = pressed_button_texture_light}
 					tooltipwidget = {
 						LeftClickButtonTooltip = {
 							blockoverride "onclick_text" { text = "DISPLAY_ESTATE" }
@@ -2074,7 +2074,7 @@ types Buildings {
 										visible = "[BuildingItem.HasMinProfit]"
 										maximumsize = { 50 -1 }
 										align = center|nobaseline
-										raw_text = "[BuildingItem.GetMinProfit|+=2]@gold!"
+										raw_text = "[BuildingItem.GetMinProfit|+=2]"
 										datacontext = "[BuildingItem.GetBuildingType]"
 
 										tooltipwidget = {
@@ -2097,13 +2097,13 @@ types Buildings {
 										visible = "[BuildingItem.HasMinProfit]"
 										autoresize = yes
 										align = center|nobaseline
-										raw_text = "-"
+										raw_text = "–"
 										fontsize = 16
 									}
 
 									text_single = {
 										align = center|nobaseline
-										raw_text = "[BuildingItem.GetMaxProfit|+=2]@gold!"
+										raw_text = "[BuildingItem.GetMaxProfit|+=2]"
 										datacontext = "[BuildingItem.GetBuildingType]"
 										maximumsize = { 50 -1 }
 
@@ -2122,7 +2122,16 @@ types Buildings {
 										}
 									}
 
-									expand = {}
+									icon = {
+										size = { 16 16 }
+										texture = "[GetConceptTexture('tax_base')]"
+										glow = {
+											name = "drop_shadow"
+											glow_radius = 1
+											color = {0.0 0.0 0.0 1.0}
+											alpha = 0.1
+										}
+									}
 								}
 							}
 
@@ -2800,22 +2809,43 @@ types Buildings {
 									}
 								}
 
-								text_single = {
-									autoresize = no
-									size = {80 25}
-									align = center
-									visible = "[And(BuildingItem.GetBuildingType.IsProducing, BuildingItem.HasBuildings)]"
-									raw_text = "[BuildingItem.GetProfitPerLevel|+=2]@gold!"
-									datacontext = "[BuildingCandidate.GetBuilding]"
-									tooltipwidget = {
-										using = BuildingProfit_Tooltip
+								hbox = {
+									visible = "[And(BuildingItem.HasBuildings, BuildingItem.GetBuildingType.IsProducing)]"
+									text_single = {
+										autoresize = no
+										size = {80 25}
+										align = center
+										visible = "[Or(GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0'), Not(Building.IsSubsidized))]"
+										raw_text = "[Building.GetNetProfitValuePerLevel|+=2]@tax_base!"
+										datacontext = "[BuildingCandidate.GetBuilding]"
+										tooltipwidget = {
+											using = BuildingProfit_Tooltip
+										}
+										fontsize = 16
+										sort_by_highlight = {
+											size = { 100% 110% }
+											name = "profit"
+										}
 									}
-									fontsize = 16
-									sort_by_highlight = {
-										size = { 100% 110% }
-										name = "profit"
+	
+									text_single = {
+										autoresize = no
+										size = {80 25}
+										align = center
+										visible = "[And(Not(GreaterThan_CFixedPoint(Building.GetProfit, '(CFixedPoint)0')), Building.IsSubsidized)]"
+										raw_text = "#L [Building.GetNetProfitValuePerLevel|2]#!@tax_base!"
+										datacontext = "[BuildingCandidate.GetBuilding]"
+										tooltipwidget = {
+											using = BuildingProfit_Tooltip
+										}
+										fontsize = 16
+										sort_by_highlight = {
+											size = { 100% 110% }
+											name = "profit"
+										}
 									}
 								}
+
 
 								widget = {
 									size = { 25 25 }
@@ -3269,40 +3299,14 @@ types Buildings {
 							text_single = {
 								autoresize = no
 								size = {80 25}
+								datacontext = "[BuildingItem.GetBuildingType]"
+								datacontext = "[ProductionView.GetSelectedLocation]"
 								visible = "[BuildingItem.GetBuildingType.IsProducing]"
 								fontsize = 16
 								align = center|nobaseline
-								raw_text = "[GetBuildingTypeProfitInLocation(BuildingItem.GetBuildingType, ProductionView.GetSelectedLocation)|+=2]@gold!"
+								raw_text = "[GetBuildingTypeProfitInLocation(BuildingItem.GetBuildingType, ProductionView.GetSelectedLocation)|+=2]@tax_base!"
 								tooltipwidget = {
-									ContextualTooltipType = {
-										blockoverride "title_icon" {
-											icon = {
-												using = tooltip_title_icon_size
-												texture = "[GetBuildingIcon(BuildingItem.GetBuildingType)]"
-
-												tooltipwidget = {
-													using = Building_tooltip
-												}
-											}
-										}
-
-										blockoverride "title_text" {
-											datacontext = "[BuildingItem.GetBuildingType]"
-											text = "PROFIT_FOR_BUILDING_TYPE"
-										}
-
-										blockoverride "concept_link" {
-											text = "[building|e]"
-										}
-										blockoverride "tooltip_content" {
-
-											TooltipTextBlock = {
-												blockoverride "text" {
-													text = "[GetBuildingTypeProfitInLocationInfo(BuildingItem.GetBuildingType, ProductionView.GetSelectedLocation)|+=2]"
-												}
-											}
-										}
-									}
+									using = BuildingTypeProfit_Tooltip
 								}
 								sort_by_highlight = {
 									size = { 100% 110% }
@@ -3996,7 +4000,7 @@ types Buildings {
 					using = bg_circle_piechart
 
 					icon = {
-						size = { 75% 75% }
+						size = { 92% 92% }
 						parentanchor = center
 						position = {-1 0}
 						block "estates_filter_button_texture" {

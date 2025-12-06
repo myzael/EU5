@@ -4,23 +4,23 @@
 
 behavioral_states={
 	"Attack"={
-		timeline_layer={
-			timeline="L_default_Attack_editor_timeline"
+		preferent_timeline_layer={
+			timeline="L_relative_Attack_editor_timeline"
 		}
 		timeline_layer={
 			timeline="Attack"
 		}
 	}
  	"Idle"={
-		timeline_layer={
-			timeline="L_default_Idle_editor_timeline"
+		preferent_timeline_layer={
+			timeline="L_relative_Idle_editor_timeline"
 		}
 		timeline_layer={
 			timeline="Idle"
 		}
 	}
  	"Move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"Retreat"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Retreat_editor_timeline"
 		}
 		timeline_layer={
@@ -36,7 +36,7 @@ behavioral_states={
 		}
 	}
  	"Charge"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Charge_editor_timeline"
 		}
 		timeline_layer={
@@ -156,18 +156,21 @@ events={
  }
 
 timelines={
-	"L_default_Attack_editor_timeline"={
+	"L_relative_Attack_editor_timeline"={
 		boundary_behavior=loop
+		duration=9.000000
 		events={
 			"Connection 17"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
-		duration_source=group_max
+		animation="attack_artillery_mortar_animation"
+		generated_timeline=yes
 	}
- 	"L_default_Idle_editor_timeline"={
+ 	"L_relative_Idle_editor_timeline"={
 		boundary_behavior=loop
+		duration=1.235000
 		events={
 			"Connection 9"
 			"Connection 11"
@@ -177,29 +180,39 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
-		duration_source=group_max
+		animation="idle_animation"
+		generated_timeline=yes
 	}
  	"L_relative_Move_editor_timeline"={
 		boundary_behavior=loop
 		duration=2.425113
 		events={
+			"dust_vfx_start"
 			"Connection 20"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_auxiliary_carriage_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Retreat_editor_timeline"={
 		boundary_behavior=loop
 		duration=2.425113
 		events={
+			"snd_retreat_1"
+			"snd_retreat_2"
+			"snd_retreat_3"
+			"snd_retreat_4"
 			"Connection 22"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_auxiliary_carriage_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Charge_editor_timeline"={
 		boundary_behavior=loop
@@ -210,12 +223,14 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_auxiliary_carriage_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"Attack"={
 		boundary_behavior=loop
 		duration=9.000000
-		starttime_offset=-0.600000
+		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
 		animation="attack_artillery_mortar_animation"

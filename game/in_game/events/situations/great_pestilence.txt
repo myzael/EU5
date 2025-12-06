@@ -538,9 +538,9 @@ great_pestilence.7 = { # Forever Lost
 		}
 		add_gold_to_estate = {
 			estate_type = estate_type:clergy_estate
-			value = { value = root.monthly_income_trade_and_tax multiply = 5 }
+			value = { value = root.monthly_income_trade_and_tax multiply = 3 }
 		}
-		change_gold_effect = { scale = -5 }
+		change_gold_effect = { scale = -3 }
 	}
 
 	option = {

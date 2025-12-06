@@ -4657,6 +4657,15 @@ random_event.93 = {
 
 	option = {
 		name = random_event.93.b
+
+		trigger = {
+			scope:minister = {
+				OR = {
+					is_heir = no
+					has_estate = estate_type:crown_estate
+				}
+			}
+		}
 		kill_character = {
 			target = scope:minister
 			reason = beheading

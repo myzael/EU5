@@ -364,6 +364,10 @@ prepare_for_war = {
 						capital = {
 							is_discovered_by = scope:actor
 						}
+						NOT = { has_target_casus_belli_on_us = root }
+						NOT = { has_truce_with = scope:actor }
+						NOT = { is_subject_of = scope:actor }
+						is_rebel_country = no
 					}
 					add_to_list = source
 				}
@@ -416,12 +420,6 @@ prepare_for_war = {
 		}
 		column = {
 			data = population
-		}
-		visible = {
-			NOT = { has_target_casus_belli_on_us = root }
-			NOT = { has_truce_with = scope:actor }
-			NOT = { is_subject_of = scope:actor }
-			is_rebel_country = no
 		}
 	}
 	

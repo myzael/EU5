@@ -44,7 +44,7 @@ flavor_dan_skane_war.1 = { #The Rebellion of Johan Offesson
 		government_type = government_type:monarchy
 		opinion = {
 			target = c:SWE
-			value <= 100
+			value <= 150
 		}
 		c:SWE = {
 			has_ruler = yes

@@ -90,16 +90,15 @@ request_aid = {
 	
 	potential = {
 		scope:actor.religion = religion:catholic
-		scope:actor = { NOT = { tag = PAP } }
+		scope:actor = { 
+			NOT = { tag = PAP } 
+			has_reform = government_reform:military_order_reform
+		}
 	}
 
 	allow = {
 		papacy_active = yes
-		custom_tooltip = {
-			text = 10_years_cd
-		}
 		scope:actor = { 
-			has_reform = government_reform:military_order_reform
 			NOR = {
 				is_rival_of = c:PAP
 				is_enemy_of = c:PAP

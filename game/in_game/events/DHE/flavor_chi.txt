@@ -2460,6 +2460,7 @@ flavor_chi.33 = {
 	}
 	trigger = {
 		is_yuan_china = yes
+		in_civil_war = no
 		NOT = { international_organization:middle_kingdom.leader_country ?= ROOT }
 	}
 

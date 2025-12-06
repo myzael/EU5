@@ -824,7 +824,7 @@ lateralview = {
 						blockoverride "text_bottom" {
 							autoresize = yes
 							maximumsize = { 140 15 }
-							raw_text = "[RecruitInLocationLateralView.GetLeviesStrength] #G +[RecruitInLocationLateralView.GetLeviesInProgress]#! / [Player.GetArmyLevyPower]"
+							raw_text = "[RecruitInLocationLateralView.GetLeviesStrength] #G +[RecruitInLocationLateralView.GetLeviesInProgress]#! / [Player.GetArmyLevyPotentialStrength]"
 						}
 
 						action_tooltip = {

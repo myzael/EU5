@@ -8,7 +8,6 @@
 
 @messages_width = @[right_panel_width + outliner_collapsed_width]
 
-
 types MessageLogTypes
 {
 	type messages_toggle_button = widget {
@@ -147,16 +146,12 @@ window = {
 				parentanchor = right|bottom
 		
 				state = {
-					name = _hide
-					bezier = { 1.0 0.0 1.0 0.0 }
-					duration = 0.25
+					using = outliner_hide_animation_template
 					position = { @messages_width 0 }
 				}
 			
 				state = {
-					name = _show
-					bezier = { 0.0 1.0 0.0 1.0 }
-					duration = 0.1
+					using = outliner_show_animation_template
 					position = { 0 0 }
 				}
 		

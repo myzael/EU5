@@ -36,16 +36,17 @@ types SituationPanel
 				using = bg_main_inner_notabs_alt
 				using = window_main_tabs_margin_alt
 				visible = "[Not(SituationView.GetActiveSituation.HasEnded)]"
-				spacing = 3
+				spacing = 5
 
 				# SUBHEADER
 				widget = {
 					# block "situation_header_extra" {}
 					layoutpolicy_horizontal = expanding
-					size = { -1 40 }
+					size = { -1 45 }
 
 					# LEFT SIDE
 					hbox = {
+						margin = { 0 4 }
 						spacing = 10
 						maximumsize = {140 28}
 						layoutstretchfactor_horizontal = 1
@@ -57,6 +58,7 @@ types SituationPanel
 				
 					# CENTER
 					hbox = {
+						margin = { 0 4 }
 						spacing = 10
 						maximumsize = {140 28}
 						parentanchor = hcenter|top
@@ -82,6 +84,7 @@ types SituationPanel
 				
 					# RIGHT SIDE
 					hbox = {
+						margin = { 0 4 }
 						spacing = 10
 						parentanchor = right|top
 						maximumsize = {140 28}
@@ -137,6 +140,7 @@ types SituationPanel
 
 				# MAIN CONTENT
 				vbox = {
+					margin_top = -5
 					using = layoutpolicy_expanding
 					using = bg_secondary_inner_alt
 
@@ -150,6 +154,10 @@ types SituationPanel
 									autoresize = no
 									text = "SITUATION_BREAKDOWN"
 									align = center
+									using = Font_Type_Headers
+									using = Font_Size_Medium
+									parentanchor = center|vcenter
+    								position = { 0 6 }
 								}
 								using = button_main_tab_texture
 								using = button_secondary_tab_alt_color

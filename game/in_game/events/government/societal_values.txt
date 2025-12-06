@@ -10256,6 +10256,7 @@ societal_values.2305 = {	#Sinicization Backlash
 						multiply = location_counter
 					}
 					max = 12
+					check_range_bounds = no
 					add_to_list = province_list_2305
 				}
 				random_in_list = {
@@ -10938,6 +10939,7 @@ societal_values.2303 = {	#"The Defiance of [target_country.GetNameWithNoTooltip]
 				}
 				order_by = total_population
 				max = 12
+				check_range_bounds = no
 				add_to_list = candidate_bad_boys
 			}
 		}
@@ -11449,6 +11451,7 @@ societal_values.2302 = {	#Factional Struggles
 				add = 1
 				max = 4
 			}
+			check_range_bounds = no
 			add_to_list = native_faction_list
 		}
 
@@ -11471,6 +11474,7 @@ societal_values.2302 = {	#Factional Struggles
 				add = 1
 				max = 4
 			}
+			check_range_bounds = no
 			add_to_list = sinicized_faction_list
 		}
 
@@ -11910,6 +11914,7 @@ societal_values.2320 = {	#Knowledge Sharing
 				min = 1
 				max = 10
 			}
+			check_range_bounds = no
 			add_to_list = potential_locations_2320
 		}
 	}

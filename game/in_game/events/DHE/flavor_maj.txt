@@ -636,7 +636,7 @@ flavor_maj.12 = {  #New Temples
 		tag = MAJ
 		from = 1350.1.1
 		to = 1402.6.1
-		monthly_chance = 1
+		monthly_chance = 5
 	}
 	trigger = {
 		at_war = no
@@ -768,7 +768,7 @@ flavor_maj.14 = {  #Candi Surawana
 		tag = MAJ
 		from = 1350.1.1
 		to = 1402.6.1
-		monthly_chance = 2
+		monthly_chance = 10
 	}
 	trigger = {
 		has_variable = maj_had_temples_event_variable

@@ -63,6 +63,7 @@
  patronym_suffix_persian_son: "zadeh"
  patronym_suffix_afghan_son: "zai"
  patronym_suffix_romanian_son: "escu"
+ patronym_suffix_south_slavic_son: "ovič"
  patronym_suffix_russian_son: "ovich"
  patronym_suffix_russian_daughter: "ovna"
  patronym_suffix_russian_novgorodian_son: "ovičŭ"
@@ -218,6 +219,14 @@
  captain_estonian: "Kapten"
  captain_estonian_female: "Kapten"
  captain_estonian_plural: "Kaptenid"
+
+ captain_lithuanian: "Kapitonas"
+ captain_lithuanian_female: "Kapitonė"
+ captain_lithuanian_plural: "Kapitonai"
+
+ captain_latvian: "Kapteinis"
+ captain_latvian_female: "Kapteine"
+ captain_latvian_plural: "Kapteiņi"
  
  captain_polish: "Kapitan"
  captain_polish_female: "Kapitan"
@@ -615,6 +624,7 @@
  Morfydd: "Morfydd"
  Cort: "Cort"
  Adeler: "Adeler"
+ Romer: "Rømer"
  Henriksson: "Henrikssøn"
  Tordenskiold: "Tordenskiold"
  Nuala: "Nuala"
@@ -30637,3 +30647,4 @@
  Wakayima: "Wakayima"
  Kato: "Kato"
  Nyinamwiru: "Nyinamwiru"
+ von_kulsheim: "von Külsheim"

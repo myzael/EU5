@@ -199,16 +199,20 @@ western_schism.6 = { #Clash between
 			limit = { dominant_religion = religion:catholic }
 			order_by = {
 				value = average_satisfaction
+				#If the location is a town (rank index 2) or a city (rank index 1)
+				#It will be more likely to end up on the list
 				if = {
 					limit = {
-						OR = {
-							location_rank ?= location_rank:town
-							location_rank ?= location_rank:city
-						}
+						rank_index ?= 1
 					}
-					divide = rank_index
-					#If the location is a town (rank index 2) or a city (rank index 1)
-					#It will be more likely to end up on the list
+					multiply = 0.25
+					
+				}
+				else_if = {
+					limit = {
+						rank_index ?= 2
+					}
+					multiply = 0.5
 				}
 			}
 			max = 40
@@ -1479,7 +1483,6 @@ western_schism.1400 = { #Second Council Event - Council of Pisa
 		}
 
 		situation:western_schism = {
-			start_western_schism_resolution = yes
 			if = {
 				limit = {
 					has_variable = western_schism_pope_score
@@ -1496,7 +1499,7 @@ western_schism.1400 = { #Second Council Event - Council of Pisa
 			}
 			if = {
 				limit = { exists = scope:winner_country }
-				end_situation = this
+				set_variable = western_schism_ended_by_event
 				scope:winner_country = {
 					trigger_event_non_silently = {
 						id = western_schism.2100
@@ -1504,7 +1507,7 @@ western_schism.1400 = { #Second Council Event - Council of Pisa
 					}
 				}
 			}
-			else_if = {
+			else = {
 				religion:catholic = {
 					every_country_with_cardinals = {
 						trigger_event_non_silently = {
@@ -1563,7 +1566,7 @@ western_schism.1500 = { #Third Council Event - Council of Constance
 			}
 			if = {
 				limit = { exists = scope:winner_country }
-				end_situation = this
+				set_variable = western_schism_ended_by_event
 				scope:winner_country = {
 					trigger_event_non_silently = {
 						id = western_schism.2200
@@ -1681,6 +1684,12 @@ western_schism.2100 = {
 				save_scope_as = target_character
 			}
 			set_new_ruler = scope:target_character
+			if = {
+				limit = {
+					has_estate_privilege = estate_privilege:french_cardinals
+				}
+				revoke_estate_privilege = estate_privilege:french_cardinals
+			}
 			if = {
 				limit = {
 					owns = location:rome

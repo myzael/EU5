@@ -13,6 +13,7 @@ difficulty_player_very_easy = {
 	naval_morale_modifier = 0.25
 	country_cabinet_efficiency = 0.25
 	legislative_efficiency = 0.25
+	global_estate_satisfaction_recovery = 0.005
 }
 
 difficulty_player_easy = {
@@ -27,14 +28,9 @@ difficulty_player_easy = {
 	naval_morale_modifier = 0.1
 	country_cabinet_efficiency = 0.1
 	legislative_efficiency = 0.1
+	global_estate_satisfaction_recovery = 0.002
 }
 
-difficulty_player_hard = {
-	game_data = {
-		category = country
-	}
-	army_maintenance_cost = 0.25
-}
 
 difficulty_player_normal = {
 	game_data = {
@@ -42,11 +38,20 @@ difficulty_player_normal = {
 	}
 }
 
+difficulty_player_hard = {
+	game_data = {
+		category = country
+	}
+	global_estate_target_satisfaction = -0.05
+
+}
+
 difficulty_player_very_hard = {
 	game_data = {
 		category = country
 	}
-	army_maintenance_cost = 0.50
+	
+	global_estate_target_satisfaction = -0.1
 }
 
 difficulty_ai_very_easy = {
@@ -69,6 +74,12 @@ difficulty_ai_normal = {
 	game_data = {
 		category = country
 	}
+
+
+	trade_efficiency = small_trade_efficiency_bonus
+	global_estate_target_satisfaction = 0.05
+	global_estate_satisfaction_recovery = 0.001
+
 }
 
 difficulty_ai_hard = {
@@ -82,6 +93,7 @@ difficulty_ai_hard = {
 	research_speed_modifier = 0.1
 	global_estate_target_satisfaction = 0.1
 	trade_efficiency = medium_trade_efficiency_bonus
+	global_estate_satisfaction_recovery = 0.002
 	global_population_growth = 0.0005
 	global_pop_food_consumption = -0.1
 }
@@ -95,8 +107,10 @@ difficulty_ai_very_hard = {
 	naval_damage_taken = -0.2
 	tax_income_efficiency = 0.2
 	research_speed_modifier = 0.2
-	global_estate_target_satisfaction = 0.2
+	global_estate_target_satisfaction = 0.25
 	trade_efficiency = large_trade_efficiency_bonus
+	global_estate_satisfaction_recovery = 0.003
+
 	global_population_growth = 0.001
 	global_pop_food_consumption = -0.2
 }

@@ -255,6 +255,7 @@ ask_to_lift_excommunication = {
 			religion = religion:catholic
 			modifier:is_pope = no
 			is_excommunicated = yes
+			is_subject = no
 		}
 	}
 	allow = {}

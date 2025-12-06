@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"Attack"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Attack_editor_timeline"
 		}
 		timeline_layer={
@@ -12,7 +12,7 @@ behavioral_states={
 		}
 	}
  	"Idle"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Idle_editor_timeline"
 		}
 		timeline_layer={
@@ -20,7 +20,7 @@ behavioral_states={
 		}
 	}
  	"Move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"Retreat"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Retreat_editor_timeline"
 		}
 		timeline_layer={
@@ -36,7 +36,7 @@ behavioral_states={
 		}
 	}
  	"Charge"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Charge_editor_timeline"
 		}
 		timeline_layer={
@@ -47,7 +47,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 32"
+		name="Lane 1"
 		behavioral_state="Idle"
 		transition_interval=0.000000
 	}
@@ -165,6 +165,8 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="idle_animation"
+		generated_timeline=yes
 	}
  	"L_relative_Idle_editor_timeline"={
 		boundary_behavior=loop
@@ -178,28 +180,39 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="idle_animation"
+		generated_timeline=yes
 	}
  	"L_relative_Move_editor_timeline"={
 		boundary_behavior=loop
 		duration=1.034343
 		events={
+			"dust_vfx_start"
 			"Connection 20"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Retreat_editor_timeline"={
 		boundary_behavior=loop
 		duration=1.034343
 		events={
+			"snd_retreat_1"
+			"snd_retreat_2"
+			"snd_retreat_3"
+			"snd_retreat_4"
 			"Connection 22"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Charge_editor_timeline"={
 		boundary_behavior=loop
@@ -210,12 +223,14 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="moving_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"idle_animation"={
 		boundary_behavior=loop
 		duration=12.366756
-		starttime_offset=-0.600000
+		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
 		animation="idle_animation"
@@ -268,7 +283,7 @@ timelines={
 
 starting_timeline={
 	on_enter={
-		"Lane 32"
+		"Lane 1"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

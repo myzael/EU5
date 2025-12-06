@@ -167,9 +167,12 @@ activate_avatar = {
 			holy_site ?= {
 				location = {
 					OR = {
-						owner = scope:actor
-						owner = {
-							is_allied_with = { target = scope:actor }
+						owner ?= scope:actor
+						owner ?= {
+							OR = {
+								is_allied_with = { target = scope:actor }
+								top_overlord ?= scope:actor
+							}
 						}
 					}
 				}

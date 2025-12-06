@@ -186,6 +186,7 @@ sponsor_training_fields = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
 				NOT = { has_building = building_type:training_fields }
@@ -261,6 +262,7 @@ sponsor_regimental_camp = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
 				NOT = { has_building = building_type:regimental_camp }
@@ -329,6 +331,7 @@ sponsor_conscription_center = {
 				multiply = 0.1
 				add = 1
 			}
+			check_range_bounds = no
 			limit = {
 				NOT = { has_building = building_type:conscription_center }
 				OR = {

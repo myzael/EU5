@@ -1,5 +1,6 @@
 ﻿sengoku = {
 	monthly_spawn_chance = monthly_spawn_chance_ultimate_high
+	hint_tag = hint_sengoku
 
 	can_start = {
 		current_year >= 1400 #To give a bit of margin of 'free wars' during the nanbokucho

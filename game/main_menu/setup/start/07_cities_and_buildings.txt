@@ -1036,25 +1036,25 @@ locations={
 	ialophaybo = { rank = town town_setup = south_east_woodlands_town }
 
 	#Andes
-	tantaricuy = { rank = town 		town_setup = andes_town }
-	xllang = { rank = town	 		town_setup = andes_town  }
-	ishma = { rank = town 			town_setup = andes_town  }
-	allpas = { rank = town 			town_setup = andes_town  }
-	huaman_karpa = { rank = town	town_setup = andes_town  }
+	#tantaricuy = { rank = town 		town_setup = andes_town }
+	#xllang = { rank = town	 		town_setup = andes_town  }
+	#ishma = { rank = town 			town_setup = andes_town  }
+	#allpas = { rank = town 			town_setup = andes_town  }
+	#huaman_karpa = { rank = town	town_setup = andes_town  }
 	chinchay = { rank = town 		town_setup = andes_town  }
-	qusqu = { rank = town 			town_setup = andes_town  }
-	charka = { rank = town		 	town_setup = andes_town  }
-	malacatos = { rank = town	 	town_setup = andes_town  }
-	markahuamachuco = { rank = town town_setup = andes_town }
-	cantamarca = { rank = town  	town_setup = andes_town }
-	ayaviri = { rank = town  		town_setup = andes_town }
-	cangochamba = { rank = town  	town_setup = andes_town }
-	huarco = { rank = town  		town_setup = andes_town }
-	calvas = { rank = town  		town_setup = andes_town }
-	hatunqulla = { rank = city  	town_setup = andes_city }
-	chucuito = { rank = city  		town_setup = andes_city }
-	sana = { rank = city 	town_setup = andes_city }
-	chan_chan = { rank = city 		town_setup = andes_city }
+	#qusqu = { rank = town 			town_setup = andes_town  }
+	#charka = { rank = town		 	town_setup = andes_town  }
+	#malacatos = { rank = town	 	town_setup = andes_town  }
+	#markahuamachuco = { rank = town town_setup = andes_town }
+	#cantamarca = { rank = town  	town_setup = andes_town }
+	#ayaviri = { rank = town  		town_setup = andes_town }
+	#cangochamba = { rank = town  	town_setup = andes_town }
+	#huarco = { rank = town  		town_setup = andes_town }
+	#calvas = { rank = town  		town_setup = andes_town }
+	hatunqulla = { rank = town  	town_setup = andes_town }
+	chucuito = { rank = town  		town_setup = andes_town }
+	sana = { rank = town 	town_setup = andes_town }
+	chan_chan = { rank = town 		town_setup = andes_town }
 
 	#Yucatan
 	mayapan = { rank = city town_setup = yucatan_town }
@@ -2264,6 +2264,10 @@ building_manager = {
 
 
 	order_headquarters = { tag = KNI level = 1 location =  rodos }
+	dock = { tag = KNI level = 1 location = rodos }	
+	#The fortifications of Rodos included a military port that attracted great wealth 
+	#https://en.wikipedia.org/wiki/Fortifications_of_Rhodes
+	#See Hospitallers and Piracy on Rhodes, 14th-16th centuries
 
 	#https://en.wikipedia.org/wiki/List_of_Serbian_Orthodox_monasteries
 	orthodox_monastery = { tag = HUN level = 1 location =  belgrad }

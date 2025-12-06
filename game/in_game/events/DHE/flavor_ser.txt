@@ -562,29 +562,36 @@ flavor_ser.30 = { #The Dreams of [GetCharacter('ser_stefan_dusan').GetNameWithNo
 			add_casus_belli = {
 				target = location:thessaloniki.owner
 				type = casus_belli:cb_conquer_province
-				province = location:thessaloniki.province
-				years = 10
+				province = location:thessaloniki.province	#chalkidiki_province
+				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:edessa.owner
 				type = casus_belli:cb_conquer_province
-				province = location:edessa.province
-				years = 10
+				province = location:edessa.province			#central_macedonia_province
+				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:kastoria.owner
-				type = casus_belli:cb_conquer_province
+				type = casus_belli:cb_conquer_province		#upper_macedonia_province
 				province = location:kastoria.province
-				years = 10
+				years = 20
+			}
+
+			add_casus_belli = {
+				target = location:rentina.owner
+				type = casus_belli:cb_conquer_province		#lower_macedonia_province
+				province = location:rentina.province
+				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:larissa.owner
-				type = casus_belli:cb_conquer_province
+				type = casus_belli:cb_conquer_province		#thessaly_province
 				province = location:larissa.province
-				years = 10
+				years = 20
 			}
 		}
 
@@ -623,8 +630,10 @@ flavor_ser.31 = { #The Dawn of a New Empire
 			is_ruler = yes
 		}
 		own_entire_province = province_definition:chalkidiki_province
+		own_entire_province = province_definition:central_macedonia_province
 		own_entire_province = province_definition:upper_macedonia_province
 		own_entire_province = province_definition:lower_macedonia_province
+		own_entire_province = province_definition:thessaly_province
 	}
 
 	illustration_tags = {

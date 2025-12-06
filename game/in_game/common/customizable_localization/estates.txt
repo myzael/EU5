@@ -2,6 +2,13 @@
 	type = country
 
 	text = {
+		localization_key = crown_estate_holy_order
+		trigger = {
+			has_reform = government_reform:military_order_reform
+		}
+	}
+
+	text = {
 		localization_key = crown_estate_brethren
 		trigger = {
 			has_reform = government_reform:pirate_brethren_reform
@@ -54,6 +61,12 @@
 nobles_estate = {
 	type = country
 
+	text = {
+		localization_key = nobles_estate_holy_order
+		trigger = {
+			has_reform = government_reform:military_order_reform
+		}
+	}
 
 	text = {
 		localization_key = nobles_estate_greek
@@ -593,6 +606,13 @@ clergy_estate = {
 		trigger = {
 			religion = religion:orthodox
 			culture.language = language:east_slavic_language
+		}
+	}
+
+	text = {
+		localization_key = clergy_estate_holy_order
+		trigger = {
+			has_reform = government_reform:military_order_reform
 		}
 	}
 

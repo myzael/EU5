@@ -15,6 +15,7 @@
 		scope:recipient = {
 			is_merchant_republic = yes
 			culture = { has_culture_group = culture_group:italian_group }
+			within_diplomatic_range = scope:actor
 		}
 	}
 

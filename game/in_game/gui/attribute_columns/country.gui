@@ -35,9 +35,11 @@
 		}
 
 		text_single = {
-			minimumsize = { -1 28 }
+			minimumsize = { 72 28 }
+			maximumsize = { 100 28 }
 			layoutpolicy_vertical = fixed
 			layoutpolicy_horizontal = expanding
+			autoresize = no
 			text = "[InteractionTarget.GetCountry.GetTotalPopulation]"
 		}
 	}

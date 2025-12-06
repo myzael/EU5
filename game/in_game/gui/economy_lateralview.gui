@@ -1792,11 +1792,32 @@ lateralview = {
 																	}
 																}
 
-																text_single = {
-																	autoresize = no
-																	align = center|nobaseline
-																	size = { 60 20 }
-																	text = "[MaintenanceSetting.GetExpenseBenefit]"
+																hbox = {
+																	spacing = 2
+																	text_single = {
+																		autoresize = no
+																		align = center|nobaseline
+																		size = { 60 20 }
+																		fontsize = 14
+																		text = "[MaintenanceSetting.GetExpenseBenefit]"
+																	}
+																	extra_list = {
+																		visible = "[GreaterThan_CFixedPoint(MaintenanceSetting.GetExpenseBenefitAmount, '(CFixedPoint)0')]"
+																		blockoverride "extra_list_size" {
+																			size = { 40 20 }
+																		}
+																		blockoverride "extra_list_text_size" {
+																			size = { 15 20 }
+																		}
+																		blockoverride "extra_list_text_content" {
+																			raw_text = "+[MaintenanceSetting.GetExpenseBenefitAmount]"
+																		}
+																		blockoverride "extra_list_icon" {
+																			texture = "gfx/interface/icons/modifiers/_default.dds"
+																			texture_density = 2
+																		}
+																	}
+
 																	tooltipwidget = {
 																		ContextualTooltipType = {
 																			blockoverride "title_text" {
@@ -1808,8 +1829,8 @@ lateralview = {
 																					texture = "[MaintenanceSetting.GetIcon]"
 																				}
 																			}
-
-
+	
+	
 																			blockoverride "concept_link" {
 																				text = "[MaintenanceSetting.GetName]"
 																			}
@@ -1821,6 +1842,7 @@ lateralview = {
 																		}
 																	}
 																}
+																
 
 																button_checkbox_auto = {
 																	size = { 22 22 }
@@ -2108,55 +2130,6 @@ lateralview = {
 												}
 											}
 
-											#food
-											budget_card = {
-												layoutpolicy_horizontal = expanding
-												size = { -1 30 }
-												visible = "[Or(Not(EqualTo_CFixedPoint(EconomyView.GetExpense('food'), '(CFixedPoint)0')), EconomyView.UnusedMaintenanceSettingsVisible)]"
-												
-												tooltipmeta = {
-													texture = "gfx/interface/icons/flat_icons/balance/food.dds"
-													game_concept = "[food|e]"
-												}
-
-												tooltipwidget = {
-													ContextualTooltipType = {
-														blockoverride "title_text" {
-															text = "game_concept_food"
-														}
-														blockoverride "title_icon" {
-															icon = {
-																using = tooltip_title_icon_size
-																texture = "gfx/interface/icons/flat_icons/balance/food.dds"
-															}
-														}
-
-
-														blockoverride "concept_link" {
-															text = [food|E]
-														}
-														blockoverride "tooltip_content" {
-														
-															TooltipScrolledStringPairList = {
-																blockoverride "block_scrollarea" { maximumsize = { -1 300 }}
-																textcontext = "[EconomyView.GetExpenseInfo('food')]"
-															}
-														}
-													}
-												}
-
-												blockoverride "icon_texture" {
-													texture = "gfx/interface/icons/flat_icons/balance/food.dds"
-												}
-
-												blockoverride "label" {
-													text = "FOOD_EXPENSE"
-												}
-
-												blockoverride "income_text" {
-													raw_text = "[EconomyView.GetExpense('food')|2+=]@gold!"
-												}
-											}
 
 											#diplomacy
 											budget_card = {

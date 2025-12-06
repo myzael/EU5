@@ -23,12 +23,11 @@
 	}
 
 	visible = {
-		scope:actor = {
-			is_subject = no
+		scope:actor = {			
+            has_limited_diplomacy = no
 			modifier:target_of_military_sponsorships = no
 		}
 		scope:recipient = {
-			is_subject = no
 			modifier:target_of_military_sponsorships = yes
 		}
 		scope:actor.religion = scope:recipient.religion
@@ -79,6 +78,11 @@
 			limit = {
 				scope:actor = { not = { tag = PAP } }
 				country_exists = c:PAP
+				scope:actor = {
+					NOT = {
+						has_scripted_relation_of_type = relation_type:military_sponsorship
+					}
+				}
 			}
 			c:PAP = {
 				remove_opinion = {
@@ -93,6 +97,11 @@
 			limit = {
 				scope:actor = { not = { tag = PAP } }
 				country_exists = c:PAP
+				scope:actor = {
+					NOT = {
+						has_scripted_relation_of_type = relation_type:military_sponsorship
+					}
+				}
 			}
 			c:PAP = {
 				remove_opinion = {

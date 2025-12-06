@@ -87,12 +87,22 @@
 		set_variable = {
 			name = total_marketplace_levels_variable
 			value = {
-				add = total_effective_building_levels:marketplace
-				add = {
-					value = total_effective_building_levels:marketplace
-					multiply = 0.1
+				if = {
+					limit = { has_advance = commerce_center_advance }
+					add = total_effective_building_levels:commerce_center
 				}
+				else_if = {
+					limit = { has_advance = grand_marketplace_advance }
+					add = total_effective_building_levels:grand_marketplace
+				}
+				else_if = {
+					limit = { has_advance = merchants_quarters_advance }
+					add = total_effective_building_levels:merchants_quarters
+				}
+				else = { add = total_effective_building_levels:marketplace }
+				multiply = 1.1
 				ceiling = yes
+				min = 1
 			}
 		}
 		set_variable = {
@@ -407,9 +417,32 @@
 		requires = { }
 
 		enabled = {
-			total_effective_building_levels:marketplace >= {
-				value = var:total_marketplace_levels_variable
-				min = num_of_non_rural
+			trigger_if = {
+				limit = { has_advance = commerce_center_advance }
+				total_effective_building_levels:commerce_center >= {
+					value = var:total_marketplace_levels_variable
+					min = num_of_non_rural
+				}
+			}
+			trigger_else_if = {
+				limit = { has_advance = grand_marketplace_advance }
+				total_effective_building_levels:grand_marketplace >= {
+					value = var:total_marketplace_levels_variable
+					min = num_of_non_rural
+				}
+			}
+			trigger_else_if = {
+				limit = { has_advance = merchants_quarters_advance }
+				total_effective_building_levels:merchants_quarters >= {
+					value = var:total_marketplace_levels_variable
+					min = num_of_non_rural
+				}
+			}
+			trigger_else = {
+				total_effective_building_levels:marketplace >= {
+					value = var:total_marketplace_levels_variable
+					min = num_of_non_rural
+				}
 			}
 		}
 

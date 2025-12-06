@@ -3,6 +3,7 @@
 war_of_the_aragonese_union_disaster.1 = { #The Union Reignites
 	hide_portraits = yes
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.1.title
 	desc = war_of_the_aragonese_union_disaster.1.desc
 	
@@ -47,6 +48,13 @@ war_of_the_aragonese_union_disaster.1 = { #The Union Reignites
 
 	option = {
 		name = war_of_the_aragonese_union_disaster.1.a
+		historical_option = yes
+		var:union_of_aragon_rebels_variable ?= {
+			add_rebel_progress = 0.2
+		}
+	}
+	option = {
+		name = war_of_the_aragonese_union_disaster.1.b
 		add_legitimacy = legitimacy_weak_bonus
 		add_stability = stability_weak_bonus
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_bonus }
@@ -54,13 +62,6 @@ war_of_the_aragonese_union_disaster.1 = { #The Union Reignites
 		trigger_event_non_silently = { id = war_of_the_aragonese_union_disaster.2 days = 5}
 	}
 
-	option = {
-		name = war_of_the_aragonese_union_disaster.1.b
-		historical_option = yes
-		var:union_of_aragon_rebels_variable ?= {
-			add_rebel_progress = 0.2
-		}
-	}
 }
 
 # The Union expands to two more locations in Aragon or Valencia, except the loyal ones
@@ -104,9 +105,10 @@ scripted_effect union_expands = {
 war_of_the_aragonese_union_disaster.2 = { #Old Demands
 	hide_portraits = yes
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.2.title
 	desc = war_of_the_aragonese_union_disaster.2.desc
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	immediate = {
 		character:ara_james_i_urgell = {
 			save_scope_as = ruler_brother
@@ -143,6 +145,7 @@ war_of_the_aragonese_union_disaster.2 = { #Old Demands
 
 war_of_the_aragonese_union_disaster.3 = { #The Humiliated Monarch/To Arms!
 	type = country_event
+	category = disaster_event
 	title = {
 		first_valid = {
 			triggered_desc = {
@@ -181,7 +184,7 @@ war_of_the_aragonese_union_disaster.3 = { #The Humiliated Monarch/To Arms!
 			}
 		}
 	}
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	immediate = {
 		character:ara_peter_iv_arago = {
 			save_scope_as = aragon_ruler
@@ -215,10 +218,11 @@ war_of_the_aragonese_union_disaster.3 = { #The Humiliated Monarch/To Arms!
 
 war_of_the_aragonese_union_disaster.4 = { #A Chance for Peace
 	type = country_event
+	category = disaster_event
 
 	title = war_of_the_aragonese_union_disaster.4.title
 	desc = war_of_the_aragonese_union_disaster.4.desc
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	option = {
 		name = war_of_the_aragonese_union_disaster.4.a
 		add_legitimacy = legitimacy_weak_bonus
@@ -243,10 +247,11 @@ war_of_the_aragonese_union_disaster.4 = { #A Chance for Peace
 
 war_of_the_aragonese_union_disaster.5 = { #The Union Expands
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.5.title
 	desc = war_of_the_aragonese_union_disaster.5.desc
 	
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	immediate = {
 		union_expands = yes
 	}
@@ -272,9 +277,10 @@ war_of_the_aragonese_union_disaster.5 = { #The Union Expands
 
 war_of_the_aragonese_union_disaster.6 = { #The Lion's Den
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.6.title
 	desc = war_of_the_aragonese_union_disaster.6.desc
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	option = {
 		name = war_of_the_aragonese_union_disaster.6.a
 		historical_option = yes
@@ -300,9 +306,10 @@ war_of_the_aragonese_union_disaster.6 = { #The Lion's Den
 
 war_of_the_aragonese_union_disaster.7 = { #A Parliament of Threats
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.7.title
 	desc = war_of_the_aragonese_union_disaster.7.desc
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	option = {
 		name = war_of_the_aragonese_union_disaster.7.a
 		historical_option = yes
@@ -341,9 +348,10 @@ war_of_the_aragonese_union_disaster.7 = { #A Parliament of Threats
 
 war_of_the_aragonese_union_disaster.8 = { #Valencia Rises
 	type = country_event
+	category = disaster_event
 	title = war_of_the_aragonese_union_disaster.8.title
 	desc = war_of_the_aragonese_union_disaster.8.desc
-	image = "gfx/interface/illustrations/disaster/peasants_war.dds"
+	image = "gfx/interface/illustrations/disaster/war_of_the_aragonese_union_disaster.dds"
 	immediate = {
 		ordered_owned_location = {
 			order_by = population

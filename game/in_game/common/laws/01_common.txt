@@ -401,6 +401,7 @@ colonial_policy = {
 		country_modifier = {
 			colonial_migration_size_modifier = 1.0
 			colonial_maintenance_cost = -0.1
+			monthly_towards_outward = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			peasants_estate
@@ -411,6 +412,7 @@ colonial_policy = {
 		country_modifier = {
 			global_foreign_build_buildings_cost = -0.25
 			colonial_range_modifier = 0.20
+			monthly_towards_individualism = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -507,6 +509,7 @@ native_policy = {
 		country_modifier = {
 			pop_countries_opinions = 25
 			colonial_maintenance_cost = -0.2
+			monthly_towards_free_trade = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			burghers_estate
@@ -519,6 +522,7 @@ native_policy = {
 			pop_countries_opinions = -33
 			allow_native_subjugation_cb = yes
 			enslave_tribals = yes
+			monthly_towards_serfdom = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			nobles_estate
@@ -532,6 +536,7 @@ native_policy = {
 			pop_countries_opinions = -20
 			building_missionary_effort_modifier = 0.5
 			make_tribals_peasants = yes
+			monthly_towards_humanist = societal_value_minor_monthly_move
 		}
 		estate_preferences = {
 			clergy_estate
@@ -645,6 +650,7 @@ administrative_system = {
 		years = 2
 	}
 	pyatina_policy = {
+		unique = yes
 		potential = {
 			has_or_had_tag = NOV
 		}
@@ -703,6 +709,7 @@ administrative_system = {
 		years = 2
 	}
 	tongues_policy = {
+		unique = yes
 		potential = {
 			tag = KNI
 		}
@@ -716,6 +723,7 @@ administrative_system = {
 		years = 2
 	}
 	rajya_policy = {
+		unique = yes
 		potential = {
 			tag = VIJ
 		}
@@ -748,6 +756,7 @@ administrative_system = {
 		years = 2
 	}
 	zabt_system_policy = {
+		unique = yes
 		potential = {
 			tag = MUG
 		}
@@ -762,6 +771,7 @@ administrative_system = {
 		years = 2
 	}
 	pronoia_system = {
+		unique = yes
 		potential = {
 			tag = BYZ
 			NOT = { has_unlocked_policy_trigger = { type = reformed_pronoia_system } }
@@ -776,6 +786,7 @@ administrative_system = {
 		years = 2
 	}
 	reformed_pronoia_system = {
+		unique = yes
 		potential = {
 			tag = BYZ
 			has_unlocked_policy_trigger = { type = reformed_pronoia_system }
@@ -820,6 +831,7 @@ administrative_system = {
 	}
 
 	regulations_of_the_royal_court = {
+		unique = yes
 		potential = {
 			tag = GEO
 		}
@@ -836,6 +848,7 @@ administrative_system = {
 	}
 
 	maj_office_of_the_mahapatih = {
+		unique = yes
 		potential = {
 			tag = MAJ
 		}
@@ -1137,6 +1150,7 @@ cabinet_laws = {
 		years = 2
 	}
 	yorkist_tradition_policy = {
+		unique = yes
 		potential = {
 			OR = {
 				tag = ENG
@@ -1334,6 +1348,7 @@ cultural_traditions_law = {
 		years = 2
 	}
 	pietism_society = { #prussian virtues
+		unique = yes
 		potential = {
 			OR = {
 				tag = PRU
@@ -1585,7 +1600,10 @@ heir_religion_law = {
 
 	locked = {
 		has_policy = heir_same_religion
-		has_variable = act_of_settlement
+		custom_tooltip = {
+			text = act_of_settlement_tt
+			has_variable = act_of_settlement
+		}
 	}
 
 	heir_special_succession = {
@@ -1827,6 +1845,7 @@ mining_law = {
 		years = 2
 	}
 	novo_brdo_mining_law = {
+		unique = yes
 		potential = {
 			tag = SER
 			custom_tooltip = {

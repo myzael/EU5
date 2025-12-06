@@ -195,18 +195,21 @@ template SubjectTypeDetail_tooltip {
 			text = [subject_loyalty|E]
 		}
 		blockoverride "tooltip_content" {
-            TooltipTextBlock = {
+			TooltipRowList = {
 				visible = "[Country.GetDiplomacy.IsDisloyalSubject]"
-                blockoverride "text" {
-                    text = "SubjectTypeDetail_DESC_NOT"
-                }
-            }
-            TooltipTextBlock = {
+				textcontext = "SubjectTypeDetail_DESC_NOT"
+				tooltipwidget = {
+					using = SubjectLoyalty_tooltip
+				}
+			}
+
+			TooltipRowList = {
 				visible = "[Not(Country.GetDiplomacy.IsDisloyalSubject)]"
-                blockoverride "text" {
-                    text = "SubjectTypeDetail_DESC"
-                }
-            }
+				textcontext = "SubjectTypeDetail_DESC"
+				tooltipwidget = {
+					using = SubjectLoyalty_tooltip
+				}
+			}
 
 			TooltipStringPairList = {
 				textcontext = "[Country.GetDiplomacy.GetSubjectLoyaltyInfo]"

@@ -156,9 +156,16 @@ monetary_contribution = {
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
 			add = hre_default_policy_opinion
-			add = {
-				desc = "POLICY_RESPECTS_SOVEREIGNTY"
-				value = -75 # Princes like paying no taxes
+			if = {
+				limit = { exists = scope:recipient exists = scope:policy }
+				if = {
+					limit = { scope:recipient = { has_variable = io_law_target var:io_law_target = scope:policy } }
+					add = { desc = "POLICY_POPULARITY_TO_ENACT" value = 75 } # no taxation = good!
+				}
+				else_if = {
+					limit = { scope:recipient = { has_variable = io_current_law var:io_current_law = scope:policy } }
+					add = { desc = "POLICY_POPULARITY_TO_KEEP" value = 75 } # and of course we want to keep it!
+				}
 			}
 		}
 	}
@@ -190,7 +197,17 @@ monetary_contribution = {
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
 			add = hre_default_policy_opinion
-			add = { desc = "POLICY_RESTRICTS_SOVEREIGNTY" value = -25 } # Generally unliked reform
+			if = {
+				limit = { exists = scope:recipient exists = scope:policy }
+				if = {
+					limit = { scope:recipient = { has_variable = io_law_target var:io_law_target = scope:policy } }
+					add = { desc = "POLICY_POPULARITY_TO_ENACT" value = -25 } # Generally unliked reform to vote for ..
+				}
+				else_if = {
+					limit = { scope:recipient = { has_variable = io_current_law var:io_current_law = scope:policy } }
+					add = { desc = "POLICY_POPULARITY_TO_KEEP" value = 50 } # but somewhat ok to keep
+				}
+			}
 		}
 	}
 	only_emperor_payment = {
@@ -221,7 +238,17 @@ monetary_contribution = {
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
 			add = hre_default_policy_opinion
+			if = {
+				limit = { exists = scope:recipient exists = scope:policy }
+				if = {
+					limit = { scope:recipient = { has_variable = io_law_target var:io_law_target = scope:policy } }
+					add = { desc = "POLICY_POPULARITY_TO_ENACT" value = -50 } # Generally unliked reform
+				}
+			}
 			add = { desc = "POLICY_RESTRICTS_SOVEREIGNTY" value = -50 } # Generally unliked reform
+		}
+		wants_keep_policy = {
+			add = { desc = "POLICY_POPULARITY_TO_KEEP" value = -50 } # and also not too high on wanting to keep it really
 		}
 	}
 	complete_imperial_contribution = {
@@ -2396,12 +2423,12 @@ power_of_the_emperor_law = {
 				#Emperor Modifier
 				is_leader_of_international_organization = scope:recipient
 			}
-			allow_overrule_imperial_diet = yes
 			diplomatic_reputation = diplomatic_reputation_very_weak_bonus
 			monthly_imperial_authority = monthly_imperial_authority_mild_bonus
 		}
 		international_organization_modifier = {
 			imperial_ban_allowed = yes
+			allow_overrule_imperial_diet = yes
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2458,11 +2485,11 @@ power_of_the_emperor_law = {
 			}
 			monthly_prestige = 0.1
 			monthly_imperial_authority = monthly_imperial_authority_very_strong_bonus
-			allow_overrule_imperial_diet = yes
 			diplomatic_reputation = diplomatic_reputation_weak_bonus
 		}
 		international_organization_modifier = {
 			imperial_ban_allowed = yes
+			allow_overrule_imperial_diet = yes
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2527,12 +2554,12 @@ power_of_the_emperor_law = {
 				is_leader_of_international_organization = scope:recipient
 			}
 			monthly_prestige = 0.2
-			allow_overrule_imperial_diet = yes
 			diplomatic_reputation = diplomatic_reputation_mild_bonus
 		}
 		international_organization_modifier = {
 			enforced_internal_peace = yes
 			imperial_ban_allowed = yes
+			allow_overrule_imperial_diet = yes
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {

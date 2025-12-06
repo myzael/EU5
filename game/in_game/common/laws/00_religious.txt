@@ -85,6 +85,14 @@ inquisition_law = {
 
 	papal_control = {
 		country_modifier = {
+			potential_trigger = {
+				tag = PAP
+			}
+			monthly_religious_influence = 0.1
+			global_pop_conversion_speed_modifier = 0.1
+			tolerance_heretic = -2
+		}
+		country_modifier = {
 			global_pop_conversion_speed_modifier = 0.1
 			global_estate_target_satisfaction = tiny_permanent_target_satisfaction
 		}
@@ -117,6 +125,7 @@ inquisition_law = {
 				culture = culture:venetian
 			}
 			global_monthly_control = 0.001
+			spy_network_construction = 0.1
 		}
 		country_modifier = {
 			potential_trigger = {
@@ -125,9 +134,9 @@ inquisition_law = {
 			country_cabinet_efficiency = 0.05
 		}
 		country_modifier = {
-			spy_network_construction = 0.1
-			global_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
-			monthly_towards_innovative = societal_value_monthly_move
+			global_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
+			global_pop_conversion_speed_modifier = 0.05
+			monthly_rebel_growth = -0.0005
 		}
 		estate_preferences = {
 			nobles_estate

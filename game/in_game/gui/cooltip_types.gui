@@ -1071,6 +1071,12 @@ types BuildingBlocksTooltipsTypes
 
 	type TooltipStatBarIconTextItem = TooltipStatBarItem {
 		blockoverride "item_content" {
+			country_flag_small = {
+
+				block "item_icon_coa" {
+					visible = no
+				}
+			}
 			block "item_icon_obj" {
 				icon = {
 					size = { 25 25 }

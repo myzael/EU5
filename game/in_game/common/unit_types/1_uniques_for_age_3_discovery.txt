@@ -61,6 +61,7 @@ a_late_longbowmen = {
 	light = yes
 	
 	initiative = 4
+	strength_damage_taken = -0.20
 	
 	
 	buildable = no

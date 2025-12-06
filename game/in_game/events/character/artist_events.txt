@@ -2117,6 +2117,7 @@ artist_events.38 = { #Harnessing the Mines
 					max = 8
 				}
 			}
+			check_range_bounds = no
 			change_development = {
 				value = {
 					add = development_mild_bonus

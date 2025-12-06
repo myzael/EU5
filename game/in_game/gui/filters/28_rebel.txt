@@ -15,10 +15,7 @@ rebel_of_country = {
 	group = 2
 	tag = rebels
 	enabled_at_start = yes
-	invert = yes
 	trigger = {
-		owner ?= {
-			NOT = { is_subject_of = root }
-		}
+		is_owned_by_country = scope:target
 	}
 }

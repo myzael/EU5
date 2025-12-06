@@ -1,11 +1,13 @@
 ﻿red_turban_rebellions = {
 	monthly_spawn_chance = monthly_spawn_chance_unique
+	hint_tag = hint_red_turban_rebellions
 	can_start = {
 		current_age = age_2_renaissance
 		current_year > 1350
 		country_exists = c:CHI
 		c:CHI = {
 			government_type = government_type:monarchy
+			in_civil_war = no
 			OR = {
 				stability < 95
 				legitimacy < 50

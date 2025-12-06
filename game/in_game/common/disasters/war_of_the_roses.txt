@@ -11,11 +11,8 @@
 		current_year > 1430
 		current_year < 1500
 		
-		owns = location:york
-		owns = location:lancaster
-		
-		exists = dynasty:york_dynasty
-		exists = dynasty:lancaster_dynasty
+		dynasty_exists = york_dynasty
+		dynasty_exists = lancaster_dynasty
 		
 		
 		dynasty:york_dynasty ?= {
@@ -30,13 +27,11 @@
 		}
 	
 		ruler ?= {
-			fertility <= 0
 			is_adult = yes
-			num_of_children = 0
 			OR = {
-				is_married = no
-				first_spouse = { is_pregnant = no }
-			} 
+				fertility <= 0
+				num_of_children = 0
+			}
 			dynasty = dynasty:plantagenet_dynasty
 		}
 	}

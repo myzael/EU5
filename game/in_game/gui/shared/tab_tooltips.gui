@@ -1651,7 +1651,7 @@ template TabProvincesTooltip {
 	ConceptTooltipType = {
 		blockoverride "title_icon" {
 			icon = {
-				texture = "gfx/interface/icons/military_navy/naval_range.dds"
+				texture = "gfx/interface/icons/map_modes/provinces.dds"
 				using = tooltip_concept_title_icon_size
 			}
 		}
@@ -1685,7 +1685,7 @@ template TabExpansionTooltip {
 	ConceptTooltipType = {
 		blockoverride "title_icon" {
 			icon = {
-				texture = "gfx/interface/icons/military_navy/naval_range.dds"
+				texture = "gfx/interface/icons/map_subdivisons/area.dds"
 				using = tooltip_concept_title_icon_size
 			}
 		}

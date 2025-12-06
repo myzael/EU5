@@ -601,9 +601,9 @@ decline_of_empire_end_trigger = {
 	}
 	OR = {
 		average_control_in_home_region >= var:average_control_in_home_region_target_variable
-		total_accepted_culture_population > {
+		total_not_tolerated_culture_population < {
 			value = total_population
-			divide = 2
+			divide = 4
 		}		
 	}
 }

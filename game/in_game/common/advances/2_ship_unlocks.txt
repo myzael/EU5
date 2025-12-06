@@ -411,9 +411,31 @@ unlock_long_fada = {
 	allow_children = no
 
 	unlock_unit = n_long_fada
+	unlock_levy = levy_birlinn
 
 	ai_weight = { 
 		add = "ai_unlock_unit_score(n_long_fada)"
+	}
+}
+
+unlock_long_fada_2 = {
+	age = age_2_renaissance
+
+	potential = {
+		culture = {
+			OR = {
+				has_culture_group = culture_group:scottish_group
+				has_culture_group = culture_group:hibernian_group
+			}
+		}
+	}
+	requires = naval_morale_advance_1
+	allow_children = no
+
+	unlock_unit = n_long_fada_2
+
+	ai_weight = { 
+		add = "ai_unlock_unit_score(n_long_fada_2)"
 	}
 }
 

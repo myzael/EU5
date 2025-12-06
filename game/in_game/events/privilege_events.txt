@@ -54,12 +54,16 @@ scripted_trigger has_correct_dominant_culture = {
     }
 }
 scripted_trigger is_province_german_and_in_bad_shape = {
-    exists = owner #Check that it's not a wasteland or sea
-    province = {
-        has_correct_dominant_culture = yes
-        privilege_events_100_is_in_bad_shape = yes
-        population > 0.500
-    }
+	exists = owner #Check that it's not a wasteland or sea
+	province = {
+		NOT = {
+			any_location_in_province = {
+				population < 0.5
+			}
+		}
+		has_correct_dominant_culture = yes
+		privilege_events_100_is_in_bad_shape = yes
+	}
 }
 scripted_trigger is_valid_for_immigration = {
     is_area_sea = no

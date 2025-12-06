@@ -3,7 +3,7 @@
 	#https://en.wikipedia.org/wiki/Columbian_exchange#Of_diseases
 	#https://en.wikipedia.org/wiki/Native_American_disease_and_epidemics
 	monthly_spawn_chance = monthly_spawn_chance_unique
-
+	hint_tag = hint_great_pestilence
 	can_start = {
 		disease_is_active = disease:great_pestilence
 	}

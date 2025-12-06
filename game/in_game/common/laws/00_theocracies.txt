@@ -37,6 +37,7 @@
 		years = 2
 	}
 	the_papacy = {
+		unique = yes
 		potential = { 
 			tag = PAP 
 		}

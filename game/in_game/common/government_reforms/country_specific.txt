@@ -3,7 +3,7 @@ papacy_reform = {
 	major = yes
 	unique = yes
 	potential = {
-		tag = PAP
+		has_or_had_tag = PAP
 	}
 	allow = {
 	}
@@ -142,32 +142,43 @@ galley_lords_reform = {
 	age = age_1_traditions
 	potential = {
 		OR = {
-			culture = { has_culture_group = culture_group:celtic_group }
+			culture = {
+				OR = {
+					has_culture_group = culture_group:celtic_group
+					has_culture_group = culture_group:scandinavian_group
+				}
+				OR = {
+					has_culture_group = culture_group:scottish_group
+					has_culture_group = culture_group:hibernian_group
+				}
+			}
 
 			any_neighbor_country = {
 				has_reform = government_reform:galley_lords_reform
 			}
-
-			AND = {
-				overlord ?= { has_reform = government_reform:galley_lords_reform }
-			}
+			
+			overlord ?= { has_reform = government_reform:galley_lords_reform }
 		}
 	}
 	allow = {
-		capital = {
+		capital = { 
 			is_port = yes
-			any_neighbor_location = { topography = narrows }
 		}
-		NOT = { has_policy = anti_piracy_policy }
+		societal_value:land_vs_naval > 25
+		societal_value:belligerent_vs_conciliatory < -25
 	}
 	country_modifier = {
 		can_hire_privateers = yes
 
-		monthly_towards_naval = societal_value_tiny_monthly_move
+		monthly_towards_naval = societal_value_monthly_move
 		monthly_towards_belligerent = societal_value_tiny_monthly_move
+		diplomatic_reputation = diplomatic_reputation_mild_penalty
+
+		always_allow_navy_levies = yes
+
+		global_navy_levy_size_modifier = 1.0
 
 		navy_galley_build_cost_modifier = -0.5
-		navy_galley_reinforce_cost_modifier = -0.5
 		navy_galley_maintenance_cost_modifier = -0.5
 	}
 	years = 2
@@ -178,7 +189,7 @@ magna_carta_reform = {
 	government = monarchy
 	potential = {
 		OR = {
-			tag = ENG
+			has_or_had_tag = ENG
 			culture = culture:english
 			AND = {
 				overlord ?= { has_reform = government_reform:magna_carta_reform }
@@ -201,7 +212,7 @@ sbl_restorer_of_the_disinherited = {
 	age = age_1_traditions
 	government = monarchy
 	potential = {
-		tag = SBL
+		has_or_had_tag = SBL
 	}
 	allow = {
 	}
@@ -242,7 +253,7 @@ iron_ring_reform = {
 	age = age_1_traditions
 	government = monarchy
 	potential = {
-		tag = WLS
+		has_or_had_tag = WLS
 	}
 	allow = {
 		any_core_location = {
@@ -288,7 +299,7 @@ prussian_monarchy = {
 	unique = yes
 	age = age_5_absolutism
 	potential = {
-		tag = PRU
+		has_or_had_tag = PRU
 	}
 	#unlocked from advance
 
@@ -380,7 +391,7 @@ compagna_communis = {
 	government = republic
 
 	potential = {
-		tag = GEN
+		has_or_had_tag = GEN
 	}
 
 	country_modifier = {
@@ -397,7 +408,7 @@ diarchy_republic = {
 	government = republic
 
 	potential = {
-		tag = GEN
+		has_or_had_tag = GEN
 	}
 
 	allow = {
@@ -482,7 +493,7 @@ great_and_minor_councils_of_genoa = {
 	government = republic
 
 	potential = {
-		tag = GEN
+		has_or_had_tag = GEN
 	}
 
 	country_modifier = {
@@ -606,7 +617,7 @@ por_casa_de_india = {
 	unique = yes
 
 	potential = {
-		tag = POR
+		has_or_had_tag = POR
 		has_variable = por_casa_de_india
 	}
 	country_modifier = {
@@ -626,7 +637,7 @@ ven_monte_nuovo = {
 	age = age_3_discovery
 
 	potential = {
-		tag = VEN
+		has_or_had_tag = VEN
 	}
 	allow = {
 	}
@@ -642,7 +653,7 @@ hun_power_to_magnates = {
 	unique = yes
 
 	potential = {
-		tag = HUN
+		has_or_had_tag = HUN
 	}
 
 
@@ -704,7 +715,7 @@ pyrenean_fueros_reform = {
 	potential = {
 		OR = {
 			culture = { has_culture_group = culture_group:pyrenean_group }
-			tag = ARA
+			has_or_had_tag = ARA
 		}
 	}
 	allow = {
@@ -806,11 +817,11 @@ scottish_shires_reform = { # Shires of Scotland
     unique = yes
 	potential = {
 		OR = {
-			tag = SCO
-			tag = SBL
+			has_or_had_tag = SCO
+			has_or_had_tag = SBL
 			AND = {
 				culture = culture:scottish
-				tag = GBR
+				has_or_had_tag = GBR
 			}
 		}
 		government_type = government_type:monarchy
@@ -834,7 +845,7 @@ scottish_shires_reform = { # Shires of Scotland
 ancient_french_taxation = {
 	unique = yes
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		NOT = { has_law = fra_taille }
 	}
 
@@ -857,14 +868,14 @@ ancient_french_taxation = {
 french_feudal_nobility = { # French Feudalism
     unique = yes
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		government_type = government_type:monarchy
 		NOT = { has_reform = government_reform:feudal_nobility }
 		NOT = { has_reform = government_reform:french_centralized_monarchy }
 		NOT = { has_variable = enable_centralized_fra_reform }
 	}
 	allow = {
-		tag = FRA
+		has_or_had_tag = FRA
 		NOT = { has_reform = government_reform:french_centralized_monarchy }
 		NOT = { has_variable = enable_centralized_fra_reform }
 	}
@@ -890,13 +901,13 @@ french_feudal_nobility = { # French Feudalism
 french_centralized_monarchy = { # Centralized French Monarchy
     unique = yes
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		government_type = government_type:monarchy
 		NOT = { has_reform = government_reform:french_feudal_nobility }
 		has_variable = enable_centralized_fra_reform
 	}
 	allow = {
-		tag = FRA
+		has_or_had_tag = FRA
 		has_variable = enable_centralized_fra_reform
 	}
 	country_modifier = {
@@ -954,7 +965,7 @@ french_ducal_vassal_reform = { # Unique Gov Reform for French vassals subjects
 		government_type = government_type:monarchy
 		NOT = { has_reform = government_reform:french_feudal_nobility }
 		NOT = { has_reform = government_reform:french_appanage_reform }
-		NOT = { tag = FRA }
+		NOT = { has_or_had_tag = FRA }
 	}
 	allow = {
 		capital = { region = region:france_region }
@@ -1025,7 +1036,7 @@ member_of_league_of_public_weal = {
 basic_timariot_system = {
 	unique = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_advance = timariots
 		NOR = {
 			has_variable = abolished_timariot_system
@@ -1042,7 +1053,7 @@ basic_timariot_system = {
 expanded_timariot_system = {
 	unique = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = expanded_timariot_system
 		NOT = { has_variable = abolished_timariot_system }
 	}
@@ -1057,7 +1068,7 @@ expanded_timariot_system = {
 enderun_interior_service = {
     unique = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = enderun_interior_service
 	}
 	country_modifier = {
@@ -1073,7 +1084,7 @@ ottoman_imperial_harem = {
 	unique = yes
 	major = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		government_type = government_type:monarchy
 		has_variable = ottoman_imperial_harem
 	}
@@ -1090,7 +1101,7 @@ ottoman_eunuch_viziers = {
 	unique = yes
 	major = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = eunuch_viziers
 	}
 	country_modifier = {
@@ -1105,7 +1116,7 @@ ottoman_eunuch_viziers = {
 sekban_system = {
 	unique = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = tur_sekban_system
 	}
 	country_modifier = {
@@ -1121,7 +1132,7 @@ ottoman_malikane_tax_reform = {
 	unique = yes
 	major = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = tur_malikane
 	}
 	country_modifier = {
@@ -1138,7 +1149,7 @@ ottoman_coffee_house_espionage = {
 	major = yes
 
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = tur_coffee_house_paranoia
 	}
 
@@ -1156,7 +1167,7 @@ ottoman_new_order_army = {
 	major = yes
 
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 		has_variable = tur_new_order_army
 	}
 
@@ -1180,7 +1191,7 @@ ottoman_new_order_army = {
 legacy_of_osman = {
 	unique = yes
 	potential = {
-		tag = TUR
+		has_or_had_tag = TUR
 
 		has_variable = tur_rise_of_ottoman_flag
 	}
@@ -1229,7 +1240,7 @@ leader_of_the_turks = {
 	unique = yes
 	potential = {
 		situation:rise_of_the_ottomans.var:strongest_beylik_variable ?= { this = root }
-		NOT = { tag = TUR }
+		NOT = { has_or_had_tag = TUR }
 	}
 
 	locked = {
@@ -1288,7 +1299,7 @@ ruling_commission_of_england = {
 	unique = yes
 
 	potential = {
-		tag = ENG
+		has_or_had_tag = ENG
 		has_variable = commission_established
 	}
 
@@ -1319,7 +1330,7 @@ banu_hummay_amendments = {
 	age = age_1_traditions
 	unique = yes
 	potential = {
-		tag = KBO
+		has_or_had_tag = KBO
 	}
 	allow = {
 		NOT = {
@@ -1360,7 +1371,7 @@ kbo_clan_heads_reform = {
 	government = monarchy
 	unique = yes
 	potential = {
-		tag = KBO
+		has_or_had_tag = KBO
 	}
 
 	country_modifier = {
@@ -1397,7 +1408,7 @@ manden_kurufa_reform = {
 russian_absolutism = {
 	unique = yes
 	potential = {
-		tag = RUS
+		has_or_had_tag = RUS
 		has_variable = russian_absolutism
 	}
 	country_modifier = {
@@ -1412,7 +1423,7 @@ russian_absolutism = {
 state_controlled_church = {
 	unique = yes
 	potential = {
-		tag = RUS
+		has_or_had_tag = RUS
 		has_variable = state_controlled_church
 	}
 	country_modifier = {
@@ -1427,8 +1438,8 @@ benevolence_tax_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = benevolence_tax
 	}
@@ -1446,8 +1457,8 @@ navy_board_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = navy_board
 		num_of_ports >= 10
@@ -1469,7 +1480,7 @@ mlo_council_of_justice = {
 	unique = yes
 
 	potential = {
-		tag = MLO
+		has_or_had_tag = MLO
 	}
 	allow = {
 		NOT = { has_reform = government_reform:mlo_secret_council }
@@ -1488,7 +1499,7 @@ mlo_secret_council = {
 	unique = yes
 
 	potential = {
-		tag = MLO
+		has_or_had_tag = MLO
 	}
 
 	allow = {
@@ -1523,8 +1534,8 @@ ned_shipbuilding_industry = {
 	potential = {
 		has_variable = ned_shipbuilding_industry
 		OR = {
-			tag = HOL
-			tag = NED
+			has_or_had_tag = HOL
+			has_or_had_tag = NED
 		}
 	}
 	country_modifier = {
@@ -1541,7 +1552,7 @@ geheime_kabinettskanzlei = {
 	unique = yes
 	potential = {
 		has_variable = hab_geheime_kabinettskanzlei
-		tag = HAB
+		has_or_had_tag = HAB
 	}
 	country_modifier = {
 		counter_espionage = 0.3
@@ -1673,8 +1684,8 @@ grand_remonstrance_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = grand_remonstrance
 		modifier:has_a_parliamentary_system = yes
@@ -1694,8 +1705,8 @@ overhauled_admiralty_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = overhauled_admiralty
 	}
@@ -1742,7 +1753,7 @@ livonian_confederation = {
 european_militia_reform = {
 	unique = yes
 	potential = {
-		tag = IRA
+		has_or_had_tag = IRA
 		has_variable = european_militia
 	}
 	country_modifier = {
@@ -1757,7 +1768,7 @@ european_militia_reform = {
 gabelle = {
 	unique = yes
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		has_unlocked_government_reform_trigger = { type = gabelle }
 	}
 
@@ -1773,7 +1784,7 @@ gabelle = {
 fra_code_louis = {
 	unique = yes
 	potential = {
-		tag = FRA
+		has_or_had_tag = FRA
 		has_variable = enable_code_louis
 	}
 
@@ -1796,7 +1807,7 @@ crusade_sea_reform = {
 		#other countries can access it if they are neightboors of the Knights or
 		#if they are its vassal
 		OR = {
-			tag = KNI
+			has_or_had_tag = KNI
 			any_neighbor_country = { has_reform = government_reform:crusade_sea_reform }
 			overlord ?= { has_reform = government_reform:crusade_sea_reform }
 		}
@@ -1807,13 +1818,12 @@ crusade_sea_reform = {
 		}
 	}
 	country_modifier = {
-		monthly_towards_naval = societal_value_minor_monthly_move
+		monthly_towards_naval = societal_value_monthly_move
 		monthly_towards_belligerent = societal_value_minor_monthly_move
 
-		army_disembark_speed = 0.10
+		army_disembark_speed = 0.1
 		navy_galley_build_cost_modifier = -0.5
-		navy_galley_reinforce_cost_modifier = -0.5
-		navy_galley_maintenance_cost_modifier = -0.5
+		allow_privateers_slave_raid = yes
 	}
 	years = 2
 }
@@ -1821,7 +1831,7 @@ crusade_sea_reform = {
 swe_age_of_freedom = {
 	unique = yes
 	potential = {
-		tag = SWE
+		has_or_had_tag = SWE
 		has_variable = swe_age_of_freedom
 	}
 	locked = {
@@ -1842,8 +1852,8 @@ representative_parliament_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = representative_government
 		modifier:has_a_parliamentary_system = yes
@@ -2024,7 +2034,7 @@ shogunate_kanrei_council = {
 jap_rangaku = {
 	unique = yes
 	potential = {
-		tag = JAP
+		has_or_had_tag = JAP
 		has_variable = jap_rangaku
 	}
 	country_modifier = {
@@ -2038,12 +2048,12 @@ legacy_of_kublai_khan = {
 	unique = yes
 	major = yes
 	potential = {
-		tag = CHI
+		has_or_had_tag = CHI
 		culture = culture:mongolian_culture
 		is_leader_of_international_organization = international_organization:middle_kingdom
 	}
 	allow = {
-		tag = CHI
+		has_or_had_tag = CHI
 		culture = culture:mongolian_culture
 		is_leader_of_international_organization = international_organization:middle_kingdom
 	}
@@ -2162,7 +2172,7 @@ son_in_law_rule = {
 				or = {
 					is_subject = no
 					overlord ?= {
-						tag = CHI
+						has_or_had_tag = CHI
 						culture = culture:mongolian_culture
 					}
 				}
@@ -2301,8 +2311,8 @@ yeren_jurchen_reform = {
 prikazi_reform = {
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 		has_variable = prikazi
 	}
@@ -2317,8 +2327,8 @@ prikazi_reform = {
 razriadnyi_reform = {
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 		has_variable = razriadnyi
 	}
@@ -2335,9 +2345,9 @@ razriadnyi_reform = {
 byzantine_court_ceremonies_reform = {
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
-			tag = BYZ
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
+			has_or_had_tag = BYZ
 		}
 		has_variable = byzantine_court_ceremonies
 	}
@@ -2368,8 +2378,8 @@ chosen_rada_reform = {
 	age = age_4_reformation
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 		has_variable = chosen_rada
 	}
@@ -2386,7 +2396,7 @@ council_of_forty = {
 	government = republic
 	potential = {
 		OR = {
-			tag = VEN
+			has_or_had_tag = VEN
 			has_reform = government_reform:council_of_forty
 		}
 	}
@@ -2407,7 +2417,7 @@ council_of_ten = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = VEN
+			has_or_had_tag = VEN
 			has_reform = government_reform:council_of_ten
 		}
 	}
@@ -2428,7 +2438,7 @@ full_college = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = VEN
+			has_or_had_tag = VEN
 			has_reform = government_reform:full_college
 		}
 		parliament_type != parliament_type:no_parliament
@@ -2464,8 +2474,8 @@ pru_unified_legal_system = {
 
 	potential = {
 		OR = {
-			tag = PRU
-			tag = BRA
+			has_or_had_tag = PRU
+			has_or_had_tag = BRA
 		}
 		has_variable = pru_unified_legal_system
 	}
@@ -2483,7 +2493,7 @@ portuguese_monarchy_reform = {
 	age = age_1_traditions
 	potential = {
 		OR = {
-			tag = POR
+			has_or_had_tag = POR
 			culture = culture:portuguese
 		}
 		NOT = { is_subject_type = colonial_nation }
@@ -2581,7 +2591,7 @@ nayankara_system = {
 mug_mughal_diwan = {
 	age = age_1_traditions
 	potential = {
-		tag = MUG
+		has_or_had_tag = MUG
 	}
 	country_modifier = {
 		add_accepted_culture_cost_modifier = -1
@@ -2597,7 +2607,7 @@ taluqdar_nobility = {
 	age = age_1_traditions
 	potential = {
 		OR = {
-			tag = MUG
+			has_or_had_tag = MUG
 			AND = {
 				culture = { has_culture_group = culture_group:indian_group }
 				religion.group = religion_group:muslim
@@ -2638,7 +2648,7 @@ mhr_ashta_pradhan = {
 theme_system = {
 	age = age_1_traditions
 	potential = {
-		tag = BYZ
+		has_or_had_tag = BYZ
 		custom_tooltip = {
 			text = byz_theme_system_not_obselete_tt
 			NOT = { has_variable = unlocked_modern_byzantine_army }
@@ -2655,7 +2665,7 @@ theme_system = {
 modern_imperial_army = {
 	age = age_1_traditions
 	potential = {
-		tag = BYZ
+		has_or_had_tag = BYZ
 		custom_tooltip = {
 			text = byz_reformed_imperial_army_tt
 			has_variable = unlocked_modern_byzantine_army
@@ -2672,7 +2682,7 @@ modern_imperial_army = {
 kritai_katholikoi = {
 	age = age_1_traditions
 	potential = {
-		tag = BYZ
+		has_or_had_tag = BYZ
 		NOT = { has_variable = byz_unlocked_reformed_kritai_katholikoi }
 	}
 	country_modifier = {
@@ -2685,7 +2695,7 @@ kritai_katholikoi = {
 kritai_katholikoi_reformed = {
 	age = age_1_traditions
 	potential = {
-		tag = BYZ
+		has_or_had_tag = BYZ
 		has_variable = byz_unlocked_reformed_kritai_katholikoi
 	}
 	country_modifier = {
@@ -2716,8 +2726,8 @@ speransky_liberalization_reform = {
 collegium_reform = {
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 		has_variable = collegium
 	}
@@ -2760,7 +2770,7 @@ joyous_entry_reform = {
 	age = age_2_renaissance
 	government = monarchy
 	potential = {
-		tag = BRB
+		has_or_had_tag = BRB
 	}
 	allow = {
 		has_embraced_institution = institution:legalism
@@ -2796,7 +2806,7 @@ dutch_republic_reform = {
 	major = yes
 	unique = yes
 	potential = {
-		tag = NED
+		has_or_had_tag = NED
 	}
 	allow = {
 		has_embraced_institution = institution:legalism
@@ -2814,8 +2824,8 @@ nakaz_reform = {
 	age = age_6_revolutions
 	potential = {
 		OR = {
-			tag = MOS
-			tag = RUS
+			has_or_had_tag = MOS
+			has_or_had_tag = RUS
 		}
 		has_variable = nakaz
 	}
@@ -2831,8 +2841,8 @@ court_of_the_star_chamber_reform = {
 	unique = yes
 	potential = {
 		OR = {
-			tag = ENG
-			tag = GBR
+			has_or_had_tag = ENG
+			has_or_had_tag = GBR
 		}
 		has_variable = court_of_the_star_chamber
 	}
@@ -2875,9 +2885,12 @@ holy_imperial_monarchy_reform = {
 warring_state = {
 	age = age_1_traditions
 	potential = {
-		NOT = { tag = CHI }
+		NOT = { has_or_had_tag = CHI }
 		has_reform = government_reform:warring_state
-		is_situation_active = situation:red_turban_rebellions
+		OR = {
+			is_situation_active = situation:red_turban_rebellions
+			has_variable = unlocked_warring_state
+		}
 		exists = international_organization:middle_kingdom
 		NOT = { is_leader_of_international_organization = international_organization:middle_kingdom }
 		OR = {
@@ -2887,11 +2900,10 @@ warring_state = {
 			culture.language.language_family ?= language_family:tai_language_family
 			culture.language = language:tibetan_language
 			culture.language = language:jurchen_language
-			has_variable = unlocked_warring_state
 		}
 	}
 	locked = {
-		NOT = { tag = CHI }
+		NOT = { has_or_had_tag = CHI }
 		has_reform = government_reform:warring_state
 		exists = international_organization:middle_kingdom
 		OR = {
@@ -2900,8 +2912,10 @@ warring_state = {
 			culture.language = language:hmong_language
 			culture.language.language_family ?= language_family:tai_language_family
 			culture.language = language:tibetan_language
-			culture.language = language:jurchen_language
-			has_variable = unlocked_warring_state
+			AND = {
+				culture.language = language:jurchen_language
+				is_situation_active = situation:red_turban_rebellions
+			}
 		}
 	}
 	country_modifier = {
@@ -2941,9 +2955,9 @@ crown_castile_reform = {
 	government = monarchy
 	potential = {
 		OR = {
-			tag = CAS
+			has_or_had_tag = CAS
 			AND = {
-				tag = SPA
+				has_or_had_tag = SPA
 				culture = culture:castilian
 			}
 		}
@@ -2973,9 +2987,9 @@ crown_aragon_reform = {
 	government = monarchy
 	potential = {
 		OR = {
-			tag = ARA
+			has_or_had_tag = ARA
 			AND = {
-				tag = SPA
+				has_or_had_tag = SPA
 				OR = {
 					culture = culture:aragonese
 					culture = culture:catalan
@@ -3025,10 +3039,10 @@ sons_of_the_oak_reform = {
 	government = monarchy
 	potential = {
 		OR = {
-			tag = NAV
+			has_or_had_tag = NAV
 			culture = culture:basque
 			AND = {
-				tag = SPA
+				has_or_had_tag = SPA
 				culture = culture:basque
 			}
 		}
@@ -3056,7 +3070,7 @@ system_of_councils_reform = {
 	age = age_3_discovery
 	government = monarchy
 	potential = {
-		tag = SPA
+		has_or_had_tag = SPA
 	}
 	allow = {
 		has_embraced_institution = institution:legalism
@@ -3075,7 +3089,7 @@ the_jewel_of_alandalus_reform = {
 	age = age_1_traditions
 	government = monarchy
 	potential = {
-		tag = GRA
+		has_or_had_tag = GRA
 	}
 	allow = {
 		has_embraced_institution = institution:legalism
@@ -3123,9 +3137,9 @@ austrian_archduchy_reform = {
 	government = monarchy
 	potential = {
 		OR = {
-			tag = HAB
-			tag = STY
-			tag = TIR
+			has_or_had_tag = HAB
+			has_or_had_tag = STY
+			has_or_had_tag = TIR
 		}
 		has_unlocked_government_reform_trigger = { type = austrian_archduchy_reform }
 	}
@@ -3239,7 +3253,7 @@ reichshofrat_reform = {
 	potential = {
 		is_leader_of_international_organization = international_organization:hre
 		has_unlocked_government_reform_trigger = { type = reichshofrat_reform }
-		tag = HAB
+		has_or_had_tag = HAB
 	}
 	country_modifier = {
 		diplomatic_reputation = diplomatic_reputation_mild_bonus
@@ -3311,7 +3325,7 @@ bohemian_commonwealth_reform = {
 	unique = yes
 	government = monarchy
 	potential = {
-		tag = BOH
+		has_or_had_tag = BOH
 		has_variable = bohemian_commonwealth_variable
 	}
 	country_modifier = {
@@ -3327,7 +3341,7 @@ mamluk_government = {
 	unique = yes
 	major = yes
 	potential = {
-		tag = MAM
+		has_or_had_tag = MAM
 	}
 	locked = {
 		is_locked_mechanic = {
@@ -3387,7 +3401,7 @@ omani_overseas_ambitions_reform = {
 		has_unlocked_government_reform_trigger = { type = omani_overseas_ambitions_reform }
 	}
 	allow = {
-		tag = OMA
+		has_or_had_tag = OMA
 	}
 	country_modifier = {
 		global_foreign_build_buildings_cost = -0.2
@@ -3416,7 +3430,7 @@ seven_provinces = {
 unified_admiralty_reform = {
 	unique = yes
 	potential = {
-		tag = NED
+		has_or_had_tag = NED
 		has_variable = unified_dutch_admiralties
 	}
 	allow = {
@@ -3487,7 +3501,7 @@ songhai_professional_army_reform = {
 
 promissione_ducale_reform = {
 	potential = {
-		tag = VEN
+		has_or_had_tag = VEN
 		has_unlocked_government_reform_trigger = { type = promissione_ducale_reform }
 	}
 	country_modifier = {
@@ -3499,7 +3513,7 @@ promissione_ducale_reform = {
 
 standardized_relazioni_reform = {
 	potential = {
-		tag = VEN
+		has_or_had_tag = VEN
 		has_unlocked_government_reform_trigger = { type = standardized_relazioni_reform }
 	}
 	country_modifier = {
@@ -3571,7 +3585,7 @@ zimbabwe_royal_cattle_control = {
 		has_advance = zmw_experienced_cattle_herder
 	}
 	allow = {
-		tag = ZMW
+		has_or_had_tag = ZMW
 	}
 	country_modifier = {
 		global_livestock_output_modifier = 0.2
@@ -3586,7 +3600,7 @@ zmw_council_of_senior_wives = {
 		has_unlocked_government_reform_trigger = { type = zmw_council_of_senior_wives }
 	}
 	allow = {
-		tag = ZMW
+		has_or_had_tag = ZMW
 	}
 	country_modifier = {
 		allow_female_cabinet = yes
@@ -3598,7 +3612,7 @@ zmw_council_of_senior_wives = {
 kilwan_trade_communities = {
 	unique = yes
 	potential = {
-		tag = ZAN
+		has_or_had_tag = ZAN
 	}
 	country_modifier = {
 		monthly_towards_plutocracy = societal_value_monthly_move
@@ -3612,7 +3626,7 @@ kilwan_trade_communities = {
 control_of_the_mahdali_coinage_reform = {
 	unique = yes
 	potential = {
-		tag = ZAN
+		has_or_had_tag = ZAN
 	}
 	allow = {
 		NOT = { has_estate_privilege = estate_privilege:control_over_the_coinage }
@@ -3627,11 +3641,11 @@ control_of_the_mahdali_coinage_reform = {
 ayu_chatusadom = {
 	unique = yes
 	potential = {
-		tag = AYU
+		has_or_had_tag = AYU
 		has_unlocked_government_reform_trigger = { type = ayu_chatusadom }
 	}
 	allow = {
-		tag = AYU
+		has_or_had_tag = AYU
 	}
 
 	country_modifier = {
@@ -3924,7 +3938,7 @@ volok_reform = {
 	unique = yes
 
 	potential = {
-		tag = LIT
+		has_or_had_tag = LIT
 	}
 
 	allow = {
@@ -4025,9 +4039,9 @@ royal_council_of_castile = {
 
 	potential = {
 		OR = {
-			tag = CAS
+			has_or_had_tag = CAS
 			AND = {
-				tag = SPA
+				has_or_had_tag = SPA
 				culture = culture:castilian
 			}
 		}
@@ -4047,8 +4061,8 @@ nueva_planta = {
 
 	potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 		has_unlocked_government_reform_trigger = { type = nueva_planta }
 	}
@@ -4067,8 +4081,8 @@ royal_factories_reform = {
 
 	potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 		has_unlocked_government_reform_trigger = { type = royal_factories_reform }
 	}
@@ -4088,8 +4102,8 @@ intendancy_system = {
 
 	potential = {
 		OR = {
-			tag = CAS
-			tag = SPA
+			has_or_had_tag = CAS
+			has_or_had_tag = SPA
 		}
 		has_unlocked_government_reform_trigger = { type = intendancy_system }
 	}

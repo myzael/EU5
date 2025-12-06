@@ -148,7 +148,7 @@
  flavor_mlo.31.title.fallback: "Province Demands Autonomy"
  flavor_mlo.31.desc: "In [GetCurrentYear], and during a most turbulent time, one of our provinces, [target_province.GetName], has demanded we hand them more autonomy on the basis of our weakened state and internal strife. They seek freedom from taxation and obligations to our crown, asserting their own governance and legal framework. The province may be experiencing various challenges and conflicts in its pursuit of independence, but its people remain determined to defend their sovereignty against our rule.\n\nThis is irrefutable evidence that prominent individuals in our domain have been biding their time, waiting to strike when we are most vulnerable! Alas, this offense will not be forgotten. We must rein in these unruly elements and rally the men in defense of the crown!"
  flavor_mlo.31.a: "We must suppress their dissent."
- flavor_mlo.31.b: "It's better to appease them..."
+ flavor_mlo.31.b: "It is better to appease them..."
  flavor_mlo.31.c: "Freedom? How about the whip?"
  
  flavor_mlo.32.title: "A Man of Force and Determination"

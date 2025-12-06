@@ -2008,6 +2008,7 @@ red_turban_rebellions.13 = {
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
 		add_stability = stability_mild_bonus
+		remove_variable = rtr_release_tag_CNP
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -2096,6 +2097,7 @@ red_turban_rebellions.14 = {
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
 		add_stability = stability_mild_bonus
+		remove_variable = rtr_release_tag_CDN
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -2183,6 +2185,7 @@ red_turban_rebellions.15 = {
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
 		add_stability = stability_mild_bonus
+		remove_variable = rtr_release_tag_CSI
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -2277,6 +2280,7 @@ red_turban_rebellions.16 = {
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
 		add_stability = stability_mild_bonus
+		remove_variable = rtr_release_tag_CKO
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -2364,6 +2368,7 @@ red_turban_rebellions.17 = {
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
 		add_stability = stability_mild_bonus
+		remove_variable = rtr_release_tag_CNA
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -3677,6 +3682,39 @@ red_turban_rebellions.1001 = {
 	}
 	option = {
 		name = red_turban_rebellions.1001.b
+		hidden_effect = {
+			scope:root_country = {
+				every_current_war = {
+					limit = {
+						is_on_same_side = {
+							country = scope:root_country
+							target = scope:target_country
+						}
+					}
+					save_scope_as = target_war
+					if = {
+						limit = {
+							attacker_leader != scope:root_country
+							defender_leader != scope:root_country
+						}
+						scope:root_country = {
+							leave_war = {
+								war = scope:target_war
+								actor = this
+							}
+						}
+					}
+					else = {
+						scope:target_country = {
+							leave_war = {
+								war = scope:target_war
+								actor = scope:target_country
+							}
+						}
+					}
+				}
+			}
+		}
 		scope:root_country = {
 			declare_war_with_cb = {
 				target = scope:target_country

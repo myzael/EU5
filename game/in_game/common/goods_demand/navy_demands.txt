@@ -8,6 +8,20 @@ canoe_maintenance = {
 	lumber = 0.01
 	category = ship_construction
 }
+galley_0_construction = {
+	naval_supplies = 0.05
+	tools = 0.05
+	weaponry = 0.05
+	lumber = 0.3
+	category = ship_construction
+}
+galley_0_maintenance = {
+	naval_supplies = 0.025
+	weaponry = 0.005
+	liquor = 0.005
+	salt = 0.005
+	category = ship_maintenance
+}
 galley_1_construction = {
 	naval_supplies = 0.1
 	tools = 0.1

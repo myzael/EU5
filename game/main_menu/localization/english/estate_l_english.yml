@@ -18,6 +18,7 @@
  estate_common_crown_ending: "In general, it is better for the government estate to have more power than the other estates."
  
  
+ crown_estate_holy_order: "Chapter"
  crown_estate_republic: "Republic"
  crown_estate_brethren: "Brethren"
  crown_estate_derbfine: "Derbfine"
@@ -25,6 +26,7 @@
  crown_estate_kronan: "Kronan"
  
  
+ clergy_estate_holy_order: "Fratres"
  clergy_estate_prest: "Prästeståndet"
  clergy_estate_maori: "Tohunga"
  clergy_estate_prelates: "Prelates"
@@ -52,6 +54,7 @@
  clergy_estate_ah_kinoob: "Ah K'ino'ob"
  
  
+ nobles_estate_holy_order: "Milites"
  nobles_estate_adeln: "Adelståndet"
  nobles_estate_maori: "Rangatiras"
  nobles_estate_chieftains: "Chieftains"
@@ -310,7 +313,7 @@
 
  powerful_italian_families: "Powerful [ShowCultureGroupNameWithNoTooltip('italian_group')] Families"
  powerful_italian_families.tt: "Our Capital is NOT in the Region of [ShowRegionNameWithNoTooltip('italy_region')]"
- powerful_italian_families_desc: "The anarchy and disobedience in the city of [ShowLocationName('rome')] and the other [ShowCultureGroupName('italian_group')] estates greatly increased after the [GetCountry('PAP').GetGovernment.GetRulerTitle] moved the court to [ShowLocationName('avignon')]. Now those territories are under the control of powerful Italian families such as the [ShowDynastyName('colonna')] and [ShowDynastyName('orsini')], who are almost completely independent of the [GetCountry('PAP').GetGovernment.GetRulerTitle]."
+ powerful_italian_families_desc: "The anarchy and disobedience in the city of [ShowLocationName('rome')] and the other [ShowCultureGroupName('italian_group')] estates greatly increased after the [GetCountry('PAP').GetGovernment.GetRulerTitle] moved the court to [ShowLocationName('avignon')]. Now those territories are under the control of powerful Italian families such as the Colonna and [ShowDynastyName('orsini_dynasty')], who are almost completely independent of the [GetCountry('PAP').GetGovernment.GetRulerTitle]."
 
  french_cardinals: "[ShowCultureGroupNameWithNoTooltip('french_group')] Cardinals"
  french_cardinals_desc: "Since the death of [GetCharacter('pap_boniface_viii').GetName] and the court's relocation to [ShowLocationName('avignon')], most of the cardinals flocking to it are [ShowCultureGroupName('french_group')] and under the influence of the [GetCountry('FRA').GetGovernment.GetRulerTitle] of [GetCountry('FRA').GetName], whose grip on the [GetCountry('PAP').GetName] will not allow a return to [ShowLocationName('rome')]."

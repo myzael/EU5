@@ -2,6 +2,73 @@ situation_panel = {
 
 	##################################### TOP HEADER #####################################
 
+	blockoverride "header_center_modifiers" {
+		icon = {
+			#visible = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('strongest_pirate_variable').IsSet]"
+			parentanchor = top|hcenter
+			texture = "gfx/interface/component_tiles/regular_banner.dds"
+			texture_density = 2
+			size = { 44 48 }
+			
+			flowcontainer = {
+				parentanchor = center
+				position = { 0 -3 }
+				
+				layoutpolicy_horizontal = expanding
+
+				item = { 
+					timed_modifier_icon = {
+						datacontext = "[TimedModifier]"
+						tooltipwidget = {
+							using = timed_modifier_tooltip
+							blockoverride "concept_link" {
+								text = "[location_modifier|e]"
+							}
+						}
+					} 
+				}
+
+				expand = {}
+			}
+
+			flowcontainer = {
+				parentanchor = center
+				position = { 3 -3}
+
+				icon = {
+					size = { 26 26 }
+					using = default_country_modifier_texture
+					texture_density = 2
+
+					tooltipwidget = {
+						ContextualTooltipType = {
+							blockoverride "title_text" {
+								text = "game_concept_location_modifiers"
+							}
+							blockoverride "title_icon" {
+								icon = {
+									using = tooltip_title_icon_size
+									texture = "[SituationView.GetActiveSituation.GetIcon]"										
+								}
+							}
+							blockoverride "tooltip_content" {
+								text_multi = {
+					 				margin = {15 0}
+					 				layoutpolicy_horizontal = expanding
+					 				max_width = 500
+					 				autoresize = yes
+					 				text = locations_with_extended_winter_will_be_affected_by_the_following_modifiers_tt
+					 			}	
+								TooltipRowList = {
+									textcontext = "[GetModifier('harsh_winters_modifier').GetDesc]"
+								}							
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	##################################### MAIN IMAGE #####################################
 

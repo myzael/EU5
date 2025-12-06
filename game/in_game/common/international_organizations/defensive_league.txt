@@ -127,20 +127,25 @@
 				}
 			}
             add = {
-                desc = "COALITION_GRADE_ANTAGONISM_TOWARDS_THEM"
+                desc = "COALITION_GRADE_ANTAGONISM_TOWARDS_MEMBERS"
                 value = {
 					scope:recipient = {
 						every_international_organization_member = {
-							every_country_with_coalition_grade_antagonism_against_us = {                    
-								limit = {
-									not = { is_subject_or_below_of = prev }
+							add = {
+								every_country_with_coalition_grade_antagonism_against_us = {
+									limit = {
+										not = { is_subject_or_below_of = prev }
+									}
+									subtract = {
+										value = military_strength
+									}
 								}
-								add = {
-									value = -10
-								}
+								divide = military_strength
+								multiply = 10
 							}
 						}
 					}
+					
                 }
             }
 			if = {
@@ -256,14 +261,16 @@
 				add = {
 					desc = "COALITION_GRADE_ANTAGONISM_TOWARDS_THEM"
 					value = {
-						every_country_with_coalition_grade_antagonism_against_us = {                    
+						every_country_with_coalition_grade_antagonism_against_us = {
 							limit = {
 								not = { is_subject_or_below_of = prev }
 							}
-							add = {
-								value = -10
+							subtract = {
+								value = military_strength
 							}
 						}
+						divide = military_strength
+						multiply = 10
 					}
 				}
 			}

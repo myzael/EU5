@@ -785,29 +785,23 @@ flavor_mei.120 = { #The Acquisition of Landsberg
 		tag = MEI
 		from = 1337.1.1
 		to = 1357.1.1
-		monthly_chance = 20
+		monthly_chance = 100
 	}
 
 	trigger = {
 		country_exists = c:LDB
 		OR = {
 			AND = {
-				NOT = {
-					c:LDB = {
-						is_human = yes
-					}
+				c:LDB = {
+					is_human = no
 				}
-				NOT = {
-					c:MEI = {
-						is_human = yes
-					}
+				c:MEI = {
+					is_human = no
 				}
 			}
 			AND = {
-				NOT = {
-					c:LDB = {
-						is_human = yes
-					}
+				c:LDB = {
+					is_human = no
 				}
 				c:MEI = {
 					is_human = yes
@@ -817,10 +811,8 @@ flavor_mei.120 = { #The Acquisition of Landsberg
 				c:LDB = {
 					is_human = yes
 				}
-				NOT = {
-					c:MEI = {
-						is_human = yes
-					}
+				c:MEI = {
+					is_human = no
 				}
 			}
 		}
@@ -859,24 +851,95 @@ flavor_mei.120 = { #The Acquisition of Landsberg
 			annex_country = { country = c:LDB }
 		}
 		else_if = {
-			change_player = c:MEI
-			c:MEI = {
-				change_gold_effect = { scale = -5.00 }
+			limit = {
 				c:LDB = {
-					every_core_location = {
-						add_core = c:MEI
-					}
+					is_human = yes
 				}
-				annex_country = { country = c:LDB }
+			}
+			c:LDB = {
+				trigger_event_non_silently = flavor_mei.121
 			}
 		}
 	}
 
 	option = {
 		name = flavor_mei.120.b
+
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
 	}
 	historical_info = flavor_mei.120.historical_info
+}
+
+flavor_mei.121 = {
+	type = country_event
+	title = flavor_mei.120.title
+	desc = flavor_mei.121.desc
+	historical_info = flavor_mei.120.historical_info
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+		character:ldb_sophie_von_brandenburg = {
+			save_scope_as = target_spouse
+		}
+		character:bru_magnus_braunschweig_wolfenbuttel = {
+			save_scope_as = target_character
+		}
+	}
+
+	option = {
+		name = flavor_mei.121.a
+
+		custom_tooltip = flavor_mei.121.a.tt
+		change_player = c:MEI
+		c:MEI = {
+			change_gold_effect = { scale = -5.00 }
+			c:LDB = {
+				every_core_location = {
+					add_core = c:MEI
+				}
+			}
+			annex_country = { country = c:LDB }
+		}
+	}
+
+	option = {
+		name = flavor_mei.121.b
+
+		c:MEI = {
+			trigger_event_non_silently = flavor_mei.122
+		}
+	}
+}
+
+flavor_mei.122 = {
+	type = country_event
+	title = flavor_mei.120.title
+	desc = flavor_mei.122.desc
+	historical_info = flavor_mei.120.historical_info
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+	
+	}
+
+	option = {
+		name = flavor_mei.122.a
+
+		add_casus_belli = {
+			target = c:LDB
+			type = casus_belli:cb_annex
+		}
+	}
 }
 
 flavor_mei.130 = { #An Imperial Offer (Emperor)
@@ -898,22 +961,16 @@ flavor_mei.130 = { #An Imperial Offer (Emperor)
 		}
 		OR = {
 			AND = {
-				NOT = {
-					c:SWB = {
-						is_human = yes
-					}
+				c:SWB = {
+					is_human = no
 				}
-				NOT = {
-					c:MEI = {
-						is_human = yes
-					}
+				c:MEI = {
+					is_human = no
 				}
 			}
 			AND = {
-				NOT = {
-					c:SWB = {
-						is_human = yes
-					}
+				c:SWB = {
+					is_human = no
 				}
 				c:MEI = {
 					is_human = yes
@@ -923,10 +980,8 @@ flavor_mei.130 = { #An Imperial Offer (Emperor)
 				c:SWB = {
 					is_human = yes
 				}
-				NOT = {
-					c:MEI = {
-						is_human = yes
-					}
+				c:MEI = {
+					is_human = no
 				}
 			}
 		}
@@ -1010,7 +1065,9 @@ flavor_mei.131 = { #An Imperial Offer (Emperor)
 			annex_country = { country = c:SWB }
 		}
 		else_if = {
-			change_player = c:MEI
+			c:SWB = {
+				change_player = c:MEI
+			}
 			c:MEI = {
 				c:SWB = {
 					every_core_location = {
@@ -1867,6 +1924,7 @@ flavor_mei.1000 = { #A Brewing Storm
 						type = relation_type:alliance
 						target = root
 					}
+					is_at_war_with = root
 				}
 				government_type = government_type:monarchy
 				is_subject = no
@@ -1894,6 +1952,7 @@ flavor_mei.1000 = { #A Brewing Storm
 					type = relation_type:alliance
 					target = root
 				}
+				is_at_war_with = root
 			}
 			is_subject = no
 			ruler = {
@@ -1957,12 +2016,14 @@ flavor_mei.1001 = { #The Wettin Threat
 							type = relation_type:alliance
 							target = scope:root_country
 						}
+						is_at_war_with = root
 					}
 					NOT = {
 						has_mutual_scripted_relation = {
 							type = relation_type:alliance
 							target = root
 						}
+						is_at_war_with = root
 					}
 				}
 				order_by = modifier:great_power_score
@@ -2023,7 +2084,7 @@ flavor_mei.1002 = { #A Coalition Against Thuringia
 	}
 }
 
-flavor_mei.1003 = { #Thuringian Counts' War - Meisen
+flavor_mei.1003 = { #Thuringian Counts' War - Meissen
 	fire_only_once = yes
 	title = flavor_mei.1003.title
 	desc = flavor_mei.1003.desc

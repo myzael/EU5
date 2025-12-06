@@ -101,8 +101,8 @@
  rise_of_the_ottomans.208.desc: "What was once our proud jewel and one of our most important cities, [target.GetName] has fallen to enemy hands. Hostile armies have succeeded in breaking the defenders and entering the inner center, wreaking havoc and slaughtering the local populace..."
  rise_of_the_ottomans.208.a: "This is a nightmare!"
 
- rise_of_the_ottomans.209.title: "The Conquest of [Location.GetNameWithNoTooltip]"
- rise_of_the_ottomans.209.desc: "Despite our best attempts to safeguard our domain, we have sadly failed to maintain control over [Location.GetName], one of our strongholds and a most vital city. This is a black day for our people and further endangers our already weakened position in the region..."
+ rise_of_the_ottomans.209.title: "The Conquest of [location.GetNameWithNoTooltip]"
+ rise_of_the_ottomans.209.desc: "Despite our best attempts to safeguard our domain, we have sadly failed to maintain control over [location.GetName], one of our strongholds and a most vital city. This is a black day for our people and further endangers our already weakened position in the region..."
  rise_of_the_ottomans.209.a: "Is this the end?"
  
  growing_influence_text: "A proof of our growing influence and prosperity!"
@@ -164,10 +164,10 @@
  target_province_destination_already_has_tt: "Because [target_province_destination.GetName] already has the [ShowModifier('cultural_intermixing_modifier')] [modifier|e], its effects will double for the next #Y 2 Years"
 
  rise_of_the_ottomans.217.title: "A New [ShowSubjectTypeNameWithNoTooltip('uc_bey')]"
- rise_of_the_ottomans.217.desc: "To secure our frontier and protect the [ROOT.GetCountry.GetFlavorRank] from external threats, [target_character.GetName] has been appointed to oversee the [ShowSubjectTypeName('uc_bey')] of [target_country.GetName]. Tasked with defending our border, [target_character.GetShortNameWithNoTooltip] will maintain a standing army, oversee the construction and upkeep of fortifications, and ensure the safety of our lands. This appointment marks a critical step in strengthening our defenses and asserting our authority in the region. May [target_character.GetSheHe] serve with vigilance and honor!"
- rise_of_the_ottomans.217.a: "[target_province.GetNameWithNoTooltip] is in good hands."
+ rise_of_the_ottomans.217.desc: "To secure our frontier and protect the [ROOT.GetCountry.GetFlavorRank] from external threats, [target_character.GetName] has been appointed to oversee the [ShowSubjectTypeName('uc_bey')] of [target_subject.GetName]. Tasked with defending our border, [target_character.GetShortNameWithNoTooltip] will maintain a standing army, oversee the construction and upkeep of fortifications, and ensure the safety of our lands. This appointment marks a critical step in strengthening our defenses and asserting our authority in the region. May [target_character.GetSheHe] serve with vigilance and honor!"
+ rise_of_the_ottomans.217.a: "The [target_subject.GetLongNameWithNoTooltip] is in good hands."
  uc_bey_spawns_tt: "The [target_country.GetLongName] will protect our border in [target_province.GetName]"
- create_uc_bey_tt: "The designated [province|e] will be owned by a new [ShowSubjectTypeName('uc_bey')] subject"
+ create_uc_bey_tt: "The designated [ShowSubjectTypeName('vassal')] will become an [ShowSubjectTypeName('uc_bey')]"
 
  rise_of_the_ottomans.218.title: "Our Mercantile Influence Grows in [ShowRegionNameWithNoTooltip('anatolia_region')]"
  rise_of_the_ottomans.218.desc: "Our recent conquests across [ShowRegionName('anatolia_region')] have had a tremendous influence in shifting the balance of power across the entire region. Our latest campaigns has seen parts of the famed trunk road to [ShowLocationName('erzurum')], including an important hub of it, come under our direct jurisdiction. This development will surely consolidate our [ROOT.GetCountry.GetFlavorRank] as a great contender during the ongoing [ShowSituationName('rise_of_the_ottomans')] and hopefully safeguard our people from foreign conquest.\n\nAdditionally, our [ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')] seem to push towards granting them control of these important trade hubs across the trunk road, which would improve our bottom-line at the expense of their growing influence. This is a delicate matter, and [target_character.GetName] may not want to risk angering the [ROOT.GetCountry.GetGovernment.GetEstateNameWithNoTooltip('burghers_estate')] lest we risk instability and [target_character.GetHerHis] grip on power."

@@ -250,7 +250,7 @@
 
  location_dominant_religion_equal: "The [dominant_religion|e] of [LOCATION.GetName] is [TARGET_RELIGION.GetName]"
  location_dominant_religion_not_equal: "$NOT_location_dominant_religion_equal$"
- NOT_location_dominant_religion_equal: "The [dominant_language|e] of [LOCATION.GetName] is NOT [TARGET_RELIGION.GetName]"
+ NOT_location_dominant_religion_equal: "The [dominant_religion|e] of [LOCATION.GetName] is NOT [TARGET_RELIGION.GetName]"
  location_dominant_language_equal: "The [dominant_language|e] of [LOCATION.GetName] is [TARGET_LANGUAGE.GetName]"
  location_dominant_language_not_equal: "$NOT_location_dominant_language_equal$"
  NOT_location_dominant_language_equal: "The [dominant_language|e] of [LOCATION.GetName] is NOT [TARGET_LANGUAGE.GetName]"
@@ -4477,6 +4477,12 @@
  THIRD_IS_SELECTABLE_ISSUE_FOR_TRIGGER: "$PARLIAMENT_ISSUE$ can be chosen as [parliament_issue|e] in [TARGET_INTERNATIONAL_ORGANIZATION.GetName] by [COUNTRY.GetName]"
  NOT_THIRD_IS_SELECTABLE_ISSUE_FOR_TRIGGER: "$PARLIAMENT_ISSUE$ can NOT be chosen as [parliament_issue|e] in [TARGET_INTERNATIONAL_ORGANIZATION.GetName] by [COUNTRY.GetName]"
 
+ RESOLUTION_OPINION_TRIGGER: "Has an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
+ NOT_RESOLUTION_OPINION_TRIGGER: "Does NOT have an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
+ FIRST_RESOLUTION_OPINION_TRIGGER: "We have an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
+ NOT_FIRST_RESOLUTION_OPINION_TRIGGER: "We do NOT have an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
+ THIRD_RESOLUTION_OPINION_TRIGGER: "[COUNTRY.GetName] has an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
+ NOT_THIRD_RESOLUTION_OPINION_TRIGGER: "[COUNTRY.GetName] does NOT have an opinion of $COMPARATOR$ $NUM|Y$ for $VOTE$ in $RESOLUTION$ in the [TARGET_INTERNATIONAL_ORGANIZATION.GetName] $current_value_Y$"
 
  SUBJECT_LOYALTY_TRIGGER: "Has $COMPARATOR$ $NUM|V0$ [subject_loyalty|e]"
  NOT_SUBJECT_LOYALTY_TRIGGER: "Does NOT have $COMPARATOR$ $NUM|V0$ [subject_loyalty|e]"
@@ -4814,8 +4820,8 @@
 
  REBEL_CATEGORY_TRIGGER: "Is $NAME$"
  NOT_REBEL_CATEGORY_TRIGGER: "Is NOT $NAME$"
- THIRD_REBEL_CATEGORY_TRIGGER: "[REBEL.GetName] is $NAME$"
- NOT_THIRD_REBEL_CATEGORY_TRIGGER: "[REBEL.GetName] is NOT $NAME$"
+ THIRD_REBEL_CATEGORY_TRIGGER: "$WHAT$ is $NAME$"
+ NOT_THIRD_REBEL_CATEGORY_TRIGGER: "$WHAT$ is NOT $NAME$"
 
  NUM_OF_REBEL_SUPPORTERS_TRIGGER: "Has $COMPARATOR$ $NUM|Y$ supporting [countries|e] $current_value_Y$"
  NOT_NUM_OF_REBEL_SUPPORTERS_TRIGGER: "Has NOT $COMPARATOR$ $NUM|Y$ supporting [countries|e] $current_value_Y$"
@@ -6026,8 +6032,8 @@
  THIRD_BUILDING_IS_AT_MAX_LEVEL_TRIGGER: "[BUILDING.GetName] is at maximum level"
  NOT_THIRD_BUILDING_IS_AT_MAX_LEVEL_TRIGGER: "[BUILDING.GetName] is NOT at maximum level"
 
- BUILDING_IS_FULL_CAPACITY_TRIGGER: "It's working at full capacity"
- NOT_BUILDING_IS_FULL_CAPACITY_TRIGGER: "It's not working at full capacity"
+ BUILDING_IS_FULL_CAPACITY_TRIGGER: "It is working at full capacity"
+ NOT_BUILDING_IS_FULL_CAPACITY_TRIGGER: "It is not working at full capacity"
  THIRD_BUILDING_IS_FULL_CAPACITY_TRIGGER: "[BUILDING.GetName] is working at full capacity"
  NOT_THIRD_BUILDING_IS_FULL_CAPACITY_TRIGGER: "[BUILDING.GetName] is not working at full capacity"
  BUILDING_IS_SUBSIDIZED_TRIGGER: "Is subsidized"
@@ -7552,10 +7558,10 @@
  THIRD_MONTHS_BETWEEN_LEADER_CHANGES_TRIGGER: "The period between [elections|e] in [INTERNATIONAL_ORGANIZATION.GetName] is $COMPARATOR$ $NUM|0Y$ months"
  NOT_THIRD_MONTHS_BETWEEN_LEADER_CHANGES_TRIGGER: "The period between [elections|e] in [INTERNATIONAL_ORGANIZATION.GetName] is NOT $COMPARATOR$ $NUM|0Y$ months"
 
- INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "Owns $COMPARATOR$ $NUM|V0$ [locations|E]"
- NOT_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "Does NOT own $COMPARATOR$ $NUM|V0$ [locations|E]"
- THIRD_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "[INTERNATIONAL_ORGANIZATION.GetName] owns $COMPARATOR$ $NUM|V0$ [locations|E]"
- NOT_THIRD_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "[INTERNATIONAL_ORGANIZATION.GetName] does NOT own $COMPARATOR$ $NUM|V0$ [locations|E]"
+ INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "Owns $COMPARATOR$ $NUM|V0$ [locations|E] $current_value_0Y$"
+ NOT_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "Does NOT own $COMPARATOR$ $NUM|V0$ [locations|E] $current_value_0Y$"
+ THIRD_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "[INTERNATIONAL_ORGANIZATION.GetName] owns $COMPARATOR$ $NUM|V0$ [locations|E] $current_value_0Y$"
+ NOT_THIRD_INTERNATIONAL_ORGANIZATION_NUM_LOCATIONS_TRIGGER: "[INTERNATIONAL_ORGANIZATION.GetName] does NOT own $COMPARATOR$ $NUM|V0$ [locations|E] $current_value_0Y$"
 
  INTERNATIONAL_ORGANIZATION_HAS_INTERNAL_PEACE_TRIGGER: "Has internal [peace|e]"
  NOT_INTERNATIONAL_ORGANIZATION_HAS_INTERNAL_PEACE_TRIGGER: "Has internal [war|e]"

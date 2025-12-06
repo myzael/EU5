@@ -897,8 +897,7 @@ cloth_leathers_gambeson_metal_crusaders_chainmail_gold_mixed_skin = {
 	assets = {	
 		
 		unit_torso_armor_gamberson_chainmail_shoulder_plates_mesh
-        unit_torso_armor_brigandine_chainmail_mesh		    
-		
+        unit_torso_armor_brigandine_chainmail_mesh  
 		unit_hat_houndskull_face_mask_helmet_e_mesh
 		unit_hat_houndskull_face_mask_helmet_f_mesh	 
         unit_hat_houndskull_face_mask_helmet_a_mesh
@@ -1074,6 +1073,7 @@ crusaders_armor_variations_coa = {
         10 = unit_torso_armor_chainmail_long_tabard_mesh
         10 =unit_torso_armor_chainmail_plates_long_tabard_mesh		
         10 =unit_torso_armor_chainmail_tabard_mesh
+        10 =unit_torso_armor_chainmail_long_tabard_coa_side_mesh
 		
 		#10 = unit_shield_round_leather_mid_mesh # currently unused
 	}

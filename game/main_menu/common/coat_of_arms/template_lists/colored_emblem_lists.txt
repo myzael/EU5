@@ -1348,9 +1348,34 @@ colored_emblem_texture_lists = {
 		1 = "ce_per_pale.dds"
 		1 = "ce_quarterly.dds"
 		1 = "ce_per_saltire.dds"
-		5 = list "ordinary_bars"
-		5 = list "ordinary_checkers"
-		2 = list "ordinary_bends"
+		1 = "ce_barry_04.dds"
+		2 = "ce_barry_06.dds"
+		2 = "ce_barry_08.dds"
+		2 = "ce_barry_10.dds"
+		2 = "ce_barry_12.dds"		
+		2 = "ce_bars_02.dds"
+		2 = "ce_bars_03.dds"
+		2 = "ce_bars_04.dds"
+		1 = "ce_bars_05.dds"		
+		1 = "ce_barry_undy.dds"		
+		1 = "ce_barry_08_undy.dds"		
+		2 = "ce_checky_04.dds"
+		2 = "ce_checky_05.dds"
+		2 = "ce_checky_06.dds"
+		1 = "ce_checky_07.dds"
+		1 = "ce_checky_08.dds"
+		1= "ce_checky_9_points.dds"	
+		1= "ce_checky_12_points.dds"	
+		1= "ce_checky_15_points.dds"	
+		1 = "ce_bendy_04.dds"
+		2 = "ce_bendy_06.dds"
+		2 = "ce_bendy_08.dds"
+		1 = "ce_bendy_10.dds"
+		1 = "ce_bend.dds"		
+		1 = "ce_bends_02.dds"
+		1 = "ce_bends_03.dds"
+		1 = "ce_bends_04.dds"
+		1 = "ce_bends_05.dds"		
 		
 		## European designs
 		special_selection = {
@@ -1418,9 +1443,9 @@ colored_emblem_texture_lists = {
 			5 = "ce_bars_03_dancetty.dds"			
 
 			## Checky, Lozengy
-			15 = "ce_checky_04.dds"		
-			25 = "ce_checky_05.dds"		
-			30 = "ce_checky_06.dds"
+			10 = "ce_checky_04.dds"		
+			15 = "ce_checky_05.dds"		
+			20 = "ce_checky_06.dds"
 			15 = "ce_checky_07.dds"
 			5 = "ce_checky_08.dds"				
 			20 = "ce_lozengy.dds"			
@@ -5111,6 +5136,10 @@ colored_emblem_texture_lists = {
 				OR = {
 					coa_def_pirates_trigger = yes
 					coa_def_ryukyu_trigger = yes
+					AND = { # Workaround
+						coa_def_republic_trigger = yes
+						coa_def_shogunate_subject_trigger = no
+					}					
 				}
 			}
 			1000 = "ce_mon_itowanami_no_maru.dds"
@@ -6328,7 +6357,8 @@ colored_emblem_texture_lists = {
 
 		## Crosses & Saltires
 		25 = "ce_cross_shield.dds"
-		1 = "ce_cross_engrailed_shield.dds"		
+		1 = "ce_cross_engrailed_shield.dds"
+		1 = "ce_cross_humetty_shield.dds"
 		5 = "ce_saltire_shield.dds"
 		1 = "ce_saltire_engrailed_shield.dds"			
 		
@@ -6371,6 +6401,7 @@ colored_emblem_texture_lists = {
 			2 = "ce_barry_nebuly_shield.dds"
 			2 = "ce_bars_03_nebuly_shield.dds"			
 			2 = "ce_bend_cotised_shield.dds"
+			1 = "ce_cross_humetty_shield.dds"
         }			
 		special_selection = {
             trigger = {
@@ -6384,6 +6415,7 @@ colored_emblem_texture_lists = {
 			20 = "ce_fretty.dds"	
 			10 = "ce_quarterly_per_fess_indented_shield.dds"	
 			5 = "ce_piles_conjoined_inverted.dds"		
+			2 = "ce_cross_humetty_shield.dds"
         }		
 		special_selection = {
             trigger = {
@@ -6748,6 +6780,13 @@ colored_emblem_texture_lists = {
             }
 			20 = "ce_bend_fimbriated_shield.dds"
         }
+		special_selection = {
+            trigger = {
+				coa_def_portuguese_trigger = yes
+            }
+			20 = "ce_bars_02_checky_shield.dds"
+			20 = "ce_bars_03_checky_shield.dds"
+        }		
 		special_selection = {
            trigger = {
 				coa_def_german_trigger = yes

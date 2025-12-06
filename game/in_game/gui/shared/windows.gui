@@ -1350,7 +1350,7 @@ types WindowTypes
 					block "panel_content" {}
 				}
 
-				# block "post_panel" {}
+				block "post_panel" {}
 			}
 		}
 	}

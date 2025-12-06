@@ -82,26 +82,6 @@ building_only_not_lacking_goods = {
 	}
 }
 
-# building_only_owned = {
-# 	scope = building
-# 	tag = building
-# 	group = 5
-# 	exclusive_group = yes
-# 	trigger = {
-# 		is_building_owned_by = scope:target
-# 	}
-# }
-
-# building_only_foreign = {
-# 	scope = building
-# 	tag = building
-# 	group = 5
-# 	exclusive_group = yes
-# 	trigger = {
-# 		not = { is_building_owned_by = scope:target }
-# 	}
-# }
-
 building_only_profitable = {
 	scope = building
 	tag = building

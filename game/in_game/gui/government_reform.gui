@@ -113,9 +113,9 @@ template government_reforms_item {
 				estate_reform_action_button_alt = {
 					datacontext = "[GovernmentReformItem.GetReform]"
 					size = { 52 75 }
-					blockoverride "estate_reform_action_button_action" {
+					blockoverride "reform_action" {
+						datacontext = "[GovernmentReformItem.GetUIAction]"
 						tooltip_enabled = no
-						using = select_interaction_target_action_provider
 					}
 					blockoverride "icon_texture" {
 						texture = "[GetGovernmentReformIllustration(GovernmentReform.Self)]"

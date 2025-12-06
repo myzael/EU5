@@ -22,22 +22,20 @@ types CultureColumns
 		hbox = {
 			margin = { 10 0 }
 			spacing = 5
+			layoutpolicy_horizontal = expanding
 			icon = {
-				visible = no
 				size = { 28 28 }
-				texture = "gfx/interface/icons/location_icons/new/population.dds"
+				texture = "[GetConceptTexture('culture')]"
 			}
 			
 			text_single = {
-				layoutpolicy_vertical = fixed
-				layoutpolicy_horizontal = expanding
-				autoresize = no
 				align = nobaseline
 				default_format = "#yellow_titles"
 				text = "[InteractionTarget.GetCulture.GetName]"
 			}
+
+			expand = {}
 		}
-		
 	}
 
 	type culture_percentage_in_country = select_cell_default {
@@ -50,7 +48,7 @@ types CultureColumns
 		}
 
 		hbox = {
-			margin = { 5 0 }
+			margin = { 10 0 }
 			spacing = 5
 			icon = {
 				visible = no
@@ -61,7 +59,7 @@ types CultureColumns
 			text_single = {
 				using = layoutpolicy_expanding
 				autoresize = no
-				align = nobaseline
+				align = right|nobaseline
 				text = "[SelectInteractionTargetView.GetCurrentParams.GetActor.GetCulturePercentage(InteractionTarget.GetCulture)|%]"
 			}
 		}

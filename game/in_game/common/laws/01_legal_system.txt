@@ -162,6 +162,7 @@
 	}
 
 	pskov_judicial_charter_policy = {
+		unique = yes
 		potential = {
 			tag = PSK
 		}
@@ -330,6 +331,7 @@
 	}
 
 	maiestas_carolina = {
+		unique = yes
 		potential = {
 			tag = BOH
 			has_unlocked_policy_trigger = { type = maiestas_carolina }
@@ -687,6 +689,7 @@
 	}
 
 	tur_kanum_i_osmani = {
+		unique = yes
 		potential = {
 			tag = TUR
 		}

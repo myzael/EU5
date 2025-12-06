@@ -159,6 +159,10 @@ template War_tooltip {
 				blockoverride "block_title" {
 					text = "WAR_SCORE_SOURCES"
 				}
+				tooltipmeta = {
+					texture = "gfx/interface/icons/map_modes/war.dds"
+					game_concept = "[war|E]"
+				}
 				blockoverride "block_scrollarea" { maximumsize = { -1 420 }}
 				textcontext = "[War.GetWarScoreBreakdown]"
 			}
@@ -827,15 +831,8 @@ template enemy_participants_tooltip {
 	}
 }
 
-template create_casus_belli_tooltip_pop_out {
+template casus_belli_window_tooltip {
 	ContextualTooltipType = {
-		blockoverride "title_text" {
-			text = "[SelectCasusBelli.GetName]"
-		}
-
-		blockoverride "concept_link" {
-			text = "[casus_belli|e]"
-		}
 
 		blockoverride "title_icon" {
 			icon = {
@@ -852,13 +849,28 @@ template create_casus_belli_tooltip_pop_out {
 				}
 			}
 		}
-
+	
+		blockoverride "title_text" {
+			text = "[SelectCasusBelli.GetCasusBelli.GetNameWithNoTooltip]"
+		}
+							
+		blockoverride "concept_link" {
+			text = [casus_belli|E]
+		}
 		blockoverride "tooltip_content" {
-			TooltipRequirementsList = {
-				blockoverride "block_title" { text = "game_concept_conditions" }
-				visible = "[Not(StringIsEmpty(SelectCasusBelli.GetTooltip))]"
-				textcontext = "[SelectCasusBelli.GetTooltip]"
+			TooltipStringPairList = { 
+				blockoverride "block_title" {
+					datacontext = "[SelectCasusBelli.GetWarGoal]"
+					text = "SELECT_CASUS_BELLI_WARGOAL_TT_TEXT"
+					
+				}
+				textcontext = "[SelectCasusBelli.GetWarGoal.GetEffects]"
+			}
+			TooltipTextBlock = {
+				blockoverride "text" {
+					text = "[SelectCasusBelli.GetWarGoal.GetFlavor]"
+				}
 			}
 		}
-	}
+	}	
 }

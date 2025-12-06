@@ -2,6 +2,7 @@
 	monthly_spawn_chance = monthly_spawn_chance_unique
 	resolution = "nanbokuchou_resolution"
 	voters = nanbokuchou_voters
+	hint_tag = hint_nanbokuchou
 	
 	can_start = {
 		current_date > 1336.1.1

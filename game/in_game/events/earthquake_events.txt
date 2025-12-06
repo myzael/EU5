@@ -4940,6 +4940,61 @@ earthquake_events.92 = { #generic catastrophic earthquake
 	}
 }
 
+ earthquake_events.93 = { #https://es.wikipedia.org/wiki/Terremoto_del_Cabo_de_San_Vicente_de_1356
+ 	type = country_event
+ 	title = earthquake_events.title
+ 	desc = earthquake_events_catastrophic.desc
+ 	fire_only_once = yes
+
+ 	trigger = {
+ 		owns = location:sevilla
+ 		current_year >= 1351
+ 		current_year <= 1361
+ 	}
+
+ 	image = "gfx/interface/illustrations/event/backgrounds/special/earthquake.dds"
+	
+ 	immediate = {
+ 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+
+ 		location:lisbon = { save_scope_as = target_location }
+ 	}
+		
+ 	option = {
+ 		name = earthquake_events_catastrophic.a
+
+ 		custom_tooltip = earthquake_events_catastrophic.a.tt
+ 		hidden_effect = {
+ 			scope:target_location = {
+ 				catastrophic_earthquake_damage = yes
+ 				if = {
+ 					limit = {
+ 						location_rank = location_rank:city
+ 					}
+ 					change_location_rank = location_rank:town
+ 				}
+ 			}
+ 		}
+ 	}
+	
+ 	option = {
+ 		name = earthquake_events_catastrophy.b
+
+ 		major_earthquake_payment = yes
+ 		custom_tooltip = earthquake_events_catastrophy.b.tt
+ 		hidden_effect = {
+ 			scope:target_location = {
+ 				catastrophic_earthquake_damage = yes
+ 				add_location_modifier = {
+ 					modifier = major_recovery_effort
+ 					years = 10
+ 					mode = add_and_extend
+ 				}
+ 			}
+ 		}
+ 	}
+ }
+
 scripted_trigger earthquake_owns_controls_gallipoli_neightboor_location = {
 	#Neighboor locations of Gallipoli (including sea neighboors)
 	OR = {

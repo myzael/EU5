@@ -297,8 +297,8 @@
  LOYALTY_DUE_TO_OVERLORD: "Subject Loyalty from current factors in $NAME$:\n"
  IS_CURRENTLY_DISLOYAL: "@warning_icon! Below $VAL|0$ loyalty, making it a [disloyal_subject|e]"
  IS_CURRENTLY_LOYAL: "@trigger_yes! Loyalty at least at $VAL|0$, which makes it a [loyal_subject|e]"
- SubjectTypeDetail_DESC: "@[Country.GetFlag]! [Country.GetName] is a [Country.GetDiplomacy.GetSubjectType.GetName].\nIt is loyal with loyalty at #G [Country.GetDiplomacy.GetSubjectLoyalty|2%/]#!"
- SubjectTypeDetail_DESC_NOT: "@[Country.GetFlag]! [Country.GetName] is a [Country.GetDiplomacy.GetSubjectType.GetName].\nIt is [disloyal_subject|e] with loyalty at #R [Country.GetDiplomacy.GetSubjectLoyalty|2%/]#!."
+ SubjectTypeDetail_DESC: "[subject_icon] It is a [Country.GetSubjectTypeLabel] of the @[Country.GetDiplomacy.GetOverlord.GetFlag]! [Country.GetDiplomacy.GetOverlord.GetLongName].\n[loyal_subject_icon] It is a [loyal_subject|e] with a [subject_loyalty|e] of #G [Country.GetDiplomacy.GetSubjectLoyalty|2%/]#!.
+ SubjectTypeDetail_DESC_NOT: "[subject_icon] It is a [Country.GetSubjectTypeLabel] of the @[Country.GetDiplomacy.GetOverlord.GetFlag]! [Country.GetDiplomacy.GetOverlord.GetLongName].\n[disloyal_subject_icon] It is a [disloyal_subject|e] with a [subject_loyalty|e] of #R [Country.GetDiplomacy.GetSubjectLoyalty|2%/]#!.
  AIREASON_MILITARYACCESS: "They want to be given military access."
  AIREASON_WAR: "They want to provoke [war|e]."
  nation_rank_0: "Migrant Horde"
@@ -1123,8 +1123,11 @@
  PEACE_TREATY_REVOLTER_SURVIVES: "[COUNTRY.GetNameWithFlag] continues to exist after the [revolt|e]"
  PEACE_TREATY_REVOLTER_SURVIVES_short: "[COUNTRY.GetNameWithFlagWithNoTooltip] continues to exist after the [Localize('game_concept_revolt')]"
 
- PEACE_TREATY_GRANT_INDEPENDENCE: "[COUNTRY.GetNameWithFlag] are granted their independence"
- PEACE_TREATY_GRANT_INDEPENDENCE_short: "[COUNTRY.GetNameWithFlagWithNoTooltip] are granted their independence"
+ PEACE_TREATY_GRANT_INDEPENDENCE: "[COUNTRY.GetNameWithFlag] and their [allies|e] are granted their independence"
+ PEACE_TREATY_GRANT_INDEPENDENCE_short: "[COUNTRY.GetNameWithFlagWithNoTooltip] and their [allies] are granted their independence"
+
+ PEACE_TREATY_GRANT_INDEPENDENCE_SEPARATE: "[COUNTRY.GetNameWithFlag] are granted their independence"
+ PEACE_TREATY_GRANT_INDEPENDENCE_SEPARATE_short: "[COUNTRY.GetNameWithFlagWithNoTooltip] granted their independence"
  
  PEACE_TREATY_BLOCKED_NO_UNION_CB: "@trigger_no! We cannot form a Personal Union with them without using the [ShowCasusBelliName('cb_claim_throne')] [casus_belli|e]."
  PEACE_TREATY_BLOCKED_WAR_GOAL: "@trigger_no! The [war_goal|e] $NAME|Y$ blocks this treaty."
@@ -1265,7 +1268,7 @@
  BUYPROV_FLAVOR: "Buying a location from another country will transfer the location to our control for an agreed upon price."
  BUYPROV_ASK_DESC: "$ACTOR$ wishes to buy $PROV$ from us for $PRICE$ [gold_i]."
  NOT_SELL_CITY_ALL_TOO_FAR: "@trigger_no! [TARGET_COUNTRY.GetName] has no location that is either adjacent to [COUNTRY.GetNameWithNoTooltip], or is coastal and within their [naval_range|e]."
- NOT_SELL_CITY_TOO_FAR: "@trigger_no! [LOCATION.GetName] is not adjacent to [COUNTRY.GetNameWithNoTooltip], is landlocked or is outside their [naval_range|e]."
+ NOT_SELL_CITY_TOO_FAR: "@trigger_no! [LOCATION.GetName] is not adjacent to [COUNTRY.GetNameWithNoTooltip] or their subjects, is landlocked or is outside their [naval_range|e]."
  NOT_SELL_CITY_BEING_ANNEXED: "@trigger_no! [COUNTRY.GetNameWithNoTooltip] is being annexed."
  NOT_SELL_OUR_LAST_CITY: "@trigger_no! It is not possible to sell the last location!"
  NOT_SELL_CITY_UNDER_SIEGE: "@trigger_no! It is not possible to sell a location under siege!"
@@ -1337,6 +1340,7 @@
  SUBJECT_TYPE_LIMITED_DIPLOMACY: "$EFFECT_LIST_BULLET$$SUBJECT$ is [diplomatically_limited|e] by $OVERLORD$."
  SUBJECT_TYPE_GIVES_FLEET_BASING: "$EFFECT_LIST_BULLET$$SUBJECT$ gives $OVERLORD$ [fleet_basing_rights|e]."
  SUBJECT_TYPE_GIVES_FOOD_ACCESS: "$EFFECT_LIST_BULLET$$SUBJECT$ gives $OVERLORD$ [food_access|e]."
+ SUBJECT_TYPE_ALLOW_SUBJECT: "$EFFECT_LIST_BULLET$$SUBJECT$ is allowed to create their own [subjects|e]."
  SUBJECT_TYPE_PAYS: "$EFFECT_LIST_BULLET$$SUBJECT$ pays $COST$ each month to $OVERLORD$."
  SUBJECT_TYPE_ALLOWED_WARS: "$EFFECT_LIST_BULLET$$SUBJECT$ is allowed by $OVERLORD$ to start their own [wars|e]."
  SUBJECT_TYPE_MONTHLY_EFFECT: "\nEach month:\n$EFFECT$"
@@ -2178,6 +2182,9 @@
 
  war_goal_high_kingship_subjugate_wargoal: "High Kingship Subjugation"
  war_goal_high_kingship_subjugate_wargoal_desc: "$generic_war_goal_superiority_desc$"
+
+ war_goal_take_capital_liberate_hre_member: "Holy Roman Empire Liberation"
+ war_goal_take_capital_liberate_hre_member_desc: "$generic_war_goal_take_capital_desc$"
 
  war_goal_high_kingship_reclamation_wargoal: "High Kingship Reclamation"
  war_goal_high_kingship_reclamation_wargoal_desc: "$generic_war_goal_take_capital_desc$"

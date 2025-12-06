@@ -14,6 +14,7 @@ cb_push_back_colonizers = {
 		scope:target = {
 			not = { government_type = government_type:tribe }
 			is_neighbor_of = root
+			has_colonial_charters = yes
 		}
 	}
 

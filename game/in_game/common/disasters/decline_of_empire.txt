@@ -6,19 +6,24 @@
 
 	can_start = {
 		country_rank = country_rank:rank_empire
+		NOT = { current_age = age_1_traditions }
+		trigger_if = {
+			limit = { tag = CHI }
+			NOT = { current_age = age_2_renaissance }
+		}
 		has_any_active_disaster = no
 		stability < 0
+		government_power < 80
 		OR = {
 			switch = {
 				trigger = current_age
-				age_1_traditions = { average_control_in_home_region < 0.4 }
 				age_2_renaissance = { average_control_in_home_region < 0.4 }
 				age_3_discovery = { average_control_in_home_region < 0.45 }
 				age_4_reformation = { average_control_in_home_region < 0.5 }
 				age_5_absolutism = { average_control_in_home_region < 0.55 }
 				age_6_revolutions = { average_control_in_home_region < 0.6 }
 			}
-			total_accepted_culture_population < {
+			total_not_tolerated_culture_population > {
 				value = total_population
 				divide = 3
 			}

@@ -144,7 +144,7 @@
  banking: "Banking"
  banking_desc: "Money lending has existed since metal-based coins appeared in Antiquity. However, it depended on some individuals and their family groupings or on the Ancient States. A shift occurred in the Middle Ages, encouraged by the renewed growth of long-range commercial activities on the Eurasian continent and its peripheries.\n\nSpecialized moneylenders began to organize when Jewish communities started operating between the Christian and Islamic worlds. However, the boom of credit demand that followed the Crusades in the 12th century encouraged merchants in the Italian city-states to create larger structures for money lending, effectively founding the first Banking institutions, such as the Peruzzi and Bardi houses.\n\nMore instruments were developed, like bills of exchange and debt bonds, and Banking dynasties such as the Medici, Fugger or Welser soon became as powerful as States."
  professional_armies: "Professional Armies"
- professional_armies_desc: "Armies have existed since war was invented, many thousands of years ago. However, their form has changed over the centuries and different types of recruitment and organization have developed in different cultures and periods.\n\nIn the Late Middle Ages, armies in a wide range of societies relied on levies based on the structures of feudal society, with knights and footmen forming a core that was levied seasonally. In some regions, however, states were powerful enough to finance standing armies, with professional soldiers who would be available for duty throughout the year.\n\nThis system was also developed in Europe after the outbreak of the Hundred Year's War, being one of the main changes that promoted a Military Revolution in the Early Modern Age. Increasing the size and quality of Professional Armies, while finding new sources of revenue to finance them, soon became one of the main challenges for rulers around the world."
+ professional_armies_desc: "Armies have existed since war was invented, many thousands of years ago. However, their form has changed over the centuries, and different types of recruitment and organization have developed in different cultures and periods.\n\nIn the Late Middle Ages, armies in a wide range of societies relied on levies based on the structures of feudal society, with knights and footmen forming a core that was levied seasonally. In some regions, however, states were powerful enough to finance standing armies, with professional soldiers who would be available for duty throughout the year.\n\nThis system was also developed in Europe after the outbreak of the Hundred Years' War, being one of the main changes that promoted a Military Revolution in the Early Modern Age. Increasing the size and quality of Professional Armies, while finding new sources of revenue to finance them, soon became one of the main challenges for rulers around the world."
  #
  new_world: "New World"
  new_world_desc: "The discovery of the New World has heralded a new era not only for the colonizers and the colonized, but it has also led to the spread of materials and techniques as well as a realization of the vastness of the globe. As animals, crop types, silver and diseases spread across the Atlantic, the first steps have been taken towards a truly global economy. With foreign lands and people being mapped and documented, ideas as well as religious and philosophical debate are increasingly being colored by what we have found in overseas societies. Great minds feel the need to question what was once truth, and from Valladolid to Fatehpur Sikri, the nature of the world is now up for debate."
@@ -158,7 +158,7 @@
  global_trade: "Global Trade"
  global_trade_desc: "Goods have been moved across continents since antiquity. But where this was previously limited to a set number of routes and goods such as the manufactured goods of India and China finding their way across the Indian Ocean and along the Silk Road, all trade is now increasingly becoming part of a greater world network. With the discovery of the Americas, sea routes around Africa and the crossing of the Pacific Ocean, local trade networks are being connected into one world-spanning interconnected web.\n\nSilver mined in the Andes is now being boxed and taken via Europe all the way to China and India. Iron mined and wrought in Scandinavia is being sold in West Africa by English merchants, and others are making a fortune just distributing cloth and spices within the Southeast Asian trade sphere. Local Indian merchants are investing in future European trade ventures. It may still be early to speak of a truly Global Economy, but surely the first seeds have been sown."
  artillery_institution: "Artillery"
- artillery_institution_desc: "The invention of gunpowder in Song China led to the development of a new device that would employ its firepower in warfare, the artillery. Although it spread throughout Eurasia in the 13th Century, its use as a common weapon system did not happen until the 15th century, as improvements in the cannon length and gunpowder recipe made artillery much more powerful, now posing a threat to stone-built castles and fortifications, the most common in Europe. Soon artillery would be used not only in sieges but also on battlefields, as smaller caliber guns now featured the mobility required to be quickly deployed and used. Its final development as a key warfare system would come in the 18th Century, especially after Napoleon perfected its use at key points during battles."
+ artillery_institution_desc: "The invention of gunpowder in Song China led to the development of a new device that would employ its firepower in warfare, the artillery. Although it spread throughout Eurasia in the 13th Century, its use as a common weapon system did not happen until the 15th century, as improvements in the cannon length and gunpowder recipe made artillery much more powerful, now posing a threat to stone-built castles and fortifications, the most common in Europe. Soon, artillery would be used not only in sieges but also on battlefields, as smaller caliber guns now featured the mobility required to be quickly deployed and used. Its final development as a key warfare system would come in the 18th Century, especially after Napoleon perfected its use at key points during battles."
  #
  manufactories: "Manufactories"
  manufactories_desc: "While a number of technical innovations during the course of the 16th and 17th centuries have increased the output of production for some products such as iron or cloth to an extent, the biggest improvement in the field of production has come in the form of new forms of organization. By creating manufactories, often outside the city limits, merchant capitalists can both bypass the ancient guild laws that inhibit mass production, and pioneer ways to increase production through the organization and specialization of labor in one place. The forerunners of the later Industrialization were able to increase output by facilitating access to raw materials and mass organization of labor rather than by expensive new machinery. This is in itself a huge change over the often heavily regulated methods of old, however, and together with later technical advances this new mode of production will come to revolutionize society."
@@ -218,7 +218,7 @@
  spanish_square: "Spanish Square"
  spanish_square_desc: "Spanish Square developed naturally from the Pike and shot formations. At its core was a traditional Pike Square. At each of the corners, it had a group of Arquebusiers. It kept the staying power of the traditional pike square and enhanced it with the firepower of the Arquebus."
  standardized_pikes: "Standardized Pikes"
- standardized_pikes_desc: "A pike is a remarkably simple weapon to make but to get the full benefit from the use of pikes, it's required for the whole formation to be wielding weapons of similar length and blade."
+ standardized_pikes_desc: "A pike is a remarkably simple weapon to make but to get the full benefit from the use of pikes, it is required for the whole formation to be wielding weapons of similar length and blade."
  pike_square: "Pike Square"
  pike_square_desc: "Throughout the Middle Ages cavalry's dominance was being challenged by disciplined pikemen. In battles such as Bannockburn or the Golden Spurs, cavalry was defeated by pikes. A combination of improved training and discipline, and the addition of swordsmen to provide close combat support has raised this formation to the peak of its efficiency."
  medieval_military: "Medieval Military"
@@ -1308,6 +1308,8 @@
  
  LIV_a_order_knights: "Knights of the Livonian Order"
  LIV_a_order_knights_desc: "Our nation is founded over the strong shoulders of the brave Christian men that have joined our order as knights. Their martial abilities will compensate our low numbers compared to those of the Pagans surrounding us."
+ LIV_a_order_knights_2: "Bannerets of the Livonian Order"
+ LIV_a_order_knights_2_desc: "The knights of our order have proven their valor and skill in battle time and time again. By promoting the most capable among them to bannerets, we ensure that our armies will always be led by the best."
  wallachian_tradition: "A Fortified Nation"
  wallachian_tradition_desc: "Our lands are bounded by mountains and the Danube river, but are otherwise very flat in nature. These rich soils are like highways for invading armies once those natural barriers are sorted. In order to defend our people, we will set fortifications and castles all across this territory."
  wallachian_heritage: "A History of Resistance"
@@ -1826,6 +1828,8 @@
  unlock_dhow_desc: "$n_dhow_desc$"
  unlock_long_fada: "$n_long_fada$"
  unlock_long_fada_desc: "$n_long_fada_desc$"
+ unlock_long_fada_2: "$n_long_fada_2$"
+ unlock_long_fada_2_desc: "$n_long_fada_2_desc$"
 
  #Land Units
  unlock_feudal_levy_advance: "$a_feudal_levy$"
@@ -2483,7 +2487,7 @@
  assistance_to_the_suffering: "Assistance to the Suffering"
  assistance_to_the_suffering_desc: "The Order is named the Knights Hospitaller for a reason: we were originally the protective force of a pilgrims' hospital in Jerusalem. Though Jerusalem is lost to the Saracens, we still provide medical aid to those in need, including our brave knights, who heartily return to the battlefield much faster than most armies."
  reconquista_of_the_sea: "Reconquista of the Sea"
- reconquista_of_the_sea_desc: "In our frequent clashes with the dreaded corsairs of the Turkish and Barbary menaces, the thought has occurred to us that the corsairs might have the right idea about seagoing looting and pillaging of the coast, but that they are directing their predations to the wrong targets. Piracy may be a vile sin in peacetime, but in times of war it's known as 'privateering' and that's surely another thing altogether, right?"
+ reconquista_of_the_sea_desc: "In our frequent clashes with the dreaded corsairs of the Turkish and Barbary menaces, the thought has occurred to us that the corsairs might have the right idea about seagoing looting and pillaging of the coast, but that they are directing their predations to the wrong targets. Piracy may be a vile sin in peacetime, but in times of war it is known as 'privateering' and that's surely another thing altogether, right?"
  friends_in_need: "Friends in Need"
  friends_in_need_desc: "Our Order is formed by peoples that came from everywhere across Christendom. This fact and our need for external support to fulfill our mission have made us very apt at finding helping hands for our cause. We will take advantage of our presence everywhere in Europe to reach powerful Catholic rulers and bring them to our side."
  scourge_of_the_corsairs: "Scourge of the Corsairs"
@@ -3817,7 +3821,7 @@
  byz_court_of_languages: "Court of Languages"
  byz_court_of_languages_desc: "The court of $constantinople$ is home to diplomats and dignitaries from every corner of the known world. As a result, every language is heard and respected, as a sign of prosperity and progress on the behest of a people whose history and language have shaped the world."
  byz_poikilia: "Poikilia"
- byz_poikilia_desc: "The Byzantine culture has taken $europe$ by storm. Elegantly displayed in a vast array of hues, it's the latest way of expressing the symphony of colors and elements in art and architecture."
+ byz_poikilia_desc: "The Byzantine culture has taken $europe$ by storm. Elegantly displayed in a vast array of hues, it is the latest way of expressing the symphony of colors and elements in art and architecture."
  byz_crossroads_of_continents: "Crossroads of Continents"
  byz_crossroads_of_continents_desc: "Byzantium stands at the crossroads between $europe$ and $asia$. This lucrative position has led to great influence in the maritime importance of the city."
  byz_the_new_helepolis: "The City-Taker"
@@ -4941,7 +4945,7 @@
  smrti: "Smṛti"
  smrti_desc: "Meaning 'that which is remembered', $smrti$ texts are inspired by or originated from the $vedah$, and thus are considered less authoritative than the $sruti$ due to being derivative from them. However, differently from the $sruti$, the $smrti$ texts have attributed authorship and are transmitted through manuscripts."
  mahabarata: "Mahābhārata"
- mahabarata_desc: "One of the two major $smrti$ texts together with the $ramayana$, the $mahabarata$ is an epic of ancient $india$. It is the longest epic poem ever written, about ten times bigger than the $greek_language$ #italic Illiad#! and #italic Odyssey#! combined, and it narrates the story of a dynastic struggle for the throne of the ancient $indian_group$ kingdom of Kuru culminating in the Kurukshetra War, also called $mahabarata$ War. The story ends with the death of $krishna_avatar$ and the end of his dynasty."
+ mahabarata_desc: "One of the two major $smrti$ texts together with the $ramayana$, the $mahabarata$ is an epic of ancient $india$. It is the longest epic poem ever written, about ten times bigger than the $greek_language$ #italic Iliad#! and #italic Odyssey#! combined, and it narrates the story of a dynastic struggle for the throne of the ancient $indian_group$ kingdom of Kuru culminating in the Kurukshetra War, also called $mahabarata$ War. The story ends with the death of $krishna_avatar$ and the end of his dynasty."
  ramayana: "Rāmāyaṇa"
  ramayana_desc: "One of the two major $smrti$ texts together with the $mahabarata$, the $ramayana$ is an epic of ancient $india$. It narrates the life of $rama_avatar$, avatar of $vishnu_god$, as a prince of the kingdom of Kosala. It emphasizes the importance of virtue in all aspects of one's life."
  purana: "Purāṇa"
@@ -5019,7 +5023,7 @@
 
  #Orthodox
  the_pentarchy: "The Pentarchy"
- the_pentarchy_desc: "The old structure of the Church formulated by Emperor Justinian is still in full effect in $orthodox$. Although the patriarch of $rome$ beliefs himself to be above all in his $catholic$, for the authentic Church the cities of $constantinople$, $alexandria$, $antioch$, and $jerusalem$ all have still their prominence."
+ the_pentarchy_desc: "The old structure of the Church formulated by Emperor Justinian is still in full effect in $orthodox$. Although the patriarch of $rome$ beliefs himself to be above all in his $catholic$, for the authentic Church the cities of $constantinople$, $alexandria$, $antioch$, and $jerusalem$ still all have their prominence."
  imperial_creed: "Imperial Creed"
  imperial_creed_desc: "$orthodox$ has always been the official faith of the Roman Empire ever since its adoption of $christian$. The heresies of the west and their falsely proclaimed 'emperors' will not be able to deny the legitimacy of our line."
  filioque_issue: "Filioque Issue"
@@ -5266,7 +5270,7 @@
  legacy_of_the_normans: "Legacy of the Normans"
  legacy_of_the_normans_desc: "Forged in the crucible of conquest, the Sicilian Norman army blended the unstoppable charge of Norman knights with the strategic sophistication of Byzantine, Arab, and Lombard warfare. Masters of both battlefield ferocity and tactical flexibility, they carved a kingdom at the crossroads of civilizations."
  sic_constitions_of_melfi: "Constitutions of Melfi"
- sic_constitions_of_melfi_desc: "Emperor Frederick II, the Hohenstaufen King of Sicily, drafted a legal code for Sicily known as the Consitutions of Melfi, or Liber Augustalis. Still in use centuries later, it represents a solid foundation for the governance of our state, regulating public law, judicial procedure and feudal, private and penal law."
+ sic_constitions_of_melfi_desc: "Emperor Frederick II, the Hohenstaufen King of Sicily, drafted a legal code for Sicily known as the Constitutions of Melfi, or Liber Augustalis. Still in use centuries later, it represents a solid foundation for the governance of our state, regulating public law, judicial procedure and feudal, private and penal law."
  sic_studium_generale: "Studium Generale"
  sic_studium_generale_desc: "Founded in 1434 by King Alfonso V of Aragon, the University of Catania was the oldest in Sicily and one of the few southern institutions granted full Studium Generale status. Unique for its royal charter and blend of scholastic and legal education, it produced jurists, theologians, and scientists who served both Church and Crown in a culturally diverse region."
  sic_naval_vigilance: "Naval Vigilance"
@@ -5417,7 +5421,7 @@
  perpetual_general_captain_of_the_people: "Perpetual General Captain of the People"
  perpetual_general_captain_of_the_people_desc: "In the shifting politics of medieval Verona, the title of 'Capitano del Popolo' came to embody more than a ceremonial office—it became a lasting claim to leadership. Rooted in civic tradition and claimed by the Scaligeri to legitimize their power, it gave permanence to their rule in a city where loyalty was hard-won."
 
- scaligers_military_ambitions: "Scaligeri' Military Ambitions"
+ scaligers_military_ambitions: "Scaligeri Military Ambitions"
  scaligers_military_ambitions_desc: "The Scaligeri dreamed not only of ruling Verona, but of transforming it into a Lombard power. Their campaigns pushed across the Po Valley, clashing with Milan, Venice, and Padua. This ambition left its mark in the form of fortified towns, hardened levies, and a court that breathed military reform."
 
  court_of_great_refugees: "Court of Great Refugees"
@@ -5679,7 +5683,7 @@
  cir_mercenary_employment_desc: "Our lands have again and again been raided by foreign powers for their own benefit, enslaving our people. Some of these slaves, used as soldiers, have advanced in far away lands, accumulating power and wealth in their own hands. With some convincing, we could convince them to return to our lands, and protect it from future invasions."
 
  cir_horsemen_of_the_steppe: "Skilled Horsemen"
- cir_horsemen_of_the_steppe_desc: "Our position at the edge of the great european steppe has lead to several invasions of our homeland by horsemen. If we want to ensure our independence, we will need to raise a great host ourselves and expand our influence over the steppes, securing the prosperity of our heartland."
+ cir_horsemen_of_the_steppe_desc: "Our position at the edge of the great European steppe has lead to several invasions of our homeland by horsemen. If we want to ensure our independence, we will need to raise a great host ourselves and expand our influence over the steppes, securing the prosperity of our heartland."
 
  cir_city_and_fortress: "Fortified Towns"
  cir_city_and_fortress_desc: "Our settlements lie unprotected and an easy prey to any invader. As they grow, we can directly incorporate hilly terrain into our defensive lines, enhancing their protection. If necessary, we can create the elevated terrain required ourselves, preserving our peoples homes."
@@ -5738,8 +5742,8 @@
  latin_patriarch: "Latin Patriarch"
  latin_patriarch_desc: "The Papacy has reinstated the Latin Patriarch of Jerusalem, once exiled and forgotten. Now restored, the Patriarch shall strengthen our influence in Rome and reinforce our role as guardian of the Church's interests in the East."
 
- rites_holy_sepulchre: "Rites of the Holy Sepulchre"
- rites_holy_sepulchre_desc: "In the Church of the Holy Sepulchre, the ancient Latin rites are once more performed in full splendor. These solemn rituals, honoring the death and resurrection of Christ, reinforce our divine mandate to rule this land and spread the teachings of our faith."
+ rites_holy_sepulchre: "Rites of the Holy Sepulcher"
+ rites_holy_sepulchre_desc: "In the Church of the Holy Sepulcher, the ancient Latin rites are once more performed in full splendor. These solemn rituals, honoring the death and resurrection of Christ, reinforce our divine mandate to rule this land and spread the teachings of our faith."
 
  latinate_integration: "Latinate Integration"
  latinate_integration_desc: "Our realm is a crucible of European nobility, pilgrim zealots, and old Levantine stock. Through careful governance, we shall weave together this diverse heritage into a Latin Christian society, where faith and culture go hand in hand."
@@ -5773,7 +5777,7 @@
  indonesia_outer_islands_archipelago_desc: "Maritime connections naturally play a huge role within our society, as we are surrounded by waters. Our reliance on maritime trade and transport makes traversal of the seas a trivial task for our people."
 
  indonesia_naval_supremacy: "Naval Prowess"
- indonesia_naval_supremacy_desc: "Our political relevance within the archipelago almost solely relies on the stength of our naval forces. By improving the training of our sailors and construction of our fleet, we will ensure our domination over the lesser states of Indonesia."
+ indonesia_naval_supremacy_desc: "Our political relevance within the archipelago almost solely relies on the strength of our naval forces. By improving the training of our sailors and construction of our fleet, we will ensure our domination over the lesser states of Indonesia."
 
  indonesia_trading_hub_of_the_east: "Trade Hub of the East"
  indonesia_trading_hub_of_the_east_desc: "No matter their origin or destination, every trader of Asia will eventually have to cross our lands, bringing both precious goods and tales of their travels with them."
@@ -5783,12 +5787,12 @@
 
  #Italy Region
  italian_universities: "Universities of the Peninsula"
- italian_universities_desc: "Italy is home to many great universities and scholars. If we want to keep the flame of the renaissance alive, we must continously support these great institutions."
+ italian_universities_desc: "Italy is home to many great universities and scholars. If we want to keep the flame of the renaissance alive, we must continuously support these great institutions."
 
  italy_great_families: "Great Families of Italy"
- italy_great_families_desc: "After the foundation of a sole Italian state, we have absorded many great noble families into our country. We should utilize their prestige and reputation to improve our own, while keeping those capable people busy."
+ italy_great_families_desc: "After the foundation of a sole Italian state, we have absorbed many great noble families into our country. We should utilize their prestige and reputation to improve our own, while keeping those capable people busy."
 
- italian_innovativeness: "Italian Adaptness"
+ italian_innovativeness: "Italian Adaptation"
  italian_innovativeness_desc: "We have seen what great strides humans can take with the renaissance flourishing in our lands. If we want to truly advance, we can not obstruct the embracement of new ideas, but must adapt them and make them truly our own."
 
  italian_condottieri: "Great Condottieri Captains"
@@ -5820,7 +5824,7 @@
 #Kongo
 
  kon_bakongo_confederation: "Bakongo Confederation"
- kon_bakongo_confederation_desc: "Before the rise of our realm, the people of this region governed themselves through clan councils and provincial alliances. What we now call $KON$ emerged from centuries of interwoven relationships, where loyalty to the land and kin outweighed loyalty to borders. Uniting this patchwork into a centralized realm was no small feat, but we did it and we will keep it together yet."
+ kon_bakongo_confederation_desc: "Before the rise of our realm, the people of this region governed themselves through clan councils and provincial alliances. What we now call $KON$ emerged from centuries of interwoven relationships, where loyalty to the land and kin outweighed loyalty to borders. Uniting this patchwork into a centralized realm was no small feat, but we did it, and we will keep it together yet."
 
  kon_lineage_lukeni_lua_nimi: "Lineage of Lukeni lua Nimi"
  kon_lineage_lukeni_lua_nimi_desc: "All things must begin somewhere, and for our kingdom, that beginning lies with Lukeni lua Nimi. He was more than a conqueror. Indeed, he was a founder, the father of our realm. His bloodline commanded respect, not just for its ancestry, but because it reminds the people who first dared to dream of a unified $KON$."
@@ -5829,7 +5833,7 @@
  kon_european_contact_desc: "The strangers came from the sea with beards, books, and barrels of wine. They brought with them strange gods, stranger languages, and an entire ocean of opportunity. Our emissaries have learned their customs, their intentions, and most importantly how to turn their need for allies into our advantage."
 
  kon_cultural_syncreticism: "Cultural Syncretism"
- kon_cultural_syncreticism_desc: "The influx of foreigners and exchanges have made an impact on our society. However, we have not abandoned our ways. We call upon deities by Kikongo names, we wear many religious insignia, and our ceremonies echo with both drums and hymns. This is a vibrant example of our clarity, and the gods seem to agree."
+ kon_cultural_syncreticism_desc: "The influx of foreigners and exchanges have made an impact on our society. However, we have not abandoned our ways. We call upon deities by Kikongo names, we wear many religious insignias, and our ceremonies echo with both drums and hymns. This is a vibrant example of our clarity, and the gods seem to agree."
 
  kon_study_european_firearms: "Study European Firearms"
  kon_study_european_firearms_desc: "The musket may not make a man brave, but it certainly makes him feared. Let the Europeans boast of their superiority, we will buy their weapons, master their drills, and soon enough, the only thing that separates our soldiers from theirs will be the color of their flags."
@@ -5897,7 +5901,7 @@
  cth_mercenary_army_desc: "The Punic nation of Carthage does not have big population, so for centuries we relied on Mercenaries to fight our wars for us. Since the reformation of Carthage, we continued that tradition to save our population from dangers of war."
 
  cth_cothons: "Cothon"
- cth_cothons_desc: "The ancient cothon of Carthage was a technological marvel that allowed it to construct ships efficiently. Now, the legacy of ancient time will serve us as a blueprint for our whole country. Studing ancient ship making techniques allows us to excell in this area once again. Carthaginian Navy will soon cruise the whole Mediterranean."
+ cth_cothons_desc: "The ancient cothon of Carthage was a technological marvel that allowed it to construct ships efficiently. Now, the legacy of ancient time will serve us as a blueprint for our whole country. Studying ancient ship making techniques allows us to excel in this area once again. Carthaginian Navy will soon cruise the whole Mediterranean."
 
  cth_phoenician_sailors: "Phoenician Sailors"
  cth_phoenician_sailors_desc: "After restoring out ancient kingdom, we started reaching out to our old Phoenician brothers in Libya. As a result, we have a steady influx of volunteers that want to join the restoration of the ancient Phoenician kingdom of Carthage. It seems we can maintain a much bigger navy now."
@@ -5909,10 +5913,10 @@
  cth_beyond_the_pillars_desc: "It is time for our trade factories to reach beyond the mythical pillars of Hercules. Combining ancient colonization knowledge with modern discoveries allows us to settle more efficiently than other younger nations, those who are fairly new to this experience. Carthaginian colonies shall soon be found all around the world."
 
  cth_wine_traders: "Punic Wine Trade"
- cth_wine_traders_desc: "In ancient times, we created a wine trading pipeline by producing large amounts of low quality wine to trade and importing high quality wines ourselves. Building on top of that, we are looking into expanding our wine producing capabilites to be able to take over wine trade around the Mediterranean."
+ cth_wine_traders_desc: "In ancient times, we created a wine trading pipeline by producing large amounts of low quality wine to trade and importing high quality wines ourselves. Building on top of that, we are looking into expanding our wine producing capabilities to be able to take over wine trade around the Mediterranean."
 
  cth_punic_global_trade: "Punic Global Trade"
- cth_punic_global_trade_desc: "For centuries, our nation dominated the Mediterranean trade. Now, with all the new discovieries, we are bound to dominate it globally. Soon in every port in the world there will be a Carthaginian trade vassel to be found."
+ cth_punic_global_trade_desc: "For centuries, our nation dominated the Mediterranean trade. Now, with all the new discoveries, we are bound to dominate it globally. Soon in every port in the world there will be a Carthaginian trade vessel to be found."
 
  cth_sufet_rule: "Rule of Šūfeṭ"
- cth_sufet_rule_desc: "Our ancient kingdom was headed by an elected head of state called the Šūfeṭ. In this new modern age, we shall reorgnize our government, taking experience from antiquity and combining it with modern theories to create the most powerfull Republican system, one that will outshine every Republic created up to this date."
+ cth_sufet_rule_desc: "Our ancient kingdom was headed by an elected head of state called the Šūfeṭ. In this new modern age, we shall reorganize our government, taking experience from antiquity and combining it with modern theories to create the most powerful Republican system, one that will outshine every Republic created up to this date."

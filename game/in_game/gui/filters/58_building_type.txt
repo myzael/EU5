@@ -41,3 +41,23 @@ building_is_not_upgraded = {
 		is_upgraded_level = no
 	}
 }
+
+building_is_foreign = {
+    scope = building_type
+    tag = building
+    group = 3
+    exclusive_group = yes
+    trigger = {
+        is_foreign = yes
+    }
+}
+
+building_is_not_foreign = {
+    scope = building_type
+    tag = building
+    group = 3
+    exclusive_group = yes
+    trigger = {
+        is_foreign = no
+    }
+}

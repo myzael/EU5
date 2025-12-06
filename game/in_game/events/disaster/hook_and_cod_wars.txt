@@ -2421,35 +2421,35 @@ hook_and_cod_wars.100 = {
 	image = "gfx/interface/illustrations/disaster/succession_crisis.dds"
 	desc = {
 		first_valid = {
-			triggered_desc = {
+			triggered_desc = { #Sided with Hook, Cod wins
 				trigger = {
 					has_variable = hacw_sided_with_hook
 					var:hacw_cod_faction_power >= 20
 				}
 				desc = hook_and_cod_wars.100.desc.a
 			}
-			triggered_desc = {
+			triggered_desc = { #Sided with Hook, Hook wins
 				trigger = {
 					has_variable = hacw_sided_with_hook
 					var:hacw_hook_faction_power >= 20
 				}
 				desc = hook_and_cod_wars.100.desc.b
 			}
-			triggered_desc = {
+			triggered_desc = { #Sided with Cod, Cod wins
 				trigger = {
 					has_variable = hacw_sided_with_cod
 					var:hacw_cod_faction_power >= 20
 				}
 				desc = hook_and_cod_wars.100.desc.c
 			}
-			triggered_desc = {
+			triggered_desc = { #Sided with Cod, Hook wins
 				trigger = {
 					has_variable = hacw_sided_with_cod
 					var:hacw_hook_faction_power >= 20
 				}
 				desc = hook_and_cod_wars.100.desc.d
 			}
-			triggered_desc = {
+			triggered_desc = { #Both Hook and Cod win
 				#at this point I don't even want to know HOW this happened...
 				trigger = {
 					has_variable = hacw_hook_contender

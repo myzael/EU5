@@ -1380,6 +1380,32 @@
 	}
 
 	text = {
+		localization_key = rank_duchy_order_german_subject
+		trigger = {
+			is_subject = yes
+			overlord ?= { has_reform = government_reform:military_order_reform }
+			country_rank_is_duchy = yes
+			government_type = government_type:theocracy
+			has_reform = government_reform:military_order_reform
+			OR = {
+				culture.language = language:german_language
+				court_language ?= language:german_language
+			}
+		}
+	}
+
+	text = {
+		localization_key = rank_duchy_order_subject
+		trigger = {
+			is_subject = yes
+			overlord ?= { has_reform = government_reform:military_order_reform }
+			country_rank_is_duchy = yes
+			government_type = government_type:theocracy
+			has_reform = government_reform:military_order_reform
+		}
+	}
+
+	text = {
 		localization_key = rank_duchy_order_german
 		trigger = {
 
@@ -1727,6 +1753,7 @@
 	text = {
 		localization_key = rank_duchy_lordship
 		trigger = {
+			government_type = government_type:monarchy
 			OR = {
 				AND = {
 					country_rank_is_county = yes
@@ -2025,6 +2052,19 @@
 			country_rank_is_county = yes
 			government_type = government_type:theocracy
 			court_language ?= language:maya_language
+		}
+	}
+
+	text = {
+		localization_key = rank_county_order_german
+		trigger = {
+			country_rank_is_county = yes
+			government_type = government_type:theocracy
+			has_reform = government_reform:military_order_reform
+			OR = {
+				culture.language = language:german_language
+				court_language ?= language:german_language
+			}
 		}
 	}
 

@@ -201,7 +201,7 @@ fort_limit = {
 
 zone_of_control = {
 	alias = { zones_of_control }
-	texture = "gfx/interface/icons/modifier_types/ignore_zone_of_control.dds"
+	texture = "gfx/interface/icons/location_icons/garrison.dds"
 	shown_in_loading_screen = yes
 }
 
@@ -309,7 +309,7 @@ religion_group = {
 
 culture = {
 	alias = { cultures }
-	texture = "gfx/interface/icons/map_modes/culture.dds"
+	texture = "gfx/interface/icons/location_icons/culture.dds"
 }
 
 culture_group = {
@@ -338,13 +338,12 @@ dominant_culture = {
 primary_culture = {
 	alias = { primary_culture_short primary_cultures }
 	family = culture
-	texture = "gfx/interface/icons/flat_icons/cultural_primary.dds"
+	texture = "gfx/interface/icons/culture/primary_culture.dds"
 }
 
 primary_or_accepted_culture = {
 	family = culture
 	texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
-	
 }
 
 religious_status = {
@@ -364,25 +363,25 @@ cultural_capacity = {
 accepted_culture = {
 	alias = { accepted_cultures accept accepted_culture_short }
 	family = culture
-	texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+	texture = "gfx/interface/icons/culture/accepted_culture.dds"
 }
 
 tolerated_culture = {
 	alias = { tolerated_cultures tolerated_culture_short tolerate }
 	family = culture
-	texture = "gfx/interface/icons/flat_icons/cultural_accepted.dds"
+	texture = "gfx/interface/icons/culture/tolerated_culture.dds"
 }
 
 non_accepted_culture = {
 	alias = { non_accepted_cultures non_accepted_culture_short }
 	family = culture
-	texture = "gfx/interface/icons/flat_icons/culture/main_culture.dds"
+	texture = "gfx/interface/icons/culture/tolerated_culture.dds"
 }
 
 foreign_culture = {
 	alias = { foreign_culture_short }
 	family = culture
-	texture = "gfx/interface/icons/laws/foreign_cultural_law.dds"
+	texture = "gfx/interface/icons/flat_icons/culture/foreign_culture.dds"
 }
 
 cultural_status = {
@@ -1018,7 +1017,7 @@ subject_military_stance = {
 
 foreign_building = {
 	alias = { foreign_buildings }
-	texture = "gfx/interface/icons/diplomatic_status/receiving_block_foreign_building.dds" #doubt
+	texture = "gfx/interface/icons/flat_icons/balance/buildings_abroad.dds"
 	shown_in_loading_screen = yes
 }
 
@@ -1030,6 +1029,11 @@ building_type = {
 building = {
 	alias = { buildings }
 	texture = "gfx/interface/icons/outliner/categories/buildings.dds"
+}
+
+building_maintenance = {
+	family = building
+	texture = "gfx/interface/icons/flat_icons/building_panel/building_maintenance.dds"
 }
 
 supported_building_levels = {
@@ -1911,6 +1915,11 @@ regular_regiment = {
 	texture = "gfx/interface/icons/unit_actions/regulars.dds"
 }
 
+
+levy_combat_efficiency = {
+	texture = "gfx/interface/icons/modifier_types/levy_combat_efficiency.dds"
+}
+
 levy = {
 	alias = { levies }
 	texture = "gfx/interface/icons/unit_category/army_levies.dds"
@@ -2074,7 +2083,7 @@ disloyal_subjects = {
 
 loyal_subjects = {
 	alias = { loyal_subject loyal_subjects_short }
-	texture = "gfx/interface/icons/alerts_icons/has_disloyal_subjects.dds"
+	texture = "gfx/interface/icons/modifier_types/loyal_subject.dds"
 }
 
 truce = {
@@ -2612,7 +2621,7 @@ cultural_unity = {
 }
 
 liberty_desire = {
-	texture = "gfx/interface/icons/modifier_types/subject_loyalty.dds"
+	texture = "gfx/interface/icons/modifier_types/liberty.dds"
 }
 
 market_access = {
@@ -2775,6 +2784,11 @@ trade_profit = {
 
 great_power_score = {
 	alias = { great_power_score_short }
+	texture = "gfx/interface/icons/map_modes/great_powers.dds"
+}
+
+great_power_rank = {
+	alias = { great_power_rank_short }
 	texture = "gfx/interface/icons/map_modes/great_powers.dds"
 }
 

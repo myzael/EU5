@@ -5,6 +5,7 @@
 	light = yes
 
 	initiative = 4
+	strength_damage_taken = -0.10
 	
 	buildable = no
 	levy = yes
@@ -23,48 +24,6 @@
 	}
 
 	gfx_tags = { longbow_tag archer_tag light_tag }
-}
-a_caterans = {
-	category = army_infantry
-	
-	copy_from = a_age_2_renaissance_infantry
-	light = yes
-
-	buildable = no
-	levy = yes
-
-	combat_speed = 0.05
-	flanking_ability = 1.5
-	initiative = 5
-
-	#root = location. Checks location_potential first so don't need that scripting in
-	mercenaries_per_location = {
-		pop_type = peasants
-		multiply = 0.01
-	}
-
-	gfx_tags = { sword_tag light_tag }
-}
-
-a_kerns = {
-	category = army_infantry
-	copy_from = a_age_2_renaissance_infantry
-	light = yes
-
-	buildable = no
-	levy = yes
-	
-
-	combat_speed = 0.1
-	initiative = 6
-
-	#root = location. Checks location_potential first so don't need that scripting in
-	mercenaries_per_location = {
-		pop_type = peasants
-		multiply = 0.01
-	}
-
-	gfx_tags = { spear_tag light_tag }
 }
 
 a_reformed_gallowglass = {
@@ -94,14 +53,15 @@ a_reformed_gallowglass = {
 }
 
 a_wagenburg = {
-	category = army_auxiliary
-	copy_from = a_age_2_renaissance_auxiliary
+	category = army_infantry
+	copy_from = a_age_2_renaissance_infantry
 	buildable = yes
-	
-	strength_damage_taken = -0.2
-	morale_damage_taken = -0.2
 
-	initiative = 4
+	limit = wagenburg_unit_limit
+	
+	strength_damage_taken = -0.1
+	morale_damage_taken = -0.1
+	secure_flanks_defense = 0.25
 }
 
 a_genoese_crossbowmen = {
@@ -189,7 +149,7 @@ a_late_crusader_knights_base = {
 	
 	strength_damage_taken = -0.05
 	morale_damage_taken = -0.05
-	gfx_tags = { crusader_tag heavy_tag }
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
 
 
 }
@@ -212,6 +172,7 @@ a_late_crusader_knights = {
 	location_potential = {
 		has_building = building_type:order_stronghold
 	}
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
 }
 
 a_late_crusader_knights_levy = {
@@ -220,6 +181,7 @@ a_late_crusader_knights_levy = {
 	copy_from = a_late_crusader_knights_base
 	buildable = no
 	levy = yes
+	gfx_tags = { crusader_tag sword_tag heavy_tag }
 }
 
 a_hwacha = {
@@ -251,6 +213,18 @@ a_mamluk_unit_renaissance = {
 		pop_type = nobles
 		multiply = 0.3
 	}
+}
+
+a_serbian_hussars = {
+	category = army_cavalry
+	
+	copy_from = a_age_2_renaissance_cavalry
+	buildable = yes
+	
+	initiative = 4
+	morale_damage_done = 0.05
+
+	gfx_tags = { medium_tag }
 }
 
 a_muslim_riders_vijay = {

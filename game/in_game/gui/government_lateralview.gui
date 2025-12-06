@@ -212,6 +212,20 @@ types CountryHeaders {
 					hbox = {
 						spacing = 5
 						text_single = {
+							visible = "[ObjectsEqual(Player.GetGovernment.GetEstateFromKey('crown_estate').GetType, Estate.GetType)]"
+							align = left|nobaseline
+							maximumsize = { 55 20 }
+							autoresize = yes
+
+							raw_text = "[Estate.GetRelativePower|0%] @power!"
+
+							datacontext = "[Estate]"
+							tooltipwidget = {
+								using = estate_relative_power_tooltip
+							}
+						}
+						text_single = {
+							visible = "[Not(ObjectsEqual(Player.GetGovernment.GetEstateFromKey('crown_estate').GetType, Estate.GetType))]"
 							align = left|nobaseline
 							maximumsize = { 55 20 }
 							autoresize = yes
@@ -1422,7 +1436,7 @@ types CountryHeaders {
 				click_type = left
 				click_mode = single
 				title = "REFORMS_SIDEMENU"
-				on_action = "[OpenLateralView('government_reforms')]"
+				on_action = "[ShowGovernmentReformsLateralView]"
 				enabled = "[GreaterThan_int32(Subtract_int32(GovernmentView.GetPossibleReformsAmount, GovernmentView.GetImplementedReforms), '(int32)0')]"
 				conditions = "[MakeItFailLoc('REFORMS_AT_MAXIMUM_CAPACITY')]"
 			}
@@ -1433,7 +1447,7 @@ types CountryHeaders {
 				title = "ALERT_HINT"
 				using = snd_UI_alert_openAndCycle
 				visible = "[GreaterThan_int32(Subtract_int32(GovernmentView.GetPossibleReformsAmount, GovernmentView.GetImplementedReforms), '(int32)0')]"
-				on_action = "[OpenLateralView('government_reforms')]"
+				on_action = "[ShowGovernmentReformsLateralView]"
 				on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_has_possible_reform')]"
 				on_action = "[PdxGuiTriggerAllAnimations('reset_carousel')]"
 			}

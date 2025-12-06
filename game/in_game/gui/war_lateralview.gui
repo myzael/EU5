@@ -145,7 +145,7 @@ types war_types {
 					}
 					
 					tooltipwidget = {
-						SimpleContextualStringPairTooltipType = {
+						ContextualTooltipType = {
 							blockoverride "title_icon" {
 								icon = {
 									using = tooltip_title_icon_size
@@ -156,8 +156,21 @@ types war_types {
 							blockoverride "concept_link" {
 								raw_text = "[army|e]"
 							}
+
+							blockoverride "title_text" {																		
+								datacontext = "[Country]"
+								text = "ARMY_BREAKDOWN_HEADER"				
+							}
+
+							blockoverride "tooltip_content" {
+								TooltipStringPairList = {
+									blockoverride "block_title" {
+										text = "ARMY_BREAKDOWN_HEADER_TOOLTIP_TITLE"
+									}
+									textcontext = "[Country.GetArmyBreakdown]"
+								}								
+							}
 							
-							lowpriotextcontext  = "[Country.GetArmyBreakdown]"
 						}
 					}
 				}
@@ -192,9 +205,9 @@ types war_types {
 						}
 					}
 					expand = {}
-
-					tooltipwidget = {
-						SimpleContextualStringPairTooltipType = {
+					
+					tooltipwidget = {						
+						ContextualTooltipType = {							
 							blockoverride "title_icon" {
 								icon = {
 									using = tooltip_title_icon_size
@@ -205,10 +218,23 @@ types war_types {
 							blockoverride "concept_link" {
 								raw_text = "[navy|e]"
 							}
+
+							blockoverride "title_text" {																		
+								datacontext = "[Country]"
+								text = "NAVY_BREAKDOWN_HEADER"				
+							}
+
+							blockoverride "tooltip_content" {
+								TooltipStringPairList = {
+									blockoverride "block_title" {
+										text = "NAVY_BREAKDOWN_HEADER_TOOLTIP_TITLE"
+									}
+									textcontext = "[Country.GetNavyBreakdown]"
+								}								
+							}
 							
-							lowpriotextcontext  = "[Country.GetNavyBreakdown]"
 						}
-					}
+					}				
 				}
 
 				divider_flavor_01 = {size = { 12 -1 }}

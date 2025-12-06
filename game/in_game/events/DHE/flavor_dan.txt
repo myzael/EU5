@@ -1271,8 +1271,8 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 			annex_country = { country = c:SLV }
 			province_definition:norrejylland_province = {
 				every_location_in_province_definition = {
-					limit = { owner = root }
-					change_control = control_extreme_bonus
+					limit = { owner ?= root }
+					add_location_modifier = { modifier = royal_dowry_modifier years = 10 mode = add }
 				}
 			}
 		}
@@ -3596,6 +3596,10 @@ flavor_dan.63 = { #The Vornedskab #GRAVEYARD
 		historical_option = yes
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
 		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_severe_penalty }
+		change_societal_value = {
+			type = serfdom_vs_free_subjects
+			value = societal_value_large_move_to_left
+		}
 	}
 
 	option = {

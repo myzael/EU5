@@ -345,27 +345,32 @@ types GoodsOverview {
 			blockoverride "sort_buttons_filtered_list" {			
 				sort_by_key_button = {
 					name = "name"
-					using = layoutpolicy_expanding
+					layoutpolicy_vertical = expanding
+					size = { 155 -1 }
 				}
 
 				sort_by_key_button = {
 					name = "stockpile"
-					using = layoutpolicy_expanding
+					layoutpolicy_vertical = expanding
+					size = { 35 -1 }
 				}
 
 				sort_by_key_button = {
 					name = "goods_supply"
-					using = layoutpolicy_expanding
+					layoutpolicy_vertical = expanding
+					size = { 60 -1 }
 				}
 
 				sort_by_key_button = {
 					name = "goods_demand"
-					using = layoutpolicy_expanding
+					layoutpolicy_vertical = expanding
+					size = { 65 -1 }
 				}
 				
 				sort_by_key_button = {
 					name = "goods_balance"
-					using = layoutpolicy_expanding
+					layoutpolicy_vertical = expanding
+					size = { 65 -1 }
 				}
 
 				sort_by_key_button = {

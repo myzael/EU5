@@ -1,5 +1,6 @@
 ﻿colonial_revolution = {
 	monthly_spawn_chance = monthly_spawn_chance_very_low
+	hint_tag = hint_colonial_revolution
 	
 	can_start = {	
 		current_age = age_6_revolutions

@@ -1,5 +1,6 @@
 ﻿western_schism = {
 	monthly_spawn_chance = monthly_spawn_chance_ultimate_high
+	hint_tag = hint_western_schism
 	resolution = "western_schism_resolution"
 	international_organization_type = catholic_church
 	

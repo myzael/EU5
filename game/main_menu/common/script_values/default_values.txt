@@ -218,14 +218,14 @@ diplomats_ultimate_bonus = 5
 
 #Reform Desire
 reform_desire_ultimate_decrease = -0.05  # slows by about 10 years!!!
-reform_desire_extreme_decrease = -0.002  # slows by about 4 years
-reform_desire_severe_decrease = -0.001   # slows by about 2 years
+reform_desire_extreme_decrease = -0.02  # slows by about 4 years
+reform_desire_severe_decrease = -0.01   # slows by about 2 years
 reform_desire_mild_decrease = -0.005     # slows by about 1 year
 reform_desire_weak_decrease = -0.002     # slows by about 4 months
 reform_desire_weak_increase = 0.002        # advances by about 4 months
 reform_desire_mild_increase = 0.005        # advances by about 1 year
-reform_desire_severe_increase = 0.001       # advances by about 2 years
-reform_desire_extreme_increase = 0.002     # advances by about 4 years
+reform_desire_severe_increase = 0.01       # advances by about 2 years
+reform_desire_extreme_increase = 0.02     # advances by about 4 years
 reform_desire_ultimate_increase = 0.05     # advances by about 10 years!!!
 
 #Karma
@@ -568,6 +568,17 @@ janissary_unit_limit = {
     }
 }
 
+wagenburg_unit_limit = {
+    add = { 
+        value = 1
+        desc = BASE_VALUE
+    }
+    add = {
+        desc = "EFFECTIVE_ARMORY_BUILDINGS"
+        value = total_effective_building_levels:armory
+    }
+}
+
 qizilbash_unit_limit = {
     value = 4
     add = {
@@ -896,6 +907,7 @@ manpower_100_employment	= 				2.0
 
 
 #soldiers for the forts
+tiny_soldier_employment = 				0.1
 stockade_employment = 					0.25
 great_wall_of_china_employment = 		0.5
 castle_employment = 					1.0

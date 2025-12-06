@@ -203,6 +203,8 @@
  fishing_boat_construction: "Fishing Boat Construction"
  fishing_boat_maintenance: "Fishing Boat Maintenance"
 
+ galley_0_construction: "[ShowShortAgeNameWithNoTooltip('age_1_traditions')] Light Galley Construction"
+ galley_0_maintenance: "[ShowShortAgeNameWithNoTooltip('age_1_traditions')] Light Galley Maintenance"
  galley_1_construction: "[ShowShortAgeNameWithNoTooltip('age_1_traditions')] Galley Construction"
  galley_1_maintenance: "[ShowShortAgeNameWithNoTooltip('age_1_traditions')] Galley Maintenance"
  galley_2_construction: "[ShowShortAgeNameWithNoTooltip('age_2_renaissance')] Galley Construction"
@@ -383,9 +385,10 @@
  shoen_lumbermills_maintenance: "$shoen$ Lumbermills"
  shoen_fiber_crops_farm_maintenance: "$shoen$ Fibers"
  shoen_ironsand_maintenance: "$shoen$ Ironsand Collector"
+ shoen_masonry_maintenance: "Daiku Artisan"
  tamagahane_blacksmith: "Tamahagane Blacksmith"
  tamagahane_bladesmith: "Tamahagane Bladesmith"
- 
+ japanese_clan_building_construction: "Japanese Clan Building"
  
  guns_workshop_slot_0: "$gun_smith_slot_0$"
  guns_workshop_slot_1: "$gun_smith_slot_1$"
@@ -958,7 +961,7 @@
  
  
  expensive_capital_administration_maintenance: "Expensive Administration Buildings"
- endrun_academy_maintenance: "$endrun_academy$"
+ endrun_academy_maintenance: "$enderun_academy$"
  moscow_artillery_yard_maintenance: "$moscow_artillery_yard$"
  
  capital_administration_maintenance: "Administration Buildings"

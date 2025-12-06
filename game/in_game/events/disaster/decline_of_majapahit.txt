@@ -2,6 +2,7 @@
 
 decline_of_majapahit.1 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.1.title
 	desc = decline_of_majapahit.1.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -19,6 +20,7 @@ decline_of_majapahit.1 = {
 
 decline_of_majapahit.2 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.2.title
 	desc = decline_of_majapahit.2.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -96,6 +98,7 @@ scripted_trigger can_be_targetted_by_decline_of_majapahit_3 = {
 decline_of_majapahit.3 = {
 	hide_portraits = yes
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.3.title
 	desc = decline_of_majapahit.3.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -189,6 +192,7 @@ decline_of_majapahit.3 = {
 
 decline_of_majapahit.4 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.4.title
 	desc = decline_of_majapahit.4.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -266,6 +270,7 @@ decline_of_majapahit.4 = {
 decline_of_majapahit.5 = {
 	hide_portraits = yes
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.5.title
 	desc = decline_of_majapahit.5.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -353,6 +358,7 @@ decline_of_majapahit.5 = {
 # Hindu Flee to Bali
 decline_of_majapahit.6 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.6.title
 	desc = decline_of_majapahit.6.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -423,6 +429,7 @@ decline_of_majapahit.6 = {
 # Adipati Converts to Islam
 decline_of_majapahit.7 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.7.title
 	desc = decline_of_majapahit.7.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -433,6 +440,9 @@ decline_of_majapahit.7 = {
 		NOT = { has_country_modifier = adipati_conversion_ban }
 		any_owned_location = {
 			dominant_religion = religion:sunni
+			province = { 
+				NOT = { has_variable = decline_of_majapahit_7cd_variable }
+			}
 			is_core_of = ROOT
 		}
 	}
@@ -442,8 +452,17 @@ decline_of_majapahit.7 = {
 			limit = {
 				dominant_religion = religion:sunni
 				is_core_of = ROOT
+				province = { 
+					NOT = { has_variable = decline_of_majapahit_7cd_variable }
+				}
 			}
 			save_scope_as = target_location
+			province = {
+				set_variable = {
+					name = decline_of_majapahit_7cd_variable
+					years = 10
+				}
+			}
 			random_pop = {
 				limit = {
 					religion = religion:sunni
@@ -476,6 +495,7 @@ decline_of_majapahit.7 = {
 # An Offer of Aid
 decline_of_majapahit.8 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.8.title
 	desc = decline_of_majapahit.8.desc
 	fire_only_once = yes
@@ -528,6 +548,7 @@ decline_of_majapahit.8 = {
 # A New Dawn for Majapahit
 decline_of_majapahit.100 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.100.title
 	desc = decline_of_majapahit.100.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -554,6 +575,7 @@ decline_of_majapahit.100 = {
 # Rise of Mataram
 decline_of_majapahit.101 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.101.title
 	desc = decline_of_majapahit.101.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
@@ -604,6 +626,7 @@ decline_of_majapahit.101 = {
 # Rise of Demak
 decline_of_majapahit.102 = {
 	type = country_event
+    category = disaster_event
 	title = decline_of_majapahit.102.title
 	desc = decline_of_majapahit.102.desc
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"

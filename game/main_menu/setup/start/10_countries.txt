@@ -296,7 +296,7 @@ countries = {
 		# severly in debt, and a regency and such..
 		currency_data = {
 			gold = -500
-			government_power = 25
+			government_power = 30
 		}
 		
 	}
@@ -4369,20 +4369,12 @@ countries = {
 
 			ruler_term = {	 character = eng_ethelred_the_unready start_date = 1014.2.3 end_date = 1016.4.23 regnal_number = 0	}
 
-			ruler_term = { character = eng_edmund_ironside start_date = 1016.4.23 end_date = 1016.10.18 regnal_number = 0 }
-			ruler_term = {
-				character = eng_edmund_ironside start_date = 1016.10.18 end_date = 1016.11.30 regnal_number = 0
-				character = eng_cnut_the_great start_date = 1016.10.18 end_date = 1016.11.30 regnal_number = 0
-			}
+			ruler_term = { character = eng_edmund_ironside start_date = 1016.4.23 end_date = 1016.11.18 regnal_number = 0 }
 
-			ruler_term = { character = eng_cnut_the_great start_date = 1016.11.30 end_date = 1035.11.12 regnal_number = 0 }
+			ruler_term = { character = eng_cnut_the_great start_date = 1016.11.18 end_date = 1035.11.12 regnal_number = 0 }
 			ruler_term = { character = eng_harold_harefoot start_date = 1035.11.12 end_date = 1040.3.17 regnal_number = 0 }
 
-			ruler_term = { character = eng_harthacnute start_date = 1040.3.17 end_date = 1042.5.8 regnal_number = 0 }
-			ruler_term = {
-				character = eng_harthacnute start_date = 1042.5.8 end_date = 1042.6.8 regnal_number = 0
-				character = eng_edward_the_confessor start_date = 1042.5.8 end_date = 1042.6.8 regnal_number = 0
-			}
+			ruler_term = { character = eng_harthacnute start_date = 1040.3.17 end_date = 1042.6.8 regnal_number = 0 }
 
 			ruler_term = { character = eng_edward_the_confessor start_date = 1042.6.8 end_date = 1066.1.5 regnal_number = 0 }
 
@@ -4851,7 +4843,7 @@ countries = {
 			ruler = moy_john_randolph
 		}
 		include = "catholic_monarchy_scottish_earldom"
-		include = "expl_western_europe"
+		include = "expl_northern_europe"
 		capital = elgin
 		accepted_cultures = { highland }
 		court_language = norman_dialect
@@ -4866,7 +4858,7 @@ countries = {
 			ruler = random
 		}
 		include = "gaelic_tribe_not_present"
-		include = "expl_western_europe"
+		include = "expl_northern_europe"
 		capital = kirkcudbright
 	}
 
@@ -4911,6 +4903,8 @@ countries = {
 	}
 
 	ORK = { # Orkney
+		include = "catholic_monarchy"
+		include = "expl_northern_europe"
 		own_control_core = {
 			orkney shetland
 		}
@@ -4922,11 +4916,20 @@ countries = {
 			heir_selection = cognatic_primogeniture
 			ruler_term = { character = ork_malise_v start_date = 1330.1.1 regnal_number = 5 }
 			ruler = ork_malise_v
+
+			reforms = {
+				galley_lords_reform
+			}
+
+			laws = {
+				piracy_law = state_piracy_policy
+				legal_code_law = civil_law_policy
+			}
+			
+			land_vs_naval = 100
+			belligerent_vs_conciliatory = -30
 		}
-		capital = orkney
-		include = "expl_western_europe"
-		include = "catholic_monarchy"
-		country_rank = rank_county
+		
 	}
 
 	SCO = { # Scotland
@@ -5185,6 +5188,11 @@ countries = {
 
 			reforms = {
 				celtic_traditions_reform
+				galley_lords_reform
+			}
+
+			laws = {
+				piracy_law = state_piracy_policy
 			}
 			
 			land_vs_naval = 100
@@ -5259,7 +5267,7 @@ countries = {
 			carbery
 		}
 
-		include = "gaelic_tribe"
+		include = "gaelic_tribe_galley_lords"
 		include = "expl_western_europe"
 		government = {
 			ruler = bea_diarmaid_o_sullivan
@@ -13529,6 +13537,8 @@ countries = {
 			privilege = {
 				#Noble Privileges
 				general_privilege
+				#Clergy
+				clergy_military_orders
 			}
 			laws = {
 				royal_court_customs_law = itinerant_court_policy
@@ -13779,8 +13789,9 @@ countries = {
 				feudal_nobility
 			}
 			privilege = {
-
-				#burghers
+				#Clergy
+				clergy_military_orders
+				#Burghers
 				land_of_commerce
 			}
 			laws = {
@@ -17294,6 +17305,7 @@ countries = {
 
 		}
 		capital = bruges
+		court_language = french_language
 	}
 
 	#Holland - Union under Hainaut
@@ -18110,6 +18122,14 @@ countries = {
 			}
 
 			land_vs_naval = 30
+
+			
+			privilege = {
+
+				#Burghers
+				privateer_contracts #By the mid/late point of the 14th century Rhodes had become one of the major naval bases in the eastern Mediterranean specifically structured to support Hospitaller corsair operations and fleet maintenance.
+
+			}
 
 		}
 
@@ -20997,7 +21017,7 @@ countries = {
 		government = {
 			type = tribe
 			heir_selection = tribal_matrilineal
-			ruler = mak_al_amir_abi
+			ruler = random
 
 			laws = {
 				sharia_law = shafii_policy
@@ -29028,10 +29048,6 @@ countries = {
 			yibin changning_changning fushun nanxi qingfu xuanhua
 			mingshan yandao rongjing
 
-			kunming lufeng yiliang kunyang anning chenggong yimen songming fumin
-			zhennan dingyuan_chuxiong weichu nanan
-			heyang jiangchuan lunan xinxing
-
 			#Mongolia
 			buir_nuur barun_xiabaer khalkh tamsabulag
 			bars_khot bayan_tumen bayantsagaan dalai_nuur menen
@@ -29622,6 +29638,43 @@ countries = {
 		}
 
 		capital = luchuan_mangshi
+	}
+
+	LNG = { #Liang
+
+		own_control_core = {
+			kunming lufeng yiliang kunyang anning chenggong yimen songming fumin
+			zhennan dingyuan_chuxiong weichu nanan
+			heyang jiangchuan lunan xinxing
+		}
+
+		own_control_integrated = {
+		}
+
+		capital = kunming
+		include = "far_east_asia_monarchy_no_coast"
+		include = "expl_mongols"
+		include = "expl_china"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		government = {
+			ruler_term = { character = hugeci_borjigin start_date = 1267.8.1 end_date = 1271.2.11 regnal_number = 1 }
+			ruler_term = { character = esen_temur_borjigin start_date = 1280.1.1 end_date = 1290.1.1 regnal_number = 1 }
+			ruler_term = { character = gammala_borjigin start_date = 1290.1.1 end_date = 1291.1.1 regnal_number = 1 }
+			ruler_term = { character = shouning_borjigin start_date = 1291.1.1 end_date = 1308.1.1 regnal_number = 1 }
+			ruler_term = { character = esen_temur_borjigin start_date = 1308.1.1 end_date = 1332.2.29 regnal_number = 1 }
+			ruler_term = { character = tughluq_borjigin start_date = 1334.1.1 regnal_number = 1 }
+
+			ruler = tughluq_borjigin
+
+		}
+		tolerated_cultures = {
+			yi_culture
+			lahu_culture
+		}
+		court_language = northern_mandarin_dialect
+		country_rank = rank_kingdom
 	}
 
 	CDL = { #Dali
@@ -32620,6 +32673,9 @@ countries = {
 
 			laws = {
 				royal_court_customs_law = harem_policy
+				slave_conversion = allow_slave_religion
+				sharia_law = hanafi_policy
+				harem_law = secluded_harem_policy
 			}
 		}
 
@@ -35619,9 +35675,10 @@ countries = {
 		include = "expl_northern_europe"
 		government = {
 			type = republic
-			#No character, ruled by a council of Patricians
 			heir_selection = republic_4_year_terms
-			ruler = random
+			ruler = nur_rappold_von_kulsheim #ruled by a council of Patricians, Imperial Advocate selcted in 1338 as representative
+
+			ruler_term = { character = nur_rappold_von_kulsheim start_date = 1337.1.1 } #no Imperial Advocate between 1336 and 1338
 		}
 		country_rank = rank_county
 		capital = nuremberg
@@ -35836,7 +35893,7 @@ countries = {
 		include = "german_principality"
 		government = {
 			regnal_numbers = {
-				name_ulrick = 3
+				name_ulrick = 2
 				name_everard = 2
 			}
 			ruler = wur_ulrich_iii_wurttemberg
@@ -37116,13 +37173,15 @@ countries = {
 		include = "german_principality"
 		government = {
 
-			ruler = lau_albrecht_iv_lauenburg
+			ruler = swz_gunther_ix_schwarzburg
 			ruler_term = {	character = bbg_ulrich_iii_von_regenstein start_date = 1287.1.1 end_date = 1322.1.1 regnal_number = 3	}
-			ruler_term = {	character = bbg_albrecht_ii_von_regenstein start_date = 1322.1.1 regnal_number = 2	}
+			ruler_term = {	character = swz_gunther_ix_schwarzburg start_date = 1322.1.1 regnal_number = 21	}
 
 			regnal_numbers = {
 				name_ulrick = 3
 				name_albert = 2
+				name_gunther = 20
+				name_henry = 6
 			}
 		}
 
@@ -37318,12 +37377,12 @@ countries = {
 		include = "german_principality"
 		government = {
 
-			ruler = wma_otto_vi_weimar_orlamunde
+			ruler = swz_gunther_ix_schwarzburg
 			ruler_term = {	character = swz_heinrich_vi_schwarzburg start_date = 1306.1.1 end_date = 1324.11.11 regnal_number = 6	}
-			ruler_term = {	character = swz_heinrich_vii_schwarzburg start_date = 1324.11.11 regnal_number = 7	}
+			ruler_term = {	character = swz_gunther_ix_schwarzburg start_date = 1324.11.11 regnal_number = 7	}
 
 			regnal_numbers = {
-				name_henry = 7
+				name_henry = 6
 				name_gunther = 9
 			}
 		}
@@ -38153,7 +38212,7 @@ countries = {
 		capital = essen
 	}
 
-	MRS = {	#Mörs
+	MRS = {	#Moers
 		own_control_core = {
 			mors
 		}
@@ -39901,7 +39960,7 @@ countries = {
 			silesian
 		}
 
-		capital = sroda_slaska
+		capital = wroclaw
 	}
 
 	NYS = {	#Nysa

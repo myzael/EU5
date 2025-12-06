@@ -456,8 +456,8 @@ cossack_estate_events.11 = {
 			owner = root
 			from = scope:migration_origin_province
 			to = scope:target_migration_province
-			amount = 0.200
-			months = 48
+			amount = 0.500
+			months = 60
 		}
 	}
 
@@ -521,7 +521,7 @@ cossack_estate_events.12 = {
 						random_list = {
 							40 = {
 								split_pop = {
-									fraction = 0.1
+									fraction = 0.3
 									religion = root.religion
 									culture = culture:cossack_culture
 									type = pop_type:tribesmen
@@ -529,7 +529,7 @@ cossack_estate_events.12 = {
 							}
 							20 = {
 								split_pop = {
-									fraction = 0.2
+									fraction = 0.4
 									religion = root.religion
 									culture = culture:cossack_culture
 									type = pop_type:tribesmen
@@ -537,7 +537,7 @@ cossack_estate_events.12 = {
 							}
 							15 = {
 								split_pop = {
-									fraction = 0.3
+									fraction = 0.5
 									religion = root.religion
 									culture = culture:cossack_culture
 									type = pop_type:tribesmen
@@ -545,23 +545,23 @@ cossack_estate_events.12 = {
 							}
 							10 = {
 								split_pop = {
-									fraction = 0.4
-									religion = root.religion
-									culture = culture:cossack_culture
-									type = pop_type:tribesmen
-								}
-							}
-							4 = {
-								split_pop = {
-									fraction = 0.5
-									religion = root.religion
-									culture = culture:cossack_culture
-									type = pop_type:tribesmen
-								}
-							}
-							1 = {
-								split_pop = {
 									fraction = 0.6
+									religion = root.religion
+									culture = culture:cossack_culture
+									type = pop_type:tribesmen
+								}
+							}
+							10 = {
+								split_pop = {
+									fraction = 0.7
+									religion = root.religion
+									culture = culture:cossack_culture
+									type = pop_type:tribesmen
+								}
+							}
+							10 = {
+								split_pop = {
+									fraction = 0.8
 									religion = root.religion
 									culture = culture:cossack_culture
 									type = pop_type:tribesmen

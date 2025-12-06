@@ -580,6 +580,7 @@ culture_religion_events.13 = {
 				}
 				order_by = modifier:great_power_score
 				max = num_provinces	
+				check_range_bounds = no
 				add_opinion = { target = root modifier = entertaining_heathens }
 			}
 		}

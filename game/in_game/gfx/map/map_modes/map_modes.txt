@@ -1040,7 +1040,6 @@ tax_base = {
 	fill_in_impassable = no
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	pinned_by_default = yes
 	category = economy
@@ -1084,7 +1083,6 @@ development = {
 	fill_in_impassable = no
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 	
 	pinned_by_default = no
 	category = economy
@@ -1168,7 +1166,6 @@ prosperity = {
 	fill_in_impassable = no
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 	
 	category = economy
 	index = 0
@@ -1645,7 +1642,6 @@ population = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	pinned_by_default = yes
 	category = population
@@ -1691,7 +1687,6 @@ pop_types = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 0
@@ -1737,7 +1732,6 @@ nobles = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -1783,7 +1777,6 @@ clergy = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -1829,7 +1822,6 @@ burghers = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -1875,7 +1867,6 @@ laborers = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -1921,7 +1912,6 @@ soldiers = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -1967,7 +1957,6 @@ peasants = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -2013,7 +2002,6 @@ tribesmen = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1
@@ -2059,7 +2047,6 @@ slaves = {
 
 	flatmap_behaviour = Always
 	use_fow = no
-	always_toggle_macrobuilder = yes
 
 	category = population
 	index = 1

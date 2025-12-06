@@ -352,7 +352,10 @@ thema_headquarters = {
 		modifier:allow_thema_headquarters = yes
 	}
 
-	allow = { is_province_capital = yes }
+	allow = { 
+		is_province_capital = yes 
+		owner = { modifier:allow_thema_headquarters = yes }
+	}
 	
 	location_potential = { is_capital = no }
 

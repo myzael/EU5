@@ -5,21 +5,24 @@ template flexible_interaction_target_entry_setup {
 }
 
 template select_interaction_target_map_tooltip {
-	datacontext = "[GetLastSelectInteractionTargetGlue]"
-	ContextualTooltipType = {
-		blockoverride "title_text" { text = "[SelectInteractionTargetGlue.GetTitle]" }
-		blockoverride "title_icon_texture" { texture = "[SelectInteractionTargetGlue.GetObject.GetGameConceptTexture]" }
-		blockoverride "concept_link" { text = "[SelectInteractionTargetGlue.GetObject.GetGameConceptName|e]" }
-		blockoverride "tooltip_content" { 
-			TooltipContentSection = {
-				visible = "[LastSelectInteractionTargetGlueWasTarget]"
-				using = action_tooltip_inner_content
+	container = {
+		visible = "[IsSelectInteractionTargetValid]"
+		ContextualTooltipType = {
+			datacontext = "[GetLastSelectInteractionTargetGlue(Location.Self)]"
+			blockoverride "title_text" { text = "[SelectInteractionTargetGlue.GetTitle]" }
+			blockoverride "title_icon_texture" { texture = "[SelectInteractionTargetGlue.GetObject.GetGameConceptTexture]" }
+			blockoverride "concept_link" { text = "[SelectInteractionTargetGlue.GetObject.GetGameConceptName|e]" }
+			blockoverride "tooltip_content" { 
+				TooltipContentSection = {
+					visible = "[LastSelectInteractionTargetGlueWasTarget(Location.Self)]"
+					using = action_tooltip_inner_content
+				}
 			}
-		}
 
-		blockoverride "tooltip_ui_action_block" {
-			TooltipUIActionBlockOld = {
-				visible = "[PdxGuiWidget.HasUIAction]"
+			blockoverride "tooltip_ui_action_block" {
+				TooltipUIActionBlockOld = {
+					visible = "[PdxGuiWidget.HasUIAction]"
+				}
 			}
 		}
 	}

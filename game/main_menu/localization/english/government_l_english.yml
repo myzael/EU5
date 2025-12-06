@@ -399,6 +399,8 @@
  TIME_TO_LAW_TITLE: "Time to implement [Policy.GetNameWithNoTooltip]"
  TIME_TO_LAW: "[Policy.GetImplementableTooltip]"
  CHANGE_POLICY_TOOLTIP: "#TOOLTIP:$BREAKDOWN_TAG$ $VAL|2+=$#!"
+ UNIQUE_POLICY_TITLE: "Unique Policy"
+ UNIQUE_POLICY_DESC: "This Policy is unique to [Country.GetNameWithNoTooltip]"
  #
  # Integration
  NO_INTEGRATION_PROGRESS: "There is currently no progress for integration"
@@ -830,7 +832,7 @@
  encourage_migration_action: "Encourage Migration to [SCOPE.sLocation('target').GetName]"
  encourage_migration_select_province: "Select the [location|e] to encourage [migration|e] to:"
  encourage_migration_active: "Encouraging Migration to [SCOPE.sLocation('target').GetNameWithNoTooltip]"
- encourage_migration_action_progress: "[SCOPE.sLocation('target').GetMigrationChange]"
+ encourage_migration_action_progress: "[SCOPE.sLocation('target').GetTotalPopulation] ([SCOPE.sLocation('target').GetMigrationChange]@population!)"
  encourage_migration_action_progress_wordier: "[SCOPE.sLocation('target').GetMigrationChange] pops migrated last month."
  encourage_migration_action_progress_long_wordier: "@migration_attraction! [SCOPE.sLocation('target').GetMigrationChange] \n\n@migration_speed! [SCOPE.sCountry('actor').GetModifierValue('global_migration_speed_modifier')]"
  encourage_migration_action_progress_tooltip: "Global Migration Speed: [SCOPE.sLocation('target').GetModifierValue('local_migration_speed')] \n [SCOPE.sLocation('target').GetMigrationInfo]"
@@ -862,7 +864,7 @@
  send_people_to_the_colonies_select_colony: "Select colony to send [pops|e] to:"
  send_people_to_the_colonies_select_destination_province: "Select a province in the colony to send [pops|e] to:"
  send_people_to_the_colonies_active: "Sending [pops|e] from [SCOPE.sProvince('target').GetName] to [SCOPE.sProvince('target_2').GetName]"
- send_people_to_the_colonies_action_progress: "[SCOPE.sProvince('target_2').GetMigrationChange]"
+ send_people_to_the_colonies_action_progress: "[SCOPE.sProvince('target').GetTotalPopulation] ([SCOPE.sProvince('target').GetMigrationChange]@population!)"
  send_people_to_the_colonies_action_progress_wordier: "send_people_to_the_colonies_action"
  send_people_to_the_colonies_action_progress_tooltip: "[SCOPE.sProvince('target').GetTotalPopulationInfo]\n[SCOPE.sProvince('target_2').GetTotalPopulationInfo]"
  send_people_to_the_colonies_action_progress_long_wordier: "@population! [SCOPE.sProvince('target').GetTotalPopulation] @orange_right! [SCOPE.sProvince('target_2').GetTotalPopulation] ([SCOPE.sProvince('target_2').GetMigrationChange]@migration_speed!)"
@@ -872,7 +874,7 @@
  expel_people_action: "Expel Pops from [SCOPE.sProvince('target').GetName]"
  expel_people_select_province: "Select the [province|e] to expel people from:"
  expel_people_active: "Expelling Pops from [SCOPE.sProvince('target').GetNameWithHighlightOnly]"
- expel_people_action_progress: "[SCOPE.sProvince('target').GetMigrationChange]"
+ expel_people_action_progress: "[SCOPE.sProvince('target').GetTotalPopulation] ([SCOPE.sProvince('target').GetMigrationChange]@population!)"
  expel_people_action_progress_wordier: "[SCOPE.sProvince('target').GetMigrationChange] pops migrated last month."
  expel_people_action_progress_long_wordier: "@migration_attraction! [SCOPE.sProvince('target').GetMigrationChange] \n\n@migration_speed! [SCOPE.sProvince('target').GetProvinceLocationModifier('local_migration_speed')|+=2] \n\n@migration_speed! [SCOPE.sProvince('target').GetProvinceLocationModifier('local_migration_speed_modifier')|+=2%]"
  expel_people_action_progress_tooltip: "Pops Migration Speed: [SCOPE.sProvince('target').GetProvinceLocationModifier('local_migration_speed')|+=2] \n @migration_speed! Global Migration Speed: [SCOPE.sProvince('target').GetProvinceLocationModifier('local_migration_speed_modifier')|+=2%] \n [SCOPE.sProvince('target').GetMigrationInfo]"
@@ -902,7 +904,8 @@
  mlo_restore_kingdom_lombardy_active: "Integrating Lombard Claims"
  mlo_restore_kingdom_lombardy_action_progress: "$mlo_restore_kingdom_lombardy_active$"
  mlo_restore_kingdom_lombardy_action_progress_wordier: "$mlo_restore_kingdom_lombardy_active$"
- mlo_restore_kingdom_lombardy_action_progress_tooltip: "$mlo_restore_kingdom_lombardy_active$"
+ mlo_restore_kingdom_lombardy_action_progress_long_wordier: "@restore_lombardy! [SCOPE.sProvince('target').GetIntegrationETA] \n\n@province_integration_speed! #W [Cabinet.GetActionNumProgress|%]#!"
+ mlo_restore_kingdom_lombardy_action_progress_tooltip: "$mlo_restore_kingdom_lombardy_active$ \n [integration|e] at #W [SCOPE.sCabinet('cabinet').GetActionNumProgress|%]#!\n Integration should be done on [SCOPE.sProvince('target').GetIntegrationETA|Y]"
  
  # Swedish/Finnish colonization
  swe_slash_and_burn_new_farms: "Support New Farms in North or East"

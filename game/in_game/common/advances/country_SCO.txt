@@ -46,6 +46,7 @@ scottish_morale = {
 	requires = unlock_footmen_advance
 	potential = {
 		OR = {
+			has_or_had_tag = SBL
 			has_or_had_tag = SCO 
 			culture = { has_culture_group = culture_group:scottish_group }
 		}
@@ -60,11 +61,15 @@ scottish_longbowmen = {
 	age = age_1_traditions
 	requires = unlock_footmen_advance
 	potential = {
+		has_or_had_tag = SBL
 		has_or_had_tag = SCO
 		culture = { has_culture_group = culture_group:scottish_group }
 	}
 	allow = {
-		is_subject_of = c:ENG #replacement for scottish_morale if Scotland submits to England
+		OR = {
+			is_subject_of = c:ENG #replacement for scottish_morale if Scotland submits to England
+			has_or_had_tag = SBL
+		}
 	}
 	unlock_levy = levy_a_early_longbowmen
 }

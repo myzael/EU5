@@ -107,8 +107,11 @@ situation_panel = {
 				texture = "gfx/interface/icons/disasters/end_requirements_green.dds"
 			}
 			blockoverride "bottom_content" {
-				text_single = {
-					raw_text = "great_pestilence_end_trigger_tt"
+				text_multi = {
+					autoresize = no
+					multiline = yes
+					size = { 400 60 }
+					text = "great_pestilence_end_trigger_tt"
 				}
 			}
 			blockoverride "visible_hint" {}

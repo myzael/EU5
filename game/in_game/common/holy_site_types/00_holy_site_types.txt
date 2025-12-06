@@ -85,6 +85,7 @@ islam_holy_site = {
 		local_max_control = 0.05
 	}
 	country_modifier = {
-		monthly_religious_influence = 0.02
+		invite_religious_figure_same_school_cost_modifier = -0.1
+		invite_religious_figure_different_school_cost_modifier = -0.1
 	}
 }
