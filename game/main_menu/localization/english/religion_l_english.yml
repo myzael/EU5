@@ -261,8 +261,8 @@
  theravada_ADJ: "Theravāda"
  romuva: "Romuva"
  romuva_ADJ: "Romuvan"
- mandeaism: "Mandeaism"
- mandeaism_ADJ: "Mandean"
+ mandeaism: "Mandaeaism"
+ mandeaism_ADJ: "Mandaean"
  yazidism: "Yazidism"
  yazidism_ADJ: "Yazidi"
  judaism: "Judaism"
@@ -305,8 +305,8 @@
  druze_group_ADJ: "Druze"
  yazidi_group: "Yazidi"
  yazidi_group_ADJ: "Yazidi"
- mandean_group: "Mandean"
- mandean_group_ADJ: "Mandean"
+ mandean_group: "Mandaean"
+ mandean_group_ADJ: "Mandaean"
  anglican: "Anglicanism"
  anglican_ADJ: "Anglican"
  lollardy: "Lollardy"
@@ -847,7 +847,7 @@
 
  invite_foreign_cleric: "Invite Foreign Cleric"
  invite_foreign_cleric_desc: "We will be sent an experienced clergyman from another country. It will anger our local [actor.GetGovernment.GetEstateName('clergy_estate')], but the expertise of this foreign cleric may be invaluable."
- invite_foreign_cleric_tt: "A foreign [actor.GetReligion.GetAdjective] [character|e] of the [ShowEstateTypeName('clergy_estate')] with high [adm|e], medium [dip|e] and low [mil|e] will arrive in our [country|e].
+ invite_foreign_cleric_tt: "A foreign [actor.GetReligion.GetAdjective] [character|e] of the [ShowEstateTypeName('clergy_estate')] with high [adm|e], medium [dip|e] and low [mil|e] will arrive in our [country|e]."
 
 #Catholic Church Laws and Policies
  cc_indulgences: "The Purchase of Indulgence"

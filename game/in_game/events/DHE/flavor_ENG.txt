@@ -3642,6 +3642,7 @@ flavor_eng.33 = {
 			limit = {
 				any_character = {
 					age_in_years >= 20
+					age_in_years < 40
 					is_married = no
 					is_female = yes	#We do not want a male pregnancy in this DHE
 					is_ruler = no
@@ -3653,6 +3654,7 @@ flavor_eng.33 = {
 			random_character = {
 				limit = {
 					age_in_years >= 20
+					age_in_years < 40
 					is_married = no
 					is_female = yes
 					is_ruler = no
@@ -7855,7 +7857,7 @@ flavor_eng.91 = {
 
 		change_gold_effect = { scale = 6 }
 
-		character:eng_edmund_mortimer ?= { change_character_allegiance = scope:owain_glyndwr }
+		character:wls_edmund_mortimer_1376 ?= { change_character_allegiance = scope:owain_glyndwr }
 
 		set_variable = {
 			name = tripartite_indenture
@@ -8186,7 +8188,7 @@ flavor_eng.95 = {
 
 		c:WLS = { has_variable = tripartite_indenture }
 
-		character:eng_edmund_mortimer ?= { is_alive = yes }
+		character:wls_edmund_mortimer_1376 ?= { is_alive = yes }
 
 		own_entire_province = province_definition:northumberland_province
 
@@ -8205,7 +8207,7 @@ flavor_eng.95 = {
 
 		dynasty:mortimer_dynasty ?= { save_scope_as = mortimer_dynasty }
 
-		character:eng_edmund_mortimer ?= { save_scope_as = edmund_mortimer }
+		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
 		province_definition:northumberland_province ?= { save_scope_as = northumberland }
 
@@ -8254,7 +8256,7 @@ flavor_eng.95 = {
 			}
 		}
 
-		character:eng_edmund_mortimer ?= { change_character_allegiance = scope:mortimer_uprising }
+		character:wls_edmund_mortimer_1376 ?= { change_character_allegiance = scope:mortimer_uprising }
 
 	}
 
@@ -9629,6 +9631,16 @@ flavor_eng.104 = {
 
 		character:eng_henry_iii ?= { save_scope_as = henry_iii }
 
+		random_character = {
+			limit = {
+				is_sibling_of = root.ruler
+				is_ruler = no
+				is_female = no
+				is_married = no
+			}
+			save_scope_as = brother
+		}
+
 		create_character = {
 			first_name = name_margaret
 			dynasty = dynasty:beaufort_dynasty
@@ -9652,21 +9664,12 @@ flavor_eng.104 = {
 			mil = 60
 			birth_date = 1457.1.28
 			birth_location = location:pembroke
+			father = scope:brother
 			mother = scope:margaret_beaufort
 			religion = religion:catholic
 			culture = culture:english
 			save_scope_as = henry_tudor
 			script = eng_henry_tudor
-		}
-
-		random_character = {
-			limit = {
-				is_sibling_of = root.ruler
-				is_ruler = no
-				is_female = no
-				is_married = no
-			}
-			save_scope_as = brother
 		}
 
 		location:chalons_champagne = { save_scope_as = chalons_champagne }

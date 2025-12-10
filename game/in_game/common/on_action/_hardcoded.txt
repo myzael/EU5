@@ -404,7 +404,10 @@ on_annex = {
 		}
 		if = {
 			limit = { 
-				scope:target = { has_global_variable_list = eligible_beylik_list }
+				is_target_in_global_variable_list = {
+					name = eligible_beylik_list
+					target = scope:target
+				}
 			}
 			remove_list_global_variable = { 
 				name = eligible_beylik_list 
@@ -2420,7 +2423,12 @@ on_becoming_free = {
 		}
 		if = {
 			limit = { 
-				NOT = { has_global_variable_list = eligible_beylik_list }
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = eligible_beylik_list
+						target = root
+					}
+				}
 				has_reform = government_reform:anatolian_beylik
 			}
 			add_to_global_variable_list = { 
@@ -3757,7 +3765,12 @@ on_released_country = {
 		}
 		if = {
 			limit = { 
-				NOT = { has_global_variable_list = eligible_beylik_list }
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = eligible_beylik_list
+						target = root
+					}
+				}
 				has_reform = government_reform:anatolian_beylik
 			}
 			add_to_global_variable_list = { 

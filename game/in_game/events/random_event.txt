@@ -1966,6 +1966,7 @@ random_event.39 = {
 			is_subject = no
 			NOT = { has_opinion = { target = root modifier = opinion_supports_dissidents } }
 			has_ruler = yes
+			in_civil_war = no
 		}
 		country_has_estate = estate_type:nobles_estate
 	}
@@ -1978,6 +1979,7 @@ random_event.39 = {
 				is_subject = no
 				NOT = { has_opinion = { target = root modifier = opinion_supports_dissidents } }
 				has_ruler = yes
+				in_civil_war = no
 			}
 			save_scope_as = dissidents
 		}

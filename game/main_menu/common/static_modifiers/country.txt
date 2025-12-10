@@ -207,10 +207,11 @@ recovery_motivation = {
 	global_defensive = 0.25
 	monthly_navy_tradition = 0.2
 	monthly_army_tradition = 0.2
-	bank_interest = -0.01
+	bank_interest = -0.02
 	stability_investment = large_stability_investment
 	global_estate_target_satisfaction = medium_permanent_target_satisfaction
 	monthly_war_exhaustion = -0.1
+	levy_recovery_modifier = 0.25
 }
 
 religious_tolerance = {

@@ -1263,18 +1263,14 @@ zontas = {
 		}
 	}
 	can_revoke = {
-		custom_tooltip = {
-			text = zontas_revoke_tt
-			OR = {
-				"estate_power(estate_type:nobles_estate)" < 0.25
-				"estate_power(estate_type:crown_estate)" >= 0.5
-			}
-		}
+		"estate_power(estate_type:crown_estate)" >= "estate_power(estate_type:nobles_estate)"
 	}
 	country_modifier = {
 		global_nobles_estate_power = 0.2
 		nobles_estate_target_satisfaction = large_privilege_target_satisfaction
-		global_crown_estate_power = -0.25
+		global_crown_estate_power = -0.1
+		country_cabinet_efficiency = 0.1
+		diplomatic_reputation = diplomatic_reputation_weak_bonus
 	}
 }
 

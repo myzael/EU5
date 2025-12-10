@@ -52,7 +52,7 @@ eng_order_of_the_garter_law = {
 		estate_preferences = {
 			nobles_estate
 		}
-		years = 20
+		years = 2
 	}
 	
 	eng_order_of_the_garter_foreign_policy = {

@@ -1206,6 +1206,8 @@ NCulture = {
 
 
 NCharacter = {
+	BASE_AMOUNT_FOR_COUNTRY = 1.25		#multiply with cabinet size.
+	
 	MAX_INFANT_AGE = 2
 	MAX_CHILD_AGE = 10
 	MAX_ADOLESCENT_AGE = 15

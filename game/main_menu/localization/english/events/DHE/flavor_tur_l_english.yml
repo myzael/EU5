@@ -190,7 +190,7 @@
 
  flavor_tur.30.title: "Coins in Our Own Name"
  flavor_tur.30.desc: "During the later reign of [GetCharacter('tur_osman').GetShortName], [GetCharacter('tur_osman').GetSheHe] had coins minted in [GetCharacter('tur_osman').GetHerHis] own name, and no longer as a nominal vassal of the moribund Ilkhanids in Iran. This was a big step towards legitimacy as an independent ruler, and with the Ilkhanate now fallen, we have little to lose from continuing this practice. However, the mint in [ShowLocationNameWithNoTooltip('bursa')] claims that they have a shortage of silver and gold, and are asking for a contribution, so they can produce greater quantities of coins with the glorious likeness of [target_character.GetName]."
- flavor_tur.30.a: "The shall have what they need."
+ flavor_tur.30.a: "They shall have what they need."
  flavor_tur.30.b: "A limited production will suffice."
  flavor_tur.30.historical_info: "The ascendant Ottoman state's first mint was located in Bursa. After the capture of the city in 1326, Osman I began to mint coins in his own name, and not as a vassal of the Mongol Ilkhanate, which had up until that point been customary among Anatolian Turkic rulers." 
 

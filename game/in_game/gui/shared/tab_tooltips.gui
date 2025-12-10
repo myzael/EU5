@@ -1104,6 +1104,11 @@ template TabPeopleCharactersTooltip {
 					text = "TAB_TOOLTIP_SOCIETY_PEOPLE_CHARACTERS_TEXT"
 				}
 			}
+			
+			TooltipStringPairList = {
+				textcontext = "[Player.GetCharacterDetails]"
+			}
+
 			TooltipFlavorTextBlock = {
 				blockoverride "text" {
 					text = "FOREIGN_CHARACTERS_SUBTAB_TT_FLAVOR"

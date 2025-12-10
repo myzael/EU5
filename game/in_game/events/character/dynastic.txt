@@ -366,7 +366,15 @@ dynastic.6 = {
 		hidden_effect = {
 			scope:hookup_char = { move_country = root }
 		}
-		trigger_event_silently = { id = dynastic.6001 months = 9 }
+		if = {
+			limit = {
+				scope:hookup_char = {
+					is_pregnant = no
+					character_age < 45
+				}
+			}
+			trigger_event_silently = { id = dynastic.6001 months = 9 }
+		}
 		add_prestige = prestige_weak_bonus
 	}
 	option = {
@@ -379,7 +387,15 @@ dynastic.6 = {
 		hidden_effect = {
 			scope:hookup_char = { move_country = root }
 		}
-		trigger_event_silently = { id = dynastic.6001 months = 9 }
+		if = {
+			limit = {
+				ruler ?= {
+					is_pregnant = no
+					character_age < 45
+				}
+			}
+			trigger_event_silently = { id = dynastic.6001 months = 9 }
+		}
 		add_prestige = prestige_weak_bonus
 	}
 	option = {
@@ -412,6 +428,25 @@ dynastic.6001 = {
 	illustration_tags = {
 		10 = happy
 		10 = interior
+	}
+
+	trigger = {
+		OR = {
+			AND = {
+				scope:ruler_char ?= {
+					is_female = no
+				}
+				scope:hookup_char ?= {
+					is_alive = yes
+					is_pregnant = no
+				}
+			}
+			scope:ruler_char ?= {
+				is_female = yes
+				is_alive = yes
+				is_pregnant = no
+			}
+		}
 	}
 
 	immediate = {
@@ -1073,6 +1108,7 @@ dynastic.19 = {
 		has_heir = yes
 		has_regent = no
 		heir = { age_in_years < 3 owner = root  }
+		ruler ?= { is_female = no }
 	}
 
 	immediate = {

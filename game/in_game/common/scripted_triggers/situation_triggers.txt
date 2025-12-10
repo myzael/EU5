@@ -88,7 +88,7 @@ hundred_years_war_unified_requirements = {
 						text = owned_by_fra_tt
 						owner = { this = c:FRA }
 					}
-					count > 200
+					count > 230
 				}
 			}
 		}
@@ -111,7 +111,7 @@ hundred_years_war_unified_requirements = {
 					owner = {
 						top_overlord_or_this ?= c:ENG
 					}
-					count > 130
+					count > 175
 				}
 			}
 		}

@@ -1565,6 +1565,24 @@
  FOREIGN_CHARACTERS_SUBTAB_TT_TEXT: "In this Tab you can interact with the [characters|e] of a foreign [country|e]."
  FOREIGN_CHARACTERS_SUBTAB_TT_FLAVOR: "All the world's a stage, and all the men and women merely players."
 
+
+
+ CHAR_DETAILS_HEADER: "There are [COUNTRY.GetNumberOfCharacters|V] [characters|e] in the [COUNTRY.GetLongName]."
+ 
+ 
+ MARRIED_IN_COUNTRY: "Important non-[royal_marriages|e]: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|VL0$#!"
+ MARRIED_NON_RULER_TITLE: "Marriages"
+ MARRIED_NON_RULER_ENTRY: "$BULLET$[CHARACTER.GetName]"
+ 
+ CAPABLE_IN_COUNTRY: "Possible [characters|e] for [cabinet|e]: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|VL0$#!"
+ CAPABLE_NON_RULER_TITLE: "Possible [COUNTRY.GetGovernment.GetCabinetMemberTitle]"
+ CAPABLE_NON_RULER_ENTRY: "[CHARACTER.GetName]: [CHARACTER.GetRoleName]"
+ REQUIRED_IN_COUNTRY: "Required [characters|e] for [cabinet|e]: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|VL0$#!"
+ 
+ COUNTRY_REQUIRED_CHAR_BASE: "Required amount of characters"
+ 
+ NO_MARRIED_NON_RULER: "There are no characters that are married.\nEventually they will become married."
+ NO_CAPABLE_NON_RULER: "There are no characters that are capable to be in the [cabinet|e].\nEventually we will get some."
  #MARKET RIGHT PANEL
  MARKET_GOODS_SUBTAB_TT_TEXT: "In this Tab you can see the [supply|e] and [demand|e] of all the [goods|e] present in this [market|e]. "
  MARKET_FOOD_SUBTAB_TT_TEXT: "In this Tab you can see all the [provinces|e] that are [buying_food|e] or [selling_food|e] in this [market|e]."

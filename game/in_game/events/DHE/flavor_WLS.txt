@@ -464,7 +464,7 @@ flavor_wls.15 = {
 
 		character:wls_owain_glyndwr ?= { is_alive = yes is_ruler = yes }
 
-		character:eng_edmund_mortimer ?= { is_alive = yes }
+		character:wls_edmund_mortimer_1376 ?= { is_alive = yes }
 
 		c:ENG = {
 			OR = {
@@ -490,7 +490,7 @@ flavor_wls.15 = {
 
 		c:ENG = { save_scope_as = england }
 
-		character:eng_edmund_mortimer ?= { save_scope_as = edmund_mortimer }
+		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
 		province_definition:northumberland_province = { save_scope_as = northumberland }
 
