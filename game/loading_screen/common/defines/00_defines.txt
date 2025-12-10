@@ -1218,7 +1218,7 @@ NCharacter = {
 	
 	OLD_AGE_MONTH_CHANCE = 3.0		#100 is dice roll
 	
-	MAX_PREGNANCY_AGE = 40		#blocked above this
+	MAX_PREGNANCY_AGE = 45		#blocked above this
 	PREGNANCY_AGE_THRESHOLD = 35
 	PREGNANCY_CHANCE = 170	#1000 is diceroll
 	PREGNANCY_FERTILITY_MIN_REDUCTION = 12
