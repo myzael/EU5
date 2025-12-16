@@ -1489,8 +1489,8 @@ NMarket = {
 	MARKET_SEA_DISTANCE_FACTOR = 0.75 # Markets propagate better over sea
 	MARKET_SEA_TO_LAND_DISTANCE_FACTOR = 0.5
 	
-	MARKET_DOWNSTREAM_FACTOR = 0.5 # downstream is great!
-	MARKET_UPSTREAM_FACTOR = 0.9	#better upstream than not..
+	MARKET_DOWNSTREAM_FACTOR = 0.9 # downstream is great!
+	MARKET_UPSTREAM_FACTOR = 0.5	#better upstream than not..
 	
 	# additive
 	MARKET_NO_PORT_EXTRA_DISTANCE = 0.1 # Absolute access penalty for going between land and sea without port
