@@ -50,6 +50,9 @@ diplomacy_manager = {
 	opinion = { first = LIT second = POL type = opinion_historical_friend_POL_LIT }
 	opinion = { first = TEU second = LIV type = opinion_historical_friend_TEU_LIV }
 
+	opinion = { first = BOH second = TEU type = opinion_good_relations }
+	opinion = { first = TEU second = BOH type = opinion_good_relations }
+
 	#Andes 
 	#Historical Rivals
 	opinion = { first = CSU second = AYA type = border_aggression }
