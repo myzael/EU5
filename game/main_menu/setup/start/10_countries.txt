@@ -40598,7 +40598,7 @@ countries = {
 			#Dobrzyń Land
 			dobrzyn lipno rypin
 			#Kujavia
-			wloclawek kowal radziejow
+			wloclawek kowal radziejow bydgoszcz inowroclaw
 		}
 		our_cores_conquered_by_others = {
 			#Chełmno Land
@@ -40983,7 +40983,7 @@ countries = {
 	}
 
 	INO = {	#Inowrocław - PU under Poland
-		own_control_core = { #Should actually be own_core
+		our_cores_conquered_by_others = { #Should actually be own_core
 			bydgoszcz inowroclaw
 		}
 
