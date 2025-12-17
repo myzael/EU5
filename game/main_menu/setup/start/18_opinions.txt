@@ -116,4 +116,12 @@ diplomacy_manager = {
 	#Iberia #Due to the Truce of 1337, making the Battle of Río Salado event chain easier to trigger
 	opinion = { first = POR second = CAS type = opinion_good_relations }
 	opinion = { first = CAS second = POR type = opinion_good_relations }
+
+	opinion = { first = POL second = PLK type = opinion_dynastic_ties }
+	opinion = { first = POL second = RAW type = opinion_dynastic_ties }
+	opinion = { first = POL second = CZK type = opinion_dynastic_ties }
+
+	opinion = { first = PLK second = POL type = opinion_dynastic_ties }
+	opinion = { first = RAW second = POL type = opinion_dynastic_ties }
+	opinion = { first = CZK second = POL type = opinion_dynastic_ties }
 }
