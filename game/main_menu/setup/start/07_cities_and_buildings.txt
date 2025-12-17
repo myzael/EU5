@@ -373,6 +373,12 @@ locations={
 	wroclaw = { rank = town 	town_setup = polish_town }
 	wloclawek =	{ prosperity = -0.2 }
 	radziejow =	{ prosperity = -0.2 }
+	kowal =	{ prosperity = -0.2 }
+	bydgoszcz =	{ prosperity = -0.2 }
+	inowroclaw =	{ prosperity = -0.2 }
+	dobrzyn =	{ prosperity = -0.2 }
+	lipno =	{ prosperity = -0.2 }
+	rypin =	{ prosperity = -0.2 }
 
 	# Baltic
 	riga = { rank = city			town_setup = german_coastal_city  }
