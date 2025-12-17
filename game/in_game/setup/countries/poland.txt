@@ -35,14 +35,14 @@ PLK = {
 }
 
 RAW = {
-	color = hsv { 0.6 0.35 0.38 }
+	color = map_MAZ
 
 	culture_definition = mazovian
 	religion_definition = catholic
 }
 
 CZK = {
-	color = rgb { 223 165 189 }
+	color = rgb { 177 192 167 }
 
 	culture_definition = mazovian
 	religion_definition = catholic
@@ -63,7 +63,7 @@ VOL = {
 }
 
 HAL = {
-	color = rgb { 123 34 46 }
+	color = map_galicia_lodomeria
 
 	culture_definition = halychian_culture
 	religion_definition = orthodox
