@@ -67,7 +67,7 @@ bardic_school = {
 	build_time = guild_build_time
 	
 	modifier = {
-		local_cultural_tradition = 0.1
+		local_cultural_tradition = 0.02
 		local_max_literacy = 1
 	}
 	
@@ -2769,7 +2769,7 @@ stroganov_school_of_iconic_art = {
 	}
 
 	modifier = {
-		local_cultural_tradition = 0.15
+		local_cultural_tradition = 0.03
 	}
 
 	capital_country_modifier = {
@@ -2797,8 +2797,8 @@ venetian_palaces = {
 	build_time = cultural_building_time
 	
 	modifier = {
-		local_cultural_tradition = 0.25
-		local_cultural_influence = 0.1
+		local_cultural_tradition = 0.05
+		local_cultural_influence = 0.02
 		local_crown_estate_power = 0.1
 	}
 	
@@ -3502,7 +3502,7 @@ imperial_academy_of_arts = {
 	}
 
 	modifier = {
-		local_cultural_tradition = 0.1
+		local_cultural_tradition = 0.02
 		local_institution_growth_modifier = 0.25
 	}
 
