@@ -77,8 +77,8 @@ country_art = {
 	game_data = {
 		category = country
 	}
-	monthly_prestige = 5
-	cultural_tradition = 5
+	monthly_prestige = 15
+	cultural_tradition = 50
 	
 	monthly_karma = 1
 	

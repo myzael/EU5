@@ -90,7 +90,7 @@ location_art = {
 	local_pop_conversion_speed_modifier = 10.0
 	local_pop_assimilation_speed_modifier = 10.0
 	local_institution_growth_modifier = 5
-	local_cultural_tradition = 5
+	local_cultural_tradition = 50
 }
 
 tribals_expelled = {
