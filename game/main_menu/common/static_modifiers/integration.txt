@@ -34,7 +34,7 @@ integration_core = {
 	}
 	local_monthly_control = 0.001
 	local_max_control = 0.20
-	growth_is_primary_culture = yes
+	# growth_is_primary_culture = yes
 	owner_gets_vision_when_occupied = yes
 }
 
