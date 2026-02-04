@@ -21428,7 +21428,7 @@ KUR = { # Kurland (Duchy)
 	}
 }
 
-KUR = { # Kurland (Bishopric)
+KUR_theocracy = { # Kurland (Bishopric)
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"

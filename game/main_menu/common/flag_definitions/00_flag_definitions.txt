@@ -3854,6 +3854,20 @@ KTG = { # Kengtung
 	}
 }
 
+KUR = { # Courland
+	flag_definition = {
+		coa = KUR
+		priority = 1
+	}
+	flag_definition = {
+		coa = KUR_theocracy
+		priority = 50
+		trigger = {
+			coa_def_theocracy_trigger = yes
+		}
+	}
+}
+
 LAU = { # Saxony-Lauenburg
 	flag_definition = {
 		coa = LAU_horse

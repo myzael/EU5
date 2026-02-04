@@ -2059,6 +2059,7 @@ flavor_plc.2004 = {
 	}
 
 	trigger = {
+		religion:lutheran = { is_religion_enabled = yes }
 		OR = {
 			c:KUR ?= {
 				is_ai = yes
@@ -2100,6 +2101,15 @@ flavor_plc.2004 = {
 				add_to_list = provinces_to_cede_to_KUR
 			}
 		}
+		province_definition:selonia_province = {
+			every_province_in_province_definition = {
+				limit = {
+					is_owned_by_target_or_subject = { owner = ROOT }
+					owner != c:KUR
+				}
+				add_to_list = provinces_to_cede_to_KUR
+			}
+		}
 		c:KUR ?= {
 			save_scope_as = target_country
 		}
@@ -2124,6 +2134,35 @@ flavor_plc.2004 = {
 		}
 
 		scope:target_country = {
+			if = {
+				limit = {
+					government_type != government_type:republic
+					government_type != government_type:monarchy
+				}
+				change_government_type = government_type:monarchy
+				add_legitimacy = legitimacy_radical_bonus
+			}
+
+			create_character = {
+				first_name = name_gerard
+				adm = { 40 80}
+				dip = { 40 80 }
+				mil = { 40 80 }
+				age = { 16 21 }
+				culture = culture:baltic_german
+				religion = religion:lutheran
+				dynasty = dynasty:kettler_dynasty
+				create_in_limbo = yes
+				save_scope_as = gotthard_kettler
+			}
+
+			set_new_ruler = scope:gotthard_kettler
+			hidden_effect = {
+				scope:gotthard_kettler = {
+					change_character_estate = estate_type:nobles_estate
+				}
+			}
+			
 			make_subject_of = {
 				target = ROOT
 				type = subject_type:vassal

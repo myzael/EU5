@@ -9266,6 +9266,28 @@ kengtung_dynasty = {
 	}		
 }
 
+kettler_dynasty = {
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "yellow_mid"
+	color4 = hsv360 	{	42	80	50	}	
+
+	colored_emblem = {
+		texture = "ce_lotus_throne.dds"
+		color1 = color2
+		color2 = color3
+		instance = { position = { 0.5 0.70 } scale = { 0.55 0.55 } }
+	}		
+	colored_emblem = {
+		texture = "ce_seated_buddha.dds"
+		color1 = color2
+		color2 = color3
+		color3 = color4	
+		instance = { position = { 0.5 0.35 } scale = { 0.65 0.65 } }
+	}		
+}
+
 kevernburg_dynasty = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
