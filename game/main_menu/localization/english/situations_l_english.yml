@@ -250,6 +250,7 @@
  ROT_CURRENTLY_INVADED: "Currently invaded by [GetCountry('TIM').GetName]"
  ROT_FUTURE_INVASION_TARGET: "Future potential invasion target by [GetCountry('TIM').GetName]"
  ROT_END_CONDITIONS: "End Conditions"
+ ROT_CONQUEST_AMBITION: "Conquest Ambition Target of [GetCountry('TIM').GetNameWithNoTooltip]"
  KILL_COUNTER: "Kill Counter"
  KILL_COUNTER_DESC: "The marauding armies of the [GetCountry('TIM').GetLongName] have killed #Y [SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('timur_total_kill_counter').GetValue]#! people in total."
  TOTAL_KILLS: "Total Kills"

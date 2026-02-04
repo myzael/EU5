@@ -1,4 +1,4 @@
-game_object_locator={
+﻿game_object_locator={
 	name="combat"
 	clamp_to_water_level=no
 	render_under_water=no
@@ -590,12 +590,6 @@ game_object_locator={
 		{
 			id=ars
 			position={ 8122.500000 0.000000 6736.500000 }
-			rotation={ -0.000000 -0.707107 -0.000000 0.707107 }
-			scale={ 1.000000 1.000000 1.000000 }
-		}
-		{
-			id=limfjorden
-			position={ 8112.500000 0.000000 6740.500000 }
 			rotation={ -0.000000 -0.707107 -0.000000 0.707107 }
 			scale={ 1.000000 1.000000 1.000000 }
 		}
@@ -3524,6 +3518,12 @@ game_object_locator={
 		{
 			id=lilla_balt
 			position={ 8159.500000 0.000000 6613.500000 }
+			rotation={ -0.000000 -0.707107 -0.000000 0.707107 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+		{
+			id=limfjorden
+			position={ 8112.500000 0.000000 6740.500000 }
 			rotation={ -0.000000 -0.707107 -0.000000 0.707107 }
 			scale={ 1.000000 1.000000 1.000000 }
 		}
@@ -18697,7 +18697,7 @@ game_object_locator={
 		}
 		{
 			id=piombino
-			position={ 8184.500000 0.000000 5821.500000 }
+			position={ 8187.8857 3.3725872 5815.9497 }
 			rotation={ -0.000000 -0.707107 -0.000000 0.707107 }
 			scale={ 1.000000 1.000000 1.000000 }
 		}

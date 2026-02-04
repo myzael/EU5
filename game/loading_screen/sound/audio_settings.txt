@@ -30,8 +30,8 @@ vcas = {
 
 	{ name = "VCA_Ambient_Panel" setting = "volume.vca:/AMBIENT_PANEL" display_text = "SETTING_Ambient_Panel" }
 
-
 	{ name = "mus_silence_speed" setting = "volume.vca:/MUSIC_DENSITY" display_text = "SETTING_Music_Density" }
+	{ name = "mus_VCA_intensity" setting = "volume.vca:/MUSIC_INTENSITY" display_text = "SETTING_Music_Intensity" }
 }
 
 thread_priority = 1 # Default to 0 but this bumps all audio related threads by 1

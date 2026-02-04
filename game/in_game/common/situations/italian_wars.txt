@@ -137,30 +137,14 @@
 				capital.region = region:france_region
 				country_type = location
 				is_subject = no
+				union ?= {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = prev
+					}
+				}
 			}  
-			order_by = {
-				value = 100
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			} 
+			order_by = great_power_score
 			max = 1  
 			check_range_bounds = no
 			save_temporary_scope_as = target_french_leader
@@ -183,30 +167,14 @@
 				capital.region = region:iberia_region
 				country_type = location
 				is_subject = no
+				union ?= {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = prev
+					}
+				}
 			}  
-			order_by = {
-				value = 100
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			} 
+			order_by = great_power_score
 			max = 1 
 			check_range_bounds = no
 			save_temporary_scope_as = target_iberian_leader
@@ -230,6 +198,12 @@
 						is_member_of_international_organization = international_organization:foreign_league_france
 						is_member_of_international_organization = international_organization:foreign_league_iberia
 					}
+					union ?= {
+						country_has_special_status = {
+							type = special_status:senior_partner
+							country = prev
+						}
+					}
 				}
 				save_temporary_scope_as = target_hre_leader
 				create_international_organization = {
@@ -252,30 +226,14 @@
 				capital.region = region:italy_region
 				country_type = location
 				is_subject = no
+				union ?= {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = prev
+					}
+				}
 			}  
-			order_by = {
-				value = 100
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			} 
+			order_by = great_power_score 
 			max = 1 
 			check_range_bounds = no
 			save_temporary_scope_as = target_ita1_leader
@@ -295,6 +253,12 @@
 		ordered_country = {  
 			limit = {
 				capital.region = region:italy_region
+				union ?= {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = prev
+					}
+				}
 				country_type = location
 				is_subject = no
 				NOR = {
@@ -306,29 +270,7 @@
 					is_member_of_international_organization = international_organization:italian_league_3
 				}
 			}  
-			order_by = {
-				value = 100
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			} 
+			order_by = great_power_score
 			max = 1 
 			check_range_bounds = no
 			save_temporary_scope_as = target_italian_2_leader
@@ -348,6 +290,12 @@
 		ordered_country = {  
 			limit = {
 				capital.region = region:italy_region
+				union ?= {
+					country_has_special_status = {
+						type = special_status:senior_partner
+						country = prev
+					}
+				}
 				country_type = location
 				is_subject = no
 				NOR = {
@@ -359,29 +307,7 @@
 					is_member_of_international_organization = international_organization:italian_league_3
 				}
 			}  
-			order_by = {
-				value = 100
-				add = {
-					value = country_total_army_levy_size
-				}
-				multiply = country_rank_level
-				add = {
-					value = army_size
-					multiply = 10
-				}
-				add = {
-					value = country_total_navy_levy_size
-					divide = 2
-				}
-				add = {
-					value = monthly_income_trade_and_tax
-					divide = 10
-				}
-				if = {
-					limit = { is_great_power = yes }
-					add = 100
-				}
-			} 
+			order_by = great_power_score
 			max = 1 
 			check_range_bounds = no
 			save_temporary_scope_as = target_italian_3_leader

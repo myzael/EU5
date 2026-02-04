@@ -4267,7 +4267,9 @@ flavor_dlh.54 = {
 			is_regent = no
 			is_heir = no
 			is_adolescent = no
+			is_infant = no
 			is_female = no
+			NOT = { has_character_modifier = imprisoned }
 		}
 		any_province = {
 			NOT = {
@@ -4293,7 +4295,9 @@ flavor_dlh.54 = {
 				is_regent = no
 				is_heir = no
 				is_adolescent = no
+				is_infant = no
 				is_female = no
+				NOT = { has_character_modifier = imprisoned }
 			}
 			save_scope_as = target_character
 		}
@@ -5369,6 +5373,7 @@ flavor_dlh.1000 = {
 			cancel_subject = root
 		}
 
+		leave_all_wars_with = overlord
 		scope:target_country = {
 			trigger_event_non_silently = flavor_dlh.1001
 		}

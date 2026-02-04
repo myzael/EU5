@@ -1729,25 +1729,6 @@ template noble_military {
 	]]
 }
 
-template clergy_military {
-	default_variables = {mesh_list = clergy_military_meshes }
-	code [[
-		clergy_military = {
-			order = 0
-			size = small
-			contributors = {
-				has_building_with_at_least_one_level:order_headquarters = 1
-				has_building_with_at_least_one_level:warrior_temple = 1
-				has_building_with_at_least_one_level:order_stronghold = 1
-			}
-			mesh_list = @mesh_list
-			
-			filter_func = next_to_anything_filter   
-			weight_func = grow_neighborhood_weights 
-		}
-	]]
-}
-
 template republican_assembly {
 	default_variables = {mesh_list = republican_assembly_meshes}
 	code [[
@@ -1837,59 +1818,6 @@ template training_fields {
 #unique_buildings
 ##############################################
 
-# template haga_sophia
-# {
-# 	default_variables = 
-# 	{
-# 		mesh_list = haga_sofia_meshes
-# 	}
-# 	code = [[
-# 		haga_sophia = {
-# 			only_in_location = constantinople
-# 			order = 0
-# 			size = large
-# 			limit = 
-# 			{
-# 				NOT = {
-# 					has_global_variable = hagia_sophia_now_mosque
-# 				}
-# 			}
-# 			mesh_list = @mesh_list
-# 			contributors = 
-# 			{
-# 				always_one = 1.0
-# 			}
-# 			filter_func = seed_neighborhood_filter   
-# 			weight_func = far_from_everything_weights 
-# 		}
-# 	]]	
-# }
-
-# template haga_sophia_mosque
-# {
-# 	default_variables = 
-# 	{
-# 		mesh_list = haga_sofia_mosque_meshes
-# 	}
-# 	code = [[
-# 		haga_sophia = {
-# 			only_in_location = constantinople
-# 			order = 0
-# 			size = large
-# 			limit = 
-# 			{
-# 					has_global_variable = hagia_sophia_now_mosque
-# 			}
-# 			mesh_list = @mesh_list
-# 			contributors = 
-# 			{
-# 				always_one = 1.0
-# 			}
-# 			filter_func = seed_neighborhood_filter   
-# 			weight_func = far_from_everything_weights 
-# 		}
-# 	]]	
-# }
 
 template sitges_church
 {
@@ -1968,13 +1896,11 @@ template religius_buildings {
 		large_clergy_meshes = large_clergy_meshes
 		medium_clergy_meshes = medium_clergy_meshes
 		small_clergy_meshes = small_clergy_meshes
-		clergy_military_meshes = clergy_military_meshes
 	}
 	code [[
 		load_template large_clergy {mesh_list = @large_clergy_meshes}
 		load_template medium_clergy {mesh_list = @medium_clergy_meshes}
 		load_template small_clergy {mesh_list = @small_clergy_meshes}
-		load_template clergy_military {mesh_list = @clergy_military_meshes}
 	]]
 }
 

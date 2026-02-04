@@ -140,6 +140,11 @@ input_context={
 	}
 
 	input_action={
+		name="toggle_window_collapse"
+		text="SETTING_INPUT_ACTION_TOGGLE_WINDOW_COLLAPSE"
+	}
+
+	input_action={
 		name="next_window"
 		text="SETTING_INPUT_ACTION_NEXT_WINDOW"
 		binding={
@@ -611,6 +616,12 @@ input_context={
 			scancode=64
 			modifier=ctrl
 		}
+	}
+
+	input_action={
+		name="toggle_alert_stash"
+		text="SETTING_INPUT_ACTION_TOGGLE_ALERT_STASH"
+		scancode=8
 	}
 
 	input_action={

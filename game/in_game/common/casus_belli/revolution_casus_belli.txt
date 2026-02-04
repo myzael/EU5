@@ -25,6 +25,13 @@
 	additional_war_enthusiasm = 0.1
   	ai_selection_desire = 100
 	war_goal_type = take_capital_imperial
+
+	ai_will_do = {
+		add = {
+			desc = "CB_REASON_IMPORTANT_CB"
+			value = 100	#AI should highly prefer this cb over others
+		}
+	}
 }
 
 spread_the_revolution_cb = {
@@ -48,4 +55,11 @@ spread_the_revolution_cb = {
 	additional_war_enthusiasm = 0.1
   	ai_selection_desire = 100
 	war_goal_type = take_capital_imperial
+
+	ai_will_do = {
+		add = {
+			desc = "CB_REASON_IMPORTANT_CB"
+			value = 100	#AI should highly prefer this cb over others
+		}
+	}
 }

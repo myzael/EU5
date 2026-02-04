@@ -13,8 +13,6 @@
 	age = "age_1_traditions"
 }
 
-
-
 n_age_1_traditions_light_ship = {
 	category = navy_light_ship
 	use_ship_names = yes

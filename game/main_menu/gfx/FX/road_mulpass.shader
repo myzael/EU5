@@ -4,6 +4,7 @@ Includes = {
 	"jomini/jomini_lighting.fxh"
 	"jomini/jomini_fog.fxh"	
 	"jomini/jomini_spline.fxh"
+	"jomini/gradient_border_constants.fxh"
 	"flatmap_lerp.fxh"
 	"fog_of_war.fxh"
 	"constants.fxh"
@@ -130,7 +131,8 @@ PixelShader =
 			float2 ddx,
 			float2 ddy,
 			float EdgeOpacityThresholdInWorldSpace,
-			float MaskValue)
+			float MaskValue,
+			int RoadTypeID)
 		{	
 			float2 FlatMapBlend = GetNoisyFlatMapLerp( Input.WorldSpacePos , GetFlatMapLerp());
 			float4 FinalColor = vec4(0.0f);
@@ -172,22 +174,70 @@ PixelShader =
 				DebugReturn( FinalColor.rgb, MaterialProps, LightingProps, EnvironmentMap );			
 			}
 			
+			// Flatmap roads rendering
 			if( FlatMapBlend.x > 0.0f )
 			{
-				float Distance = Remap( PdxTex2D( FlatMapTexture, UV ).r, 0.0, 1.0, -1.0, 1.0 );				
+				float Distance = Remap( PdxTex2D( FlatMapTexture, UV ).r, 0.0, 1.0, -1.0, 1.0 );
 				float PencilNoise = PdxTex2D( PencilNoiseMap, Input.WorldSpacePos.xz * 0.125f ).r;
-				
 				Distance += Remap( PencilNoise, 0.0f, 1.0f, -0.5f, 0.5f );
+				
 				float CameraDist = length( CameraPosition - Input.WorldSpacePos );
 				float Fuzz = Remap( CameraDist, 50.0, 400.0, 0.4, 1.0 );
 				float Offset = Remap( CameraDist, 50.0, 400.0, 0.0, -0.5 );
-				float4 Color = float4( float3(0.0,0,0), smoothstep( Offset - Fuzz, Offset + Fuzz, Distance ) );
 				
-				//float4 Color = saturate( float4( -Distance, Distance, 0, 1 ) );
-				//Color.rgb *= FlatMapBlend.y;
+				// Detect sentinel values via gradient_width:
+				// 0.222 = roads-only, 0.333 = roads+rivers
+				bool IsRoadsMapMode = GetMapModeId() == 1;
 				
-				FinalColor = lerp( FinalColor, Color, FlatMapBlend.x );
-			}				
+				if( IsRoadsMapMode )
+				{
+					Distance += 1.0f;
+					
+					// Per-road-type colors (see ROAD_TYPE_ID specializations)
+					float3 RoadTypeColor;
+					float BrightnessMul;
+					float BrightnessBias;
+					
+					if( RoadTypeID == 0 )
+					{
+						RoadTypeColor = float3( 0.0, 0.7, 0.0 );
+						BrightnessMul = 1.20f;
+						BrightnessBias = 0.06f;
+					}
+					else if( RoadTypeID == 1 )
+					{
+						RoadTypeColor = float3( 1.0, 0.4, 0.0 );
+						BrightnessMul = 1.28f;
+						BrightnessBias = 0.075f;
+					}
+					else if( RoadTypeID == 2 )
+					{
+						RoadTypeColor = float3( 1.0, 0.0, 0.0 );
+						BrightnessMul = 1.35f;
+						BrightnessBias = 0.09f;
+					}
+					else
+					{
+						RoadTypeColor = float3( 1.0, 0.0, 1.0 );
+						BrightnessMul = 1.20f;
+						BrightnessBias = 0.06f;
+					}
+					
+					float3 LineColor = saturate( RoadTypeColor * BrightnessMul + BrightnessBias );
+					float SharpFuzz = Fuzz * 0.7f;
+					
+					float OutlineAlpha = smoothstep( Offset - SharpFuzz, Offset + SharpFuzz, Distance + 1.25f );
+					float CoreAlpha = smoothstep( Offset - SharpFuzz, Offset + SharpFuzz, Distance + 1.0f );
+					
+					FinalColor = lerp( FinalColor, float4( 0.05, 0.05, 0.05, OutlineAlpha ), FlatMapBlend.x );
+					FinalColor = lerp( FinalColor, float4( LineColor, CoreAlpha ), FlatMapBlend.x );
+				}
+				else
+				{
+					float RoadAlpha = smoothstep( Offset - Fuzz, Offset + Fuzz, Distance );
+					FinalColor = lerp( FinalColor, float4( 0.0, 0.0, 0.0, RoadAlpha ), FlatMapBlend.x );
+				}
+			}
 			
 			FinalColor.a *= GlobalOpacity;
 			if( GetFlatMapLerp() < 1.0 )
@@ -197,13 +247,13 @@ PixelShader =
 				FinalColor.rgb = lerp( FoggedColor, FinalColor.rgb, GetFlatMapLerp() );
 			}
 			
-
 			return FinalColor;
-		}		
+		}
 		
 		float4 GetPixelColorWithMaskApplied(
 			VS_SPLINE_OUTPUT  Input,
-			int MaskIndex)
+			int MaskIndex,
+			int RoadTypeID)
 		{
 			float2 UV = Input.UV;
 			float2 dx=float2(0,0), dy=float2(0,0);
@@ -214,7 +264,7 @@ PixelShader =
 			float2 Mask = float2(1,1);			
 			Mask = JominiFlatSplineSampleMask( MaskTexture, Input );
 			
-			return GetPixelColor( Input, UV, dx, dy, 0, Mask[MaskIndex] );	
+			return GetPixelColor( Input, UV, dx, dy, 0, Mask[MaskIndex], RoadTypeID );	
 		}
 		
 	]]
@@ -227,8 +277,11 @@ PixelShader =
 		[[	
 			PDX_MAIN
 			{	
-				//clip(-1);				
-				return GetPixelColorWithMaskApplied( Input, 0 );				
+				//clip(-1);
+#ifndef ROAD_TYPE_ID
+#define ROAD_TYPE_ID 0
+#endif				
+				return GetPixelColorWithMaskApplied( Input, 0, ROAD_TYPE_ID );				
 			}
 		]]
 	}
@@ -243,7 +296,10 @@ PixelShader =
 			PDX_MAIN
 			{		
 				//clip(-1);
-				return GetPixelColorWithMaskApplied( Input, 1 );				
+#ifndef ROAD_TYPE_ID
+#define ROAD_TYPE_ID 0
+#endif
+				return GetPixelColorWithMaskApplied( Input, 1, ROAD_TYPE_ID );				
 			}
 		]]
 	}
@@ -258,12 +314,15 @@ PixelShader =
 			PDX_MAIN
 			{		
 				//clip(-1);
+#ifndef ROAD_TYPE_ID
+#define ROAD_TYPE_ID 0
+#endif
 				float2 UV = Input.UV;
 				float2 dx=float2(0,0), dy=float2(0,0);
 			
 				JominiFlatSplineStackedUV( Input, 8, UV, dx, dy );
 			
-				return GetPixelColor( Input, UV, dx, dy, 1.2, 1 );	
+				return GetPixelColor( Input, UV, dx, dy, 1.2, 1, ROAD_TYPE_ID );	
 			}
 		]]
 	}
@@ -278,13 +337,16 @@ PixelShader =
 			PDX_MAIN
 			{		
 				//clip(-1);
+#ifndef ROAD_TYPE_ID
+#define ROAD_TYPE_ID 0
+#endif
 				float2 UV = Input.UV;
 				float2 dx=float2(0,0), dy=float2(0,0);
 			
 				dx = ddx(UV);
 				dy = ddy(UV);
 				
-				return GetPixelColor( Input, UV, dx, dy, 1.2, 1 );
+				return GetPixelColor( Input, UV, dx, dy, 1.2, 1, ROAD_TYPE_ID );
 			}
 		]]
 	}

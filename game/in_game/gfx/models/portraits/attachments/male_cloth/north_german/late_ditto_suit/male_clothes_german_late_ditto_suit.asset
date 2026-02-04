@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	name = "male_clothes_german_late_ditto_suit_mesh"
+	file = "male_clothes_german_late_ditto_suit.mesh"
+
+	meshsettings = {
+		name = "male_clothes_german_late_ditto_suitShape"
+		index = 0
+		texture_diffuse = "male_clothes_german_late_ditto_suit_diffuse.dds"
+		texture_normal = "male_clothes_german_late_ditto_suit_normal.dds"
+		texture_specular = "male_clothes_german_late_ditto_suit_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_german_late_common_ditto_suit_entity"
+	pdxmesh = "male_clothes_german_late_ditto_suit_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/north_german/late_ditto_suit/male_clothes_german_late_ditto_suit_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_commoner_02"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "male_clothes_german_late_low_ditto_suit_entity"
+	pdxmesh = "male_clothes_german_late_ditto_suit_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/north_german/late_ditto_suit/male_clothes_german_late_ditto_suit_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_low_nobility_03"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "male_clothes_german_late_high_ditto_suit_entity"
+	pdxmesh = "male_clothes_german_late_ditto_suit_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/north_german/late_ditto_suit/male_clothes_german_late_ditto_suit_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_02"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

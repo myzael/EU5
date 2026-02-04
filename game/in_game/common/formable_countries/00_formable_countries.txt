@@ -1366,7 +1366,7 @@ UKR_f = { #Ruthenia
 }
 
 ROM_f = {
-	level = 4
+	level = 5
 	required_locations_fraction = 0.75
 	rule = fantasy
 	
@@ -2808,7 +2808,7 @@ MCH_f = {
 	rule = historical
 	
 	potential = {
-		culture = culture:jurchen_culture
+		culture ?= { has_culture_group = culture_group:jurchen_group }
 	}
 
 
@@ -2970,6 +2970,31 @@ MGE_f = {
 				mode = add_and_extend
 			}
 		}
+	}
+}
+
+MGO_f = {
+	level = 3
+	required_locations_fraction = 0.85
+	rule = historical
+	potential = {
+		culture = {
+			has_culture_group = culture_group:mongolian_group
+		}
+	}
+	allow = {
+		in_civil_war = no
+	}
+	
+	name = MGO
+	flag = MGO
+	adjective = MGO_ADJ
+	tag = MGO
+	color = map_MGO
+	regions = {
+		mongolia_region
+	}
+	form_effect = {
 	}
 }
 

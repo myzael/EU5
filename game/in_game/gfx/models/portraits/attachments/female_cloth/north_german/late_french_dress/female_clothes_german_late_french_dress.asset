@@ -1,0 +1,56 @@
+﻿pdxmesh = {
+	name = "female_clothes_german_late_french_dress_mesh"
+	file = "female_clothes_german_late_french_dress.mesh"
+
+	meshsettings = {
+		name = "female_clothes_german_late_french_dressShape"
+		index = 0
+		texture_diffuse = "female_clothes_german_late_french_dress_diffuse.dds"
+		texture_normal = "female_clothes_german_late_french_dress_normal.dds"
+		texture_specular = "female_clothes_german_late_french_dress_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_german_late_common_french_dress_entity"
+	pdxmesh = "female_clothes_german_late_french_dress_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/north_german/late_french_dress/female_clothes_german_late_french_dress_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_commoner_02_female"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "female_clothes_german_late_low_french_dress_entity"
+	pdxmesh = "female_clothes_german_late_french_dress_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/north_german/late_french_dress/female_clothes_german_late_french_dress_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_low_nobility_03_female"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+entity = {
+	name = "female_clothes_german_late_high_french_dress_entity"
+	pdxmesh = "female_clothes_german_late_french_dress_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_cloth/north_german/late_french_dress/female_clothes_german_late_french_dress_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_high_nobility_02_female"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

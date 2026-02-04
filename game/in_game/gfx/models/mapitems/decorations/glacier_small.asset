@@ -12,7 +12,7 @@ pdxmesh = {
 		texture_diffuse = "glacier_diffuse.dds"
 		texture_normal = "glacier_normal.dds"
 		texture_specular = "glacier_properties.dds"
-		shader = "standard"
+		shader = "standard_no_city"
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
@@ -21,7 +21,7 @@ pdxmesh = {
 		texture_diffuse = "glacier_diffuse.dds"
 		texture_normal = "glacier_normal.dds"
 		texture_specular = "glacier_properties.dds"
-		shader = "standard"
+		shader = "standard_no_city"
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 }

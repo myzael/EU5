@@ -83,6 +83,8 @@ decline_of_majapahit.2 = {
 
 scripted_trigger can_be_targetted_by_decline_of_majapahit_3 = {
 	power_projection > root.power_projection
+	country_type = location
+	is_rebel_country = no
 	NOT = {
 		ROOT = { has_casus_belli_on = PREV }
 	}

@@ -10,6 +10,10 @@ cb_independence_war = {
 		is_subject = yes
 		overlord = scope:target
 	}
+	allow_declaration = {
+		is_subject = yes
+		overlord = scope:target
+	}
 	
 	war_goal_type = independence
 }

@@ -207,6 +207,7 @@ influence_french_subject = {	#Influence French Subject
 				multiply = 3
 			}
 			NOT = { has_truce_with = c:FRA }
+			at_war = no
 		}
 	}
 

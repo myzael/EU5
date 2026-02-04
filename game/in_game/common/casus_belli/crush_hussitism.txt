@@ -18,6 +18,9 @@ cb_crush_hussitism = {
 			add = 10
 		}
 	}
+	custom_tags = { religious_casus_belli }
+
+	allow_release_areas = yes
 
 	war_goal_type = superiority_heretic
 }

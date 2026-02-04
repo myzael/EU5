@@ -213,6 +213,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2415942602	UI_eventGeneric_exterior			\ev_UI\events\UI_eventGeneric_exterior	
 	2423127660	UI_event_bg_north_german_nobles_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_nobles_exterior	
 	2429247398	UI_panelChild_economy_trading_currentNeeds_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_currentNeeds_show	
+	2459157509	test_income			\ev_UI\time\test_income	
 	2483300427	UI_popup_country_message			\ev_UI\popup\popup_type\UI_popup_country_message	
 	2489330806	UI_popup_religion_message			\ev_UI\popup\popup_type\UI_popup_religion_message	
 	2490112630	UI_popup_location_message			\ev_UI\popup\popup_type\UI_popup_location_message	
@@ -258,6 +259,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2920080030	UI_panelAux_diplomacy_manageSubjects_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_manageSubjects_show	
 	2924931311	UI_cursor_rightclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_aborted	
 	2927605888	UI_gameStart_cloud_in			\ev_UI\startgame_sequence\UI_gameStart_cloud_in	hooked in animation.gui with start_sound
+	2930253213	monthly_tick_income_signifier			\ev_UI\time\monthly_tick_income_signifier	Triggered at the end of every month, much which we're treating much like a "report".  This report is a time notification in essence, though also includes feedback depending on whether buildings have been completed, research has been completed, and whether income was overall positive or negative, all over the course of an in-game month.   After playing research and building completed switches (which have audio feedback enabled from UI_notify_advance_research_complete and UI_notify_building_finished), the corresponding switches are reset back to "default"   Removed inclusion of "balance" as this is no longer something we felt appropriate for monthly update.  Including here our understood difference between "balance" vs "income" Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source) Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")  No delays are set on this event, and are instead dealt with on the actors triggered    Previous note on this event: THIS ONE SHOULD ACTUALLY BE IMPLEMENTED BY ALEX AS PER CAESAR-25858
 	2949462130	UI_panelChild_geopolitics_maritime_privateers_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_privateers_show	
 	2983903936	UI_action_production_expand_rgo			\ev_UI\actions\UI_action_production_expand_rgo	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
 	3000364817	UI_panelChild_government_country_parliament_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_parliament_show	
@@ -383,19 +385,14 @@ Event	ID	Name			Wwise Object Path	Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2011191162	FlatMap			\Map\FlatMap	denoting the state the map is in 
-	2299810346	MonthlyTickBuildingComplete			\Monthly_Tick_Report\MonthlyTickBuildingComplete	Monthly tick report toggle for buildings being completed
 	2560379089	UX_Panel_Context			\UX\UX_Panel_Context	This state represents where the moluse cursor is currently located in the UI
 	3211405847	PlayerIncome			\Economy\PlayerIncome	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
 	4008345218	Gamestate_Speed			\Gamestate\Gamestate_Speed	
-	4131181917	MonthlyTickResearchComplete			\Monthly_Tick_Report\MonthlyTickResearchComplete	Monthly tick report toggle for buildings being completed
 
 State	ID	Name	State Group			Notes
 	748895195	None	FlatMap			
 	2066128362	FlatMap_on	FlatMap			
 	3217722016	FlatMap_off	FlatMap			
-	748895195	None	MonthlyTickBuildingComplete			
-	782826392	Default	MonthlyTickBuildingComplete			
-	2495990384	Report_Building_Complete	MonthlyTickBuildingComplete			
 	555374291	LocalContext	UX_Panel_Context			
 	748895195	None	UX_Panel_Context			
 	985442775	LoadingScreen	UX_Panel_Context			
@@ -410,13 +407,11 @@ State	ID	Name	State Group			Notes
 	1400591532	speed_01	Gamestate_Speed			
 	1400591534	speed_03	Gamestate_Speed			
 	1400591535	speed_02	Gamestate_Speed			
-	748895195	None	MonthlyTickResearchComplete			
-	782826392	Default	MonthlyTickResearchComplete			
-	1233547093	Report_Research_Complete	MonthlyTickResearchComplete			
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	108007250	modEnv_CameraWind_GoTo			\mod_ambience_MATTIAS\modEnv_CameraWind_GoTo	
-	420220267	modEnc_economy_income			\mod_ui\modEnc_economy_income	
+	420220267	modEnc_economy_income_increase			\mod_ui\modEnc_economy_income_increase	
+	535188884	modEnc_economy_income_decrease			\mod_ui\modEnc_economy_income_decrease	
 	552283626	modEnv_map_hoveron			\mod_ui\modEnv_map_hoveron	
 	1005714762	modEnv_map_hoveroff			\mod_ui\modEnv_map_hoveroff	
 	1048068648	modEnv_clickhold_abort			\mod_ui\modEnv_clickhold_abort	
@@ -434,14 +429,11 @@ Effect plug-ins	ID	Name	Type				Notes
 	602431758	Parametric EQ (Custom)	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	60814895	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\UI_economy_income\silence\Silence	
 	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
 	131369381	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_pause_levels\silence\Silence	
 	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
-	497010292	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\monthly_tick_research_complete\silence\Silence	
 	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
 	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\02_hi\Sine	
 	829218908	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_unpause_levels\silence\Silence	
-	853361665	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\monthly_tick\monthly_tick_building_complete\silence\Silence	
 	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\04_low\Sine	
 

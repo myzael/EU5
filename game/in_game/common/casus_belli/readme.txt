@@ -23,7 +23,11 @@
 #   ai_cede_location_desire = <script value> #root = country; scope:location = location; scope:war = war;
 #   antagonism_reduction_per_warworth_defender = <script value> #root = country; scope:recipient = recipient; scope:war = war;
 #   can_expire = <yes/no>
+#   allow_wars_on_own_subjects = <yes/no> #For CBs which are supposed to be usable against your own subject countries
 #   allow_ports_for_reach_ai = <yes/no> #For CBs like Crusade where we don't really care if AI will have any control, we want the land to release nations
+#   ai_will_do = <script value> #determines when the AI will use this casus belli; overrules the usual calculation done via war goal conquer cost (root = country, scope:target = target)
+#   custom_tags = { <strings> }	#A list of custom strings to use to identify that casus belli
+#   show_tags_in_ui = yes/no #expose the tags in the tooltips and UI
 #}
 #
 #Localization:

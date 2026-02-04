@@ -52,6 +52,29 @@ male_clothes_german_bishop_robe = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = male_clothes_german_bishop_robe_entity }
 }
 
+#	  LATE GAME		#
+male_ger_cloth_long_coat_white_collar_late_age = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_ger_cloth_long_coat_white_collar_late_age_entity }
+}
+
+male_ger_cloth_long_coat_collar_late_age = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_ger_cloth_long_coat_collar_late_age_entity }
+}
+
+male_ger_cloth_common_long_coat_late_age = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_ger_cloth_common_long_coat_late_age_entity }
+}
+
+male_clothes_german_late_common_ditto_suit = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_clothes_german_late_common_ditto_suit_entity }
+}
+male_clothes_german_late_low_ditto_suit = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_clothes_german_late_low_ditto_suit_entity }
+}
+male_clothes_german_late_high_ditto_suit = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_clothes_german_late_high_ditto_suit_entity }
+}
+
 #	  PAPACY		#
 male_clothes_papal_robe = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = male_clothes_papal_robe_entity }
@@ -237,13 +260,26 @@ female_clothes_german_low_dress = {
 female_clothes_german_nun_robe = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_nun_robe_entity  }
 }
-
 female_clothes_german_nun_robe_royal  = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_nun_robe_royal_entity  }
 }
-
 female_clothes_german_armor_silver = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_armor_silver_entity  }
+}
+
+#	  LATE GAME		#
+
+female_clothes_german_late_common_french_dress = {
+	set_tags = "corset"
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_late_common_french_dress_entity  }
+}
+female_clothes_german_late_low_french_dress = {
+	set_tags = "corset"
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_late_low_french_dress_entity  }
+}
+female_clothes_german_late_high_french_dress = {
+	set_tags = "corset"
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = female_clothes_german_late_high_french_dress_entity  }
 }
 
 #		CHINESE			#

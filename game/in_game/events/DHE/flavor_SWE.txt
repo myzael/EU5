@@ -157,6 +157,10 @@ flavor_swe.3 = {
 		10 = regular
 		10 = exterior
 	}
+	
+	trigger = {
+		country_exists = c:DAN
+	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
@@ -2232,6 +2236,7 @@ flavor_swe.47 = {
 		government_type = government_type:monarchy
 
 		ruler ?= {
+			owner = root
 			is_female = no
 			age_in_years >= 25
 			father ?= {
@@ -2275,7 +2280,7 @@ flavor_swe.47 = {
 	option = {
 		name = flavor_swe.47.a
 		historical_option = yes
-		set_new_ruler = scope:pretender
+		set_new_ruler_with_union_if_senior = { character = scope:pretender }
 		add_legitimacy = legitimacy_mild_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
 	}
@@ -2491,7 +2496,7 @@ flavor_swe.51 = { #Carl Michael Bellman
 
 	immediate = {
 		create_character = {
-			first_name = name_carl_michael
+			first_name = name_charles.name_michael
 			last_name = Bellman
 			birth_date = 1740.2.4
 			birth_location = location:stockholm

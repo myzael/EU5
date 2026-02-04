@@ -90,6 +90,14 @@ abdicate_price = {
 	legitimacy = 20
 }
 
+improve_our_cultural_view_price = {
+	prestige = 10
+}
+
+transfer_subject_price = {
+	gold = 1 #multiplied in the action
+}
+
 middle_kingdom_tribute_price = {
 	gold = 1
 }

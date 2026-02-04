@@ -1338,7 +1338,7 @@ flavor_flo.40 = { # The History of Florence by Leonardo Bruni
 
 	trigger = {
 		owns = location:florence
-		character:flo_leonardo_bruni_script = {
+		character:flo_leonardo_bruni_script ?= {
 			owner = ROOT
 			is_alive = yes
 		}

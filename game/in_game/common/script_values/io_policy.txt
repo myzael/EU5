@@ -560,6 +560,25 @@ hre_free_city_opinion_value = {
 	}
 }
 
+policy_level_upper_level = {
+	value = scope:policy_scope.policy_level
+	add = 1
+}
+
+policy_level_lower_level = {
+	value = scope:policy_scope.policy_level
+	subtract = 1
+}
+
+imperial_authority_golden_bull = {
+    value = 40
+    subtract = {
+        value = current_year
+        subtract = 1337
+    }
+    min = 0
+}
+
 country_needs_allies_value = {
 	desc = "NEEDS_ALLIES_AGAINST_STRONG_RIVALS_AND_NEIGHBOURS"
 

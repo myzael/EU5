@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "male_headwear_german_peasant_tricorn_hat_mesh"
+	file = "male_headwear_german_peasant_tricorn_hat.mesh"
+
+	meshsettings = {
+		name = "male_headwear_german_noble_velvetShape"
+		index = 0
+		texture_diffuse = "male_headwear_german_peasant_tricorn_diffuse.dds"
+		texture_normal = "male_headwear_german_peasant_tricorn_normal.dds"
+		texture_specular = "male_headwear_german_peasant_tricorn_properties.dds"
+		shader = "portrait_attachment_pattern_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"	
+	}
+}
+
+entity = {
+	name = "male_headwear_german_common_tricorn_hat"
+	pdxmesh = "male_headwear_german_peasant_tricorn_hat_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_headwear/north_german/peasant_tricorn_hat/male_headwear_german_peasant_tricorn_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "north_german_peasant_leather_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

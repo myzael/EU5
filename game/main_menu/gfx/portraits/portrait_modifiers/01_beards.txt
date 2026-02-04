@@ -61,7 +61,18 @@
 			base = 0
 			modifier = {
 				add = 50
+				portrait_late_trigger = no
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
+			}
+			modifier = {
+				add = 200
+				portrait_late_trigger = yes
+				OR = {
+					portrait_clothing_trigger = { CULTURE_FLAG = irish_gfx }
+					portrait_clothing_trigger = { CULTURE_FLAG = eastern_european_gfx }
+					portrait_clothing_trigger = { CULTURE_FLAG = german_gfx }
+					portrait_clothing_trigger = { CULTURE_FLAG = irish_gfx }
+				}
 			}
 		}
 	}
@@ -79,8 +90,22 @@
 			base = 0
 			modifier = {
 				add = 125
-				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
-				NOT = { current_age_or_later = { age = age_5_absolutism } }
+				OR = {
+					AND = {
+						portrait_late_trigger = no
+						portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
+					}
+					AND = {
+						portrait_late_trigger = yes
+						portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
+						OR = {
+							has_estate = estate_type:peasants_estate
+							has_estate = estate_type:tribes_estate
+							has_estate = estate_type:dhimmi_estate
+							NOT = { portrait_clothing_trigger = { CULTURE_FLAG = western_christian_gfx } }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -102,6 +127,7 @@
 			}
 		}
 	}
+
 
 	## ASHANTI ##
 	ashanti_beards = {

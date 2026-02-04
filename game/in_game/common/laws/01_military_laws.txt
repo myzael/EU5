@@ -54,6 +54,7 @@ recruitment_law = {
 
 		country_modifier = {
 			global_slaves_goods_output_modifier = 0.5
+			global_slave_pop_satisfaction = -0.05
 		}
 		estate_preferences = {
 			crown_estate

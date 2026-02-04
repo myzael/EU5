@@ -1709,10 +1709,15 @@ types Cards
 													raw_text = "[Localize('PAYEE')]:"
 													fontsize = 14
 												}
-												text_single = {
-													using = layoutpolicy_expanding
-													text = "[Payment.GetPayeeName(InternationalOrganization.Self)]"
-													fontsize = 14
+												widget = {
+													size = { 175 22 }
+													text_single = {
+														align = left
+														parentanchor = left
+														using = layoutpolicy_expanding
+														text = "[Payment.GetPayeeName(InternationalOrganization.Self)]"
+														fontsize = 14
+													}
 												}
 											}
 										}
@@ -1727,11 +1732,15 @@ types Cards
 												fontsize = 14
 											}
 											block "payment_block" {
-												text_single = {
-													align = center
-													using = layoutpolicy_expanding
-													text = "[Payment.GetPayeePrice(InternationalOrganization.Self)]"
-													fontsize = 14
+												widget = {
+													size = { 50 22 }
+													text_single = {
+														align = center
+														parentanchor = center
+														using = layoutpolicy_expanding
+														text = "[Payment.GetPayeePrice(InternationalOrganization.Self)]"
+														fontsize = 14
+													}
 												}
 											}
 										}
@@ -1748,11 +1757,15 @@ types Cards
 													raw_text = "[Localize('PAYERS')]:"
 													fontsize = 14
 												}
-												text_single = {
-													align = right
-													using = layoutpolicy_expanding
-													text = "[Payment.GetCountryPayerNum(InternationalOrganization.Self)]"
-													fontsize = 14
+												widget = {
+													size = { 172 22 }
+													text_single = {
+														align = right
+														parentanchor = right
+														using = layoutpolicy_expanding
+														text = "[Payment.GetCountryPayerNum(InternationalOrganization.Self)]"
+														fontsize = 14
+													}
 												}
 											}
 										}

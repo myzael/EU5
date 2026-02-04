@@ -12,8 +12,100 @@ Includes = {
 	"terrain.fxh"
 }
 
+VertexStruct VS_OUTPUT_WATER_EXT
+{
+	float4 Position			: PDX_POSITION;
+	float3 WorldSpacePos	: TEXCOORD0;
+	float2 UV01				: TEXCOORD1;
+	float4 ShadowProj		: TEXCOORD2;
+};
+
+VertexShader =
+{
+	MainCode WaterVertexShader
+	{
+		Input = "VS_INPUT_WATER"
+		Output = "VS_OUTPUT_WATER_EXT"
+		Code
+		[[
+			PDX_MAIN
+			{
+				VS_OUTPUT_WATER_EXT VertexOut;
+				VertexOut.WorldSpacePos = float3( Input.Position.x, _WaterHeight, Input.Position.y );
+				
+				#ifdef JOMINIWATER_BORDER_LERP
+					VertexOut.WorldSpacePos.x = JOMINIWATER_MapSize.x + Input.Position.x * JOMINIWATER_BorderLerpSize;
+				#endif
+				
+				VertexOut.Position = FixProjectionAndMul( ViewProjectionMatrix, float4( VertexOut.WorldSpacePos.xyz, 1.0 ) );
+				
+				VertexOut.UV01 = float2( VertexOut.WorldSpacePos.x / JOMINIWATER_MapSize.x, 1.0 - VertexOut.WorldSpacePos.z / JOMINIWATER_MapSize.y );
+
+				VertexOut.ShadowProj = mul( ShadowMapTextureMatrix, float4( VertexOut.WorldSpacePos, 1.0 ) );
+				
+				return VertexOut;
+			}
+		]]
+	}
+
+	Code
+	[[
+		VS_OUTPUT_WATER_EXT ConvertOutputWaterExt( VS_OUTPUT_PDXMESH MeshOutput )
+		{
+			VS_OUTPUT_WATER_EXT Output;
+				
+			Output.Position = MeshOutput.Position;
+			Output.WorldSpacePos = MeshOutput.WorldSpacePos;
+			Output.UV01 = float2( MeshOutput.WorldSpacePos.x / MapSize.x, 1.0 - MeshOutput.WorldSpacePos.z / MapSize.y );
+			
+			return Output;
+		}
+	]]
+
+	MainCode VS_jomini_water_mesh_ext
+	{
+		Input = "VS_INPUT_PDXMESHSTANDARD"
+		Output = "VS_OUTPUT_WATER_EXT"
+		Code
+		[[
+			PDX_MAIN
+			{
+				return ConvertOutputWaterExt( PdxMeshVertexShaderStandard( Input ) );
+			}
+		]]
+	}
+
+	MainCode VS_jomini_water_mapobject_ext
+	{
+		Input = "VS_INPUT_PDXMESH_MAPOBJECT"
+		Output = "VS_OUTPUT_WATER_EXT"
+		Code
+		[[
+			PDX_MAIN
+			{
+				return ConvertOutputWaterExt( PdxMeshVertexShader( PdxMeshConvertInput( Input ), 0, UnpackAndGetMapObjectWorldMatrix( Input.Index24_Packed1_Opacity6_Sign1 ) ) );				
+			}
+		]]
+	}
+
+}
+
 PixelShader =
 {
+	# Jomini specific
+	TextureSampler ShadowMap
+	{
+		Ref = PdxShadowmap
+		MagFilter = "Linear"
+		MinFilter = "Linear"
+		MipFilter = "Linear"
+		SampleModeU = "Wrap"
+		SampleModeV = "Wrap"
+		CompareFunction = less_equal
+		SamplerType = "Compare"
+	}
+
+	# Game specific
 	TextureSampler ClimateMap
 	{
 		Ref = ClimateMap
@@ -23,6 +115,7 @@ PixelShader =
 		SampleModeU = "Wrap"
 		SampleModeV = "Wrap"
 	}
+
 	TextureSampler EnvironmentMap
 	{
 		Ref = JominiEnvironmentMap
@@ -43,6 +136,7 @@ PixelShader =
 		SampleModeU = "Clamp"
 		SampleModeV = "Clamp"
 	}
+	
 	TextureSampler FlatMapDetail
 	{
 		Ref = FlatMap1
@@ -53,7 +147,7 @@ PixelShader =
 		SampleModeV = "Wrap"
 	}
 
-		TextureSampler DetailDiffuseIce
+	TextureSampler DetailDiffuseIce
 	{
 		Ref = DynamicTerrainMask7
 		MagFilter = "Linear"
@@ -64,7 +158,7 @@ PixelShader =
 		File = "gfx/terrain2/terrain_textures/unmasked/ice_diffuse.dds"
 	}
 
-		TextureSampler DetailNormalIce
+	TextureSampler DetailNormalIce
 	{
 		Ref = DynamicTerrainMask8
 		MagFilter = "Linear"
@@ -75,7 +169,7 @@ PixelShader =
 		File = "gfx/terrain2/terrain_textures/unmasked/ice_normal.dds"
 	}
 
-		TextureSampler DetailPropertiesIce
+	TextureSampler DetailPropertiesIce
 	{
 		Ref = DynamicTerrainMask9
 		MagFilter = "Linear"
@@ -100,11 +194,11 @@ PixelShader =
 	# TODO, get rid of Fog calculation in jomini?
 	MainCode WaterPixelShader
 	{
-		Input = "VS_OUTPUT_WATER"
+		Input = "VS_OUTPUT_WATER_EXT"
 		Output = "PS_OUTPUT"
 		Code
 		[[
-			void ApplyIce( inout SWaterOutput Water, in VS_OUTPUT_WATER Input )
+			void ApplyIce( inout SWaterOutput Water, in VS_OUTPUT_WATER_EXT Input )
 			{
 				float WinternessWater = GetSnowAmountForWater( Water._Normal, Input.WorldSpacePos, ClimateMap );
 				float WinternessTerrain = GetSnowAmountForTerrain( Water._Normal, Input.WorldSpacePos, ClimateMap );
@@ -280,6 +374,26 @@ PixelShader =
 					Water._Color.rgb = lerp( Water._Color.rgb, FlatMap * FlatMapBlend.y, FlatMapBlend.x );
 					Water._ReflectionAmount *= 1.0f - FlatMapBlend.x;
 				}
+
+				float ShadowTerm = 1.0;
+					
+				#ifdef SHADOWS_ENABLED
+				ShadowTerm = CalculateShadow( Input.ShadowProj, ShadowMap );
+				if (ShadowTerm < 1.0)
+				{
+					if (SHADOWS_INTENSITY < 0.5)
+					{
+						ShadowTerm = lerp(1.0, ShadowTerm, SHADOWS_INTENSITY / 0.5);
+					}
+					else
+					{
+						ShadowTerm = lerp(ShadowTerm, 0.0, (SHADOWS_INTENSITY - 0.5) / 0.5);
+					}
+					
+				}
+				#endif
+
+				Water._Color.rgb *= ShadowTerm;
 				
 				SMaterialProperties Material;
 				Material._PerceptualRoughness = 0.0f;
@@ -324,19 +438,37 @@ DepthStencilState DepthStencilStateBorderLerp
 	DepthWriteEnable = no
 }
 
+BlendState GBufferBlendState
+{
+	BlendEnable = yes
+	SourceBlend = "SRC_COLOR"
+	DestBlend = "ZERO"
+	BlendOp = "ADD"
+	SourceAlpha = "ONE"
+	DestAlpha = "ZERO"
+	BlendOpAlpha = "ADD"
+	WriteMask = "RED|GREEN|BLUE|ALPHA"
+}
+
 Effect water
 {
-	VertexShader = "JominiWaterVertexShader"
+	VertexShader = "WaterVertexShader"
 	PixelShader = "WaterPixelShader"
 
 	RasterizerState = "WaterRasterizer"
 	
-	Defines = { "TERRAIN_COLOR_OVERLAY" }
+	Defines = {
+		"TERRAIN_COLOR_OVERLAY"
+		"SHADOWS_ENABLED"
+		"SHADOWS_INTENSITY 0.5" # Values between 0.0 and 1.0, with 0.5 being the default intensity.
+	}
+
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
 
 Effect water_border_lerp
 {
-	VertexShader = "JominiWaterVertexShader"
+	VertexShader = "WaterVertexShader"
 	PixelShader = "WaterPixelShader"
 	
 	RasterizerState = "RasterizerStateBorderLerp"
@@ -347,12 +479,12 @@ Effect water_border_lerp
 
 Effect lake
 {
-	VertexShader = "VS_jomini_water_mesh"
+	VertexShader = "VS_jomini_water_mesh_ext"
 	PixelShader = "WaterPixelShader"
 }
 
 Effect lake_mapobject
 {
-	VertexShader = "VS_jomini_water_mapobject"
+	VertexShader = "VS_jomini_water_mapobject_ext"
 	PixelShader = "WaterPixelShader"
 }

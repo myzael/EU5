@@ -8,6 +8,17 @@ Includes = {
 	"jomini/jomini_mapobject.fxh"
 }
 
+BlendState GBufferBlendState
+{
+	BlendEnable = yes
+	SourceBlend = "SRC_COLOR"
+	DestBlend = "ZERO"
+	BlendOp = "ADD"
+	SourceAlpha = "ONE"
+	DestAlpha = "ZERO"
+	BlendOpAlpha = "ADD"
+	WriteMask = "RED|GREEN|BLUE|ALPHA"
+}
 
 Effect standard
 {
@@ -1013,6 +1024,8 @@ Effect standard_show_in_papermap
 	VertexShader = "VS_standard"
 	PixelShader = "PS_standard"
 	Defines = {"SHOW_IN_PAPERMAP" "TERRAIN" }
+
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
 Effect standard_show_in_papermapShadow
 {
@@ -1031,6 +1044,8 @@ Effect ship_hull_show_in_papermap
 		"LIGHT_INTENSITY_FACTOR 0.1"
 		"CUBEMAP_INTENSITY_FACTOR 8"
 		"ROUGHTNESS_FACTOR 0.5"}
+
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
 Effect ship_hull_show_in_papermapShadow
 {
@@ -1040,6 +1055,7 @@ Effect ship_hull_show_in_papermapShadow
 	
 	RasterizerState = ShadowRasterizerState
 }
+
 Effect ship_hull_show_in_papermap_two_sided
 {
 	VertexShader = "VS_standard"
@@ -1057,7 +1073,6 @@ Effect ship_hull_show_in_papermap_two_sidedShadow
 	Defines = { "SHIP" "HULL" "UNIQUE_UV_SET"  "SHOW_IN_PAPERMAP" "TERRAIN" }
 }	
 
-
 Effect ship_flag_show_in_papermap
 {
 	VertexShader = "VS_sine_animation"
@@ -1066,8 +1081,10 @@ Effect ship_flag_show_in_papermap
 		"LIGHT_INTENSITY_FACTOR 0.1"
 		"CUBEMAP_INTENSITY_FACTOR 8"
 		"ROUGHTNESS_FACTOR 0.5" }
+	
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
-Effect ship_flag_show_in_papermap_Shadow
+Effect ship_flag_show_in_papermapShadow
 {
 	VertexShader = "VS_sine_animation_shadow"
 	PixelShader = "PixelPdxMeshStandardShadow"	
@@ -1103,8 +1120,10 @@ Effect ship_pennant_show_in_papermap
 		"LIGHT_INTENSITY_FACTOR 0.1"
 		"CUBEMAP_INTENSITY_FACTOR 8"
 		"ROUGHTNESS_FACTOR 0.5"}
+	
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
-Effect ship_pennant_show_in_papermap_Shadow
+Effect ship_pennant_show_in_papermapShadow
 {
 	VertexShader = "VS_sine_animation_shadow"
 	PixelShader = "PixelPdxMeshStandardShadow"	
@@ -1140,8 +1159,10 @@ Effect ship_sail_show_in_papermap
 		"LIGHT_INTENSITY_FACTOR 0.1"
 		"CUBEMAP_INTENSITY_FACTOR 8"
 		"ROUGHTNESS_FACTOR 0.5"}
+
+	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }
 }
-Effect ship_sail_show_in_papermap_Shadow
+Effect ship_sail_show_in_papermapShadow
 {
 	VertexShader = "VS_standard_shadow"
 	PixelShader = "PixelPdxMeshStandardShadow"	

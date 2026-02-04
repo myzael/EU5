@@ -362,6 +362,7 @@
 							desc = "CURRENT_LEAGUE_LEADER_OPINION"
 							root = {
 								value = "opinion(prev)"
+								multiply = 0.4
 							}
 						}
 						subtract = {
@@ -406,6 +407,7 @@
 							desc = "CURRENT_LEAGUE_LEADER_OPINION"
 							root = {
 								value = "opinion(prev)"
+								multiply = 0.4
 							}
 						}
 						subtract = {
@@ -450,6 +452,7 @@
 							desc = "CURRENT_LEAGUE_LEADER_OPINION"
 							root = {
 								value = "opinion(prev)"
+								multiply = 0.4
 							}
 						}
 						subtract = {
@@ -494,6 +497,7 @@
 							desc = "CURRENT_LEAGUE_LEADER_OPINION"
 							root = {
 								value = "opinion(prev)"
+								multiply = 0.4
 							}
 						}
 						subtract = {
@@ -537,6 +541,7 @@
 							desc = "CURRENT_LEAGUE_LEADER_OPINION"
 							root = {
 								value = "opinion(prev)"
+								multiply = 0.4
 							}
 						}
 						subtract = {

@@ -1,5 +1,4 @@
 ﻿# CORE TRIGGERS
-
 portrait_clothing_trigger = {
 	gfx_culture_applicable = $CULTURE_FLAG$
 }
@@ -8,8 +7,29 @@ portrait_religion_clothing_trigger = {
 	gfx_culture_applicable = $RELIGION_FLAG$
 }
 
-# SITUATIONAL TRIGGERS
+# AGE TRIGGERS
+portrait_early_trigger = {
+	OR = {
+		birth_age = age:age_1_traditions
+		birth_age = age:age_2_renaissance
+	}
+}
 
+portrait_mid_trigger = {
+	OR = {
+		birth_age = age:age_3_discovery
+		birth_age = age:age_4_reformation
+	}
+}
+
+portrait_late_trigger = {
+	OR = {
+		birth_age = age:age_5_absolutism
+		birth_age = age:age_6_revolutions
+	}
+}
+
+# SITUATIONAL TRIGGERS
 portrait_is_hre_elector_trigger = {
 	trigger_if = {
 		limit = { exists = this } # To check if this is an actual character
@@ -230,9 +250,9 @@ portrait_high_nobility_trigger = {
 			exists = this
 			is_ruler = no
 			is_married = yes
+			num_of_spouses >= 1
 		}
 		any_spouse ?= {
-			is_alive = yes
 			is_ruler = yes
 			any_ruling_countries = { country_rank_level = 2 }
 		}
@@ -299,9 +319,9 @@ portrait_royalty_trigger = {
 			exists = this
 			is_ruler = no
 			is_married = yes
+			num_of_spouses >= 1
 		}
 		any_spouse ?= {
-			is_alive = yes
 			is_ruler = yes
 			any_ruling_countries = { country_rank_level = 3 }
 		}
@@ -333,9 +353,9 @@ portrait_imperial_trigger = {
 			exists = this
 			is_ruler = no
 			is_married = yes
+			num_of_spouses >= 1
 		}
 		any_spouse ?= {
-			is_alive = yes
 			is_ruler = yes
 			any_ruling_countries = {
 				OR = {

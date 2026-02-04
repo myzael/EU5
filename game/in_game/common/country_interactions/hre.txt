@@ -114,66 +114,8 @@ bestow_elector_status = {
 	}
 	ai_will_do = {
 		add = {
-			desc = "EMPIRE_NEED_ELECTORS"
-			value = 10
-		}
-		if = {
-			limit = { scope:actor = { is_allied_with = { target = scope:recipient } } }
-			add = {
-				desc = "game_concept_alliance"
-				value = 20
-			}
-		}
-		if = {
-			limit = {
-				scope:actor = {
-					is_rival_of = scope:recipient
-				}
-			}
-			add = {
-				desc = "game_concept_rival"
-				value = -1000
-			}
-		}
-		if = {
-			limit = {
-				scope:actor = {
-					is_enemy_of = scope:recipient
-				}
-			}
-			add = {
-				desc = "game_concept_enemy"
-				value = -100
-			}
-		}
-		add = {
-			desc = "DIPLOMATIC_REPUTATION"
-			value = {
-				value = scope:recipient.modifier:diplomatic_reputation
-				multiply = 3
-			}
-		}
-		add = {
-			desc = "OUR_OPINION_TOOLTIP"
-			value = "scope:actor.opinion(scope:recipient)"
-		}
-		add = {
-			desc = "THEIR_OPINION_TOOLTIP"
-			value = "scope:recipient.opinion(scope:actor)"
-		}
-		if = {
-			limit = { scope:actor.culture.language = scope:recipient.culture.language }
-			add = {
-				desc = "UPKEEP_SAME_LANGUAGE"
-				value = 25
-			}
-		}
-		add = {
-			desc = "game_concept_trust"
-			scope:recipient = {
-				value = "trust(scope:actor)"
-				divide = 5
-			}
+			desc = "TARGET_ACCEPTANCE"
+			value = "scope:actor.reverse_country_interaction_acceptance(country_interaction:request_elector_status|scope:recipient)"
 		}
 	}
 }
@@ -362,12 +304,112 @@ request_elector_status = {
 	}
 	ai_will_do = {
 		add = {
-			desc = "EMPIRE_NEED_ELECTORS"
-			value = 100
+			desc = "TARGET_ACCEPTANCE"
+			value = "scope:actor.country_interaction_acceptance(country_interaction:request_elector_status|scope:recipient)"
 		}
 	}
 	
 	accept = {
+		add = {
+			desc = "EMPIRE_NEED_ELECTORS"
+			value = 10
+		}
+		if = {
+			limit = { "scope:recipient.antagonism(scope:actor)" > 0 }
+			subtract = {
+				desc = "DIPLOREASON_ANTAGONISM"
+				value = "scope:actor.antagonism(scope:recipient)"
+			}
+		}
+		if = {
+			limit = { scope:actor = { government_type = government_type:monarchy } }
+			if = {
+				limit = {
+					scope:actor = { total_population_in_international_organization = { international_organization = international_organization:hre value < 100 } }
+				}
+				subtract = {
+					desc = "HRE_TINY_NATION"
+					value = 100
+				}
+			}
+			else_if = {
+				limit = {
+					scope:actor = { total_population_in_international_organization = { international_organization = international_organization:hre value < 250 } }
+				}
+				subtract = {
+					desc = "HRE_SMALL_NATION"
+					value = 50
+				}
+			}
+			if = {
+				limit = { scope:actor = { country_rank = country_rank:rank_county } }
+				subtract = {
+					desc = "rank_duchy"
+					value = 75
+				}
+			}
+			add = {
+				desc = "DIPLOREASON_DYNASTIC_POWER_IN_HRE"
+				value = "scope:actor.dynastic_power(international_organization:hre)"
+				multiply = 1.5
+			}
+		}
+		if = {
+			limit = {
+				scope:actor = {
+					OR = {
+						has_ruler = yes
+						has_heir = yes
+					}
+					ruler_or_heir_if_regent ?= {
+						has_dynasty = yes
+						dynasty ?= scope:recipient.ruler.dynasty
+					}
+				}
+			}
+			add = {
+				desc = "opinion_same_dynasty"
+				value = 50
+			}
+		}
+		if = {
+			limit = {
+				scope:actor.great_power_score > 0
+				scope:recipient.great_power_score > 0
+			}
+			if = {
+				limit = { scope:actor.great_power_score < scope:recipient.great_power_score }
+				subtract = {
+					desc = "RELATIVE_GREAT_POWER_SCORE"
+					value = scope:actor.great_power_score
+					divide = scope:recipient.great_power_score
+					multiply = 100
+					if = {
+						limit = {
+							scope:recipient = {
+								any_rival = {
+									this != scope:actor
+									is_neighbor_of = scope:actor
+								}
+							}
+						}
+						divide = 10	#"the enemy of my enemy" type of deal
+					}
+					min = -50
+					max = 50
+				}
+			}
+			else = {
+				add = {
+					desc = "RELATIVE_GREAT_POWER_SCORE"
+					value = scope:recipient.great_power_score
+					divide = scope:actor.great_power_score
+					multiply = 100
+					min = -50
+					max = 50
+				}
+			}
+		}
 		if = {
 			limit = { scope:actor = { is_allied_with = { target = scope:recipient } } }
 			add = {
@@ -389,11 +431,37 @@ request_elector_status = {
 		if = {
 			limit = {
 				scope:recipient = {
+					NOT = { is_rival_of = scope:actor }
+					NOT = { is_enemy_of = scope:actor }
+					OR = {
+						any_rival = {
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+						any_enemy = {
+							OR = {
+								is_rival_of = scope:actor
+								is_enemy_of = scope:actor
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "DIPLOREASON_THE_ENEMY_OF_MY_ENEMY"
+				value = 100
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient = {
 					is_enemy_of = scope:actor
 				}
 			}
 			add = {
-				desc = "game_concept_enemy"
+				desc = "game_concept_rival_enemy"
 				value = -100
 			}
 		}
@@ -405,12 +473,12 @@ request_elector_status = {
 			}
 		}
 		add = {
-			desc = "OUR_OPINION_TOOLTIP"
-			value = "scope:actor.opinion(scope:actor)"
-		}
-		add = {
 			desc = "THEIR_OPINION_TOOLTIP"
-			value = "scope:actor.opinion(scope:recipient)"
+			value = "scope:recipient.opinion(scope:actor)"
+			if = {
+				limit = { "scope:recipient.opinion(scope:actor)" > 0 }
+				divide = 4
+			}
 		}
 		if = {
 			limit = { scope:actor.culture.language = scope:recipient.culture.language }
@@ -421,8 +489,8 @@ request_elector_status = {
 		}
 		add = {
 			desc = "game_concept_trust"
-			scope:actor = {
-				value = "trust(scope:recipient)"
+			scope:recipient = {
+				value = "trust(scope:actor)"
 				divide = 5
 			}
 		}
@@ -1276,20 +1344,45 @@ request_county_privileges = {
 						"opinion(scope:actor)" > 0
 					}
 				}
-				divide = 10
+				divide = 4
 			}
 			else = {
-				divide = 5
+				divide = 2
 			}
 		}
 		add = {
-			desc = "game_concept_rival"
-			if = {
-				limit = {	
-					scope:recipient = { 
-						is_rival_of = scope:actor 
-					}
+			desc = "DIPLOMATIC_REPUTATION"
+			value = {
+				value = scope:actor.modifier:diplomatic_reputation
+				multiply = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient = { 
+					is_allied_with = { target = scope:actor }
 				}
+			}
+			add = {
+				desc = "HAS_ALLIANCE"
+				value = 25
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient = { is_rival_of = scope:actor }
+			}
+			add = {
+				desc = "game_concept_rival"
+				value = -1000
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient = { is_enemy_of = scope:actor }
+			}
+			add = {
+				desc = "game_concept_rival_enemy"
 				value = -100
 			}
 		}
@@ -1300,15 +1393,15 @@ request_county_privileges = {
 				divide = 5
 			}
 		}
-		add = {
-			desc = "IS_AT_WAR"
-			if = {
-				limit = {	
-					scope:recipient = { 
-						at_war = yes
-					}
+		if = {
+			limit = {
+				scope:recipient = { 
+					at_war = yes
 				}
-				value = -25
+			}
+			add = {
+				desc = "IS_AT_WAR"
+				value = -1000
 			}
 		}
 	}
@@ -1534,6 +1627,57 @@ enforce_religious_unity = {
 		scope:recipient = {
 			change_religion = scope:actor.religion
 			change_religion_for_ruler_and_family = { country = scope:recipient religion = scope:actor.religion }
+			hidden_effect = {
+				set_variable = {
+					name = hre_got_religion_enforced
+					value = yes
+					days = 3
+				}
+			}
+		}
+		hidden_effect = {
+			scope:actor = {
+				set_variable = {
+					name = imperial_authority_change_action
+					value = scope:recipient.total_population
+				}
+				if = {
+					limit = {
+						exists = international_organization:hre
+						international_organization:hre.international_organization_population > 0
+					}
+					change_variable = {
+						name = imperial_authority_change_action
+						divide = international_organization:hre.international_organization_population
+					}
+				}
+				else = {
+					change_variable = {
+						name = imperial_authority_change_action
+						divide = 1000
+					}
+				}
+				change_variable = {
+					name = imperial_authority_change_action
+					max = 0.2
+					min = 0.01
+					multiply = 100
+				}
+			}
+		}
+		custom_tooltip = {
+			text = hre.imperial_authority_change_action.tt
+			international_organization:hre = {
+				change_variable = {
+					name = imperial_authority
+					add = { value = scope:actor.var:imperial_authority_change_action }
+				}
+			}
+		}
+		hidden_effect = {
+			scope:actor = {
+				remove_variable = imperial_authority_change_action
+			}
 		}
 	}
 	reject_effect = {
@@ -1562,6 +1706,7 @@ enforce_religious_unity = {
 			value = 50
 		}
 		add = hre_default_diplo_action_acceptance
+		add = hre_add_recipient_trust
 	}
 }
 demand_unlawful_territory = {
@@ -1732,6 +1877,15 @@ demand_unlawful_territory = {
 							modifier = opinion_released_from_unlawful_territory
 							target = scope:actor
 						}
+						if = {
+							limit = { religion = religion:catholic }
+							international_organization:catholic_church = {
+								add_country_to_international_organization = scope:target_country
+							}
+						}
+						international_organization:hre = {
+							add_country_to_international_organization = scope:target_country
+						}
 					}
 				}
 			}
@@ -1793,6 +1947,7 @@ demand_unlawful_territory = {
 			}
 		}
 		add = hre_default_diplo_action_acceptance
+		add = hre_add_actor_trust
 	}
 }
 ask_to_vote_for_me_as_emperor = {
@@ -2125,6 +2280,7 @@ bolster_imperial_army = {
 			value = 25
 		}
 		add = hre_default_diplo_action_acceptance
+		add = hre_add_recipient_trust
 	}
 }
 

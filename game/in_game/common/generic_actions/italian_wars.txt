@@ -521,6 +521,12 @@ create_italian_league = {
 					is_leader_of_international_organization = international_organization:italian_league_3
 				}
 			}
+			union ?= {
+				country_has_special_status = {
+					type = special_status:senior_partner
+					country = prev
+				}
+			}
 		}
 		custom_tooltip = {
 			text = not_3_italian_leagues_exist

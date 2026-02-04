@@ -67,7 +67,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 31"
+		name="Lane 1"
 		behavioral_state="Idle"
 		transition_interval=0.000000
 	}
@@ -129,7 +129,7 @@ events={
 			"UnitState"="1"
  		}
 		behavioral_state="Attack"
-		transition_interval=0.250000
+		transition_interval=0.000000
 	}
  	behavioral_state_transition={
 		name="Move to Idle"
@@ -251,12 +251,6 @@ events={
 		stop_on_state_change=yes
 		audio_event_name="wpn_gun_handle"
 	}
- 	audio_event={
-		name="snd_handle_6"
-		trigger_time_absolute=14.760811
-		stop_on_state_change=yes
-		audio_event_name="wpn_gun_handle"
-	}
  	audio_event_switches={
 		name="snd_AnimState_idle"
 		values={ {
@@ -372,6 +366,12 @@ events={
 		hierarchy_place="vfx_loc_01"
 		type=start
 	}
+ 	audio_event={
+		name="snd_handle_6"
+		trigger_time_absolute=14.760811
+		stop_on_state_change=yes
+		audio_event_name="wpn_gun_handle"
+	}
  	particle_action={
 		name="ignite_start"
 		trigger_time_absolute=14.900000
@@ -473,7 +473,7 @@ timelines={
 			"snd_AnimState_attack"
 		}
 		boundary_behavior=loop
-		duration=17.299999
+		duration=16.000000
 		events={
 			"chinese_firing_vfx_stop"
 			"snd_reload_1"
@@ -481,11 +481,11 @@ timelines={
 			"snd_handle_5"
 			"snd_handle_3"
 			"snd_handle_2"
-			"snd_handle_6"
 			"ignite_stop_vfx"
 			"muzzle_stop_vfx"
 			"snd_attack_1"
 			"muzzle_start_vfx"
+			"snd_handle_6"
 			"ignite_start"
 			"Attack to idle"
 		}
@@ -583,7 +583,7 @@ timelines={
 			"snd_AnimState_attack"
 		}
 		boundary_behavior=loop
-		duration=17.299999
+		duration=16.000000
 		events={
 			"chinese_firing_vfx_stop"
 			"snd_reload_1"
@@ -591,11 +591,11 @@ timelines={
 			"snd_handle_5"
 			"snd_handle_3"
 			"snd_handle_2"
-			"snd_handle_6"
 			"ignite_stop_vfx"
 			"muzzle_stop_vfx"
 			"snd_attack_1"
 			"muzzle_start_vfx"
+			"snd_handle_6"
 			"ignite_start"
 		}
 		starttime_offset=15.000000
@@ -634,7 +634,7 @@ timelines={
 
 starting_timeline={
 	on_enter={
-		"Lane 31"
+		"Lane 1"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

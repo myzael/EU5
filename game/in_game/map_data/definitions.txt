@@ -8217,6 +8217,8 @@ america = {
 
 					negro_amazon_jungle purus_amazon_jungle solimoes_amazon_jungle
 					cabaliana_lake
+
+					madeira_amazon_jungle
 				}
 				marajoara_province = {
 					curumu ananatuba anajas arari marajoara pixipixi
@@ -8235,10 +8237,35 @@ america = {
 					curuai_lake itandeua_lake itarim_lake
 					monte_alegre_lake caxiuana_bay
 				}
+				lower_tapajos_province = {
+					mundurukania satere_mawe curuai tupulicus ukarangma
+					kuben_kran_ken
+					xingu_amazon_jungle
+					tapajos_amazon_jungle
+				}
+			}
+			mato_grosso_area = {
+				pantanal_province = {
+					evuevi sucuriu piquiri camapua ytykyra
+
+					pantanal_swamp pantanal_forest
+				}
+				miranda_province = {
+					mebengokre aquidauana
+					kadiweu piripucu terena nioac
+				}
+				cuiaba_province = {
+ 					dawande balotipone parecis haliti ikuiapa guato otuques
+				}
+				tacuru_province = {
+					paranaiba porekry opaye ofaie taquarucu anhandui
+					kaiowa kaiwa chiripa maracaju
+
+					tacuru_jungle
+				}
 				xingu_province = {
 					bakairi kukuro_kalapalo kuhikugu
 
-					xingu_amazon_jungle
 				}
 				juruena_province = {
 					irantxe enawene kajkwakratxi apiaka kayabi rikbaktsa
@@ -8246,22 +8273,15 @@ america = {
 
 					apiaka_jungle kayabi_jungle
 				}
-				lower_tapajos_province = {
-					mundurukania satere_mawe curuai tupulicus ukarangma
-					kuben_kran_ken
-				}
 				upper_tapajos_province = {
 					kura kajabi kaiabi panara apiacas ikpeng 
 
-					tapajos_amazon_jungle
-				}
-				madeira_brazil_province = {
-					oro_win karipuna pakaasnovos yjxa ahe wari kaxarari
-
-					madeira_amazon_jungle
 				}
 			}
 			guapore_area = {
+				madeira_brazil_province = {
+					oro_win karipuna pakaasnovos yjxa ahe wari kaxarari
+				}
 				ji_parana_province = {
 					uru_pa_in jiparana uru_eu_wau_wau amundava itarap djeoromitxi
 					kwaza akana latunde nambikwara surui_paiter kawahib 
@@ -8445,8 +8465,6 @@ america = {
 					sao_luis_do_paraitinga lorena guaratingueta taubate paraibuna jacarei
 					cunhambebe_forest paraibuna_forest
 				}
-			}
-			janeiro_area = {
 				piumhi_province = {
 					santo_antonio_monte formiga piumhi tres_pontas
 				}
@@ -8880,8 +8898,8 @@ america = {
 					mamorecillo_forest conguagua_forest
 				}
 			}
-			paranena_area = {
-				paranena_province = {
+			paraguay_area = {
+				paraguay_province = {
 					nemby kyyindy akaray kaarendy canindeyu takuru_puku ycuamandiyu ayvu_pora
 					pai_tavytera kuarepoti curuguaty kaaguy_jehasapa yguazu tsiripa ygana
 				}
@@ -8936,26 +8954,6 @@ america = {
 
 					pilaya_jungle yungas_jungle
 					muyupampa_forest
-				}
-			}
-			paraguay_area = {
-				pantanal_province = {
-					evuevi sucuriu piquiri camapua ytykyra
-
-					pantanal_swamp pantanal_forest
-				}
-				miranda_province = {
-					mebengokre aquidauana
-					kadiweu piripucu terena nioac
-				}
-				cuiaba_province = {
- 					dawande balotipone parecis haliti ikuiapa guato otuques
-				}
-				paraguay_province = {
-					paranaiba porekry opaye ofaie taquarucu anhandui
-					kaiowa kaiwa chiripa maracaju
-
-					tacuru_jungle
 				}
 			}
 		}

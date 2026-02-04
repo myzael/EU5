@@ -157,6 +157,43 @@ male_headwear_german_archbishop_mitre = {
 	entity = { required_tags = ""			shared_pose_entity = head   entity = male_headwear_german_archbishop_mitre_entity   }
 }
 
+#	  LATE AGES		#
+male_headwear_german_high_tricorn_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_high_tricorn_hat_entity   }
+}
+
+male_headwear_german_no_feathers_high_tricorn_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_no_feathers_high_tricorn_hat_entity   }
+}
+
+male_headwear_german_left_feathers_high_tricorn_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_left_feathers_high_tricorn_hat_entity   }
+}
+
+male_headwear_german_noble_tricorn_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_burgher_tricorn_hat_entity   }
+}
+
+male_headwear_german_common_tricorn_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_common_tricorn_hat   }
+}
+
+
+female_headwear_modern_summer_hat = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headwear_modern_summer_hat_entity   }
+}
+
+female_headwear_modern_summer_hat_front = {
+	set_tags = "hair_covered"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headwear_modern_summer_hat_front_entity   }
+}
+
 #	  BOHEMIAN		#
 male_headwear_bohemian_royal_crown = {
 	set_tags = "hair_covered"  
@@ -438,12 +475,10 @@ female_headwear_german_nun_veil_crown = {
 
 #	  ENGLISH		#
 female_headwear_english_royal_crown = {
-	set_tags = "hair_covered"
 	set_tags = "hair_covered_long"
 	entity = { required_tags = ""			shared_pose_entity = head   entity = female_headwear_english_royal_crown_entity   }
 }
 female_headwear_english_royal_crown_simple = {
-	set_tags = "hair_covered"
 	set_tags = "hair_covered_long"
 	entity = { required_tags = ""			shared_pose_entity = head   entity = female_headwear_english_royal_crown_simple_entity   }
 }

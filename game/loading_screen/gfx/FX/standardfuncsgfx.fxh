@@ -34,6 +34,7 @@ ConstantBuffer( GameSharedConstants )
 	float		_GCFlatMapFadeEdgeNoiseSize;
 
 	float 		_GCBorderTakeTerraIncognitaIntoAccount;
+	int			_GCMapModeId;
 };
 
 	Code
@@ -125,6 +126,10 @@ ConstantBuffer( GameSharedConstants )
 		{
 			return _GCBorderTakeTerraIncognitaIntoAccount;
 		}
+
+		int GetMapModeId(){
+			return _GCMapModeId;
+		}
 	#else
 			float2 GetMapSize(){
 			return float2(1.0,1.0);
@@ -210,6 +215,10 @@ ConstantBuffer( GameSharedConstants )
 		float GetBorderTakeTerraIncognitaIntoAccount()
 		{
 			return 0.0;
+		}
+	
+		int GetMapModeId(){
+			return -1;
 		}
 	#endif
 	]]

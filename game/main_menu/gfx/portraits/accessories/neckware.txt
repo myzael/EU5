@@ -28,6 +28,11 @@ female_neckless_beads_cross = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = neckwear_neckless_beads_cross_entity    }       
 }
 
+# Late Era
+male_neckwear_north_german_sash = {       
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = male_neckwear_north_german_sash_entity    }       
+}
+
 # SYRIAN
 syrian_female_neckwear_noble_neckless_topez = {       
     entity = { required_tags = ""           shared_pose_entity = torso       entity = syrian_female_neckwear_noble_neckless_topez_entity    }       

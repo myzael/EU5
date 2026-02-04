@@ -77,3 +77,11 @@ beard_german_short_no_mustache_01 = {
 beard_asian_full_manchu = {
    entity = {  required_tags = ""          shared_pose_entity = head   entity = beard_asian_full_manchu_entity }
 }
+
+beard_german_mustache_handlebar_small = {
+   entity = {  required_tags = ""          shared_pose_entity = head   entity = beard_german_mustache_handlebar_small_entity }
+}
+
+beard_german_mustache_handlebar_angle = {
+   entity = {  required_tags = ""          shared_pose_entity = head   entity = beard_german_mustache_handlebar_angle_entity }
+}

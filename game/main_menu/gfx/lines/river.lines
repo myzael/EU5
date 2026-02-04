@@ -11,15 +11,15 @@ line = {
         #Fill
         layer = {
         diffuse = "gfx/lines/river_flow_line.dds"
-        mask 	= "gfx/lines/line_mask_fade.dds"
+        mask 	= "gfx/lines/line_diffuse_fill.dds"
      
         shader = "standard_alpha_blend_depth"
         priority = 0
-       #tintcolor = hsv{ 0.3 0.8 0.8      }       # color to overlay on texture
- 
+        tintcolor = hsv{ 0.55 0.4 1.0 }       # bright cyan-ish line on top of river
+
         width = {
-            { zoom_step = 2		value = 5     }
-            { zoom_step = 2	value = 5      }
+            { zoom_step = 6 value = 5 }
+            { zoom_step = 11 value = 7 }
         }
          
         opacity = {

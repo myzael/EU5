@@ -288,8 +288,8 @@ portrait_editor = {
 			type = "spot_light"	# Valid types are "spot_light", "point_light", and "directional_light"
 			affected_by_shadow = yes
 
-			color = hsv{ 0.6 0.4 4.8 } # Hue, saturation, value. Increase value for more intense lights
-			position = cylindrical{ 100 	120 	-10 } # Radius, height, angle
+			color = hsv{ 0.1 0.2 4.8 } # Hue, saturation, value. Increase value for more intense lights
+			position = cylindrical{ 100 	100 	-10 } # Radius, height, angle
 
 			# For spot lights and directional lights
 			look_at = { 0 0 0 }
@@ -332,7 +332,7 @@ portrait_editor = {
 	}
 
 	shadow_camera = {
-		position = cylindrical{ 100 120 -10 }
+		position = cylindrical{ 100 100 -10 }
 		look_at = { 0 0	0 }
 		look_at_node = Neck_B
 		fov = 100

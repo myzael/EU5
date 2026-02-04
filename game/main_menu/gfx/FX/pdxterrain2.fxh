@@ -113,9 +113,9 @@ VertexStruct VS_OUTPUT
 	float3 WorldSpacePos	: TEXCOORD1;
 	float4 ShadowProj		: TEXCOORD2;
 
-	@ifdef MIP_LEVEL_ENABLED
-	float4 Color				: COLOR0;
-	@endif
+	#ifdef MIP_LEVEL_ENABLED
+		float4 Color				: COLOR0;
+	#endif
 };
 
 

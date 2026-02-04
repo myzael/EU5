@@ -19,4 +19,11 @@ cb_liberate_hre_member = {
 	}
 
 	war_goal_type = take_capital_liberate_hre_member
+
+	ai_will_do = {
+		add = {
+			desc = "CB_REASON_IMPORTANT_CB"
+			value = 100	#AI should highly prefer this cb over others
+		}
+	}
 }

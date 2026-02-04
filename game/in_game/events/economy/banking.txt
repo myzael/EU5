@@ -21,6 +21,11 @@ banking.1 = {
 	option = {
 		name = banking.1.a
 		location:augsburg = {
+			change_building_level_in_location = {
+				building = building_type:banking_office
+				value = 1
+				owner = owner
+			}
 			create_building_country_in_location = {
 				name = {
 					name = THE_FUGGERS
@@ -63,11 +68,6 @@ banking.1 = {
 					}
 					set_new_ruler = scope:fugger_ruler
 				}
-			}
-			change_building_level_in_location = {
-				building = building_type:banking_office
-				value = 1
-				owner = scope:the_fuggers
 			}
 		}
 

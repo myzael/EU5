@@ -5,9 +5,12 @@ Includes = {
 	"gbuffer.fxh"
 	"winter.fxh"
 	"flatmap_lerp.fxh"
+	"jomini/gradient_border_constants.fxh"
 	"river_vertex_shader.fxh"
 	"terrain.fxh"
 }
+
+
 VertexShader = 
 {
 	MainCode CaesarRiverVertexShader
@@ -248,39 +251,85 @@ PixelShader =
 					RiverColor.a *= FlatMap._LandMask;
 					
 					float PencilNoise = PdxTex2D( PencilNoiseMap, Input.WorldSpacePos.xz * 0.125f ).r;
-					
+
+					bool IsSentinelActive = ( GB_GradientWidth >= 0.11f && GB_GradientWidth <= 0.12f ) || ( GB_GradientWidth >= 0.33f && GB_GradientWidth <= 0.34f );
+			
 					//Base contour
 					float Zoomish = dot( Input.WorldSpacePos - CameraPosition, CameraLookAtDir );
 					float AlphaFuzz = RemapClamped( Zoomish, 130, 368, 0.5f, 1.0f );
+					
+					// CUSTOMIZATION: Adjust river appearance when sentinel is active
+					if( IsSentinelActive )
+					{
+						// THICKNESS: Increase this value to make rivers thicker (default: 1.0)
+						Distance += 1.0f;
+					}
+					
 					RiverColor.a *= smoothstep( -AlphaFuzz, AlphaFuzz, Distance - 0.2f - PencilNoise * 0.2 );
 					
-					//Apply color
-					RiverColor.rgb = Overlay( RiverColor.rgb, float3( 0.2, 0.3, 0.8 ) );
+					// Apply color with flow animation
+					if( IsSentinelActive )
+					{
+						// Flow animation moving downstream
+						float FlowSpeed = 4.5f;
+						float Time = GetScaledGlobalTime() * FlowSpeed;
+						float AnimatedU = Input.UV.x - Time;
+						
+						// Pulse spacing and width
+						float GradientRepeat = 32.0f;
+						float Phase = frac( AnimatedU / GradientRepeat );
+						
+						// Wide pulse with soft edges
+						float PulseWidth = 0.44f;
+						float EdgeSoft = PulseWidth * 0.25f;
+						float Centered = abs( Phase - 0.5f );
+						float Pulse = 1.0f - smoothstep( PulseWidth * 0.5f, PulseWidth * 0.5f + EdgeSoft, Centered );
+						
+						// Color ramp
+						float3 BaseRiverColor = float3( 0.50, 0.85, 1.0 );  // bright cyan for gaps
+						float3 FlowHighlight = float3( 0.10, 0.30, 0.60 );  // darker blue for pulses
+						RiverColor.rgb = lerp( BaseRiverColor, FlowHighlight, Pulse * 1.0f );
+					}
+					else
+					{
+						RiverColor.rgb = Overlay( RiverColor.rgb, float3( 0.2, 0.3, 0.8 ) );
+					}
 					
-					//River bank
-					float Edge = smoothstep( AlphaFuzz, 0.0, abs( Distance - 0.2f - PencilNoise * 0.2 ) );
-					RiverColor.rgb = lerp( RiverColor.rgb, RiverColor.rgb * 0.1, Edge );
+					// River bank (disabled when sentinel active for cleaner look)
+					if( !IsSentinelActive )
+					{
+						float Edge = smoothstep( AlphaFuzz, 0.0, abs( Distance - 0.2f - PencilNoise * 0.2 ) );
+						RiverColor.rgb = lerp( RiverColor.rgb, RiverColor.rgb * 0.1, Edge );
+					}
 					
-					//Waves
-					float NoiseGap = 0.1;
-					float NoiseFade = 0.1;
-					float SideDistOffset = -0.1; //To compensate for poor quality SDF generated in photoshop
-					float LengthwiseNoise = CalcNoise( Input.UV.x * 0.15 );
-					float WaveSine = sin( Input.UV.x * 7.0f ) * 0.05f;
-					float Lines = smoothstep( 0.25, 0.0, abs( Distance - 1.2 + WaveSine ) );
-					Lines += smoothstep( 0.25, 0.5, abs( LengthwiseNoise - 0.5f ) ) * smoothstep( 0.25, 0.0, abs( Distance - 2.0 ) + WaveSine );
+					// Waves (disabled when sentinel active for cleaner look)
+					if( !IsSentinelActive )
+					{
+						float NoiseGap = 0.1;
+						float NoiseFade = 0.1;
+						float SideDistOffset = -0.1; //To compensate for poor quality SDF generated in photoshop
+						float LengthwiseNoise = CalcNoise( Input.UV.x * 0.15 );
+						float WaveSine = sin( Input.UV.x * 7.0f ) * 0.05f;
+						float Lines = smoothstep( 0.25, 0.0, abs( Distance - 1.2 + WaveSine ) );
+						Lines += smoothstep( 0.25, 0.5, abs( LengthwiseNoise - 0.5f ) ) * smoothstep( 0.25, 0.0, abs( Distance - 2.0 ) + WaveSine );
 					
-					float SideMask = smoothstep( 0.5-NoiseGap, 0.5-NoiseGap-NoiseFade, LengthwiseNoise ) * smoothstep( SideDistOffset, SideDistOffset+0.1, DistanceRaw.g );
-					SideMask += smoothstep( 0.5+NoiseGap, 0.5+NoiseGap+NoiseFade, LengthwiseNoise ) * smoothstep( SideDistOffset, SideDistOffset-0.1, DistanceRaw.g );
-					Lines *= SideMask;					
-					Lines *= PencilNoise;
-					RiverColor.rgb = lerp( RiverColor.rgb, RiverColor.rgb * 0.1, Lines );
+						float SideMask = smoothstep( 0.5-NoiseGap, 0.5-NoiseGap-NoiseFade, LengthwiseNoise ) * smoothstep( SideDistOffset, SideDistOffset+0.1, DistanceRaw.g );
+						SideMask += smoothstep( 0.5+NoiseGap, 0.5+NoiseGap+NoiseFade, LengthwiseNoise ) * smoothstep( SideDistOffset, SideDistOffset-0.1, DistanceRaw.g );
+						Lines *= SideMask;					
+						Lines *= PencilNoise;
+						RiverColor.rgb = lerp( RiverColor.rgb, RiverColor.rgb * 0.1, Lines );
+					}
 					
-					
-					//Finalize output
+					// Finalize output
 					RiverColor.rgb *= FlatMapBlend.y;
 					RiverColor.a *= Input.Transparency * saturate( ( Input.DistanceToMain - 0.15f ) * 15.0f );
-					RiverColor.a *= 1.0f - GetSimulatedFlatMapLerp();
+					
+					// Keep rivers visible in sentinel mode; fade out otherwise
+					if( !IsSentinelActive )
+					{
+						RiverColor.a *= 1.0f - GetSimulatedFlatMapLerp();
+					}
+					
 					FinalColor = lerp( FinalColor, RiverColor, FlatMapBlend.x );
 				}
 				

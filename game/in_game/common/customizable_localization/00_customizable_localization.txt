@@ -813,6 +813,19 @@ GetWokouName = {
 	}
 }
 
+GetReasonToKeepLaw = {
+	type = international_organization
+	text = {
+		localization_key = POLICY_POPULARITY_TO_KEEP_DYNAMIC
+		trigger = { exists = scope:target }
+	}
+	# Basename
+	text = {
+		fallback = yes
+		localization_key = POLICY_POPULARITY_TO_KEEP_STATIC
+	}
+}
+
 # Note: Unfortunately, there is no location -> every_character_in_location link due to how characters determine in which location they are.
 # Because of this, I had to hardcode these reformers as custom tooltips so that the tooltip in the Reformation situation would show the names
 # of multiple reformers if two happen to be in the same location.

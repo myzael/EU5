@@ -471,9 +471,7 @@ pirate_events.7 = {
 					is_consort = no
 					is_heir = no
 				}
-				any_sub_unit = {
-					is_ship = yes
-				}
+				is_navy = yes
 			}
 		}
 	}
@@ -500,30 +498,24 @@ pirate_events.7 = {
 						is_consort = no
 						is_heir = no
 					}
-					any_sub_unit = {
-						is_ship = yes
-					}
+					is_navy = yes
 				}
 			}
 			save_scope_as = target_country
-			if = {
+			random_unit = {
 				limit = {
-					any_unit = {
-						any_sub_unit = {
-							is_ship = yes
-						}
+					has_commander = yes
+					leader = {
+						is_ruler = no
+						is_regent = no
+						is_consort = no
+						is_heir = no
 					}
+					is_navy = yes
 				}
-				random_unit = {
-					limit = {
-						any_sub_unit = {
-							is_ship = yes
-						}
-					}
-					save_scope_as = target_navy
-					leader ?= { save_scope_as = target_character }
-				}
-			}			
+				save_scope_as = target_navy
+				leader = { save_scope_as = target_character }
+			}		
 		}
 	}
 

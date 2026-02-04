@@ -4,7 +4,7 @@
 
 behavioral_states={
 	"Attack"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Attack_editor_timeline"
 		}
 		timeline_layer={
@@ -12,7 +12,7 @@ behavioral_states={
 		}
 	}
  	"Idle"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Idle_editor_timeline"
 		}
 		timeline_layer={
@@ -20,7 +20,7 @@ behavioral_states={
 		}
 	}
  	"Move"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Move_editor_timeline"
 		}
 		timeline_layer={
@@ -28,7 +28,7 @@ behavioral_states={
 		}
 	}
  	"Retreat"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Retreat_editor_timeline"
 		}
 		timeline_layer={
@@ -36,7 +36,7 @@ behavioral_states={
 		}
 	}
  	"Charge"={
-		timeline_layer={
+		preferent_timeline_layer={
 			timeline="L_relative_Charge_editor_timeline"
 		}
 		timeline_layer={
@@ -71,7 +71,7 @@ behavioral_states={
 
 events={
 	behavioral_state_transition={
-		name="Lane 61"
+		name="Lane 1"
 		behavioral_state="Idle"
 		transition_interval=0.000000
 	}
@@ -264,17 +264,31 @@ events={
 
 timelines={
 	"L_relative_Attack_editor_timeline"={
+		on_enter={
+			"snd_AnimState_attack"
+		}
 		boundary_behavior=loop
 		duration=6.000000
 		events={
+			"snd_gun_handle"
+			"snd_gun_handle2"
+			"bow_arrow_start_vfx"
+			"snd_attack_shot"
+			"bow_arrow_stop_vfx"
 			"Attack to Idle"
 		}
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="pistol_cavalry_attack_animation"
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_Idle_editor_timeline"={
-		boundary_behavior=loop
+		on_enter={
+			"snd_AnimState_idle"
+		}
+		boundary_behavior=clamp
 		duration=3.233670
 		events={
 			"Idle to Attack"
@@ -286,9 +300,14 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="pistol_cavalry_idle_01_animation"
 		duration_source=animation
+		generated_timeline=yes
 	}
  	"L_relative_Move_editor_timeline"={
+		on_enter={
+			"snd_AnimState_moving"
+		}
 		boundary_behavior=loop
 		duration=1.000000
 		events={
@@ -297,9 +316,15 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="pistol_cavalry_walk_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_Retreat_editor_timeline"={
+		on_enter={
+			"snd_AnimState_retreat"
+		}
 		boundary_behavior=loop
 		duration=1.000000
 		events={
@@ -308,9 +333,15 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="pistol_cavalry_walk_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_relative_Charge_editor_timeline"={
+		on_enter={
+			"snd_AnimState_charge"
+		}
 		boundary_behavior=loop
 		duration=0.369231
 		events={
@@ -319,7 +350,10 @@ timelines={
 		starttime_offset=0.000000
 		playback_rate=1.000000
 		layer=0
+		animation="pistol_cavalry_charge_animation"
 		duration_source=animation
+		generated_timeline=yes
+		time_offset_source=unsynced_random_on_enter
 	}
  	"L_default_Idle Loop_editor_timeline"={
 		boundary_behavior=loop
@@ -331,6 +365,7 @@ timelines={
 		playback_rate=1.000000
 		layer=0
 		duration_source=group_max
+		generated_timeline=yes
 	}
  	"idle_bow_01_animation"={
 		on_enter={
@@ -361,7 +396,7 @@ timelines={
 		on_enter={
 			"snd_AnimState_charge"
 		}
-		boundary_behavior=clamp
+		boundary_behavior=loop
 		duration=0.369231
 		starttime_offset=0.000000
 		playback_rate=1.000000
@@ -445,7 +480,7 @@ timelines={
 
 starting_timeline={
 	on_enter={
-		"Lane 61"
+		"Lane 1"
 	}
 	boundary_behavior=loop
 	starttime_offset=0.000000

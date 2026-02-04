@@ -12,6 +12,9 @@ move_nw_good_to_new_location = {
 	automation_tick = never
 	automation_tick_frequency = 12
 
+	maximum_targets_in_one_tick = 20
+	disallowed_duplicates_of_targets_for_ai = { target_location }
+
 	potential = {
 	}
 
@@ -354,7 +357,7 @@ move_nw_good_to_new_location = {
 				#If there is surplus is less valuable
 				if = {
 					limit = {
-						is_in_surplus_in_market = { market = scope:mission_target_market country = root value > 0 }
+						is_in_surplus_in_market = { market = scope:target_location.market country = root value > 0 }
 					}
 					subtract = 	100
 				}
@@ -389,6 +392,9 @@ move_ow_good_to_new_location = {
 	ai_tick_frequency = 60
 	automation_tick = never
 	automation_tick_frequency = 12
+
+	maximum_targets_in_one_tick = 20
+	disallowed_duplicates_of_targets_for_ai = { target_location }
 
 	potential = {
 	}

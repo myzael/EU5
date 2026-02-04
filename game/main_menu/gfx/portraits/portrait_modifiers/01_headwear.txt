@@ -19,6 +19,7 @@
 		}
 	}
 
+	## EUROPEAN ##
 	european_commoner = {
 		dna_modifiers = {
 			accessory = {
@@ -284,6 +285,10 @@
 				add = 450
 				portrait_is_hre_elector_trigger = yes
 			}
+			modifier = {
+				factor = 0
+				portrait_late_trigger = yes
+			}
 		}
 	}
 
@@ -302,6 +307,10 @@
 				add = 800
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
+			}
+			modifier = {
+				factor = 0
+				portrait_late_trigger = yes
 			}
 		}
 	}
@@ -323,6 +332,7 @@
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
 				any_ruling_countries = { country_rank_level >= 2 } # duchy or above
+				portrait_late_trigger = no
 			}
 			modifier = {
 				factor = 0
@@ -348,10 +358,69 @@
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
 				any_ruling_countries = { country_rank_level >= 3 } # kingdom or above
+				portrait_late_trigger = no
 			}
 			modifier = {
 				factor = 0
 				portrait_is_ruler_of_trigger = { COUNTRY = VEN }
+			}
+		}
+	}
+
+	### Late
+	late_european_commoner = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = late_european_commoner
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				portrait_late_trigger = yes
+				portrait_commoner_trigger = { CULTURE_GFX = european_gfx }
+			}
+		}
+	}
+
+	late_european_low_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = late_european_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				portrait_late_trigger = yes
+				portrait_low_nobility_trigger = { CULTURE_GFX = european_gfx }
+			}
+		}
+	}
+
+	late_european_high_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = late_european_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 400
+				portrait_late_trigger = yes
+				portrait_high_nobility_trigger = { CULTURE_GFX = european_gfx }
 			}
 		}
 	}
@@ -378,7 +447,7 @@
 			}
 		}
 	}
-	
+
 	ashanti_low_nobility = {
 		dna_modifiers = {
 			accessory = {
@@ -400,7 +469,7 @@
 			}
 		}
 	}
-	
+
 	ashanti_high_nobility = {
 		dna_modifiers = {
 			accessory = {
@@ -422,7 +491,7 @@
 			}
 		}
 	}
-	
+
 	ashanti_royalty = {
 		dna_modifiers = {
 			accessory = {
@@ -524,7 +593,7 @@
 			}
 		}
 	}
-	
+
 	aztec_low_nobility = {
 		dna_modifiers = {
 			accessory = {
@@ -542,7 +611,7 @@
 			}
 		}
 	}
-	
+
 	aztec_high_nobility = {
 		dna_modifiers = {
 			accessory = {
@@ -560,7 +629,7 @@
 			}
 		}
 	}
-	
+
 	aztec_royalty = {
 		dna_modifiers = {
 			accessory = {
@@ -1249,7 +1318,7 @@
 			}
 		}
 	}
-	
+
 	sikh_clergy = {
 		dna_modifiers = {
 			accessory = {

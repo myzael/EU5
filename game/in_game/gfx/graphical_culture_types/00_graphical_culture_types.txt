@@ -408,6 +408,14 @@ east_african_gfx = {
 	}
 }
 
+nubian_gfx = {
+	priority = 400 # Subregion
+	culture_tag = nubian_gfx
+	ethnicities = {
+		10 = african_nubian_ethnicity
+	}
+}
+
 andalusi_gfx = {
 	priority = 400 # Regional
 	culture_tag = andalusi_gfx
@@ -424,6 +432,14 @@ maghrebi_gfx = {
 	ethnicities = {
 		10 = middle_eastern_maghrebi_ethnicity
 		1 = middle_eastern_amazigh_ethnicity
+	}
+}
+
+saharan_gfx = {
+	priority = 400 # Subregion
+	culture_tag = saharan_gfx
+	ethnicities = {
+		10 = middle_eastern_saharan_ethnicity
 	}
 }
 
@@ -480,8 +496,7 @@ negrito_gfx = {
 	priority = 300 # Regional
 	culture_tag = negrito_gfx
 	ethnicities = {
-		10 = oceanian_papuan_ethnicity
-		10 = oceanian_aboriginal_ethnicity
+		10 = asian_negrito_ethnicity
 	}
 }
 

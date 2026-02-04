@@ -38,20 +38,26 @@ PixelShader =
 		Output = "PDX_COLOR"
 		Code
 		[[
-		PDX_MAIN
-		{
-			#ifdef PDX_USE_MIPLEVELTOOL
-				float4 Color = PdxTex2DMipToolParticles( DiffuseMap, Input.UV0 ) * Input.Color;
-				float4 NextColor = PdxTex2DMipToolParticles( DiffuseMap, Input.UV1 ) * Input.Color;
-			#else
-				float4 Color = PdxTex2D( DiffuseMap, Input.UV0 ) * Input.Color;
-				float4 NextColor = PdxTex2D( DiffuseMap, Input.UV1 ) * Input.Color;
-			#endif // PDX_USE_MIPLEVELTOOL
+			PDX_MAIN
+			{
+				#ifdef PDX_USE_MIPLEVELTOOL
+					float4 Color = PdxTex2DMipToolParticles( DiffuseMap, Input.UV0 ) * Input.Color;
+					float4 NextColor = PdxTex2DMipToolParticles( DiffuseMap, Input.UV1 ) * Input.Color;
+				#else
+					float4 Color = PdxTex2D( DiffuseMap, Input.UV0 ) * Input.Color;
+					float4 NextColor = PdxTex2D( DiffuseMap, Input.UV1 ) * Input.Color;
+				#endif // PDX_USE_MIPLEVELTOOL
 
-			Color = Color * ( 1.0f - Input.FrameBlend ) + NextColor * Input.FrameBlend;
+				Color = Color * ( 1.0f - Input.FrameBlend ) + NextColor * Input.FrameBlend;
 
-			return ApplyParticleGradientBordersColor(Color, Input.WorldSpacePos, Input.Height);
-		}
+				Color = ApplyParticleGradientBordersColor(Color, Input.WorldSpacePos, Input.Height);
+
+				#if defined( PREMULTIPLIED )
+					Color.rgb *= Input.Color.a;
+				#endif
+
+				return Color;
+			}
 		]]
 	}
 
@@ -115,6 +121,18 @@ BlendState AdditiveBlendState
 	DestBlend = "ONE"
 	DestAlpha = "ONE"
 	WriteMask = "RED|GREEN|BLUE|ALPHA"
+}
+
+BlendState PreMultipliedAlpha
+{
+    BlendEnable = yes;
+    SourceBlend = "ONE"
+    DestBlend = "INV_SRC_ALPHA"
+    BlendOp = "ADD"
+    SourceAlpha = "ONE"
+    DestAlpha = "INV_SRC_ALPHA"
+    BlendOpAlpha = "ADD"
+    WriteMask = "RED|GREEN|BLUE|ALPHA"
 }
 
 Effect ErosionT
@@ -270,5 +288,23 @@ Effect ParticleTFBE
 	PixelShader = "PixelColor"
 	BlendState = "AdditiveBlendState"
 	Defines = { "FADE_STEEP_ANGLES" "BILLBOARD" }
+	RasterizerState = "RasterizerStateNoCulling"
+}
+
+Effect ParticleBillboardPreMultiplied
+{
+	VertexShader = "VertexParticle"
+	PixelShader = "PixelTexture"
+	BlendState = "PreMultipliedAlpha"
+	Defines = { "PREMULTIPLIED" "BILLBOARD" }
+	RasterizerState = "RasterizerStateNoCulling"
+}
+
+Effect ParticlePreMultiplied
+{
+	VertexShader = "VertexParticle"
+	PixelShader = "PixelTexture"
+	BlendState = "PreMultipliedAlpha"
+	Defines = { "PREMULTIPLIED" }
 	RasterizerState = "RasterizerStateNoCulling"
 }

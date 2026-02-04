@@ -19,9 +19,7 @@ golden_age_of_piracy.100 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		root = {
-			save_scope_as = target_country_scope
-		}
+		save_scope_as = target_country_scope
 	}
 
 	option = {
@@ -153,9 +151,7 @@ golden_age_of_piracy.110 = {
 					}
 				}
 
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				save_scope_as = pirate_tag_scope
 
 				hidden_effect = {
@@ -288,9 +284,7 @@ great_pirate_era.1 = {
 				name = {
 					name = NPV
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement
@@ -445,9 +439,7 @@ great_pirate_era.2 = {
 				name = {
 					name = LIB
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement
@@ -602,9 +594,7 @@ great_pirate_era.3 = {
 				name = {
 					name = SLE
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement
@@ -765,9 +755,7 @@ great_pirate_era.4 = {
 				name = {
 					name = TET
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement
@@ -899,9 +887,7 @@ great_pirate_era.5 = {
 				name = {
 					name = PRY
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement
@@ -1039,9 +1025,7 @@ great_pirate_era.6 = {
 				name = {
 					name = TRU
 				}
-				reforms = {
-					pirate_brethren_reform
-				}
+				add_reform = government_reform:pirate_brethren_reform
 				add_policy = policy:state_piracy_policy
 				add_policy = policy:council_of_captains
 				add_policy = policy:articles_of_agreement

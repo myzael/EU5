@@ -34,10 +34,28 @@ pattern_textures = {
 	properties	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/silk_plain_01_properties.dds"
 }
 pattern_textures = {
+	name = "silk_plain_02"
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/generic_plain_mask.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/silk_plain_02_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/silk_plain_02_properties.dds"
+}
+pattern_textures = {
+	name = "silk_waves_01"
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/generic_plain_mask.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/north_german/silk_waves_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/north_german/silk_waves_01_properties.dds"
+}
+pattern_textures = {
 	name = "leather_plain_01"
 	colormask	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/generic_plain_mask.dds"
 	normal		= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/leather_plain_01_normal.dds"
 	properties	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/leather_plain_01_properties.dds"
+}
+pattern_textures = {
+	name = "leather_plain_shiny"
+	colormask	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/generic_plain_mask.dds"
+	normal		= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/leather_plain_01_normal.dds"
+	properties	= "gfx/portraits/accessory_variations/textures/patterns/basic_patterns/leather_plain_02_properties.dds"
 }
 pattern_textures = {
 	name = "chainmail_plain_01"
@@ -168,6 +186,8 @@ pattern_textures = {
 	properties	= "gfx/portraits/accessory_variations/textures/patterns/north_german/trim_german_01_properties.dds"
 }
 
+
+
 ##################
 #	Layouts		#
 ##################
@@ -175,6 +195,12 @@ pattern_textures = {
 pattern_layout = {
 	name = "plain_fabric_layout"	
 	scale 		= { min = 0.325	max = 0.325 }
+	rotation 	= { min = 0	max = 0 }	
+	offset 		= { x = { min = 0	max = 0 }    y = { min = 0	max = 0 } } 
+}
+pattern_layout = {
+	name = "plain_wave_layout"	
+	scale 		= { min = 0.075	max = 0.155 }
 	rotation 	= { min = 0	max = 0 }	
 	offset 		= { x = { min = 0	max = 0 }    y = { min = 0	max = 0 } } 
 }
@@ -331,6 +357,66 @@ variation = {
 }
 
 variation = {
+ 	name = "north_german_commoner_02" # late ditto
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "linen_plain_01" 		layout = "plain_fabric_layout" }
+		a = { textures = "linen_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "linen_plain_01" 		layout = "plain_fabric_layout" }
+		a = { textures = "linen_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01.dds" }	
+}
+
+variation = {
+ 	name = "north_german_commoner_02_female" # french_dress
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "linen_plain_01" 		layout = "plain_fabric_layout" }
+		a = { textures = "linen_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "linen_plain_01" 		layout = "plain_fabric_layout" }
+		a = { textures = "linen_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01_female.dds" }	
+}
+
+variation = {
  	name = "north_german_war_headwear_01"
 	
 # 	# patterns are sampled using UV-set 2
@@ -445,6 +531,94 @@ variation = {
 }
 
 variation = {
+ 	name = "north_german_low_nobility_03" # late ditto
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "silk_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "felt_plain_01" 	layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01.dds" }	
+}
+
+variation = {
+ 	name = "north_german_low_nobility_04" # 
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_plain_02" 		layout = "plain_fabric_layout" }
+		g = { textures = "silk_plain_02" 		layout = "plain_fabric_layout" }
+		b = { textures = "felt_plain_01" 	layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_02"		layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_02.dds" }	
+}
+
+variation = {
+ 	name = "north_german_low_nobility_06" # Sash
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_waves_01" 		layout = "plain_wave_layout" }
+		g = { textures = "silk_waves_01" 		layout = "plain_wave_layout" }
+		b = { textures = "felt_plain_01" 	layout = "plain_fabric_layout" }
+		a = { textures = "silk_waves_01"		layout = "plain_wave_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01.dds" }	
+}
+
+variation = {
+ 	name = "north_german_low_nobility_03_female" # frenc dress
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_plain_01" 		layout = "plain_fabric_layout" }
+		g = { textures = "silk_plain_01" 		layout = "plain_fabric_layout" }
+		b = { textures = "taffeta_plain_01" 	layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"		layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01_female.dds" }	
+}
+
+variation = {
  	name = "north_german_high_nobility_01"
 	
 # 	# patterns are sampled using UV-set 2
@@ -496,6 +670,98 @@ variation = {
 # 	# First column will be masked by the red channel in the masks, second by the green, etc.
 # 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
 	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_high_nobility_01.dds" }	
+}
+
+variation = {
+ 	name = "north_german_high_nobility_02" # late ditto
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_02" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_brocade_02" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_04" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_brocade_04" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_08" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_brocade_08" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 2
+		r = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01.dds" }	
+}
+
+variation = {
+ 	name = "north_german_high_nobility_02_female" # french dress
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_02" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_04" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "silk_brocade_08" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 2
+		r = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		g = { textures = "silk_plain_01" 			layout = "brocade_fabric_layout" }
+		b = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01"			layout = "plain_fabric_layout" }
+	}
+
+
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01_female.dds" }	
 }
 
 variation = {
@@ -675,7 +941,6 @@ variation = {
 	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_monk_01.dds" }	
 }
 
-
 variation = {
  	name = "north_german_monk_02"
 	
@@ -808,3 +1073,137 @@ variation = {
 # 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
 	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_tabard_01.dds" }
 }
+
+variation = {
+	name = "north_german_peasant_leather_01"
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "leather_plain_01" 		layout = "full_fabric_layout" }
+		g = { textures = "leather_plain_01" 		layout = "full_fabric_layout" }
+		b = { textures = "leather_plain_01" 		layout = "full_fabric_layout" }
+		a = { textures = "leather_plain_shiny"		layout = "full_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "leather_plain_shiny" 		layout = "full_fabric_layout" }
+		g = { textures = "leather_plain_01" 		layout = "full_fabric_layout" }
+		b = { textures = "leather_plain_01" 		layout = "full_fabric_layout" }
+		a = { textures = "leather_plain_shiny"		layout = "full_fabric_layout" }
+	}
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_low_peasant_01.dds" }
+}
+
+variation = {
+	name = "north_german_burgher_tricorn_01"
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		    layout = "full_fabric_layout" }
+		g = { textures = "trim_german_01" 		    layout = "collar_trim_layout" }
+		b = { textures = "felt_plain_01"		    layout = "full_fabric_layout" }
+		a = { textures = "felt_plain_01"		    layout = "full_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 		    layout = "full_fabric_layout" }
+		g = { textures = "felt_plain_01" 	        layout = "collar_trim_layout" }
+		b = { textures = "felt_plain_01" 		    layout = "full_fabric_layout" }
+		a = { textures = "felt_plain_01"		    layout = "full_fabric_layout" }
+	}
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_burgher_01.dds" }
+}
+
+variation = {
+	name = "north_german_nobility_tricorn_1"
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+		g = { textures = "trim_german_01" 	        layout = "collar_trim_layout" } #layout = "collar_trim_layout" }
+		b = { textures = "silk_brocade_01" 		    layout = "brocade_fabric_layout" }
+		a = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+		g = { textures = "trim_german_01" 		    layout = "collar_trim_layout" } #layout = "collar_trim_layout" }
+		b = { textures = "silk_brocade_01" 		    layout = "brocade_fabric_layout" }
+		a = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+	}
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_low_peasant_01.dds" }
+}
+
+variation = {
+	name = "north_german_long_coat_01"
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 	        layout = "plain_fabric_layout" } #layout = "collar_trim_layout" }
+		b = { textures = "felt_plain_01" 		    layout = "plain_fabric_layout" }
+		a = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+	}
+
+	pattern = {
+		weight = 1
+		r = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+		g = { textures = "felt_plain_01" 		    layout = "plain_fabric_layout" } #layout = "collar_trim_layout" }
+		b = { textures = "felt_plain_01" 		    layout = "plain_fabric_layout" }
+		a = { textures = "felt_plain_01" 			layout = "plain_fabric_layout" }
+	}
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_north_german_late_01.dds" }
+}
+
+
+variation = {
+	name = "ribbon_bright_01"
+	
+# 	# patterns are sampled using UV-set 2
+# 	# uv-coordinates will be modified with scale, rotation, and offset before the texture is sampled
+# 	# If more than one pattern_layout is provided one will be chosen at random (uniformly, no weights)
+	pattern = {
+		weight = 1
+		r = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+		g = { textures = "silk_plain_01" 	        layout = "plain_fabric_layout" } #layout = "collar_trim_layout" }
+		b = { textures = "silk_plain_01" 		    layout = "plain_fabric_layout" }
+		a = { textures = "silk_plain_01" 			layout = "plain_fabric_layout" }
+	}
+# 	# Color palette textures are 16-wide and N-high.
+# 	# Shaders will chose a row in the texture at random, and each column will be sampled once.
+# 	# First column will be masked by the red channel in the masks, second by the green, etc.
+# 	# If more than one color palette texture is provided one will be chosen at random (uniformly, no weights)
+	color_palette = { weight = 1		texture = "gfx/portraits/accessory_variations/textures/color_palette_01.dds" }
+}
+

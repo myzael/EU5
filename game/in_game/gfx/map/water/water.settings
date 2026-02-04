@@ -4,7 +4,7 @@
 "WaterColorMapTintAlpha" = 0.000000
 "WaterColorMapTintStartHeight" = 0.000000
 "WaterColorMapTintEndHeight" = 1000.000000
-"WaterCubemapIntensity" = 3.000000
+"WaterCubemapIntensity" = 2.000000
 "WaterGlossBase" = 0.000000
 "WaterGlossScale" = 0.000000
 "WaterZoomedOutGlossScaleOffset" = 0.000000
@@ -24,11 +24,11 @@
 "WaterRefractionFadeEnd" = 200.000000
 "WaterZoomedInHeight" = -300.000000
 "WaterZoomedOutHeight" = 255.000000
-"WaterFresnelBias" = 0.007000
-"WaterZoomedOutFresnelBiasOffset" = 0.025000
-"WaterFresnelPow" = 16.500000
+"WaterFresnelBias" = 0.032000
+"WaterZoomedOutFresnelBiasOffset" = 0.040000
+"WaterFresnelPow" = 15.000000
 "WaterZoomedOutFresnelPowOffset" = 0.500000
-"WaterReflectionFlatten" = 4.000000
+"WaterReflectionFlatten" = 8.000000
 "WaterRefractionScale" = 50.000000
 "WaterWave1.Scale" = { 0.800000 0.800000 }
 "WaterWave1.Rotation" = -0.350000

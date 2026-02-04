@@ -197,6 +197,12 @@ PixelShader =
 				CropToWorldSize( Input );
 				float2 ColorMapCoords = Input.WorldSpacePos.xz * _WorldSpaceToTerrain0To1;
 				float4 FinalColor = FlatTerrainShader( Input.WorldSpacePos, ColorMapCoords, FlatMapTexture, FlatMapDetail, 0 );
+				#ifdef SHADOWS_ENABLED
+					float ShadowTerm = 1.0;
+					ShadowTerm = CalculateShadow( Input.ShadowProj, ShadowMap );
+					FinalColor.rgb *= ShadowTerm;
+				#endif
+				
 				FinalColor.rgb = ApplyFogOfWar( FinalColor.rgb, Input.WorldSpacePos, FogOfWarAlpha );
 				return FinalColor;
 			}
@@ -228,11 +234,24 @@ RasterizerState FakeTerrainFlatRasterizerState
 	CullMode = none
 }
 
+BlendState SsrBlendState
+{
+	BlendEnable = yes
+	SourceBlend = "SRC_COLOR"
+	DestBlend = "ZERO"
+	BlendOp = "ADD"
+	SourceAlpha = "ONE"
+	DestAlpha = "ZERO"
+	BlendOpAlpha = "ADD"
+	WriteMask = "RED|GREEN|BLUE|ALPHA"
+}
+
 Effect Terrain
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
 	Defines = { "GRASS_SCATTERING" "STRANGE_BACK_LIGHT" "ENABLE_GAME_CONSTANTS" "TRIPLANAR_UV_MAPPING_ENABLED"}
+	BlendStates = { "BlendState" "SsrBlendState" "SsrBlendState" "SsrBlendState" }
 }
 
 Effect TerrainUnderwater
@@ -241,6 +260,7 @@ Effect TerrainUnderwater
 	PixelShader = "PixelShaderUnderwater"
 	
 	Defines = { "TERRAIN_UNDERWATER" "ENABLE_GAME_CONSTANTS"}
+	BlendStates = { "BlendState" "SsrBlendState" "SsrBlendState" "SsrBlendState" }
 }
 
 

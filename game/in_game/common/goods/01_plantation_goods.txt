@@ -4,10 +4,8 @@
 	color = goods_cotton
 	default_market_price = 3
 
-
 	custom_tags = { old_world_goods }
 }
-
 
 sugar = {
 	method = farming
@@ -22,8 +20,8 @@ sugar = {
 	}
 
 	custom_tags = { old_world_goods }
+	
 }
-
 
 tobacco = {
 	method = farming
@@ -40,5 +38,4 @@ tobacco = {
 
 	custom_tags = { new_world_goods }
 }
-
 

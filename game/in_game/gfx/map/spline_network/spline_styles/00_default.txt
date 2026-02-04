@@ -25,7 +25,7 @@ gravel_road = {
 	}
 	effect = {
 		effectname = "SingleTexturePass"
-		shaderfile = "gfx/FX/road_mulpass.shader"
+		shaderfile = "gfx/FX/road_gravel.shader"
 
 		texture_set = {
 			name = ""
@@ -55,7 +55,7 @@ paved_road = {
 	}
 	effect = {
 		effectname = "SingleTexturePass"
-		shaderfile = "gfx/FX/road_mulpass.shader"
+		shaderfile = "gfx/FX/road_paved.shader"
 
 		texture_set = {
 			name = ""
@@ -85,7 +85,7 @@ modern_road = {
 	}
 	effect = {
 		effectname = "SingleTexturePass"
-		shaderfile = "gfx/FX/road_mulpass.shader"
+		shaderfile = "gfx/FX/road_modern.shader"
 
 		texture_set = {
 			name = ""
@@ -115,7 +115,7 @@ rail_road = {
 	}
 	effect = {
 		effectname = "SingleTexturePass"
-		shaderfile = "gfx/FX/road_mulpass.shader"
+		shaderfile = "gfx/FX/road_rail.shader"
 
 		texture_set = {
 			name = ""

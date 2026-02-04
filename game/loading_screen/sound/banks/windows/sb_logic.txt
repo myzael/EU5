@@ -1,10 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
-	78934752	boredomTimer_restart			\ev_logic\boredomTimer_restart	
 	481652823	mus_system_start			\ev_music\playback_functions\mus_system_start	Posted to the Music Manager persistent Wwise game object on entering the Asap scope, i.e. as soon as one starts the game
 	627119789	playerAction_02_hi			\ev_logic\playerAction_02_hi	
 	712530859	stage_change_loadscreen			\ev_logic\flow\stage_change_loadscreen	
 	905463613	mus_system_stop			\ev_music\playback_functions\mus_system_stop	Posted to the Music Manager persistent Wwise game object on leaving the Asap scope, i.e. on quitting the game
 	988148090	cursor_on_panel			\ev_logic\panel_flow\cursor_on_panel	Should also be posted to 
+	1005557173	MasterAmbientSystem_Stop			\ev_amb\MasterAmbientSystem_Stop	Posted to the Ambient Manager persistent Wwise game object on leaving the InGame scope, i.e. when returning to main menu
 	1139193997	quit_to_desktop			\ev_logic\quit_to_desktop	
 	1262474572	scope_menu_enter			\ev_logic\flow\scope_menu_enter	posted to the UI Manager persistent Wwise game object on entering the Menu scope, i.e. when first entering main menu
 	1848497817	MasterAmbientSystem_Start_viascopes			\ev_amb\MasterAmbientSystem_Start_viascopes	Posted to the Ambient Manager persiosntent Wwise game object on entering the InGame scope
@@ -15,15 +15,32 @@ Event	ID	Name			Wwise Object Path	Notes
 	3370842300	playerAction_04_low			\ev_logic\playerAction_04_low	
 	3499263738	playerAction_05_very_low			\ev_logic\playerAction_05_very_low	
 	3545445578	kill_panel			\ev_logic\panel_flow\kill_panel	For when we remove a panel with illustration via code, determines the "fade out behaviour" for that soundscape
+	3561993834	mus_player_next_all			\ev_music\transport_controls\mus_player_next_all	
 	3811421686	cursor_off_panel			\ev_logic\panel_flow\cursor_off_panel	
 	3981680751	playerAction_03_mid			\ev_logic\playerAction_03_mid	
 	4086911251	scope_menu_leave			\ev_logic\flow\scope_menu_leave	posted to the UI Manager persistent Wwise game object on leaving the Menu scope, i.e. when quitting the game from main menu
 	4242637569	playerAction_01_very_hi			\ev_logic\playerAction_01_very_hi	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	252254831	settings_listener_profile			\Settings\settings_listener_profile	
+	1247407262	mus_systemType			\Music\mus_systemType	This should be an optional setting for the player in the music player, do they want dynamics, or just a random playlist with full mix or low intensity
 	2384791228	Gamestate_startSequence			\Gamestate\Gamestate_startSequence	
 
 State	ID	Name	State Group			Notes
+	465211496	PDX_Speakers	settings_listener_profile			
+	465606845	PDX_Nightmode	settings_listener_profile			
+	748895195	None	settings_listener_profile			
+	1252584708	PDX_TV	settings_listener_profile			
+	2116481717	PDX_Off	settings_listener_profile			
+	2767704715	PDX_Headphones	settings_listener_profile			
+	3088688550	PDX_HomeCinema	settings_listener_profile			
+	87391448	mus_systemType_dynamic_all	mus_systemType			
+	748895195	None	mus_systemType			
+	1231934793	mus_systemType_static_cinematic	mus_systemType			
+	1439446662	mus_systemType_dynamic_cinematic	mus_systemType			
+	1912099677	mus_systemType_dynamic_cultural	mus_systemType			
+	3494916052	mus_systemType_static_cultural	mus_systemType			
+	3827416997	mus_systemType_noMusic	mus_systemType			
 	20842036	loadingscreen_first	Gamestate_startSequence			
 	748895195	None	Gamestate_startSequence			
 	871352366	loadingscreen_second	Gamestate_startSequence			
@@ -32,28 +49,38 @@ State	ID	Name	State Group			Notes
 	3604647259	mainmenu	Gamestate_startSequence			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	660273712	mus_intensity_dynamic_meter			\Music\mus_intensity_dynamic_meter	
+	698287147	mus_VCA_intensity			\Music\mus_VCA_intensity	
+	1883547637	mus_boredom_dynamic_meter			\Music\mus_boredom_dynamic_meter	
 	3493312238	VCA_Master			\MasterMix\VCA_Master	
-
-Modulator Time	ID	Name			Wwise Object Path	Notes
-	72484483	mod_boredomTimer			\mod_music\mod_boredomTimer	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	73014993	Logic			\Default Work Unit\Master Audio Bus\Logic	
-	3724479913	ducking meter			\Default Work Unit\Master Audio Bus\Logic\ducking meter	
+	872236310	boredom meter			\Default Work Unit\Master Audio Bus\Logic\boredom meter	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	4230474121	DynamicBoredomMeter			\Default Work Unit\Master Audio Bus\Logic\boredom meter\DynamicBoredomMeter	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	1017241100	BoredomMeter			\Default Work Unit\Master Audio Bus\Logic\ducking meter\BoredomMeter	
+	756457056	Manual_MUSICINTENSITYDRIVER			\Default Work Unit\Master Audio Bus\Logic\ActionMeter\Manual_MUSICINTENSITYDRIVER	
+	1270750439	DynamicIntensity			\Default Work Unit\Master Audio Bus\Logic\ActionMeter\DynamicIntensity	
+	1842617081	Dynamic_MUSICINTENSITYDRIVER			\Default Work Unit\Master Audio Bus\Logic\ActionMeter\Dynamic_MUSICINTENSITYDRIVER	
+	2394336161	Dynamic_BORDEDOMDRIVER			\Default Work Unit\Master Audio Bus\Logic\boredom meter\Dynamic_BORDEDOMDRIVER	
+	2722183254	Manual_BOREDOMDRIVER			\Default Work Unit\Master Audio Bus\Logic\boredom meter\Manual_BOREDOMDRIVER	
 	3989179958	ActionMeter			\Default Work Unit\Master Audio Bus\Logic\ActionMeter	
 
 Effect plug-ins	ID	Name	Type				Notes
 	36531246	fx_meter_boredomcounter	Wwise Meter			
+	506175343	Meter (Custom)	Wwise Meter			
 	613368453	Gain (Custom)	Wwise Gain			
+	901123193	fx_meter_mus_intensity_systemic	Wwise Meter			
 	2929037090	fx_meter_actioncounter	Wwise Meter			
+	3454498882	fx_gain_HARDMUTE	Wwise Gain			
+	4057947086	fx_meter_mus_boredom_systemic	Wwise Meter			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	41530255	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Logic\THESILENCELOOP\THESILENCELOOP\Silence	
 	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
+	159406886	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\PerpetualSineTone\FOREVERSINETONE\Sine	
 	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
 	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
 	727756844	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\StartupPlayerActionMaximizer\Sine	

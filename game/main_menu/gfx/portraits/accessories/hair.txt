@@ -3,11 +3,6 @@
 #### BROKEN ####
 
 	# EMPTY MESH
-	# female_hair_braids_short_bangs = {
-		# entity = { required_tags = "no_hair"					shared_pose_entity = head }
-		# entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = female_hair_braids_short_bangs_entity }
-	# }
-
 ## NORTH GERMAN ##
 
 	male_north_german_hair_bob_regular = {
@@ -192,7 +187,7 @@
 	boy_north_german_hair_bob_short = {
 		entity = { required_tags = "no_hair"					shared_pose_entity = head }
 		entity = { required_tags = "not(hair_covered)"			shared_pose_entity = head  entity = boy_north_german_hair_bob_short_entity }
-		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = boy_north_german_hair_bob_short_entity }
+		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = boy_north_german_hair_bob_short_no_top_entity }
 	}
 
 	boy_short_hair_a = {
@@ -203,6 +198,21 @@
 	girl_hair_long_a = {
 		entity = { required_tags = "no_hair"					shared_pose_entity = head }
 		entity = { required_tags = ""							shared_pose_entity = head  entity = girl_hair_long_a_entity }
+	}
+
+## LATE ERA HAIR ##
+	male_north_german_hair_natural_wig_ponytail = {
+		entity = { required_tags = "no_hair"					shared_pose_entity = head }
+		entity = { required_tags = "not(hair_covered)"			shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_ponytail_entity }
+		entity = { required_tags = "hair_covered_long"			shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_ponytail_no_top_entity }
+		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_ponytail_no_top_entity }
+	}
+
+	male_north_german_hair_powdered_wig_longer_ponytail = {
+		entity = { required_tags = "no_hair"					shared_pose_entity = head }
+		entity = { required_tags = "not(hair_covered)"			shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_longer_ponytail_entity }
+		entity = { required_tags = "hair_covered_long"			shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_longer_ponytail_no_top_entity }
+		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = male_north_german_hair_powdered_wig_longer_ponytail_no_top_entity }
 	}
 
 
@@ -333,7 +343,8 @@
 
 	male_syrian_hair_curly_regular = {
 		entity = { required_tags = "no_hair"					shared_pose_entity = head }
-		entity = { required_tags = ""							shared_pose_entity = head  entity = male_syrian_hair_curly_regular_entity }
+		entity = { required_tags = "not(hair_covered)"			shared_pose_entity = head  entity = male_syrian_hair_curly_regular_entity }
+		entity = { required_tags = "hair_covered"				shared_pose_entity = head  entity = male_hair_short_straight_pomp_no_top_entity }
 	}
 
 	female_syrian_braided_back_hair = {

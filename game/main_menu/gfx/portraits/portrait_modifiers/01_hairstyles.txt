@@ -42,6 +42,73 @@
 		}
 	}
 
+	german_late_era_hair_low_noble = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_late_era_hair
+				accessory = male_north_german_hair_natural_wig_ponytail
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_female = no
+				portrait_low_nobility_trigger = { CULTURE_GFX = european_gfx }
+				portrait_late_trigger = yes 
+			}
+		}
+	}
+
+	german_late_era_hair_high_noble = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_late_era_hair
+				accessory = male_north_german_hair_powdered_wig_longer_ponytail
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				is_female = no
+				character_age > 30
+				portrait_high_nobility_trigger = { CULTURE_GFX = european_gfx }
+				portrait_late_trigger = yes 
+			}
+			modifier = {
+				add = 400
+				is_female = no
+				character_age > 30
+				portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
+				portrait_late_trigger = yes 
+			}
+		}
+	}
+
+	german_late_era_hair_high_royal = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_late_era_hair
+				accessory = male_north_german_hair_powdered_wig_longer_ponytail
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				is_female = no
+				portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
+				portrait_late_trigger = yes 
+			}
+		}
+	}
 	european_monk = {
 		dna_modifiers = {
 			accessory = {
@@ -54,7 +121,7 @@
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 1000
 				is_female = no
 				portrait_clergy_trigger = { RELIGION_GFX = catholic_gfx }
 			}

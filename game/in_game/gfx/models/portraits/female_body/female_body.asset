@@ -18,6 +18,7 @@ pdxmesh = {
 
 	blend_shape = { id = "no_clothes"    type = "blendshapes/female_body_bs_no_clothes.mesh" }
 	blend_shape = { id = "bs_old_body"		type = "blendshapes/female_body_bs_old.mesh" }
+	blend_shape = { id = "bs_corset"		type = "blendshapes/female_body_bs_corset.mesh" }
 
 	meshsettings = {
 		name = "female_bodyShape"
@@ -53,6 +54,7 @@ entity = {
 
 	attribute = { name = "bs_no_clothes"    blend_shape = "no_clothes" }
 	attribute = { name = "bs_old_body"		blend_shape = "bs_old_body" }
+	attribute = { name = "bs_corset"		blend_shape = "bs_corset" }
 
 	game_data = {
 		portrait_entity_user_data = {

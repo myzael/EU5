@@ -372,6 +372,7 @@ grant_city_rights = {
 			current_age = age_5_absolutism
 			current_age = age_6_revolutions
 		}
+		is_subject = no
 		at_war = no
 		modifier:can_build_cities = yes
 		num_locations > 1
@@ -515,6 +516,7 @@ increase_naval_spending = {
 
 	allow = {
 		num_of_ports >= 1
+		is_subject = no
 	}
 
 	chance = {
@@ -1365,6 +1367,7 @@ sponsor_urban_development = {
 	allow = {
 		num_locations > 2
 		num_of_ports >= 1
+		is_subject = no
 	}
 
 	chance = {
