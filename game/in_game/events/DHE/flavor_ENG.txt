@@ -224,7 +224,7 @@ flavor_eng.2 = {
 	dynamic_historical_event = {
 		tag = ENG
         tag = GBR
-		from = 1337.1.1
+		from = 1400.1.1
 		to = 1500.1.1
 		monthly_chance = 10
 	}
@@ -284,6 +284,38 @@ flavor_eng.2 = {
 				target = root
 				modifier = eng_no_english_in_france
 			}
+		}
+
+		end_situation = situation:hundred_years_war 
+
+		hidden_effect = {
+			c:ENG = { 
+				remove_country_modifier = hundred_years_war_impact
+				remove_opinion_mutual_effect = {
+					modifier = opinion_hyw_enemies
+					target = c:FRA
+				}
+				remove_casus_belli = {
+					target = c:FRA
+					type = casus_belli:cb_hundred_years_war
+				}
+			}
+			c:FRA = { 
+				remove_country_modifier = hundred_years_war_impact
+				remove_casus_belli = {
+					target = c:ENG
+					type = casus_belli:cb_hundred_years_war_fra
+				}
+			}
+
+			every_country = {
+				limit = {
+					NOT = { tag = FRA }
+					capital.sub_continent = sub_continent:western_europe
+				}
+				trigger_event_non_silently = hundred_years_war.101
+			}
+			c:FRA = { trigger_event_non_silently = flavor_fra.26 }
 		}
 
 	}

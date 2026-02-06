@@ -1,4 +1,4 @@
-country_rank_spanish_article = {
+﻿country_rank_spanish_article = {
  	type = country
  	log_loc_errors = no
 	text = {

@@ -565,6 +565,14 @@
 						value = 20
 					}
 				}
+
+				#don't reelect emperors which are way too aggressive
+				add = {
+					desc = "game_concept_antagonism"
+					value = "scope:actor.antagonism(scope:vote)"
+					multiply = -2
+
+				}
 			}
 		}
 		else = {

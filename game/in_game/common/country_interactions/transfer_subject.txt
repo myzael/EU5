@@ -17,7 +17,10 @@
             limit = {
                 exists = scope:sale_price
             }
-            value = scope:sale_price
+            add = {
+                desc = "SALE_PRICE"
+                value = scope:sale_price
+            }
         }
         else = {
             value = 0

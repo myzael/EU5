@@ -4829,7 +4829,7 @@ template RiverModifier_tooltip {
 
                         blockoverride "field_left" {
                             icon = {
-                                visible = "[Location.IsPossibleToOwn]"
+                                visible = "[Location.HasOwner]"
                                 size = { 20 20 }
                                 texture = "[Location.GetRankIcon]"
 
@@ -4839,7 +4839,7 @@ template RiverModifier_tooltip {
                             }
 
                             icon = {
-                                visible = "[Not(Location.IsPossibleToOwn)]"
+                                visible = "[Not(Location.HasOwner)]"
                                 size = { 20 20 }
                                 texture = "[GetTopographyIcon(Location.GetTopography)]"
 

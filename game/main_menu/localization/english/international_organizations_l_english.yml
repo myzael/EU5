@@ -105,6 +105,8 @@
  TRUST_OF_LEADER_TO_US: "[international_organization_leader_short|e] trust of us"
  DYNASTIC_POWER_IN_IO: "[dynastic_power|e] in the [international_organization|e]"
  SEAT_OF_DYNASTY_IN_IO: "Has a [ShowModifier('dynasty_seat')] in [international_organization|e]"
+ THREATENED_BY_IO_MEMBERS: "Threatened by members in the [international_organization|e]"
+ THREATENED_BY_NON_IO_MEMBERS: "Threatened by countries outside of the [international_organization|e]"
  PRIMARY_OR_RULER_CULTURE_EQUAL_TO_LEADER_CULTURE: "[primary_culture|e] or [culture|e] of [ruler|e] equal to [international_organization_leader_short|e] culture"
  IS_LEADER_OF_AN_AP: "Is already leader of an [GetInternationalOrganizationType('autocephalous_patriarchate').GetName]"
  THREATENED_BY_LEADER_RIVALS_OR_ENEMIES: "Is threatened by [rivals|e] or [enemies|e] of the [international_organization_leader_short|e]"

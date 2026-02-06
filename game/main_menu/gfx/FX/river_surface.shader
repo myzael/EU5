@@ -252,7 +252,7 @@ PixelShader =
 					
 					float PencilNoise = PdxTex2D( PencilNoiseMap, Input.WorldSpacePos.xz * 0.125f ).r;
 
-					bool IsSentinelActive = ( GB_GradientWidth >= 0.11f && GB_GradientWidth <= 0.12f ) || ( GB_GradientWidth >= 0.33f && GB_GradientWidth <= 0.34f );
+					bool IsSentinelActive = GetMapModeId() == 2;
 			
 					//Base contour
 					float Zoomish = dot( Input.WorldSpacePos - CameraPosition, CameraLookAtDir );

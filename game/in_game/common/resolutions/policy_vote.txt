@@ -214,6 +214,22 @@
 						hidden_trigger = { always = yes }
 					}
 				}
+				trigger_if = {
+					limit = {
+						root = { NOT = { has_tag = no_ai_propose_cd } }
+						is_proposal = { international_organization = scope:recipient resolution = resolution:policy_vote }
+						scope:actor = {
+							is_ai = yes
+						}
+					}
+					custom_tooltip = {
+						text = law_debate_cooldowns_tt
+						is_target_in_variable_list = {
+							name = law_debate_cooldowns
+							target = root
+						}
+					}
+				}
 			}
 
 			scope:recipient = {
@@ -381,6 +397,22 @@
 					source = scope:vote
 					actor = scope:proposer
 					recipient = scope:recipient
+				}
+			}
+
+			#Law-specific rejection cooldowns
+			if = {
+				limit = {
+					exists = scope:recipient
+					exists = scope:target
+					scope:target = { NOT = { has_tag = no_ai_propose_cd } }
+				}
+				scope:recipient = {
+					add_to_variable_list = {
+						name = law_debate_cooldowns
+						target = scope:target
+						years = 20
+					}
 				}
 			}
 		}

@@ -134,7 +134,7 @@ harbor = {
     local_navy_attrition = -5
     friendly_disembark_time_modifier = -0.2
     hostile_disembark_time_modifier = -0.2
-    local_port_cost_distance_from_capital_speed_propagation = 0.75 #bad harbour means we can't get much proximity through it
+    local_port_cost_distance_impact = -0.5
     local_trade_embark_disembark_cost_modifier = -0.50
     local_maritime_presence = 0.3
 	local_repair_speed = 0.05
@@ -690,7 +690,7 @@ minor_rebel_uprising = {
 		category = location
 		decaying = yes
 	}
-	local_monthly_prosperity = -0.02
+	local_monthly_prosperity = -0.005
 	local_monthly_control = -0.005
 }
 
@@ -1617,7 +1617,7 @@ nap_state_of_the_presidi = {
 	game_data = {
 		category = location
 	}
-	local_port_cost_distance_from_capital_speed_propagation = 0.1
+	local_port_cost_distance_impact = -0.05
 	local_trade_center_power = 0.025
 	local_port_build_buildings_cost = -0.1
 }
@@ -2358,7 +2358,7 @@ entry_port_modifier = {
 		decaying = yes
 	}
 
-	local_port_cost_distance_from_capital_speed_propagation = 0.1
+	local_port_cost_distance_impact = -0.05
 	local_merchant_capacity = 3
 }
 

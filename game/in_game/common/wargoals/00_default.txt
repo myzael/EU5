@@ -234,8 +234,8 @@ independence_annexing_me = {
 	ticking_war_score = 0.5
 }
 
-take_capital_coalition = {
-	type = take_capital
+superiority_coalition = {
+	type = superiority
 	
 	war_name = "COALITION_WAR_NAME" #uses second
 	

@@ -78,11 +78,11 @@ commission_art_price = {
 }
 
 sow_discontent_monthly_cost = {
-	scaled_gold = 1
+	scaled_gold = 0.01
 }
 
 corrupt_officials_monthly_cost = {
-	scaled_gold = 1
+	scaled_gold = 0.01
 }
 
 abdicate_price = {

@@ -214,7 +214,7 @@
 
  
  local_governor: "Local Governor"
- local_governor_desc: "A seat of regional authority that extends the reach of the state to its most distant lands, expanding its influence beyond its immediate surroundings. While connected to the capital by the road network, they act as hubs for governance and administration."
+ local_governor_desc: "A seat of regional authority that extends the reach of the state to its most distant lands, expanding its influence beyond its immediate surroundings. When connected to the capital by the road network, they act as hubs for governance and administration."
  
  #
  # 

@@ -2,6 +2,7 @@
  ASSIGN_LAW_POLICY_TITLE: "Assign a $STRING$ Law Policy"
  # Custom Tags
  forbids_no_policy: "Must have any Policy"
+ no_ai_propose_cd: "Can be proposed without cooldown penalty"
  #
  # Monarchy Laws
  #
@@ -996,7 +997,7 @@
  dop_favor_the_clergy: "Favor the $clergy_estate$"
  dop_favor_the_clergy_desc: "Our faith has held our society together in the face of adversity time and time again, thanks to the guidance of our wise [ShowEstateTypeName('clergy_estate')]. $dop_last_sentence$"
  dop_favor_the_commoners: "Favor the Common People"
- dop_favor_the_commoners_desc: "The [ShowEstateTypeName('peasants_estate')] have are the ones who toil daily to provide the basic resources, such as food, that everyone needs regardless of their social status. They, perhaps more than anyone, wish to raise our domain to new heights of prosperity and greatness. $dop_last_sentence$"
+ dop_favor_the_commoners_desc: "The [ShowEstateTypeName('peasants_estate')] are the ones who toil daily to provide the basic resources, such as food, that everyone needs regardless of their social status. They, perhaps more than anyone, wish to raise our domain to new heights of prosperity and greatness. $dop_last_sentence$"
  dop_last_sentence: "We would do well to cultivate their influence."
  dop_law_state_council: "State Council"
  dop_law_state_council_desc: "The $dop_law_state_council$ is the supreme state advisory body of [GetFormableCountry('RUS').GetName], created to act as a mediating party between the autocratic regime and the regional Dumas introduced by the [ShowGovernmentReformName('speransky_liberalization_reform')] reform. The State Council examines proposed laws and oversees the budget and state expenditures, although it lacks the authority to propose changes. Instead, it makes recommendations based on the current situation."

@@ -547,7 +547,7 @@
  PROXIMITY_START_INFO: "Nearest Proximity Source (@location![LOCATION.GetName]):: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|+=$#!"
  PROXIMITY_FROM_INFO_DAT: "Proximity Cost from [LOCATION.GetName] to [TARGET_LOCATION.GetName]" 
  PROXIMITY_FROM_INFO_DAT_ARROW: "Proximity Cost of [TARGET_LOCATION.GetName]"
- PROXIMITY_FROM_INFO: "From [LOCATION.GetName] to [TARGET_LOCATION.GetName]:: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|+=$#!"
+ PROXIMITY_FROM_INFO: "From [LOCATION.GetName] to [TARGET_LOCATION.GetName]:: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|+=$#! $ICON$"
  PROX_LAKE_IS_MARITIME: "Lakes are always considered to have maximum [maritime_presence|e]."
  PROX_WITH_MARITIME: "With $MARITIME|V2%$ [maritime_presence|e] in [LOCATION.GetName]: $VAL|-=$"
  PROXIMITY_BASE_WITH_MARITIME_BREAKDOWN_HEADER: "Proximity cost from Maritime $VAL|-=$\n"
@@ -561,6 +561,16 @@
  PROX_SPEED_MODIFIER: "Proximity Speed is $VAL|G%2$ due to"
  EMBARKING_TO_DIFFERENT_SEA_ZONE: "Embarking into a different [seazone|e] ($FROM_SEAZONE$@button_simple_smaller!$TO_SEAZONE$)"
  LANDING_TO_DIFFERENT_SEA_ZONE: "Landing into a different [seazone|e] ($FROM_SEAZONE$@button_simple_smaller!$TO_SEAZONE$)"
+ PROXIMITY_ICON_LAND:	"@inland!"
+ PROXIMITY_ICON_HARBOR: "@port!"
+ PROXIMITY_ICON_MARITIME: "@maritime_presence!"
+ PROXIMITY_ICON_ROAD_1: "@gravel_road!"
+ PROXIMITY_ICON_ROAD_2: "@paved_road!"
+ PROXIMITY_ICON_ROAD_3: "@modern_road!"
+ PROXIMITY_ICON_ROAD_4: "@railroad!"
+ PROXIMITY_ICON_RIVER: "@river!"
+ PROXIMITY_ICON_FROZEN: "@frozen!"
+ PROXIMITY_ICON_LAKE: "@lake!"
  
 
  ACCEPTED_CULTURES_TITLE: "$game_concept_accepted_cultures$ of [Player.GetNameWithNoTooltip]"
@@ -7562,3 +7572,5 @@
  RIVER_CROSSING_LOCATIONS_TEXT: "[crossing_with_icon|e] combat penalty towards the following [locations]:"
  RIVER_CONNECTED_LOCATIONS_TEXT: "[proximity_with_icon|e] is improved towards the following [locations|e]:"
  RIVER_LOCATIONS_ENTRY: "[LOCATION.GetRankIcon] [LOCATION.GetName]"
+
+ SALE_PRICE: "Sale Price"

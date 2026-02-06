@@ -49,42 +49,48 @@
 	}
 	
 	on_monthly = {
-		random_list = {
-			20 = {custom_tooltip = an_event_occurs_tt}
-			80 = {custom_tooltip = no_event_occurs_tt}
-		}
-		hidden_effect = {
+		if = {
+			limit = {
+				has_variable = bra_wittelsbacher_investment_var
+				has_variable = bra_wittelsbacher_neglect_var
+			}
 			random_list = {
-				80 = { }
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.4
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.5
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.6
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.7
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.8
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.9
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.10
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.11
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.12
-				}
-				2 = {
-					trigger_event_silently = turmoil_in_brandenburg.13
+				20 = {custom_tooltip = an_event_occurs_tt}
+				80 = {custom_tooltip = no_event_occurs_tt}
+			}
+			hidden_effect = {
+				random_list = {
+					80 = { }
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.4
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.5
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.6
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.7
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.8
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.9
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.10
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.11
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.12
+					}
+					2 = {
+						trigger_event_silently = turmoil_in_brandenburg.13
+					}
 				}
 			}
 		}

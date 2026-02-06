@@ -16,4 +16,5 @@ cb_independence_war = {
 	}
 	
 	war_goal_type = independence
+	ai_selection_desire = 10
 }

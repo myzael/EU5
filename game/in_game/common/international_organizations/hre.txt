@@ -154,6 +154,7 @@
 		allowed_enforce_peace = yes
 		allowed_threaten_war = yes
 
+		monthly_diplomats = 0.5 # Enable the emperor to use actions like "Demand unlawful territory" more often
 	}
 	
 	create_visible_trigger = {
@@ -513,9 +514,19 @@
 								limit = {
 									not = { religion = root.leader_country.religion }
 								}
-								add = 1
+								add = "religion.reverse_religious_view_impact(root.leader_country.religion)"
+								multiply = -1
+								add = 5
+								divide = 4
+								min = 0
 							}
-							multiply = -0.01
+							if = {
+								limit = { international_organization_has_policy = policy:hre_religion_christian }
+								multiply = -0.005
+							}
+							else = {
+								multiply = -0.01
+							}
 						}
 					}
 					
@@ -536,7 +547,7 @@
 							}
 							add = 1
 						}
-						multiply = -0.0075
+						multiply = -0.003
 					}
 					add = {
 						desc = "FOREIGN_PROVINCES_REST"
@@ -556,7 +567,7 @@
 							}
 							add = 1
 						}
-						multiply = -0.002
+						multiply = -0.001
 					}
 					#subjugated members
 					add = {
@@ -568,7 +579,7 @@
 							}
 							add = 1
 						}
-						multiply = -0.005
+						multiply = -0.003
 					}
 					if = {
 						limit = {
@@ -660,19 +671,7 @@
 	join_diplo_chance = {
 		opinion = 0.25
 	}
-
 	ai_desire_to_join = {
-
-		scope:recipient = {
-			if = {
-				limit = { international_organization_has_leader = yes }
-				add = {
-					desc = "game_concept_trust"	
-					value = "scope:actor.trust(scope:recipient.leader_country)"
-					divide = 5
-				}
-			}
-		}
 		if = {
 			limit = { country_rank_level > 1 }
 			subtract = {
@@ -687,7 +686,26 @@
 			desc = "game_concept_tax_base"
 			value = country_tax_base
 		}
-
+		if = {
+			limit = { exists = scope:recipient }
+			#we only check countries which have a cb on the potential joinder - any more countries would be a curse to performance
+			every_casus_belli_on_us = {
+				if = {
+					limit = { is_member_of_international_organization = scope:recipient }
+					subtract = {
+						desc = "THREATENED_BY_IO_MEMBERS"
+						value = "threat_level_to(root)"
+					}
+				}
+				else = {
+					add = {
+						desc = "THREATENED_BY_NON_IO_MEMBERS"
+						value = "threat_level_to(root)"
+						divide = 2	#outside forces must be horrifying before we consider joining hre
+					}
+				}
+			}
+		}
 		add = {
 			desc = "game_concept_diplomatic_reputation"
 			value = {
@@ -772,11 +790,6 @@
 			add = {
 				desc = "OPINION_OF_LEADER_TO_US"
 				value = "leader_country.opinion(scope:actor)"
-			}
-			add = {
-				desc = "TRUST_OF_LEADER_TO_US"
-				value = "leader_country.trust(scope:actor)"
-				divide = 5
 			}
 		}
 		if = {

@@ -34,7 +34,7 @@ a_indian_elephant_cavalry = {
 	category = army_cavalry	
 	copy_from = a_age_2_renaissance_cavalry
 	# some terrain and climate impacts
-	max_strength = 0.05
+	max_strength = 0.2
 	impact = {
 		jungle = -0.25
 	}

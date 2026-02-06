@@ -10,7 +10,7 @@ cb_coalition = {
 		always = no
 	}
 
-	war_goal_type = take_capital_coalition
+	war_goal_type = superiority_coalition
 
 	additional_war_enthusiasm_attacker = 0.25
 

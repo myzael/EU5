@@ -16,13 +16,6 @@
 			is_subject = no
 			has_markets = no
 			is_great_power = no
-			not = {
-				#can only do this to one country
-				receiving_scripted_relation = {
-					type = relation_type:forced_divert_trade
-					target = scope:actor
-				}
-			}
 		}
 	}
 	
@@ -31,7 +24,18 @@
 			modifier:allow_diplomacy_force_divert_trade = no
 		}
     }
-	
+
+	offer_visible = {
+		scope:recipient = {
+			not = {
+				#can only do this to one country
+				receiving_scripted_relation = {
+					type = relation_type:forced_divert_trade
+					target = scope:actor
+				}
+			}
+		}
+	}	
 
 	request_visible = { always = no }
 	break_visible = { always = no }

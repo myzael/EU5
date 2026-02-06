@@ -67,7 +67,19 @@ input_context={
 		text="SETTING_INPUT_ACTION_SPEED_FIVE"
 		scancode=93
 	}
-	
+
+	input_action={
+		name="speed_6"
+		text="SETTING_INPUT_ACTION_SPEED_SIX"
+		scancode=94
+	}
+
+	input_action={
+		name="speed_7"
+		text="SETTING_INPUT_ACTION_SPEED_SEVEN"
+		scancode=95
+	}
+
 	input_action={
 		name="console"
 		text="SETTING_INPUT_ACTION_CONSOLE"

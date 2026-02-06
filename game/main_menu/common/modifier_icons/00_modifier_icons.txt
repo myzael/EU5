@@ -6370,7 +6370,7 @@ dhimmi_estate_allowed_leading_military = {
 port_cost_distance_from_capital = {
 	positive = "gfx/interface/icons/modifier_types/local_port_cost_distance_from_capital_modifier.dds" 
 }
-local_port_cost_distance_from_capital_speed_propagation = {
+local_port_cost_distance_impact = {
 	positive = "gfx/interface/icons/modifier_types/local_port_cost_distance_from_capital_modifier.dds" 
 }
 

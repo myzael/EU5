@@ -6382,6 +6382,8 @@ rivers = {
 		toll_marker = no
 	}
 
+	shader_id = 2
+
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
 

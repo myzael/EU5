@@ -234,8 +234,8 @@
  MODIFIER_TYPE_DESC_land_cost_on_distance_from_capital_speed_propagation: "This impacts the speed that [proximity|e] moves through [locations|e] when going through a normal [location|e]."
  MODIFIER_TYPE_NAME_port_cost_distance_from_capital: "Proximity Cost through Port"
  MODIFIER_TYPE_DESC_port_cost_distance_from_capital: "This impacts the [proximity|e] cost between [locations|e] when going from a [port|e] to a [seazone|e] or reverse."
- MODIFIER_TYPE_NAME_local_port_cost_distance_from_capital_speed_propagation: "Proximity Speed through Port"
- MODIFIER_TYPE_DESC_local_port_cost_distance_from_capital_speed_propagation: "This impacts the [proximity|e] speed between [locations|e] when going into the [seazone|e] or out of it."
+ MODIFIER_TYPE_NAME_local_port_cost_distance_impact: "Proximity Impact through Port"
+ MODIFIER_TYPE_DESC_local_port_cost_distance_impact: "This impacts the [proximity|e] cost between [locations|e] when going into the [seazone|e] or out of it."
  MODIFIER_TYPE_NAME_land_cost_going_downstream: "Proximity Cost of going downstream along a River"
  MODIFIER_TYPE_DESC_land_cost_going_downstream: "This impacts the [proximity|e] cost between [locations|e] when going through downstream along a [river|e]."
  MODIFIER_TYPE_NAME_land_cost_going_upstream: "Proximity Cost of going upstream along a River"
@@ -2806,8 +2806,8 @@
  MODIFIER_TYPE_DESC_global_trades_per_burgher: "This impacts how much [trade|e] per [population|e] the [ShowEstateTypeName('burghers_estate')] in the [country|e] can do on their own."
 
  
- MODIFIER_TYPE_NAME_ruler_must_be_commander_during_war: "Ruler Must be Commander During War"
- MODIFIER_TYPE_DESC_ruler_must_be_commander_during_war: "This gives a [government_power|e] penalty while our [ruler|e] is not a [commander|e] of an [army|e] or [navy|e] during [war|e]."
+ MODIFIER_TYPE_NAME_ruler_must_be_commander_during_war: "Ruler must be Commander of the Biggest Military Force"
+ MODIFIER_TYPE_DESC_ruler_must_be_commander_during_war: "This demands that our [ruler|e] is a [commander|e] of the biggest [army|e] or [navy|e] during [war|e]. Following penalties are applied if they are not in active service:\n[ShowAutoModifierEffect('ruler_is_not_a_commander_during_war')]"
 
  MODIFIER_TYPE_NAME_character_overthrew_high_king: "High Kingship Leader Vote Weight"
  MODIFIER_TYPE_DESC_character_overthrew_high_king: "This increases the Vote Weight that this [ruler|e]'s [country|e] has when voting for the [international_organization_leader_short|e] of a [GetInternationalOrganizationType('high_kingship').GetName] [international_organizations|e]."
@@ -2965,7 +2965,7 @@
  MODIFIER_TYPE_NAME_growth_is_primary_culture: "Only Primary & Accepted Growth"
  MODIFIER_TYPE_DESC_growth_is_primary_culture: "All [pops|e] from [population_growth|e] will be from an [accepted_culture|e] or the [primary_culture|e]."
  MODIFIER_TYPE_NAME_owner_gets_vision_when_occupied: "Owner gets Vision when Occupied"
- MODIFIER_TYPE_DESC_owner_gets_vision_when_occupied: "Even when [occupied|e], the [owner|e] always has [vision|e] in this [location|e]."
+ MODIFIER_TYPE_DESC_owner_gets_vision_when_occupied: "Even when [occupied|e], the [owner|e] always has vision in this [location|e]."
  MODIFIER_TYPE_NAME_pop_countries_opinions: "[Localize('game_concept_society_of_pops')] Opinions"
  MODIFIER_TYPE_DESC_pop_countries_opinions: "This impacts the [opinion|e] that all [society_of_pops|e] have of a [country|e]."
  MODIFIER_TYPE_NAME_building_missionary_effort_modifier: "Monthly Religious Conversion from Buildings"

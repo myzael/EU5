@@ -335,6 +335,12 @@ opinion_granted_electorship = {
 	yearly_decay = 1
 }
 
+opinion_demanded_unlawful_territory = {
+	value = -100
+	yearly_decay = 2
+	min = -200
+}
+
 hre_emperor_defends_empire = {
 	value = 50
 	yearly_decay = 2

@@ -4651,7 +4651,8 @@ local_distance_from_capital_speed_propagation={
 	}
 }
 
-local_port_cost_distance_from_capital_speed_propagation={
+local_port_cost_distance_impact={
+	color = bad
 	percent=yes
 	game_data={
 		category=location

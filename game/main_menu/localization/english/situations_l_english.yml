@@ -407,6 +407,7 @@
  betray_our_allegiance_desc: "The tides of war change. While we may have pledged our sword in assistance of our allies during the ongoing conflict, we must reconcile with reality and pursue a different course of diplomacy, in an effort to spare our people the horrors of war and subjugation."
  eng_leads_one_side_france_another_tt: "One side of the [war|e] is led by [GetCountry('ENG').GetName], while the other is led by [GetCountry('FRA').GetName]"
  choose_war_tt: "Choose a [war|e]"
+ war_goal_owned_by_us_tt: "The [war_goal|e] is NOT a [location|e] or a [province|e] that we own"
 
  procure_core_claim: "Procure Core Claim"
  procure_core_claim_desc: "We can no longer ignore our rightful claim to certain lands. By asserting ownership over what is justly ours, we lay the groundwork for war to reclaim our lost territory."

@@ -32,7 +32,7 @@ golden_bull = {
 			hre_has_locked_law = { law = golden_bull }
 		}
 	}
-	custom_tags = { forbids_no_policy }
+	custom_tags = { forbids_no_policy no_ai_propose_cd }
 
 	golden_bull_policy = {
 		# How much the Emperor wants to propose a policy
@@ -152,7 +152,7 @@ monetary_contribution = {
 		wants_propose_policy = {
 			subtract = {
 				desc = "POLICY_BIAS_LEADER_OPPOSES"
-				value = 1000
+				value = 2000
 			}
 		}
 		# How much the princes want to vote for / against the policy
@@ -251,9 +251,23 @@ monetary_contribution = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 100 # Also good if emperor needs money but doesnt enable diplo actions because IO treasury cannot be filled manually
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:complete_imperial_contribution }
+						NOT = { international_organization_has_policy = policy:only_treasury_payment }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 100 # Also good if emperor needs money but doesnt enable diplo actions because IO treasury cannot be filled manually
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -346,7 +360,7 @@ military_contribution = {
 		wants_propose_policy = {
 			subtract = {
 				desc = "POLICY_BIAS_LEADER_OPPOSES"
-				value = 1000
+				value = 2000
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -382,11 +396,24 @@ military_contribution = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 75
-			}
 			add = hre_default_emperor_policy_desire
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:manpower_from_electors }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 75
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
 		}
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
@@ -448,11 +475,24 @@ military_contribution = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 125
-			}
 			add = hre_default_emperor_policy_desire
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:manpower_from_princes }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 125
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
 		}
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
@@ -495,9 +535,22 @@ military_contribution = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 200
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:great_imperial_army }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 200
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -725,9 +778,22 @@ imperial_succession_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_ANCIENT_TRADITION"
-				value = 150
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:hre_pragmatic_sanction_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_ANCIENT_TRADITION"
+					value = 150
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 		}
 		# How much the princes want to vote for / against the policy
@@ -837,9 +903,22 @@ imperial_voting_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_OPPOSES"
-				value = -500 # Terrible reform for the emperor
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:emperor_successor_preference_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_OPPOSES"
+					value = -2000 # Terrible reform for the emperor
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 		}
 		# How much the princes want to vote for / against the policy
@@ -870,9 +949,22 @@ imperial_voting_law = {
 		international_organization_modifier = { allow_self_vote = yes }
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 50
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:emperor_dynastic_preference_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 50
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -919,9 +1011,22 @@ imperial_voting_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 100 # Good reform for the emperor to ensure succession
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:emperor_successor_preference_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 100
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -929,7 +1034,7 @@ imperial_voting_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = POLICY_BIAS_PRINCE_OPPOSES
-				value = -50 # Base opposition of all princes to this law
+				value = -100 # Base opposition of all princes to this law
 			}
 			if = { limit = { is_elector = yes } add = { desc = "IS_ELECTOR" value = -250 } }
 			else = { add = io_electors_opinion_value }
@@ -965,9 +1070,22 @@ imperial_voting_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 150 # Good reform for the emperor to ensure succession
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:erbkaisertum_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 150
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -975,9 +1093,9 @@ imperial_voting_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = POLICY_BIAS_PRINCE_OPPOSES
-				value = -75 # Base opposition of all princes to this law
+				value = -125 # Base opposition of all princes to this law
 			}
-			if = { limit = { is_elector = yes } add = { desc = "IS_ELECTOR" value = -100 } }
+			if = { limit = { is_elector = yes } add = { desc = "IS_ELECTOR" value = -150 } }
 			else = { add = io_electors_opinion_value }
 			add = hre_default_policy_opinion
 		}
@@ -1031,7 +1149,7 @@ imperial_voting_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = POLICY_BIAS_PRINCE_OPPOSES
-				value = -100 # Base opposition of all princes to this law
+				value = -150 # Base opposition of all princes to this law
 			}
 			if = { limit = { is_elector = yes } add = { desc = "IS_ELECTOR" value = -500 } }
 			else = { add = io_electors_opinion_value }
@@ -1234,9 +1352,22 @@ electorate_organization_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 50 # Useful reform but not very useful
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:integrated_electors_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 50
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1244,14 +1375,14 @@ electorate_organization_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_BIAS_PRINCE_OPPOSES"
-				value = -50 # Base opposition to restricting electors
+				value = -75 # Base opposition to restricting electors
 			}
 			add = hre_default_policy_opinion
 			if = {
 				limit = { is_elector = yes }
 				add = {
 					desc = "IS_ELECTOR"
-					value = -50
+					value = -100
 				}
 			}
 			else = {
@@ -1330,14 +1461,14 @@ electorate_organization_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_BIAS_PRINCE_OPPOSES"
-				value = -100 # Base opposition to restricting electors
+				value = -150 # Base opposition to restricting electors
 			}
 			add = hre_default_policy_opinion
 			if = {
 				limit = { is_elector = yes }
 				add = {
 					desc = "IS_ELECTOR"
-					value = -150
+					value = -250
 				}
 			}
 			else = {
@@ -1507,13 +1638,26 @@ free_city_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 25 # somewhat good reform for the emperor for IA
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:cities_of_the_emperor_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 25 # somewhat good reform for the emperor for IA
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_diplomat_policies
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_diplomat_policies
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1607,17 +1751,30 @@ free_city_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 75 # beneficial Reform
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:direct_imperial_cities_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 75 # beneficial Reform
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_administrative_policies
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_diplomat_policies
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_administrative_policies
-			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_diplomat_policies
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1625,14 +1782,14 @@ free_city_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_BIAS_PRINCE_OPPOSES"
-				value = -50 # Princes dont like emperor expanding his power
+				value = -75 # Princes dont like emperor expanding his power
 			}
 			add = hre_default_policy_opinion
 			if = {
 				limit = { has_special_status_in_international_organization = { type = special_status:free_city international_organization = scope:recipient } }
 				add = {
 					desc = "POLICY_RESTRICTS_SOVEREIGNTY"
-					value = -100
+					value = -150
 				}
 			}
 		}
@@ -1724,7 +1881,7 @@ free_city_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_BIAS_PRINCE_OPPOSES"
-				value = -50 # Princes dont like emperor expanding his power
+				value = -75 # Princes dont like emperor expanding his power
 			}
 			add = hre_default_policy_opinion
 			if = {
@@ -1768,9 +1925,23 @@ free_city_rights_law = {
 		on_activate = { custom_tooltip = german_free_cities_only_policy_at }
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_ANCIENT_TRADITION"
-				value = 25
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:german_and_german_adjacent_free_cities_policy }
+						NOT = { international_organization_has_policy = policy:empire_wide_free_cities_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_ANCIENT_TRADITION"
+					value = 25
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1790,9 +1961,22 @@ free_city_rights_law = {
 		on_activate = { custom_tooltip = german_and_german_adjacent_free_cities_policy_at }
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_EMPEROR_WANTS"
-				value = 40 # good for more IA gain potentially but not very important reform
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:empire_wide_free_cities_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_EMPEROR_WANTS"
+					value = 40 # good for more IA gain potentially but not very important reform
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1865,13 +2049,26 @@ landfriede_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = -50 # No good reform from the emperor point of view except if militarist
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:landfriede_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = -50 # No good reform from the emperor point of view except if militarist
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_militarist_policies
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_militarist_policies
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 		}
 		# How much the princes want to vote for / against the policy
@@ -1914,18 +2111,31 @@ landfriede_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 25 # Improvement but not priority.
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:landfriede_rank_2_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 50 # Improvement but not priority.
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_administrative_policies
+				}
+				add = {
+					desc = "POLICY_STRATEGIC_VALUE"
+					value = stability
+					multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_administrative_policies
-			}
-			add = {
-				desc = "POLICY_STRATEGIC_VALUE"
-				value = stability
-				multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -1936,7 +2146,7 @@ landfriede_law = {
 				value = 25 # Princes dont like wild west HRE with higher stability costs
 			}
 			add = hre_default_policy_opinion
-				add = {
+			add = {
 				desc = "POLICY_STRATEGIC_VALUE"
 				value = stability
 				multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
@@ -1977,18 +2187,31 @@ landfriede_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 50 # Improvement but not high priority.
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:landfriede_rank_3_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 50 # Improvement but not high priority.
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_administrative_policies
+				}
+				add = {
+					desc = "POLICY_STRATEGIC_VALUE"
+					value = stability
+					multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_administrative_policies
-			}
-			add = {
-				desc = "POLICY_STRATEGIC_VALUE"
-				value = stability
-				multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2040,18 +2263,31 @@ landfriede_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 50 # Improvement but not high priority.
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:landfriede_rank_4_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 50 # Improvement but not high priority.
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_administrative_policies
+				}
+				add = {
+					desc = "POLICY_STRATEGIC_VALUE"
+					value = stability
+					multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_administrative_policies
-			}
-			add = {
-				desc = "POLICY_STRATEGIC_VALUE"
-				value = stability
-				multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2106,18 +2342,31 @@ landfriede_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_SUPPORTS"
-				value = 75 # Need to progress to comfort policy
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:outlaw_internal_warfare_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_SUPPORTS"
+					value = 75 # Need to progress to comfort policy
+				}
+				add = {
+					desc = "BIAS_FROM_RULER_TRAITS"
+					value = modifier:bias_for_administrative_policies
+				}
+				add = {
+					desc = "POLICY_STRATEGIC_VALUE"
+					value = stability
+					multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+				}
 			}
-			add = {
-				desc = "BIAS_FROM_RULER_TRAITS"
-				value = modifier:bias_for_administrative_policies
-			}
-			add = {
-				desc = "POLICY_STRATEGIC_VALUE"
-				value = stability
-				multiply = -0.5 # Stability cost gets more interesting if you have no enough of it
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2197,7 +2446,7 @@ landfriede_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_BIAS_PRINCE_OPPOSES"
-				value = -75 # Princes dont like Emperor expanding power
+				value = -100 # Princes dont like Emperor expanding power
 			}
 			add = hre_default_policy_opinion
 			add = {
@@ -2249,9 +2498,22 @@ imperial_diet_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_OPPOSES"
-				value = -25 # No benefits from this
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:hre_early_imperial_diet_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_OPPOSES"
+					value = -25 # No benefits from this
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 		}
 		# How much the princes want to vote for / against the policy
@@ -2292,9 +2554,22 @@ imperial_diet_law = {
 		}		
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 50 # Emperor wants to formalize imperial diet for IA gain
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:hre_bi_camerial_imperial_diet_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 50 # Emperor wants to formalize imperial diet for IA gain
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2332,9 +2607,22 @@ imperial_diet_law = {
 		}		
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_BIAS_LEADER_WANTS"
-				value = 66 # Emperor wants to formalize imperial diet for IA gain, but no high prio
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:hre_tri_camerial_imperial_diet_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 66 # Emperor wants to formalize imperial diet for IA gain, but no high prio
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2392,6 +2680,23 @@ imperial_diet_law = {
 				value = 66 # Emperor wants to formalize imperial diet for IA gain, but no high prio
 			}
 			add = hre_default_emperor_policy_desire
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:hre_tri_camerial_imperial_diet_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_BIAS_LEADER_WANTS"
+					value = 66 # Emperor wants to formalize imperial diet for IA gain, but no high prio
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
+			}
 		}
 		# How much the princes want to vote for / against the policy
 		wants_this_policy_bias = {
@@ -2595,9 +2900,22 @@ power_of_the_emperor_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_ANCIENT_TRADITION"
-				value = 25 # Baseline for this law, better than figurehead
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:improved_imperial_authority_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_ANCIENT_TRADITION"
+					value = 25 # Baseline for this law, better than figurehead
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2639,9 +2957,22 @@ power_of_the_emperor_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_EMPEROR_WANTS"
-				value = 100 # Priority reform for the emperor to progress integration if possible to do
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:revoke_privilegia_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_EMPEROR_WANTS"
+					value = 100 # Priority reform for the emperor to progress integration if possible to do
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2649,7 +2980,7 @@ power_of_the_emperor_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_PRINCE_OPPOSES"
-				value = -75  # Princes dont like centralization
+				value = -100  # Princes dont like centralization
 			}
 			add = hre_default_policy_opinion
 		}
@@ -2700,9 +3031,22 @@ power_of_the_emperor_law = {
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
-			add = {
-				desc = "POLICY_EMPEROR_WANTS"
-				value = 250 # Priority reform for the emperor to progress integration if possible to do
+			if = {
+				limit = {
+					scope:recipient = {
+						NOT = { international_organization_has_policy = policy:renovatio_policy }
+					}
+				}
+				add = {
+					desc = "POLICY_EMPEROR_WANTS"
+					value = 250 # Priority reform for the emperor to progress integration if possible to do
+				}
+			}
+			else = {
+				subtract = {
+					desc = "WE_ALREADY_HAVE_A_BETTER_POLICY"
+					value = 1000
+				}
 			}
 			add = hre_default_emperor_policy_desire
 		}
@@ -2710,7 +3054,7 @@ power_of_the_emperor_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_PRINCE_OPPOSES"
-				value = -100  # Princes dont like centralization
+				value = -150  # Princes dont like centralization
 			}
 			add = hre_default_policy_opinion
 			add = {
@@ -2780,7 +3124,7 @@ power_of_the_emperor_law = {
 		wants_this_policy_bias = {
 			add = {
 				desc = "POLICY_PRINCE_OPPOSES"
-				value = -100  # Princes dont like centralization
+				value = -150  # Princes dont like centralization
 			}
 			add = hre_default_policy_opinion
 			add = {
