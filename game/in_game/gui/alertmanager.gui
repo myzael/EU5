@@ -918,6 +918,12 @@ alert_banner = {
 
 alert_action = {
 	name = "about_to_lose_great_power_status_action"
+	action_tooltip = {
+		click_type = left
+		click_mode = single
+		title = "OPEN_KNOWN_COUNTRIES_TAB"
+		on_action = "[OpenLateralViewWithParams('diplomacy', 'relations_tab = known_countries')]"
+	}
 }
 
 ###########################

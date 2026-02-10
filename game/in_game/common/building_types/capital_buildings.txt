@@ -546,8 +546,7 @@ pirate_stronghold = {
 	rural_settlement = yes
 	town = yes
 	city = yes
-	
-	estate = peasants_estate
+
 	build_time = small_capital_build_time
 	
 	expensive = yes

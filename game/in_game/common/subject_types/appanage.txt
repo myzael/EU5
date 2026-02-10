@@ -15,40 +15,27 @@
 
 	#root = subject type, scope:actor = caller, scope:recipient = callee, scope:target (optional) = against who)
 	join_defensive_wars_always = {
-		NOR = {
-			scope:recipient ?= { modifier:appanage_prevented_from_call_to_war = yes }
+		trigger_if = {
+			limit = {
+				scope:target ?= { has_country_modifier = granted_autonomy_to_expand_modifier }
+			}
 			custom_tooltip = {
 				text = wont_join_vs_other_appanages_with_granted_autonomy_to_expand_modifier_during_hyw_tt
-				trigger_if = {
-					limit = {
-						scope:target ?= {
-							is_subject_type = appanage
-						}
-					}
-					scope:target ?= { has_country_modifier = granted_autonomy_to_expand_modifier } 
-				}
+				always = no
 			}
+		}
+		trigger_else = {
+			always = yes
 		}
 	}
 	#(root = subject type scope:overlord = overlord in relation scope:subject = subject in relation scope:attacker = country that wants to attack (will be either overlord or subject), scope:defender = country they want to attack)
 	can_attack = {
-		trigger_if = {
-			limit = {
-				scope:attacker = { is_subject_of = c:FRA }
-				scope:defender = { is_subject = yes }
-				is_situation_active = situation:hundred_years_war
-			}
-			scope:attacker = {
-				is_subject_type = appanage
-				custom_tooltip = {
-					text = has_demanded_autonomy_tt
-					has_country_modifier = granted_autonomy_to_expand_modifier
-				}
-			}
-			scope:defender = {
-				top_overlord = scope:subject.top_overlord
-			}
-		}	
+
+		custom_tooltip = {
+			text = has_demanded_autonomy_tt
+			scope:attacker = { has_country_modifier = granted_autonomy_to_expand_modifier }
+		}
+		scope:defender = { overlord = scope:attacker.overlord }
 	}
 	has_overlords_ruler = no
 	annexation_speed = 1

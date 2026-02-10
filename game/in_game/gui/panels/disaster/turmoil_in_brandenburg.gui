@@ -24,6 +24,13 @@ disaster_panel = {
 					textcontext = "[DisasterView.GetDisaster.GetType.GetEndConditions]"
 				}
 			}
+			blockoverride "visible_hint" {}
+			blockoverride "onaction_hint" {
+				action_tooltip = {
+					title = "OPEN_HINT"
+					on_action = "[OpenLateralViewWithParams('hints', 'selected_hint = hint_turmoil_in_brandenburg')]"
+				}
+			}
 			blockoverride "bottom_content_onclick" {
 				visible = "[LateralView.Vars.Exists( 'requirements_toggled' )]"
 			}

@@ -1158,6 +1158,10 @@
  PEACE_TREATY_REVOKE_CORE_short: "Revoke cores of [TARGET_COUNTRY.GetNameWithFlagWithNoTooltip] in [LOCATION.GetNameWithNoTooltip]"
  PEACE_REVOKE_CORE_MULT: "Revoke Core"
 
+ PEACE_TREATY_RETURN_CORE: "Return [LOCATION.GetName] to [TARGET_COUNTRY.GetNameWithFlag]"
+ PEACE_TREATY_RETURN_CORE_short: "Return [LOCATION.GetNameWithNoTooltip] to [TARGET_COUNTRY.GetNameWithFlagWithNoTooltip]"
+ PEACE_RETURN_CORE_MULT: "Return Core"
+
  PEACE_TREATY_CANCEL: "Release [COUNTRY.GetNameWithFlag] from [COUNTRY.GetDiplomacy.GetOverlord.GetNameWithNoTooltip] and block any other relationships for #Y $MONTHS$#! months"
  PEACE_TREATY_CANCEL_short: "Release [COUNTRY.GetNameWithFlagWithNoTooltip] from [COUNTRY.GetDiplomacy.GetOverlord.GetNameWithNoTooltip]"
 

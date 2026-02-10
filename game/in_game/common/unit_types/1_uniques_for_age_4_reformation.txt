@@ -231,9 +231,9 @@ a_saxon_defensioner = {
 		woods = 0.1
 	}
 	impact = {
-		hills = 0.1
-		forest = 0.1
-		woods = 0.1
+		hills = -0.1
+		forest = -0.1
+		woods = -0.1
 	}
 
 	gfx_tags = { pike_tag medium_tag }
@@ -255,8 +255,8 @@ a_hesse_jager = {
 		woods = 0.15
 	}
 	impact = {
-		forest = 0.15
-		woods = 0.15
+		forest = -0.15
+		woods = -0.15
 	}
 
 	gfx_tags = { musket_tag medium_tag }
@@ -277,8 +277,8 @@ a_gebirgsschutzen_infantry = {
 		mountains = 0.25
 	}
 	impact = {
-		hills = 0.1
-		mountains = 0.25
+		hills = -0.1
+		mountains = -0.25
 	}
 
 	gfx_tags = { musket_tag medium_tag }

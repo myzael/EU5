@@ -519,9 +519,13 @@ types LoadSaveTypes
 				position = { -35 0 }
 				size = { 18 18 }
 				using = icon_multiplayer
-				visible = "[PlaythroughItem.IsMultiplayer]"
+
+				block "save_slot_multiplayer_icon_visible" {
+					visible = "[PlaythroughItem.IsMultiplayer]"
+				}
 				# block "slot_icon_tint" {}
 			}
+
 			button_close_alt = {
 				size = { 25 25 }
 				position = { -5 0 }
@@ -655,6 +659,10 @@ types LoadSaveTypes
 										name = "date"
 										text = "[SaveGameItem.GetRealDate]"
 										enabled = "[Not(SaveGameItem.HasMissingDLC)]"
+									}
+
+									blockoverride "save_slot_multiplayer_icon_visible" {
+										visible = "[SaveGameItem.IsMultiplayer]"
 									}
 
 									blockoverride "slot_icons" {

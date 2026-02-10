@@ -178,8 +178,8 @@ a_bavarian_jager = {
 		woods = 0.15
 	}
 	impact = {
-		forest = 0.15
-		woods = 0.15
+		forest = -0.15
+		woods = -0.15
 	}
 
 	gfx_tags = { musket_tag medium_tag }

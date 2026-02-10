@@ -125,6 +125,7 @@
  PRICE_SCALED_VALUE_FROM_RECIPIENT_RAW: "Scaled Gold from Recipient: $VAL|Y$ [$ICON$_i]"
  PRICE_CAP_MAX: "Capped at Max: $VAL|Y$ [$ICON$_i]"
  PRICE_CAP_MIN: "Capped at Min: $VAL|Y$ [$ICON$_i]"
+ PRICE_SCALED_MONTHLY_GOLD: "$VAL|2Y%$ of [$ICON$_i] [economical_base|e]"
  PRICE_SCALED_MONTHLY: "$VAL|2Y%$ of [$ICON$_i] income"
  PRICE_COST_INFLATION: "[inflation|e]: $VALUE|-=%V2$"
  PRICE_COST_GOODS_IMPACT: "$GOODS$ cost at [MARKET.GetName] : $VALUE|=-%2$"

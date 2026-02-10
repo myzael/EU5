@@ -1460,11 +1460,11 @@ nobles_percentage = {
 	tooltip_key = {
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_ABOVE_2PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_ABOVE_2PERC"
 		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_0PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_0PERC"
 		color = define:NMapColors|MAP_COLOR_LOW
 	}
 
@@ -1532,11 +1532,11 @@ burghers_percentage = {
 	tooltip_key = {
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_ABOVE_50PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_ABOVE_50PERC"
 		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_0PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_0PERC"
 		color = define:NMapColors|MAP_COLOR_LOW
 	}
 
@@ -1603,11 +1603,11 @@ laborers_percentage = {
 	tooltip_key = {
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_100PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_100PERC"
 		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_0PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_0PERC"
 		color = define:NMapColors|MAP_COLOR_LOW
 	}
 	
@@ -1674,11 +1674,11 @@ peasants_percentage = {
 	tooltip_key = {
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_100PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_100PERC"
 		color = define:NMapColors|MAP_COLOR_HIGH
 	}
 	legend_key = {
-		desc = "POPULATION_SHARE_AT_0PERC"
+		desc = "LEGEND_KEY_POPULATION_SHARE_AT_0PERC"
 		color = define:NMapColors|MAP_COLOR_LOW
 	}
 	

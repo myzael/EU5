@@ -97,10 +97,10 @@ pirate_events.1 = {
 		}
 		else = { add_navy_tradition = navy_tradition_ultimate_bonus }
 		change_government_type = government_type:republic
-		add_reform = government_reform:pirate_brethren_reform
 		custom_tooltip = {
 			text = government_implements_several_policies_relevant_to_pirates_tt
 			remove_current_major_government_reform = yes
+			add_reform = government_reform:pirate_brethren_reform
 			unlock_policy_effect = { type = state_piracy_policy }
 			add_policy = policy:state_piracy_policy
 			add_policy = policy:council_of_captains
@@ -240,9 +240,10 @@ pirate_events.2 = {
 		}
 		else = { add_navy_tradition = navy_tradition_ultimate_bonus }
 		change_government_type = government_type:republic
-		add_reform = government_reform:pirate_brethren_reform
 		custom_tooltip = {
 			text = government_implements_several_policies_relevant_to_pirates_tt
+			remove_current_major_government_reform = yes
+			add_reform = government_reform:pirate_brethren_reform
 			add_policy = policy:state_piracy_policy
 			add_policy = policy:council_of_captains
 			add_policy = policy:articles_of_agreement

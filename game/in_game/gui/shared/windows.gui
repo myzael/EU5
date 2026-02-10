@@ -1230,6 +1230,7 @@ types WindowTypes
 
 	type lateralview_unattached = window {
 		using = lateralview_left_setup
+		movable = no
 
 		vbox = {
 			using = layoutpolicy_expanding

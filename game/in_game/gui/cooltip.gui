@@ -2821,6 +2821,13 @@ container = {
 
 container = {
 	alwaystransparent = no
+	name = "LocationMapTooltip_potential_tax_base"
+	using = location_tax_base_tooltip
+	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }
+}
+
+container = {
+	alwaystransparent = no
 	name = "LocationMapTooltip_peasant_enfranchisement"
 	using = location_tax_base_tooltip
 	blockoverride "bg_tooltip_alpha" { alpha = @map_tooltip_alpha }

@@ -12462,6 +12462,63 @@ dhimmi_estate_allowed_to_build_roads={
 	}
 }
 
+tribes_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+cossacks_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+crown_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+		should_show_in_modifiers_tab=no
+	}
+}
+
+nobles_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+clergy_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+burghers_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+peasants_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+dhimmi_estate_allowed_to_build_rgo={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
 ignore_gender_block_leader={
 	boolean=yes
 	game_data={

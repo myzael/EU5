@@ -32,7 +32,7 @@
 a_indian_elephant_cavalry = {
 	is_special = yes
 	category = army_cavalry	
-	copy_from = a_age_2_renaissance_cavalry
+	copy_from = a_age_1_traditions_cavalry
 	# some terrain and climate impacts
 	max_strength = 0.2
 	impact = {
@@ -155,7 +155,7 @@ a_siamese_advanced_elephant_cavalry = {
 a_khmer_ballista_elephant_infantry = {
 	is_special = yes
 	category = army_infantry
-	copy_from = a_age_2_renaissance_infantry
+	copy_from = a_age_1_traditions_infantry
 	# some terrain and climate impacts
 	max_strength = 0.25
 	impact = { jungle = -0.25 }

@@ -1436,9 +1436,9 @@ possible_promotion_percentage = {
 	}
 	local_peasants_estate_power = 10.0
 	local_pop_promotion_speed_scaled = 0.001
-	local_burghers_estate_power = -10
-	local_nobles_estate_power = -10
-	local_clergy_estate_power = -10
+	local_burghers_estate_power = -1
+	local_nobles_estate_power = -1
+	local_clergy_estate_power = -1
 }
 
 privileges_revoked = {

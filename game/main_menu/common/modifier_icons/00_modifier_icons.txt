@@ -6399,6 +6399,33 @@ dhimmi_estate_allowed_to_build_roads = {
 	positive = "gfx/interface/icons/modifier_types/dhimmi_estate_allowed_in_cabinet.dds" 
 }
 
+
+
+
+tribes_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/tribes_estate_allowed_in_cabinet.dds" 
+}
+cossacks_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/cossacks_estate_allowed_in_cabinet.dds"
+}
+crown_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/crown_estate_allowed_in_cabinet.dds" 
+}
+nobles_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/nobles_estate_allowed_in_cabinet.dds" 
+}
+clergy_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/clergy_estate_allowed_in_cabinet.dds" 
+}
+burghers_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/burghers_estate_allowed_in_cabinet.dds" 
+}
+peasants_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/peasants_estate_allowed_in_cabinet.dds" 
+}
+dhimmi_estate_allowed_to_build_rgo = {
+	positive = "gfx/interface/icons/modifier_types/dhimmi_estate_allowed_in_cabinet.dds" 
+}
 ignore_gender_block_leader = {
 	positive = "gfx/interface/icons/modifier_types/gender_equality.dds" 
 }

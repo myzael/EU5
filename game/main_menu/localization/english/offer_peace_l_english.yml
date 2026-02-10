@@ -453,11 +453,3 @@
  subjugate_natives_desc: "The natives shall bend the knee and accept our dominion, and their lands shall become ours by right."
  peace_take_over_market_center_desc: "The beating heart of their economy shall be ours, seized for the glory and profit of our country."
  peace_take_shogunate_desc: "Leadership within the [GetUniqueInternationalOrganization('japanese_shogunate').GetName] will pass into our hands. This will herald a new age as the destiny of [ShowRegionName('japan_region')] will henceforth be shaped by our rule."
-
-#Return Core Location
- 
- return_cores_to_country: "Return Core Location"
- return_cores_to_country_desc: "Returns a [location|e] belonging to [TARGET_COUNTRY.GetLongNameWithFlag] to its rightful core owner."
- return_cores_to_country_entry: "Return [SCOPE.sLocation('target').GetName] to it's rightful core owner"
- return_cores_to_country_entry_short: "[target.GetOwner.GetFlagIconWithNoTooltip] [SCOPE.sLocation('target').GetName] will be returned to [SCOPE.sLocation('target').GetController.GetName]"
- SAME_CULTURE_LOCATION: "[target.GetController.GetCulture.GetName] is the [dominant_culture|e] in [target.GetName]"

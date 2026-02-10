@@ -891,7 +891,3 @@ nov_friendly_hanseatic_relations: "Friendly Hanseatic Relations"
 
 #Denmark
 dan_banned_lutheran_bible: "Banned Lutheran Bible"
-
-#Return Core Location
- antagonism_return_cores_to_country: "Return [cores|e] to [country|e]"
-
