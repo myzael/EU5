@@ -323,7 +323,7 @@ great_pirate_era.1 = {
 				}
 				set_new_ruler = scope:target_character
 				change_country_type = navy
-				change_country_tag = NPV
+				define_unique_country_tag = NPV
 				change_country_flag = NPV
 			}
 		}
@@ -478,7 +478,7 @@ great_pirate_era.2 = {
 				}
 				set_new_ruler = scope:target_character
 				change_country_type = navy
-				change_country_tag = LIB
+				define_unique_country_tag = LIB
 				change_country_flag = LIB
 			}
 		}
@@ -640,7 +640,7 @@ great_pirate_era.3 = {
 				}
 				set_new_ruler = scope:target_character
 				change_country_type = navy
-				change_country_tag = SLE
+				define_unique_country_tag = SLE
 				change_country_flag = SLE
 			}
 		}
@@ -771,7 +771,7 @@ great_pirate_era.4 = {
 				change_government_type = government_type:republic
 				add_gold = 1000
 				change_country_type = navy
-				change_country_tag = TET
+				define_unique_country_tag = TET
 				change_country_flag = TET
 			}
 		}
@@ -911,7 +911,7 @@ great_pirate_era.5 = {
 				}
 				set_new_ruler = scope:target_character
 				change_country_type = navy
-				change_country_tag = PRY
+				define_unique_country_tag = PRY
 				change_country_flag = PRY
 			}
 		}
@@ -1049,7 +1049,7 @@ great_pirate_era.6 = {
 				}
 				set_new_ruler = scope:target_character
 				change_country_type = navy
-				change_country_tag = TRU
+				define_unique_country_tag = TRU
 				change_country_flag = TRU
 			}
 		}

@@ -972,7 +972,6 @@ johan.12 = {
 		change_country_name = FRA
 		change_country_adjective = FRA_ADJ
 		change_country_color =  map_FRA
-		change_country_tag = FRA
 		change_country_flag = FRA
 	}
 

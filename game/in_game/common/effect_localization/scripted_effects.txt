@@ -1092,20 +1092,20 @@ bra_change_investment_score_subtract_text = {
 	third_past = bra_change_investment_score_subtract
 }
 bra_change_neglect_score_add_text = {
-	global = bra_change_investment_score_add
-	first = bra_change_investment_score_add
-	third = bra_change_investment_score_add
-	global_past = bra_change_investment_score_add
-	first_past = bra_change_investment_score_add
-	third_past = bra_change_investment_score_add
+	global = bra_change_neglect_score_add
+	first = bra_change_neglect_score_add
+	third = bra_change_neglect_score_add
+	global_past = bra_change_neglect_score_add
+	first_past = bra_change_neglect_score_add
+	third_past = bra_change_neglect_score_add
 }
 bra_change_neglect_score_subtract_text = {
-	global = bra_change_investment_score_subtract
-	first = bra_change_investment_score_subtract
-	third = bra_change_investment_score_subtract
-	global_past = bra_change_investment_score_subtract
-	first_past = bra_change_investment_score_subtract
-	third_past = bra_change_investment_score_subtract
+	global = bra_change_neglect_score_subtract
+	first = bra_change_neglect_score_subtract
+	third = bra_change_neglect_score_subtract
+	global_past = bra_change_neglect_score_subtract
+	first_past = bra_change_neglect_score_subtract
+	third_past = bra_change_neglect_score_subtract
 }
 ########DEBUG########
 show_event_target_advance_type = {

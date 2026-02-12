@@ -12,7 +12,7 @@ nobles_land_rights = {
 
 		
 		monthly_towards_land = societal_value_minor_monthly_move
-
+		monthly_towards_serfdom = societal_value_monthly_move
 		monthly_towards_aristocracy = societal_value_monthly_move
 	}
 }
@@ -39,6 +39,7 @@ auxilium_et_consilium = {
 		global_army_levy_size_modifier = 0.1
 		nobles_estate_levy_size = 0.20
 		
+		monthly_towards_serfdom = societal_value_monthly_move
 		monthly_towards_aristocracy = societal_value_monthly_move
 	}
 }

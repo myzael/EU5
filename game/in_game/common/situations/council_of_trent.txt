@@ -51,7 +51,7 @@
 			set_variable = {	name = council_of_trent_anti_reformation_policies	value = 0	}
 			every_current_policy_in_international_organization = {
 				if = {
-					limit = { has_tag = anti_reformation }
+					limit = { has_tag = pro_reform }
 					prev = { change_variable = { name = council_of_trent_pro_reformation_policies add = 1 } }
 					if = {
 						limit = { has_tag = pro_reformation_severe }
@@ -59,7 +59,7 @@
 					}
 				}
 				else_if = {
-					limit = { has_tag = pro_reform }
+					limit = { has_tag = anti_reformation }
 					prev = { change_variable = { name = council_of_trent_anti_reformation_policies add = 1 } }
 					if = {
 						limit = { has_tag = anti_reformation_severe }

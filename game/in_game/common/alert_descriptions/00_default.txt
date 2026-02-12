@@ -140,6 +140,12 @@ has_call_for_peace = {
 	texture = "alerts_icons/alert_call_for_peace"
 	priority = orange
 }
+has_important_buildings_missing_input = {
+	title = "ALERT_IMPORTANT_BUILDINGS_MISSING_INPUT_TITLE"
+	game_concept = "buildings"
+	texture = "alerts_icons/buildings_missing_input"
+	priority = orange
+}
 has_casus_belli = {
 	title = "ALERT_CBS_TITLE"
 	texture = "alerts_icons/unused_cb"

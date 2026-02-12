@@ -506,7 +506,7 @@ scripted_effect rtr_become_china_effect = {
 		c:CHI = { trigger_event_non_silently = red_turban_rebellions.101 }
 	}
 	else = {
-		rtr_recreate_middle_kingdom = yes
+		form_country = formable_country:CHI_f
 	}
 	if = {
 		limit = { NOT = { country_rank = country_rank:rank_empire } }
@@ -3449,9 +3449,9 @@ red_turban_rebellions.101 = {
 		name = red_turban_rebellions.101.a
 		if = {
 			limit = { exists = scope:target_country }
-			change_country_tag = YUA
+			form_country = formable_country:YUA_f
 			scope:target_country = {
-				rtr_recreate_middle_kingdom = yes
+				form_country = formable_country:CHI_f
 			}
 		}
 	}
@@ -3627,12 +3627,12 @@ red_turban_rebellions.105 = {
 			limit = {
 				scope:new_china ?= root
 			}
-			rtr_recreate_middle_kingdom = yes
+			form_country = formable_country:CHI_f
 		}
 		else = {
 			show_as_tooltip = {
 				scope:new_china ?= {
-					rtr_recreate_middle_kingdom = yes
+					form_country = formable_country:CHI_f
 				}
 			}
 		}

@@ -1236,6 +1236,7 @@
  PEACE_TREATY_CANT_FULL_ANNEX_TREATIES: "@trigger_no!The [COUNTRY.GetLongName] already have treaties that need them to exist after the war"
  PEACE_TREATY_CANT_TAKE_ALL_RELEASED_LOCATIONS: "@trigger_no!Ceded location would overlap with releasing treaties. Remove the release treaty first"
  PEACE_TREATY_REVOLTER_WAR_CEDE: "@trigger_no!The [COUNTRY.GetLongName] is a revolter, and we are not the war leader"
+ PEACE_TREATY_RETURN_CORE_CEDE: "@trigger_no![LOCATION.GetName] is promised to be returned to [COUNTRY.GetName]"
  PEACE_TREATY_REVOLTER_NO_REVOLTER: "@trigger_no!The [COUNTRY.GetLongName] is not a revolter."
  PEACE_TREATY_NO_TO_RIVAL: "@trigger_no!The [TARGET_COUNTRY.GetLongName] is a [rival|e] of ours; we do not want to marry into their [dynasty|e]."
  PEACE_TREATY_NO_SLAVES_TO_LIBERATE: "@trigger_no!The [TARGET_COUNTRY.GetLongName] has no slaves with [primary_or_accepted_culture|e] of the [COUNTRY.GetLongName]."
@@ -1323,6 +1324,7 @@
  PEACE_GOLD_PER_MONTHLY: "Peace Cost Per Income: $COST|2$"
  
  PEACE_WARGOAL_MODIFIER: "[war_goal|e] $NAME$: $VAL|2-=%$"
+ PEACE_RETURN_CORE_MULTIPLIER: "Return Core Antagonism Multiplier: $VAL|2-=%$"
  PEACE_PLACE_NON_UNION_MAKING_CHARACTER_DISCOUNT: "Discount due to no [union|e] creation: $VAL|2-=%$"
  PEACE_TREATY_TYPE_MODIFIER: "$NAME$: $VAL|2-=%$"
  PEACE_TREATY_SUBJECT_TYPE_MODIFIER: "$NAME$ [subject_type|e]: $VAL|2-=%$"

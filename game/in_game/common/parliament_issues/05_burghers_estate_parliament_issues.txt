@@ -681,7 +681,13 @@ expand_docks = {
 			}
 			check_range_bounds = no
 			limit = {
-				NOT = { has_building = building_type:dock }
+				NOR = {
+					has_building = building_type:dock
+					has_building = building_type:dry_dock
+					has_building = building_type:shipyard
+					has_building = building_type:grand_shipyard
+					has_building = building_type:naval_base
+				}
 				is_coastal = yes
 				OR = {
 					location_rank = location_rank:town
@@ -761,7 +767,12 @@ expand_dry_docks = {
 			}
 			check_range_bounds = no
 			limit = {
-				NOT = { has_building = building_type:dry_dock }
+				NOR = {
+					has_building = building_type:dry_dock
+					has_building = building_type:shipyard
+					has_building = building_type:grand_shipyard
+					has_building = building_type:naval_base
+				}
 				is_coastal = yes
 				OR = {
 					location_rank = location_rank:town
@@ -840,7 +851,11 @@ expand_shipyards = {
 			}
 			check_range_bounds = no
 			limit = {
-				NOT = { has_building = building_type:shipyard }
+				NOR = {
+					has_building = building_type:shipyard
+					has_building = building_type:grand_shipyard
+					has_building = building_type:naval_base
+				}
 				is_coastal = yes
 				OR = {
 					location_rank = location_rank:town
@@ -918,7 +933,10 @@ expand_grand_shipyards = {
 			}
 			check_range_bounds = no
 			limit = {
-				NOT = { has_building = building_type:grand_shipyard }
+				NOR = {
+					has_building = building_type:grand_shipyard
+					has_building = building_type:naval_base
+				}
 				is_coastal = yes
 				OR = {
 					location_rank = location_rank:town

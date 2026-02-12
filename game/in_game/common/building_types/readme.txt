@@ -39,3 +39,4 @@
 # - custom_tags = { <strings> } #A list of custom strings to use to identify that building type
 # - AI_ignore_available_worker_flag = <yes/no> AI will build this building even if it is lacking the required pop type
 # - important_for_AI = <yes/no> When set it makes the AI use more performance trying to find a suitable place to build this
+# - important_for_UI = <yes/no> When set the building type can appear in important UI elements (e.g. high-priority alerts)

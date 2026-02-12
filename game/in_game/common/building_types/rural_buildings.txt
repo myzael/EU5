@@ -613,7 +613,13 @@ sawmill = {
 	rural_settlement = yes
 
 	location_potential = {
-		raw_material = goods:lumber
+		OR = {
+			vegetation = woods
+			vegetation = forest
+			vegetation = farmland
+			vegetation = jungle
+			raw_material = goods:lumber
+		}
 	}
 
 	unique_production_methods = {
@@ -625,7 +631,7 @@ sawmill = {
 	}
 
 	modifier = {
-		local_lumber_output_modifier = 0.1
+		local_lumber_output_modifier = 0.2
 	}
 
 	

@@ -1009,7 +1009,6 @@ flavor_mch.17 = {
 
 		form_country = formable_country:CHI_f
 		hidden_effect = {
-			change_country_tag = CHI
 			change_country_flag = CHI
 		}
 		change_country_adjective = QNG_ADJ

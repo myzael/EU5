@@ -2870,7 +2870,7 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 
 				hidden_effect = {
 					change_country_flag = SAINT_GEORGE
-					change_country_tag = SAGEO
+					define_unique_country_tag = SAGEO
 					change_heir_selection = heir_selection:bank_selection
 					change_government_type = government_type:republic
 				}

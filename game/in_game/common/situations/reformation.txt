@@ -394,6 +394,9 @@
 						any_neighbor_country = {
 							exists = yes
 						}
+						NOT = {
+							has_cooldown = convert_religion
+						}
 					}
 					random_list = {
 						1 = { trigger_event_non_silently = reformation.12 } #A Character Converts

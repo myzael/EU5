@@ -127,7 +127,7 @@ lumber_improvements_reformation = {
 	icon = rudimentary_coastal_ship_repair
 	age = age_4_reformation
 	requires = construction_speed_reformation
-	global_lumber_output_modifier = 0.25
+	global_lumber_output_modifier = 0.50
 }
 
 ###############################

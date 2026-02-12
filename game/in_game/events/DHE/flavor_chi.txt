@@ -2474,7 +2474,7 @@ flavor_chi.33 = {
 			limit = {
 				NOT = { tag = YUA }
 			}
-			change_country_tag = YUA
+			form_country = formable_country:YUA_f
 		}
 		change_country_name = NORTHERN_YUA
 	}
@@ -2583,7 +2583,6 @@ flavor_chi.34 = {
 
 		set_up_oirat = yes
 
-		change_country_tag = MGA
 	}
 
 	option = {
@@ -2595,7 +2594,6 @@ flavor_chi.34 = {
 
 		set_up_oirat = yes
 
-		change_country_tag = MGA
 
 		change_player = c:OIR
 	}
@@ -8383,9 +8381,7 @@ flavor_chi.118 = {
 	option = {
 		name = flavor_chi.118.a
 
-		change_country_tag = CSH
-		change_country_adjective = CSH_ADJ
-		change_country_name = CSH
+		form_country = formable_country:CSH_f
 
 		set_variable = li_zicheng_rebellion_var
 

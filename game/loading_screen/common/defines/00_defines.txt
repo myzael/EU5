@@ -213,13 +213,13 @@ NCountry = {
 	POP_SATISFACTION_NUDGE_AFTER_REANNEX = 0.5
 	
 	
-	REBEL_MONTHLY_POWER_SCALE = 0.001
+	REBEL_MONTHLY_POWER_SCALE = 0.01
 	NATIONALISM_BASE_PROGRESS = 0.0025
 	REBEL_MONTHLY_FOREIGN_SUPPORT_SCALE = 0.01
 	REBEL_DYNASTY_SUPPORT = 0.001
-	REBEL_ESTATE_INVEST_IMPACT_PER_POP = 0.1
+	REBEL_ESTATE_INVEST_IMPACT_PER_POP = 0.025
 	REBEL_LACK_OF_CONTROL_FACTOR = 0.02
-	REBEL_ESTATE_POWER_FACTOR = 0.05
+	REBEL_ESTATE_POWER_FACTOR = 0.01
 	REBEL_POPULATION_FRACTION_IMPACT = 0.01
 	REBEL_NON_INTEGRATED_FACTOR = 0.01
 
@@ -608,6 +608,7 @@ NAI = {
 	CHANGE_RELIGION_THRESHOLD = 1.25 # New religion must be >25% bigger
 	AI_PERFORMANCE_ATTACH_UNIT_MAX_DISTANCE = 200 # maximum distance AI allied units are allowed to travel to attach, shorter number saves more performance on pathfinding
 	AI_PERFORMANCE_TRADE_ATTEMPT_PER_GOOD = 5 # number of attempts AI will do per good per market when looking for profitable import/exports before giving up
+	AI_PERFORMANCE_EXPORT_PRICE_DIFF = 0.65 # if price ratio between base and max possible is at least this value for a certain good, it will skip it when trading (0-1)
 	AI_PERFORMANCE_SAMPLE_SIZE = 3 #cutting down on colonial charter tests
 	AI_PERFORMANCE_TECH_QUEUE_SIZE = 5 # how many techs AI queue at once, higher number is better performance but makes AI slower to react to changes
 
@@ -1921,6 +1922,8 @@ NDiplomacy = {
 	PEACE_TREATY_FORCE_MIGRATE_AE = 0
 	PEACE_TREATY_FORCE_MIGRATE_SIZE = 0.250
 	PEACE_TREATY_FORCE_MIGRATE_MONTHS = 120
+
+	PEACE_TREATY_RETURN_CORE_ANTAGONISM_PERCENT_REDUCTION = 0.75
 	
 	PEACE_MAX_MONTHS_AT_WAR_BEFORE_START_DATE = 12
 	

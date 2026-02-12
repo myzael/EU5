@@ -43,7 +43,7 @@ flavor_sie.1 = { # Banca Monte dei Paschi di Siena https://en.wikipedia.org/wiki
 
 				hidden_effect = {
 					change_country_flag = MONTE_PASCHI
-					change_country_tag = MTPSC
+					define_unique_country_tag = MTPSC
 					change_heir_selection = heir_selection:bank_selection
 					change_government_type = government_type:republic
 				}

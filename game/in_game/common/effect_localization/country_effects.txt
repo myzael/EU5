@@ -1221,13 +1221,13 @@ change_country_name = {
 	third_past = PAST_THIRD_CHANGE_COUNTRY_NAME_EFFECT
 }
 
-change_country_tag = {
-	global = CHANGE_COUNTRY_TAG_EFFECT
-	first = WE_CHANGE_COUNTRY_TAG_EFFECT
-	third = THIRD_CHANGE_COUNTRY_TAG_EFFECT
-	global_past = PAST_CHANGE_COUNTRY_TAG_EFFECT
-	first_past = PAST_WE_CHANGE_COUNTRY_TAG_EFFECT
-	third_past = PAST_THIRD_CHANGE_COUNTRY_TAG_EFFECT
+define_unique_country_tag = {
+	global = DEFINE_TAG_EFFECT
+	first = WE_DEFINE_TAG_EFFECT
+	third = THIRD_DEFINE_TAG_EFFECT
+	global_past = PAST_DEFINE_TAG_EFFECT
+	first_past = PAST_WE_DEFINE_TAG_EFFECT
+	third_past = PAST_THIRD_DEFINE_TAG_EFFECT
 }
 
 change_country_flag = {

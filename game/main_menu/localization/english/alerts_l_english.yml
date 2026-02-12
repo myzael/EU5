@@ -354,6 +354,9 @@
  ALERT_UPGRADEABLE_BUILDINGS_TEXT: "[buildings|e] can be upgraded in the following [markets|e]:"
  ALERT_UPGRADEABLE_BUILDINGS_TOOLTIP: "#T Upgradeable Buildings in [MarketUpgradeableBuildings.GetMarket.GetName]#!"
 
+ ALERT_IMPORTANT_BUILDINGS_MISSING_INPUT_TITLE: "Important Buildings Missing Inputs"
+ ALERT_IMPORTANT_BUILDINGS_MISSING_INPUT_TEXT: "Important [buildings|e] are missing input [goods|e] in the following [markets|e]:"
+
  ALERTS_SETTINGS_TOGGLE: "Toggle Alerts Menu"
  ALERTS_SETTINGS_TITLE: "Alerts Menu"
  DISCARDED_ALERTS: "Discarded Alerts"

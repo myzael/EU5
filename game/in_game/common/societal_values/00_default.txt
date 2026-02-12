@@ -110,7 +110,7 @@ serfdom_vs_free_subjects = {
 		global_raw_material_output = 0.10
 		levy_recovery_modifier = 0.5
 		
-		levy_combat_efficiency_modifier = -0.1
+		peasants_estate_levy_size = 0.25
 		global_peasant_enfranchisment = -0.33
 		
 		nobles_estate_target_satisfaction = large_permanent_target_satisfaction
@@ -119,12 +119,11 @@ serfdom_vs_free_subjects = {
 		court_language_is_common_language_importance_modifier = -0.25
 	}
 	right_modifier = {
-		global_monthly_prosperity = 0.0025
 		global_pop_promotion_speed_modifier = 1.0
 		
 		peasants_estate_target_satisfaction = large_permanent_target_satisfaction
+		nobles_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
 		
-		levy_combat_efficiency_modifier = 0.25
 		global_peasant_enfranchisment = 0.33
 		
 		control_importance_modifier = -0.05

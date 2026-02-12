@@ -116,7 +116,7 @@ lumber_improvements_absolutism = {
 	icon = rudimentary_coastal_ship_repair
 	age = age_5_absolutism
 	requires = rgo_size_advance_absolutism
-	global_lumber_output_modifier = 0.25
+	global_lumber_output_modifier = 0.50
 }
 
 coal_improvements_absolutism = {

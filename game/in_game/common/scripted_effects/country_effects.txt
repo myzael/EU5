@@ -1266,16 +1266,6 @@ save_ruler_regent_as_target_character = {
 	}
 }
 
-change_tag = {
-	change_country_tag = $tag$
-	hidden_effect = {
-		change_country_flag = $tag$
-		change_country_color = map_$tag$
-		change_country_name = $tag$
-		change_country_adjective = $tag$_ADJ
-	}
-}
-
 change_tag_cosmetic = {
 	change_country_name = $tag$
 	hidden_effect = {

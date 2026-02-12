@@ -582,6 +582,7 @@ local_governor = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
+	important_for_UI = yes
 	
 	employment_size = large_noble_employment
 	
@@ -645,7 +646,8 @@ naval_governor = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+	important_for_UI = yes
+
 	employment_size = large_noble_employment
 	
 	category = government_category

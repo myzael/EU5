@@ -144,7 +144,6 @@ rtr_recreate_middle_kingdom = {
 			set_leader_country = prev
 		}
 		change_celestial_authority = { value = celestial_authority_very_strong_bonus }
-		change_country_tag = CHI
 		save_scope_as = country_to_pass_to_scripted_effect
 		rtr_core_all_of_china_effect = { country = scope:country_to_pass_to_scripted_effect }
 		every_present_culture_in_country = {

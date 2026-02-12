@@ -2832,6 +2832,8 @@ on_ruler_death = {
 
 	on_actions = {
 		on_ruler_death_delhi_tombs_construction
+		on_timurid_governor_death
+		on_timurid_ruler_death
 	}
 
 	effect = {

@@ -252,6 +252,22 @@ flavor_wls.12 = {
 # Glyndŵr Rising
 
 scripted_effect flavor_wls_13_create_revolt = {
+	every_owned_location = {
+		limit = {
+			area = area:wales_area
+		}
+		every_pop = {
+			limit = {
+				owner = root
+				OR = {
+					pop_type = pop_type:nobles
+					culture = culture:welsh
+				}
+			}
+			add_pop_satisfaction = pop_satisfaction_ultimate_penalty
+			change_pop_allegiance = scope:owain_glyndar_rebels
+		}
+	}
 	scope:owain_glyndar_rebels = {
 
 		character:wls_owain_glyndwr ?= { 
@@ -326,6 +342,7 @@ flavor_wls.13 = {
 			name = owain_glyndar_rebels
 			save_scope_as = owain_glyndar_rebels
 		}
+		flavor_wls_13_create_revolt = yes
 
 		capital = { save_scope_as = target_location }
 
@@ -337,7 +354,6 @@ flavor_wls.13 = {
 
 		custom_tooltip = {
 			text = flavor_wls.13.tt1
-			flavor_wls_13_create_revolt = yes
 
 			every_disloyal_subject = {
 				make_subject_of = {

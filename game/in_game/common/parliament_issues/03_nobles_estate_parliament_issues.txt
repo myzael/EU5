@@ -688,7 +688,11 @@ finance_the_armory = {
 		}
 		any_owned_non_rural_location = {
 			owner = { has_primary_or_accepted_culture = prev.dominant_culture }
-			NOT = { has_building = building_type:armory }
+			NOR = {
+				has_building = building_type:armory
+				has_building = building_type:barracks
+				has_building = building_type:conscription_center
+			}
 		}
 	}
 	chance = {
@@ -736,7 +740,11 @@ finance_the_armory = {
 			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
-				NOT = { has_building = building_type:armory }
+				NOR = {
+					has_building = building_type:armory
+					has_building = building_type:barracks
+					has_building = building_type:conscription_center
+				}
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
@@ -774,7 +782,10 @@ expand_barracks = {
 		has_advance = barracks_advance
 		any_owned_non_rural_location = {
 			owner = { has_primary_or_accepted_culture = prev.dominant_culture }
-			NOT = { has_building = building_type:barracks }
+			NOR = {
+				has_building = building_type:barracks
+				has_building = building_type:conscription_center
+			}
 		}
 	}
 	chance = {
@@ -821,7 +832,10 @@ expand_barracks = {
 			check_range_bounds = no
 			limit = {
 				owner = { has_primary_or_accepted_culture = prev.dominant_culture }
-				NOT = { has_building = building_type:barracks }
+				NOR = {
+					has_building = building_type:barracks
+					has_building = building_type:conscription_center
+				}
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city

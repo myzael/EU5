@@ -124,14 +124,7 @@ hre.102 = {
 
 	option = {
 		name = hre.102.a
-		#For the tooltip
-		show_as_tooltip = {
-			change_country_tag = HRE
-		}
-		#The actual effect as we do not want the DHE to die
-		hidden_effect = {
-			change_tag_cosmetic = { tag = HRE }
-		}
+		form_country = formable_country:HRE_f
 		add_country_modifier = {
 			modifier = rome_reborn
 			years = -1
