@@ -1698,6 +1698,7 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	355951	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\map\map_transitions_loop\silence\Silence	
 	45154541	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Military\OnMapUnits\Ship\navy_move_act_impact\navy_act_impact\silence\Silence	
+	52324190	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Vox-ToolBox\Vox-ToolBox SPL\vox_single\vox_02_loud\VTB-f_coughing\silence\Silence	
 	60658593	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Military\OnMapUnits\Vocalisations\units_vo_cavalry\units_vo_cavalry_camel\amb_mammals_camel_arabian\silence_03\Silence	
 	61331559	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Military\OnMapUnits\Vocalisations\units_vo_cavalry\units_vo_cavalry_elephant\silence\Silence	
 	83686916	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambience\Master_Ambience_System_MAS\mas_birds\mas_birds\mas_birds_coast\silence\Silence	
@@ -1739,6 +1740,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	997492813	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambience_ROBERT\OnMapObjects\Cities\city_pop_type\city_pop_type_tribesmen\silence\Silence	
 	1019536621	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Military\OnMapUnits\Footsteps\char_move_step_hoof\char_move_step_hoof_horse_FIRSTSTEPTRIGGER\silence\Silence	
 	1028719261	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Ambience\Master_Ambience_System_MAS\mas_birds\mas_birds\mas_birds_field\silence\Silence	
+	1034162750	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Vox-ToolBox\Vox-ToolBox SPL\vox_single\vox_02_loud\VTB-m_coughing\silence\Silence	
 	1071589869	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\UI_gamestatePause_clock_tick_enable\UI_gamespeed_clock_tick\silence\Silence	
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes

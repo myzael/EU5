@@ -410,14 +410,14 @@ opinion_elevated_country = {
 }
 
 opinion_weakened_our_league = {
-	value = -2
+	value = -1
 	yearly_decay = 1
 
 	min = -100
 }
 
 opinion_strengthened_our_league = {
-	value = 10
+	value = 0.5
 	yearly_decay = 1
 }
 

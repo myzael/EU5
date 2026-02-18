@@ -4962,6 +4962,16 @@
  THIRD_HAS_PRESENCE_IN_TRIGGER: "[COUNTRY.GetName] has a presence in $GEOGRAPHY$"
  NOT_THIRD_HAS_PRESENCE_IN_TRIGGER: "[COUNTRY.GetName] does NOT have a presence in $GEOGRAPHY$"
 
+ NONE_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "[country|e] owns [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ NOT_NONE_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "[country|e] does NOT own [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "Owns [locations|e] or has a [subject|e] in$GEOGRAPHY$"
+ NOT_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "Does NOT own [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ FIRST_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "We own [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ NOT_FIRST_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "We do NOT own [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ THIRD_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "[COUNTRY.GetName] owns [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+ NOT_THIRD_OWNS_OR_HAS_SUBJECT_IN_TRIGGER: "[COUNTRY.GetName] does NOT own [locations|e] or has a [subject|e] in $GEOGRAPHY$"
+
+
  COUNTRY_ART_QUALITY_TRIGGER: "Has $COMPARATOR$ $NUM|2Y$ total [art_quality|e]"
  NOT_COUNTRY_ART_QUALITY_TRIGGER: "Does NOT have $COMPARATOR$ $NUM|2Y$ total [art_quality|e]"
  WE_COUNTRY_ART_QUALITY_TRIGGER: "We have $COMPARATOR$ $NUM|2Y$ total [art_quality|e]"
@@ -5377,6 +5387,17 @@
  NOT_IN_TRADE_RANGE_OF_TRIGGER: "Is NOT within trading range of [TARGET_COUNTRY.GetName]"
  THIRD_IN_TRADE_RANGE_OF_TRIGGER: "[MARKET.GetName] is within trading range of [TARGET_COUNTRY.GetName]"
  NOT_THIRD_IN_TRADE_RANGE_OF_TRIGGER: "[MARKET.GetName] is NOT within trading range of [TARGET_COUNTRY.GetName]"
+ 
+ HAS_NEW_WORLD_GOODS_IN_MARKET_TRIGGER: "Has a supply of new world [goods|e]"
+ NOT_HAS_NEW_WORLD_GOODS_IN_MARKET_TRIGGER: "Does not have a supply of new world [goods|e]"
+ THIRD_HAS_NEW_WORLD_GOODS_IN_MARKET_TRIGGER: "[MARKET.GetName] has a supply of new world [goods|e]"
+ NOT_THIRD_HAS_NEW_WORLD_GOODS_IN_MARKET_TRIGGER: "[MARKET.GetName] does not have a supply of new world [goods|e]"
+
+ HAS_OLD_WORLD_GOODS_IN_MARKET_TRIGGER: "Has a supply of old world [goods|e]"
+ NOT_HAS_OLD_WORLD_GOODS_IN_MARKET_TRIGGER: "Does not have a supply of old world [goods|e]"
+ THIRD_HAS_OLD_WORLD_GOODS_IN_MARKET_TRIGGER: "[MARKET.GetName] has a supply of old world [goods|e]"
+ NOT_THIRD_HAS_OLD_WORLD_GOODS_IN_MARKET_TRIGGER: "[MARKET.GetName] does not have a supply of old world [goods|e]"
+
 
  DEMANDS_GOODS_TRIGGER: "Has a demand for [TARGET_GOODS.GetName]"
  NOT_DEMANDS_GOODS_TRIGGER: "Has NOT a demand for [TARGET_GOODS.GetName]"
@@ -7479,6 +7500,17 @@
  NOT_IS_FOOD_TRIGGER: "Is NOT [food|e]"
  THIRD_IS_FOOD_TRIGGER: "[GOODS.GetName] is [food|e]"
  NOT_THIRD_IS_FOOD_TRIGGER: "[GOODS.GetName] is NOT [food|e]"
+ 
+ HAS_ORIGIN_IN_NEW_WORLD_TRIGGER: "Has an origin in the new world"
+ NOT_HAS_ORIGIN_IN_NEW_WORLD_TRIGGER: "Does not have an origin in the new world"
+ THIRD_HAS_ORIGIN_IN_NEW_WORLD_TRIGGER: "[GOODS.GetName] has an origin in the new world"
+ NOT_THIRD_HAS_ORIGIN_IN_NEW_WORLD_TRIGGER: "[GOODS.GetName] does not have an origin in the new world"
+
+ HAS_ORIGIN_IN_OLD_WORLD_TRIGGER: "Has an origin in the old world"
+ NOT_HAS_ORIGIN_IN_OLD_WORLD_TRIGGER: "Does not have an origin in the old world"
+ THIRD_HAS_ORIGIN_IN_OLD_WORLD_TRIGGER: "[GOODS.GetName] has an origin in the old world"
+ NOT_THIRD_HAS_ORIGIN_IN_OLD_WORLD_TRIGGER: "[GOODS.GetName] does not have an origin in the old world"
+
 
  HAS_TAG_TRIGGER: "Is $TAG|Y$"
  NOT_HAS_TAG_TRIGGER: "Is NOT $TAG|Y$"

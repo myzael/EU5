@@ -1274,3 +1274,26 @@ can_country_have_tusi = {
 		}
 	}
 }
+
+is_member_of_any_italian_wars_league = {
+	OR = {
+		is_member_of_international_organization = international_organization:italian_league_1
+		is_member_of_international_organization = international_organization:italian_league_2
+		is_member_of_international_organization = international_organization:italian_league_3
+		is_member_of_international_organization = international_organization:foreign_league_france
+		is_member_of_international_organization = international_organization:foreign_league_iberia
+		is_member_of_international_organization = international_organization:foreign_league_hre
+	}
+	any_international_organizations_member_of = {
+		OR = {
+			international_organization_type = international_organization_type:italian_league_1
+			international_organization_type = international_organization_type:italian_league_2
+			international_organization_type = international_organization_type:italian_league_3
+			international_organization_type = international_organization_type:foreign_league_france
+			international_organization_type = international_organization_type:foreign_league_iberia
+			international_organization_type = international_organization_type:foreign_league_hre
+		}
+		save_temporary_scope_as = target_io
+		leader_country = { save_temporary_scope_as = league_leader_current }
+	}
+}

@@ -2583,6 +2583,14 @@ has_presence_in = {
 	third = THIRD_HAS_PRESENCE_IN_TRIGGER
 }
 
+owns_or_has_subject_in = {
+	none = NONE_OWNS_OR_HAS_SUBJECT_IN_TRIGGER
+	global = OWNS_OR_HAS_SUBJECT_IN_TRIGGER
+	first = FIRST_OWNS_OR_HAS_SUBJECT_IN_TRIGGER
+	third = THIRD_OWNS_OR_HAS_SUBJECT_IN_TRIGGER
+}
+
+
 country_art_quality = {
 	none = COUNTRY_ART_QUALITY_TRIGGER
 	global = COUNTRY_ART_QUALITY_TRIGGER

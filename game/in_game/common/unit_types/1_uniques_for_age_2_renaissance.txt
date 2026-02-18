@@ -64,7 +64,7 @@ a_wagenburg = {
 	
 	strength_damage_taken = -0.1
 	morale_damage_taken = -0.1
-	secure_flanks_defense = 0.25
+	secure_flanks_defense = 0.025
 }
 
 a_genoese_crossbowmen = {

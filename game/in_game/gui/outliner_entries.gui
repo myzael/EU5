@@ -6113,12 +6113,12 @@ OutlinerEntryBase = {
 					hbox = {
 						expand = {}
 						visible = "[GreaterThan_CFixedPoint(Market.GetTotalMerchantCapacity(Player.Self),'(CFixedPoint)0')]"
-						datamodel = "[Market.GetMerchants]"
-						item = {
-							OutlinerTextBase = {
-								visible = "[Merchant.GetCountry.IsPlayer]"
-								autoresize = yes
-								raw_text = "[Merchant.GetTotalTradeProfit|+=2]@gold!"
+						datacontext = "[Market.GetMerchant(Player.Self)]"
+						OutlinerTextBase = {
+							autoresize = yes
+							raw_text = "[Merchant.GetTotalTradeProfit|+=2]@gold!"
+							tooltipwidget = {
+								using = market_hub_trade_tooltip
 							}
 						}
 					}

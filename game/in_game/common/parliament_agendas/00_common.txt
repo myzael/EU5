@@ -323,6 +323,7 @@ pa_reduce_opinion = {
 	importance = 0.75
 	
 	potential = {
+		is_ai = no
 		root.religion = {
 			any_country_in_religion = {
 				this != root
@@ -378,6 +379,7 @@ pa_raise_opinion = {
 	importance = 0.75
 	
 	potential = {
+		is_ai = no
 		root.religion = {
 			any_country_in_religion = {
 				this != root

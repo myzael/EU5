@@ -901,9 +901,14 @@
  italian_league_3_desc: "A league formed around the capital of [GetUniqueInternationalOrganization('italian_league_3').GetLeaderCountry.GetName].$italian_league_key_desc$"
  STRENGTH_OF_FOREIGN_LEAGUE: "Strength of Foreign League"
  NOT_NEIGHBORS_AI_WEIGHT: "We are not neighbors"
- OPINION_OF_FRANCE_LEADER: "[opinion|e]"
  RECENTLY_JOINED_ANOTHER_LEAGUE: "Recently joined another League"
  CURRENT_APPETITE_FOR_EXPANSION: "Willingness to expand"
+ LEAGUE_LEADER_CURRENT_TRUST: "Their [trust|e] towards [league_leader_current.GetName]"
+ RELATIVE_STRENGTH_LEAGUE_LEADER_CURRENT: "Their [country_strength|e] relative to [league_leader_current.GetName]"
+ LEAGUE_LEADER_CURRENT_OPINION: "Their [opinion|e] of [league_leader_current.GetName]"
+ TARGET_LEADER_TRUST: "Their [trust|e] towards us"
+ TARGET_LEADER_RELATIVE_STRENGTH: "Their [country_strength|e] relative to us"
+ TARGET_LEADER_OPINION: "Their [opinion|e] of us"
 
  #Ilkhanate
  ilkhanate: "Īlkhānān"

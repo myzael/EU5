@@ -3282,7 +3282,7 @@
  secure_mediterranean_ports: "Secure Mediterranean Ports"
  secure_mediterranean_ports_desc: "Our ports across the Mediterranean Sea are some of the most affluent in the entire region. Merchants from every corner of the known world travel to $alexandria$ and Cairo to deal in spices, $silk$, and precious stones. The creation of a merchant navy to facilitate and protect our maritime avenues would therefore be a wise idea."
 
- bohemian_imperial_standing: "$BOH_ADJ$ $her_ADJ$ Standing"
+ bohemian_imperial_standing: "$BOH_ADJ$ $HRE_ADJ$ Standing"
  bohemian_imperial_standing_desc: "Our place within the $hre$ is one of prestige, grandeur, and authority. Few members wield as much soft power as us, due to our capable diplomats and alliance networks."
 
  bohemian_crystal: "$BOH_ADJ$ Crystal"

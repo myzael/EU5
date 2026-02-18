@@ -95,6 +95,7 @@ wheat = {
 	}
 	
 
+	origin_in_old_world = yes
 	custom_tags = { old_world_goods }
 }
 
@@ -114,6 +115,7 @@ maize = {
 		upper = 2
 		tribesmen = 0
 	}
+	origin_in_new_world = yes
 	custom_tags = { new_world_goods }
 }
 
@@ -135,6 +137,7 @@ rice = {
 	}
 	
 
+	origin_in_old_world = yes
 	custom_tags = { old_world_goods }
 }
 
@@ -155,6 +158,7 @@ millet = {
 		tribesmen = 0
 	}
 
+	origin_in_old_world = yes
 	custom_tags = { old_world_goods }
 }
 
@@ -193,6 +197,7 @@ potato = {
 		upper = 2
 	}
 
+	origin_in_new_world = yes
 	custom_tags = { new_world_goods }
 }
 
@@ -224,6 +229,7 @@ livestock = {
 	}
 
 	
+	origin_in_old_world = yes
 	custom_tags = { old_world_goods }
 }
 
@@ -244,6 +250,7 @@ olives = {
 		tribesmen = 0
 	}
 
+	origin_in_old_world = yes
 	custom_tags = { old_world_goods }
 }
 
