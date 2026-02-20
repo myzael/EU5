@@ -558,6 +558,10 @@ pirate_stronghold = {
 
 
 	construction_demand = estate_construct_building
+
+	country_potential = {
+		has_reform = government_reform:pirate_brethren_reform
+	}
 	
 	location_potential = {
 		is_capital = yes

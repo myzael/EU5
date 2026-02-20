@@ -9,7 +9,7 @@ cb_crush_hussitism = {
 		scope:target.religion = religion:hussite
 	}
 
-	ai_selection_desire = {
+	ai_will_do = {
 		value = 10
 		if = {
 			limit = {

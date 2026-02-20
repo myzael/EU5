@@ -17,5 +17,10 @@ cb_nationalist = {
 	
 	war_goal_type = take_province_nationalist
 
-	ai_selection_desire = 20
+		ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 20
+		}
+	}
 }

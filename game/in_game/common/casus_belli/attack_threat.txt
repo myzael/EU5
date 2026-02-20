@@ -16,5 +16,11 @@ attack_threat = {
 	}
 
 	war_goal_type = superiority_rival
-	ai_selection_desire = 10
+	
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 10
+		}
+	}
 }

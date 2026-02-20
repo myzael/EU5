@@ -626,6 +626,8 @@ NAI = {
 	AI_DEFAULT_COUNTRY_INTERACTION_FREQUENCY = 30 # default number of days between ai checking each country interaction
 	AI_DEFAULT_CHARACTER_INTERACTION_FREQUENCY = 180 # default number of days between ai checking each character interaction
 
+	ORGANIZATION_WAR_WIN_CHANCE_TO_START = 0.4 # Values 0 - 1. If the win chance of an IO vs target is below this value, IO will not declare.
+
 	LOCATION_POP_PROMOTION_SPEED_FACTOR = 20 # How much AI values quick pop promotion
 
 	MARKET_ACCESS_IMPORTANCE = 0.15 # How much the AI values having high market access per raw tax base, measured in monthly ducats (assuming large markets)
@@ -1036,9 +1038,9 @@ NAI = {
 	AI_HIGH_OPINION_THRESHOLD = 100	#Makes ai use certain interactions with countries with that opinion, only checks Our opinion of Them
 	AI_LOW_OPINION_THRESHOLD = -100
 
-	MONTHS_TO_WAIT_BEFORE_DECLARING_IO_WARS = 4
-	POWERBALANCE_NEEDED_FOR_EARLY_IO_WAR = 4
-	POWERBALANCE_NEEDED_FOR_IO_WAR = 1.5
+	MONTHS_TO_WAIT_BEFORE_DECLARING_IO_WARS = 4 # IOs like coalitions will wait that many months before they consider declaring a war
+	POWERBALANCE_NEEDED_FOR_EARLY_IO_WAR = 1.5 # If the strength of an IO is that much stronger than the target, they will declare ignoring the MONTHS_TO_WAIT_BEFORE_DECLARING_IO_WARS
+	POWERBALANCE_NEEDED_FOR_IO_WAR = 1.1 # If the strength of an IO is that much stronger than the target , they will declare after waiting for MONTHS_TO_WAIT_BEFORE_DECLARING_IO_WARS
 
 	NO_CASUS_BELLI_SELECTION_PENALTY = -100 #How less likely will Ai be to select this as the best casus belli
 	DEFAULT_CHANCE_OF_EXPANSION = 0.25 #How likely AI is to start a war plan against other nations each month
@@ -2024,6 +2026,8 @@ NWar = {
 	EXPECTED_GAINS_NOT_PROMISED_LAND = 0.5
 
 	DURATION_BEFORE_PURGING_WARS_IN_DAYS = 365
+	YEARS_SINCE_LAST_WAR_ACTION_BEFORE_WHITE_PEACE = 3
+	YEARS_BEFORE_WHITE_PEACE_ALERT_ADVANCE = 1
 	PEACE_REVOKE_CORE_MULT = 0.25
 
 	PEACE_RETURN_CORE_MULT = 0.5

@@ -2736,6 +2736,7 @@
  RIVALS_ALREADY: "#T Rivalry#! They are already our [rival|e]."
  CAN_ENABLE_DEPENDENCY_ALREADY_SUBJECT: "Already a subject"
  CAN_ENABLE_DEPENDENCY_INVALID_SUBJECT_TYPE: "Invalid subject type"
+ CAN_ENABLE_DEPENDENCY_ALREADY_OVERLORD: "Already our overlord or above"
  ENEMY_ALREADY: "#T Enmity#! They are our [enemy|e]."
  NO_RIVALS_YET: "We have no [rivals|e] selected yet."
  THEY_NO_RIVALS_YET: "They do not have [rivals|e] selected yet."

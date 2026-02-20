@@ -168,7 +168,7 @@ monetary_contribution = {
 			add = hre_default_keep_policy_opinion
 			add = { 
 				desc = "POLICY_POPULARITY_TO_KEEP"
-				value = 125
+				value = 75
 			}
 		}
 	}
@@ -227,7 +227,7 @@ monetary_contribution = {
 			add = hre_default_keep_policy_opinion
 			add = {
 				desc = "POLICY_POPULARITY_TO_KEEP"
-				value = 50
+				value = 10
 			}
 		}
 	}
@@ -279,7 +279,7 @@ monetary_contribution = {
 		wants_keep_policy = {
 			subtract = { 
 				desc = "POLICY_POPULARITY_TO_KEEP" 
-				value = 50
+				value = 10
 			} # and also not too high on wanting to keep it really
 		}
 	}
@@ -326,7 +326,7 @@ monetary_contribution = {
 			add = hre_default_keep_policy_opinion
 			subtract = { 
 				desc = "POLICY_POPULARITY_TO_KEEP" 
-				value = 75
+				value = 25
 			} # and also not too high on wanting to keep it really
 		}
 	}
@@ -376,7 +376,7 @@ military_contribution = {
 			add = hre_default_keep_policy_opinion
 			add = {
 				desc = "POLICY_POPULARITY_TO_KEEP"
-				value = 100
+				value = 50
 			}
 		}
 	}
@@ -448,13 +448,13 @@ military_contribution = {
 				}
 				add = {
 					desc = "POLICY_POPULARITY_TO_KEEP"
-					value = 100
+					value = 50
 				}
 			}
 			else = {
 				subtract = {
 					desc = "POLICY_POPULARITY_TO_KEEP"
-					value = 50
+					value = 25
 				}
 			}
 		}
@@ -508,13 +508,13 @@ military_contribution = {
 				limit = { is_elector = no }
 				add = {
 					desc = "POLICY_POPULARITY_TO_KEEP"
-					value = 100
+					value = 50
 				}
 			}
 			else = {
 				subtract = {
 					desc = "POLICY_POPULARITY_TO_KEEP"
-					value = 50
+					value = 25
 				}
 			}
 		}
@@ -563,7 +563,7 @@ military_contribution = {
 			add = hre_default_keep_policy_opinion
 			subtract = {
 				desc = "POLICY_POPULARITY_TO_KEEP"
-				value = 50
+				value = 25
 			}
 		}
 	}
@@ -584,9 +584,6 @@ military_contribution = {
 		international_organization_modifier = {
 			hre_emperor_comfort_policies_counter = 1
 		}
-		wants_this_policy_bias = {
-			add = hre_default_policy_opinion
-		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
 			add = {
@@ -604,7 +601,7 @@ military_contribution = {
 			add = hre_default_keep_policy_opinion
 			subtract = {
 				desc = "POLICY_POPULARITY_TO_KEEP"
-				value = 75
+				value = 25
 			}
 		}
 	}

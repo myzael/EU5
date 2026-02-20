@@ -13,7 +13,6 @@
 #	additional_war_enthusiasm = <script value> gets a value determining how enthusiastic for being in this war said country is. (root = country, scope:war = war)
 #   additional_war_enthusiasm_attacker = <script value> same as above but only applied to attackers
 #   additional_war_enthusiasm_defender = <script value> same as above but only applied to defenders
-#   ai_selection_desire = <script value> How more likely Ai is to select this CB, 0 doesn't mean never
 #	war_goal_type = <war goal ID> when using this CB, what is the war goal
 #   allow_separate_peace = yes/no if separate peace deals are allowed (defaults to yes)
 #   cut_down_in_size_cb = yes/no only for AI, makes AI choose release treaties more often

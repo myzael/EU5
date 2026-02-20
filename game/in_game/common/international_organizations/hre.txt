@@ -882,64 +882,7 @@
 		}
 	}
 	
-	ai_issue_voting_bias = {		
-		#passing policies is what makes the empire great, so if the leader can enact one, they will
-		add = {
-			desc = "POLICY_BIAS_LEADER_ALWAYS_WANTS"
-			if = {
-				limit = {
-					scope:recipient = {
-						leader_country ?= scope:actor
-					}
-				}
-				#this should end up with 20 for yes and -20 for no from the leader
-				if = {
-					limit = {
-						is_set = scope:vote
-					}
-					value = 1
-				}
-				else = {
-					value = -1
-				}
-				multiply = 20
-			}
-		}
-		
-		#opinion of leader
-		add = {
-			desc = "POLICY_BIAS_OPINION_OF_EMPEROR"
-			if = {
-				limit = { not = { scope:actor = scope:recipient.leader_country } }
-				scope:recipient = {
-					leader_country = {
-						if = {
-							limit = {
-								is_set = scope:vote
-							}
-							value = 1
-						}
-						else = {
-							value = -1
-						}
-						multiply = {
-							scope:actor = {
-								value = this_opinion_of_prev
-							}
-						}
-						multiply = 0.1 
-					}
-				}
-			}
-		}
-		#Emperor modifiers
-		add = {
-			desc = "MODIFIER_TYPE_NAME_reasons_to_vote"
-			if = {
-				limit = { not = { scope:actor = scope:recipient.leader_country } }
-				value = scope:recipient.leader_country.modifier:reasons_to_vote
-			}
-		}
+	ai_issue_voting_bias = {
 	}
 
 	ai_desire_to_attack_other_members = {

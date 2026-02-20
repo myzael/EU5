@@ -23,7 +23,12 @@
 	}
 	speed = 10
 	additional_war_enthusiasm = 0.1
-  	ai_selection_desire = 100
+  		ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 100
+		}
+	}
 	war_goal_type = take_capital_imperial
 
 	ai_will_do = {
@@ -53,7 +58,12 @@ spread_the_revolution_cb = {
 	}
 	speed = 10
 	additional_war_enthusiasm = 0.1
-  	ai_selection_desire = 100
+  		ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 100
+		}
+	}
 	war_goal_type = take_capital_imperial
 
 	ai_will_do = {
