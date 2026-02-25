@@ -57,6 +57,11 @@ antagonism_released_nation_in_peace = {
 	yearly_decay = 2
 }
 
+antagonism_gave_up_locations_in_peace = {
+	value = -1 #multiplied by total worth of locations etc
+	yearly_decay = 2
+}
+
 antagonism_peace_treaty_demands = {
 	value = 1 #multiplied by total worth of locations etc
 	yearly_decay = 3

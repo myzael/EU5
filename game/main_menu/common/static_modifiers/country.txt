@@ -7431,15 +7431,6 @@ dlh_restored_authority_modifier = {
 	government_size = 1
 }
 
-bra_wittelsbacher_neglect = {
-	game_data = {
-		category = country
-	}
-	global_max_control = -0.1
-	global_monthly_control = -0.0005
-	monthly_legitimacy = -0.02
-}
-
 bra_waldemar_rallies_nobility = {
 	game_data = {
 		category = country
@@ -7453,6 +7444,15 @@ bra_revoked_clergy_power = {
 		category = country
 	}
 	global_clergy_estate_power = -0.35
+}
+
+bra_overcome_the_turmoil = {
+	game_data = {
+		category = country
+	}
+	monthly_towards_centralization = societal_value_monthly_move
+	change_policy_cost_modifier = -0.5
+	revoke_privilege_cost_modifier = -0.25
 }
 
 byz_relinquish_taxes_for_nobles_modifier = {

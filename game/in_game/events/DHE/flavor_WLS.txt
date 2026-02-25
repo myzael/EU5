@@ -116,11 +116,7 @@ flavor_wls.11 = {
 	}
 
 	trigger = {
-
 		dynasty_exists = mortimer_dynasty
-
-		is_neighbor_of = c:ENG
-
 	}
 
 	illustration_tags = {
@@ -206,13 +202,8 @@ flavor_wls.12 = {
 	}
 
 	trigger = {
-
 		character:wls_owain_glyndwr ?= { is_alive = yes }
-
 		is_subject_of = c:ENG
-
-		is_neighbor_of = c:ENG
-
 	}
 
 	illustration_tags = {
@@ -259,6 +250,7 @@ scripted_effect flavor_wls_13_create_revolt = {
 		every_pop = {
 			limit = {
 				owner = root
+				location.province != root.capital.province
 				OR = {
 					pop_type = pop_type:nobles
 					culture = culture:welsh
@@ -342,9 +334,9 @@ flavor_wls.13 = {
 			name = owain_glyndar_rebels
 			save_scope_as = owain_glyndar_rebels
 		}
+
 		flavor_wls_13_create_revolt = yes
 
-		capital = { save_scope_as = target_location }
 
 	}
 
@@ -384,7 +376,6 @@ flavor_wls.13 = {
 
 		custom_tooltip = {
 			text = flavor_wls.13.tt2
-			flavor_wls_13_create_revolt = yes
 
 			every_loyal_subject = {
 				make_subject_of = {

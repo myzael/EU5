@@ -3,7 +3,7 @@
 	selection_behavior = weighted_random
 	fallback = default_clothes
     priority = 1
-	
+
 	default_clothes = {
 		dna_modifiers = {
 			accessory = {
@@ -18,7 +18,7 @@
 			base = 0
 		}
 	}
-	
+
 	european_royalty = {
 		dna_modifiers = {
 			accessory = {
@@ -48,6 +48,45 @@
 				factor = 0
 				portrait_clergy_trigger = { RELIGION_GFX = catholic_gfx }
 			}
+			modifier = {
+				factor = 0
+				portrait_late_trigger = yes
+			}
+		}
+	}
+
+	late_european_royalty = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = capes
+				template = european_royalty
+				range = { 0 0.49 } # removes the tabard and simpler cloak
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 400
+				portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
+			}
+			modifier = {
+				add = 500
+				portrait_imperial_trigger = { CULTURE_GFX = european_gfx }
+			}
+			modifier = {
+				add = 400
+				OR = {
+					portrait_is_ruler_of_trigger = { COUNTRY = VEN }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					portrait_clergy_trigger = { RELIGION_GFX = catholic_gfx }
+					is_female = yes
+				}
+			}
 		}
 	}
 
@@ -72,9 +111,8 @@
 		}
 	}
 
-
-			## GENOA ##
-	Genoa_doge_cap = {
+	 # Republic of Genoa
+	genoa_doge_cap = {
 		dna_modifiers = {
 			accessory = {
 				mode = add
@@ -88,6 +126,9 @@
 			modifier = {
 				add = 500
 				portrait_is_ruler_of_trigger = { COUNTRY = GEN }
+				c:GEN ?= {
+					government_type = government_type:republic
+				}
 			}
 		}
 	}

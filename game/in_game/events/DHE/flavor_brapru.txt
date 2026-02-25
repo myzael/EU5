@@ -4377,9 +4377,7 @@ flavor_brapru.2000  = {
 
 	trigger = {
 		has_ruler = yes
-		NOT = {
-			has_country_modifier = bra_wittelsbacher_neglect
-		}
+		has_variable = had_turmoil_in_brandenburg_disaster_variable
 	}
 
 	immediate = {
@@ -4452,9 +4450,7 @@ flavor_brapru.2001  = {
 	trigger = {
 		has_ruler = yes
 		is_emperor = no
-		NOT = {
-			has_country_modifier = bra_wittelsbacher_neglect
-		}
+		has_variable = had_turmoil_in_brandenburg_disaster_variable
 		any_related_country = {
 			type = alliance
 			is_emperor = no

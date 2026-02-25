@@ -2350,9 +2350,9 @@ types Cards
 				hbox = {
 					block "left_element" {
 						icon = {
-							# block "left_element_icon" {
+							block "left_element_icon" {
 								texture = "gfx/interface/icons/estates/nobles_estate.dds"
-							# }
+							}
 							texture_density = 2
 							size = {40 40}
 						}
@@ -2361,6 +2361,7 @@ types Cards
 						layoutpolicy_horizontal = expanding
 						spacing = 4
 						margin = {5 0}
+						block "left_tooltip" {}
 						
 						block "left_content" {
 							block "left_content_text_single" {
@@ -2398,6 +2399,8 @@ types Cards
 						layoutpolicy_horizontal = expanding
 						spacing = 4
 						margin = {5 0}
+
+						block "right_tooltip" {}
 						
 						block "right_content" {
 							block "right_content_text_single" {

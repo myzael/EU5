@@ -1065,9 +1065,10 @@
  pru_deal_with_robber_barons_desc: "The local Robber Barons are a threat to our hold over the province and to our prestige even more. We must get rid of them for the good of our splendor! And perhaps for the good of the local peasantry, too."
  pru_deal_with_robber_barons_active: "Dealing with the Robber Barons"
  pru_deal_with_robber_barons_action: "Deal With the Robber Barons"
- pru_deal_with_robber_barons_action_progress: "Dealing with the Robber Barons"
+ pru_deal_with_robber_barons_action_progress: "[SCOPE.sCabinet('cabinet').GetDaysUntilFullyImplementedInDays]"
  pru_deal_with_robber_barons_action_progress_wordier: "Dealing with the Robber Barons"
- pru_deal_with_robber_barons_action_progress_tooltip: "Dealing with the Robber Barons"
+ pru_deal_with_robber_barons_action_progress_tooltip: "Dealing with the Robber Barons at #W [SCOPE.sCabinet('cabinet').GetActionNumProgress|%]#!\nShould be done in [SCOPE.sCabinet('cabinet').GetDaysUntilFullyImplementedInDays], on [SCOPE.sCabinet('cabinet').GetFullyImplementedDateString]"
+ pru_deal_with_robber_barons_action_progress_tooltip_1: "[SCOPE.sCabinet('cabinet').GetAction().GetModifiers()]"
 
 #Muscovy/Russia Cabinet Actions
  posolsky: "Posolsky"

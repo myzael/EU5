@@ -112,6 +112,9 @@
 			modifier = {
 				add = 500
 				portrait_is_ruler_of_trigger = { COUNTRY = GEN }
+				c:GEN ?= {
+					government_type = government_type:republic
+				}
 			}
 		}
 	}
@@ -429,9 +432,16 @@ neckware_outer = {
 			}
 			modifier = {
 				add = 400
-				OR = {
-					portrait_is_ruler_of_trigger = { COUNTRY = VEN }
-					portrait_is_ruler_of_trigger = { COUNTRY = GEN }
+				portrait_is_ruler_of_trigger = { COUNTRY = GEN }
+				c:GEN ?= {
+					government_type = government_type:republic
+				}
+			}
+			modifier = {
+				add = 400
+				portrait_is_ruler_of_trigger = { COUNTRY = VEN }
+				c:VEN ?= {
+					government_type = government_type:republic
 				}
 			}
 			modifier = {

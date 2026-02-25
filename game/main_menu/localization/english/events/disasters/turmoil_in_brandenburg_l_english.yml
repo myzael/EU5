@@ -8,8 +8,8 @@
  bra_wittelsbach_hyperlink_no_tt: "[ShowDynastyNameWithNoTooltip('wittelsbach_dynasty')]"
  bra_askanier_hyperlink: "[ShowDynastyName('askanier_dynasty')]"
  bra_askanier_hyperlink_no_tt: "[ShowDynastyNameWithNoTooltip('askanier_dynasty')]"
- bra_variable_counter: "(currently: #Y [GetCountry('BRA').MakeScope.GetVariable('bra_wittelsbacher_investment_var').GetValue]#!)"
- bra_neglect_variable_counter: "(currently: #Y [GetCountry('BRA').MakeScope.GetVariable('bra_wittelsbacher_neglect_var').GetValue]#!)"
+ bra_variable_counter: "#Y [GetCountry('BRA').MakeScope.GetVariable('bra_wittelsbacher_investment_var').GetValue]#!"
+ bra_neglect_variable_counter: "#Y [GetCountry('BRA').MakeScope.GetVariable('bra_wittelsbacher_neglect_var').GetValue]#!"
  bra_wittelsbacher_investment_var: "#Y Wittelsbacher Investment#!"
  bra_wittelsbacher_neglect_var: "#Y Wittelsbacher Neglect#!"
 
@@ -18,6 +18,8 @@
 
  bra_change_neglect_score_add: "We gain $VALUE|G0$ $bra_wittelsbacher_neglect_var$ $bra_neglect_variable_counter$"
  bra_change_neglect_score_subtract: "We lose $VALUE|R0$ $bra_wittelsbacher_neglect_var$ $bra_neglect_variable_counter$"
+
+ PRU_DEAL_WITH_ROBBER_BARONS_TOOLTIP_IN_PROGRESS: "Progress: $PROGRESS$%\n$DAYS$, $DATE$"
 
  #Events
  turmoil_in_brandenburg.1.title: "The [root_dynasty.GetNameWithNoTooltip] of [ROOT.GetCountry.GetNameWithNoTooltip]"
@@ -111,6 +113,10 @@
  turmoil_in_brandenburg.200.title: "The Mystery of [target_character.GetNameWithNoTooltip]"
  turmoil_in_brandenburg.200.desc: "[target_character.GetHisHer|U] death was swift and unexpected, yet [target_character.GetHisHer] legacy still haunts [ROOT.GetCountry.GetName]. [target_character.GetName], the supposed $bra_askanier_hyperlink$ who ruled over our [ROOT.GetCountry.GetFlavorRank] until 1320, turned out to be the most deceptive imposter and schemer in [ROOT.GetCountry.GetAdjectiveWithNoTooltip] history!\n\nAt [target_character.GetHisHer] funeral, [target_character.GetHisHer] old grave was dug up so [target_character.GetHeShe] could rest for good. However, the ceremony came to a premature end as the skeleton of [GetCharacter('bra_waldemar_askanier').GetName] - the #italic $name_waldemar$#! - was discovered within!\n\nThis naturally brought a great deal of shame to [ROOT.GetCountry.GetNameWithNoTooltip], as a mere individual managed to fool the entire country..."
  turmoil_in_brandenburg.200.a: "How could this happen? We are smarter than this..."
+
+ turmoil_in_brandenburg.300.title: "A Long Fought Battle Ends"
+ turmoil_in_brandenburg.300.desc: "After decades, our struggle to tame and subjugate the [ROOT.GetCountry.GetLongName] has finally come to an end. The competing dynasties for our seat have been fought of and the last strongholds of the Robber Barons have been razed to the ground. Our decisive action has granted us the opportunity to shape this state to our benefit, building an administration which will withstand such woes more easily in the future."
+ turmoil_in_brandenburg.300.a: "Peace at last."
 
  turmoil_in_brandenburg.1000.title: "The Return of [target_character.GetNameWithNoTooltip]"
  turmoil_in_brandenburg.1000.desc: "As no emperor of the $bra_hre_hyperlink$ is connected to the ruling $bra_wittelsbach_hyperlink$ anymore, the legitimacy of [bra_ruler.GetName] is once again in question. The people of [ROOT.GetCountry.GetName] yearn for the years of $bra_askanier_hyperlink$ rule.\n\nBut, as fate wills, the presumed-to-be-dead [target_character.GetName] has made a public resurrection! Claiming that [target_character.GetHisHer] funeral was staged in order to facilitate [target_character.GetHisHer] pilgrimage to the Holy Land, [target_character.GetShortNameWithNoTooltip] has returned to claim the [ROOT.GetCountry.GetAdjective] throne from [bra_ruler.GetShortNameWithNoTooltip]."
@@ -255,6 +261,19 @@
  STATIC_MODIFIER_NAME_PRU_robber_barons: "Robber Barons"
  PRU_use_cabinet_action_to_get_rid_of_barons: "[ShowCabinetActionName('pru_deal_with_robber_barons')] is available to deal with the Robber Barons in the province."
  remove_PRU_robber_barons_modifier: "[province|e] loses the effect of [GetModifier('PRU_robber_barons').GetNameWithTooltip]"
+
+ # Robber barons province blocks (disaster panel GUI)
+ PRU_ROBBER_BARONS_ELIGIBLE_PROVINCES: "No Robber Barons in"
+ PRU_ROBBER_BARONS_AFFECTED_PROVINCES: "Robber Barons raiding in"
+ PRU_ROBBER_BARONS_REMOVED_PROVINCES: "Robber Barons have been dealt with"
+ PRU_NO_ELIGIBLE_ROBBER_BARON_PROVINCES: "No provinces are eligible to get Robber Barons."
+ PRU_NO_AFFECTED_ROBBER_BARON_PROVINCES: "No provinces currently have Robber Barons."
+ PRU_NO_REMOVED_ROBBER_BARON_PROVINCES: "No provinces have had Robber Barons removed."
+ PRU_ROBBER_BARONS_ELIGIBLE_PROVINCES_TOOLTIP: "$AMOUNT|0$ of $TOTAL_AMOUNT|0$ provinces can still get [GetModifier('PRU_robber_barons').GetNameWithTooltip]:"
+ PRU_ROBBER_BARONS_AFFECTED_PROVINCES_TOOLTIP: "$AMOUNT|0$ of $TOTAL_AMOUNT|0$ provinces have [GetModifier('PRU_robber_barons').GetNameWithTooltip]:"
+ PRU_ROBBER_BARONS_REMOVED_PROVINCES_TOOLTIP: "$AMOUNT|0$ of $TOTAL_AMOUNT|0$ provinces had [GetModifier('PRU_robber_barons').GetNameWithTooltip] removed:"
+ PRU_ROBBER_BARONS_PROVINCE_ENTRY: "$PROVINCE$"
+ PRU_ROBBER_BARONS_PROVINCE_ENTRY_REST: "...and $AMOUNT|0$ more"
 
  turmoil_in_brandenburg.1301.title: "Robber Barons in [robber_baron_province.GetNameWithNoTooltip]"
  turmoil_in_brandenburg.1301.desc: "The plague of Robber Barons has spread to the province of [robber_baron_province.GetName]. Their displays of criminality and arrogance are tantamount to spitting in our faces. Time to teach them a lesson — and to restore central authority in the country."

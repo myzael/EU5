@@ -726,6 +726,8 @@
  antagonism_declared_war_on_subject: "Declared [war|e] on own [subject|e]"
  antagonism_released_nation_in_peace: "Released [country|e] in [peace_treaty|e]"
  antagonism_released_nation_in_peace_scope: "Releasing [ROOT.GetLocation.GetOwner.GetName] in [peace_treaty|e]"
+ antagonism_gave_up_locations_in_peace: "Gave up [locations|e] in [peace_treaty|e]"
+ antagonism_gave_up_locations_in_peace_scope: "Gave up [locations|e] in [peace_treaty|e]"
  antagonism_peace_treaty_demands: "Peace Treaty Demands"
  antagonism_taking_land: "Took [locations|e] in [peace_treaty|e]"
  antagonism_taking_land_scope: "Taking [ROOT.GetLocation.GetName] in [peace_treaty|e]"

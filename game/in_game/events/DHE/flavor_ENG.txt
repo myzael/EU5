@@ -7700,9 +7700,6 @@ flavor_eng.89 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		character:wls_owain_glyndwr ?= { save_scope_as = owain_glyndwr }
-
-		location:london = { save_scope_as = target_location }
-
 	}
 
 	option = {

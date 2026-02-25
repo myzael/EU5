@@ -4771,8 +4771,6 @@ german_river_toll_castle = {
 	town = yes
 	city = yes
 	
-	estate = burghers_estate
-	
 	build_time = trade_post_build_time
 
 	possible_production_methods = {
@@ -4811,8 +4809,6 @@ german_mountain_toll_castle = {
 	rural_settlement = yes
 	town = yes
 	city = yes
-	
-	estate = burghers_estate
 	
 	build_time = trade_post_build_time
 

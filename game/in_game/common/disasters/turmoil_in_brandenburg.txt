@@ -24,6 +24,7 @@
 	can_end = {
 		turmoil_in_brandenburg_end_trigger = yes
 	}
+	
 	modifier = {
 		global_max_control = -0.1
 		global_monthly_control = -0.0005
@@ -37,7 +38,8 @@
 
 		trigger_event_non_silently = turmoil_in_brandenburg.1
 	}
-	on_end = { 
+	on_end = {
+		trigger_event_non_silently = turmoil_in_brandenburg.300
 		
 		remove_variable = robber_barons_issues_are_ignored
 		remove_variable = robber_barons_issues_are_dealt_with
@@ -55,7 +57,7 @@
 				has_variable = bra_wittelsbacher_neglect_var
 			}
 			random_list = {
-				20 = {custom_tooltip = an_event_occurs_tt}
+				20 = {custom_tooltip = wittelsbacher_event_occurs_tt}
 				80 = {custom_tooltip = no_event_occurs_tt}
 			}
 			hidden_effect = {
@@ -94,15 +96,23 @@
 				}
 			}
 		}
-		random_list = {
-			10 = { custom_tooltip = robber_barons_spread_tt }
-			90 = { custom_tooltip = robber_barons_stay_put_tt }
+		if = {
+			limit = {
+				current_year < 1365
+			}
+			custom_tooltip = robber_barons_when_tt
 		}
-		hidden_effect = {
+		else = {
 			random_list = {
-				90 = { }
-				10 = {
-					trigger_event_silently = turmoil_in_brandenburg.1301
+				10 = { custom_tooltip = robber_barons_spread_tt }
+				90 = { custom_tooltip = robber_barons_stay_put_tt }
+			}
+			hidden_effect = {
+				random_list = {
+					90 = { }
+					10 = {
+						trigger_event_silently = turmoil_in_brandenburg.1301
+					}
 				}
 			}
 		}

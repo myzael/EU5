@@ -28,6 +28,7 @@
  choose_writer: "Choose a [ShowArtistTypeNameWithNoTooltip('writer')]"
  selected_writer_will_compile_and_grant_legitimacy_based_on_woa_quality_tt: "The selected [ShowArtistTypeName('writer')] will compile a [ShowWorkOfArtTypeName('chronicle')] for the [actor.GetGovernment.GetRulerOrRegent.GetDynasty.GetName] [dynasty|e]. We will gain [legitimacy|e] depending greatly on the quality of the [work_of_art|e]"
  target_character_will_compile_a_history_of_our_dynasty_tt: "[target_character.GetName] will be selected to compile a [ShowWorkOfArtTypeName('chronicle')] for the [actor GetGovernment.GetRulerOrRegent.GetDynasty.GetName] [dynasty|e]"
+ DISASTERS_MODIFIERS_TT: "Disaster Modifiers"
 
 
 #Ambrosian Republic
@@ -308,6 +309,11 @@
 #Turmoil in Brandenburg
  turmoil_in_brandenburg: "Turmoil in [GetCountry('BRA').GetNameWithNoTooltip]"
  turmoil_in_brandenburg_desc: "The [GetCountry('BRA').GetLongName] finds itself in difficult times ever since the power of the [ShowDynastyName('askanier_dynasty')] crumbled and the [ShowDynastyName('wittelsbach_dynasty')] assumed control of the $margraviate$. With the efforts of the [ShowDynastyNameWithNoTooltip('wittelsbach_dynasty')] bound elsewhere, the young [GetCountry('BRA').GetGovernment.GetRulerTitle] [GetCountry('BRA').GetGovernment.GetRuler.GetName] must struggle alone to re-assert the central authority in the [GetCountry('BRA').GetAdjectiveWithNoTooltip] March. Facing unruly estates, a population yearning for the days of [ShowDynastyNameWithNoTooltip('askanier_dynasty')] rule, and the ruthless Robber Barons will provide a difficult task for [GetCountry('BRA').GetGovernment.GetRuler.GetName].\n\nWhile occupied with internal affairs, the [GetCountry('BRA').GetLongName] could also attract interest from other dynasties with a claim to the poor, but prestigious title of the [GetUniqueInternationalOrganization('hre').GetName]."
+ turmoil_in_brandenburg_investment_tt: "Reaching a 100 points in $bra_wittelsbacher_investment_var$, will maintain our current [dynasty|e] in power."
+ turmoil_in_brandenburg_neglect_tt: "Reaching a 100 points in $bra_wittelsbacher_neglect_var$, will put a new [dynasty|e] in power."
  robber_barons_resolved_tt: "We have dealt with the Robber Baron Issues"
+ wittelsbacher_event_occurs_tt: "An Event related to the Wittelsbacher Government occurs"
+ robber_barons_when_tt: "After 1365 Events related to the Robber Barons may appear"
  robber_barons_spread_tt: "The Robber Barons spread their influence"
  robber_barons_stay_put_tt: "The Robber Barons remain dormant"
+ TURMOIL_IN_BRANDENBURG_DISASTERS_MODIFIERS_TT_LIST: "For the duration of the [disaster|e], the country gets:"

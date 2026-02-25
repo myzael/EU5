@@ -104,11 +104,15 @@
 			modifier = {
 				add = 500
 				is_female = no
-				portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
+				OR = {
+					portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
+					portrait_imperial_trigger = { CULTURE_GFX = european_gfx }
+				}
 				portrait_late_trigger = yes 
 			}
 		}
 	}
+	
 	european_monk = {
 		dna_modifiers = {
 			accessory = {

@@ -632,6 +632,12 @@ types PeaceTreaties {
 							text = "[antagonism|e]"
 						}
 						lowpriotextcontext = "[PeaceTreaty.GetBaseAntagonismCausedInfo]"
+
+						tooltipmeta = {
+							title = "ANTAGONISM_TT_TITLE"
+							game_concept = "[antagonism|E]"
+							texture = "gfx/interface/icons/resources/antagonism.dds"
+						}
 					}
 				}
 				

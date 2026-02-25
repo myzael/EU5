@@ -221,19 +221,18 @@
 			base = 0
 			modifier = {
 				add = 400
-				OR = {
-					portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
-					AND = { # Republic of Genoa
-						portrait_is_ruler_of_trigger = { COUNTRY = GEN }
-						c:GEN ?= {
-							government_type = government_type:republic
-						}
-					}
-				}
+				portrait_royalty_trigger = { CULTURE_GFX = european_gfx }
 			}
 			modifier = {
 				add = 500
 				portrait_imperial_trigger = { CULTURE_GFX = european_gfx }
+			}
+			modifier = { # Republic of Genoa
+				add = 500
+				portrait_is_ruler_of_trigger = { COUNTRY = GEN }
+				c:GEN ?= {
+					government_type = government_type:republic
+				}
 			}
 		}
 	}
@@ -332,11 +331,14 @@
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
 				any_ruling_countries = { country_rank_level >= 2 } # duchy or above
-				portrait_late_trigger = no
 			}
 			modifier = {
 				factor = 0
 				portrait_is_ruler_of_trigger = { COUNTRY = VEN }
+			}
+			modifier = {
+				factor = 0
+				portrait_late_trigger = yes
 			}
 		}
 	}
@@ -358,11 +360,14 @@
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_helmet_trigger = yes
 				any_ruling_countries = { country_rank_level >= 3 } # kingdom or above
-				portrait_late_trigger = no
 			}
 			modifier = {
 				factor = 0
 				portrait_is_ruler_of_trigger = { COUNTRY = VEN }
+			}
+			modifier = {
+				factor = 0
+				portrait_late_trigger = yes
 			}
 		}
 	}

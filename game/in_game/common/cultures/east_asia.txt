@@ -1121,6 +1121,7 @@ mongolian_culture = {
 	}
 	culture_groups = {
 		mongolian_group
+		steppe_group
 	}
 }
 

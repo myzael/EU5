@@ -1769,6 +1769,7 @@
  
  DISASTER_MONTLY_CHANCE: "$BULLET$$VAL|2V%$ chance to appear each month.\n\n"
  DISASTER_MODIFIER: "[COUNTRY.GetLongNameWithFlag] gains:\n$MODIFIER$"
+ DISASTER_MODIFIER_TOOLTIP: "$MODIFIER$"
  DISASTER_WILL_END_WHEN: "Will end when\n$WHY$"
  
  STAT_BETTER: "#TOOLTIP:$BREAKDOWN_TAG$ @arrow_up!#!"

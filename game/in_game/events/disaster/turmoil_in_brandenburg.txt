@@ -87,7 +87,6 @@ turmoil_in_brandenburg.1 = {
 		name = turmoil_in_brandenburg.1.a
 		historical_option = yes
 		add_legitimacy = -40
-		# add_country_modifier = { modifier = bra_wittelsbacher_neglect years = -1 mode = add_and_extend }
 		custom_tooltip = {
 			text = turmoil_in_brandenburg.1.a.at
 			every_owned_location = {
@@ -129,10 +128,14 @@ turmoil_in_brandenburg.2 = {
 	}
 	option = {
 		name = turmoil_in_brandenburg.2.a
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		if = {
 			limit = { has_variable = bra_wittelsbacher_investment_var }
 			remove_variable = bra_wittelsbacher_investment_var
+		}
+		if = {
+			limit = { has_variable = bra_wittelsbacher_neglect_var }
+			remove_variable = bra_wittelsbacher_neglect_var
 		}
 	}
 }
@@ -1118,7 +1121,7 @@ turmoil_in_brandenburg.100 = {
 		name = turmoil_in_brandenburg.100.a
 
 		set_variable = unlock_achievement_ill_be_wittelsback
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 		remove_variable = bra_wittelsbacher_neglect_var
 		add_legitimacy = legitimacy_severe_bonus
@@ -1157,6 +1160,31 @@ turmoil_in_brandenburg.200 = { #GRAVEYARD
 				set_lowborn = yes
 			}
 			set_lowborn = yes
+		}
+	}
+}
+
+turmoil_in_brandenburg.300 = {
+	type = country_event
+	category = disaster_event
+	title = turmoil_in_brandenburg.300.title
+	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
+	desc = turmoil_in_brandenburg.300.desc
+	fire_only_once = yes
+
+	immediate = {
+		ruler_or_regent ?= {
+			save_scope_as = target_character
+		}
+	}
+
+	option = {
+		name = turmoil_in_brandenburg.300.a
+		
+		add_country_modifier = {
+			modifier = bra_overcome_the_turmoil
+			years = 10
+			mode = replace
 		}
 	}
 }
@@ -1316,7 +1344,7 @@ turmoil_in_brandenburg.1000 = {
 	option = {
 		name = turmoil_in_brandenburg.1000.c
 		add_stability = stability_radical_penalty
-		set_new_ruler = scope:target_character
+		set_new_ruler_with_union_if_senior = { character = scope:target_character }
 		custom_tooltip = {
 			text = turmoil_in_brandenburg.1000.c.at
 			dynasty:wittelsbach_dynasty = {
@@ -2049,18 +2077,34 @@ turmoil_in_brandenburg.1101 = {
 	image = "gfx/interface/illustrations/disaster/turmoil_in_brandenburg.dds"
 	desc = turmoil_in_brandenburg.1101.desc
 	immediate = {
-		ruler ?= {
-			save_scope_as = emperor_ruler
-			dynasty = {
-				random_character_in_dynasty = {
-					limit = {
-						is_alive = yes
-						is_female = no
-						is_adult = yes
-						is_ruler = no
-						owner = root
+		if = {
+			limit = {
+				has_heir = yes
+				heir = {
+					is_adult = yes
+				}
+			}
+			ruler ?= {
+				save_scope_as = emperor_ruler
+			}
+			heir = {
+				save_scope_as = dynasty_character
+			}
+		}
+		else = {
+			ruler ?= {
+				save_scope_as = emperor_ruler
+				dynasty = {
+					random_character_in_dynasty = {
+						limit = {
+							is_alive = yes
+							is_female = no
+							is_adult = yes
+							is_ruler = no
+							owner = root
+						}
+						save_scope_as = dynasty_character
 					}
-					save_scope_as = dynasty_character
 				}
 			}
 		}
@@ -2154,19 +2198,19 @@ turmoil_in_brandenburg.1102 = {
 	option = {
 		name = turmoil_in_brandenburg.1102.a
 		trigger = { scope:emperor_ruler = { dynasty = dynasty:wittelsbach_dynasty } }
-		set_new_ruler = scope:emperor_ruler
+		set_new_ruler_with_union_if_senior = { character = scope:emperor_ruler }
 		scope:emperor_ruler = { add_character_modifier = { modifier = bra_fresh_emperor_ruler_of_brandenburg years = -1 mode = add_and_extend } }
 		add_stability = stability_mild_bonus
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 	option = {
 		name = turmoil_in_brandenburg.1102.b
 		trigger = { scope:emperor_ruler = { NOT = { dynasty = dynasty:wittelsbach_dynasty } } }
-		set_new_ruler = scope:emperor_ruler
+		set_new_ruler_with_union_if_senior = { character = scope:emperor_ruler }
 		scope:emperor_ruler = { add_character_modifier = { modifier = bra_fresh_emperor_ruler_of_brandenburg years = -1 mode = add_and_extend } }
 		add_stability = stability_mild_bonus
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 }
@@ -2199,19 +2243,19 @@ turmoil_in_brandenburg.1103 = {
 	option = {
 		name = turmoil_in_brandenburg.1103.a
 		trigger = { scope:dynasty_character = { dynasty = dynasty:wittelsbach_dynasty } }
-		set_new_ruler = scope:dynasty_character
+		set_new_ruler_with_union_if_senior = { character = scope:dynasty_character }
 		scope:dynasty_character = { add_character_modifier = { modifier = bra_fresh_ruler_of_brandenburg years = -1 mode = add_and_extend } }
 		add_stability = stability_mild_bonus
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 	option = {
 		name = turmoil_in_brandenburg.1103.b
 		trigger = { scope:dynasty_character = { NOT = { dynasty = dynasty:wittelsbach_dynasty } } }
-		set_new_ruler = scope:dynasty_character
+		set_new_ruler_with_union_if_senior = { character = scope:dynasty_character }
 		scope:dynasty_character = { add_character_modifier = { modifier = bra_fresh_ruler_of_brandenburg years = -1 mode = add_and_extend } }
 		add_stability = stability_mild_bonus
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 }
@@ -2247,7 +2291,7 @@ turmoil_in_brandenburg.1104 = {
 			type = subject_type:vassal
 		}
 		scope:cabinet_character = { move_country = root }
-		set_new_ruler = scope:cabinet_character
+		set_new_ruler_with_union_if_senior = { character = scope:cabinet_character }
 		add_stability = stability_mild_bonus
 	}
 	option = {
@@ -2258,7 +2302,7 @@ turmoil_in_brandenburg.1104 = {
 			type = subject_type:vassal
 		}
 		scope:cabinet_character = { move_country = root }
-		set_new_ruler = scope:cabinet_character
+		set_new_ruler_with_union_if_senior = { character = scope:cabinet_character }
 		add_stability = stability_mild_bonus
 	}
 	option = {
@@ -2278,7 +2322,7 @@ turmoil_in_brandenburg.1104 = {
 		}
 	}
 	after = {
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 }
@@ -2295,6 +2339,7 @@ turmoil_in_brandenburg.1105 = {
 		create_character = {
 			first_name = name_frederick
 			dynasty = dynasty:hohenzollern_dynasty
+			culture = culture:east_franconian
 			estate = estate_type:nobles_estate
 			adm = { 60 80 }
 			dip = { 60 80 }
@@ -2307,9 +2352,9 @@ turmoil_in_brandenburg.1105 = {
 	}
 	option = {
 		name = turmoil_in_brandenburg.1105.a
-		set_new_ruler = scope:hohenzollern_character
+		set_new_ruler_with_union_if_senior = { character = scope:hohenzollern_character }
 		add_stability = stability_mild_bonus
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 }
@@ -2328,7 +2373,7 @@ turmoil_in_brandenburg.1106 = {
 	option = {
 		name = turmoil_in_brandenburg.1106.a
 		add_legitimacy = legitimacy_severe_penalty
-		remove_country_modifier = bra_wittelsbacher_neglect
+		remove_variable = bra_wittelsbacher_neglect_var
 		remove_variable = bra_wittelsbacher_investment_var
 	}
 }
@@ -2385,6 +2430,7 @@ turmoil_in_brandenburg.1200 = {
 		create_character = {
 			first_name = name_frederick
 			dynasty = dynasty:hohenzollern_dynasty
+			culture = culture:east_franconian
 			estate = estate_type:nobles_estate
 			adm = {60 80}
 			dip = {60 80}
@@ -2442,7 +2488,7 @@ turmoil_in_brandenburg.1201 = {
 		scope:hohenzollern_character = {
 			move_country = root
 		}
-		set_new_ruler = scope:hohenzollern_character
+		set_new_ruler_with_union_if_senior = { character = scope:hohenzollern_character }
 		if = {
 			limit = { is_subject = yes }
 			overlord = {
