@@ -41,7 +41,7 @@ country_base_values = {
 	
 	combined_arms_max_threshold = 0.5
 	combined_arms_min_percent_for_bonus = 0.1
-	combined_bonus_per_type = 0.05
+	combined_bonus_per_type = 0.025
 	
 	annexation_speed_base = 0.5
 	
@@ -120,7 +120,7 @@ country_base_values = {
 	global_estate_satisfaction_recovery = 0.002
 	
 	
-	global_estate_max_tax = 0.30
+	global_estate_max_tax = 0.35
 	global_estate_min_tax = 0.0
 
 	land_morale_recovery = 0.05

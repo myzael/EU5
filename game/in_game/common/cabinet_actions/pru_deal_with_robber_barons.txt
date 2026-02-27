@@ -67,7 +67,7 @@
 
 	province_modifier = {
 		local_max_control = 0.25
-		local_monthly_control = 0.002
+		local_monthly_control = 0.01
 	}
 
 	map_marker = {

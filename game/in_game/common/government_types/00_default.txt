@@ -110,7 +110,7 @@ steppe_horde = {
 		
 		care_about_producing_heirs = yes
 		combined_arms_max_threshold = 0.2
-		combined_bonus_per_type = -0.025
+		combined_bonus_per_type = -0.01
 	}
 }
 

@@ -33,6 +33,7 @@
  turmoil_in_brandenburg.2.title: "The End of the $bra_wittelsbach_hyperlink_no_tt$ Period"
  turmoil_in_brandenburg.2.desc: "As no member of the $bra_wittelsbach_hyperlink$ dynasty holds any monarchistic power over [ROOT.GetCountry.GetName], the era of economic stagnation and constant neglect has finally found its end. It is now in the hands of the new rulers to bring a time of prosperity to our people."
  turmoil_in_brandenburg.2.a: "May this be the start of a Golden Age."
+ turmoil_in_brandenburg.2.a.tt: "The $bra_wittelsbacher_investment_var$ and $bra_wittelsbacher_neglect_var$ will be disabled."
 
  turmoil_in_brandenburg.3.title: "The False $name_waldemar$"
  turmoil_in_brandenburg.3.desc: "At first, [target_character.GetHisHer] story sounded realistic, if a bit strange: a ruler who staged [target_character.GetHisHer] own funeral in order to go on a pilgrimage undisturbed, then returned. But as [target_character.GetHisHer] new campaign for the throne continued, [target_character.GetHisHer] tale started to show cracks. Those who knew [GetCharacter('bra_waldemar_askanier').GetName] before 1320 also noted [target_character.GetHisHer] unexplainable personality changes...\n\nBut to the shock of all, it has now finally been revealed that [target_character.GetName] is nothing but a mere imposter posing as the most honored Margrave!\n\nIn an instance, any form of support the pretender owned has vanished, and the rule of [ROOT.GetCountry.GetGovernment.GetRuler.GetName] is once again undisputed."
@@ -102,8 +103,8 @@
  
  every_location_in_target_province_gains_center_of_urbanization_modifier_tt: "Every [location|e] in [target_province.GetName] will receive the [GetModifier('center_of_urbanization_modifier').GetNameWithTooltip] [modifier|e]"
  every_location_in_target_province_gains_flourishing_capital_modifier: "Every [location|e] in [target_province.GetName] will receive the [GetModifier('flourishing_capital_modifier').GetNameWithTooltip] [modifier|e]"
- every_location_in_target_province_gains_development_mild_bonus: "Every [location|e] in [target_province.GetName] will gain [ShowNamedValue('development_mild_bonus')|+=] [development|e]"
- every_location_in_target_province_gains_prosperity_extreme_bonus: "Every [location|e] in [target_province.GetName] will gain [ShowNamedValue('prosperity_extreme_bonus')|+=2%] [prosperity|e]."
+ every_location_in_target_province_gains_development_mild_bonus: "Every [location|e] in [target_province.GetName] will gain [ShowNamedValue('development_weak_bonus')|+=] [development|e]"
+ every_location_in_target_province_gains_prosperity_extreme_bonus: "Every [location|e] in [target_province.GetName] will gain [ShowNamedValue('prosperity_severe_bonus')|+=2%] [prosperity|e]."
 
 
  turmoil_in_brandenburg.100.title: "The $bra_wittelsbach_hyperlink_no_tt$ Vitalize [ROOT.GetCountry.GetNameWithNoTooltip]"
@@ -129,7 +130,7 @@
  turmoil_in_brandenburg.1000.b.tt: "We will try to execute [target_character.GetName]. If it succeeds, the legitimacy of [bra_ruler.GetName] is restored and we receive #Y +5#! bonus to our $bra_wittelsbacher_investment_var$ $bra_variable_counter$.\nShould this fail, a [civil_war|e] will erupt"
  turmoil_in_brandenburg.1000.c: "Abdicate to the true ruler of [ROOT.GetCountry.GetNameWithNoTooltip]."
  turmoil_in_brandenburg.1000.c.at: "Every country which has a member of the $bra_wittelsbach_hyperlink$ dynasty as their ruler gains [ShowBiasValue('opinion_ousted_our_dynasty_member')|+0] [opinion|e] of [ROOT.GetCountry.GetName]"
- turmoil_in_brandenburg.false_waldemar_rebel.tt: "The [ShowPopTypeName('nobles')] of up to #Y 4#! of most populous, owned locations gain the following effects:\n- Loses [ShowNamedValue('pop_satisfaction_ultimate_penalty')|+=2%] [pop_satisfaction|e]\n- Joins [false_waldemar_rebel.GetName]"
+ turmoil_in_brandenburg.false_waldemar_rebel.tt: "The [ShowPopTypeName('nobles')] and [ShowPopTypeName('peasants')] of up to #Y 4#! of most populous, owned locations gain the following effects:\n- Loses [ShowNamedValue('pop_satisfaction_ultimate_penalty')|+=2%] [pop_satisfaction|e]\n- Joins [false_waldemar_rebel.GetName]"
 
  turmoil_in_brandenburg.1001.title: "Rise of [target_character.GetShortNameWithNoTooltip] in [bra_country.GetNameWithNoTooltip]"
  turmoil_in_brandenburg.1001.desc.imposter_revealed: "An ambassador from [bra_country.GetName] has arrived at our grand court to request our support against a rising pretender and rival to [bra_ruler.GetName]. Apparently, this self-proclaimed '[target_character.GetName]' claims to have returned from a pilgrimage to the Holy Land, and now demands the [bra_country.GetAdjectiveWithNoTooltip] throne.\n\nHowever, news of deceit has reached us, as this '$name_waldemar$' is a mere pretender!"
@@ -193,7 +194,7 @@
  turmoil_in_brandenburg.1007.a: "Another crisis well averted."
  turmoil_in_brandenburg.1007.b: "To arms!"
  bra_true_waldemar_identity_reveal_tt: "#italic The true identity of [target_character.GetName] will be revealed...#!"
- turmoil_in_brandenburg.false_waldemar_big_rebel.tt: "The [ShowPopTypeName('nobles')] of up to #Y 12#! of most populous, owned locations gain the following effects:\n- Loses [ShowNamedValue('pop_satisfaction_ultimate_penalty')|+=2%] [pop_satisfaction|e]\n- Joins [false_waldemar_rebel.GetName]"
+ turmoil_in_brandenburg.false_waldemar_big_rebel.tt: "The [ShowPopTypeName('nobles')] and [ShowPopTypeName('peasants')] of up to #Y 16#! of most populous, owned locations gain the following effects:\n- Loses [ShowNamedValue('pop_satisfaction_ultimate_penalty')|+=2%] [pop_satisfaction|e]\n- Joins [false_waldemar_rebel.GetName]"
  false_waldemar_rebel: "Supporters of $name_waldemar$"
 
  turmoil_in_brandenburg.1100.title: "The Neglect of [root_country.GetNameWithNoTooltip]"

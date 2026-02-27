@@ -7436,6 +7436,7 @@ bra_waldemar_rallies_nobility = {
 		category = country
 	}
 	monthly_legitimacy = -0.05
+	pop_leave_rebels_threshold = 0.1
 	nobles_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
 }
 

@@ -1250,6 +1250,33 @@ support_noble_sponsored_armies = {
 				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
 			}
 		}
+		multiply = {
+			if = {
+				limit = {
+					expected_army_size < 10
+					monthly_balance < 50
+				}
+				value = 0.1
+			}
+			else_if = {
+				limit = {
+					expected_army_size > 10
+					expected_army_size < 20
+					monthly_balance < 120
+				}
+				value = 0.1
+			}
+			else_if = {
+				limit = {
+					expected_army_size > 20
+					monthly_balance < 180
+				}
+				value = 0.1
+			}
+			else = {
+				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
+			}
+		}
 	}
 	
 	on_debate_passed = {

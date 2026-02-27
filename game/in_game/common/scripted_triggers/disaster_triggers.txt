@@ -654,9 +654,12 @@ turmoil_in_brandenburg_end_trigger = {
 	OR = {
 		var:bra_wittelsbacher_investment_var >= 100
 		var:bra_wittelsbacher_neglect_var <= -100
-		NOT = {
-			has_variable = bra_wittelsbacher_investment_var
-			has_variable = bra_wittelsbacher_neglect_var
+		custom_tooltip = {
+			text = turmoil_in_brandenburg_dynastic_struggle_resolved_tt
+			NOT = {
+				has_variable = bra_wittelsbacher_investment_var
+				has_variable = bra_wittelsbacher_neglect_var
+			}
 		}
 	}
 	custom_tooltip = {

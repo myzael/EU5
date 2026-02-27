@@ -301,7 +301,7 @@
  BEST_POSSIBLE_SHIPS: "Can build the following [ships|e]"
  
  SUBJECT_UPKEEP_BASE: "Base Value: $VAL|-=2$"
- SUBJECT_UPKEEP_RELATIVE: "Relative Power: $VAL|-=2$"
+ SUBJECT_UPKEEP_RELATIVE: "Relative Power: #TOOLTIP:$BREAKDOWN_TAG$ $VAL|-=2L$#!"
  SUBJECT_UPKEEP_RANK: "[country_rank|e]: $VAL|-=%2$"
  SUBJECT_UPKEEP_COMMON_DIALECT: "Same [dialect|e]: $VAL|-=%2$"
  SUBJECT_UPKEEP_COMMON_LANGUAGE: "Same [language|e]: $VAL|-=%2$"
@@ -309,6 +309,11 @@
  SUBJECT_UPKEEP_COMMON_GROUP: "Same [religion_group|e]: $VAL|-=%2$"
  
  SUBJECT_UPKEEP_TYPE_SCALE: "[SUBJECT_TYPE.GetName]: #V x$VAL|2$#!"
+ 
+ SUB_RELATIVE_POWER_BREAKDOWN: "Relative Power: $VAL|2%$ of [overlord|e]"
+ SUB_RELATIVE_POWER_SUB_OV: "[COUNTRY.GetName] [economical_base|e]: [COUNTRY.GetEconomicalBaseWithLabel]\n[TARGET_COUNTRY.GetName] [economical_base|e]: [TARGET_COUNTRY.GetEconomicalBaseWithLabel]"
+ SUB_RELATIVE_POWER_SCALE_MIN: "Relative Power % multiplied by $SCALE|x2R$ =>: $VAL|R2$"
+ 
  
  AGE_PREF_BRK_TITLE: "#T $NAME$#!"
  ADVANCES_INFO_OF_COUNTRY: "Interesting Advances of [Country.GetLongNameWithNoTooltip]"

@@ -340,7 +340,7 @@ napoleonic_warfare = {
 combined_arms_advance_revolutions = {
 	age = age_6_revolutions
 			
-	combined_bonus_per_type = 0.025
+	combined_bonus_per_type = 0.01
 		
 	requires = napoleonic_warfare
 }

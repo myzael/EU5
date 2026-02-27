@@ -405,7 +405,7 @@ correct_box_advance_reformation = {
 combined_arms_advance_reformation = {
 	age = age_4_reformation
 			
-	combined_bonus_per_type = 0.025
+	combined_bonus_per_type = 0.01
 		
 	requires = correct_box_advance_reformation
 }

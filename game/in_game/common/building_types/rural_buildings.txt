@@ -69,10 +69,10 @@ fishing_village = {
 			produced = fish
 			output = 0.5
 			
-			salt = 0.08
-			tools = 0.02
+			salt = 0.06
+			tools = 0.01
 			
-			debug_max_profit = 0.6
+			debug_max_profit = 1.0
 
 	
 			category = building_maintenance
@@ -82,10 +82,10 @@ fishing_village = {
 			produced = fish
 			output = 0.5
 			
-			salt = 0.08
-			ivory = 0.01
+			salt = 0.045
+			ivory = 0.02
 			
-			debug_max_profit = 0.6
+			debug_max_profit = 1.0
 	
 			category = building_maintenance
 		}
@@ -607,6 +607,7 @@ sawmill = {
 	
 	employment_size = rural_peasant_enhance_employment
 	
+	forbidden_for_estates = yes
 	
 	category = rgo_building_category
 	

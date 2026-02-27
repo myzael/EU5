@@ -19,6 +19,7 @@
  UNLOCK_ONGOING_RELATION: "Unlock Ongoing Diplomacy"
  LOCK_ONGOING_RELATION_DESC: "Prevent the automation from changing this [diplomatic_action]."
  UNLOCK_ONGOING_RELATION_DESC: "Allow the automation to change this [diplomatic_action]."
+ SELECT_THIS_CABINET: "Select this Cabinet Slot"
  
  POLICY_IS_PART_OF_LAW: "This is a [policy|e] of the [LAW.GetName] [law|e]."
  

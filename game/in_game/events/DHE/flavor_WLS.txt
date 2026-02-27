@@ -214,9 +214,6 @@ flavor_wls.12 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		character:wls_owain_glyndwr ?= { save_scope_as = owain_glyndwr }
-
-		capital = { save_scope_as = target_location }
-
 	}
 
 	option = {
@@ -287,11 +284,6 @@ scripted_effect flavor_wls_13_create_revolt = {
 					dominant_culture = culture:welsh
 				}
 				change_location_owner = scope:glyndwr_country
-			}
-		}
-		scope:target_location = {
-			province = {
-				every_location_in_province = { change_location_owner = scope:glyndwr_country }
 			}
 		}
 		set_new_ruler = scope:owain_glyndwr
