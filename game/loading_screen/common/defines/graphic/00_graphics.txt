@@ -932,11 +932,20 @@ NMapLines = {
   TRADE_ROUTE_IMPORT = "line_trade_blue"
   TRADE_ROUTE_EXPORT = "line_trade_orange"
   PATH_TO_MARKET = "line_trade_green" # TODO: create a new one. Could be bidirectional.
-  PATH_TO_CAPITAL = "line_trade_yellow" # TODO: create a new one. Might be the same as path to market.
   SEA_CURRENT = "line_trade_yellow" # TODO: create a new one. A short arrow
-  RIVER_DIRECTION = "line_river_direction"
+  RIVER_DIRECTION = "line_trade_yellow"
   UNIT_LOGISTICS = "line_trade_green" # TODO: create a new one. unit supply looking
   ROAD_BUILDER = "line_road_builder"
+  PROXIMITY_FROZEN = "line_pop_movement_red"
+  PROXIMITY_LAKE = "line_trade_blue"
+  PROXIMITY_LAND = "line_pop_movement_red"
+  PROXIMITY_MARITIME = "line_trade_blue"
+  PROXIMITY_PORT = "line_trade_yellow"
+  PROXIMITY_RIVER = "line_river_direction"
+  PROXIMITY_ROAD_1 = "line_road_builder"
+  PROXIMITY_ROAD_2 = "line_road_builder"
+  PROXIMITY_ROAD_3 = "line_road_builder"
+  PROXIMITY_ROAD_4 = "line_road_builder"
 }
 
 NOutliner = {

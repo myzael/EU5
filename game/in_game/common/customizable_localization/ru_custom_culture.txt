@@ -1,4 +1,4 @@
-﻿Culture_adj = {
+Culture_adj = {
 	type = culture
 	log_loc_errors = no
 					
@@ -9062,6 +9062,7 @@ CultureGroup_adj = {
 	}
 
 	text = { localization_key = default_RU_culture_group fallback = yes }
+	if_invalid_loc = return_empty
 }
 Culture_adj_wntt = {
 	log_loc_errors = no
