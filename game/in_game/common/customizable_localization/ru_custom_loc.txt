@@ -38604,8 +38604,8 @@ predlog_kko = {
 		}
 	}
 
-	text = { localization_key = default_RU_predlog_kko_CL fallback = yes
-	if_invalid_loc = return_empty }
+	text = { localization_key = default_RU_predlog_kko_CL fallback = yes}
+	if_invalid_loc = return_empty
 }
 predlog_sso = {
 	type = country
@@ -41153,8 +41153,8 @@ predlog_sso = {
 		}
 	}
 
-	text = { localization_key = default_RU_predlog_sso_CL fallback = yes
-	if_invalid_loc = return_empty }
+	text = { localization_key = default_RU_predlog_sso_CL fallback = yes}
+	if_invalid_loc = return_empty
 }
 predlog_obo = {
 	type = country
@@ -43702,8 +43702,8 @@ predlog_obo = {
 		}
 	}
 
-	text = { localization_key = default_RU_predlog_obo_CL fallback = yes 
-	if_invalid_loc = return_empty}
+	text = { localization_key = default_RU_predlog_obo_CL fallback = yes}
+	if_invalid_loc = return_empty
 }
 predlog_vvo = {
 	type = country
@@ -46251,8 +46251,8 @@ predlog_vvo = {
 		}
 	}
 
-	text = { localization_key = default_RU_predlog_vvo_CL fallback = yes 
-	if_invalid_loc = return_empty}
+	text = { localization_key = default_RU_predlog_vvo_CL fallback = yes}
+	if_invalid_loc = return_empty
 }
 
 LR_tt = {

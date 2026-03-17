@@ -1,4 +1,4 @@
-Culture_adj = {
+﻿Culture_adj = {
 	type = culture
 	log_loc_errors = no
 					
