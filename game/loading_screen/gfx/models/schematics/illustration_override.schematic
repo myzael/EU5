@@ -189,6 +189,60 @@ graph={
 					linked_node=10
 					linked_pin="output_arg"
 				}
+				link={
+					pin_id="_TintR"
+					linked_node=24
+					linked_pin="output_arg"
+				}
+				link={
+					pin_id="_TintG"
+					linked_node=25
+					linked_pin="output_arg"
+				}
+				link={
+					pin_id="_TintB"
+					linked_node=26
+					linked_pin="output_arg"
+				}
+			}
+		}
+		pdxns:ecs:get_schematic_parameter={
+			id=24
+			node={
+				parameter="CustomFloat_4"
+			}
+			inputs={
+				link={
+					pin_id="Float"
+					linked_node=20
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:ecs:get_schematic_parameter={
+			id=25
+			node={
+				parameter="CustomFloat_5"
+			}
+			inputs={
+				link={
+					pin_id="Float"
+					linked_node=20
+					linked_pin="value"
+				}
+			}
+		}
+		pdxns:ecs:get_schematic_parameter={
+			id=26
+			node={
+				parameter="CustomFloat_6"
+			}
+			inputs={
+				link={
+					pin_id="Float"
+					linked_node=20
+					linked_pin="value"
+				}
 			}
 		}
 		pdxns:gfx:Texture={

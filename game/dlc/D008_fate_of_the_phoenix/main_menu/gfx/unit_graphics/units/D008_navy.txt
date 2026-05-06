@@ -1,0 +1,15 @@
+﻿####### RENAISSANCE #######
+age_2_renaissance:n_greek_fire_galley_renaissance = {
+	dlc = "d008_fate_of_the_phoenix"
+	schematic_name = "ship_galley_02_greek_fire_galley_schematic"
+	render_under_water = yes
+	size = 1.1
+}
+
+####### DISCOVERY #######
+age_3_discovery:n_greek_fire_galley_discovery = {
+	dlc = "d008_fate_of_the_phoenix"
+	schematic_name = "ship_galley_03_greek_fire_galley_schematic"
+	render_under_water = yes
+	size = 1.1
+}

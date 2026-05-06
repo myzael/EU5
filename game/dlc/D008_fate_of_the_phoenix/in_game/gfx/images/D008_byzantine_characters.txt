@@ -1,0 +1,420 @@
+﻿
+### Characters Happy Lists ###
+
+## religions
+d008_orthodox_regular = {
+	tag = "characters_regular"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_regular_metadata_os1080x440_d120x8.dds"
+		priority = 60 # higher priority to beat christian_gfx
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = eastern_christian_gfx }
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_hellenist_regular_metadata_os1080x440_d60x32.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = folk_european_gfx }
+		}
+	}
+}
+d008_orthodox_happy = {
+	tag = "characters_happy"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_happy_metadata_os1080x440_d76x16.dds"
+		priority = 60 # higher priority to beat christian_gfx
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = eastern_christian_gfx }
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_hellenist_happy_metadata_os1080x440_d112x148.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = folk_european_gfx }
+		}
+	}
+}
+d008_orthodox_angry = {
+	tag = "characters_angry"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_angry_metadata_os1080x440_d108x20.dds"
+		priority = 60 # higher priority to beat christian_gfx
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = eastern_christian_gfx }
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_hellenist_angry_metadata_os1080x440_d68x140.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = folk_european_gfx }
+		}
+	}
+}
+d008_orthodox_armed = {
+	tag = "characters_armed"
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_hellenist_angry_metadata_os1080x440_d68x140.dds"
+		priority = 40
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_religion ?= { gfx_culture_applicable = folk_european_gfx }
+		}
+	}
+}
+
+# cultures
+d008_byzantine_regular = {
+	tag = "characters_regular"
+
+	####ROMANS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_romans_regular_metadata_os1080x440_d116x176.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = roman_gfx }
+		}
+	}
+
+	####NOBLES
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_nobles_regular_metadata_os1080x440_d104x116.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###CLERGY
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_regular_metadata_os1080x440_d120x8.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###BURGHERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_regular_metadata_os1080x440_d48x168.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###SOLDIERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_armed_metadata_os1080x440_d104x132.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+
+	###PEASANTS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_peasants_regular_metadata_os1080x440_d104x128.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}
+
+d008_byzantine_happy = {
+	tag = "characters_happy"
+
+	####ROMANS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_romans_regular_metadata_os1080x440_d116x176.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = roman_gfx }
+		}
+	}
+
+	####NOBLES
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_nobles_happy_metadata_os1080x440_d100x160.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###CLERGY
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_happy_metadata_os1080x440_d76x16.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###BURGHERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_happy_metadata_os1080x440_d76x156.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###SOLDIERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_armed_metadata_os1080x440_d104x132.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+
+	###PEASANTS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_peasants_happy_metadata_os1080x440_d96x48.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}
+
+d008_byzantine_angry = {
+	tag = "characters_angry"
+
+	####ROMANS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_romans_regular_metadata_os1080x440_d116x176.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = roman_gfx }
+		}
+	}
+
+	####NOBLES
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_nobles_angry_metadata_os1080x440_d108x124.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###CLERGY
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_clergy_angry_metadata_os1080x440_d108x20.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:clergy }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###BURGHERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_angry_metadata_os1080x440_d80x24.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###SOLDIERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_armed_metadata_os1080x440_d104x132.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+
+	###PEASANTS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_peasants_angry_metadata_os1080x440_d76x120.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}
+
+d008_byzantine_armed = {
+	tag = "characters_armed"
+
+	####ROMANS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_romans_armed_metadata_os1080x440_d140x60.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = roman_gfx }
+		}
+	}
+
+	####NOBLES
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_nobles_armed_metadata_os1080x440_d84x60.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:nobles }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###BURGHERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_armed_metadata_os1080x440_d104x132.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:burghers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	###SOLDIERS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_burghers_armed_metadata_os1080x440_d104x132.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { this = pop_type:soldiers }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+
+	###PEASANTS
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/characters/byz_peasants_armed_metadata_os1080x440_d64x128.dds"
+		priority = 10
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_foreground_trigger = yes
+			scope:target_pop_type ?= { always = yes }
+			scope:target_culture ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}

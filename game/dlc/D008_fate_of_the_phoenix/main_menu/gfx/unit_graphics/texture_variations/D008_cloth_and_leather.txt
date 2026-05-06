@@ -1,0 +1,382 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+byzantine_clothing_group = {	
+	skin_color_material = {
+		mask = { color = { 1.0 0.0 0.0 } tolerance = 0.95 hardness = 0.95 }
+		repaint = {
+			primary_color = skin_color
+		}
+	}
+    
+    no_texture_color_material = {
+		mask = { color = { 0.0 1.0 0.5 } tolerance = 0.99 hardness = 0.8 }
+		repaint = {
+			primary_color = hair_color
+		}
+	}
+
+	#cloth_country_solid_group = {#
+		#mask = { color = { 0.0 1.0 0.0 } tolerance = 0.6 hardness = 0.9 }
+		#repaint = {
+			#90 = {#
+				#primary_color = unit_color0
+			#}
+			#5 = {#
+				#primary_color = unit_color1
+			#}
+			#2 = {#
+				#primary_color = unit_color2
+			#}
+		#}
+	#}
+######  NEUTRAL COLORS
+	 peasants_colors_group = {
+		 mask = { color = { 0.75 1.0 0.5 } tolerance = 0.85 hardness = 0.95}
+		 repaint = {			
+             5 = { peasants_color = hex{ 0xffbcb6b1 } } #cream_neutral
+             5 = { peasants_color = hex{ 0xff98928c } } #light_blue_neutral
+             5 = { peasants_color = hex{ 0xffb3a797 } } #light_cotton		
+                       
+		 }
+	 }
+###### BUCKSKIN COLORS
+    peasants_colors_group = {
+		mask = { color = { 1.0 1.0 0.0 } tolerance = 0.45 hardness = 0.95}
+		repaint = {
+            10 = { peasants_color = hex{ 0xffb78e6c } } #buckskin_medium
+            8 = { peasants_color = hex{ 0xff684b33 } } #buckskin_darkbrown
+            3 = { peasants_color = hex{ 0xffd4ba8c } } #buckskin_light           
+            2 = { peasants_color = hex{ 0xff413628 } } #buckskin_deepbrown
+                       
+		}
+	}
+###### NEUTRAL GAMBESON
+    gambeson_diamonds_square_colors_group = {
+		mask = { color = { 0.5 0.25 0.0 } tolerance = 0.35 hardness = 0.95 }
+        repaint = {
+            10 = { gambeson_color = hex{ 0xffad8e69 } }#beige_neutral
+			#5 = { gambeson_color = hex{ 0xffb48558 } }#brown_golden           
+            3 = { gambeson_color = hex{ 0xff946a43 } }#beige_brown
+		}
+	}
+
+	cloth_country_solid_group = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.3 hardness = 0.95 }
+		repaint = {
+			95 = {
+				primary_color = unit_color0
+			}
+			5 = {
+				primary_color = unit_color1
+			}
+			#10 = {
+				#primary_color = unit_color2
+			#}
+		}
+	}
+    
+    cloth_country_solid_group = {
+		mask = { color = { 0.5 0.0 1.0 } tolerance = 0.3 hardness = 0.95 }
+		repaint = {
+			85 = {
+				primary_color = unit_color1
+			}
+			15 = {
+				primary_color = unit_color2
+			}
+			#10 = {
+				#primary_color = unit_color2
+			#}
+		}
+	}
+
+######  CAPE COUNTRY COLORS AND NEUTRAL COLORS MIXED    
+    peasants_colors_group = {
+		mask = { color = { 0.25 0.5 0.5} tolerance = 0.3 hardness = 0.95 }
+		repaint = {			
+            5 = { peasants_color = hex{ 0xffbcb6b1 } } #cream_neutral
+            5 = { peasants_color = hex{ 0xffb3a797 } } #light_cotton            
+            25 = {peasants_color = unit_color0	}
+            5 = { peasants_color = unit_color1	}           
+		}
+	}
+    
+	chainmail_group = {
+		mask = { color = { 0.25 0.5 1.0 } tolerance = 0.25 hardness = 0.9 }
+	}
+    
+    metal_scales_layers_armor = {
+		mask = { color = { 0.25 0.75 0.75 } tolerance = 0.15 hardness = 0.95 }
+	}      
+    
+    metal_lamellar_small_squares_armor = {
+		mask = { color = { 0.25 1.0 0.5 } tolerance = 0.15 hardness = 0.95 }
+	}
+    
+    metal_lamellar_horse_armor = {
+		mask = { color = { 0.25 0.25 0.5 } tolerance = 0.15 hardness = 0.95 }
+	}
+
+	leather_brown_group = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.2 hardness = 0.9 }
+	}
+
+	byzantine_coa_group = {
+		mask = { color = { 1.0 0.5 1.0 } tolerance = 0.2 hardness = 0.8 }
+	}
+
+
+	iron_basic_group = {
+		mask = { color = { 0.0 1.0 1.0 } tolerance = 0.2 hardness = 0.95 }
+	}
+
+	wood_group = {
+		mask = { color = { 1.0 0.5 0.0 } tolerance = 0.15 hardness = 0.9 }
+	}
+
+	#feather = {
+		#mask = { color = { 0.0 1.0 0.5 } tolerance = 0.1 hardness = 0.5 }
+	#}
+
+	gold_group = {
+		mask = { color = { 0.5 0.0 0.5 } tolerance = 0.15 hardness = 0.9 }
+	}
+
+	#bronze_group = {#
+		#mask = { color = { 1.0 0.5 0.25 } tolerance = 0.1 hardness = 0.5 }
+	#}
+	
+	#straw_wicker = {#
+ 		#mask = { color = { 0.5 0.25 1.0 } tolerance = 0.1 hardness = 0.5 }
+ 	#}
+
+
+	assets = {		
+		############# ROYAL GUARD UNITS   
+        unit_torso_kilt_leather_mesh  #DLC UNITS
+        unit_hat_helmet_metal_gold_royal_guard_mesh #DLC UNITS
+        unit_accessories_cape_wool_cape_mesh        #DLC UNITS
+        unit_legs_pants_linen_bandage_fabric_mesh        
+        ############# vARANGIAN UNITS
+        unit_torso_weistcoat_knitted_varangian_mesh 
+		unit_hat_iron_helmet_chainmail_varangian_mesh
+        unit_legs_trousers_protection_steel_varangian_mesh
+        unit_hat_metal_helmet_chainmail_varangian_mesh
+        unit_torso_tunic_fabric_varangian_mesh
+        unit_legs_boots_armor_mesh
+        ############# INFANTRY UNITS
+        unit_hat_iron_helmet_infantry_mesh
+        unit_torso_caftans_linen_battle_infantry_mesh
+        unit_legs_boots_leather_infantry_mesh
+        unit_hat_iron_strap_leather_infantry_mesh
+        unit_torso_armor_leather_infantry_mesh
+        unit_legs_spadrilles_leather_mesh
+       ############# CATAPHRACTS UNITS
+        unit_torso_chain_armor_cataphracts_mesh
+        unit_hat_helmet_chain_armor_cataphracts_mesh
+        unit_legs_pants_armor_cataphracts_mesh
+        unit_hat_helmet_chain_armor_strips_cataphracts_mesh
+        unit_legs_pants_armor_boots_cataphracts_mesh
+        unit_torso_skirt_chain_armor_cataphracts_mesh
+        ############# CAVALRY HORSE ARMOR UNITS
+        unit_cavalry_horse_cataphracts_medium_mesh
+        unit_cavalry_horse_cataphracts_heavy_mesh
+        ############# PEASANT UNITS        
+        #unit_torso_tunic_fabric_bag_byz_mesh
+        #unit_hat_cap_linen_byz_mesh
+        #unit_legs_pants_wraps_linen_byz_mesh        
+        #unit_accessories_cape_hend_woven_byz_mesh
+        #unit_hair_curling_short_byz_mesh
+        #unit_torso_tunic_fabric_belt_byz_mesh
+        #unit_accessories_cape_wool_pointy_byz_mesh
+        #unit_accessories_cape_square_long_woven_byz_mesh
+        #unit_legs_slippers_leather_byz_mesh
+        #unit_hat_round_cap_linen_byz_mesh
+        #unit_torso_shirt_belt_fabric_byz_mesh
+        ############# SOLDIER UNITS 
+        unit_accessories_cloack_melton_wool_byz_mesh
+        unit_hat_helmet_wool_bronze_mesh
+        unit_hat_beret_cotton_byz_mesh
+        unit_hat_helmet_chainmail_iron_mesh
+        unit_hat_hardened_leather_byz_mesh
+        unit_legs_long_boots_leather_byz_mesh
+        unit_legs_pants_linen_boots_stell_leather_byz_mesh
+        unit_legs_pants_linen_boots_lofty_leather_byz_mesh
+        unit_torso_tunic_wool_steel_bronze_mesh
+        unit_torso_kilt_melton_wool_byz_mesh
+        unit_torso_tunic_linen_bag_leather_byz_mesh
+        unit_torso_tunic_wool_gloves_leather_byz_mesh
+        unit_helmet_mitre_cap_byz_mesh
+		############# LEGIONARY UNITS
+		unit_torso_armor_leather_legionary_mesh
+        unit_legs_leather_boots_legionary_mesh
+        unit_helmet_black_steel_legionary_mesh
+	}
+}
+
+#############
+
+byzantine_peasants_clothes_group = {
+	
+	skin_color_material = {
+		mask = { color = { 1.0 0.0 0.0 } tolerance = 0.99 hardness = 0.95 }
+		repaint = {
+			primary_color = skin_color
+		}
+	}
+    
+    no_texture_color_material = {
+		mask = { color = { 0.0 1.0 0.5 } tolerance = 1.0 hardness = 0.8 }
+		repaint = {
+			primary_color = hair_color
+		}
+	}
+######  COUNTRY COLORS 
+	#cloth_country_solid_group = {
+		#mask = { color = { 0.5 0.0 1.0 } tolerance = 0.4 hardness = 0.95 }
+		#repaint = {
+			#80 = {
+				#primary_color = unit_color0
+			#}
+			#25 = {
+				#primary_color = unit_color1
+			#}
+			#10 = {
+				#primary_color = unit_color2
+			#}
+		#}
+	#}
+######  COUNTRY COLORS AND NEUTRAL COLORS MIXED    
+    peasants_colors_group = {
+		mask = { color = { 0.5 0.0 1.0 } tolerance = 0.4 hardness = 0.95 }
+		repaint = {			
+            25 = { peasants_color = hex{ 0xffb3a595 } } #cream
+            25 = { peasants_color = hex{ 0xffb7965d } } #brown cream
+            10 = { peasants_color = hex{ 0xffa78c37 } } #brown yellow
+            10 = { peasants_color = hex{ 0xffc19851 } }#medium_brown
+			10 = { peasants_color = hex{ 0xff7d4f51 } } #brown
+            25 = {peasants_color = unit_color0	}
+            5 = { peasants_color = unit_color1	}           
+		}
+	}
+######  NEUTRAL COLORS
+    peasants_colors_group = {
+		 mask = { color = { 0.75 1.0 0.5 } tolerance = 0.25 hardness = 0.95}
+		 repaint = {			
+            5 = { peasants_color = hex{ 0xffbcb6b1 } } #cream_neutral
+            5 = { peasants_color = hex{ 0xff98928c } } #light_blue_neutral
+            5 = { peasants_color = hex{ 0xffb3a797 } } #light_cotton
+            10 = { peasants_color = hex{ 0xff665742 } }#mustard_brown       
+        }
+	}
+######  NEUTRAL COLORS FOR TORSO ARMOR
+     peasants_colors_group = {
+		 mask = { color = { 0.0 1.0 0.0 } tolerance = 0.25 hardness = 0.95}
+		 repaint = {			
+            5 = { peasants_color = hex{ 0xffbcb6b1 } } #cream_neutral
+            10 = { peasants_color = hex{ 0xff7d4f51 } } #brown
+            5 = { peasants_color = hex{ 0xffc2b280 } } #light_cotton		
+            2 = { peasants_color = hex{ 0xffa98c37 } }#green_olive
+            10 = { peasants_color = hex{ 0xff836e68 } }#grey_brown
+            2 = { peasants_color = hex{ 0xff304e63 } } #blue_desert            
+		 }
+	}
+###### BUCKSKIN COLORS
+    peasants_colors_group = {
+		mask = { color = { 1.0 1.0 0.0 } tolerance = 0.2 hardness = 0.95}
+		repaint = {
+            10 = { peasants_color = hex{ 0xffb78e6c } } #buckskin_medium
+            8 = { peasants_color = hex{ 0xff684b33 } } #buckskin_darkbrown
+            3 = { peasants_color = hex{ 0xffd4ba8c } } #buckskin_light           
+            2 = { peasants_color = hex{ 0xff413628 } } #buckskin_deepbrown
+                       
+		}
+	}
+###### DARKER NEUTRAL COLORS FOR CAPES ##### HSV 360 COLORS
+    peasants_colors_group = {
+		mask = { color = { 1.0 0.25 0.5 } tolerance = 0.25 hardness = 0.8}
+		repaint = {			
+            2 = { peasants_color = hsv360 { 78 15 45 } } #beige_green
+			2 = { peasants_color = hsv360 { 28 25 61 } } #dirty_light_brown
+            5 = { peasants_color = hsv360 { 40 56 46 } } #dirty_mustard            
+            5 = { peasants_color = hsv360 { 30 46 56 } } #beige_grey
+            5 = { peasants_color = hsv360 { 24 44 42 } } #hsv test_ dirty white
+            #25 = { peasants_color = hsv360 { 340 100 100 } } #pink_bright_DONT_USE_IT          
+            #25 = { peasants_color = hex { 0xffff0055 } } #pink_bright_DONT_USE_IT
+		}
+	}
+###### OTHER MATERIALS
+    leather_brown_group = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.2 hardness = 0.9 }
+	}
+
+	iron_basic_group = {
+		mask = { color = { 0.0 1.0 1.0 } tolerance = 0.2 hardness = 0.95 }
+	}
+    
+	wood_group = {
+		mask = { color = { 1.0 0.5 0.0 } tolerance = 0.15 hardness = 0.9 }
+	}	
+    
+    #cloth_country_solid_group = {
+		#mask = { color = { 0.5 0.0 1.0 } tolerance = 0.3 hardness = 0.95 }
+		#repaint = {
+			#85 = {
+				#primary_color = unit_color1
+			#}
+			#15 = {
+				#primary_color = unit_color2
+			#}
+			#10 = {
+				#primary_color = unit_color2
+			#}
+		#}
+	#}	
+
+	#cloth_plain_group = {#
+	#mask = { color = { 0.5 0.25 0.0 } tolerance = 0.2 hardness = 0.5 }
+	#}
+
+	#cloth_plain_group = {#
+	#mask = { color = { 0.25 1.0 0.50 } tolerance = 0.15 hardness = 0.8 }
+	#} 
+   
+	
+
+	#feather = {
+		#mask = { color = { 0.0 1.0 0.5 } tolerance = 0.1 hardness = 0.5 }
+	#}	
+	
+	#straw_wicker = {#
+ 		#mask = { color = { 0.5 0.25 1.0 } tolerance = 0.1 hardness = 0.5 }
+ 	#}
+
+
+	assets = {
+        unit_torso_tunic_fabric_bag_byz_mesh
+        unit_hat_cap_linen_byz_mesh
+        unit_legs_pants_wraps_linen_byz_mesh        
+        unit_accessories_cape_hend_woven_byz_mesh
+        unit_hair_curling_short_byz_mesh
+        unit_torso_tunic_fabric_belt_byz_mesh
+        unit_accessories_cape_wool_pointy_byz_mesh
+        unit_accessories_cape_square_long_woven_byz_mesh
+        unit_legs_slippers_leather_byz_mesh
+        unit_hat_round_cap_linen_byz_mesh
+        unit_torso_shirt_belt_fabric_byz_mesh
+        unit_hair_curly_byz_mesh        
+	}
+}
+
+
+# new_group = {
+# 	copy = general_clothing_group
+# }
+
+
+
+    
+    
+   
+    
+    

@@ -1,6 +1,6 @@
 pdxmesh = {
-	name = "D017_building_monument_the_great_pyramid_of_cholula_mesh"
-	file = "D017_building_monument_the_great_pyramid_of_cholula.mesh"
+	name = "d017_building_monument_the_great_pyramid_of_cholula_mesh"
+	file = "d017_building_monument_the_great_pyramid_of_cholula.mesh"
 
 	lod_percentages = {
 		lod = { index = 1 percent = 15.0 }
@@ -75,6 +75,6 @@ pdxmesh = {
 }
 
 entity = {
-	name = "D017_building_monument_the_great_pyramid_of_cholula_entity"
-	pdxmesh = "D017_building_monument_the_great_pyramid_of_cholula_mesh"
+	name = "d017_building_monument_the_great_pyramid_of_cholula_entity"
+	pdxmesh = "d017_building_monument_the_great_pyramid_of_cholula_mesh"
 }

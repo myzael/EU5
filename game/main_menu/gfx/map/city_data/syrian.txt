@@ -296,7 +296,7 @@ mesh_list = {
 
 mesh_list = {
 	name = "syrian_noble_military"
-	scale_settings_small = { bias = 0 min = 0.6 max = 0.7 }
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
 	building_syrian_noble_military_mesh = 1
 	should_spawn_flags = no
 	material_index = 1
@@ -320,7 +320,7 @@ mesh_list = {
 
 mesh_list = {
 	name = "syrian_training_fields"
-	scale_settings_small = { bias = 0-5 min = 0.6 max = 10 }
+	scale_settings_small = { bias = 0-5 min = 0.6 max = 10 } 
 	building_syrian_training_grounds_mesh = 1
 	should_spawn_flags = no
 	material_index = 0
@@ -350,6 +350,28 @@ mesh_list = {
 	
 }
 
+#WALLS
+mesh_list = {
+	name = "syrian_wall"
+	building_syrian_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "syrian_wall_tower"
+	building_syrian_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "syrian_wall_gate"
+	building_syrian_walls_door_mesh = 1
+}
+
+
+mesh_list = {
+	name = "syrian_wall_underconstruction"
+	building_syrian_walls_underconstruction_mesh = 1
+}
+
 @noble_mesh_list	= syrian_noble
 @burgher_mesh_list	= syrian_burgher
 @peasant_mesh_list	= syrian_peasant
@@ -365,7 +387,7 @@ culture_data = {
 			##PORTS##
 		default_bridge_meshes = syrian_bridges
 		dock_meshes = syrian_dock
-		dry_dock_meshes = syrian_dry_dock
+		dry_dock_meshes = syrian_dry_dock 
 		shipyard_meshes = syrian_shipyard
 		grand_shipyard_meshes = syrian_grand_shipyard
 		naval_base_meshes = syrian_naval_base
@@ -428,4 +450,35 @@ culture_data = {
 	load_template rgo_all	{ farming_mesh_list = @farming_mesh_list 
 							  pork_livestock_override_meshlist = raw_livestock_mesh_list_cow
 							}
+
+
+	#Walls
+
+		load_template large_city_walls {
+
+		wall_mesh_list  =  syrian_wall
+		tower_mesh_list = syrian_wall_tower
+		gate_mesh_list  = syrian_wall_gate
+
+		}
+		load_template small_city_walls {
+
+		wall_mesh_list  =  syrian_wall
+		tower_mesh_list = syrian_wall_tower
+		gate_mesh_list  = syrian_wall_gate
+			
+		}	
+
+		load_template large_city_walls_under_construction {
+
+		wall_mesh_list  =  syrian_wall_underconstruction
+		gate_mesh_list  = syrian_wall_gate
+
+		}
+		load_template small_city_walls_under_construction {
+
+		wall_mesh_list  =  syrian_wall_underconstruction
+		gate_mesh_list  = syrian_wall_gate		
+
+		}					
 }

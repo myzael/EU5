@@ -41,33 +41,32 @@ VertexShader =
 			{
 				VS_OUTPUT_PDX_BORDER Out;
 				float DisappearLevel = 700.0f;
-				//Disappear levels reflect the values in ZOOM_STEPS game/gfx/defines/00_gfx.txt
-				#ifdef DISAPEAR_L10
-					DisappearLevel = 1000.0f;
-				#endif
-				#ifdef DISAPEAR_L20
-					DisappearLevel = 3583.0f;
+				#ifdef DISAPPEAR_LEVEL
+					DisappearLevel = DISAPPEAR_LEVEL;
 				#endif
 				
+				
 				float TooSmall = saturate ( 0.001f * ( DisappearLevel - CameraPosition.y ) );
-				float TooSmallForSize = saturate ( 0.001f * ( 1500 - CameraPosition.y ) );
-				//We always shrink the borders (as they have multipliyed by this amount the desired width in code) to be able to unshirnk them when zooming out if they are being drawn and avoid artifacts
-				#ifdef ALWAYS_DRAW
-					float SizeMult = 1+3*(1-TooSmallForSize);
+				#ifdef FARAWAY_DISTANCE
+					float TooSmallForSize = saturate ( 0.001f * ( FARAWAY_DISTANCE - CameraPosition.y ) );
 				#else
-					float SizeMult =1+(1-TooSmallForSize);;
+					float TooSmallForSize = saturate ( 0.001f * ( 1500 - CameraPosition.y ) );
 				#endif
-				//TODO-8799 find the cause for the pixel offset and remove this Correction 
-				float2 Correction  = float2(0.5f, 0.5f);
-				float2 InputPositionCorrected =  Input.Position + Correction;
-				float2 InputCenterCorrected =Input.Center + Correction;
+				//We always shrink the borders (as they have multipliyed by this amount the desired width in code) to be able to unshirnk them when zooming out if they are being drawn and avoid artifacts
+				#ifdef FARAWAY_WIDTH_MULT
+					float SizeMult = 1+FARAWAY_WIDTH_MULT*(1-TooSmallForSize);
+				#else
+					float SizeMult =1+(1-TooSmallForSize);
+				#endif
+				
 				//using the max height instead of the correct height will make borders smoother and go over the terrain in most of the cases
-				float InputPositionHeight = GetHeight( InputPositionCorrected );
-				float CenterPositionHeight = GetHeight( InputCenterCorrected );
-				// MaxHeight = max(InputPositionHeight, GetHeight( InputCenterCorrected ));
-				float3 VertexPos3d = float3( InputPositionCorrected.x, InputPositionHeight, InputPositionCorrected.y );                
-				float3 CenterPos3d = float3( InputCenterCorrected.x, CenterPositionHeight, InputCenterCorrected.y );
-				float OriginalHalfWidth = length( Input.Position - Input.Center );
+				SUnpackedBorderInput ProcessedInput = UnpackPdxBorder(Input);
+				float InputPositionHeight = GetHeight( ProcessedInput.Position );
+				float CenterPositionHeight = GetHeight( ProcessedInput.Center );
+				// MaxHeight = max(InputPositionHeight, GetHeight( ProcessedInput.Center ));
+				float3 VertexPos3d = float3( ProcessedInput.Position .x, InputPositionHeight, ProcessedInput.Position .y );                
+				float3 CenterPos3d = float3( ProcessedInput.Center.x, CenterPositionHeight, ProcessedInput.Center.y );
+				float OriginalHalfWidth = length( ProcessedInput.Position - ProcessedInput.Center );
 				
 				#ifdef WIDTH
 					SizeMult *= WIDTH;
@@ -91,13 +90,13 @@ VertexShader =
 				float MaxHeight = max(max(max(InputPositionHeight,CenterPositionHeight),HeightSampleX),HeightSampleY);
 				float MinHeight = min(min(min(InputPositionHeight,CenterPositionHeight),HeightSampleX),HeightSampleY);
 				float HeightDifference = MaxHeight - MinHeight;
-				HeightDifference*=0.2f;//This value is added by trial and error (1.0f) would avoid all clipping but trees start to bein drawn below in mountains
+				HeightDifference*=0.6f;//This value is added by trial and error (1.0f) would avoid all clipping but trees start to bein drawn below in mountains
 				HeightDifference = max(HeightDifference,0.01f); //Minimum offset for avoiding z-fighting in a totally flat terrain
 				Out.Position = FixProjectionAndMul( ViewProjectionMatrix, float4( VertexPos3d, 1.0 ) );
 				float4 BiasPosition = FixProjectionAndMul( ViewProjectionMatrix, float4( VertexPos3d.x,VertexPos3d.y+HeightDifference,VertexPos3d.z, 1.0 ) );
 				Out.Position.z = BiasPosition.z;
 				Out.WorldSpacePos = VertexPos3d;
-                Out.UV = Input.UV;
+                Out.UV = ProcessedInput.UV;
 				
 				Out.AlphaMultipliyer =TooSmall;
 				Out.SmoothTexture = TooSmallForSize;
@@ -218,8 +217,8 @@ PixelShader =
 					Diffuse.a *= _Alpha*Input.AlphaMultipliyer;
 				#else
 					Diffuse.a *= _Alpha;
-					#ifdef  HALF_ALFA
-						Diffuse.a=lerp(0.25f,Diffuse.a,Input.SmoothTexture);	
+					#ifdef  MAX_ALPHA
+						Diffuse.a=lerp(MAX_ALPHA,Diffuse.a,Input.SmoothTexture);	
 					#else
 						Diffuse.a=lerp(1.0f,Diffuse.a,Input.SmoothTexture);
 					#endif
@@ -279,25 +278,37 @@ Effect PdxBorder
 	Defines = {"ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
 }
 
+#Disappear levels reflect the values in ZOOM_STEPS game/loading_screen/gfx/defines/00_gfx.txt
+
 Effect PdxBorderL10
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "DISAPEAR_L10" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"}
+	Defines = { "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "DISAPPEAR_LEVEL 1000.0"
+	}
 }
 
 Effect CountryBorder
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "USER_COLOR" "HALF_ALFA" "DISAPEAR_L20" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" "NOT_USER_COLOR_IN_FLATMAP" }
+	Defines = { "USER_COLOR" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" "NOT_USER_COLOR_IN_FLATMAP" 
+	 "DISAPPEAR_LEVEL 3583.0"
+	 "FARAWAY_WIDTH_MULT 2.0"
+	 "FARAWAY_DISTANCE 1500.0"
+	}
 }
 
 Effect MarketBorder
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "USER_COLOR" "WIDTH 0.75f" "ALWAYS_DRAW" "HALF_ALFA" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = { "USER_COLOR" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "MAX_ALPHA 0.25"
+	 "WIDTH 0.75f"
+	 "FARAWAY_WIDTH_MULT 3.0"
+	  }
 }
 
 Effect ImpassableBorder
@@ -311,14 +322,18 @@ Effect PdxBorderSelected
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "FARAWAY_WIDTH_MULT 3.0"
+	  }
 }
 
 Effect PdxBorderLobbySelected
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" 
+	 "FARAWAY_WIDTH_MULT 3.0"
+	}
 }
 
 
@@ -326,21 +341,36 @@ Effect PdxBorderSea
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "SEA_LEVEL" "DISAPEAR_L20" "HALF_ALFA" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"}
+	Defines = { "SEA_LEVEL" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "DISAPPEAR_LEVEL 3583.0"
+	}
 }
-
+Effect PdxBorderBlockaded
+{
+	VertexShader = "VertexShader"
+	PixelShader = "PixelShader"
+	Defines = { "SEA_LEVEL" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "DISAPPEAR_LEVEL 3583.0"
+	 "WIDTH 4.0"
+	}
+}
 Effect PdxBorderSeaImpassable
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "SEA_LEVEL" "ALWAYS_DRAW" "HALF_ALFA" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = { "SEA_LEVEL" "ALWAYS_DRAW"  "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	"MAX_ALPHA 0.25"
+	"FARAWAY_WIDTH_MULT 3.0"
+	  }
 }
 
 Effect WarBorder
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "PULSATE" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = { "PULSATE" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "FARAWAY_WIDTH_MULT 3.0"
+	 }
 }
 
 
@@ -348,12 +378,16 @@ Effect AlliesBorder
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = { "PULSATE" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" }
+	Defines = { "PULSATE" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS"
+	 "FARAWAY_WIDTH_MULT 3.0"
+	 }
 }
 
 Effect ExplorationBorder
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShader"
-	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" "IGNORE_TERRA_INCOGNITA" }
+	Defines = {  "SEA_LEVEL" "ALWAYS_DRAW" "ENABLE_TERRAIN" "ENABLE_GAME_CONSTANTS" "IGNORE_TERRA_INCOGNITA"
+	 "FARAWAY_WIDTH_MULT 3.0"
+	 }
 }

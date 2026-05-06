@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "city_wall_tower_basic_mesh"
+	file = "city_wall_tower_basic.mesh"
+
+	meshsettings = {
+		name = "city_wall_tower_basicShape"
+		index = 0
+		texture_diffuse = "city_wall_basic_diffuse.dds"
+		texture_normal = "city_wall_basic_normal.dds"
+		texture_specular = "city_wall_basic_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "city_wall_tower_basic_entity"
+	pdxmesh = "city_wall_tower_basic_mesh"
+}

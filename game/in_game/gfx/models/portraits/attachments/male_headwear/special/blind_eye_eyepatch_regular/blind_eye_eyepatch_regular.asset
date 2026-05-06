@@ -1,0 +1,112 @@
+﻿pdxmesh = {
+	name = "blind_eye_eyepatch_regular_mesh"
+	file = "blind_eye_eyepatch_regular.mesh"
+
+	meshsettings = {
+		name = "blind_eye_eyepatch_regularShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "blind_eye_eyepatch_regular_entity"
+	pdxmesh = "blind_eye_eyepatch_regular_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "blind_eye_eyepatch_regular_flipped_mesh"
+	file = "blind_eye_eyepatch_regular_flipped.mesh"
+
+	meshsettings = {
+		name = "blind_eye_eyepatch_regular_flippedShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "blind_eye_eyepatch_regular_flipped_entity"
+	pdxmesh = "blind_eye_eyepatch_regular_flipped_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+
+pdxmesh = {
+	name = "blind_eye_eyepatch_regular_female_mesh"
+	file = "blind_eye_eyepatch_regular_female.mesh"
+
+	meshsettings = {
+		name = "blind_eye_eyepatch_regularShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "blind_eye_eyepatch_regular_female_entity"
+	pdxmesh = "blind_eye_eyepatch_regular_female_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+pdxmesh = {
+	name = "blind_eye_eyepatch_regular_female_flipped_mesh"
+	file = "blind_eye_eyepatch_regular_female_flipped.mesh"
+
+	meshsettings = {
+		name = "blind_eye_eyepatch_regular_flippedShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "blind_eye_eyepatch_regular_female_flipped_entity"
+	pdxmesh = "blind_eye_eyepatch_regular_female_flipped_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

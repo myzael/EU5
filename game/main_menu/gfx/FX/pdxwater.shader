@@ -358,15 +358,7 @@ PixelShader =
 					Water._Color.rgb = lerp( Water._Color.rgb, BorderColor, BorderPreLightingBlend );
 				#endif
 				
-
-				#ifdef TERRAIN_COLOR_OVERLAY
-					float3 ColorOverlay;
-					float PreLightingBlend;
-					float PostLightingBlend;
-					GetProvinceOverlayAndBlendFlatmap( FlatMapCoords, ColorOverlay, PreLightingBlend, PostLightingBlend );
-					float ColorMask = saturate( PreLightingBlend + PostLightingBlend );
-					Water._Color.rgb = lerp( Water._Color.rgb, ColorOverlay, ColorMask );
-				#endif
+				
 				if( FlatMapBlend.x > 0.0f )
 				{
 					
@@ -458,7 +450,6 @@ Effect water
 	RasterizerState = "WaterRasterizer"
 	
 	Defines = {
-		"TERRAIN_COLOR_OVERLAY"
 		"SHADOWS_ENABLED"
 		"SHADOWS_INTENSITY 0.5" # Values between 0.0 and 1.0, with 0.5 being the default intensity.
 	}
@@ -474,7 +465,7 @@ Effect water_border_lerp
 	RasterizerState = "RasterizerStateBorderLerp"
 	DepthStencilState = "DepthStencilStateBorderLerp"
 	
-	Defines = { "JOMINIWATER_BORDER_LERP" "TERRAIN_COLOR_OVERLAY" }
+	Defines = { "JOMINIWATER_BORDER_LERP"  }
 }
 
 Effect lake

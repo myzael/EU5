@@ -14,6 +14,7 @@ pdxmesh = {
 
 	additive_animation = { id = "male_body_height" type = "additive_animations/male_body_height.anim" }
 	additive_animation = { id = "male_body_infant_proportions" type = "additive_animations/male_body_infant_proportions.anim" }
+	additive_animation = { id = "male_body_hunchback" type = "additive_animations/male_body_hunchback.anim" }
 
 	meshsettings = {
 		name = "boy_bodyShape"
@@ -46,6 +47,7 @@ entity = {
 
 	attribute = { name = "male_body_height"	additive_animation = "male_body_height" }
 	attribute = { name = "body_infant_proportions"	additive_animation = "male_body_infant_proportions" }
+	attribute = { name = "body_hunchback"	additive_animation = "male_body_hunchback" default = 0 }
 
 
 	game_data = {

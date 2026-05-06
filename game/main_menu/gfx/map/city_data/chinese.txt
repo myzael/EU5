@@ -30,6 +30,19 @@ mesh_list = {
 	material_index = 1
 	spawn_count = { curve = "east_asian_pop_curve" }
 }
+
+mesh_list = {
+	name = "chinese_burgher_megalopolis"
+	scale_settings_small = { bias = -0.5 min = 1.2 max = 10  }
+	building_han_burgher_diorama_a_mesh = 1
+	building_han_burgher_diorama_b_mesh = 1
+	building_han_burgher_diorama_c_mesh = 1
+	building_han_burgher_diorama_d_mesh = 1
+
+	material_index = 1
+	spawn_count = { curve = "standard_megalopolis_curve" }
+}
+
 mesh_list = {
 	name = "chinese_peasant"
 	scale_settings_small = { bias = -0.5 min = 1.4 max = 10 }
@@ -251,14 +264,14 @@ mesh_list = {
 
 mesh_list = {
 	name = "chinese_noble_military_meshes"
-	scale_settings_small = { bias = 0 min = 1 max = 1 }
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
 	building_han_noble_military_mesh = 1
 	material_index = 1
 }
 
 mesh_list = {
 	name = "chinese_noble_military_meshes"
-	scale_settings_small = { bias = 0 min = 1 max = 1 }
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
 	building_han_noble_military_mesh = 1
 	material_index = 1
 }
@@ -317,8 +330,31 @@ mesh_list = {
 	material_index = 1
 }
 
+
+#WALLS
+mesh_list = {
+	name = "chinese_wall"
+	building_han_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "chinese_wall_tower"
+	building_han_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "chinese_wall_gate"
+	building_han_walls_door_mesh = 1
+}
+
+mesh_list = {
+	name = "chinese_wall_underconstruction"
+	building_han_walls_underconstruction_mesh = 1
+}
+
 @noble_mesh_list	= chinese_noble
 @burgher_mesh_list	= chinese_burgher
+@burgher_megalopolis_mesh_list	= chinese_burgher_megalopolis
 @peasant_mesh_list	= chinese_peasant
 @peasant_rural_mesh	= chinese_peasant_rural_mesh
 @farming_mesh_list = chinese_farming_mesh_list
@@ -358,7 +394,40 @@ culture_data = {
 		training_fields_meshes = chinese_training_fields_meshes
 		republican_assembly_meshes = chinese_republic_assembly_meshes
 	}
-	
+
+
+	#Walls
+
+		load_template large_city_walls {
+
+		wall_mesh_list  =  chinese_wall
+		tower_mesh_list = chinese_wall_tower
+		gate_mesh_list  = chinese_wall_gate
+
+		}
+		load_template small_city_walls {
+
+		wall_mesh_list  =  chinese_wall
+		tower_mesh_list = chinese_wall_tower
+		gate_mesh_list  = chinese_wall_gate
+			
+		}	
+
+		
+		load_template large_city_walls_under_construction {
+
+		wall_mesh_list  =  chinese_wall_underconstruction
+		gate_mesh_list  = chinese_wall_gate
+
+		}
+		load_template small_city_walls_under_construction {
+
+		wall_mesh_list  =  chinese_wall_underconstruction
+		gate_mesh_list  = chinese_wall_gate		
+
+		}	
+
+
 	load_template religius_buildings{
 		##RELIGION##
 
@@ -368,7 +437,10 @@ culture_data = {
 	}
 	# Pops
 	load_template nobles 	{ mesh_list = @noble_mesh_list }
-	load_template burghers 	{ mesh_list = @burgher_mesh_list }
+	
+	load_template burgher_center {mesh_list = @burgher_mesh_list }
+	load_template burgher_neighborhood {mesh_list = @burgher_mesh_list }
+	load_template burgher_neighborhood_megalopolis {mesh_list = @burgher_megalopolis_mesh_list }
 	load_template peasants 	{ mesh_list = @peasant_mesh_list }
 	load_template peasant_rural { mesh_list = @peasant_rural_mesh}
 	
@@ -381,5 +453,6 @@ culture_data = {
 		large_clergy_meshes = chinese_large_clergy
 		fort_meshes = chinese_fort
 		bastion_meshes = chinese_bastion
-	}
+	}	
+
 }

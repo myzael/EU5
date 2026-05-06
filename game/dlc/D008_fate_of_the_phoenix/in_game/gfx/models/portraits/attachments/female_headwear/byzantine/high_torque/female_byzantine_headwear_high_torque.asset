@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "female_byzantine_headwear_high_torque_mesh"
+	file = "female_byzantine_headwear_high_torque.mesh"
+	
+	meshsettings = {
+		name = "female_byzantine_headwear_high_torqueShape"
+		index = 0
+		texture_diffuse = "female_byzantine_headwear_high_torque_diffuse.dds"
+		texture_normal = "female_byzantine_headwear_high_torque_normal.dds"
+		texture_specular = "female_byzantine_headwear_high_torque_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headwear_byzantine_high_torque_entity"
+	pdxmesh = "female_byzantine_headwear_high_torque_mesh"
+
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/female_headwear/byzantine/high_torque/female_byzantine_headwear_high_torque_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_female_high_headwear_02"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+		}
+	}
+}

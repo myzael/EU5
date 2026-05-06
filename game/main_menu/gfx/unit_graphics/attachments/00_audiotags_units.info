@@ -1,0 +1,93 @@
+# ============================================================
+# UNIT AUDIO TAG REFERENCE
+# ============================================================
+# This file documents the available audio tags used for unit
+# equipment states. It exists only as a reference for the team.
+#
+# How to use:
+# When defining an audio tag, write it in the format:
+#
+#    "UnitType_<TagName>"
+#
+# Example:
+#    "UnitWeapon_sword"
+#
+# The tag should correspond to the equipment state used by
+# the unit (armor, weapon, shield, etc.).
+#
+# ------------------------------------------------------------
+# AVAILABLE AUDIO TAG STATES
+# ------------------------------------------------------------
+
+
+# ============================================================
+# UnitCavalryArmor - material
+# ============================================================
+# "UnitCavalryArmor_chainmail"
+# "UnitCavalryArmor_cloth_heavy"
+# "UnitCavalryArmor_cloth_light"
+# "UnitCavalryArmor_leather"
+# "UnitCavalryArmor_naked"
+# "UnitCavalryArmor_plate"
+# "UnitCavalryArmor_plate_full"
+
+
+# ============================================================
+# UnitDetail - material
+# ============================================================
+# "UnitDetail_metal_med"
+# "UnitDetail_none"
+# "UnitDetail_plate"
+# "UnitDetail_leather"
+# "UnitDetail_metal_light"
+# "UnitDetail_metal_xheavy"
+# "UnitDetail_chainmail"
+# "UnitDetail_metal_heavy"
+# "UnitDetail_cloth"
+
+
+# ============================================================
+# UnitLegs - boot weight
+# ============================================================
+# "UnitLegs_medium"
+# "UnitLegs_soft"
+# "UnitLegs_heavy"
+# "UnitLegs_naked"
+
+
+# ============================================================
+# UnitShield - material and size
+# ============================================================
+# "UnitShield_small_metal"
+# "UnitShield_large_metal"
+# "UnitShield_large_wood"
+# "UnitShield_none"
+# "UnitShield_medium_metal"
+# "UnitShield_small_wood"
+# "UnitShield_medium_wood"
+
+
+# ============================================================
+# UnitWeapon - weapon
+# ============================================================
+# "UnitWeapon_arquebus"
+# "UnitWeapon_axe"
+# "UnitWeapon_axe_two_handed"
+# "UnitWeapon_bow"
+# "UnitWeapon_crossbow"
+# "UnitWeapon_fist"
+# "UnitWeapon_flamethrower"
+# "UnitWeapon_handgonne"
+# "UnitWeapon_knife"
+# "UnitWeapon_mace"
+# "UnitWeapon_matchlock"
+# "UnitWeapon_musket"
+# "UnitWeapon_pistol"
+# "UnitWeapon_polearm"
+# "UnitWeapon_rifle"
+# "UnitWeapon_saber"
+# "UnitWeapon_spear"
+# "UnitWeapon_spear_two_handed"
+# "UnitWeapon_sword"
+# "UnitWeapon_sword_two_handed"
+# "UnitWeapon_wooden_club"

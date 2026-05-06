@@ -25,7 +25,7 @@
 @max_relation_items_in_ui = 8
 @max_rivers_zoomstep = 10
 @max_reform_items_in_ui = 11
-@max_estate_privilige_items_in_ui = 10
+@max_estate_privilige_items_in_ui = 9
 
 NJominiMapGraphics = {
 	MAP_OBJECT_CELL_COUNT = 200
@@ -40,6 +40,7 @@ NJominiMapGraphics = {
 	COUNTRY_NAMES_LOD_FACTOR = 0.06	# Names get blurrier as the texel/pixel ratio increases. Blur amount will be lod factor * texel/pixel ratio
 	COUNTRY_NAMES_THICKNESS_BIAS = 0.0	# More bias = thicker map names. Can be used to solve artifacts caused by thin areas
 	COUNTRY_NAMES_STRIDE_SIZE = 1
+	COUNTRY_NAMES_MAX_COSINE = -0.9
 }
 
 NJominiGraphics = {
@@ -220,19 +221,54 @@ NMapColors = {
 	COLOR_TOO_SIMILAR_THRESHOLD			= 0.04 # The threshold in interaction target view below which a color being too similar to COLOR_TOO_SIMILAR_COLOR gets some special recoloring.
 	COLOR_TOO_SIMILAR_COLOR =			{ 0.08 0.403 0.545 } # Set to the texture of the map.
 
+	MAP_COLOR_NULL = { 0.55 0.43 0.07 } #blue black
 	MAP_COLOR_MIN = { 0 0.85 0.015 } #black
 	MAP_COLOR_LOW = { 0 0.85 0.34 } #red
 	MAP_COLOR_MID = { 0.13 0.95 0.75 } #yellow
 	MAP_COLOR_HIGH = { 0.31 0.9 0.6	} #green
 	MAP_COLOR_MAX = { 0.31 1.0 1.0	} #light-green
 	MAP_COLOR_TOP = { 0.49 1.0 1.0 } #light blue
+	MAP_COLOR_PROXIMITY_BUILDING = { 0.0 0.0 1.0 } #white
+
+	# Current Weather map mode (clear / weak…strong interpolation)
+	WEATHER_MAP_CLEAR_COLOR = { 0.31 0.55 0.55 }
+	WEATHER_MAP_WEAK_COLOR = { 0.13 0.95 0.88 }
+	WEATHER_MAP_POWERFUL_COLOR = { 0.0 0.95 0.95 }
 
 	MAP_COLOR_POSITIVE_MIN = { 0.31 0.3 0.3	} #dark-green
 	MAP_COLOR_NEUTRAL_MIN = { 0.13 0.3 0.3	} #dark-yellow
 	MAP_COLOR_NEGATIVE_MIN = { 0.0 0.3 0.3	} #dark-red
-	
+
+	GOODS_PRICE_DIFFERENCE_COPPER = { 0.05 0.80 0.90 }
+	GOODS_PRICE_DIFFERENCE_SILVER = { 0.00 0.00 0.90 }
+	GOODS_PRICE_DIFFERENCE_GOLD = { 0.10 1.00 1.00 }
+
+	# AI Disposition mapmode colors (HSV)
+	MAP_AI_DISP_ALARMED      = { 0.091 0.786 0.953 }
+	MAP_AI_DISP_WARY         = { 0.147 0.470 0.902 }
+	MAP_AI_DISP_PLANNING_WAR = { 0.009 0.812 1.000 }
+	MAP_AI_DISP_COVETS       = { 0.765 0.435 0.659 }
+	MAP_AI_DISP_RIVALS       = { 0.03 1.0 0.7 }
+	MAP_AI_DISP_NEUTRAL      = { 0.000 0.000 0.812 }
+
 	MAP_COLOR_SATURATION_RANGE = { 0.0 1.0 }
 	MAP_COLOR_VALUE_RANGE = { 0.0 1.0 } # { 0.38 1.0 }
+
+	# Deuteranopia/Protanopia palette - matches GUI color_red (blue-violet) / color_green (lime-yellow)
+	# Value (brightness) ramps linearly
+	MAP_COLOR_LOW_CB_RG  = { 0.67 0.70 0.50 } # dark blue-violet
+	MAP_COLOR_MID_CB_RG  = { 0.42 0.60 0.63 } # olive-green midpoint
+	MAP_COLOR_HIGH_CB_RG = { 0.20 0.90 0.75 } # bright lime-yellow
+	MAP_COLOR_MAX_CB_RG  = { 0.20 1.00 0.88 } # very bright lime
+	MAP_COLOR_TOP_CB_RG  = { 0.17 0.90 1.00 } # max bright lime
+
+	# Tritanopia palette - red/green axis (tritanopes retain L/M discrimination; avoids orange-cyan confusion axis)
+	# Value (brightness) ramps linearly: 
+	MAP_COLOR_LOW_CB_TRI  = { 0.00 0.85 0.50 } # dark red 
+	MAP_COLOR_MID_CB_TRI  = { 0.12 0.65 0.63 } # yellow-green
+	MAP_COLOR_HIGH_CB_TRI = { 0.33 0.80 0.75 } # bright green
+	MAP_COLOR_MAX_CB_TRI  = { 0.33 0.88 0.88 } # very bright green
+	MAP_COLOR_TOP_CB_TRI  = { 0.33 0.90 1.00 } # max bright pale green
 
 	SELL_LOCATION_UNAVAILABLE_COLOR = { 0.95 0.13 0.75 }
 	SELL_LOCATION_AVAILABLE_COLOR = { 0.13 0.95 0.75 }
@@ -284,8 +320,8 @@ NMapColors = {
 	
 	NAVAL_RANGE_CUTOFF_FACTOR = 1.25 #Remove ugly black stripes on water from this factor times max range
 	
-	NO_WINTER_COLOR = 					{  0.17 0.05 0.0	 }
-	NO_WINTER_ALPHA = 					0.0
+	NO_WINTER_COLOR = 					{  0.0 0.0 0.0	 }
+	NO_WINTER_ALPHA = 					1.0
 	MILD_WINTER_COLOR = 				{  0.61	0.8		0.8	 }
 	NORMAL_WINTER_COLOR = 				{  0.56	0.61	1.0	 }
 	SEVERE_WINTER_COLOR = 				{  0.0	0.0		1.0	 }
@@ -329,6 +365,14 @@ NMapColors = {
 
 	DISEASE_BUBONIC_PLAGUE_MIN =		{ 0.113	0.221	0.26	}
 	DISEASE_BUBONIC_PLAGUE_MAX =		{ 0.413	0.921	0.76	}
+
+	DISEASE_MAPMODE_TIER_LOW_MAX = 0.30
+	DISEASE_MAPMODE_TIER_MID_MAX = 0.60
+	DISEASE_MAPMODE_TIER_SYNTHETIC_LOW = 0.12
+	DISEASE_MAPMODE_TIER_SYNTHETIC_MID = 0.42
+	DISEASE_MAPMODE_TIER_SYNTHETIC_HIGH = 0.88
+	DISEASE_MAPMODE_MIN_PRESENCE_TO_PAINT = 0.001
+	DISEASE_MAPMODE_MIN_PRESENCE_FOR_STRIPE = 0.02
 
 	INTERNATIONAL_ORGANIZATION_LEADER_COLOR = 		{ 0.14	0.81	1.0		} # 0.592	0.962	0.91
 	INTERNATIONAL_ORGANIZATION_MEMBER_COLOR = 		{ 0.4	0.61	0.7 	}
@@ -586,7 +630,10 @@ NMapMarker = {
 
 	CITY_MARKER_RANK_ZOOM_THRESHOLD = 7
 }
-
+NRoads = {
+	ROADS_DISSAPEAR_ZOOM_LEVEL = 8
+	ROADS_DISSAPEAR_FARAWAY_ZOOM_LEVEL = 13
+}
 NUnitGraphics = {
 	UNIT_ICON_SHORT_VARIANT_AT_ZOOM_STEP = 9
 	UNIT_MAP_MARKER_MAP_PIXELS_SOUTH = 2	# The unit map marker (# of troops, etc.) will be positioned as if it was this many pixels on the map south of where the unit is standing
@@ -733,6 +780,7 @@ NUnitGraphics = {
 
 	FLATMAP_COMBAT_TEXT_SEPARATION = 3.0
 	INSTANT_MOVEMENT_SPEED_LIMIT  = 6 #from whitch speed the movement of the unit graphics will be instant
+	UNIT_CHANGE_MESSAGE_HOLDDUP_TIME = 0.5
 }		
 
 NGameIcons = {
@@ -773,6 +821,7 @@ NGameIcons = {
 	GOODS_ICON_PREFIX = "icon_goods_"
 	PARLIAMENT_TYPES_ICON_PATH = "gfx/interface/icons/parliament_types"
 	CABINET_ACTION_ICON_PATH = "gfx/interface/icons/cabinet_actions"
+	GENERIC_ACTION_ICON_PATH = "gfx/interface/icons/generic_actions"
 	CHARACTER_INTERACTION_ICON_PATH = "gfx/interface/icons/character_interactions"
 	COUNTRY_INTERACTION_ICON_PATH = "gfx/interface/icons/country_interactions"
 	BUILDINGS_ICON_PATH = "gfx/interface/icons/buildings"
@@ -781,8 +830,10 @@ NGameIcons = {
 	HOLY_SITE_ICON_PATH = "gfx/interface/illustrations/holy_sites/"
 	RELIGIOUS_FACTION_ICON_PATH = "gfx/interface/icons/religious_factions"
 	GOD_ICON_PATH = "gfx/interface/icons/gods"
+	OMEN_ICON_PATH = "gfx/interface/icons/omens"
 	AVATAR_ICON_PATH = "gfx/interface/icons/avatars"
 	DISEASE_ICON_PATH = "gfx/interface/icons/disease"
+	MOVEMENT_ICON_PATH = "gfx/interface/icons/movement"
 	RELIGIOUS_FOCUS_ICON_PATH = "gfx/interface/icons/religious_focuses"
 	RELIGIOUS_ASPECT_ICON_PATH = "gfx/interface/icons/religious_aspects"
 	ESTATE_ICON_PATH = "gfx/interface/icons/estates"
@@ -799,9 +850,13 @@ NGameIcons = {
 	HEGEMONY_BORDER_PATH = "gfx/interface/hegemony"
 	HEGEMONY_ICON_PATH = "gfx/interface/icons/hegemony"
 	DISASTER_ICON_PATH = "gfx/interface/icons/disasters"
+		AI_PERSONALITY_ICON_PATH = "gfx/interface/icons/ai_personalities"
+		AI_DISPOSITION_ICON_PATH = "gfx/interface/icons/ai_dispositions"
+	TOWN_RIGHTS_ICON_PATH = "gfx/interface/icons/town_rights"
 	SITUATION_ICON_PATH = "gfx/interface/icons/situations"
 	RELIGIOUS_SCHOOL_ICON_PATH = "gfx/interface/icons/religious_schools"
 	INTERNATIONAL_ORGANIZATION_PAYMENT_ICON_PATH = "gfx/interface/icons/flat_icons/balance"
+	BUREAUCRACY_ICON_PATH = "gfx/interface/icons/bureaucracy"
 	ADVANCE_ICON_PATH = "gfx/interface/advance"
 	CHECK_ADVANCE_ICONS_ERRORS = 0
 	LAW_ICON_PATH = "gfx/interface/icons/laws"
@@ -860,6 +915,7 @@ NMapName = {
 	SMALL_NAMES_ZOOM_STEP = @location_mapname_zoomstep_min
 	MEDIUM_NAMES_ZOOM_STEP = @province_zoomstep_min
 	LARGE_NAMES_ZOOM_STEP = @country_zoomstep_min
+	MAX_PROVINCE_NAME_ZOOM_STEP = @country_zoomstep_max
 	PROVINCE_UNDER_MOUSE_OPACITY = 1.0
 	PROVINCE_UNDER_MOUSE_NEIGHBOR_OPACITY = 0.75
 	MAX_SLOPE_DIFFERENCE_TO_MEAN = { 0.5 0.35 }
@@ -942,10 +998,10 @@ NMapLines = {
   PROXIMITY_MARITIME = "line_trade_blue"
   PROXIMITY_PORT = "line_trade_yellow"
   PROXIMITY_RIVER = "line_river_direction"
-  PROXIMITY_ROAD_1 = "line_road_builder"
-  PROXIMITY_ROAD_2 = "line_road_builder"
-  PROXIMITY_ROAD_3 = "line_road_builder"
-  PROXIMITY_ROAD_4 = "line_road_builder"
+  PROXIMITY_ROAD_1 = "line_gravel_road"
+  PROXIMITY_ROAD_2 = "line_paved_road"
+  PROXIMITY_ROAD_3 = "line_modern_road"
+  PROXIMITY_ROAD_4 = "line_rails_road"
 }
 
 NOutliner = {
@@ -953,6 +1009,11 @@ NOutliner = {
 	CATEGORY_ICON_PATH = "gfx/interface/icons/outliner/categories"
 	BG_CATEGORY_ICON_PATH = "gfx/interface/icons/outliner/background"
 	BG_SUBCATEGORY_ICON_PATH = "gfx/interface/icons/outliner/background"
+}
+
+NMapModeSelector = {
+	MAPMODES_SLOTS_COUNT = 14
+	MAPMODES_SLOTS_COLLECTION_NAME_PREFIX = "map_modes_slot"
 }
 
 NMessages = {
@@ -1008,7 +1069,14 @@ NCityGraphics = {
 	
 	ZOOM_OUT_STEP = 9;
 	
+	WALL_HALF_WIDTH = 0.4
+	WALL_BEZIER_POWER = 0.35
+
 	CITY_SAFE_GRID_RADIUS  = 5.0f;
+	LAKES_LAYERS = 
+	{
+		"lake_layer"
+	}
 }
 
 
@@ -1073,10 +1141,22 @@ NTextSettings = {
 	UNITLOSS_TEXT_COLOR = {0.0 1.0 1.0 1.0} #Red
 	UNITLOSS_OUTLINE_WIDTH = 0.2
 	UNITLOSS_OUTLINE_COLOR = {0.0 0.0 0.0 1.0} #Black
-	UNITLOSS_HEIGHT_SIZE = 2
+	UNITLOSS_HEIGHT_SIZE = 1
 	UNITLOSS_BOUNDING_BOX_EXTRA_SIZE = {0.0 0.0 20.0} #Add extra height to account for animation
 	UNITLOSS_ANIMATION_FUNCTION = "ShowGrowAndDisappearAnimation"
-	UNITLOSS_TEXT_DURATION = 1
+	UNITLOSS_TEXT_DURATION = 2
+
+	UNITLOSS_ENEMY_ALIGNMENT = 2 #Center
+	UNITLOSS_ENEMY_FONT = "StandardGameFont"
+	UNITLOSS_ENEMY_FONT_SIZE = 60
+	UNITLOSS_ENEMY_LOD_FACTOR = 0.015   # Names get blurrier as the texel/pixel ratio increases. Blur amount will be lod factor * texel/pixel ratio
+	UNITLOSS_ENEMY_TEXT_COLOR = {0.33  1.0 1.0 1.0} #Green
+	UNITLOSS_ENEMY_OUTLINE_WIDTH = 0.2
+	UNITLOSS_ENEMY_OUTLINE_COLOR = {0.0 0.0 0.0 1.0} #Black
+	UNITLOSS_ENEMY_HEIGHT_SIZE = 1
+	UNITLOSS_ENEMY_BOUNDING_BOX_EXTRA_SIZE = {0.0 0.0 20.0} #Add extra height to account for animation
+	UNITLOSS_ENEMY_ANIMATION_FUNCTION = "ShowGrowAndDisappearAnimation"
+	UNITLOSS_ENEMY_TEXT_DURATION = 2
 	
 	SIEGE_MESSAGE_ALIGNMENT = 2 #Center
 	SIEGE_MESSAGE_FONT = "StandardGameFont"
@@ -1187,6 +1267,7 @@ NVisibleLocationsGfx = {
 	PLAGE_SCHEMATIC_NAME = "plague_particle"
 	GLACIER_SCHEMATIC_NAMES = {"glacier_schematic" "glacier_schematic_medium" "glacier_schematic_small"}
 	SANDSTORM_SCHEMATIC_NAME = "sandstorm_schematic"
+	SANDSTORM_MAX_ZOOM_STEP = @particles_zoom_out
 	
 	DENSITY_OF_GLACIERS_MILD  = 0
 	DENSITY_OF_GLACIERS_NORMAL = 0.0005
@@ -1228,6 +1309,7 @@ NGameLocators = {
 	AVOID_COMBAT_SEA_RADIUS = 15.0
 	SEA_ZONE_RECT_SCALE = 3.0f
 	OUT_OF_BOUNDS_BADNESS = 5000
+	NEAR_OUT_OF_BOUND_BADNESS = 2500
 	AVOID_POS_BADNESS = 1000
 	DISTANCE_TO_CENTER_BADNESS = 50
 	LATITUDE_BIAS_UNIT_STACK = -1
@@ -1238,6 +1320,7 @@ NGameLocators = {
 	COMBAT_EXTENT_MIN = { -6 -4 }
 	COMBAT_EXTENT_MAX = { 6 4 }
 	SLOPE_BADNESS = 1500
+	SEA_HEIGHT_BADNESS = 1000
 }
 
 NGameCityLocators = {

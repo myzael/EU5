@@ -78,56 +78,54 @@ heavy_tag:headgear = {
 ###############################################
 beards = {
 	2 = full_beards
-
-	if = {
-		limit = {
-			religion = {
-				OR = {
-					gfx_culture_applicable = muslim_gfx
-					gfx_culture_applicable = eastern_christian_gfx
-				}
-			}
-		}
+	
+	if = 
+	{
+		fast_limit = {religion_graphical_culture = muslim_gfx}
 		2 = full_beards
 		2 = mustaches
 	}
-
-	if = {
-		limit = {
-			culture = {
-				OR = {
-					gfx_culture_applicable = ainu_gfx
-				}
-			}
-		}
+	else_if = 
+	{
+		fast_limit = {religion_graphical_culture = eastern_christian_gfx}
 		2 = full_beards
+		2 = mustaches
 	}
-
-	if = {
-		limit = {
-			culture = {
-				OR = {
-					gfx_culture_applicable = irish_gfx
-					gfx_culture_applicable = hungarian_gfx
-					gfx_culture_applicable = east_slavic_gfx
-					gfx_culture_applicable = south_slavic_gfx
-				}
-			}
-		}
+	
+	if = 
+	{
+		fast_limit = {religion_graphical_culture = irish_gfx}
 		4 = mustaches
 	}
-
-	if = {
-		limit = {
-			religion = {
-				OR = {
-					gfx_culture_applicable = western_christian_gfx
-					gfx_culture_applicable = shinto_gfx
-				}
-			}
-		}
+	else_if = 
+	{
+		fast_limit = {religion_graphical_culture = hungarian_gfx}
+		4 = mustaches
+	}
+	else_if = 
+	{
+		fast_limit = {religion_graphical_culture = east_slavic_gfx}
+		4 = mustaches
+	}
+	else_if =
+	{
+		fast_limit = {religion_graphical_culture = south_slavic_gfx}
+		4 = mustaches
+	}
+	
+	if = 
+	{
+		fast_limit = {religion_graphical_culture = western_christian_gfx}
+		
 		4 = { } #shaved
 	}
+	else_if = 
+	{
+		fast_limit = {religion_graphical_culture = shinto_gfx}
+		
+		4 = { } #shaved
+	}
+
 }
 
 age_5_absolutism:beards = {
@@ -195,27 +193,16 @@ pistol_tag:weapons = {
 }
 
 peasant_weapons = {
-	if = { limit = { subunit_home = { raw_material = goods:lumber } }
+	if = { fast_limit = { raw_material = lumber }
 		100 = lumber_weapons
 	}
 	else_if = {
-		limit = {
-			subunit_home = {
-				raw_material = {
-					goods_method = mining
-				}
-			}
-		}
+		fast_limit = { raw_material_method = mining }
 		100 = mining_weapons
 	}
 	else_if = {
-		limit = {
-			subunit_home = {
-				raw_material = {
-					goods_method = hunting
-				}
-			}
-		}
+		fast_limit = { raw_material_method = hunting }
+			
 		100 = archer_weapons
 	}
 	else = {
@@ -332,6 +319,10 @@ grenade_tag:weapons = {
 	1 = grenade_weapons
 }
 
+flamethrower_tag:weapons = {
+	1 = flamethrower_weapons
+}
+
 age_6_revolutions:weapons = {
 	1 = peasant_weapons
     1 = peasant_musket_weapons
@@ -371,6 +362,9 @@ age_3_discovery:heavy_tag:shields = {
 }
 age_3_discovery:pavise_tag:shields = {
 	10 = { }
+}
+age_3_discovery:legionary_tag:shields = {
+	10 = noble_shields
 }
 age_3_discovery:shields = {
 	1 = { }

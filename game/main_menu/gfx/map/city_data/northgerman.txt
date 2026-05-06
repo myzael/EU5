@@ -56,6 +56,27 @@ mesh_list = {
 	
 }
 
+#WALLS
+mesh_list = {
+	name = "european_wall"
+	building_northgerman_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "european_wall_tower"
+	building_northgerman_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "european_wall_gate"
+	building_northgerman_walls_door_mesh = 1
+}
+
+mesh_list = {
+	name = "european_wall_underconstruction"
+	building_northgerman_walls_underconstruction_mesh = 1
+}
+
 @noble_mesh_list	= northgerman_noble
 @burgher_mesh_list	= northgerman_burgher
 @peasant_mesh_list	= northgerman_peasant
@@ -81,6 +102,38 @@ culture_data = {
 	
 	# RGO
 	load_template rgo_all	{ farming_mesh_list = @farming_mesh_list }
+
+	#Walls
+
+		load_template large_city_walls {
+
+		wall_mesh_list  =  european_wall
+		tower_mesh_list = european_wall_tower
+		gate_mesh_list  = european_wall_gate
+
+		}
+		load_template small_city_walls {
+
+		wall_mesh_list  =  european_wall
+		tower_mesh_list = european_wall_tower
+		gate_mesh_list  = european_wall_gate
+			
+		}	
+
+		
+		load_template large_city_walls_under_construction {
+
+		wall_mesh_list  =  european_wall_underconstruction
+		gate_mesh_list  = european_wall_gate
+
+		}
+		load_template small_city_walls_under_construction {
+
+		wall_mesh_list  =  european_wall_underconstruction
+		gate_mesh_list  = european_wall_gate		
+
+		}	
+
 }
 
 culture_data = {

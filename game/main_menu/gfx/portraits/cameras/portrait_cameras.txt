@@ -96,6 +96,20 @@ camera_body = {
 	unknown = "gfx/portraits/example_portraits/unknown_unclickable_small.dds"
 }
 
+# Camera zoomed out to show tall headwear (e.g. HRE imperial crown)
+camera_body_hre = {
+	camera = {
+		position = cylindrical{ 170 10 0 } # Radius, height, angle
+
+		look_at = {	2 -9 0 } # L/R, U/D, F/B — same centering as camera_body
+		look_at_node = Camera
+		fov = 20 # wider than camera_body's 20 to capture crown without shifting character
+		camera_near_far = { 10 300 }
+	}
+
+	unknown = "gfx/portraits/example_portraits/unknown_unclickable_small.dds"
+}
+
 camera_body_right = {
 	camera = {
 		position = cylindrical{ 140 10 30 } # Radius, height, angle
@@ -156,9 +170,9 @@ portrait_editor = {
 	unknown = "gfx/portraits/example_portraits/unknown.dds"
 }
 
-camera_head_front = {
+camera_debug_head_front = {
 	camera = {
-		position = cylindrical{	260 15 0 } # Radius,	height, angle
+		position = cylindrical{	260 25 0 } # Radius,	height, angle
 		#		position_node = camera_torso_look_at
 		look_at = {	0 5 0 } # L/R, U/D, F/B
 		look_at_node = Head_B
@@ -168,9 +182,21 @@ camera_head_front = {
 	unknown = "gfx/portraits/example_portraits/unknown_unclickable_head.dds"
 }
 
-camera_head_side = {
+camera_debug_head_side = {
 	camera = {
 		position = cylindrical{	260 15 85 } # Radius,	height, angle
+		#		position_node = camera_torso_look_at
+		look_at = {	0 5 0 } # L/R, U/D, F/B
+		look_at_node = Head_B
+		fov = 10
+		camera_near_far = { 10 300 }
+	}
+	unknown = "gfx/portraits/example_portraits/unknown_unclickable_head.dds"
+}
+
+camera_debug_head_front_2 = {
+	camera = {
+		position = cylindrical{	260 10 0 } # Radius,	height, angle
 		#		position_node = camera_torso_look_at
 		look_at = {	0 5 0 } # L/R, U/D, F/B
 		look_at_node = Head_B

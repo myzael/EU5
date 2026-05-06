@@ -215,6 +215,9 @@ PixelShader =
 				float4 FinalColor = vec4(0.0f);
 				
 				float2 FlatMapBlend = GetNoisyFlatMapLerp( Input.WorldSpacePos, GetFlatMapLerp() );
+				
+				bool IsSentinelActive = GetMapModeId() == 2;
+				FlatMapBlend = saturate(FlatMapBlend + vec2(IsSentinelActive));
 				#ifndef TERRAIN_DISABLED
 				if( FlatMapBlend.x < 1.0f )
 				{
@@ -252,7 +255,7 @@ PixelShader =
 					
 					float PencilNoise = PdxTex2D( PencilNoiseMap, Input.WorldSpacePos.xz * 0.125f ).r;
 
-					bool IsSentinelActive = GetMapModeId() == 2;
+					
 			
 					//Base contour
 					float Zoomish = dot( Input.WorldSpacePos - CameraPosition, CameraLookAtDir );
@@ -334,7 +337,7 @@ PixelShader =
 				}
 				
 				FinalColor.rgb = ApplyFogOfWar( FinalColor.rgb, Input.WorldSpacePos, FogOfWarAlpha );
-				if( GetFlatMapLerp() < 1.0f )
+				if( GetFlatMapLerp() < 1.0f && !IsSentinelActive )
 				{
 					float3 FoggedColor = ApplyDistanceFog( FinalColor.rgb, Input.WorldSpacePos );
 					FinalColor.rgb = lerp( FoggedColor, FinalColor.rgb, GetFlatMapLerp() );

@@ -1,0 +1,5 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+east_mediterranean_gfx:age_2_renaissance:artillery = {
+    10 = { add_entity = { node = shared_pose_entity     schematic_name = "unit_artillery_helepolis_schematic" } }
+}

@@ -8,7 +8,7 @@ brac;makarska;sea;korcula_strait;8470;5835;8472;5839;xxx
 corfu;butrint;sea;coast_corfu;8599;5622;8602;5622;xxx
 leukas;vonitsa;sea;ambracian_gulf;8633;5565;8636;5565;xxx
 patras;nafpaktos;sea;gulf_corinth;8687;5535;8687;5538;xxx
-kos;bodrum;sea;ceramic_gulf;8933;5447;8933;5451;xxx
+kos;bodrum;sea;ceramic_gulf;8935;5446;8942;5453;xxx
 samos;balat;sea;gulf_kusadasi;8922;5497;8922;5495;xxx
 andros;mykonos;sea;west_cyclades;8827;5496;8829;5494;xxx
 athens;karystos;sea;petalion_gulf;8787;5526;8789;5528;xxx
@@ -19,7 +19,7 @@ demetrias;sporades;sea;gulf_kymi;8754;5587;8757;5586;xxx
 gallipoli;canakkale;sea;dardanelles;8892;5651;8894;5650;xxx
 gallipoli;lapseki;sea;dardanelles;8905;5664;8907;5662;xxx
 chios;cesme;sea;gulf_smyrna;8881;5538;8889;5536;xxx
-constantinople;uskudar;sea;gulf_izmit;9013;5707;9015;5707;xxx
+constantinople;uskudar;sea;gulf_izmit;9012;5708;9019;5708;xxx
 kalay;enice;sea;dniester_estuary;9272;6007;9278;6009;xxx
 ajim;medenine;sea;gulf_gabes1;8181;5255;8180;5253;xxx
 ajim;zarzis;sea;gulf_gabes1;8187;5250;8189;5248;xxx
@@ -77,7 +77,7 @@ haugalandet;moster;sea;hardanger_fjord;7940;6959;7938;6963;xxx
 helsingor;helsingborg;sea;oresund;8264;6698;8268;6700;xxx
 falster;vordingborg;sea;stora_balt;8234;6619;8234;6623;xxx
 falster;navskov;sea;stora_balt;8226;6615;8224;6615;xxx
-assens;kolding;sea;stora_balt;8137;6661;8134;6661;xxx
+assens;kolding;sea;stora_balt;8139;6662;8137;6665;xxx
 soderkoping;kolmarden;sea;braviken;8452;6880;8452;6882;xxx
 rugen;grimmen;sea;pommeranian_coast;8296;6572;8295;6570;xxx
 rugen;stralsund;sea;pommeranian_coast;8290;6577;8289;6575;xxx
@@ -179,6 +179,7 @@ nikahionhwakowa;cataraqui;sea;bay_of_quinte;4222;5901;4219;5903;xxx
 mackinac;manitoulin;sea;northern_lake_huron;3890;6014;3892;6014;xxx
 wemitigoj;manitoulin;sea;cunningham_point;3966;6022;3963;6018;xxx
 navskov;svendborg;sea;lilla_balt;8194;6617;8185;6620;xxx
-wolgast;swinousjcie;sea;pommeranian_coast;8319;6558;8317;6558;xxx
+wolgast;swinousjcie;sea;pommeranian_coast;8320;6555;8320;6557;xxx
 swinousjcie;kamien;sea;pommeranian_coast;8359;6549;8361;6549;xxx
 mestre;venice;sea;gulf_venice;8252;5986;8254;5984;xxx
+senja;bardodalen;sea;senja_island;8508;7694;8511;7694;xxx

@@ -1,0 +1,52 @@
+﻿d008_frontobjects1_interior = {
+	tag = "frontobjects_interior"
+
+	###Byzantium
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/frontobjects/fo_clergy_orthodox_byz_metadata_os1080x440_d236x252.dds"
+		priority = 60
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_background_trigger = yes
+			scope:target_pop_type_bckg ?= { this = pop_type:clergy }
+			scope:target_religion_bckg ?= { gfx_culture_applicable = eastern_christian_gfx }
+		}
+	}	
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/frontobjects/fo_burghers_byz_metadata_os1080x440_d288x272.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_background_trigger = yes
+			scope:target_pop_type_bckg ?= { this = pop_type:burghers }
+			scope:target_culture_bckg ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/frontobjects/fo_nobles_byz_metadata_os1080x440_d284x224.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_background_trigger = yes
+			scope:target_pop_type_bckg ?= { this = pop_type:nobles }
+			scope:target_culture_bckg ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/event/frontobjects/fo_peasants_byz_metadata_os1080x440_d284x260.dds"
+		priority = 20
+		scope = country
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			event_illustration_background_trigger = yes
+			scope:target_pop_type_bckg ?= { this = pop_type:peasants }
+			scope:target_culture_bckg ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}

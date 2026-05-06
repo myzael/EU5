@@ -1,6 +1,6 @@
 ﻿NCamera = {
     FOV	= 60 # Field-of-View
-    ZNEAR = 1
+    ZNEAR = 8
     ZFAR = 25000
 
 	EDGE_SCROLLING_PIXELS = 10 # how many pixels from window edge that will trigger edge scrolling
@@ -34,7 +34,7 @@
     DEBUG_GAMEPAD_SENSITIVITY 	= 2.0
 	
 	CAMERA_WORLD_MARGINS = 60.0
-	TERRAIN_SAFE_DISTANCE  = 15.0
+	TERRAIN_SAFE_DISTANCE  = 8.0
 	TERRAIN_SPRING_DRAG = 0.93
 	TERRAIN_SPRING_FORCE = 0.75
 }

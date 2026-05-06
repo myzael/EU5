@@ -16,6 +16,32 @@ east_mediterranean_gfx = {
 	culture_tag = east_mediterranean_gfx
 }
 
+roman_gfx = {
+    priority = 500 
+    culture_tag = roman_gfx
+    ethnicities = {
+		10 = mediterranean_italian_ethnicity
+        10 = mediterranean_iberian_ethnicity
+		6 = mediterranean_hellenic_ethnicity
+        2 = mediterranean_balkanic_ethnicity
+	}
+}
+
+gothic_gfx = {
+    priority = 500
+    culture_tag = gothic_gfx
+    ethnicities = {
+		# mostly assimilated by this point
+		60 = mediterranean_hellenic_ethnicity
+        20 = mediterranean_balkanic_ethnicity
+
+		# hints of germanic remaining
+		13 = european_nordic_brown_hair_ethnicity
+		6 = european_nordic_blonde_ethnicity
+		1 = european_nordic_red_hair_ethnicity
+	}
+}
+
 greek_gfx = {
     priority = 400 # regional
     culture_tag = greek_gfx
@@ -356,7 +382,7 @@ tibetan_gfx = {
 	culture_tag = tibetan_gfx
 	
 	ethnicities = {
-		10 = asian_mongol_ethnicity
+		10 = asian_tibetan_ethnicity
 	}
 }
 

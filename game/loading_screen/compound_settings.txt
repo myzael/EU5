@@ -181,6 +181,16 @@ setting = {
 		"ultra" = {setting_value = {  enabled = yes }}
 	}
 	setting = {
+		name = "gruesome_portraits_traits_visible"
+		category = "Graphics"
+		version=0
+		"very_low" = {setting_value = {  enabled = yes }}
+		"low" = {setting_value = {  enabled = yes }}
+		"medium" = {setting_value = {  enabled = yes }}
+		"high" = {setting_value = {  enabled = yes }}
+		"ultra" = {setting_value = {  enabled = yes }}
+	}
+	setting = {
 		name = "bloom_quality"
 		category = "Graphics"
 		version = 0

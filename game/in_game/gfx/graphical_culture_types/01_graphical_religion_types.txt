@@ -72,3 +72,13 @@ buddhist_gfx = {
 	priority = 100 # religion group
 	culture_tag = buddhist_gfx
 }
+
+hellenism_gfx = {
+	priority = 200 # religion
+	culture_tag = hellenism_gfx
+}
+
+folk_european_gfx = {
+	priority = 100 # religion group
+	culture_tag = folk_european_gfx
+}

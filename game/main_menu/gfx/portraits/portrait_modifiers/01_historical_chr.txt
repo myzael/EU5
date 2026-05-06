@@ -38,7 +38,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -71,7 +71,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -118,7 +118,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -166,7 +166,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -193,7 +193,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair_balding
-				accessory = male_north_german_hair_crown_long_bald
+				accessory = male_german_hair_crown_long_bald
 			}
 			accessory = {
 				mode = add
@@ -225,7 +225,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 		}
 		weight = {
@@ -239,68 +239,29 @@
 		}
 	}
 
-	eng_edward_iii_crown = {
+	eng_edward_iii_d008 = {
 		dna_modifiers = {
 			accessory = {
 				mode = add
 				gene = beards
-				template = all_beards
-				accessory = beard_german_long_02
+				template = byzantine_beards # forked beard gene here
+				accessory = beard_byzan_split_style
 			}
 			accessory = {
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
-			}
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_royalty
-				accessory = male_headwear_german_generic_crown
+				accessory = male_german_hair_crown_long
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 600
+				add = 800
 				exists = this
 				exists = character:eng_edward_iii
 				this = character:eng_edward_iii
-				any_ruling_countries = { country_rank_level = 3 }
-			}
-		}
-	}
-
-	eng_edward_iii_war = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_royalty
-				accessory = male_headwear_german_generic_crown
-			}
-			accessory = {
-				mode = add
-				gene = beards
-				template = all_beards
-				accessory = beard_german_long_02
-			}
-			accessory = {
-				mode = replace
-				gene = hair_styles
-				template = german_hair
-				accessory = male_north_german_hair_crown_long
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 700
-				exists = this
-				exists = character:eng_edward_iii
-				this = character:eng_edward_iii
-				any_ruling_countries = { country_rank_level = 3 }
+				has_local_dlc = "d008_fate_of_the_phoenix"
 			}
 		}
 	}
@@ -414,13 +375,25 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
+			}
+			accessory = {
+				mode = replace
+				gene = beards
+				template = european_beards
+				accessory = beard_german_short_no_mustache_01
 			}
 			accessory = {
 				mode = add
 				gene = beards
-				template = european_beards
-				accessory = beard_asian_full_manchu
+				template = european_mustaches
+				accessory = beard_german_mustache_handlebar_angle
+			}
+			accessory = {
+				mode = add
+				gene = headwear_additive
+				template = no_nose
+				accessory = nose_prosthetic
 			}
 		}
 		weight = {
@@ -543,7 +516,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 		}
 		weight = {
@@ -569,7 +542,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -742,7 +715,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -768,7 +741,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -807,7 +780,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -871,7 +844,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 		}
 		weight = {
@@ -979,7 +952,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
+				accessory = male_german_hair_crown_long_back
 			}
 			accessory = {
 				mode = add
@@ -1005,7 +978,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
+				accessory = male_german_hair_crown_long_back
 			}
 			accessory = {
 				mode = add
@@ -1044,7 +1017,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -1082,7 +1055,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			morph = {
 				mode = modify_multiply
@@ -1128,7 +1101,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 		}
 		weight = {
@@ -1154,7 +1127,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 		}
 		weight = {
@@ -1194,13 +1167,13 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
 				gene = beards
-				template = all_beards
-				accessory = beard_german_short_01
+				template = byzantine_beards
+				accessory = beard_byzan_split_style
 			}
 		}
 		weight = {
@@ -1210,39 +1183,6 @@
 				exists = this
 				exists = character:byz_andronikos_iii_palaiologos
 				this = character:byz_andronikos_iii_palaiologos
-			}
-		}
-	}
-
-	byz_andronikos_iii_palaiologos_crown = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = hair_styles
-				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
-			}
-			accessory = {
-				mode = add
-				gene = beards
-				template = all_beards
-				accessory = beard_german_short_01
-			}
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_royalty
-				accessory = male_headwear_german_generic_crown
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 600
-				exists = this
-				exists = character:byz_andronikos_iii_palaiologos
-				this = character:byz_andronikos_iii_palaiologos
-				any_ruling_countries = { country_rank_level >= 3 }
 			}
 		}
 	}
@@ -1386,7 +1326,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 		}
 		weight = {
@@ -1412,7 +1352,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -1459,7 +1399,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -1485,7 +1425,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -1524,7 +1464,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -1564,7 +1504,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = replace
@@ -1590,7 +1530,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = replace
@@ -1775,12 +1715,6 @@
 				template = all_beards
 				accessory = beard_german_short_01
 			}
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_war_nobility
-				accessory = male_headwear_german_soldier_landsknetch_helmet_fabric
-			}
 		}
 		weight = {
 			base = 0
@@ -1901,7 +1835,7 @@
 				mode = replace
 				gene = hair_styles
 				template = all_hair
-				accessory = male_north_german_hair_bob_regular
+				accessory = male_german_hair_bob_regular
 			}
 		}
 		weight = {
@@ -1975,12 +1909,6 @@
 	king_stefan_iv_serbia = {
 		dna_modifiers = {
 			accessory = {
-				mode = replace
-				gene = hair_styles
-				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
-			}
-			accessory = {
 				mode = add
 				gene = beards
 				template = all_beards
@@ -1994,85 +1922,6 @@
 				exists = this
 				exists = character:ser_stefan_dusan
 				this = character:ser_stefan_dusan
-			}
-		}
-	}
-
-	king_stefan_iv_serbia_crown = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = hair_styles
-				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
-			}
-			accessory = {
-				mode = add
-				gene = beards
-				template = all_beards
-				accessory = beard_german_long_01
-			}
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_royalty
-				accessory = male_headwear_english_royal_crown
-			}
-			accessory = {
-				mode = add
-				gene = capes
-				template = european_royalty
-				accessory = male_capes_german_royal_tabard
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 600
-				exists = this
-				exists = character:ser_stefan_dusan
-				this = character:ser_stefan_dusan
-				any_ruling_countries = { country_rank_level = 3 }
-			}
-		}
-	}
-
-	king_stefan_iv_serbia_war = {
-		dna_modifiers = {
-			accessory = {
-				mode = replace
-				gene = hair_styles
-				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
-			}
-			accessory = {
-				mode = add
-				gene = beards
-				template = all_beards
-				accessory = beard_german_long_01
-			}
-			accessory = {
-				mode = add
-				gene = headwear
-				template = european_royalty
-				accessory = male_headwear_english_royal_crown
-			}
-			accessory = {
-				mode = add
-				gene = capes
-				template = no_cape
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 700
-				exists = this
-				exists = character:ser_stefan_dusan
-				this = character:ser_stefan_dusan
-				portrait_wear_armor_trigger = yes
-				any_ruling_countries = { country_rank_level = 3 }
 			}
 		}
 	}
@@ -2103,7 +1952,7 @@
 				mode = replace 
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -2135,7 +1984,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2161,7 +2010,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -2187,7 +2036,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair_balding
-				accessory = male_north_german_hair_crown_long_bald
+				accessory = male_german_hair_crown_long_bald
 			}
 			accessory = {
 				mode = add
@@ -2214,7 +2063,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair_balding
-				accessory = male_north_german_hair_crown_long_bald
+				accessory = male_german_hair_crown_long_bald
 			}
 			accessory = {
 				mode = add
@@ -2240,7 +2089,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2272,7 +2121,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2304,7 +2153,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair_balding
-				accessory = male_north_german_hair_crown_long_bald
+				accessory = male_german_hair_crown_long_bald
 			}
 			accessory = {
 				mode = add
@@ -2337,7 +2186,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -2369,7 +2218,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2401,7 +2250,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -2433,7 +2282,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -2459,7 +2308,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -2517,7 +2366,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -2543,7 +2392,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_bob_regular
+				accessory = male_german_hair_bob_regular
 			}
 			accessory = {
 				mode = add
@@ -2570,7 +2419,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_bob_regular
+				accessory = male_german_hair_bob_regular
 			}
 			accessory = {
 				mode = add
@@ -2590,13 +2439,191 @@
 		}
 	}
 
+	byz_anna_of_savoy = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				range = { 0 0.49 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:byz_anna_of_savoy
+				this = character:byz_anna_of_savoy
+			}
+		}
+	}
+
+	byz_john_v_palaiologos = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_crown_regular
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_long_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:byz_john_v_palaiologos
+				this = character:byz_john_v_palaiologos
+			}
+		}
+	}
+
+	byz_john_v_palaiologos_d008 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_crown_regular
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = byzantine_beards
+				accessory = beard_byzan_split_style
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:byz_john_v_palaiologos
+				this = character:byz_john_v_palaiologos
+				has_local_dlc = "d008_fate_of_the_phoenix"
+			}
+		}
+	}
+
+	byz_alexios_apokaukos = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_crown_short
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_long_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:byz_alexios_apokaukos
+				this = character:byz_alexios_apokaukos
+			}
+		}
+	}
+
+	byz_alexios_apokaukos_d008 = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_crown_short
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = byzantine_beards
+				accessory = beard_byzan_split_style
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 600
+				exists = this
+				exists = character:byz_alexios_apokaukos
+				this = character:byz_alexios_apokaukos
+				has_local_dlc = "d008_fate_of_the_phoenix"
+			}
+		}
+	}
+
+	byz_gemistos_plethon = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_crown_short
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_asian_full_manchu
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:byz_gemistos_plethon
+				this = character:byz_gemistos_plethon
+			}
+		}
+	}
+
+	byz_el_greco = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = german_hair
+				accessory = male_german_hair_short_curly
+			}
+			accessory = {
+				mode = add
+				gene = beards
+				template = european_beards
+				accessory = beard_german_handlebar_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				exists = this
+				exists = character:byz_el_greco
+				this = character:byz_el_greco
+			}
+		}
+	}
+
 	wal_vlad_tepes = {
 		dna_modifiers = {
 			accessory = {
 				mode = replace
 				gene = hair_styles
 				template = all_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -2648,7 +2675,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -2694,7 +2721,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -2740,7 +2767,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2766,7 +2793,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -2792,7 +2819,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -2844,7 +2871,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_regular
+				accessory = male_german_hair_crown_regular
 			}
 			accessory = {
 				mode = add
@@ -2876,7 +2903,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long_back
+				accessory = male_german_hair_crown_long_back
 			}
 		}
 		weight = {
@@ -2896,7 +2923,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -3025,7 +3052,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly # Messy hair
+				accessory = male_german_hair_short_curly # Messy hair
 			}
 			accessory = {
 				mode = add
@@ -3083,7 +3110,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -3109,7 +3136,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -3135,7 +3162,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_straight_pomp
+				accessory = male_hair_short_straight_pomp
 			}
 			accessory = {
 				mode = add
@@ -3167,7 +3194,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -3193,7 +3220,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly
+				accessory = male_german_hair_short_curly
 			}
 			accessory = {
 				mode = add
@@ -3219,7 +3246,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -3251,7 +3278,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short
+				accessory = male_german_hair_crown_short
 			}
 			accessory = {
 				mode = add
@@ -3283,7 +3310,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly # White wig
+				accessory = male_german_hair_short_curly # White wig
 			}
 			accessory = {
 				mode = add
@@ -3347,7 +3374,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly # White wig
+				accessory = male_german_hair_short_curly # White wig
 			}
 			accessory = {
 				mode = add
@@ -3379,7 +3406,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_long
+				accessory = male_german_hair_crown_long
 			}
 			accessory = {
 				mode = add
@@ -3405,7 +3432,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_short_curly # White wig
+				accessory = male_german_hair_short_curly # White wig
 			}
 			accessory = {
 				mode = add
@@ -3437,7 +3464,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair
-				accessory = male_north_german_hair_crown_short # Messy hair
+				accessory = male_german_hair_crown_short # Messy hair
 			}
 			accessory = {
 				mode = add
@@ -3469,7 +3496,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_hair_balding
-				accessory = male_north_german_hair_crown_long_bald
+				accessory = male_german_hair_crown_long_bald
 			}
 			accessory = {
 				mode = add

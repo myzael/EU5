@@ -62,6 +62,66 @@
 		}
 	}
 
+	eye_cloth_blind = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear_additive
+				template = eye_cloth
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 10000
+				has_trait = blind
+			}
+		}
+	}
+
+	eye_patch = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear_additive
+				template = eye_patch
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 10000
+				has_trait = one_eyed
+			}
+		}
+	}
+
+	disfigured_face = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear_additive
+				template = disfigured
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = replace
+				gene = hair_styles
+				template = no_hair
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 10000
+				has_trait = disfigured
+			}
+		}
+	}
+
 	spectacles = {
 		dna_modifiers = {
 			accessory = {

@@ -371,8 +371,8 @@ earthquakes = {
  picchu willka_pampa ilucan chetilla huambos chumuch congona kuelap huamanpata olan illapa kaxa_marca tantaricuy chimu llucho markahuamachuco pirca_pirca huallumarca awajun bagua utkhupampa 
  namballe ingatambo karajia huancachaca moyobamba lamas yurimagua chatuza cocamas kachi rupharupha may_ushin kakataibo ashaninka panatahuas yanesha chanchacc nomatsigenga isabela_island 
  santiago_islands santa_cruz_islands aconca_hue qillu_uta waykuche meli_pillan rangkawe kolchawwe kuruko mawlen cauquen pikumche uthan_uthatun chillan perquilauquen puchacay biobio 
- lafkenmapu lelbunmapu wenteche inapiremapu pebuenmapu pikunwijimapu caurakawin ancud quiquilhue quellon piren colhue_huapi sengel puyu_huapi chain_chaitun puel_co futra_lhewfu nahuelpan 
- tecka koy_aike achen tawokser jautok jetarktetqal saelam kcewite kelaelkces malte caguatl west_falkland east_falkland georgia_isle waitangi tamaki whangarei aupouri manukau whakatane  
+ lafkenmapu lelbunmapu wenteche inapiremapu pebuenmapu pikunwijimapu caurakawin ancud quiquilhue quellon piren    
+  koy_aike achen tawokser jautok jetarktetqal saelam kcewite kelaelkces malte caguatl georgia_isle waitangi tamaki whangarei aupouri manukau whakatane  
  tauranga te_tairawhiti wairoa urewera ahurei ngamotu patea timaru puari rakaia kaiapoi akaroa otakou rakiura kaitangata otepoti waihopai motupohue macquarie okarito hurunui taramakau mahitahi 
  mawhera haapai vauvau rotokas bannoni naasioi tinputz mono buka makira saa kwaio kwaraae ghari isatabu kolombangara marovo roviana vangunu cheke_holo vaghua mu_ngava nendo vanikoro 
  rendova ranongga nggela valpei akei tamambo sakao tolomako ambae vanu_aroaroa malakula ambrym efate epi erromango tanna aneityum rotuma kandavu moala lakeba taveuni vanua_levu ngau 
@@ -452,7 +452,17 @@ sea_zones = {
 	bosphorus gulf_varna kaliakra_point stomoplo_bay south_danube_delta north_danube_delta dniester_estuary cape_pazarbasi cape_baba west_pontic_coast cape_kerempe central_pontic_coast cape_sinop balik_gulf cape_yasurt east_pontic_coast cape_fener batumi_bay sokhumi_bay pitsunda_cape circassian_coast gelendzhik_bay tsemess_bay kaffa_bay strait_kerch cape_meganom cape_sarych cape_fiolent kalamita_bay cape_tarkhankut karadzhynska_bay karkinit_bay dnieper_bug_estuary black_sea1 black_sea2 black_sea3 black_sea4 black_sea5 black_sea6
 	obitochny_gulf genichskaya_channel taganrog_gulf belosaraysk_gulf yasensk_bay temryuk_bay bay_arabat
 	caspian_sea1 caspian_sea2 caspian_sea3 caspian_sea4 caspian_sea5 caspian_sea6 caspian_sea7 caspian_sea8 caspian_sea9 caspian_sea10 caspian_sea11 caspian_sea12 caspian_sea13 caspian_sea14 caspian_sea15 caspian_sea16 caspian_sea17 caspian_sea18 caspian_sea19 caspian_sea20  caspian_sea23 caspian_sea24 caspian_sea28 caspian_sea30 caspian_sea31 caspian_sea32 caspian_sea33 caspian_sea34 caspian_sea35 caspian_sea36 caspian_sea37 caspian_sea38 caspian_sea39
-		
+
+	#Great Lakes
+	blue_point saginaw_bay clark_point deadmans_point wind_point cunningham_point
+	au_sable_point black_bay keweenaw_coast copper_harbor
+	green_bay traverse_bay south_lake_michigan middle_lake_michigan
+	pukaskwa_point michipicoten_bay schreiber_channel
+	southern_lake_huron northern_lake_huron georgian_bay manitoulin_channel strait_of_makinac
+	whitefish_bay keweenaw_bay thunder_bay chequamegon_bay
+	bay_of_quinte central_lake_ontario niagara_basin
+	eastern_erie_basin central_erie_basin pelee_island lake_st_clair
+
 	#caribbean_sea_area
 	west_cayman_islands east_cayman_islands guacanayabo_gulf jardines_reina ana_maria_gulf cienfuegos_bay cochinos_bay batabano_gulf east_canarreos_archipelago cape_corrientes windward_passage guantanamo_bay coast_sierra_maestra cruz_cape mona_passage negril_point montego_bay jamaica_channel port_royal long_bay gulf_gonave gonave_channel navassa_island gravois_point jacmel_cape cape_beata ocoa_bay bay_santo_domingo saona_island virgin_passage anegada_passage isla_caja_muertos rincon_bay st_croix_coast st_kitts_coast guadaloupe_coast dominica_coast saint_lucia_channel grenada_coast aruba_coast bonaire_coast los_roques blanquilla_island
 	west_colorados_archipelago east_colorados_archipelago havana_bay
@@ -869,16 +879,6 @@ sea_zones = {
 	bernier_coast 	dorre_coast	shark_coast kalbarri lucky_bay geraldton_bay green_head two_rocks perth_bay bunbury_coast	deepdene_coast flinders_bay	yeagarup_coast 
 	frenchman_bay breaksea_shore bremer_bay christmas_island_shore bellinger west_kangaroo_coast
 
-	#Great Lakes
-	blue_point saginaw_bay clark_point deadmans_point wind_point cunningham_point 
-	au_sable_point   black_bay keweenaw_coast copper_harbor
-	green_bay traverse_bay south_lake_michigan middle_lake_michigan
-	pukaskwa_point michipicoten_bay schreiber_channel
-	southern_lake_huron northern_lake_huron georgian_bay manitoulin_channel strait_of_makinac
-	whitefish_bay keweenaw_bay thunder_bay chequamegon_bay 
-	bay_of_quinte central_lake_ontario niagara_basin
-	
-	eastern_erie_basin central_erie_basin pelee_island lake_st_clair
 
 	#Oceania
 	nihoa_coast_1 nihoa_coast_2 mokumanamana_coast_1 mokumanamana_coast_2 kanemilohai_coast_1 kanemilohai_coast_2 kauo_coast papa_apoho_coast holoikauaua_coast kuaihelani_coast holaniku_coast
@@ -1020,6 +1020,7 @@ sea_zones = {
 	nauru_high_sea_1 nauru_high_sea_2 nauru_high_sea_3 nauru_high_sea_4 nauru_high_sea_5
 	nauru_coast metoma_island mere_lava_island
 	limfjorden
+	guahan_atoll
 } 
 
 
@@ -1191,8 +1192,9 @@ lakes = {
 
 	iro_lake kurile_lake
 	ulakhan_kyuel_lake ozero_sytygan_lake ozero_kubuy_lake ozero_orotko_lake ozero_laydy_kyuyel_lake elgygytgyn_lake munduyskoye_lake
-} 
+}
 
+######################
 #####################
 # IMPASSABLE TERRAIN
 #####################

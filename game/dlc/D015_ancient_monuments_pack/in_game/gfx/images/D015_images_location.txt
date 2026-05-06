@@ -1,4 +1,4 @@
-﻿D015_monuments1 = {
+﻿d015_monuments1 = {
 	tag = "monuments1"
 
 	illustration_image = { #Alpha 0
@@ -99,7 +99,7 @@
 	}
 }
 
-D015_monuments2 = { #Holy Sites
+d015_monuments2 = { #Holy Sites
 	tag = "monuments2"
 
 	illustration_image = { #Alpha 0
@@ -110,7 +110,7 @@ D015_monuments2 = { #Holy Sites
 
 }
 
-D015_monuments3 = {
+d015_monuments3 = {
 	tag = "monuments3"
 
 	illustration_image = { #Alpha 0

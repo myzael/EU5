@@ -1,0 +1,63 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+skin_eye_hair = {
+	# Red = Skin
+	# Green = Eyes
+	# Blue = Hair
+
+	skin_group = {
+		mask = { color = { 1.0 0.0 0.0 } tolerance = 0.8 hardness = 0.5 }
+		repaint = {
+			primary_color = skin_color
+			secondary_color = unit_color0
+			#tertiary_color = unit_color1
+		}
+		repaint = {
+			66 = {
+				primary_color = skin_color
+				secondary_color = unit_color0
+			}
+			22 = {
+				primary_color = skin_color
+				secondary_color = unit_color1
+			}
+			11 = {
+				primary_color = skin_color
+				secondary_color = unit_color2
+			}
+		}
+	}
+	no_texture_color_material = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.8 hardness = 0.5 }
+		repaint = {
+			primary_color = eye_color
+		}
+	}
+	no_texture_color_material = {
+		#Could use a textured material here for hair fibers maybe
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.8 hardness = 0.5 }
+		repaint = {
+			primary_color = hair_color
+		}
+	}
+	
+	assets = {
+    unit_hair_curling_short_byz_mesh
+	unit_hair_curly_byz_mesh	
+	}
+}
+
+hair_variation = {
+	no_texture_color_material = {
+		mask = { color = { 0.0 1.0 0.5 } tolerance = 0.9 hardness = 0.5 }
+		repaint = {
+			primary_color = hair_color
+		}
+	}
+	
+	assets = {
+	
+		
+		
+	}
+}

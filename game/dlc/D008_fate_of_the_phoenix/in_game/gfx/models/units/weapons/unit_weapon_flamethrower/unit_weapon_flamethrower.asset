@@ -1,0 +1,17 @@
+pdxmesh = {
+	name = "unit_weapon_flamethrower_mesh"
+	file = "unit_weapon_flamethrower.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_flamethrowerShape"
+		index = 0
+		texture_diffuse = "unit_weapon_flamethrower_diffuse.dds"
+		texture_normal = "unit_weapon_flamethrower_normal.dds"
+		texture_specular = "unit_weapon_flamethrower_properties.dds"
+		texture = { index = 3 srgb = no file = "" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+
+

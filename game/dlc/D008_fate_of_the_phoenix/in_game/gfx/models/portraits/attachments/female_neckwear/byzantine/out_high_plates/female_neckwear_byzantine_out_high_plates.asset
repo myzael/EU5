@@ -1,0 +1,27 @@
+pdxmesh = {
+	name = "female_neckwear_byzantine_out_high_plates_mesh"
+	file = "female_neckwear_byzantine_out_high_plates.mesh"
+	
+	meshsettings = {
+		name = "female_neckwear_byzantine_out_high_platesShape"
+		index = 0
+		texture_diffuse = "female_neckwear_byzantine_out_high_plates_diffuse.dds"
+		texture_normal = "female_neckwear_byzantine_out_high_plates_normal.dds"
+		texture_specular = "female_neckwear_byzantine_out_high_plates_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_neckwear_byzantine_out_high_plates_entity"
+	pdxmesh = "female_neckwear_byzantine_out_high_plates_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = torso
+			}
+		}
+	}
+}

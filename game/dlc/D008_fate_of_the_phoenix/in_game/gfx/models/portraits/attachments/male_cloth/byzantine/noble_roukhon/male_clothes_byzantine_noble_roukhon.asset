@@ -1,0 +1,89 @@
+﻿##Common
+pdxmesh = {
+	name = "male_clothes_byzantine_common_roukhon_mesh"
+	file = "male_clothes_byzantine_noble_roukhon.mesh"
+
+	meshsettings = {
+		name = "male_clothes_byzantine_noble_roukhonShape"
+		index = 0
+		texture_diffuse = "male_clothes_byzantine_noble_roukhon_diffuse.dds"
+		texture_normal = "male_clothes_byzantine_noble_roukhon_normal.dds"
+		texture_specular = "male_clothes_byzantine_noble_roukhon_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_byzantine_common_roukhon_entity"
+	pdxmesh = "male_clothes_byzantine_common_roukhon_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/byzantine/noble_roukhon/male_clothes_byzantine_noble_roukhon_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_common"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+## Low
+pdxmesh = {
+	name = "male_clothes_byzantine_low_noble_roukhon_mesh"
+	file = "male_clothes_byzantine_noble_roukhon.mesh"
+
+	meshsettings = {
+		name = "male_clothes_byzantine_noble_roukhonShape"
+		index = 0
+		texture_diffuse = "male_clothes_byzantine_noble_roukhon_diffuse.dds"
+		texture_normal = "male_clothes_byzantine_noble_roukhon_normal.dds"
+		texture_specular = "male_clothes_byzantine_noble_roukhon_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_byzantine_low_noble_roukhon_entity"
+	pdxmesh = "male_clothes_byzantine_low_noble_roukhon_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/byzantine/noble_roukhon/male_clothes_byzantine_noble_roukhon_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_low_noble"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}
+
+## High
+pdxmesh = {
+	name = "male_clothes_byzantine_high_noble_roukhon_mesh"
+	file = "male_clothes_byzantine_noble_roukhon.mesh"
+
+	meshsettings = {
+		name = "male_clothes_byzantine_noble_roukhonShape"
+		index = 0
+		texture_diffuse = "male_clothes_byzantine_noble_roukhon_diffuse.dds"
+		texture_normal = "male_clothes_byzantine_noble_roukhon_normal.dds"
+		texture_specular = "male_clothes_byzantine_noble_roukhon_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_clothes_byzantine_high_noble_roukhon_entity"
+	pdxmesh = "male_clothes_byzantine_high_noble_roukhon_mesh"
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/byzantine/noble_roukhon/male_clothes_byzantine_noble_roukhon_masks.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "byzantine_high_noble"	#A "variation" object in gfx/portraits/accessory_variations/
+            }
+        }
+	}
+}

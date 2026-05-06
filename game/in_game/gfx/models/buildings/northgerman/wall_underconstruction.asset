@@ -1,0 +1,39 @@
+pdxmesh = {
+	name = "wall_underconstruction_mesh"
+	file = "wall_underconstruction.mesh"
+
+	meshsettings = {
+		name = "wall_underconstruction_AShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "wall_underconstruction_BShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "wall_underconstruction_CShape"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "wall_underconstruction_entity"
+	pdxmesh = "wall_underconstruction_mesh"
+}

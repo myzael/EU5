@@ -567,6 +567,110 @@ fontfiles = {
 	}
 }
 
+# Heavier NotoSans weights used by the sans-serif accessibility font setting.
+# Also declared in in_game_fonts.font for the in-game context; the duplicate
+# registration warning that produces is benign (the binary is already loaded).
+
+fontfiles = {
+	name = "NotoSansGame-SemiBold"
+	always_load = no
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/NotoSans/NotoSans-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_simp_chinese" }
+		files = { "fonts/NotoSans/NotoSans-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_korean" }
+		files = { "fonts/NotoSans/NotoSans-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_japanese" }
+		files = { "fonts/NotoSans/NotoSans-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+}
+
+fontfiles = {
+	name = "NotoSansGame-SemiBoldItalic"
+	always_load = no
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/NotoSans/NotoSans-SemiBoldItalic.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_simp_chinese" }
+		files = { "fonts/NotoSans/NotoSans-SemiBoldItalic.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_korean" }
+		files = { "fonts/NotoSans/NotoSans-SemiBoldItalic.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" }
+	}
+
+	group = {
+		languages = { "l_japanese" }
+		files = { "fonts/NotoSans/NotoSans-SemiBoldItalic.ttf" "fonts/NotoSansJP/NotoSansJP-SemiBold.ttf" "fonts/NotoSansSC/NotoSansSC-SemiBold.ttf" "fonts/NotoSansKR/NotoSansKR-SemiBold.ttf" }
+	}
+}
+
+fontfiles = {
+	name = "NotoSansGame-Bold"
+	always_load = no
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/NotoSans/NotoSans-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_simp_chinese" }
+		files = { "fonts/NotoSans/NotoSans-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_korean" }
+		files = { "fonts/NotoSans/NotoSans-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_japanese" }
+		files = { "fonts/NotoSans/NotoSans-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+}
+
+fontfiles = {
+	name = "NotoSansGame-BoldItalic"
+	always_load = no
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_polish" "l_braz_por" "l_turkish" }
+		files = { "fonts/NotoSans/NotoSans-BoldItalic.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_simp_chinese" }
+		files = { "fonts/NotoSans/NotoSans-BoldItalic.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_korean" }
+		files = { "fonts/NotoSans/NotoSans-BoldItalic.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" }
+	}
+
+	group = {
+		languages = { "l_japanese" }
+		files = { "fonts/NotoSans/NotoSans-BoldItalic.ttf" "fonts/NotoSansJP/NotoSansJP-Bold.ttf" "fonts/NotoSansSC/NotoSansSC-Bold.ttf" "fonts/NotoSansKR/NotoSansKR-Bold.ttf" }
+	}
+}
+
 #######################################################################
 #######################################################################
 #######################################################################

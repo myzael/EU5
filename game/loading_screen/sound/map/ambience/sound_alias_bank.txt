@@ -3,50 +3,54 @@
 
 map_height = {
     parameter="MapHeight"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
+river = {
+    parameter="River"
+    event = "silence"
+}
 
 ##### MAS DATA PARAMETERS #####
 
 masDataVegetationDensity = {
     parameter= "masDataVegetationDensity"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataTopologyElevation = {
     parameter= "masDataTopologyElevation"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataTopologyOcean = {
     parameter= "masDataTopologyOcean"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataTopologyOceanDeep = {
     parameter= "masDataTopologyOceanDeep"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataTopologyCoast = {
     parameter= "masDataTopologyCoast"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataTopologyLake = {
     parameter= "masDataTopologyLake"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataClimateZone = {
     parameter= "masDataClimateZone"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 masDataCityDensity = {
     parameter= "masDataCityDensity"
-    event = "MasterAmbientSystem_Start"
+    event = "silence"
 }
 
 

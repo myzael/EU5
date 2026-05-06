@@ -1,0 +1,9 @@
+﻿age_4_reformation:a_byz_helepolis_cannon_unit = {
+	schematic_name = unit_artillery_helepolis_schematic
+	dlc = "d008_fate_of_the_phoenix"
+	size = 10.0	# Affects space between units in formations and when marching
+
+	#attach = { 100 = artillery }
+	
+	#animation_state_machine_name = unit_artillery_field_canon_state_machine
+}

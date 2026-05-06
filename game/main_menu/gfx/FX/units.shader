@@ -148,6 +148,7 @@ VertexShader =
 PixelShader =
 {	
 	Code [[
+
 		float3 SampleCoaEmblem( in SUnitUserData UserData, in float2 UV, in float2 Ddx, in float2 Ddy )
 		{
 			float4 OffsetAndScale = CoaOffsetAndScale[UserData._CountryIndex];
@@ -639,7 +640,7 @@ PixelShader =
 				#endif
 				SMaterialProperties MaterialProps = GetMaterialProperties( Diffuse.rgb, Normal, Properties.a, Properties.g, Properties.b );
 				SLightingProperties LightingProps = GetSunLightingProperties( Input.WorldSpacePos, ShadowTexture );
-
+				
 				{
 					// This fake lighting for units so they get more instensity from the sun than the terrain.
 					// Don't feel bad removing this later on.
@@ -650,11 +651,16 @@ PixelShader =
 					#ifdef CUBEMAP_INTENSITY_FACTOR
 					LightingProps._CubemapIntensity *= CUBEMAP_INTENSITY_FACTOR; // CUBEMAP_INTENSITY_FACTOR is required to be defined with a value, for example "CUBEMAP_INTENSITY_FACTOR 2.5"
 					#endif
+					#ifdef RIM_INTENSITY_FACTOR
+					float Rim = CalculateRimLightIntensity(LightingProps._ToCameraDir,Normal);
+					LightingProps._CubemapIntensity += Rim*RIM_INTENSITY_FACTOR;
+					#endif
 					#ifdef ROUGHTNESS_FACTOR
 					MaterialProps._Roughness = pow(MaterialProps._Roughness, ROUGHTNESS_FACTOR);// ROUGHTNESS_FACTOR is required to be defined with a value, for example "ROUGHTNESS_FACTOR 0.5"
 					//MaterialProps._Roughness = MaterialProps._Roughness*ROUGHTNESS_FACTOR;// ROUGHTNESS_FACTOR is required to be defined with a value, for example "ROUGHTNESS_FACTOR 0.5"
 					#endif
 				}
+				
 
 				float3 Color = CalculateSunLighting( MaterialProps, LightingProps, EnvironmentMap );
 				#ifdef ENABLE_FOG				
@@ -749,6 +755,8 @@ Effect unit_material_repaint
 		"LIGHT_INTENSITY_FACTOR 2.1"
 		"CUBEMAP_INTENSITY_FACTOR 6"
 		"ROUGHTNESS_FACTOR 0.7"
+		"RIM_INTENSITY_FACTOR 20"
+		"RIM_INTENSITY_POWER 1.0" 
 	}
 }
 

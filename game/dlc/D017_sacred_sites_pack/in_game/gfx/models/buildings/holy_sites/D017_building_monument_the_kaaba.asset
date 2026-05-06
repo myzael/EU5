@@ -1,6 +1,6 @@
 pdxmesh = {
-	name = "D017_building_monument_the_kaaba_mesh"
-	file = "D017_building_monument_the_kaaba.mesh"
+	name = "d017_building_monument_the_kaaba_mesh"
+	file = "d017_building_monument_the_kaaba.mesh"
 
 	lod_percentages = {
 		lod = { index = 1 percent = 20.0 }
@@ -72,6 +72,6 @@ pdxmesh = {
 }
 
 entity = {
-	name = "D017_building_monument_the_kaaba_entity"
-	pdxmesh = "D017_building_monument_the_kaaba_mesh"
+	name = "d017_building_monument_the_kaaba_entity"
+	pdxmesh = "d017_building_monument_the_kaaba_mesh"
 }

@@ -1,0 +1,74 @@
+
+page = {
+	name = "SETTINGS_PAGE_GRAPHICS"
+	category = {
+		category = "Graphics" # Must match category name in code
+		name = "SETTINGS_CATEGORY_SCREEN"
+		order = {
+			"display_mode"
+			"resolution"
+			"vsync"
+			"multi_sampling"
+			"display_index"
+		}
+	}
+	category = {
+		category = "Graphics" # Must match category name in code
+		name = "SETTINGS_CATEGORY_QUALITY"
+		order = {
+			"multi_sampling"
+			"anisotropic_filtering"
+			"refraction_quality"
+			"shadowmap_resolution"
+		}
+	}
+}
+page = {
+	name = "SETTINGS_PAGE_SYSTEM"
+	category = {
+		category = "System"
+		name = "SETTINGS_CATEGORY_SYSTEM"
+		order = {
+			"language"
+		}
+	}
+	category = {
+		category = "Account"
+		name = "SETTINGS_CATEGORY_ACCOUNT"
+		order = {
+			"account_email"
+		}
+	}
+}
+page = {
+	name = "SETTINGS_PAGE_CONTROLS"
+	category = {
+		category = "System"
+		name = "SETTINGS_CATEGORY_CONTROLS"
+		order = {
+			"scroll_speed"
+			"camera_rotation_speed"
+			"zoom_speed"
+		}
+	}
+}
+page = {
+	name = "SETTINGS_PAGE_INTERFACE"
+	category = {
+		category = "GUI"
+		name = "SETTINGS_CATEGORY_GUI"
+		order = {
+			"scale"
+		}
+	}
+}
+page = {
+	name = "SETTINGS_PAGE_AUDIO"
+	category = {
+		category = "Audio"
+		name = "SETTINGS_CATEGORY_AUDIO"
+		order = {
+			"volume.bus:/"
+		}
+	}
+}

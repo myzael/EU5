@@ -1,0 +1,521 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###################
+## 1. TEMPLATES
+##################################################
+
+template unique_buildings
+{
+	code =
+	[[
+		d008_building_byzantine_monastery = {
+			only_in_location = trikala
+			order = 0
+			size = large
+			mesh_list = d008_building_byzantine_monastery_mesh
+			contributors =
+			{
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights
+
+			filter_data = {8671.025 4.8112574 5625.8394}
+
+			allow_demote = no
+		}
+	]]
+}
+
+template haga_sophia
+{
+	default_variables =
+	{
+		mesh_list = haga_sofia_meshes
+	}
+	code = [[
+		haga_sophia = {
+			only_in_location = constantinople
+			order = 0
+			size = large
+			limit =
+			{
+				NOT = {
+					has_global_variable = hagia_sophia_now_mosque
+				}
+			}
+			mesh_list = haga_sofia_meshes
+
+			contributors =
+			{
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights
+
+			filter_data = {9008.079 3.0398445 5705.3223}
+			link_tooltip = 
+			{
+				type = work_of_art
+				data = hagia_sophia
+			}
+		}
+	]]
+}
+
+template haga_sophia_mosque
+{
+	default_variables =
+	{
+		mesh_list = haga_sofia_mosque_meshes
+	}
+	code = [[
+		haga_sophia = {
+			only_in_location = constantinople
+			order = 0
+			size = large
+			limit =
+			{
+				has_global_variable = hagia_sophia_now_mosque
+			}
+			mesh_list = haga_sofia_mosque_meshes
+			add_count_to_mesh_list = @replace_meshes
+			contributors =
+			{
+				always_one = 1.0
+			}
+			filter_func = closest_to_position
+			weight_func = close_to_center_weights
+
+			filter_data = {9008.079 3.0398445 5705.3223}
+			link_tooltip = 
+			{
+				type = work_of_art
+				data = hagia_sophia
+			}
+		}
+	]]
+}
+
+template constantinople_city_walls
+{
+	default_variables =
+	{
+		replace_meshes = byzantine_wall
+		replace_meshes = byzantine_wall_tower
+		replace_meshes = byzantine_wall_gate
+
+		wall_mesh_list  = constantinople_wall
+		tower_mesh_list = constantinople_wall_tower
+		gate_mesh_list  = constantinople_wall_gate
+	}
+
+	code =
+	[[
+		wall = {
+			name = constantinople_city_walls
+			order = 1
+			tower_separation = 7.0
+			area = 150.0
+			percentage_built = 1.0
+			#limit {}
+			contributors =
+			{
+				has_building_with_graphical_tag_and_at_least_one_level:large_city_walls = 1.0
+			}
+			#required_contributors = {}
+			wall_mesh_list  = @wall_mesh_list
+			tower_mesh_list = @tower_mesh_list
+			gate_mesh_list  = @gate_mesh_list
+			only_in_location = constantinople
+			#location_filters = { rural_settlement = no }
+			#link_tooltop = not_implemented_yet
+		}
+	]]
+}
+
+
+##################################################
+## 2. MONUMENTS
+##################################################
+
+mesh_list =
+{
+	name = "d008_building_byzantine_monastery_mesh"
+	scale_settings_large = { bias = 0 min = 1 max = 1 }
+	should_spawn_flags = no
+	D008_building_byzantine_monastery_mesh = 1
+}
+
+mesh_list =
+{
+	name = "haga_sofia_meshes"
+	scale_settings_large = { bias = 0 min = 1 max = 1 }
+	should_spawn_flags = no
+	D008_monument_byzantine_hagia_sofia_mesh = 1
+}
+
+mesh_list =
+{
+	name = "haga_sofia_mosque_meshes"
+	scale_settings_large = { bias = 0 min = 1 max = 1 }
+	should_spawn_flags = no
+	D008_monument_ottoman_hagia_sofia_mesh = 1
+}
+
+
+##################################################
+## 3. RELIGION
+##################################################
+
+mesh_list = {
+	name = "byzantine_small_clergy"
+	scale_settings_small = { bias = 0 min = 0.95 max = 1 }
+	d008_building_byzantine_clergy_small_mesh = 1
+	should_spawn_flags = no
+	material_index = 0
+}
+
+mesh_list = {
+	name = "byzantine_medium_clergy"
+	scale_settings_small = { bias = -0.5 min = 0.95 max = 1 }
+	d008_building_byzantine_clergy_medium_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_large_clergy"
+	scale_settings_large = { bias = 0 min = 0.95 max = 1 }
+	d008_building_byzantine_clergy_large_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+
+##################################################
+## 4. FORTS
+##################################################
+
+mesh_list = {
+	name = "byzantine_fort"
+	scale_settings_large = { bias = -0.5 min = 0.8 max = 10 }
+	D008_building_byzantine_castle_mesh = 1
+	material_index = 1
+	tag = fort
+	should_spawn_flags = yes
+}
+
+mesh_list = {
+	name = "byzantine_bastion"
+	scale_settings_large = { bias = -0.5 min = 0.8 max = 10 }
+	D008_building_byzantine_bastion_mesh = 1
+	material_index = 1
+	tag = fort
+	should_spawn_flags = yes
+}
+
+mesh_list = {
+	name = "byzantine_starfort"
+	scale_settings_large = { bias = -0.5 min = 0.8 max = 10 }
+	D008_building_byzantine_starfort_mesh = 1
+	material_index = 1
+	should_spawn_flags = yes
+	tag = fort
+}
+
+mesh_list = {
+	name = "byzantine_fortress"
+	scale_settings_large = { bias = -0.5 min = 0.8 max = 10 }
+	D008_building_byzantine_fortress_mesh = 1
+	material_index = 1
+	should_spawn_flags = yes
+	tag = fort
+}
+
+
+##################################################
+## 5. PORTS
+##################################################
+
+mesh_list = {
+	name = "byzantine_dock"
+	scale_settings_small = { min = 1.0 max = 1.0 }
+	scale_settings_large = { min = 1.0 max = 1.0 }
+	render_under_water = yes
+	clamp_to_water_level = yes
+	rotation = port
+	tag = port
+	d008_building_byzantine_dock_mesh = 1
+	material_index = 0
+}
+
+mesh_list = {
+	name = "byzantine_dry_dock"
+	scale_settings_small = { min = 1.0 max = 1.0 }
+	scale_settings_large = { min = 1.0 max = 1.0 }
+	render_under_water = yes
+	clamp_to_water_level = yes
+	rotation = port
+	tag = port
+	d008_building_byzantine_drydock_mesh = 1
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_shipyard"
+	scale_settings_small = { min = 1.0 max = 1.0 }
+	scale_settings_large = { min = 1.0 max = 1.0 }
+	render_under_water = yes
+	clamp_to_water_level = yes
+	rotation = port
+	tag = port
+	d008_building_byzantine_shipyard_mesh = 1
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_grand_shipyard"
+	scale_settings_small = { min = 1.0 max = 1.0 }
+	scale_settings_large = { min = 1.0 max = 1.0 }
+	render_under_water = yes
+	clamp_to_water_level = yes
+	rotation = port
+	tag = port
+	d008_building_byzantine_grandshipyard_mesh = 1
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_naval_base"
+	scale_settings_small = { min = 1.0 max = 1.0 }
+	scale_settings_large = { min = 1.0 max = 1.0 }
+	render_under_water = yes
+	clamp_to_water_level = yes
+	rotation = port
+	tag = port
+	d008_building_byzantine_naval_base_mesh = 1
+	material_index = 1
+}
+
+
+##################################################
+## 6. PRODUCTION
+##################################################
+
+mesh_list = {
+	name = "byzantine_factory"
+	scale_settings_small = { bias = -0.5 min = 1.0 max = 10 }
+	d008_building_byzantine_factory_a_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_factory_tier_2"
+	scale_settings_small = { bias = -0.5 min = 0.9 max = 10 }
+	d008_building_byzantine_factory_b_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_factory_tier_3"
+	scale_settings_small = { bias = -0.5 min = 1.3 max = 10 }
+	d008_building_byzantine_factory_c_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+
+##################################################
+## 7. MILITARY
+##################################################
+
+mesh_list = {
+	name = "byzantine_noble_military"
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
+	d008_building_byzantine_noble_military_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+mesh_list = {
+	name = "byzantine_republic_assembly"
+	scale_settings_small = { bias = -0.5 min = 1 max = 1 }
+	D008_building_byzantine_palace_mesh = 1
+	should_spawn_flags = no
+	material_index = 1
+}
+
+
+##################################################
+## 8. POPULATION
+##################################################
+
+mesh_list = {
+	name = "byzantine_noble"
+	scale_settings_small = { bias = -0.5 min = 1 max = 1 }
+
+	d008_building_byzantine_noble_a_mesh = 0.7
+	d008_building_byzantine_noble_b_mesh = 1
+	d008_building_byzantine_noble_c_mesh = 2
+
+	material_index = 1
+	spawn_count = { curve = "standard_pop_curve" }
+}
+
+mesh_list = {
+	name = "byzantine_burgher"
+	scale_settings_small = { bias = -0.5 min = 1.3 max = 10 }
+	d008_building_byzantine_burgher_diorama_a_mesh = 1
+	d008_building_byzantine_burgher_diorama_b_mesh = 1
+	d008_building_byzantine_burgher_diorama_c_mesh = 1
+	d008_building_byzantine_burgher_diorama_d_mesh = 1
+	material_index = 1
+	spawn_count = { curve = "standard_pop_curve" }
+}
+
+mesh_list = {
+	name = "byzantine_peasant"
+	scale_settings_small = { bias = -0.5 min = 1.8 max = 10 }
+	d008_building_byzantine_peasant_diorama_a_mesh = 100
+	d008_building_byzantine_peasant_diorama_b_mesh = 100
+	d008_building_byzantine_peasant_diorama_c_mesh = 100
+	d008_building_byzantine_peasant_diorama_d_mesh = 100
+	material_index = 0
+	spawn_count = { curve = "standard_pop_curve" }
+}
+
+mesh_list = {
+	name = "byzantine_peasant_rural_mesh"
+	scale_settings_small = { bias = 0 min = 1.8 max = 10 }
+	d008_building_byzantine_peasant_diorama_a_mesh = 100
+	d008_building_byzantine_peasant_diorama_b_mesh = 100
+	d008_building_byzantine_peasant_diorama_c_mesh = 100
+	d008_building_byzantine_peasant_diorama_d_mesh = 100
+	material_index = 0
+	spawn_count = { curve = "standard_pop_peasants_curve" }
+}
+
+
+##################################################
+## 9. WALLS
+##################################################
+
+## Byzantine (small_city_walls and under construction)
+
+mesh_list = {
+	name = "byzantine_wall"
+	d008_building_byzantine_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "byzantine_wall_tower"
+	d008_building_byzantine_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "byzantine_wall_gate"
+	d008_building_byzantine_walls_door_mesh = 1
+}
+
+mesh_list = {
+	name = "byzantine_wall_underconstruction"
+	d008_building_byzantine_walls_underconstruction_mesh = 1
+}
+
+## Constantinople (large_city_walls — Constantinople only, via constantinople_city_walls template)
+
+mesh_list = {
+	name = "constantinople_wall"
+	D008_monument_byzantine_constantinople_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "constantinople_wall_tower"
+	D008_monument_byzantine_constantinople_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "constantinople_wall_gate"
+	D008_monument_byzantine_constantinople_walls_door_mesh = 1
+}
+
+
+##################################################
+## 10. CULTURE DATA
+##################################################
+
+culture_data = {
+	graphical_culture = mediterranean_gfx
+	@noble_mesh_list    = byzantine_noble
+	@burgher_mesh_list  = byzantine_burgher
+	@peasant_mesh_list  = byzantine_peasant
+	@peasant_rural_mesh = byzantine_peasant_rural_mesh
+	@farming_mesh_list  = byzantine_farming_mesh_list
+
+	##FORTS##
+	load_template player_buildings {
+		fort_meshes     = byzantine_fort
+		bastion_meshes  = byzantine_bastion
+		starfort_meshes = byzantine_starfort
+		fortress_meshes = byzantine_fortress
+
+		##PORTS##
+		dock_meshes           = byzantine_dock
+		dry_dock_meshes       = byzantine_dry_dock
+		shipyard_meshes       = byzantine_shipyard
+		grand_shipyard_meshes = byzantine_grand_shipyard
+		naval_base_meshes     = byzantine_naval_base
+
+		##PRODUCTION##
+		factory_meshes        = byzantine_factory
+		factory_tier_2_meshes = byzantine_factory_tier_2
+		factory_tier_3_meshes = byzantine_factory_tier_3
+
+		##MILITARY##
+		noble_military_meshes      = byzantine_noble_military
+		republican_assembly_meshes = byzantine_republic_assembly
+	}
+
+	##RELIGION##
+	load_template religius_buildings
+	{
+		small_clergy_meshes  = byzantine_small_clergy
+		medium_clergy_meshes = byzantine_medium_clergy
+		large_clergy_meshes  = byzantine_large_clergy
+	}
+
+	##UNIQUE BUILDINGS##
+	load_template unique_buildings {}
+	load_template haga_sophia        { replace_meshes = byzantine_large_clergy }
+	load_template haga_sophia_mosque { replace_meshes = byzantine_large_clergy }
+
+	##POPULATION##
+	load_template nobles        { mesh_list = @noble_mesh_list }
+	load_template burghers      { mesh_list = @burgher_mesh_list }
+	load_template peasants      { mesh_list = @peasant_mesh_list }
+	load_template peasant_rural { mesh_list = @peasant_rural_mesh }
+
+	##RGO##
+	load_template rgo_all { farming_mesh_list = @farming_mesh_list }
+
+	##WALLS##
+	load_template constantinople_city_walls {}
+
+	load_template large_city_walls {
+		wall_mesh_list  = constantinople_wall
+		tower_mesh_list = constantinople_wall_tower
+		gate_mesh_list  = constantinople_wall_gate
+	}
+	load_template small_city_walls {
+		wall_mesh_list  = byzantine_wall
+		tower_mesh_list = byzantine_wall_tower
+		gate_mesh_list  = byzantine_wall_gate
+	}
+	load_template small_city_walls_under_construction {
+		wall_mesh_list  = byzantine_wall_underconstruction
+		gate_mesh_list  = byzantine_wall_gate
+	}
+}

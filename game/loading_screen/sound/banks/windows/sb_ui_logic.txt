@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	62122785	UI_hoverOff_shield			\ev_UI\mousePointer\UI_hoverOff_shield	hooked only on sound.gui as a template - Leon 18/09/2024
 	76864608	UI_alert_appear			\ev_UI\alerts\UI_alert_appear	
 	99965767	UI_event_age_3_discovery			\ev_UI\events\UI_event_age_3_discovery	hooked only on eventwindow.gui - Leon 18/09/2024
+	100834342	OMEN_EXPIRED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Hellenic_omens\OMEN_EXPIRED	
 	110231398	UI_action_advances_research_add			\ev_UI\actions\UI_action_advances_research_add	
 	136284562	UI_button_gameNew_confirm			\ev_UI\button\UI_button_gameNew_confirm	hooked in frontend_mainview.gui and frontend_singleplayer.gui with on_action
 	145257136	WE_PERFORM_train_admiral_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\military\WE_PERFORM_train_admiral_ACTION	
@@ -126,6 +127,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1471806109	UI_action_automate_enable			\ev_UI\actions\UI_action_automate_enable	
 	1483658475	UI_panelChild_economy_trading_trades_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_trades_show	
 	1487799759	UI_speedDecrease			\ev_UI\POTENTIALLY DEPRECATED POOL\UI_speedDecrease	hooked only on game_audio.h - Leon 18/09/2024
+	1493041472	WE_PERFORM_select_omen_god_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Hellenic_omens\WE_PERFORM_select_omen_god_ACTION	
 	1498491076	WE_PERFORM_take_estate_loan_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_take\WE_PERFORM_take_estate_loan_ACTION	
 	1499424373	UI_panelChild_economy_trading_markets_show			\ev_UI\panel\panel_left\economy\UI_panelChild_economy_trading_markets_show	
 	1515078172	UI_checkbutton_default			\ev_UI\button\UI_checkbutton_default	hooked only on defaults.gui - Leon 18/09/2024
@@ -155,6 +157,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1827843101	UI_flow_start_new_game			\ev_UI\flow\UI_flow_start_new_game	
 	1853441180	UI_alert_appear_red			\ev_UI\alerts\UI_alert_appear_red	
 	1859653464	UI_unit_hoverOn			\ev_UI\unit_controls\UI_unit_hoverOn	
+	1863796626	situation_ended			\ev_UI\situation\situation_ended	
 	1866827072	UI_panelAux_military_builder_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_military_builder_show	
 	1878216141	UI_button_exit_toMainMenu			\ev_UI\button\UI_button_exit_toMainMenu	
 	1886893979	UI_panel_geopolitics_expansion_show			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_expansion_show	
@@ -188,9 +191,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	2118900976	UI_hover			\ev_UI\mousePointer\UI_hover	hooked only on sound.gui as a template - Leon 18/09/2024
 	2126965355	UI_checkbutton_diamond			\ev_UI\button\UI_checkbutton_diamond	hooked on buttons.gui - Leon 18/09/2024
 	2133833785	UI_panel_economy_markets_show			\ev_UI\panel\panel_left\economy\UI_panel_economy_markets_show	
+	2143696834	DECLWAR_ON_SUBJECT			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_ON_SUBJECT	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2181272451	UI_action_character_death			\ev_UI\actions\UI_action_character_death	
 	2188861279	UI_popup_war_message			\ev_UI\popup\popup_type\UI_popup_war_message	
 	2189963872	UI_panel_show			\ev_UI\panel\UI_panel_show	
+	2194593387	DECLWAR_ON_UNION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_ON_UNION	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2214257447	UI_popup_basic_message			\ev_UI\popup\popup_type\UI_popup_basic_message	
 	2214819711	PARLIAMENT_ISSUE_PASSED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_success\PARLIAMENT_ISSUE_PASSED	
 	2230199699	UI_checkbutton_round			\ev_UI\button\UI_checkbutton_round	hooked on buttons.gui - Leon 18/09/2024
@@ -201,6 +206,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2285978820	UI_checkbutton_square			\ev_UI\button\UI_checkbutton_square	hooked on buttons.gui - Leon 18/09/2024
 	2291310513	UI_notification_show			\ev_UI\notification\UI_notification_show	
 	2302165565	UI_button_plus			\ev_UI\button\UI_button_plus	hoooked on standard_types.gui and buttons.gui - Leon 18/09/2024
+	2305190939	DECLWAR_WE_JOIN			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_WE_JOIN	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2349945590	UI_event_age_4_reformation			\ev_UI\events\UI_event_age_4_reformation	hooked only on eventwindow.gui - Leon 18/09/2024
 	2353636589	UI_panel_internationalOrganizations_show			\ev_UI\panel\panel_right\UI_panel_internationalOrganizations_show	
 	2366001700	UI_panelChild_advances_research_show			\ev_UI\panel\panel_left\advances\UI_panelChild_advances_research_show	
@@ -217,6 +223,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2483300427	UI_popup_country_message			\ev_UI\popup\popup_type\UI_popup_country_message	
 	2489330806	UI_popup_religion_message			\ev_UI\popup\popup_type\UI_popup_religion_message	
 	2490112630	UI_popup_location_message			\ev_UI\popup\popup_type\UI_popup_location_message	
+	2492750350	disaster_started			\ev_UI\notification\disaster_started	
 	2506117631	UI_event_age_option_diplomatic			\ev_UI\events\UI_event_age_option_diplomatic	hooked only on sound.gui as a template - Leon 18/09/2024
 	2509247896	UI_event_negative			\ev_UI\events\UI_event_negative	
 	2515565625	UI_panelChild_society_people_rebels_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_rebels_show	
@@ -231,6 +238,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2600706187	UI_hover_alert			\ev_UI\mousePointer\UI_hover_alert	hooked only on sound.gui as a template - Leon 18/09/2024
 	2617125450	UI_panelChild_society_religion_doctrine_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_religion_doctrine_show	
 	2628239431	UI_alert_appear_blue			\ev_UI\alerts\UI_alert_appear_blue	
+	2666053693	DECLWAR_AS_SUBJECT			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_AS_SUBJECT	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2682833690	UI_panelAux_buildLocation_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_buildLocation_show	
 	2704079083	UI_panel_government_country_show			\ev_UI\panel\panel_left\government\UI_panel_government_country_show	
 	2727482282	UI_alert_appear_yellow_diplo			\ev_UI\alerts\UI_alert_appear_yellow_diplo	
@@ -255,12 +263,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	2886109600	BRIBE_ESTATE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Estate_bribe\BRIBE_ESTATE	
 	2890747618	UI_map_goto			\ev_UI\map\UI_map_goto	
 	2898280575	UI_event_bg_north_german_clergy_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_interior	
+	2899636785	situation_started			\ev_UI\situation\situation_started	
 	2916084332	UI_panelChild_geopolitics_maritime_coasts_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_coasts_show	
 	2920080030	UI_panelAux_diplomacy_manageSubjects_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_manageSubjects_show	
 	2924931311	UI_cursor_rightclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_aborted	
 	2927605888	UI_gameStart_cloud_in			\ev_UI\startgame_sequence\UI_gameStart_cloud_in	hooked in animation.gui with start_sound
 	2930253213	monthly_tick_income_signifier			\ev_UI\time\monthly_tick_income_signifier	Triggered at the end of every month, much which we're treating much like a "report".  This report is a time notification in essence, though also includes feedback depending on whether buildings have been completed, research has been completed, and whether income was overall positive or negative, all over the course of an in-game month.   After playing research and building completed switches (which have audio feedback enabled from UI_notify_advance_research_complete and UI_notify_building_finished), the corresponding switches are reset back to "default"   Removed inclusion of "balance" as this is no longer something we felt appropriate for monthly update.  Including here our understood difference between "balance" vs "income" Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source) Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")  No delays are set on this event, and are instead dealt with on the actors triggered    Previous note on this event: THIS ONE SHOULD ACTUALLY BE IMPLEMENTED BY ALEX AS PER CAESAR-25858
 	2949462130	UI_panelChild_geopolitics_maritime_privateers_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_privateers_show	
+	2963279329	WE_PERFORM_select_omen_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Hellenic_omens\WE_PERFORM_select_omen_ACTION	
+	2972282805	DECLWAR			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2983903936	UI_action_production_expand_rgo			\ev_UI\actions\UI_action_production_expand_rgo	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
 	3000364817	UI_panelChild_government_country_parliament_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_parliament_show	
 	3012140585	UI_panelAux_battle_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_battle_show	Used in a blockoverride in battle lateralview (which swaps out the block in "template snd_UI_panel" in sounds.gui) This is under panel_auxiliary structure as at time of adding we're somewhat unsure how this will be used. 
@@ -268,6 +279,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3035926175	UI_diplomatic_action_covert			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_covert	
 	3041563226	silence			\ev_UI\panel\silence	an empty event to maybe use to evade errors
 	3054099920	UI_panel_character_show			\ev_UI\panel\panel_right\UI_panel_character_show	
+	3089862067	DECLWAR_WE_AID			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_WE_AID	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	3117304105	UI_mapmode_terrain_show			\ev_UI\map\UI_mapmode_terrain_show	
 	3118971615	UI_popup_institution_message			\ev_UI\popup\popup_type\UI_popup_institution_message	
 	3132668674	UI_alert_disappear			\ev_UI\alerts\UI_alert_disappear	
@@ -278,6 +290,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3193081913	UI_action_production_method_change			\ev_UI\actions\UI_action_production_method_change	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
 	3206315385	GRANT_PRIVILEGE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Privilege_grant\GRANT_PRIVILEGE	
 	3207691944	UI_hover_shield			\ev_UI\mousePointer\UI_hover_shield	hooked only on sound.gui as a template - Leon 18/09/2024
+	3210986517	disaster_ended			\ev_UI\notification\disaster_ended	
 	3212963646	UI_panel_location_show			\ev_UI\panel\panel_right\UI_panel_location_show	
 	3219236936	UI_action_road_build			\ev_UI\actions\UI_action_road_build	
 	3219439502	UI_panel_military_units_show			\ev_UI\panel\panel_left\military\UI_panel_military_units_show	
@@ -291,6 +304,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3266926730	UI_panel_geopolitics_select			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_select	
 	3282376362	UI_open			\ev_UI\navigation\UI_open	hooked only on sound.gui as a template - Leon 18/09/2024
 	3307088016	UI_hoverOff_flag			\ev_UI\mousePointer\UI_hoverOff_flag	hooked only on sound.gui as a template - Leon 18/09/2024
+	3321394772	DECLWAR_AS_UNION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_AS_UNION	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	3327114082	UI_panelChild_military_units_currentNavies_show			\ev_UI\panel\panel_left\military\UI_panelChild_military_units_currentNavies_show	
 	3332738749	UI_eventGeneric_option_rewarding			\ev_UI\events\UI_eventGeneric_option_rewarding	hooked only on sound.gui as a template - Leon 18/09/2024
 	3362151704	PARLIAMENT_ISSUE_FAILED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_failed\PARLIAMENT_ISSUE_FAILED	
@@ -429,11 +443,11 @@ Effect plug-ins	ID	Name	Type				Notes
 	602431758	Parametric EQ (Custom)	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
-	131369381	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_pause_levels\silence\Silence	
-	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
-	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
-	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\02_hi\Sine	
-	829218908	Silence	Wwise Silence		\Actor-Mixer Hierarchy\UI\UI\time\pause_unpause\UI_unpause_levels\silence\Silence	
-	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\04_low\Sine	
+	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\05_very_low\Sine	
+	131369381	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ui\UI\time\pause_unpause\UI_pause_levels\silence\Silence	
+	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\01_very_hi\Sine	
+	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\03_mid\Sine	
+	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\02_hi\Sine	
+	829218908	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ui\UI\time\pause_unpause\UI_unpause_levels\silence\Silence	
+	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\04_low\Sine	
 

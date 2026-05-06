@@ -280,6 +280,15 @@ pdxmesh = {
 	animation = { id = "grenade_idle_02_animation"	type = "animations/grenade/grenade_idle_02_animation.anim" }
 	animation = { id = "grenade_idle_03_animation"	type = "animations/grenade/grenade_idle_03_animation.anim" }
 
+		#flamethrower#
+	animation = { id = "flamethrower_walk_animation"	type = "animations/flamethrower/flamethrower_walk.anim" }
+	animation = { id = "flamethrower_charge_animation"	type = "animations/flamethrower/flamethrower_charge.anim" }
+	animation = { id = "flamethrower_attack_animation"	type = "animations/flamethrower/flamethrower_attack.anim" }
+	animation = { id = "flamethrower_idle_01_animation"	type = "animations/flamethrower/flamethrower_idle_01.anim" }
+	animation = { id = "flamethrower_idle_02_animation"	type = "animations/flamethrower/flamethrower_idle_02.anim" }
+	animation = { id = "flamethrower_idle_03_animation"	type = "animations/flamethrower/flamethrower_idle_03.anim" }
+
+
 	#cavalry#
 	animation = { id = "unit_horse_riding_pose_animation"	type = "animations/horse/unit_horse_riding_pose.anim" }
 

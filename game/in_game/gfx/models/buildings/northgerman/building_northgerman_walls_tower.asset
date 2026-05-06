@@ -1,0 +1,84 @@
+pdxmesh = {
+	name = "building_northgerman_walls_tower_mesh"
+	file = "building_northgerman_walls_tower.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	scale = 50
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_lod0"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_atlas_lod0"
+		index = 0
+		texture_diffuse = "atlas_master_original_diffuse.dds"
+		texture_normal = "atlas_master_original_normal.dds"
+		texture_specular = "atlas_master_original_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_lod1"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_atlas_lod1"
+		index = 0
+		texture_diffuse = "atlas_master_original_diffuse.dds"
+		texture_normal = "atlas_master_original_normal.dds"
+		texture_specular = "atlas_master_original_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_lod2"
+		index = 0
+		texture_diffuse = "building_northgerman_fortress_diffuse.dds"
+		texture_normal = "building_northgerman_fortress_normal.dds"
+		texture_specular = "building_northgerman_fortress_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_northgerman_walls_tower_atlas_lod2"
+		index = 0
+		texture_diffuse = "atlas_master_original_diffuse.dds"
+		texture_normal = "atlas_master_original_normal.dds"
+		texture_specular = "atlas_master_original_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_northgerman_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+}
+
+entity = {
+	name = "building_northgerman_walls_tower_entity"
+	pdxmesh = "building_northgerman_walls_tower_mesh"
+}

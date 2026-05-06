@@ -128,12 +128,12 @@ PixelShader =
 
 		void GetProvinceOverlayAndBlendCustom( in float2 NormalizedCoordinate, out float3 ProvinceOverlayColor, out float PreLightingBlend, out float PostLightingBlend )
 		{
-			float DistanceFieldValue = CalcDistanceFieldValue( NormalizedCoordinate );
+			float DistanceFieldValue = PdxTex2D( BorderDistanceFieldTexture, NormalizedCoordinate ).r;//CalcDistanceFieldValue( NormalizedCoordinate ); without extra samples, the border distance is already a distance field so the extra smoothing that we get for the function is not noticeable or worth it
 			float4 ProvinceOverlayColorWithAlpha = CalcPrimaryProvinceOverlay( NormalizedCoordinate, DistanceFieldValue );
 
 			ApplySecondaryProvinceOverlayCustom( NormalizedCoordinate, DistanceFieldValue, ProvinceOverlayColorWithAlpha );
 			
-			ApplyAlternateProvinceOverlay( NormalizedCoordinate, ProvinceOverlayColorWithAlpha );
+			//ApplyAlternateProvinceOverlay( NormalizedCoordinate, ProvinceOverlayColorWithAlpha ); //we don't really use alternate colors for anything so this is computational power wasted
 			GetGradiantBorderBlendValues( ProvinceOverlayColorWithAlpha, PreLightingBlend, PostLightingBlend );
 			PreLightingBlend = saturate(PreLightingBlend);
 			PostLightingBlend = saturate(PostLightingBlend);
@@ -144,7 +144,7 @@ PixelShader =
 		void GetProvinceOverlayAndBlendForCityCustom( in float2 NormalizedCoordinate, in float2 ColorIndex, in float4 PrimaryColor, out float3 ProvinceOverlayColor, out float PreLightingBlend, out float PostLightingBlend )
 		{
 
-			float DistanceFieldValue = CalcDistanceFieldValue( NormalizedCoordinate );
+			float DistanceFieldValue = PdxTex2D( BorderDistanceFieldTexture, NormalizedCoordinate ).r;//CalcDistanceFieldValue( NormalizedCoordinate ); without extra samples, the border distance is already a distance field so the extra smoothing that we get for the function is not noticeable or worth it
 			float4 ProvinceOverlayColorWithAlpha = CalcPrimaryProvinceOverlayForCities( PrimaryColor, DistanceFieldValue );
 
 			ApplySecondaryProvinceOverlayCustomForCity( NormalizedCoordinate, ColorIndex, DistanceFieldValue, ProvinceOverlayColorWithAlpha );
@@ -320,7 +320,7 @@ PixelShader =
 				{
 					// This is a hack to sample colors a bit more "inwards" in an attempt to hide uncolored pixels
 					// Might not be needed with an SDF offset
-					float PixelSize = ColorMapCoords.x / ( WorldSpacePos.x + 0.0001f );
+					float PixelSize = ColorMapCoords.x / ( WorldSpacePos.x + 0.0001f )*0.6;
 					float SampC = Base._RawSdfSample;
 					float SampX = PdxTex2DLod( FlatMapTex, Base._FlatMapUV + PixelSize * float2(3,0), 0.0 ).a;
 					float SampY = PdxTex2DLod( FlatMapTex, Base._FlatMapUV + PixelSize * float2(0,3), 0.0 ).a;
@@ -339,8 +339,9 @@ PixelShader =
 				float TerrainColorMod = Remap( TerrainSample.g, FlatMapMaterialColorMidPoint, 1.0, 0.0, FlatMapMaterialColorStrength );
 				ColorMask = saturate( ColorMask + TerrainColorMod * TerrainSample.a );
 				
-				float ColorNoise = Remap( Detail.b, FlatMapColorDetailMidPoint, 1.0, 0.0, FlatMapColorDetailStrength );
-				ColorMask = lerp( ColorMask, saturate( ColorMask + ColorNoise ), smoothstep( 0.5f, 0.0f, abs( ColorMask - 0.5f ) ) );
+				ColorMask = smoothstep(0.0,0.25,ColorMask*ColorMask);// sharpen the colors
+				
+
 				if( Base._CoastLineDistance > -0.015f && Base._CoastLineDistance < 0.015f )
 				{
 					// Hide areas where we don't have color data
@@ -348,11 +349,10 @@ PixelShader =
 					float4 Color = BilinearColorSample( ColorMapCoords, IndirectionMapSize, InvIndirectionMapSize, ProvinceColorIndirectionTexture, SeaColorsTexture );
 					LandLerp *= RemapClamped( Color.r, 1.0, 0.8, 1.0, 0.0 );
 				}
-
+				
 				LandColor = lerp( LandColor, ColorOverlay, ColorMask );
 				SeaColor = lerp( SeaColor, ColorOverlay, ColorMask );
-				//Drop shadow
-				LandColor *= LandLerp;
+
 
 			#endif
 

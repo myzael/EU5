@@ -6,6 +6,8 @@
 	blend_shape = { id = "eyelashes_upper_lid_size_2_min"    type = "male_eyelashes_bs_upper_lid_size_2_min.mesh" }
 	blend_shape = { id = "eyelashes_eye_angle_max"    type = "male_eyelashes_bs_eye_angle_max.mesh" }
 	blend_shape = { id = "eyelashes_eye_angle_min"    type = "male_eyelashes_bs_eye_angle_min.mesh" }
+	blend_shape = { id = "disfigurement_01"    type = "male_eyelashes_bs_disfigurement_01.mesh" }
+	blend_shape = { id = "disfigurement_02"    type = "male_eyelashes_bs_disfigurement_02.mesh" }
 
 	meshsettings = {
 		name = "male_eyelashesShape"
@@ -26,6 +28,8 @@ entity = {
 	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_min" }
 	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
 	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -36,15 +40,16 @@ entity = {
 	}
 }
 
+entity = {
+	name = "male_eyelashes_upper_entity"
+	pdxmesh = "male_eyelashes_mesh"
 
-pdxmesh = {
-	name = "male_eyelashes_upper_mesh"
-	file = "male_eyelashes.mesh"
-
-	blend_shape = { id = "eyelashes_upper_lid_size_min"    type = "male_eyelashes_bs_upper_lid_size_min.mesh" }
-	blend_shape = { id = "eyelashes_upper_lid_size_2_min"    type = "male_eyelashes_bs_upper_lid_size_2_min.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_max"    type = "male_eyelashes_bs_eye_angle_max.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_min"    type = "male_eyelashes_bs_eye_angle_min.mesh" }
+	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
+	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
+	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	meshsettings = {
 		name = "male_eyelashesShape"
@@ -55,16 +60,6 @@ pdxmesh = {
 		shader = "portrait_hair_alpha"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
-}
-
-entity = {
-	name = "male_eyelashes_upper_entity"
-	pdxmesh = "male_eyelashes_upper_mesh"
-
-	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
-	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
-	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
-	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -75,14 +70,16 @@ entity = {
 	}
 }
 
-pdxmesh = {
-	name = "male_eyelashes_thick_mesh"
-	file = "male_eyelashes.mesh"
+entity = {
+	name = "male_eyelashes_thick_entity"
+	pdxmesh = "male_eyelashes_mesh"
 
-	blend_shape = { id = "eyelashes_upper_lid_size_min"    type = "male_eyelashes_bs_upper_lid_size_min.mesh" }
-	blend_shape = { id = "eyelashes_upper_lid_size_2_min"    type = "male_eyelashes_bs_upper_lid_size_2_min.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_max"    type = "male_eyelashes_bs_eye_angle_max.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_min"    type = "male_eyelashes_bs_eye_angle_min.mesh" }
+	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
+	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
+	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	meshsettings = {
 		name = "male_eyelashesShape"
@@ -93,16 +90,6 @@ pdxmesh = {
 		shader = "portrait_hair_alpha"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
-}
-
-entity = {
-	name = "male_eyelashes_thick_entity"
-	pdxmesh = "male_eyelashes_thick_mesh"
-
-	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
-	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
-	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
-	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -113,14 +100,16 @@ entity = {
 	}
 }
 
-pdxmesh = {
-	name = "male_eyelashes_thick_upper_mesh"
-	file = "male_eyelashes.mesh"
+entity = {
+	name = "male_eyelashes_thick_upper_entity"
+	pdxmesh = "male_eyelashes_mesh"
 
-	blend_shape = { id = "eyelashes_upper_lid_size_min"    type = "male_eyelashes_bs_upper_lid_size_min.mesh" }
-	blend_shape = { id = "eyelashes_upper_lid_size_2_min"    type = "male_eyelashes_bs_upper_lid_size_2_min.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_max"    type = "male_eyelashes_bs_eye_angle_max.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_min"    type = "male_eyelashes_bs_eye_angle_min.mesh" }
+	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
+	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
+	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	meshsettings = {
 		name = "male_eyelashesShape"
@@ -131,16 +120,6 @@ pdxmesh = {
 		shader = "portrait_hair_alpha"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
-}
-
-entity = {
-	name = "male_eyelashes_thick_upper_entity"
-	pdxmesh = "male_eyelashes_thick_upper_mesh"
-
-	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
-	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
-	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
-	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
 
 	game_data = {
 		portrait_entity_user_data = {
@@ -151,14 +130,16 @@ entity = {
 	}
 }
 
-pdxmesh = {
-	name = "male_eyelashes_thick_upper_only_mesh"
-	file = "male_eyelashes.mesh"
+entity = {
+	name = "male_eyelashes_thick_upper_only_entity"
+	pdxmesh = "male_eyelashes_mesh"
 
-	blend_shape = { id = "eyelashes_upper_lid_size_min"    type = "male_eyelashes_bs_upper_lid_size_min.mesh" }
-	blend_shape = { id = "eyelashes_upper_lid_size_2_min"    type = "male_eyelashes_bs_upper_lid_size_2_min.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_max"    type = "male_eyelashes_bs_eye_angle_max.mesh" }
-	blend_shape = { id = "eyelashes_eye_angle_min"    type = "male_eyelashes_bs_eye_angle_min.mesh" }
+	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
+	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
+	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
+	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	meshsettings = {
 		name = "male_eyelashesShape"
@@ -169,16 +150,6 @@ pdxmesh = {
 		shader = "portrait_hair_alpha"
 		shader_file = "gfx/FX/jomini/portrait.shader"
 	}
-}
-
-entity = {
-	name = "male_eyelashes_thick_upper_only_entity"
-	pdxmesh = "male_eyelashes_thick_upper_only_mesh"
-
-	attribute = { name = "bs_eye_upper_lid_size_min"    blend_shape = "eyelashes_upper_lid_size_min" }
-	attribute = { name = "bs_eye_upper_lid_size_2_min"    blend_shape = "eyelashes_upper_lid_size_2_min" }
-	attribute = { name = "bs_eye_angle_max"    blend_shape = "eyelashes_eye_angle_max" }
-	attribute = { name = "bs_eye_angle_min"    blend_shape = "eyelashes_eye_angle_min" }
 
 	game_data = {
 		portrait_entity_user_data = {

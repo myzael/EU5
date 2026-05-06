@@ -109,6 +109,11 @@ group:cloth_country_one_ticking_stripes_group = {
 	15 = cloth_only_white_group	
 }
 
+group:cloth_country_diagonal_group = {
+	95 = cloth_country_diagonal
+	5 = cloth_country_solid_group	
+}
+
 group:cloth_country_medieval = {
 	50 = cloth_country_solid_group
 	50 = cloth_country_split

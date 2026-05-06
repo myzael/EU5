@@ -36,6 +36,794 @@
 
 
 
+$TITLE_FATE_OF_THE_PHOENIX$
+$TITLE_IMMERSION_PACK$
+
+
+
+$STUDIO_PARADOX_TINTO$
+
+
+
+$ROLE_GAME_DIRECTOR$
+Johan Andersson
+$ROLE_ASSOCIATE_GAME_DIRECTOR$
+David Horler
+
+$ROLE_EXECUTIVE_PRODUCER$
+Franco Freda
+Sonia Linares Martínez
+
+$ROLE_GAME_DESIGNER$
+The Entire Team at Paradox Tinto
+
+$ROLE_TECH_DIRECTOR$
+Alexander Ivannikov
+
+$ROLE_ART_DIRECTOR$
+David Horler
+
+$ROLE_CONTENT_DESIGN_LEAD_MANAGER$
+Álvaro Sanz
+
+$ROLE_ASSOCIATE_PRODUCER$
+Arnau Casellas
+
+$IT_RELEASE_AND_QA_MANAGER$
+Kuba Gabryel
+
+$ROLE_UX_UI_MANAGER$
+Èric Vicent i Ferrer
+
+$ROLE_ART_MANAGER$
+Stefan Vonboe Lang
+
+$ROLE_2D_COORDINATOR$
+Matias Tiscornia Pujol
+
+$ROLE_GAME_PROGRAMMER$
+Johan Andersson
+James Capstick
+Jordi Santiago Provencio
+Adrián González López
+Albert Martinez Oliver
+Sergey Demidov
+Aurelien Delay
+Olle Sundin
+Jakub Woldon
+Pedro González-Anta
+
+$ROLE_ENGINE_PROGRAMMER$
+Alex García Giménez
+Ricardo Pérez Cortés
+Riccardo Maria
+
+$ROLE_CONTENT_DESIGNER$
+Álvaro Sanz
+Javier Salazar Vilches
+Ogulcan Yildirim
+Raúl Trullenque Viudas
+Roger Corominas Guillen
+William Samelis
+Markus Hofmann
+
+$ROLE_UX_UI_DESIGNER$
+Èric Vicent i Ferrer
+Jorge Baringo Castel
+
+$ROLE_2D_ARTIST$
+Cristina Arenas Béjar
+Matias Tiscornia Pujol
+Mina Noughou
+Sara Monzón Ramírez
+
+$ROLE_3D_ENVIRONMENT_ARTIST$
+Javier Izquierdo
+
+$ROLE_3D_CHARACTER_ARTIST$
+Artur Augusto
+
+$ROLE_QA_TESTER$
+George Fournaris
+Marc Ghattas
+
+$ROLE_QA_AUTOMATION$
+George Fournaris
+
+
+
+$DISCIPLINE_ADDITIONAL$
+
+$ROLE_ADDITIONAL_PROGRAMMER$
+David Horler
+Ogulcan Yildirim
+Danieulsus Vitkauskas
+Stefan Lindström
+
+$ROLE_ADDITIONAL_CONTENT_DESIGNER$
+Nolan Myrick
+Hubert Musiał
+Pavel Poprík
+Vasileios Magos
+
+$ROLE_LOCALIZATION_REVIEWER_EDITOR$
+Anna Merchant
+
+$ROLE_ADDITIONAL_2D_ARTIST$
+Axel Alba Morcillo
+Mathieu Boyer
+Raphael Berthoud
+Lucas Somariva
+
+$ROLE_ADDITIONAL_3D_CHARACTER_ARTIST$
+Pierre Azuelos
+Nils Wadensten
+
+$ROLE_ASSISTANT_PRODUCER$
+Laura Cort Ferreres
+Nicolás Holemans Pepermans
+
+$ROLE_ART_RESEARCHER$
+Enrique Sales Ruiz
+
+$ROLE_ADDITIONAL_3D_ENVIRONMENT_ARTIST$
+Luisa Rodríguez Salazar
+Lidia Ortolá Calatayud
+Nerea Echeverria Rodríguez
+
+$ROLE_VFX_ARTIST$
+Sean Meegan
+
+$ROLE_UI_DEVELOPER$
+Alejandro Arfini
+Anne Björnsdotter
+Albert Manyà
+Jon Olsson
+
+$ROLE_SUPPORT_TOOLS_PROGRAMMER$
+Nicolai Frosch
+
+$ROLE_ADDITIONAL_QA$
+Pawel Adamczyk
+Anton Baringo Castel
+Yamaan Ziade
+
+
+$DISCIPLINE_COMMUNITY_MANAGEMENT$
+
+$ROLE_COMMUNITY_MANAGER$
+Ryan Booher
+
+$ROLE_COMMUNITY_AMBASSADOR$
+
+Alex Dunk
+Clément Thébault
+Yamaan Ziade
+Lizhi Dong
+
+
+$DISCIPLINE_LOCALIZATION_PRODUCTION$
+Arnau Casellas
+Roger Corominas Guillen
+Laura Cort 
+
+
+
+$DISCIPLINE_MANAGEMENT$
+
+$ROLE_STUDIO_MANAGER$
+Johan Andersson
+
+$ROLE_HEAD_OF_OPERATIONS$
+Franco Freda
+Sonia Linares Martínez
+
+
+
+$DISCIPLINE_OFFICE$
+
+$ROLE_FACILITIES$
+Nuria Rubira
+Aura Casañas Marcano
+Jorge Arce
+
+
+
+$STUDIO_PARADOX_INTERACTIVE$
+
+$ROLE_VP_OF_BUSINESS_-_GSG$
+Fabricio Santos
+
+$ROLE_BUSINESS_OWNER$
+Pieter Waterreus
+
+$ROLE_PRODUCT_MARKETING_MANAGEMENT$
+Alan Mahmodian
+Hanna Holmgren
+
+$ROLE_MANAGER_OF_PRODUCT_LAUNCH$
+Nicole Savage
+
+$ROLE_RELEASE_MANAGER$
+Ana Pinton
+
+$ROLE_MARKETING_CREATIVE$
+Johan Adegran
+
+$ROLE_BRAND_LICENSING_SPECIALIST$
+Erik Jakobsson
+
+$ROLE_PUBLIC_RELATIONS$
+Troy Goodfellow
+
+
+
+$DISCIPLINE_PARADOX_AUDIO$
+
+$ROLE_HEAD_OF_AUDIO$
+Samet Atasoy
+
+
+$ROLE_AUDIO_DIRECTOR$
+Mattias Wennlund
+
+$ROLE_MUSIC_BUSINESS_DIRECTOR$
+Tobias Gustavsson
+
+$ROLE_MUSIC_BUSINESS_CONSULTANT$
+Yannick Süß
+
+$ROLE_SOUND_DESIGNER$
+Leon Lopez Moral
+
+
+
+
+
+$STUDIO_BYZANTINE_SOUNDTRACK$
+
+$ROLE_PRODUCER$
+Andreas Unge
+
+$ROLE_ORCHESTRA$
+KOP-Kören
+$ROLE_CONDUCTOR$
+Sebastian Heurlin
+
+$ROLE_RECORDING_ENGINEER$
+Jerker Eklund
+
+$ROLE_MIXING_ENGINEER$
+Jerker Eklund
+
+$ROLE_ORCHESTRATION$
+Sebastian Heurlin
+
+$ROLE_SCORE_PARTS_PREPARATION$
+Sebastian Heurlin
+
+
+
+$STUDIO_NIX_GAME_VR_STUDIO$
+
+$ROLE_NIX_EXECUTIVE_PRODUCER$
+Sergii Gotsman
+
+$ROLE_NIX_PRODUCER$
+Oleksandr Holovakhin
+
+$ROLE_NIX_3D_CHARACTER_LEAD$
+Vitalii Shevchenko
+
+$ROLE_NIX_CHARACTER_ARTIST$
+Denys Lavrushyn
+Oleksandr Korniienko
+Alice Pustovoitova
+
+$ROLE_NIX_ANIMATOR$
+Oleksandr Horayko
+Polina Natalevych
+
+
+
+$STUDIO_GOODNAME_DIGITAL_ART_STUDIO$
+
+$ROLE_GOODNAME_CREATIVE_DIRECTOR$
+Erikas Perlikovskis
+
+$ROLE_GOODNAME_ART_MANAGER$
+Edvinas Ganusauskas
+Rytis Rogačius
+
+$ROLE_GOODNAME_ART_DIRECTOR$
+Mintautas Šukys
+
+$ROLE_GOODNAME_PRINCIPAL_ARTIST$
+Gintas Galvanauskas
+
+$ROLE_GOODNAME_TEAM_LEAD_CONCEPT_ARTIST$
+Paulius Daščioras
+
+$ROLE_GOODNAME_2D_ARTIST$
+Rimas Valeikis
+Vilhelmas Banys
+Yuliya Vasilyeva
+Mathias Meyer
+Rytis Sabaliauskas
+Danielius Borisevičius
+
+
+
+$STUDIO_POSIBILLIAN_TECH$
+
+$ROLE_POSIBILLIAN_PRODUCER$
+José Luis Parcerisa Gonzalez
+
+$ROLE_POSIBILLIAN_PRODUCER$
+Roberto Cristaldo
+
+$ROLE_POSIBILLIAN_2D_ARTIST$
+Julio Andrés Peralta Leclerc
+Rocío Cabrera Elizeche
+Camila Barúa Castro
+Matías José González Dávalos
+
+
+$STUDIO_KEYWORDS$
+
+$ROLE_kEYWORDS_PROJECT_MANAGER$
+Gea Palau
+María Bazo
+
+
+
+$DISCIPLINE_FRENCH_TEAM$
+
+$ROLE_FR_REVIEWER$
+Alvina Veillon
+Hélène Roland
+Philippe Colin
+
+
+$ROLE_FR_TRANSLATOR$
+Marie-Noelle Wolffer
+Pierre Gehenne
+Julien Meunier-Sanquer
+Luc Gonachon
+Baptiste Almasio
+Audrey Lablanchy
+Annabelle Pauloby
+Alexia Gatumel
+Violaine Sauze
+
+
+
+$DISCIPLINE_SPANISH_TEAM$
+
+$ROLE_SP_REVIEWER$
+Manuel Mata Álvarez-Santullano
+Sebastián Sorroche Jurado
+
+$ROLE_SP_TRANSLATOR$
+Paula Osorio Pomares
+Mizar Becerril Bustos
+Alejandro Gómez de la Muñoza
+Carlos Lacasa Martín
+Ángela Fernández Pérez
+Eduard Roig Quincoces 
+Laia Fàbregas
+
+
+
+$STUDIO_NATIVE_PRIME_SAS$
+
+$ROLE_NATIVE_SENIOR_PROJECT_MANAGER$
+Julia Othlinghaus-Wulhorst
+Friedrich Klemme
+
+$ROLE_NATIVE_ADDITIONAL_PROJECT_MANAGER$
+Dieter Pfeil
+Maren Garn
+Franz Kamchen
+
+$ROLE_NATIVE_LOCALIZATION_QA_TOOLS$
+Friedrich Klemme
+Julia Othlinghaus-Wulhorst
+Dieter Pfeil
+Michael Waaler
+
+
+
+$DISCIPLINE_SIMPLIFIED_CHINESE_TEAM$
+
+$ROLE_CH_PROJECT_MANAGER$
+Troy Ye
+Crystal Wu
+
+
+$ROLE_CH_TRANSLATOR$
+Bei Lan
+Thomas Zeng
+Eric Zhao
+Kevin Song
+
+$ROLE_CH_LEAD_REVIEWER_EDITOR$
+Bruce Chen
+
+$ROLE_CH_REVIEWER_EDITOR$
+Haximodor He
+Yin Hu
+Rex Liu
+
+
+
+
+$DISCIPLINE_RUSSIAN_TEAM$
+
+$ROLE_RU_PROJECT_MANAGER$
+Loktionov Alexander
+
+$ROLE_RU_TRANSLATOR$
+Andrei Cherkovskii 
+Dmitrii Donskoi 
+Ian Bogomolov 
+Igor Vasiliev 
+Nikita Antonov 
+Nikolai Kondratenko 
+Maksim Onishchenko 
+Vadim Bogomolov 
+Vasilii Firsov
+
+$ROLE_RU_LEAD_REVIEWER_EDITOR$
+Oleg Gurin
+
+$ROLE_RU_PLAYTESTER$
+Nikita Shogin
+Alexander Radkevich
+
+
+
+$DISCIPLINE_KOREAN_TEAM$
+
+$ROLE_KO_PROJECT_MANAGER$
+Joonho Kim
+
+$ROLE_KO_TRANSLATOR$
+Jonghyun Yeom 
+Seojun Ahn
+
+$ROLE_KO_REVIEWER_EDITOR$
+Joonho Kim
+Seojun Ahn
+
+
+
+$DISCIPLINE_GERMAN_TEAM$
+
+$ROLE_GE_PROJECT_MANAGER$
+Julia Othlinghaus-Wulhorst
+Maren Garn
+Franz Kamchen
+
+$ROLE_GE_LEAD_TRANSLATOR$
+Kai Bagehorn
+Ole Johan Christiansen
+
+$ROLE_GE_LEAD_REVIEWER$
+Thomas Christiansen
+
+
+
+$DISCIPLINE_POLISH_TEAM$
+
+$ROLE_PO_PROJECT_MANAGER$
+Jacek Smoliński
+
+$ROLE_PO_TRANSLATOR$
+Łukasz Gładkowski
+Piotr Goździk
+Jacek Smoliński
+
+$ROLE_PO_REVIEWER_EDITOR$
+Sylwia Kastrau 
+Jacek Smoliński
+
+
+$DISCIPLINE_JAPANESE_TEAM$
+
+$ROLE_JP_PROJECT_MANAGER$
+James Davis
+
+$ROLE_JP_TRANSLATOR$
+Erika Siffert
+Yusuke Tsujita
+
+$ROLE_JP_REVIEWER_EDITOR$
+Yo Shin
+Shota Oya
+
+
+
+$DISCIPLINE_TURKISH_TEAM$
+
+$ROLE_TU_PROJECT_MANAGER$
+Sadi Fakihoğlu
+Ebru Yılmaz Akca
+Ali Barutçuoğlu
+
+$ROLE_TU_TRANSLATOR$
+Deniz Tunç Şafak
+ Işık Karakaş
+
+$ROLE_TU_REVIEWER_EDITOR$
+Berk Göbekcioğlu 
+Deniz Hepsakaryalı 
+Memduh Arzu 
+Mert Durmaz
+
+
+
+$DISCIPLINE_BRAZILIAN_PORTUGUESE_TEAM$
+
+$ROLE_BR_PROJECT_MANAGER$
+Dieggo Lessa
+
+$ROLE_BR_TRANSLATOR$
+Marianna de Oliveira Couto 
+Ramon Lourenço
+
+$ROLE_BR_REVIEWER_EDITOR$
+Dennys Gregory 
+Osman Alves 
+Sandra Smith
+
+
+
+$STUDIO_QLOC$
+
+$ROLE_QLOC_GENERAL_MANAGER$
+Adam Piesiak
+
+$ROLE_QLOC_HEAD_OF_BUSINESS_DEVELOPMENT$
+Paweł Książek
+
+$ROLE_QLOC_BUSINESS_DEVELOPMENT_MANAGER$
+Weronika Purgal
+
+$ROLE_QLOC_DIRECTOR_OF_QUALITY_ASSURANCE$
+Sergiusz Ślosarczyk
+
+$ROLE_QLOC_QA_OPERATIONS_MANAGER$
+Paweł Strzelczyk
+
+$ROLE_QLOC_LEAD_QA_PROJECT_MANAGER$
+Jakub Dudkowski
+
+$ROLE_QLOC_QA_PROJECT_MANAGERS$
+Kacper Bugaj
+Andrzej Tsupko
+
+$ROLE_QLOC_QA_LAB_MANAGERS$
+Piotr Badurek
+Konrad Kaczmarzyk
+Emil Lubowicki
+Gabriela Malinowska
+Tomasz Prusicki
+
+$ROLE_QLOC_LEARNING_DEVELOPMENT_COORDINATOR$
+Aleksandra Grigorian-Kopka
+
+$ROLE_QLOC_LEARNING_DEVELOPMENT_SPECIALIST$
+Michał Grabuś
+Damian Jasiński
+
+$ROLE_QLOC_FQA_TEAM_LEADERS$
+Krystian Bas
+Marta Czekalska
+Mateusz Kuriata
+Maria Latanowicz
+Tomasz Lisek
+Vladyslav Vovchenko
+
+$ROLE_QLOC_QA_TESTERS$
+Mateusz Adach
+Artur Adamczyk
+Jan Armatys
+Gracjan Banaszkiewicz
+Bartosz Byczyński
+Dawid Cegiełka
+Stanisław Chabowski
+Bartosz Chojnacki
+Piotr Cieślok
+Łukasz Dobrowolski
+Norbert Głowinkowski
+Wojciech Jakimiak
+Łukasz Kelsz
+Jakub Koryciński
+Mikołaj Kuchta
+Robert Lewczuk
+Adam Mitkiewicz
+Miłosz Pijawka
+Jakub Płomin
+Kamil Sulik
+Igor Szynkiewicz
+Michał Świtalski
+Mateusz Wieczorek
+
+
+$ROLE_QLOC_IT_DIRECTOR$
+Artur Szczurzyński
+
+
+
+$STUDIO_UNIVERSALLY_SPEAKING$
+
+$ROLE_LQA_MANAGER$
+Gregory Berger
+
+$ROLE_LQA_SENIOR_LEAD$
+Becky Koltunicki
+
+$ROLE_LQA_TESTERS$
+Lucie Kelterbaum 
+Manon Noblecourt
+Carlos Garcia-Maurino Arranz
+Maria Martin Regatos
+Yihan Xie
+Krzysztof Winikajtys
+Roxana Luiza Roman
+Mark Varnaliy
+Alex Shishkov
+Max Damien Muenster
+Sean Junseong Go
+Kumi Akutsu
+Eray Buyrukcu
+Natalie Tsang
+Yoon Tak
+Maxwell Jaehong Min
+Hiroyuki Ito
+Aiting Jia
+Cezary Ogloza
+Anna Mueller
+Alejandro Romero
+Paula Gonzalez
+Delphine Brunet
+Alina Dubovtseva
+Donggyu Kim
+Dilara Erdogan
+Alejandra Merida Martinez
+
+
+$STUDIO_COMMUNITY_TEAM$
+
+
+
+$DISCIPLINE_DISCORD_MODERATORS$
+
+Chefjones
+Clifton Maxwell
+Diego R.T. - Yeyo
+Eleanore Oldenziel - Lot26
+Flemsh
+Gary Baugher - IamCogs
+Janek Eisinger - Greeny3x3
+Joel Reimer - Air Admiral
+Johann Martin Krampe
+Justin Buschke
+Nicholas Wakemen - R. F. Omega
+Rebecca  Leite  - RebelSapph
+Shannon Arras - Arwys
+Trevor Williams - Vulcanus
+Twandhi
+YetiBandito
+Zack Radnan -  Ferdy
+
+
+
+$DISCIPLINE_COMMUNITY_LOCATION$
+
+$ROLE_RUSSIAN_LOC$
+Adrian Kish - Deterock
+
+$ROLE_CHINESE_JAPANESE$
+Lizzie Dong - yukistelle
+
+
+
+
+
+$DISCIPLINE_BETA_TESTERS$
+Zack Radnan/Zachariah Zeev  - Ferdy
+Janek Eisinger  - Greeny
+Carl Taylor - Viking_Nephilim
+Manuel Küting
+Sealand
+Miguel Batista - Stami
+Amy Druschke  - KaiserinAmy
+Michał Staniszewski - Bear of the Forest
+Angel Andrés Alcantud Alfaro - Anx
+Florian Gierschner - Flogi
+Christian P. - CaesarVincens
+Jonathan Bagley - BrokenButler
+Thomas William Perry - Featherus
+Alexandre Kerscher Souza
+Shannon Leigh Arras - Arwys
+Dmitrii Lebedev - Aetherum
+Agami
+Patrick Haberlag - D3v1l89
+José María Aguirre García de la Noceda - Txini
+Roger Weber - Sir Rogers
+Gaétan Cautain – DaftDef
+Anders Lohde Mikkelsen - Rule Britannia
+ShaoYang
+Anon Barcelona - Saltfish
+Marsary
+Sam Emerson  - _Mercy
+Matthias Lamerz  - Grotaclas
+Daniel-Nicolae Ștefănescu  - Kami-sama
+
+
+
+$SPECIAL_THANKS$
+
+$SPECIAL_THANKS_TEXT_1$
+$SPECIAL_THANKS_TEXT_2$
+$SPECIAL_THANKS_TEXT_3$
+$SPECIAL_THANKS_TEXT_4$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $TITLE_EUROPA_UNIVERSALIS_V$
 
@@ -1609,7 +2397,7 @@ Chefjones
 Clifton Maxwell
 Diego R.T. - Yeyo
 Eleanore Oldenziel - Lot26
-flemsch
+flemsh
 Gary Baugher - IamCogs
 Janek Eisinger - Greeny3x3
 Joel Reimer - Air Admiral

@@ -85,7 +85,7 @@ template version_label {
 							fontsize = 12
 							font = Debug
 							minimumsize = { -1 25 }
-							text = "[StringPair.GetLeft]"
+							text = "[StringViewPair.GetLeft.GetStringView]"
 						}
 
 						widget = {
@@ -117,7 +117,7 @@ template version_label {
 							fontsize = 12
 							font = Debug
 							minimumsize = { -1 25 }
-							text = "[StringPair.GetRight]"
+							text = "[StringViewPair.GetRight.GetStringView]"
 						}
 					}
 				}

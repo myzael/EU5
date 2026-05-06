@@ -1,0 +1,77 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE LEGS
+###############################################
+
+##### BYZANTINE  #####
+
+#AGE_1_TRADITIONS
+east_mediterranean_gfx:peasant_legs = {
+   	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_wraps_linen_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_slippers_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_naked"    } }
+    #1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_boots_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_cloth"    } }
+    default = {}
+}
+
+east_mediterranean_gfx:age_1_traditions:soldier_legs = {
+   	5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_wraps_linen_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }	
+    5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_spadrilles_leather_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }
+    default = {}
+}
+####  ### LEGIONARY UNITS ###  ###
+east_mediterranean_gfx:legionary_tag:noble_legs = {
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_leather_boots_legionary_mesh" add_tags = "UnitLegs_medium" add_tags = "crotch_covered" } }
+    4 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_spadrilles_leather_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }	
+}
+
+#AGE_2_RENAISSANCE
+east_mediterranean_gfx:age_2_renaisance:soldier_legs = {
+   	5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_wraps_linen_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }	
+    5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_spadrilles_leather_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }
+    default = {}
+}
+
+# AGE_3_DISCOVERY
+east_mediterranean_gfx:age_3_discovery:soldier_legs = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_lofty_leather_byz_mesh" add_tags = "UnitLegs_medium" add_tags = "hair_covered" } }
+}
+east_mediterranean_gfx:age_3_discovery:polearm_tag:soldier_legs = {
+1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_stell_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+}
+
+# AGE_4_REFORMATION
+east_mediterranean_gfx:age_4_reformation:soldier_legs = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_lofty_leather_byz_mesh" add_tags = "UnitLegs_medium" add_tags = "hair_covered" } }
+}
+east_mediterranean_gfx:age_4_reformation:polearm_tag:soldier_legs = {
+1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_stell_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+}
+
+east_mediterranean_gfx:soldier_legs = {
+    #VARANGIAN UNITS
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_trousers_protection_steel_varangian_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_heavy"    } }
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_boots_armor_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_heavy"    } }
+     #INFANTRY UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_boots_leather_infantry_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_spadrilles_leather_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_soft"    } }
+    #CATAPHRACTS UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_armor_boots_cataphracts_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    #SOLDIER UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_long_boots_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_stell_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_boots_lofty_leather_byz_mesh" add_tags = "crotch_covered" add_tags = "UnitLegs_medium"    } }
+    default = {}
+}
+
+east_mediterranean_gfx:noble_legs = {
+ #ROYAL GUARDS UNITS
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_legs_pants_linen_bandage_fabric_mesh" add_tags = "UnitLegs_medium" add_tags = "crotch_covered"  } }    
+	 default = {}
+}
+
+

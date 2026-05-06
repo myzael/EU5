@@ -65,12 +65,12 @@ textformatting = {
 
 	format = {
 		name = color_gray
-		format = "color:{0.61, 0.6, 0.56}"
+		format = "color:{0.7, 0.7, 0.7}"
 	}
 
 	format = {
 		name = color_light_gray
-		format = "color:{0.81, 0.8, 0.72}"
+		format = "color:{0.8, 0.8, 0.8}"
 	}
 
 	format = {
@@ -80,7 +80,7 @@ textformatting = {
 
 	format = {
 		name = color_red
-		format = "color:{0.89,0.38,0.4}"
+		format = "color:{0.89,0.38,0.4};glow_color:{0.0,0.0,0.0,0.5};glow_offset:{0.0,1.0}"
 	}
 
 	format = {
@@ -100,12 +100,23 @@ textformatting = {
 
 	format = {
 		name = color_green
-		format = "color:{0.35,0.83,0.41}"
+		format = "color:{0.35,0.83,0.41};glow_color:{0.0,0.0,0.0,0.5};glow_offset:{0.0,1.0}"
 	}
 
 	format = {
 		name = color_yellow
 		format = "color:{0.94, 0.85, 0.6};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+	}
+
+	format = {
+		name = color_yellow_dark
+		# format = "color:{0.87, 0.75, 0.53};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+		format = "color:{0.82, 0.70, 0.49};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
+	}
+
+	format = {
+		name = color_yellow_desat
+		format = "color:{0.70, 0.65, 0.50};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
 	}
 
 	format = {
@@ -136,6 +147,72 @@ textformatting = {
 	format = {
 		name = color_black
 		format = "color:{ 0.16, 0.16, 0.03 }"
+	}
+
+	###### SYSTEM ###
+	# THESE ARE RESERVED FOR SYSTEM USAGES
+	format = {
+		name = trigger_pass
+		format = "medium"
+	}
+
+	format = {
+		name = trigger_fail
+		format = "medium"
+	}
+
+	format = {
+		name = trigger_undefined
+		format = "medium"
+	}
+
+	format = {
+		name = trigger_pass_inactive
+		format = "low"
+	}
+
+	format = {
+		name = trigger_fail_inactive
+		format = "low"
+	}
+
+	format = {
+		name = trigger_undefined_inactive
+		format = "low"
+	}
+
+	format = {
+		name = trigger_blocker
+		format = "warning"
+	}
+
+	format = {
+		name = trigger_unevaluated
+		format = "medium"
+	}
+
+	# Column List Field
+	format = {
+		name = col
+		format = "medium"
+	}
+
+	# Column List Title
+	format = {
+		name = col_t
+		format = "high"
+	}
+
+	# Column List Main Column Title
+	format = {
+		name = col_m_t
+		format = "high"
+	}
+
+	# Column List Main Column
+	format = {
+		name = col_m
+		format = "medium"
 	}
 
 	# For labels in tooltips, the first line
@@ -261,7 +338,6 @@ textformatting = {
 		format = "color_very_light_blue;italic"
 	}
 
-
 	# For links
 	format = {
 		name = game_link
@@ -272,6 +348,11 @@ textformatting = {
 	format = {
 		name = explanation_link
 		format = "bold;color_concept"
+	}
+
+	format = {
+		name = explanation_link_overview
+		format = "bold;color_concept;glow_color:{0.0,0.0,0.0,0.8};glow_offset:{1.5,2.5}"
 	}
 
 	format = {
@@ -368,13 +449,43 @@ textformatting = {
 	}
 
 	format = {
+		name = character_name
+		format = "font:HeadersFont;color_yellow;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:17"
+	}
+
+	format = {
+		name = regnal_name
+		format = "font:HeadersFont;color_yellow;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:17"
+	}
+
+	format = {
+		name = nickname
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:15"
+	}
+
+	format = {
+		name = lastname
+		format = "font:HeadersFont;color_yellow_dark;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:18"
+	}
+
+	format = {
+		name = prefix_name
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:15"
+	}
+
+	format = {
+		name = suffix_name
+		format = "font:HeadersFont;color_yellow_desat;glow_color:{0.0,0.0,0.0,0.3};glow_offset:{1.0,3.0};size:5"
+	}
+
+	format = {
 		name = light_gray_flavor
-		format = "font:FlavorFont;color_light_gray;italic;glow_color:{0.0,0.0,0.0,0.4};glow_offset:{0,1.0}"
+		format = "font:FlavorFont;color_light_gray;italic;glow_color:{0.0,0.0,0.0,0.4};glow_offset:{0,2.0}"
 	}
 
 	format = {
 		name = dark_dark_flavor
-		format = "font:FlavorFont;color_black;italic;glow_color:{0.0,0.0,0.0,0.1};glow_offset:{0,1.0}"
+		format = "font:FlavorFont;color_black;italic;glow_color:{0.0,0.0,0.0,0.1};glow_offset:{0,2.0}"
 	}
 
 	format = {
@@ -395,11 +506,6 @@ textformatting = {
 	format = {
 		name = weak
 		format = "low;italic"
-	}
-
-	format = {
-		name = trigger_inactive
-		format = "low"
 	}
 	
 	format = {
@@ -429,7 +535,7 @@ textformatting = {
 
 	format = {
 		name = overview_text
-		format = "color_white;bold;glow_color:{0.0,0.0,0.0,0.6};glow_offset:{0.5,2.5}"
+		format = "color_white;bold;glow_color:{0.0,0.0,0.0,0.8};glow_offset:{1.5,2.5}"
 	}
 
 	# Legacy-shortened names, should be replaced?
@@ -453,6 +559,39 @@ textformatting = {
 		name = clickable
 		format = "color_goldy_yellow"
 	}
+
+	format = {
+		name = tutorial_highlight
+		format = "color_white;bold;"
+	}
+}
+
+	# Credits
+textformatting = {
+	format = {
+		name = credits_title
+		format = "color:{1.0, 1.0, 1.0};SIZE:70;FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_studio
+		format = "color:{0.9, 0.9, 0.9};SIZE:60;FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_discipline
+		format = "color:{0.85, 0.85, 0.85};SIZE:50;glow_color:{0,0,0,1};FONT:HeadersFont"
+	}
+
+	format = {
+		name = credits_role
+		format = "color:{0.8, 0.8, 0.8};bold;SIZE:30;glow_color:{0,0,0,1}"
+	}
+
+#	format = {
+#		name = credits_entries
+#		format = "color:{0.75, 0.75, 0.75};SIZE:15;glow_color:{0,0,0,1}"
+#	}
 }
 
 template text_common_template {

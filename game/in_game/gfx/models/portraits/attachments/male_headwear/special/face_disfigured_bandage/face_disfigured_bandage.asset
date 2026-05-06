@@ -1,0 +1,85 @@
+﻿pdxmesh = {
+	name = "face_disfigured_bandage_mesh"
+	file = "face_disfigured_bandage.mesh"
+
+	meshsettings = {
+		name = "face_disfigured_bandageShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "face_disfigured_bandage_entity"
+	pdxmesh = "face_disfigured_bandage_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+
+pdxmesh = {
+	name = "face_disfigured_bandage_fine_mesh"
+	file = "face_disfigured_bandage_fine.mesh"
+
+	meshsettings = {
+		name = "face_disfigured_bandage_fineShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "face_disfigured_bandage_fine_entity"
+	pdxmesh = "face_disfigured_bandage_fine_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}
+
+
+pdxmesh = {
+	name = "face_disfigured_bandage_fine_no_top_mesh"
+	file = "face_disfigured_bandage_fine_no_top.mesh"
+
+	meshsettings = {
+		name = "face_disfigured_bandage_fine_no_topShape"
+		index = 0
+		texture_diffuse = "blind_eye_cloth_diffuse.dds"
+		texture_normal = "blind_eye_cloth_normal.dds"
+		texture_specular = "blind_eye_cloth_properties.dds"
+		shader = "portrait_hair_transparency_hack"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "face_disfigured_bandage_fine_no_top_entity"
+	pdxmesh = "face_disfigured_bandage_fine_no_top_mesh"
+	
+	game_data = {
+		portrait_entity_user_data = {
+			portrait_decal = {
+				body_part = head			
+			}
+		}
+	}
+}

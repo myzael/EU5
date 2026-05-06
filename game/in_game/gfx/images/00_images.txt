@@ -9,7 +9,7 @@ empty_layer = {
 	}
 }
 
-throne_room_test = {
+throne_room = {
 	tag = "throne_room"
 
 	#Shogunate
@@ -70,7 +70,7 @@ throne_room_test = {
 		priority = 21
 		scope = character
 		trigger = {
-			owner = { is_leader_of_international_organization = international_organization:hre }
+			owner ?= { is_leader_of_international_organization = international_organization:hre }
 		}
 	}
 
@@ -90,7 +90,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = european_gfx }
+			employer ?= { gfx_culture_applicable = european_gfx }
 		}
 	}
 
@@ -100,7 +100,7 @@ throne_room_test = {
 		priority = 30
 		scope = character
 		trigger = {
-			employer = { 
+			employer ?= { 
 				government_type = government_type:steppe_horde
 			}
 		}
@@ -112,7 +112,7 @@ throne_room_test = {
 		priority = 20
 		scope = character
 		trigger = {
-			employer = { 
+			employer ?= { 
 				government_type = government_type:republic
 				gfx_culture_applicable = european_gfx
 			}
@@ -125,7 +125,7 @@ throne_room_test = {
 		priority = 20
 		scope = character
 		trigger = {
-			employer = { 
+			employer ?= { 
 				government_type = government_type:theocracy
 				gfx_culture_applicable = christian_gfx
 			}
@@ -148,7 +148,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { 
+			employer ?= { 
 				gfx_culture_applicable = european_gfx
 				country_rank_level >= 3
 			}
@@ -171,7 +171,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = european_gfx }
+			employer ?= { gfx_culture_applicable = european_gfx }
 		}
 	}
 
@@ -192,7 +192,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = middle_east_gfx }
+			employer ?= { gfx_culture_applicable = middle_east_gfx }
 		}
 	}
 
@@ -223,7 +223,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = south_american_gfx }
+			employer ?= { gfx_culture_applicable = south_american_gfx }
 		}
 	}
 
@@ -244,7 +244,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { 
+			employer ?= { 
 				is_leader_of_international_organization = international_organization:middle_kingdom
 			}
 		}
@@ -266,7 +266,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { 
+			employer ?= { 
 				gfx_culture_applicable = east_asian_gfx
 			}
 		}
@@ -277,7 +277,7 @@ throne_room_test = {
 		priority = 40
 		scope = character
 		trigger = {
-			employer = { 
+			employer ?= { 
 				gfx_culture_applicable = east_asian_gfx
 				OR = {
 					government_type = government_type:tribe
@@ -304,7 +304,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = north_american_gfx }
+			employer ?= { gfx_culture_applicable = north_american_gfx }
 		}
 	}
 
@@ -325,7 +325,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = african_gfx }
+			employer ?= { gfx_culture_applicable = african_gfx }
 		}
 	}
 
@@ -346,7 +346,7 @@ throne_room_test = {
 				is_courtier = yes
 				is_alive = no
 			}
-			employer = { gfx_culture_applicable = indian_gfx }
+			employer ?= { gfx_culture_applicable = indian_gfx }
 		}
 	}
 

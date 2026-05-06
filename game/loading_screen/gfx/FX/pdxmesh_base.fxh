@@ -23,12 +23,15 @@ ConstantBuffer( CityRepaintUnitColorOpacity )
 };
 
 struct SIllustrationData
-{	
+{
 	float _RandomUV;
 	float _ProportionImage;
 	float2 _UVMove;
 	float4 _UVRemap;
 	float  _CustomFlags;
+	float  _TintR;
+	float  _TintG;
+	float  _TintB;
 }
 
 PixelShader =
@@ -228,7 +231,38 @@ VertexShader =
 		[[
 			PDX_MAIN
 			{
-				VS_OUTPUT Out = ConvertOutput( StandardVertexShader( Input ) );
+				VS_OUTPUT Out;
+				#if defined(CONSTRUCTION_PREVENTION_MIN)||defined(CONSTRUCTION_PREVENTION_MAX)
+					//Type SCityGfxConstants
+					float4 UserDataRaw0 = Data[Input.InstanceIndices.y + PDXMESH_USER_DATA_OFFSET + 0];
+					float Slot =  floor(UserDataRaw0.w);
+					float BuildingPercentage = GetBuildingPercentageConstructed(UserDataRaw0.z,Slot);
+					#ifdef CONSTRUCTION_PREVENTION_MULT
+						BuildingPercentage*=CONSTRUCTION_PREVENTION_MULT; 
+					#endif
+					Out.Position = vec4(0.0);
+					Out.Normal= vec3(0.0);
+					Out.Tangent= vec3(0.0);
+					Out.Bitangent= vec3(0.0);
+					Out.UV0	= vec2(0.0);
+					Out.UV1	= vec2(0.0);
+					Out.WorldSpacePos = vec3(0.0);
+					Out.InstanceIndex = Input.InstanceIndices.y;
+					float PositionPercentage = UserDataRaw0.w-Slot;
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MAX)
+					if( PositionPercentage >= BuildingPercentage + CONSTRUCTION_PREVENTION_MAX)
+					{
+						return Out;
+					}
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MIN)
+					if( PositionPercentage < BuildingPercentage - CONSTRUCTION_PREVENTION_MIN)
+					{
+						return Out;
+					}
+				#endif
+				Out = ConvertOutput( StandardVertexShader( Input ) );
 				Out.InstanceIndex = Input.InstanceIndices.y;
 				return Out;
 			}
@@ -243,7 +277,116 @@ VertexShader =
 		[[
 			PDX_MAIN
 			{
-				VS_OUTPUT_PDXMESHSHADOWSTANDARD Out = StandardVertexShaderShadow( Input );
+				VS_OUTPUT_PDXMESHSHADOWSTANDARD Out;
+				#if defined(CONSTRUCTION_PREVENTION_MIN)||defined(CONSTRUCTION_PREVENTION_MAX)
+					//Type SCityGfxConstants
+					float4 UserDataRaw0 = Data[Input.InstanceIndices.y + PDXMESH_USER_DATA_OFFSET + 0];
+					float Slot =  floor(UserDataRaw0.w);
+					float BuildingPercentage = GetBuildingPercentageConstructed(UserDataRaw0.z,Slot);
+					#ifdef CONSTRUCTION_PREVENTION_MULT
+						BuildingPercentage*=CONSTRUCTION_PREVENTION_MULT; 
+					#endif
+					Out.Position = vec4(0.0);
+					Out.UV_InstanceIndex= vec3(0.0);
+					float PositionPercentage = UserDataRaw0.w-Slot;
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MAX)
+					if( PositionPercentage >= BuildingPercentage + CONSTRUCTION_PREVENTION_MAX)
+					{
+						return Out;
+					}
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MIN)
+					if( PositionPercentage < BuildingPercentage - CONSTRUCTION_PREVENTION_MIN)
+					{
+						return Out;
+					}
+				#endif
+				Out = StandardVertexShaderShadow( Input );
+				return Out;
+			}
+		]]
+	}
+
+	MainCode VS_floppy_mesh
+	{
+		Input = "VS_INPUT_PDXMESHSTANDARD"
+		Output = "VS_OUTPUT"
+		Code
+		[[
+			PDX_MAIN
+			{
+				VS_OUTPUT Out;
+
+				
+				float4x4 FloppyMatrix = PdxMeshGetWorldMatrix( Input.InstanceIndices.y );
+				#if defined(CONSTRUCTION_PREVENTION_MIN)||defined(CONSTRUCTION_PREVENTION_MAX)
+					//Type SCityGfxConstants
+					float4 UserDataRaw0 = Data[Input.InstanceIndices.y + PDXMESH_USER_DATA_OFFSET + 0];
+					float BuildingPercentage = GetBuildingPercentageConstructed(UserDataRaw0.z,UserDataRaw0.w);
+					#ifdef CONSTRUCTION_PREVENTION_MULT
+						BuildingPercentage*=CONSTRUCTION_PREVENTION_MULT; 
+					#endif
+					Out.Position = vec4(0.0);
+					Out.Normal= vec3(0.0);
+					Out.Tangent= vec3(0.0);
+					Out.Bitangent= vec3(0.0);
+					Out.UV0	= vec2(0.0);
+					Out.UV1	= vec2(0.0);
+					Out.WorldSpacePos = vec3(0.0);
+					Out.InstanceIndex = Input.InstanceIndices.y;
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MAX)
+					if(FloppyMatrix[0][3]>= BuildingPercentage + CONSTRUCTION_PREVENTION_MAX)
+					{
+						return Out;
+					}
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MIN)
+					if(FloppyMatrix[0][3] < BuildingPercentage - CONSTRUCTION_PREVENTION_MIN)
+					{
+						return Out;
+					}
+				#endif
+				Out = ConvertOutput( FloppyMeshVertexShader( Input,FloppyMatrix ) );
+				Out.InstanceIndex = Input.InstanceIndices.y;
+				return Out;
+			}
+		]]
+	}
+	MainCode VS_floppy_mesh_shadow
+	{
+		Input = "VS_INPUT_PDXMESHSTANDARD"
+		Output = "VS_OUTPUT_PDXMESHSHADOWSTANDARD"
+				Code
+		[[
+			PDX_MAIN
+			{
+				VS_OUTPUT_PDXMESHSHADOWSTANDARD Out;
+				float4x4 FloppyMatrix = PdxMeshGetWorldMatrix( Input.InstanceIndices.y );
+				#if defined(CONSTRUCTION_PREVENTION_MIN)||defined(CONSTRUCTION_PREVENTION_MAX)
+					//Type SCityGfxConstants
+					float4 UserDataRaw0 = Data[Input.InstanceIndices.y + PDXMESH_USER_DATA_OFFSET + 0];
+					float BuildingPercentage = GetBuildingPercentageConstructed(UserDataRaw0.z,UserDataRaw0.w);
+					#ifdef CONSTRUCTION_PREVENTION_MULT
+						BuildingPercentage*=CONSTRUCTION_PREVENTION_MULT; 
+					#endif
+					Out.Position = vec4(0.0);
+					Out.UV_InstanceIndex= vec3(0.0);
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MAX)
+					if(FloppyMatrix[0][3]>= BuildingPercentage + CONSTRUCTION_PREVENTION_MAX)
+					{
+						return Out;
+					}
+				#endif
+				#if defined(CONSTRUCTION_PREVENTION_MIN)
+					if(FloppyMatrix[0][3] < BuildingPercentage - CONSTRUCTION_PREVENTION_MIN)
+					{
+						return Out;
+					}
+				#endif
+				Out =  FloppyMeshVertexShadowShader( Input,FloppyMatrix ) ;
 				return Out;
 			}
 		]]
@@ -346,13 +489,16 @@ PixelShader =
 			float4 Raw0 = Data[ InstanceIndex + PDXMESH_USER_DATA_OFFSET + 0 ];
 			float4 Raw1 = Data[ InstanceIndex + PDXMESH_USER_DATA_OFFSET + 1 ];
 			float4 Raw2 = Data[ InstanceIndex + PDXMESH_USER_DATA_OFFSET + 2 ];
-			
+
 			SIllustrationData Ret;
 			Ret._RandomUV = Raw0.x;
 			Ret._ProportionImage = Raw0.y;
 			Ret._UVMove = float2( Raw0.z, Raw0.w );
 			Ret._UVRemap = float4(Raw1.x, Raw1.y,Raw1.z, Raw1.w);
 			Ret._CustomFlags = Raw2.x;
+			Ret._TintR = Raw2.y;
+			Ret._TintG = Raw2.z;
+			Ret._TintB = Raw2.w;
 			return Ret;
 		};
 			
@@ -550,7 +696,15 @@ PixelShader =
 							Dd = ddx(Dd.x);
 							Dd = ddy(Dd.y);
 							Diffuse = PdxTex2DGrad( DiffuseMapOverride, TexCoord,Dd.x,Dd.y);
-						#ifdef ANIMATE_UV					
+							#if !defined(UNIT_BUFFERS)
+								float3 TintPM = float3( IllustrationData._TintR, IllustrationData._TintG, IllustrationData._TintB );
+								float TintStrength = max( TintPM.r, max( TintPM.g, TintPM.b ) );
+								if( TintStrength > 0.0 )
+								{
+									Diffuse.rgb = lerp( Diffuse.rgb, TintPM / TintStrength, TintStrength );
+								}
+							#endif
+						#ifdef ANIMATE_UV
 							Diffuse.a = PdxTex2DGrad( DiffuseMapOverride, DIFFUSE_UV_SET,Dd.x,Dd.y).a;
 						#endif
 					#endif
@@ -680,7 +834,10 @@ PixelShader =
 						float PreLightingBlend;
 						float PostLightingBlend;
 						#ifdef CITY_GRADIENT
-							GetProvinceOverlayAndBlendForCityCustom( MapCoords, CityColorIndex, PrimaryCityColor, ColorOverlay, PreLightingBlend, PostLightingBlend );
+							if(CityGfxConstants._LocationId != -1)
+								GetProvinceOverlayAndBlendForCityCustom( MapCoords, CityColorIndex, PrimaryCityColor, ColorOverlay, PreLightingBlend, PostLightingBlend );
+							else
+								GetProvinceOverlayAndBlendCustom( MapCoords, ColorOverlay, PreLightingBlend, PostLightingBlend );
 						#else
 							GetProvinceOverlayAndBlendCustom( MapCoords, ColorOverlay, PreLightingBlend, PostLightingBlend );
 						#endif
@@ -718,6 +875,10 @@ PixelShader =
 						#endif
 						#ifdef CUBEMAP_INTENSITY_FACTOR
 						LightingProps._CubemapIntensity *= CUBEMAP_INTENSITY_FACTOR; // CUBEMAP_INTENSITY_FACTOR is required to be defined with a value, for example "CUBEMAP_INTENSITY_FACTOR 2.5"
+						#endif
+						#ifdef RIM_INTENSITY_FACTOR
+						float Rim = CalculateRimLightIntensity(LightingProps._ToCameraDir,Normal);
+						LightingProps._CubemapIntensity += Rim*RIM_INTENSITY_FACTOR;
 						#endif
 						#ifdef ROUGHTNESS_FACTOR
 						MaterialProps._Roughness = pow(MaterialProps._Roughness, ROUGHTNESS_FACTOR);// ROUGHTNESS_FACTOR is required to be defined with a value, for example "ROUGHTNESS_FACTOR 0.5"

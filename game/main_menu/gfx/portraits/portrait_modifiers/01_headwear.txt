@@ -291,6 +291,40 @@
 		}
 	}
 
+	hre_emperor = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = european_imperial
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				OR = {
+					AND = { # alive HRE emperor
+						is_ruler = yes
+						any_ruling_countries = {
+							is_leader_of_international_organization = international_organization:hre
+							NOR = {
+								government_type = government_type:theocracy
+								government_type = government_type:republic
+							}
+						}
+					}
+					AND = { # dead HRE emperor
+						any_ruling_countries = { is_leader_of_international_organization = international_organization:hre }
+						is_alive = no
+					}
+				}
+			}
+		}
+	}
+
 	european_war = {
 		dna_modifiers = {
 			accessory = {

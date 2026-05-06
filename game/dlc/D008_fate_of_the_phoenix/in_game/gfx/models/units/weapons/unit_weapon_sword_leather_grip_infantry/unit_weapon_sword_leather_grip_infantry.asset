@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_weapon_sword_leather_grip_infantry_mesh"
+	file = "unit_weapon_sword_leather_grip_infantry.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_sword_leather_grip_infantryShape"
+		index = 0
+		texture_diffuse = "unit_weapon_sword_leather_grip_infantry_diffuse.dds"
+		texture_normal = "unit_weapon_sword_leather_grip_infantry_normal.dds"
+		#texture_specular = "unit_weapon_sword_leather_grip_infantry_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_sword_leather_grip_infantry_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

@@ -3,7 +3,7 @@
 
 	###Christians
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 50
 		scope = country
 		trigger = {
@@ -15,7 +15,7 @@
 
 	###Muslims
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -27,7 +27,7 @@
 
 	###Buddhists
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -39,7 +39,7 @@
 
 	###Hindus
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -57,7 +57,7 @@ frontobjects1_interior = {
 	###ASHANTI
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -67,7 +67,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -77,7 +77,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -93,7 +93,7 @@ frontobjects1_interior = {
 	###ASIAN
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -103,7 +103,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -113,7 +113,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -123,7 +123,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -136,7 +136,7 @@ frontobjects1_interior = {
 	###INDIAN
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -146,7 +146,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -156,7 +156,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -166,7 +166,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -179,7 +179,7 @@ frontobjects1_interior = {
 	###AZTEC
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -189,7 +189,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -199,7 +199,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -209,7 +209,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -222,7 +222,7 @@ frontobjects1_interior = {
 	###SYRIAN
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -232,7 +232,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -242,7 +242,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -255,7 +255,7 @@ frontobjects1_interior = {
 	###IROQUOIS
 	############################
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -265,7 +265,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -275,7 +275,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -285,7 +285,7 @@ frontobjects1_interior = {
 		}
 	}
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -352,7 +352,7 @@ frontobjects1_interior = {
 	# }
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/exterior/clergy/fo_clergy_ashanti.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/exterior/clergy/fo_clergy_ashanti_metadata_os1080x440_d268x288.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -363,7 +363,7 @@ frontobjects1_interior = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 1
 		scope = country
 		trigger = {
@@ -373,7 +373,7 @@ frontobjects1_interior = {
 	}
 
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default.dds"
+		texture_file = "gfx/interface/illustrations/event/frontobjects/default/default_metadata_os1080x440_d0x420.dds"
 		priority = 0
 		scope = country
 		trigger = {

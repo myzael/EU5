@@ -1,0 +1,89 @@
+pdxmesh = {
+	name = "building_syrian_walls_tower_mesh"
+	file = "building_syrian_walls_tower.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	scale = 90
+	
+
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_lod0"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_atlas_lod0"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_lod1"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_atlas_lod1"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_lod2"
+		index = 0
+		texture_diffuse = "building_syrian_castles_diffuse.dds"
+		texture_normal = "building_syrian_castles_normal.dds"
+		texture_specular = "building_syrian_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_syrian_walls_tower_atlas_lod2"
+		index = 0
+		texture_diffuse = "syrian_atlas_master_diffuse.dds"
+		texture_normal = "syrian_atlas_master_normal.dds"
+		texture_specular = "syrian_atlas_master_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_syrian_walls_tower_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+
+
+
+}
+
+entity = {
+	name = "building_syrian_walls_tower_entity"
+	pdxmesh = "building_syrian_walls_tower_mesh"
+}

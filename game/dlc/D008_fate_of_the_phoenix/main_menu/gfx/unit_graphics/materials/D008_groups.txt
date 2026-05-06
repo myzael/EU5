@@ -1,0 +1,20 @@
+﻿
+
+
+
+group:byzantine_coa_engraving_armor= {
+	10 = byzantine_coa_engraving_armor	
+}
+
+group:byzantine_coa_silver_armor= {	
+	10 = byzantine_coa_silver_armor
+}
+
+group:byzantine_coa_group= {	
+	10 = byzantine_coa_engraving_armor
+	10 = byzantine_coa_silver_armor
+}
+
+
+
+

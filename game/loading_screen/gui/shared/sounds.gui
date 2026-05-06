@@ -357,6 +357,14 @@ template snd_UI_event_age {
     }
 }
 
+# Event omen god selected
+# template snd_UI_event_omen_god {
+#     state = {
+#         name = _show
+#         on_start = "[PlayAudioEffect('UI_event_omen_god')]"
+#     }
+# }
+
 # You can mute / unmute units with the following console commands. Muted by default.
 # audio.play_event units_unmute
 # audio.play_event units_mute

@@ -1,9 +1,9 @@
 ﻿{
-	"name":	"Shared DLC Data",
-	"localizable_name":	"D000_shared",
-	"path":	"dlc/D000_shared",
+	"name":	"d000_shared",
+	"localizable_name":	"d000_shared",
+	"path":	"dlc/d000_shared",
 	"picture":	"thumbnail.dds",
-	"checksum":	"d424955caf227b8efe9efc6329799e21",
+	"checksum":	"9b434d389999128426fbfff203321029",
 	"description":	"",
 	"supported_version":	"",
 	"dependencies":	[],

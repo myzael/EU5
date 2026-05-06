@@ -4,6 +4,7 @@ Includes = {
 	"jomini/jomini_lighting.fxh"
 	"jomini/jomini_fog.fxh"	
 	"jomini/jomini_spline.fxh"
+	"jomini/jomini_spline_unpacking.fxh"
 	"jomini/gradient_border_constants.fxh"
 	"flatmap_lerp.fxh"
 	"fog_of_war.fxh"
@@ -12,30 +13,77 @@ Includes = {
 	"terrain.fxh"
 }
 
+VertexStruct VS_CUSTOM_SPLINE_OUTPUT
+{
+	float4 Position			: PDX_POSITION;
+	float2 UV				: TEXCOORD0;
+	float3 Tangent			: TEXCOORD1;
+	float3 Normal			: TEXCOORD2;
+	float3 WorldSpacePos	: TEXCOORD3;
+	float  MaxU				: TEXCOORD4;
+	float  Width			: TEXCOORD5;
+@ifdef PDX_ENABLE_SPLINE_GRAPHICS1
+	float  DistanceToMain	: TEXCOORD6;
+	float  Transparency 	: TEXCOORD7;
+@else
+	int DataIndex1			: TEXCOORD6;
+	int DataIndex2			: TEXCOORD7;
+	float DataDelta			: TEXCOORD8;
+@endif
+	float FlatMapCutoff		: TEXCOORD9;
+};
 
 VertexShader =
 {
 	MainCode VS_game
 	{
-		Input = "VS_SPLINE_INPUT"
-		Output = "VS_SPLINE_OUTPUT"
+		Input = "VS_PACKED_SPLINE_INPUT"
+		Output = "VS_CUSTOM_SPLINE_OUTPUT"
 		Code
 		[[
 			PDX_MAIN
 			{
-				VS_SPLINE_OUTPUT  Out;
+				VS_SPLINE_INPUT UnpackedInput = UnPackSplineInput(Input); 
+				VS_CUSTOM_SPLINE_OUTPUT  Out;
 			
-				Out.UV 				= Input.UV;
-				Out.Tangent 		= Input.Tangent;
-				Out.WorldSpacePos 	= Input.Position;
-				Out.MaxU 			= Input.MaxU;
-				Out.WorldSpacePos.y = GetHeight( Input.Position.xz) + 0.1f;
-				Out.Normal 			= CalculateNormal( Input.Position.xz );
-
+				Out.UV 				= UnpackedInput.UV;
+				Out.Tangent 		= UnpackedInput.Tangent;
+				Out.WorldSpacePos 	= UnpackedInput.Position;
+				Out.MaxU 			= UnpackedInput.MaxU;
+				Out.Normal 			= UnpackedInput.Normal;
+				float2 FlatMapBlend = GetNoisyFlatMapLerp( Out.WorldSpacePos , GetFlatMapLerp());
+				float2 RoadNormal = Out.Tangent.zx;
+				RoadNormal.y = -RoadNormal.y;
+				RoadNormal*= sign(Out.UV.y-0.5f);
+				#ifdef CAMERA_POSITION_TO_START_INCREASING_ROADS
+					float MaxZoomOutDistance = 1.0f/CAMERA_POSITION_TO_START_INCREASING_ROADS;
+				#else
+					float MaxZoomOutDistance = 1.0f/75.0f;
+				#endif
+				#ifdef ZOOM_OUT_ROADS_SCALE
+					float SizeMult = ZOOM_OUT_ROADS_SCALE;
+				#else
+					float SizeMult =  0.3f;
+				#endif
+				float ExtraSizeLod  =  log2(max (1.0f,CameraPosition.y*MaxZoomOutDistance)); 
+				float TotalExtraSize = ExtraSizeLod*SizeMult;
+				#ifdef FLATMAP_FARAWAY_CUTOFF
+					Out.FlatMapCutoff = TotalExtraSize*FLATMAP_FARAWAY_CUTOFF;
+				#else
+					Out.FlatMapCutoff = TotalExtraSize*0.5f;
+				#endif
+				Out.WorldSpacePos.xz+=RoadNormal*TotalExtraSize;
+				
 				AdjustFlatMapHeight( Out.WorldSpacePos );
 				
 				Out.Position = FixProjectionAndMul( ViewProjectionMatrix, float4( Out.WorldSpacePos, 1.0f ) );
-			
+				Out.Position.z = FixProjectionAndMul( ViewProjectionMatrix, float4( Out.WorldSpacePos+float3(0.0f,1.0f,0.0f), 1.0f ) ).z;
+				#ifdef UV_X_FARAWAY_SIZE_MULT
+				float InvUvXMult = 1.0/(1.0 + TotalExtraSize*UV_X_FARAWAY_SIZE_MULT);
+				#else
+				float InvUvXMult = 1.0/(1.0 + TotalExtraSize);
+				#endif
+				Out.UV.x= Out.UV.x * InvUvXMult + (1-InvUvXMult)*0.5;
 				return Out;
 			}		
 		]]
@@ -125,8 +173,29 @@ PixelShader =
 	
 	Code
 	[[
+		VS_SPLINE_OUTPUT ConvertToJominiOutput (VS_CUSTOM_SPLINE_OUTPUT Input)
+		{
+			VS_SPLINE_OUTPUT Out;
+	 		Out.Position      = Input.Position;
+			Out.UV            = Input.UV;
+	 		Out.Tangent       = Input.Tangent;
+			Out.Normal        = Input.Normal;
+	 		Out.WorldSpacePos = Input.WorldSpacePos;
+	 		Out.MaxU          = Input.MaxU;
+	 		Out.Width         = Input.Width;
+		#ifdef PDX_ENABLE_SPLINE_GRAPHICS1
+			Out.DistanceToMain	= Input.Transparency;
+			Out.Transparency    = Input.Transparency;
+		#else
+			Out.DataIndex1	= Input.DataIndex1;
+			Out.DataIndex2  = Input.DataIndex2;
+			Out.DataDelta   = Input.DataDelta;
+		#endif
+			return Out;
+		}
+
 		float4 GetPixelColor(			
-			VS_SPLINE_OUTPUT  Input,
+			VS_CUSTOM_SPLINE_OUTPUT  Input,
 			float2 UV,
 			float2 ddx,
 			float2 ddy,
@@ -174,6 +243,10 @@ PixelShader =
 				DebugReturn( FinalColor.rgb, MaterialProps, LightingProps, EnvironmentMap );			
 			}
 			
+			
+			bool IsRoadsMapMode = GetMapModeId() == 1;
+			FlatMapBlend = saturate(FlatMapBlend + vec2(IsRoadsMapMode));
+
 			// Flatmap roads rendering
 			if( FlatMapBlend.x > 0.0f )
 			{
@@ -187,7 +260,6 @@ PixelShader =
 				
 				// Detect sentinel values via gradient_width:
 				// 0.222 = roads-only, 0.333 = roads+rivers
-				bool IsRoadsMapMode = GetMapModeId() == 1;
 				
 				if( IsRoadsMapMode )
 				{
@@ -237,10 +309,14 @@ PixelShader =
 					float RoadAlpha = smoothstep( Offset - Fuzz, Offset + Fuzz, Distance );
 					FinalColor = lerp( FinalColor, float4( 0.0, 0.0, 0.0, RoadAlpha ), FlatMapBlend.x );
 				}
+				if(Input.FlatMapCutoff > UV.y || Input.FlatMapCutoff > 1 - UV.y )
+				{
+					discard;
+				}
 			}
 			
 			FinalColor.a *= GlobalOpacity;
-			if( GetFlatMapLerp() < 1.0 )
+			if( GetFlatMapLerp() < 1.0 && !IsRoadsMapMode )
 			{
 				float3 FoggedColor = ApplyFogOfWar( FinalColor.rgb, Input.WorldSpacePos, FogOfWarAlpha );
 				FoggedColor = ApplyDistanceFog( FoggedColor, Input.WorldSpacePos );
@@ -251,7 +327,7 @@ PixelShader =
 		}
 		
 		float4 GetPixelColorWithMaskApplied(
-			VS_SPLINE_OUTPUT  Input,
+			VS_CUSTOM_SPLINE_OUTPUT  Input,
 			int MaskIndex,
 			int RoadTypeID)
 		{
@@ -262,7 +338,7 @@ PixelShader =
 			dy = ddy(UV);																				
 							
 			float2 Mask = float2(1,1);			
-			Mask = JominiFlatSplineSampleMask( MaskTexture, Input );
+			Mask = JominiFlatSplineSampleMask( MaskTexture, ConvertToJominiOutput( Input ) );
 			
 			return GetPixelColor( Input, UV, dx, dy, 0, Mask[MaskIndex], RoadTypeID );	
 		}
@@ -271,7 +347,7 @@ PixelShader =
 		
 	MainCode Background
 	{
-		Input = "VS_SPLINE_OUTPUT"
+		Input = "VS_CUSTOM_SPLINE_OUTPUT"
 		Output = "PDX_COLOR"
 		Code
 		[[	
@@ -288,7 +364,7 @@ PixelShader =
 	
 	MainCode Foreground
 	{
-		Input = "VS_SPLINE_OUTPUT"
+		Input = "VS_CUSTOM_SPLINE_OUTPUT"
 		Output = "PDX_COLOR"
 		Code
 		[[	
@@ -306,7 +382,7 @@ PixelShader =
 	
 	MainCode StackedTexturesPass
 	{
-		Input = "VS_SPLINE_OUTPUT"
+		Input = "VS_CUSTOM_SPLINE_OUTPUT"
 		Output = "PDX_COLOR"
 		Code
 		[[	
@@ -320,7 +396,7 @@ PixelShader =
 				float2 UV = Input.UV;
 				float2 dx=float2(0,0), dy=float2(0,0);
 			
-				JominiFlatSplineStackedUV( Input, 8, UV, dx, dy );
+				JominiFlatSplineStackedUV( ConvertToJominiOutput(Input), 8, UV, dx, dy );
 			
 				return GetPixelColor( Input, UV, dx, dy, 1.2, 1, ROAD_TYPE_ID );	
 			}
@@ -329,7 +405,7 @@ PixelShader =
 	
 	MainCode SingleTexturePass
 	{
-		Input = "VS_SPLINE_OUTPUT"
+		Input = "VS_CUSTOM_SPLINE_OUTPUT"
 		Output = "PDX_COLOR"
 		Code
 		[[	
@@ -397,3 +473,11 @@ Effect SingleTexturePass
 	PixelShader = "SingleTexturePass"
 	Defines = {"ENABLE_TERRAIN" "ENABLE_FOG" "ENABLE_GAME_CONSTANTS" }
 }
+
+Code
+[[
+	#define CAMERA_POSITION_TO_START_INCREASING_ROADS 75.0f
+	#define FLATMAP_FARAWAY_CUTOFF 0.45f
+	#define	ZOOM_OUT_ROADS_SCALE 0.3f
+	#define UV_X_FARAWAY_SIZE_MULT 10.0f
+]]

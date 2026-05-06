@@ -1,4 +1,4 @@
-﻿D017_sacred_sites = { #Holy Sites
+﻿d017_sacred_sites = { #Holy Sites
 	tag = "monuments2"
 
 	illustration_image = { #Alpha 0
@@ -15,7 +15,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:qufu
 		}
 	}
@@ -26,7 +26,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:kurita
 		}
 	}
@@ -38,7 +38,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:mecca
 		}
 	}
@@ -48,7 +48,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:jerusalem
 		}
 	}
@@ -60,7 +60,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:cholollan
 		}
 	}
@@ -72,7 +72,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:srirangam
 		}
 	}
@@ -82,7 +82,7 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:gaya
 		}
 	}
@@ -92,13 +92,13 @@
 	 	priority = 10
 	 	scope = location
 		trigger = {
-			has_local_dlc = "Sacred Sites"
+			has_local_dlc = "d017_sacred_sites_pack"
 			this = location:rome
 		}
 	}
 }
 
-D017_monuments3 = {
+d017_monuments3 = {
 	tag = "monuments3"
 
 	illustration_image = { #Alpha 0

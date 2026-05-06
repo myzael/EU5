@@ -1,0 +1,75 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+### LOADING SCREENS IMAGES ###
+
+loading_screen_byzantine_layer1 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_07.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer1"
+}
+
+loading_screen_byzantine_layer2 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_06.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer2"
+}
+
+loading_screen_byzantine_layer3 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_05.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer3"
+}
+
+loading_screen_byzantine_layer4 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_04.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer4"
+}
+
+loading_screen_byzantine_layer5 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_03.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer5"
+}
+
+loading_screen_byzantine_layer6 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_02.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer6"
+}
+
+loading_screen_byzantine_layer7 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_01.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer7"
+}
+
+loading_screen_byzantine_layer8 = {
+	illustration_image = {
+		texture_file = "gfx/loading_screen_assets/00/images/d008_loading_screen_byzantine_00.dds"
+		priority = 1
+		weight = 1
+	}
+	tag = "loading_screen_byzantine_layer8"
+}

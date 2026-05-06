@@ -1,0 +1,28 @@
+pdxmesh = {
+	name = "female_clothes_byzantine_hellenistic_toga_mesh"
+	file = "female_clothes_byzantine_hellenistic_toga.mesh"
+
+	meshsettings = {
+		name = "female_clothes_byzantine_hellenistic_togaShape"
+		index = 0
+		texture_diffuse = "male_clothes_byzantine_hellenistic_toga_diffuse.dds"
+		texture_normal = "male_clothes_byzantine_hellenistic_toga_normal.dds"
+		texture_specular = "male_clothes_byzantine_hellenistic_toga_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_clothes_byzantine_hellenistic_toga_entity"
+	pdxmesh = "female_clothes_byzantine_hellenistic_toga_mesh"
+
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_cloth/byzantine/hellenistic_toga/male_clothes_byzantine_hellenistic_toga_masks.dds"
+				variation = "byzantine_hellenistic_01"
+            }
+        }
+	}
+}

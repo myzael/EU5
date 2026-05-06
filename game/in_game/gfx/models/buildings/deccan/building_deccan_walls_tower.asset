@@ -1,0 +1,23 @@
+pdxmesh = {
+	name = "building_deccan_walls_tower_mesh"
+	file = "building_deccan_walls_tower.mesh"
+	scale = 75
+
+	meshsettings = {
+		name = "building_deccan_walls_tower"
+		index = 0
+		texture_diffuse = "building_deccan_castles_diffuse.dds"
+		texture_normal = "building_deccan_castles_normal.dds"
+		texture_specular = "building_deccan_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_deccan_wall_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	
+}
+
+entity = {
+	name = "building_deccan_walls_tower_entity"
+	pdxmesh = "building_deccan_walls_tower_mesh"
+}

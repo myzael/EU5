@@ -1,0 +1,20 @@
+﻿#@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE Beards
+###############################################
+
+#### BYZANTINE ####
+
+#age_6_revolutions:british_gfx:full_beards = {
+	#1 = {
+		#add_entity = { required_tags = "not(beard_covered)"		node = shared_pose_entity		mesh_name = "unit_beard_long_sideburns_mesh" }
+		#add_entity = { required_tags = "beard_covered" }
+	#}
+
+	#1 = {
+		#add_entity = { required_tags = "not(beard_covered)"		node = shared_pose_entity		mesh_name = "unit_beard_short_sideburns_mesh" }
+		#add_entity = { required_tags = "beard_covered" }
+	#}
+
+#} 

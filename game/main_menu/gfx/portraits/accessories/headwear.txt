@@ -6,14 +6,19 @@
 
 #	  NORTH GERMAN		#
 
+
 male_headwear_german_royal_crown_duke_hair = {
 	set_tags = "no_hair"
-	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_royal_crown_duke_hair_entity   }
+	entity = { required_tags = "not(face_covered)"	shared_pose_entity = head		entity = male_headwear_german_royal_crown_duke_hair_entity   }
+	entity = { required_tags = "face_covered"	shared_pose_entity = head		entity = male_headwear_german_generic_crown_entity }
 }
 male_headwear_german_royal_crown_hair = {
 	set_tags = "no_hair"
-	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_royal_crown_hair_entity   }
+	entity = { required_tags = "not(face_covered)"	shared_pose_entity = head		entity = male_headwear_german_royal_crown_hair_entity   }
+	entity = { required_tags = "face_covered"	shared_pose_entity = head		entity = male_headwear_german_generic_crown_entity }
 }
+
+
 male_headwear_german_soldier_skull_cap_helmet = {
 	set_tags = "no_hair"
 	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headwear_german_soldier_skull_cap_helmet_entity   }
@@ -155,6 +160,10 @@ male_headwear_german_bishop_mitre = {
 male_headwear_german_archbishop_mitre = {
 	set_tags = "hair_covered"  
 	entity = { required_tags = ""			shared_pose_entity = head   entity = male_headwear_german_archbishop_mitre_entity   }
+}
+male_headwear_north_german_imperial_reichskrone = {
+	set_tags = "hair_covered"  
+	entity = { required_tags = ""			shared_pose_entity = head   entity = male_headwear_north_german_imperial_reichskrone_entity   }
 }
 
 #	  LATE AGES		#
@@ -471,6 +480,10 @@ female_headwear_german_nun_veil = {
 female_headwear_german_nun_veil_crown = {
 	set_tags = "fully_covered"  
 	entity = { required_tags = ""			shared_pose_entity = head   	entity = female_headwear_german_nun_veil_crown_entity }
+}
+female_headwear_north_german_imperial_reichskrone = {
+	set_tags = "hair_covered"  
+	entity = { required_tags = ""			shared_pose_entity = head   entity = female_headwear_north_german_imperial_reichskrone_entity   }
 }
 
 #	  ENGLISH		#

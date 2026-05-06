@@ -904,7 +904,7 @@ PixelShader =
 				float3 ShadowWorldPos = Input.WorldSpacePos + ToSunDir * lerp( 1.0f, 1.5f, Dither );// + float3(0.0f, 1.0f, 0.0f ) * 0.5f;
 				float4 ShadowProj = mul( ShadowMapTextureMatrix, float4( ShadowWorldPos, 1.0 ) );
 				float ShadowTerm = CalculateShadow( ShadowProj, ShadowTexture );
-				float SoftShadowTerm = CalculateSoftShadow( ShadowProj, ShadowTexture );
+				float SoftShadowTerm = ShadowTerm;//CalculateSoftShadow( ShadowProj, ShadowTexture );
 				//ShadowTerm = SoftShadowTerm;
 				//SoftShadowTerm = ShadowTerm;
 				#else

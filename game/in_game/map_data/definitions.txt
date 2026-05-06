@@ -122,7 +122,7 @@
 					north_sea11 north_sea5 north_sea8
 				}
 			}
-			western_baltic_sea = {
+			inner_baltic_sea_area = {
 				north_baltic_sea = {
 					gavlebukten alands_hav north_baltic abo_skargard  tralhavet
 				}
@@ -130,12 +130,24 @@
 					stockholms_skargard braviken
 					western_gotland_basin gotlands_hav
 				}
-				skagerrak_province = { frier_fjord grenen_cape jammer_bay kristiansand_fjord oslo_fjord skagerrack vigso_bay }
-				danish_sea = { alborg_bugt kattegatt oresund stora_balt lilla_balt limfjorden}
+				bothnian_sea = {  kvarken gulf_of_bothnia west_botnia east_botnia }
+			}
+			south_baltic_sea_area = {
+				arkona_sea_province = {
+					bay_lubeck fischland_coast arkona_cape pommeranian_bay 
+					stettin_lagoon
+				}
+				southeast_baltic_sea = { 
+					coast_of_kurland pommeranian_coast east_pommerania_coast coast_of_memel gulf_of_danzig 
+					curonian_coast vistula_lagoon 
+				}
 				south_baltic_sea = {
 					kalmar_sund skanska_kusten blekinge_kust central_baltic oland_coast
 				}
-				bothnian_sea = {  kvarken gulf_of_bothnia west_botnia east_botnia }
+			}
+			western_baltic_sea = {
+				skagerrak_province = { frier_fjord grenen_cape jammer_bay kristiansand_fjord oslo_fjord skagerrack vigso_bay }
+				danish_sea = { alborg_bugt kattegatt oresund stora_balt lilla_balt limfjorden}
 			}
 			# sea areas
 			russian_coastline = {
@@ -1389,15 +1401,6 @@
 			}
 			eastern_baltic_sea = {
 				eastern_baltic_sea = { north_central_baltic gulf_of_riga coast_of_osel west_gulf_of_finland east_gulf_of_finland }
-				southeast_baltic_sea = { 
-					coast_of_kurland pommeranian_coast east_pommerania_coast coast_of_memel gulf_of_danzig 
-					curonian_coast vistula_lagoon 
-				}
-				arkona_sea_province = {
-					bay_lubeck fischland_coast arkona_cape pommeranian_bay 
-					stettin_lagoon 
-					 
-				}
 			}
 		}
 
@@ -1854,7 +1857,7 @@
 				constantinople_province = { constantinople vize catalca silivri corlu }
 				dardanelles_province = { gallipoli enez hayrabolu malgara rodoscuk kesan }
 				edirne_province = { edirne ahtopol luleburgaz kiyikoy kirklareli }
-				evros_province = { demotica traianopolis komotini xanthia }
+				evros_province = { demotica komotini traianopolis xanthia }
 				rhodopes_province = { stanimaka beden haskovo ormenio perperek smolyan ustra rhodope_mountains5 rhodope_mountains6 }
 				sliven_province = { sliven boruy bukelon constantia_bul elhovo hiambouli }
 				zagore_province = { plovdiv kostenets kran stipon strelcha tsepina }
@@ -9764,7 +9767,7 @@ oceania = {
 			}
 			marianas_area = {#https://en.wikipedia.org/wiki/Mariana_Islands
 				guahan_province = {
-					guahan guahan_atoll rota saipan
+					guahan rota saipan
 				}
 				northern_islands_province = {
 					noos anatahan alamagan pagan_island agrihan maug uracas
@@ -9773,7 +9776,7 @@ oceania = {
 			belau_sea_zones_area = {
 				belau_sea_zones_province = {
 					#guahan_province
-					pago_bay guahan_coast
+					pago_bay guahan_coast guahan_atoll
 					#northern_islands_province
 					noos_coast anatahan_coast guguan_coast pagan_coast asuncion_coast ahyi_coast
 					#Belau

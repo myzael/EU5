@@ -15,8 +15,12 @@ pdxmesh = {
 	additive_animation = { id = "male_body_height" type = "additive_animations/male_body_height.anim" }
 	additive_animation = { id = "male_body_infant_proportions" type = "additive_animations/male_body_infant_proportions.anim" }
 	additive_animation = { id = "male_body_old_posture" type = "additive_animations/male_body_old_posture.anim" }
+	additive_animation = { id = "male_body_hunchback" type = "additive_animations/male_body_hunchback.anim" }
 
 	blend_shape = { id = "bs_old_body"		type = "blendshapes/male_body_bs_old.mesh" }
+
+	## Visual trait blend shapes
+	blend_shape = { id = "bubonic_plague_01"		type = "blendshapes/bubonic_plague_01.mesh" }
 
 	meshsettings = {
 		name = "male_bodyShape"
@@ -50,8 +54,12 @@ entity = {
 	attribute = { name = "male_body_height"	additive_animation = "male_body_height" }
 	attribute = { name = "body_infant_proportions"	additive_animation = "male_body_infant_proportions" default = 0.01 }
 	attribute = { name = "body_old_posture"	additive_animation = "male_body_old_posture" default = 0 }
+	attribute = { name = "body_hunchback"	additive_animation = "male_body_hunchback" default = 0 }
 
 	attribute = { name = "bs_old_body"		blend_shape = "bs_old_body" }
+
+	## Visual trait blend shapes
+	attribute = { name = "bs_bubonic_plague_body_01"		blend_shape = "bubonic_plague_01" }
 
 
 	game_data = {

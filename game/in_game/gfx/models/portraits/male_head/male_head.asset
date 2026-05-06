@@ -53,6 +53,7 @@ pdxmesh = {
 	additive_animation = { id = "child_proportions"				type = "additive_animations/male_head_child_proportions.anim" }
 	additive_animation = { id = "infant_proportions"				type = "additive_animations/male_head_infant_proportions.anim" }
 	additive_animation = { id = "old_posture"				type = "additive_animations/male_head_old_posture.anim" }
+	additive_animation = { id = "hunchback"				type = "additive_animations/male_head_hunchback.anim" }
 
 	## Additive animations - Expressions ##
 
@@ -98,6 +99,21 @@ pdxmesh = {
 	blend_shape = { id = "fat_1"		type = "blendshapes/fat_1.mesh" }
 	blend_shape = { id = "gaunt_1"		type = "blendshapes/gaunt_1.mesh" }
 	blend_shape = { id = "boy_body"		type = "blendshapes/boy_body.mesh" }
+
+	## Visual trait blend shapes
+	blend_shape = { id = "smallpox_01"		type = "blendshapes/smallpox_01.mesh" }
+	blend_shape = { id = "smallpox_02"		type = "blendshapes/smallpox_02.mesh" }
+	blend_shape = { id = "pox_scars_01"		type = "blendshapes/pox_scars_01.mesh" }
+	blend_shape = { id = "pox_scars_02"		type = "blendshapes/pox_scars_02.mesh" }
+	blend_shape = { id = "bubonic_plague_01"		type = "blendshapes/bubonic_plague_01.mesh" }
+	blend_shape = { id = "bubonic_plague_02"		type = "blendshapes/bubonic_plague_02.mesh" }
+	blend_shape = { id = "illness_01"		type = "blendshapes/illness_01.mesh" }
+	blend_shape = { id = "disfigurement_01"		type = "blendshapes/disfigurement_01.mesh" }
+	blend_shape = { id = "disfigurement_02"		type = "blendshapes/disfigurement_02.mesh" }
+	blend_shape = { id = "disfigurement_03"		type = "blendshapes/disfigurement_03.mesh" }
+	blend_shape = { id = "leprosy_01"		type = "blendshapes/leprosy_01.mesh" }
+	blend_shape = { id = "leprosy_02"		type = "blendshapes/leprosy_02.mesh" }
+
 
 	## Regular blend shapes ##
 
@@ -261,6 +277,7 @@ entity = {
 	attribute = { name = "child_proportions"		additive_animation = "child_proportions" }
 	attribute = { name = "infant_proportions"		additive_animation = "infant_proportions" }
 	attribute = { name = "old_posture"		additive_animation = "old_posture" }
+	attribute = { name = "hunchback"		additive_animation = "hunchback" }
 
 	## Additive animations - Expressions ##
 	attribute = { name = "expression_brow_frown_angry_01"		additive_animation = "expression_brow_frown_angry_01" default = 0.0 }
@@ -304,6 +321,20 @@ entity = {
 	attribute = { name = "bs_fat_1"		blend_shape = "fat_1" }
 	attribute = { name = "bs_gaunt_1"		blend_shape = "gaunt_1" }
 	attribute = { name = "bs_boy_body"		blend_shape = "boy_body" }
+
+	## Visual trait blend shapes
+	attribute = { name = "bs_smallpox_01"		blend_shape = "smallpox_01" }
+	attribute = { name = "bs_smallpox_02"		blend_shape = "smallpox_02" }
+	attribute = { name = "bs_pox_scars_01"		blend_shape = "pox_scars_01" }
+	attribute = { name = "bs_pox_scars_02"		blend_shape = "pox_scars_02" }
+	attribute = { name = "bs_bubonic_plague_01"		blend_shape = "bubonic_plague_01" }
+	attribute = { name = "bs_bubonic_plague_02"		blend_shape = "bubonic_plague_02" }
+	attribute = { name = "bs_illness_01"		blend_shape = "illness_01" }
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
+	attribute = { name = "bs_disfigurement_03"		blend_shape = "disfigurement_03" }
+	attribute = { name = "bs_leprosy_01"		blend_shape = "leprosy_01" }
+	attribute = { name = "bs_leprosy_02"		blend_shape = "leprosy_02" }
 
 	attribute = { name = "bs_cheek_def_max"    blend_shape = "cheek_def_max" }
 	attribute = { name = "bs_cheek_def_2_max"    blend_shape = "cheek_def_2_max" }

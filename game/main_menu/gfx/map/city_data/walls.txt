@@ -1,0 +1,140 @@
+﻿#WALLS
+mesh_list = {
+	name = "fallback_wall"
+	building_wooden_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "fallback_wall_tower"
+	building_wooden_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "fallback_wall_gate"
+	building_wooden_walls_door_mesh = 1
+}
+
+
+mesh_list = {
+	name = "wall_mesh_list_in_construction"
+	building_wooden_walls_underconstruction_mesh = 1
+}
+
+template large_city_walls
+{
+	default_variables =
+	{
+		wall_mesh_list  =  fallback_wall
+		tower_mesh_list = fallback_wall_tower
+		gate_mesh_list  = fallback_wall_gate
+	}
+	
+	code [[
+		wall = {
+			name = large_city_walls
+			order = 0
+			tower_separation = 7.0
+			area = 120.0
+			percentage_built = 1.0
+			#limit {}
+			contributors = 
+			{
+				has_building_with_graphical_tag_and_at_least_one_level:large_city_walls = 1.0
+			}
+			#required_contributors = {}
+			wall_mesh_list  = @wall_mesh_list
+			tower_mesh_list = @tower_mesh_list
+			gate_mesh_list  = @gate_mesh_list
+			#only_in_location = london
+			#location_filters = { rural_settlement = no }
+			#dlc = the_great_wall_dlc
+			#link_tooltop = not_implemented_yet
+		}
+	]]
+}
+
+template large_city_walls_under_construction
+{
+	default_variables =
+	{
+		wall_mesh_list  =  wall_mesh_list_in_construction
+		#tower_mesh_list = fallback_wall_tower
+		gate_mesh_list  = wall_mesh_list_in_construction
+	}
+	
+	code [[
+		wall = {
+			name = large_city_walls
+			order = -1
+			tower_separation = 7.0
+			area = 140.0
+			contributors = 
+			{
+				is_under_construction_with_graphical_tag:large_city_walls = 1.0
+			}
+			wall_mesh_list  = @wall_mesh_list
+			#tower_mesh_list = @tower_mesh_list
+			gate_mesh_list  = @gate_mesh_list
+		}
+	]]
+}
+
+template small_city_walls
+{
+	default_variables =
+	{
+		wall_mesh_list  =  fallback_wall
+		tower_mesh_list = fallback_wall_tower
+		gate_mesh_list  = fallback_wall_gate
+	}
+	
+	code [[
+		wall = {
+			name = small_city_walls
+			order = 0
+			tower_separation = 5.0
+			area = 75.0
+			percentage_built = 1.0
+			#limit {}
+			contributors = 
+			{
+				has_building_with_graphical_tag_and_at_least_one_level:small_city_walls = 1.0
+			}
+			#required_contributors = {}
+			wall_mesh_list  = @wall_mesh_list
+			tower_mesh_list = @tower_mesh_list
+			gate_mesh_list  = @gate_mesh_list
+			#only_in_location = london
+			#location_filters = { rural_settlement = no }
+			#dlc = the_great_wall_dlc
+			#link_tooltop = not_implemented_yet
+		}
+	]]
+}
+
+template small_city_walls_under_construction
+{
+	default_variables =
+	{
+		wall_mesh_list  =  wall_mesh_list_in_construction
+		#tower_mesh_list = fallback_wall_tower
+		gate_mesh_list  = wall_mesh_list_in_construction
+	}
+	
+	code [[
+		wall = {
+			name = small_city_walls_under__construction
+			order = -1
+			tower_separation = 5.0
+			area = 50.0
+			percentage_built = 1.0
+			contributors = 
+			{
+				is_under_construction_with_graphical_tag:small_city_walls = 1.0
+			}
+			wall_mesh_list  = @wall_mesh_list
+			#tower_mesh_list = @tower_mesh_list
+			gate_mesh_list  = @gate_mesh_list
+		}
+	]]
+}

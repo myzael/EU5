@@ -1,0 +1,33 @@
+pdxmesh = {
+	name = "building_han_walls_tower_mesh"
+	file = "building_han_walls_tower.mesh"
+	scale = 75
+
+
+	meshsettings = {
+		name = "building_han_walls_tower"
+		index = 0
+		texture_diffuse = "atlas_han_castles_diffuse.dds"
+		texture_normal = "atlas_han_castles_normal.dds"
+		texture_specular = "atlas_han_castles_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_han_wall_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_han_walls_tower_2"
+		index = 0
+		texture_diffuse = "atlas_master_original_diffuse.dds"
+		texture_normal = "atlas_master_original_normal.dds"
+		texture_specular = "atlas_master_original_properties.dds"
+		shader = "standard_atlas"
+		texture = { file = "building_han_wall_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}	
+}
+
+entity = {
+	name = "building_han_walls_tower_entity"
+	pdxmesh = "building_han_walls_tower_mesh"
+}

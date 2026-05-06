@@ -172,6 +172,20 @@ cloth_country_one_ticking_stripes = {
 	}
 }
 
+cloth_country_diagonal = {
+	parent = cloth_country_base
+	mask_texture	= "two_color_diagonal_stripes_mask.dds"
+	repaint	= {
+		input_name = primary_color
+		#					R	G	B	=	Points to pattern mask
+		mask = { color = { 1.0 0.0 0.0 } tolerance = 0.8 hardness = 0.9 output = 1.0 }
+	}
+	repaint = {
+		input_name = secondary_color
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.8 hardness = 0.9 output = 1.0 }
+	}
+}
+
 cloth_country_quarter = {
 	parent = cloth_country_base
 	mask_texture	= "two_color_quarter.dds"

@@ -75,6 +75,10 @@
 				factor = 0
 				portrait_late_trigger = yes
 			}
+			modifier = {
+				factor = 0
+				portrait_early_trigger = yes
+			}
 		}
 	}
 
@@ -116,6 +120,10 @@
 					government_type = government_type:republic
 				}
 			}
+			modifier = {
+				factor = 0
+				portrait_early_trigger = yes
+			}
 		}
 	}
 
@@ -140,10 +148,6 @@
 				add = 400
 				portrait_clothing_trigger = { CULTURE_FLAG = european_gfx }
 				portrait_wear_armor_trigger = yes
-			}
-			modifier = {
-				factor = 0
-				portrait_clergy_trigger = { RELIGION_GFX = catholic_gfx }
 			}
 			modifier = {
 				factor = 0
@@ -447,6 +451,48 @@ neckware_outer = {
 			modifier = {
 				factor = 0
 				portrait_clergy_trigger = { RELIGION_GFX = catholic_gfx }
+			}
+			modifier = {
+				factor = 0
+				portrait_early_trigger = yes
+			}
+		}
+	}
+
+	hre_emperor = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = neckware_outer
+				template = european_royalty
+				accessory = male_neckwear_german_out_royal_livery_collar
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				OR = {
+					AND = { # alive HRE emperor
+						is_ruler = yes
+						any_ruling_countries = {
+							is_leader_of_international_organization = international_organization:hre
+							NOR = {
+								government_type = government_type:theocracy
+								government_type = government_type:republic
+							}
+						}
+					}
+					AND = { # dead HRE emperor
+						any_ruling_countries = { is_leader_of_international_organization = international_organization:hre }
+						is_alive = no
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				portrait_early_trigger = yes
 			}
 		}
 	}

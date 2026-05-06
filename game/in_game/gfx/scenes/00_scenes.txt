@@ -80,13 +80,13 @@ location_scene = {
 		uv_random_seed = 3943
 	}
 
-	# ecs_illustration_image = {
-	# 	# Layer 7 - WALL
-	# 	name = "illustration_override"
-	# 	pdxmesh = "location7_mesh"
-	# 	list = "wall"
-	# 	uv_random_seed = 39541
-	# }
+	ecs_illustration_image = {
+		# Layer 7 - WALL
+		name = "illustration_override"
+		pdxmesh = "location7_mesh"
+		list = "wall"
+		#uv_random_seed = 395
+	}
 
 	ecs_illustration_image = {
 		# Layer 8 - SETTLEMENT1
@@ -177,33 +177,53 @@ location_scene = {
 	}
 
 	ecs_illustration_image = {
-		# Layer 18 - GROUND 3
+		# Layer 18 - STATUS BACK VOLCANO
 		name = "illustration_override"
 		pdxmesh = "location18_mesh"
-		list = "ground3"
-		uv_random_seed = 394875
-	}
-
-	ecs_illustration_image = {
-		# Layer 19 - STATUS BACK VOLCANO
-		name = "illustration_override"
-		pdxmesh = "location19_mesh"
 		list = "statusback"
 		#uv_random_seed = 39499
 	}
 
 	ecs_illustration_image = {
-		# Layer 20 - TOPOLOGY
+		# Layer 19 - GROUND 3
+		name = "illustration_override"
+		pdxmesh = "location19_mesh"
+		list = "ground3"
+		uv_random_seed = 394875
+	}
+
+	ecs_illustration_image = {
+		# Layer 20 - SETTLEMENT 3  megalopolis
 		name = "illustration_override"
 		pdxmesh = "location20_mesh"
+		list = "settlement3"
+		uv_random_seed = 10385
+		uv_offset = { 0.0 0.5 }
+		color = { 0.63 0.77 0.88 0.15 }
+	}
+
+	ecs_illustration_image = {
+		# Layer 21 - TOPOSTATUS Volcanoes and such
+		name = "illustration_override"
+		pdxmesh = "location21_mesh"
+		list = "topostatus"
+		#uv_random_seed = 10385
+		uv_offset = { 0.0 0.5 }
+		color = { 0.63 0.77 0.88 0.15 }
+	}
+
+	ecs_illustration_image = {
+		# Layer 21 - TOPOLOGY
+		name = "illustration_override"
+		pdxmesh = "location22_mesh"
 		list = "topology"
 		uv_random_seed = 39499
 	}
 
 	ecs_illustration_image = {
-		# Layer 21 - SKY
+		# Layer 22 - SKY
 		name = "illustration_override"
-		pdxmesh = "location21_mesh"
+		pdxmesh = "location23_mesh"
 		list = "skyv2"
 		uv_random_seed = 39487
 	}

@@ -307,8 +307,9 @@ template fort {
 		fort = {
 			order = 0
 			size = large
-			contributors = { 
+			contributors = {
 				has_building_with_at_least_one_level:castle = 1.0
+				has_building_with_at_least_one_level:fortezza_di_sant_andrea = 1.0
 			}
 			
 			mesh_list = @mesh_list
@@ -477,12 +478,45 @@ template noble_neighborhood {
 
 			mesh_list = @mesh_list
 
-			filter_func = seed_neighborhood_filter
-			weight_func = grow_neighborhood_weights
+			filter_func = next_to_same_culture_filter
+			weight_func = close_to_center_weights
 			
 			allow_demote = no
 			
 			location_filters = { rural_settlement = no }
+			
+		}
+	]]
+}
+
+template nobles_neighborhood_megalopolis {
+	default_variables = { 
+		mesh_list = final_fallback_meshes 
+		scale = 10
+		size = small
+	}
+	code [[
+		burgher_neighborhood = {
+			order = 7
+			size = @size
+			contributors = { 
+				pop_count:nobles = @scale 
+				pop_count:clergy = @scale
+			}
+			
+			mesh_list = @mesh_list
+
+			filter_func = next_to_same_culture_filter  
+			weight_func = grow_neighborhood_weights 
+			
+			allow_demote = yes
+			
+			location_filters = { 
+				megalopolis = yes
+				city = no
+				town = no
+				rural_settlement = no
+			}
 			
 		}
 	]]
@@ -493,7 +527,8 @@ template nobles {
 	code [[
 		load_template center_building {}
 		load_template noble_seed {}
-		#load_template noble_neighborhood {}
+		load_template nobles_neighborhood_megalopolis {}
+		load_template noble_neighborhood {}
 	]]
 }
 
@@ -547,11 +582,43 @@ template burgher_neighborhood {
 		}
 	]]
 }
+
+template burgher_neighborhood_megalopolis {
+	default_variables = { 
+		mesh_list = final_fallback_meshes 
+		scale = 7
+		size = small
+	}
+	code [[
+		burgher_neighborhood = {
+			order = 7
+			size = @size
+			contributors = { pop_count:burghers = @[5.15 * scale] }
+			
+			mesh_list = @mesh_list
+
+			filter_func = next_to_same_culture_filter  
+			weight_func = grow_neighborhood_weights 
+			
+			allow_demote = yes
+			
+			location_filters = { 
+				megalopolis = yes
+				city = no
+				town = no
+				rural_settlement = no
+			}
+			
+		}
+	]]
+}
+
 template burghers {
 	default_variables = {}
 	code [[
 		load_template burgher_center {}
 		load_template burgher_neighborhood {}
+		load_template burgher_neighborhood_megalopolis {}
 	]]
 }
 
@@ -585,6 +652,39 @@ template peasant_neighborhood {
 		}
 	]]
 }
+
+template peasant_megalopolis {
+	default_variables = { 
+		mesh_list = final_fallback_meshes 
+		scale = 2
+		size = small
+	}
+	code [[
+		peasant_megalopolis = {
+			order = 7
+			size = @size
+			contributors = { 
+				pop_count:peasants = @[0.45 * scale]
+				pop_count:slaves = @[0.035 * scale] }
+			
+			mesh_list = @mesh_list
+
+			filter_func = next_to_same_culture_filter  
+			weight_func = grow_neighborhood_weights 
+			
+			allow_demote = yes
+			
+			location_filters = { 
+				megalopolis = yes
+				city = no
+				town = no
+				rural_settlement = no
+			}
+			
+		}
+	]]
+}
+
 template peasant_rural {
 	default_variables = { 
 		mesh_list = peasant_rural_meshes
@@ -610,6 +710,7 @@ template peasant_rural {
 			
 			
 			location_filters = { 
+				megalopolis = no
 				city = no
 				town = no
 				rural_settlement = yes 
@@ -641,6 +742,7 @@ template peasant_rural {
 			
 			
 			location_filters = { 
+				megalopolis = no
 				city = no
 				town = no
 				rural_settlement = yes 
@@ -656,6 +758,7 @@ template peasants {
 	code [[
 		load_template peasant_neighborhood {}
 		load_template peasant_rural {}
+		load_template peasant_megalopolis {}
 	]]
 }
 
@@ -1719,7 +1822,7 @@ template noble_military {
 			size = small
 			contributors = {
 				has_building_with_graphical_tag_and_at_least_one_level:small_military = 1.0
-
+				has_building_with_at_least_one_level:tower_of_belem = 1.0
 			}
 			mesh_list = @mesh_list
 			
@@ -1734,7 +1837,7 @@ template republican_assembly {
 	code [[
 		republican_assembly = {
 			order = 0
-			size = large
+			size = small
 			contributors = {
 				has_building_with_graphical_tag_and_at_least_one_level:palace = 1.0
 			}
@@ -1771,6 +1874,7 @@ template armory {
 			size = small
 			contributors = {
 				has_building_with_at_least_one_level:armory = 1
+				has_building_with_at_least_one_level:cantonments = 1
 			}
 			mesh_list = @mesh_list
 			
@@ -1975,6 +2079,11 @@ template player_buildings {
 		load_template under_construction_port {mesh_list = @under_construction_port_meshes}
 		load_template under_construction_building {mesh_list = @under_contruction_meshes}
 		load_template under_construction_fort {mesh_list = @under_construction_fort_meshes}
+		
+		load_template large_city_walls {}
+		load_template small_city_walls {}
+		load_template large_city_walls_under_construction {}
+		load_template small_city_walls_under_construction {}
 	]]
-}
+} 
 

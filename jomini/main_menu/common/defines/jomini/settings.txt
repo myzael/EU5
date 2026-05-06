@@ -1,0 +1,3 @@
+﻿NJominiSettings = {
+	SEGMENTED_CONTROL_LIMIT = 1
+}

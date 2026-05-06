@@ -8,7 +8,7 @@ religions_regular = {
 
 	###Christians
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_regular_metadata_os1080x440_d88x164.dds"
 		priority = 50 # higher priority to beat abrahamic_gfx
 		scope = country
 		trigger = {
@@ -20,7 +20,7 @@ religions_regular = {
 
 	###Muslims
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_regular_metadata_os1080x440_d96x80.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -31,7 +31,7 @@ religions_regular = {
 	}
 	###Buddhists
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/asian/asian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/asian/asian_clergy_regular_metadata_os1080x440_d100x196.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -43,7 +43,7 @@ religions_regular = {
 
 	###Hindus
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_regular_metadata_os1080x440_d148x176.dds"
 		priority = 40
 		scope = country
 		trigger = {
@@ -61,7 +61,7 @@ ashanti_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/ashanti/ashanti_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/ashanti/ashanti_nobles_regular_metadata_os1080x440_d148x92.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -73,7 +73,7 @@ ashanti_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/ashanti/ashanti_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/ashanti/ashanti_clergy_regular_metadata_os1080x440_d124x184.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -85,7 +85,7 @@ ashanti_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_regular_metadata_os1080x440_d136x172.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -97,7 +97,7 @@ ashanti_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/ashanti/ashanti_burghers_armed_metadata_os1080x440_d116x144.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -110,7 +110,7 @@ ashanti_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/ashanti/ashanti_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/ashanti/ashanti_slaves_metadata_os1080x440_d48x140.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -123,7 +123,7 @@ ashanti_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/ashanti/ashanti_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/ashanti/ashanti_peasants_regular_metadata_os1080x440_d140x164.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -140,7 +140,7 @@ asian_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/asian/asian_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/asian/asian_nobles_regular_metadata_os1080x440_d116x188.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -152,7 +152,7 @@ asian_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/asian/asian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/asian/asian_clergy_regular_metadata_os1080x440_d100x196.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -164,7 +164,7 @@ asian_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_regular_metadata_os1080x440_d76x188.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -176,7 +176,7 @@ asian_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/asian/asian_burghers_armed_metadata_os1080x440_d48x164.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -189,7 +189,7 @@ asian_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/asian/asian_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/asian/asian_slaves_metadata_os1080x440_d8x208.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -202,7 +202,7 @@ asian_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/asian/asian_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/asian/asian_peasants_regular_metadata_os1080x440_d68x180.dds"
 		priority = 1
 		scope = country
 		trigger = {
@@ -219,7 +219,7 @@ indian_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/indian/indian_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/indian/indian_nobles_regular_metadata_os1080x440_d76x152.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -231,7 +231,7 @@ indian_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/indian/indian_clergy_regular_metadata_os1080x440_d148x176.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -243,7 +243,7 @@ indian_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_regular_metadata_os1080x440_d160x180.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -255,7 +255,7 @@ indian_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/indian/indian_burghers_armed_metadata_os1080x440_d72x156.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -268,7 +268,7 @@ indian_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/indian/indian_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/indian/indian_slaves_metadata_os1080x440_d16x116.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -281,7 +281,7 @@ indian_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/indian/indian_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/indian/indian_peasants_regular_metadata_os1080x440_d96x180.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -298,7 +298,7 @@ aztec_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/aztec/aztec_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/aztec/aztec_nobles_regular_metadata_os1080x440_d68x168.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -310,7 +310,7 @@ aztec_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/aztec/aztec_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/aztec/aztec_clergy_regular_metadata_os1080x440_d124x0.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -322,7 +322,7 @@ aztec_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_regular_metadata_os1080x440_d60x176.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -334,7 +334,7 @@ aztec_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/aztec/aztec_burghers_armed_metadata_os1080x440_d68x172.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -347,7 +347,7 @@ aztec_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/aztec/aztec_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/aztec/aztec_slaves_metadata_os1080x440_d80x172.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -360,7 +360,7 @@ aztec_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/aztec/aztec_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/aztec/aztec_peasants_regular_metadata_os1080x440_d88x172.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -377,7 +377,7 @@ syrian_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/syrian/syrian_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/syrian/syrian_nobles_regular_metadata_os1080x440_d84x152.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -389,7 +389,7 @@ syrian_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/syrian/syrian_clergy_regular_metadata_os1080x440_d96x80.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -401,7 +401,7 @@ syrian_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_regular_metadata_os1080x440_d116x200.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -413,7 +413,7 @@ syrian_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/syrian/syrian_burghers_armed_metadata_os1080x440_d48x144.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -426,7 +426,7 @@ syrian_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/syrian/syrian_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/syrian/syrian_slaves_metadata_os1080x440_d0x108.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -438,7 +438,7 @@ syrian_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/syrian/syrian_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/syrian/syrian_peasants_regular_metadata_os1080x440_d104x156.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -455,7 +455,7 @@ iroquoi_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/iroquois/iroquois_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/iroquois/iroquois_nobles_regular_metadata_os1080x440_d104x104.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -467,7 +467,7 @@ iroquoi_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/iroquois/iroquois_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/iroquois/iroquois_clergy_regular_metadata_os1080x440_d76x20.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -479,7 +479,7 @@ iroquoi_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_regular_metadata_os1080x440_d112x184.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -491,7 +491,7 @@ iroquoi_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/iroquois/iroquois_burghers_armed_metadata_os1080x440_d112x184.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -504,7 +504,7 @@ iroquoi_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/iroquois/iroquois_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/iroquois/iroquois_slaves_metadata_os1080x440_d56x112.dds"
 		priority = 20
 		scope = country
 		trigger = {
@@ -516,7 +516,7 @@ iroquoi_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/iroquois/iroquois_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/iroquois/iroquois_peasants_regular_metadata_os1080x440_d120x212.dds"
 		priority = 10
 		scope = country
 		trigger = {
@@ -533,7 +533,7 @@ north_german_regular = {
 
 	###SAILORS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/sailors/north_german_sailors.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/sailors/north_german_sailors_metadata_os1080x440_d132x68.dds"
 		priority = 6
 		scope = country
 		trigger = {
@@ -562,7 +562,7 @@ north_german_regular = {
 
 	###NOBLES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/nobles/north_german/north_german_nobles_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/nobles/north_german/north_german_nobles_regular_metadata_os1080x440_d124x172.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -573,7 +573,7 @@ north_german_regular = {
 
 	###CLERGY
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/clergy/north_german/north_german_clergy_regular_metadata_os1080x440_d88x164.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -585,7 +585,7 @@ north_german_regular = {
 
 	###BURGHERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_regular_metadata_os1080x440_d64x168.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -596,7 +596,7 @@ north_german_regular = {
 
 	###SOLDIERS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_armed.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/burghers/north_german/north_german_burghers_armed_metadata_os1080x440_d116x68.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -607,7 +607,7 @@ north_german_regular = {
 
 	###SLAVES
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/slaves/north_german/north_german_slaves.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/slaves/north_german/north_german_slaves_metadata_os1080x440_d0x120.dds"
 		priority = 5
 		scope = country
 		trigger = {
@@ -618,7 +618,7 @@ north_german_regular = {
 
 	###PEASANTS
 	illustration_image = {
-		texture_file = "gfx/interface/illustrations/event/characters/peasants/north_german/north_german_peasants_regular.dds"
+		texture_file = "gfx/interface/illustrations/event/characters/peasants/north_german/north_german_peasants_regular_metadata_os1080x440_d64x200.dds"
 		priority = 1
 		scope = country
 		trigger = {

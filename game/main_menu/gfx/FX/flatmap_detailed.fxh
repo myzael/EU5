@@ -88,11 +88,11 @@ PixelShader =
 		}
 		void GetProvinceOverlayAndBlendFlatmap( in float2 NormalizedCoordinate, out float3 ProvinceOverlayColor, out float PreLightingBlend, out float PostLightingBlend )
 		{
-			float DistanceFieldValue = CalcDistanceFieldValue( NormalizedCoordinate );
+			float DistanceFieldValue = PdxTex2D( BorderDistanceFieldTexture, NormalizedCoordinate ).r; //CalcDistanceFieldValue( NormalizedCoordinate ); without extra samples, the border distance is already a distance field so the extra smoothing that we get for the function is not noticeable or worth it
 			float4 ProvinceOverlayColorWithAlpha = CalcPrimaryProvinceOverlayFlatmap( NormalizedCoordinate, DistanceFieldValue );
 
 			ApplySecondaryProvinceOverlayFlatmap( NormalizedCoordinate, DistanceFieldValue, ProvinceOverlayColorWithAlpha );
-			ApplyAlternateProvinceOverlay( NormalizedCoordinate, ProvinceOverlayColorWithAlpha );
+			//ApplyAlternateProvinceOverlay( NormalizedCoordinate, ProvinceOverlayColorWithAlpha ); We don't use alternate colors so this is gpu time wasted
 
 			GetGradiantBorderBlendValuesFlatmap( ProvinceOverlayColorWithAlpha, PreLightingBlend, PostLightingBlend );
 			ProvinceOverlayColor = ProvinceOverlayColorWithAlpha.rgb;

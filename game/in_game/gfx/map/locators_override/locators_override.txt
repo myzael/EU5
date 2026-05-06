@@ -268,3 +268,22 @@
 	province = prague
 	type = vfx
 }
+
+
+45 = {  
+	position = {8108.129 2.940628 6129.504}
+	province = konstanz
+	type = city
+}
+
+46 = {  
+	position = {8108.129 2.940628 6129.504}
+	province = konstanz
+	type = vfx
+}
+
+47 = {  
+	position = {7472.7144 3.730711 5286.091}
+	province = namalata
+	type = city
+}

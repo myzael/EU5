@@ -1,0 +1,16 @@
+pdxmesh = {
+	name = "unit_shield_wood_star_cataphracts_mesh"
+	file = "unit_shield_wood_star_cataphracts.mesh"
+
+	meshsettings = {
+		name = "unit_shield_wood_star_cataphractsShape"
+		index = 0
+		texture_diffuse = "unit_shield_wood_star_cataphracts_diffuse.dds"
+		texture_normal = "unit_shield_wood_star_cataphracts_normal.dds"
+		#texture_specular = "unit_shield_wood_star_cataphracts_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_shield_wood_star_cataphracts_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

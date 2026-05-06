@@ -14,6 +14,7 @@ pdxmesh = {
 
 	# additive_animation = { id = "male_body_height" type = "additive_animations/male_body_height.anim" }
 	additive_animation = { id = "female_body_infant_proportions" type = "additive_animations/female_body_infant_proportions.anim" }
+	additive_animation = { id = "female_body_hunchback" type = "additive_animations/female_body_hunchback.anim" }
 
 	blend_shape = { id = "bs_corset"		type = "blendshapes/female_body_bs_corset.mesh" }
 
@@ -47,6 +48,7 @@ entity = {
 	# state = {	name = "pose_08"	animation = "body_pose_08" 	chance = 80 looping = yes next_state = "pose" }
 
 	attribute = { name = "body_infant_proportions"	additive_animation = "female_body_infant_proportions" }
+	attribute = { name = "body_hunchback"	additive_animation = "female_body_hunchback" default = 0 }
 
 	attribute = { name = "bs_corset"		blend_shape = "bs_corset" }
 

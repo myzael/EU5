@@ -1,0 +1,111 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE torsos
+###############################################
+
+##### BYZANTINE  #####
+
+# AGE_1_TRADITIONS
+
+east_mediterranean_gfx:age_1_traditions:torsos_clothes = {
+    ### PEASANT UNITS
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_fabric_bag_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } }
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_fabric_belt_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } }
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_shirt_belt_fabric_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } }
+    
+}
+
+
+east_mediterranean_gfx:age_1_traditions:soldier_torsos_clothes = {
+    ### INFANTRY UNITS
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_leather_infantry_mesh" add_tags = "UnitArmor_leather" add_tags = "crotch_covered" } }
+    2 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_chainmail" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } }
+    2 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_skirt_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+}
+
+east_mediterranean_gfx:age_1_traditions:heavy_torsos_clothes = {
+    ### ROYAL GUARDS UNITS
+	20 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_kilt_leather_mesh" add_tags = "UnitArmor_leather" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } } #ROYAL GUARD
+     ### CATAPHRACTS UNITS
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_chainmail" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } }
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_skirt_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+    ### VARANGIAN UNITS
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_weistcoat_knitted_varangian_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_fabric_varangian_mesh" add_tags = "UnitArmor_plate_full" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }         
+}
+
+  ####  ### LEGIONARY UNITS ###  ###
+east_mediterranean_gfx:legionary_tag:heavy_torsos_clothes = {   
+     10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_armor_leather_legionary_mesh" add_tags = "UnitArmor_leather" add_tags = "crotch_covered" add_tags = "legionary" } }
+}
+
+# AGE_2_RENAISSANCE
+east_mediterranean_gfx:age_2_renaissance:soldier_torsos_clothes = {
+    ### INFANTRY UNITS
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_caftans_linen_battle_infantry_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } }
+}
+
+east_mediterranean_gfx:age_2_renaissance:heavy_torsos_clothes = {
+    ### ROYAL GUARDS UNITS
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_kilt_leather_mesh" add_tags = "UnitArmor_leather" add_tags = "UnitDetail_plate" add_tags = "crotch_covered" } } #ROYAL GUARD
+     ### CATAPHRACTS UNITS
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_chainmail" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } }
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_skirt_chain_armor_cataphracts_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+    ### VARANGIAN UNITS
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_weistcoat_knitted_varangian_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_fabric_varangian_mesh" add_tags = "UnitArmor_plate_full" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } }
+}
+
+# AGE_3_DISCOVERY
+east_mediterranean_gfx:age_3_discovery:soldier_torsos_clothes = {
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_linen_bag_leather_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } }
+    #5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_gloves_leather_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } } 
+}
+
+east_mediterranean_gfx:age_3_discovery:polearm_tag:soldier_torsos_clothes = {   
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_gloves_leather_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" add_tags = "crotch_covered" } } 
+    
+}
+
+# AGE_4_REFORMATION
+east_mediterranean_gfx:age_4_reformation:soldier_torsos_clothes = {
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_linen_bag_leather_byz_mesh" add_tags = "UnitArmor_leather" add_tags = "crotch_covered" } }
+    #10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_gloves_leather_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } } #ROYAL GUARD
+}
+east_mediterranean_gfx:age_4_reformation:polearm_tag:soldier_torsos_clothes = {
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_gloves_leather_byz_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_cloth" add_tags = "crotch_covered" } } 
+        
+}
+
+# AGE_5_ABSOLUTISM
+east_mediterranean_gfx:age_5_absolutism:soldier_torsos_clothes = {
+    ### SOLDIER UNITS
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_kilt_melton_wool_byz_mesh" add_tags = "UnitArmor_cloth" add_tags = "crotch_covered" } }
+}
+east_mediterranean_gfx:age_5_absolutism:heavy_torsos_clothes = {   
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_steel_bronze_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } } 
+    
+}
+
+# AGE_6_REVOLUTIONS
+east_mediterranean_gfx:age_6_revolutions:soldier_torsos_clothes = {    
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_steel_bronze_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } }
+}
+east_mediterranean_gfx:age_6_revolutions:heavy_torsos_clothes = { 
+	10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_torso_tunic_wool_steel_bronze_mesh" add_tags = "UnitArmor_plate" add_tags = "UnitDetail_leather" add_tags = "crotch_covered" } } 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

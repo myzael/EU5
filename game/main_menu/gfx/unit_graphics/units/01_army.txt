@@ -1,7 +1,23 @@
 ﻿#############################
 ##### Unit constructors #####
 
-army_infantry = {
+army_heavy_infantry = {
+	schematic_name = unit_skeleton_schematic
+
+	attach = { 100 = heads use_uniformity = no }
+	attach = { 100 = torsos }
+	attach = { 100 = legs }
+	attach = { 100 = headgear }
+	attach = { 100 = hairstyles }
+	attach = { 100 = beards }
+	attach = { 100 = weapons }
+	attach = { 100 = shields }
+	attach = { 100 = back }
+	attach = { 100 = offhand }
+	
+	animation_state_machine_name = unit_skeleton_state_machine_one_handed_axe
+}
+army_light_infantry = {
 	schematic_name = unit_skeleton_schematic
 
 	attach = { 100 = heads use_uniformity = no }
@@ -112,7 +128,7 @@ camel_auxiliary_tag = {
 	
 }
 
-army_cavalry = {
+army_light_cavalry = {
 	schematic_name = unit_cavalry_skeleton_schematic_new
 
 	size = 3	# Affects space between units in formations and when marching
@@ -128,8 +144,25 @@ army_cavalry = {
 	attach = { 100 = cavalry }
 	attach = { 100 = back }
 	#attach = { 100 = saddle }
-	attach = { 100 = horse_accessories }
-	
+	attach = { 100 = horse_accessories }	
+}
+army_heavy_cavalry = {
+	schematic_name = unit_cavalry_skeleton_schematic_new
+
+	size = 3	# Affects space between units in formations and when marching
+
+	attach = { 100 = heads use_uniformity = no }
+	attach = { 100 = torsos }
+	attach = { 100 = legs }
+	attach = { 100 = headgear }
+	attach = { 100 = hairstyles }
+	attach = { 100 = beards }
+	attach = { 100 = cavalry_weapons }
+	attach = { 100 = shields }
+	attach = { 100 = cavalry }
+	attach = { 100 = back }
+	#attach = { 100 = saddle }
+	attach = { 100 = horse_accessories }	
 }
 
 army_auxiliary = {
@@ -194,7 +227,6 @@ army_artillery = {
 	
 	animation_state_machine_name = unit_artillery_mortar_state_machine
 }
-
 
  age_2_renaissance:army_artillery = {
  	schematic_name = unit_artillery_renaissance_cannon_field_skeleton_schematic

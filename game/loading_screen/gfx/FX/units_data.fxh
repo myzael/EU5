@@ -204,6 +204,35 @@ PixelShader =
 
     Code
     [[
+		float CalculateRimLightIntensity(float3 CameraDirection, float3 Normal)
+		{
+			#ifdef RIM_INTENSITY_POWER
+				float RimIntensityPower =  RIM_INTENSITY_POWER;
+			#else
+				float RimIntensityPower =  1.5;
+			#endif
+			#ifdef RIM_FALLOFF_START
+				float RimFalloffStart =  RIM_INTENSITY_POWER;
+			#else
+				float RimFalloffStart =  0.8;
+			#endif
+			#ifdef RIM_FALLOFF_END
+				float RimFalloffEnd =  RIM_INTENSITY_POWER;
+			#else
+				float RimFalloffEnd =  0.3;
+			#endif
+
+			float Intensity = (dot( CameraDirection, Normal ));
+			
+			Intensity =  saturate( 1.0 - Intensity);
+			
+			Intensity = pow(Intensity, RimIntensityPower);
+			
+			Intensity = smoothstep(RimFalloffEnd, RimFalloffStart, Intensity);
+			//return 0.0;
+			return Intensity;
+		}
+
         float3 SampleCountryColor( in int CountryIndex, in int ColorIndex)
         {
 			#ifdef  ENABLE_UNIT_SHADER

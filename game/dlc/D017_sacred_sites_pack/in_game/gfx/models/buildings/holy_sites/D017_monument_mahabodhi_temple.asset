@@ -1,6 +1,6 @@
 pdxmesh = {
-	name = "D017_monument_mahabodhi_temple_mesh"
-	file = "D017_monument_mahabodhi_temple.mesh"
+	name = "d017_monument_mahabodhi_temple_mesh"
+	file = "d017_monument_mahabodhi_temple.mesh"
 
 	lod_percentages = {
 		lod = { index = 1 percent = 5.0 }
@@ -72,6 +72,6 @@ pdxmesh = {
 }
 
 entity = {
-	name = "D017_monument_mahabodhi_temple_entity"
-	pdxmesh = "D017_monument_mahabodhi_temple_mesh"
+	name = "d017_monument_mahabodhi_temple_entity"
+	pdxmesh = "d017_monument_mahabodhi_temple_mesh"
 }

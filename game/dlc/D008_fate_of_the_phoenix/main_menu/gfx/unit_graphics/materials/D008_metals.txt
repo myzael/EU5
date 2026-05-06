@@ -1,0 +1,13 @@
+﻿
+
+byzantine_coa_engraving_armor = {	
+	diffuse	= "metals/unit_material_coa_engravings_byzantine_diffuse.dds"
+	normal		= "metals/unit_material_coa_engravings_byzantine_normal.dds"
+	properties	= "metals/unit_material_coa_engravings_byzantine_properties.dds"
+}
+byzantine_coa_silver_armor = {	
+	diffuse	= "metals/unit_material_coa_byzantine_silver_diffuse.dds"
+	normal		= "metals/unit_material_coa_engravings_byzantine_normal.dds"
+	properties	= "metals/unit_material_coa_engravings_byzantine_properties.dds"
+}
+

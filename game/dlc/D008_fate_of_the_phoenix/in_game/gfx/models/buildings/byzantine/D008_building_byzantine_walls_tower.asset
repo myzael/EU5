@@ -1,0 +1,19 @@
+pdxmesh = {
+	name = "d008_building_byzantine_walls_tower_mesh"
+	file = "d008_building_byzantine_walls_tower.mesh"
+
+	meshsettings = {
+		name = "d008_building_byzantine_walls_towerShape"
+		index = 0
+		texture_diffuse = "D008_building_byzantine_atlas_diffuse.dds"
+		texture_normal = "D008_building_byzantine_atlas_normal.dds"
+		texture_specular = "D008_building_byzantine_atlas_palace_properties.dds"
+		shader = "standard_building"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "d008_building_byzantine_walls_tower_entity"
+	pdxmesh = "d008_building_byzantine_walls_tower_mesh"
+}

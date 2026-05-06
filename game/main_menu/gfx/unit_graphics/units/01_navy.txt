@@ -50,7 +50,6 @@ age_2_renaissance:navy_transport = {
 	size = 1.7
 }
 
-
 ###### DISCOVERY #######
 
 

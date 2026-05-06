@@ -12,6 +12,21 @@ curve = {
 	}
 }
 
+curve = {
+	name = standard_megalopolis_curve
+	points = {
+		# left value is what the total "contributor" value is, which used to be 1:1 with how many meshes to spawn
+		# right value is how many meshes to spawn for that contributor value
+		# This curve starts with a 1:1 ratio, then falls off and requires more pops per mesh spawned.
+		{ 0.0	0.0 }	
+		{ 1.0	1.0 }	
+		{ 7.5	5.0 }
+		{ 15.0	10.0 }
+		{ 30.0	20.0 }
+		{ 60.0	32.0 }
+	}
+}
+
 
 curve = {
 	name = standard_pop_peasants_curve

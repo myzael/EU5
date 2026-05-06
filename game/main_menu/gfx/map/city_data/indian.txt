@@ -1,5 +1,4 @@
-﻿
- mesh_list = {
+﻿ mesh_list = {
 	name = "deccan_bridges"
 
 	rotation = bridge
@@ -278,7 +277,7 @@ mesh_list = {
 
 mesh_list = {
 	name = "deccan_noble_military"
-	scale_settings_small = { bias = 0 min = 0.6 max = 0.7 }
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
 	building_deccan_noble_tower_mesh = 1
 	should_spawn_flags = no
 	material_index = 1
@@ -317,6 +316,27 @@ mesh_list = {
 	building_deccan_peasant_diorama_c_mesh = 1
 	building_deccan_peasant_diorama_d_mesh = 1
 	
+}
+
+#WALLS
+mesh_list = {
+	name = "deccan_wall"
+	building_deccan_walls_main_mesh = 1
+}
+
+mesh_list = {
+	name = "deccan_wall_tower"
+	building_deccan_walls_tower_mesh = 1
+}
+
+mesh_list = {
+	name = "deccan_wall_gate"
+	building_deccan_walls_door_mesh = 1
+}
+
+mesh_list = {
+	name = "deccan_wall_underconstruction"
+	building_deccan_walls_underconstruction_mesh = 1
 }
 
 @noble_mesh_list	= deccan_noble
@@ -396,4 +416,34 @@ culture_data = {
 		fort_meshes = deccan_fort
 		bastion_meshes = deccan_bastion
 	}
+
+	#Walls
+
+		load_template large_city_walls {
+
+		wall_mesh_list  =  deccan_wall
+		tower_mesh_list = deccan_wall_tower
+		gate_mesh_list  = deccan_wall_gate
+
+		}
+		load_template small_city_walls {
+
+		wall_mesh_list  =  deccan_wall
+		tower_mesh_list = deccan_wall_tower
+		gate_mesh_list  = deccan_wall_gate
+			
+		}
+
+		load_template large_city_walls_under_construction {
+
+		wall_mesh_list  =  deccan_wall_underconstruction
+		gate_mesh_list  = deccan_wall_gate
+
+		}
+		load_template small_city_walls_under_construction {
+
+		wall_mesh_list  =  deccan_wall_underconstruction
+		gate_mesh_list  = deccan_wall_gate		
+
+		}		
 }

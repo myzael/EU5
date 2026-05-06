@@ -1,0 +1,15 @@
+﻿
+@default_window_file = "gui/notifications/jomini_message.gui"
+@default_window_name = "jomini_message"
+
+jomini_scripted_gui_confirm = {
+	level = dialog
+	category = scripted_gui
+	window_file = @default_window_file
+	window_name = @default_window_name
+	
+	title_text = JOMINI_SCRIPTED_GUI_CONFIRM_TITLE
+	text = JOMINI_SCRIPTED_GUI_CONFIRM_TEXT
+	accept_text = JOMINI_SCRIPTED_GUI_CONFIRM
+	decline_text = JOMINI_SCRIPTED_GUI_DECLINE
+}

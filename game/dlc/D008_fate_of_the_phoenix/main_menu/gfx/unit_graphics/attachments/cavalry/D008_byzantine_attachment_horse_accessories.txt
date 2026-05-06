@@ -1,0 +1,19 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE_horse_accessories
+###############################################
+
+# CATAPHRACTS_HORSE_ARMOR
+
+east_mediterranean_gfx:cataphract_tag:horse_accessories = {
+	skip_initial_check = yes
+	5 = { add_entity = { node = shared_pose_entity	mesh_name = "unit_cavalry_horse_cataphracts_medium_mesh" required_tags = "cavalry" add_tags = "horse_covered" add_tags = "UnitCavalryArmor_plate_full" } }
+	2 = { add_entity = { node = shared_pose_entity	mesh_name = "unit_cavalry_horse_cataphracts_heavy_mesh" required_tags = "cavalry" add_tags = "horse_covered" add_tags = "UnitCavalryArmor_plate_full" } }
+}
+
+east_mediterranean_gfx:cataphract_tag:heavy_horse_accessories = {
+	skip_initial_check = yes
+	5 = { add_entity = { node = shared_pose_entity	mesh_name = "unit_cavalry_horse_cataphracts_heavy_mesh" required_tags = "cavalry" add_tags = "horse_covered" add_tags = "UnitCavalryArmor_plate_full" } }
+}
+

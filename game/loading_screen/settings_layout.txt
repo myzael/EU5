@@ -36,7 +36,9 @@ page = {
 			"gui_texture_streaming"
 			"render_scale"
 			"animated_portraits"
+			"gruesome_portraits_traits_visible"
 			"single_unit_armies"
+			"show_combat_floating_losses"
 			"unit_coa_resolution_size"
 			"portraits_ssao"
 			"portrait_multi_sampling"
@@ -158,7 +160,6 @@ page = {
 		order = {
 			"common"
 			"pause_menu"
-			"window_tab"
 			"map"
 		}
 	}
@@ -177,6 +178,7 @@ page = {
 		name = "SETTINGS_CATEGORY_ACCESSIBILITY"
 		order = {
 			"color_blind_mode"
+			"font_set"
 		}
 	}
 	category = {

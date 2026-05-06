@@ -99,6 +99,7 @@ Switch	ID	Name	Switch Group			Notes
 	784127654	null	city_hasPort			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	13097112	mus_culture_track_start			\Music\mus_culture_track_start	
 	252254831	settings_listener_profile			\Settings\settings_listener_profile	
 	348405953	Gamestate_Pause			\Gamestate\Gamestate_Pause	
 	511520692	local_context_walla_midground_size			\walla\local_context_walla_midground_size	
@@ -116,6 +117,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1886252840	mus_harmonic_key			\Music\mus_harmonic_key	
 	1990843590	local_context_wind_background			\local_context\local_context_wind_background	This state exists so we can know what local context we're focusing on right now, and enable different reverbs depending on that. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
 	2011191162	FlatMap			\Map\FlatMap	denoting the state the map is in 
+	2197408056	stg_local_context_culture			\Culture\stg_local_context_culture	
 	2299810346	MonthlyTickBuildingComplete			\Monthly_Tick_Report\MonthlyTickBuildingComplete	Monthly tick report toggle for buildings being completed
 	2347663605	local_context_wind_foreground			\local_context\local_context_wind_foreground	
 	2384791228	Gamestate_startSequence			\Gamestate\Gamestate_startSequence	
@@ -131,7 +133,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3211405847	PlayerIncome			\Economy\PlayerIncome	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
 	3271075943	local_context_gust_right			\local_context\local_context_gust_right	
 	3292897190	PlayerBalance			\Economy\PlayerBalance	Our understood def difference between "balance" and "income":   Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source)  Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")
-	3506536279	LocalContextCulture			\Culture\LocalContextCulture	
 	3692379799	local_context_int_type			\local_context\local_context_int_type	This state exists so we can know what local context we're focusing on right now, and enable different reverbs depending on that. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
 	3734685961	CameraZoomLevel			\Camera\CameraZoomLevel	7= Paper map, 12 = Table maybe a bit 
 	3744840081	debug_killswitch			\Debug\debug_killswitch	
@@ -142,6 +143,9 @@ State Group	ID	Name			Wwise Object Path	Notes
 	4212815013	local_context_ext_type			\local_context\local_context_ext_type	This state exists so we can know what local context we're focusing on right now, and enable different reverbs depending on that. The disabled state exists because I had problems with the "none" state, it might be that we can change to using None instead. TBD /Mattias 240619
 
 State	ID	Name	State Group			Notes
+	748895195	None	mus_culture_track_start			
+	2452206122	false	mus_culture_track_start			
+	3053630529	true	mus_culture_track_start			
 	465211496	PDX_Speakers	settings_listener_profile			
 	465606845	PDX_Nightmode	settings_listener_profile			
 	748895195	None	settings_listener_profile			
@@ -257,6 +261,15 @@ State	ID	Name	State Group			Notes
 	748895195	None	FlatMap			
 	2066128362	FlatMap_on	FlatMap			
 	3217722016	FlatMap_off	FlatMap			
+	92544608	st_local_context_byzantium	stg_local_context_culture			
+	195514293	st_local_context_african	stg_local_context_culture			
+	295271817	st_local_context_east_asian	stg_local_context_culture			
+	748895195	None	stg_local_context_culture			
+	1674633435	st_local_context_south_american	stg_local_context_culture			
+	1728137480	st_local_context_european	stg_local_context_culture			
+	1837134605	st_local_context_north_american	stg_local_context_culture			
+	2422096398	st_local_context_indian	stg_local_context_culture			
+	2922625840	st_local_context_middle_east	stg_local_context_culture			
 	748895195	None	MonthlyTickBuildingComplete			
 	782826392	Default	MonthlyTickBuildingComplete			
 	2495990384	Report_Building_Complete	MonthlyTickBuildingComplete			
@@ -284,6 +297,7 @@ State	ID	Name	State Group			Notes
 	1597889766	middle_east_sfx	PlayerCulturePrimary			
 	1788697020	indian_sfx	PlayerCulturePrimary			
 	1818634679	north_american_sfx	PlayerCulturePrimary			
+	3242689900	D008_byzantine_sfx	PlayerCulturePrimary			
 	3383565261	south_american_sfx	PlayerCulturePrimary			
 	555374291	LocalContext	UX_Panel_Context			
 	748895195	None	UX_Panel_Context			
@@ -328,14 +342,6 @@ State	ID	Name	State Group			Notes
 	748895195	None	PlayerBalance			
 	2418595136	Decreasing	PlayerBalance			
 	4075250792	Increasing	PlayerBalance			
-	165558745	LocalContext_european	LocalContextCulture			
-	748895195	None	LocalContextCulture			
-	1250591351	LocalContext_middle_east	LocalContextCulture			
-	1934661826	LocalContext_south_american	LocalContextCulture			
-	1986058827	LocalContext_indian	LocalContextCulture			
-	2120458266	LocalContext_african	LocalContextCulture			
-	3473624948	LocalContext_east_asian	LocalContextCulture			
-	4271650296	LocalContext_north_american	LocalContextCulture			
 	74124220	hall_wood	local_context_int_type			
 	748895195	None	local_context_int_type			
 	2015218286	room_medium_wood	local_context_int_type			
@@ -463,13 +469,16 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	536618901	ContextualAmbience_urban_vox_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_vox\ContextualAmbience_urban_vox_04_quietest	
 	538647221	ca_base_int			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base\ca_base_int	
 	578789266	ContextualAmbience_spots			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots	
+	600500646	ui_notifications			\Default Work Unit\Master Audio Bus\UI\ui_notifications	
 	750320743	ContextualAmbience_urban_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_04_quietest	
 	783822780	mas_sea_quad			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_sea_quad	
 	821630201	OnMapUnits			\Default Work Unit\Master Audio Bus\Diegesis\Military\OnMapUnits	
+	866816792	ContextualAmbience_event_pops			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_event_pops	
 	872236310	boredom meter			\Default Work Unit\Master Audio Bus\Logic\boredom meter	
 	898491328	ContextualAmbience_nature_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextualAmbience_nature_land\ContextualAmbience_nature_04_quietest	
 	914120420	Diegesis			\Default Work Unit\Master Audio Bus\Diegesis	
 	931874857	ContextalAmbience_nature_water			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextalAmbience_nature_water	
+	972497063	ui_actions			\Default Work Unit\Master Audio Bus\UI\ui_actions	
 	1031089514	Debug			\Default Work Unit\Master Audio Bus\Debug	
 	1036826058	ContextualAmbience_nature			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature	
 	1142545363	ContextualAmbience_nature_birds			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextualAmbience_nature_land\ContextualAmbience_nature_birds	

@@ -78,13 +78,13 @@ Effect plug-ins	ID	Name	Type				Notes
 	4057947086	fx_meter_mus_boredom_systemic	Wwise Meter			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	41530255	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Logic\THESILENCELOOP\THESILENCELOOP\Silence	
-	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\05_very_low\Sine	
-	159406886	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\PerpetualSineTone\FOREVERSINETONE\Sine	
-	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\01_very_hi\Sine	
-	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\03_mid\Sine	
-	727756844	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\StartupPlayerActionMaximizer\Sine	
-	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\02_hi\Sine	
-	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\playerAction\04_low\Sine	
-	1071802883	Sine	Wwise Sine		\Actor-Mixer Hierarchy\Logic\boredomTimer\boredomTimer_on\Sine	
+	41530255	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_logic\THESILENCELOOP\THESILENCELOOP\Silence	
+	120257841	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\05_very_low\Sine	
+	159406886	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\PerpetualSineTone\FOREVERSINETONE\Sine	
+	345406628	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\01_very_hi\Sine	
+	575446064	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\03_mid\Sine	
+	727756844	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\StartupPlayerActionMaximizer\Sine	
+	751900745	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\02_hi\Sine	
+	940261472	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\playerAction\04_low\Sine	
+	1071802883	Sine	Wwise Sine		\Actor-Mixer Hierarchy\wu_actor_logic\boredomTimer\boredomTimer_on\Sine	
 

@@ -1,0 +1,30 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE Hairstyles
+###############################################
+
+
+east_mediterranean_gfx:hairstyles = {
+	50 = {
+		add_entity = { required_tags = "not(hair_covered)"	node = shared_pose_entity		mesh_name = "unit_hair_curling_short_byz_mesh" }
+		add_entity = { required_tags = "hair_covered" }
+	}
+	50 = {
+		add_entity = { required_tags = "not(hair_covered)"	node = shared_pose_entity		mesh_name = "unit_hair_curly_byz_mesh" }
+		add_entity = { required_tags = "hair_covered" }
+	}
+	#10 = {
+		#add_entity = { required_tags = "not(hair_covered)"	node = shared_pose_entity		mesh_name = "unit_hat_hair_short_highland_mesh" }
+		#add_entity = { required_tags = "hair_covered" }
+	#}
+	#30 = {
+		#add_entity = { required_tags = "not(hair_covered)"	node = shared_pose_entity		mesh_name = "unit_hat_hair_ponytail_highland_mesh" }
+		#add_entity = { required_tags = "hair_covered" }
+	#}
+	#30 = {#
+		#add_entity = { required_tags = "not(hair_covered)"	node = shared_pose_entity		mesh_name = "unit_hair_bob_male_d_mesh" }
+		#add_entity = { required_tags = "hair_covered" } #NEWMODEL
+	#}
+	1 = {	} #shaved
+}

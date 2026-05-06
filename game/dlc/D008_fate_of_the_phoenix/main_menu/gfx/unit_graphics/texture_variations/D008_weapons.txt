@@ -1,0 +1,215 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+weapons_test = {
+	gold = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 1 hardness = 0.8 }
+	}
+	metal_plain = {
+		mask = { color = { 1.0 0.0 0.0 } tolerance = 0.1 hardness = 0.0 }
+	}
+	wood_group = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 1.0 hardness = 0.0 }
+	}
+}
+
+weapon_variation = {
+cloth_country_solid_group = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.6 hardness = 0.9 }
+		repaint = {
+			90 = {
+				primary_color = unit_color0
+			}
+			5 = {
+				primary_color = unit_color1
+			}
+			2 = {
+				primary_color = unit_color2
+			}
+		}
+	}
+	iron_basic_group = {
+		mask = { color = { 0.0 1.0 1.0 } tolerance = 0.9 hardness = 0.9 }
+	}
+	gold_group = {
+		mask = { color = { 1.0 0.5 0.0 } tolerance = 0.7 hardness = 0.9 }
+	}
+	leather_group = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.3 hardness = 0.9 }
+	}
+	cloth_plain_group = {
+		mask = { color = { 1.0 1.0 0.0 } tolerance = 0.2 hardness = 0.9 }
+	}
+	cloth_rope = {
+		mask = { color = { 1.0 0.5 1.0 } tolerance = 0.3 hardness = 0.9 }
+	}
+	wood_group = {
+		mask = { color = { 0.5 0.0 0.5 } tolerance = 0.3 hardness = 0.9 }
+	}
+	
+	assets = {
+	}
+}
+
+byzantine_weapon_variation_wood_orange = {
+	leathers_cloth_country_split_or_plain_group = {
+		mask = { color = { 0.5 0.0 1.0 } tolerance = 0.7 hardness = 0.8 }
+		repaint = {
+			44 = {
+				primary_color = unit_color0
+				secondary_color = unit_color1
+			}
+			22 = {
+				primary_color = unit_color0
+				secondary_color = unit_color2
+			}
+			15 = {
+				primary_color = unit_color1
+				secondary_color = unit_color0
+			}
+			7 = {
+				primary_color = unit_color1
+				secondary_color = unit_color2
+			}
+			7 = {
+				primary_color = unit_color2
+				secondary_color = unit_color0
+			}
+			#4 = {
+			#	primary_color = unit_color2
+			#	secondary_color = unit_color1
+			#}
+		}
+	}
+    
+    cloth_country_solid_group = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.5 hardness = 0.95 }
+		repaint = {
+			95 = {
+				primary_color = unit_color0
+			}
+			10 = {
+				primary_color = unit_color1
+			}
+			#10 = {
+				#primary_color = unit_color2
+			#}
+		}
+	}
+	
+
+	gold_group = {
+		
+		mask = { color = { 0.5 0.0 0.5 } tolerance = 0.45 hardness = 0.95 }
+	}
+
+	wood_group = {
+		
+		mask = { color = { 1.0 0.5 0.0 } tolerance = 0.4 hardness = 0.95 }
+	}
+	brass = {
+		mask = { color = { 1.0 0.75 0.0 } tolerance = 0.1 hardness = 0.95 }
+	}
+    
+    leather_brown_group = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.15 hardness = 0.95 }
+	}
+    
+    iron_basic_group = {
+		mask = { color = { 0.0 1.0 1.0 } tolerance = 0.1 hardness = 0.95 }
+	}
+	assets = {
+		unit_weapon_sword_iron_bronze_mesh #DLC UNITS
+        unit_weapon_mace_iron_mesh #DLC UNITS
+        unit_weapon_sword_gold_grip_mesh #DLC UNITS
+        unit_weapon_shield_iron_forged_mesh #DLC UNITS
+		unit_weapon_axe_leather_grip_mesh #DLC UNITS
+        unit_weapon_sword_leather_grip_infantry_mesh
+        unit_weapon_shield_iron_wood_infantry_mesh        
+        unit_shield_wood_star_cataphracts_mesh        
+        unit_weapon_musket_wood_iron_schematic
+        unit_weapon_bow_wood_byz_schematic
+        unit_artillery_helepolis_schematic
+		############# LEGIONARY UNITS
+		unit_shield_wood_steel_legionary_mesh
+	}
+}
+
+byzantine_diagonal_shields = {
+	leathers_cloth_country_split_or_plain_group = {
+		mask = { color = { 0.5 0.0 1.0 } tolerance = 0.7 hardness = 0.8 }
+		repaint = {
+			44 = {
+				primary_color = unit_color0
+				secondary_color = unit_color1
+			}
+			22 = {
+				primary_color = unit_color0
+				secondary_color = unit_color2
+			}
+			15 = {
+				primary_color = unit_color1
+				secondary_color = unit_color0
+			}
+			7 = {
+				primary_color = unit_color1
+				secondary_color = unit_color2
+			}
+			7 = {
+				primary_color = unit_color2
+				secondary_color = unit_color0
+			}
+			#4 = {
+			#	primary_color = unit_color2
+			#	secondary_color = unit_color1
+			#}
+		}
+	}
+    
+    cloth_country_diagonal_group = {
+		mask = { color = { 0.0 1.0 0.0 } tolerance = 0.5 hardness = 0.95 }
+		repaint = {
+			95 = {
+				primary_color = unit_color0
+                secondary_color = unit_color1
+			}
+			25 = {
+				primary_color = unit_color1
+				secondary_color = unit_color0
+			}
+            10 = {
+				primary_color = unit_color1
+				secondary_color = unit_color2
+			}            
+            
+		}
+	}	
+
+	gold_group = {
+		
+		mask = { color = { 0.5 0.0 0.5 } tolerance = 0.5 hardness = 0.95 }
+	}
+
+	wood_group = {
+		
+		mask = { color = { 1.0 0.5 0.0 } tolerance = 0.4 hardness = 0.95 }
+	}	
+    
+    leather_brown_group = {
+		mask = { color = { 0.0 0.0 1.0 } tolerance = 0.15 hardness = 0.95 }
+	}
+    
+    iron_basic_group = {
+		mask = { color = { 0.0 1.0 1.0 } tolerance = 0.1 hardness = 0.95 }
+	}
+	assets = {		
+        unit_weapon_shield_wood_leather_infantry_mesh
+        unit_shield_wood_cataphracts_mesh   
+		
+	}
+}
+
+byzantine_weapon_no_material = {
+	assets = {
+        unit_weapon_flamethrower_schematic
+	}
+}

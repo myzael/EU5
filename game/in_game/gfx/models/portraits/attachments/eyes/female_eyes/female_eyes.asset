@@ -2,6 +2,9 @@ pdxmesh = {
 	name = "female_eyes_mesh"
 	file = "female_eyes.mesh"
 
+	blend_shape = { id = "disfigurement_01"		type = "female_eyes_bs_disfigurement_01.mesh" }
+	blend_shape = { id = "disfigurement_02"		type = "female_eyes_bs_disfigurement_02.mesh" }
+
 	meshsettings = {
 		name = "female_eyesShape"
 		index = 0
@@ -16,6 +19,9 @@ pdxmesh = {
 entity = {
 	name = "female_eyes_entity"
 	pdxmesh = "female_eyes_mesh"
+
+	attribute = { name = "bs_disfigurement_01"		blend_shape = "disfigurement_01" }
+	attribute = { name = "bs_disfigurement_02"		blend_shape = "disfigurement_02" }
 
 	game_data = {
 		portrait_entity_user_data = {

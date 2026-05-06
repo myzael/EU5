@@ -352,6 +352,18 @@ types Default
 		}
 	}
 
+	type button_regular_only_icon = button {
+		using = button_regular_texture
+		fontsize = 13
+		size = { -1 30 }
+
+		background = {
+			using = button_regular_shadow_texture
+			margin = {1 0}
+			margin_bottom = 3
+		}
+	}
+
 	type button_regular = button {
 		using = button_regular_texture
 		using = button_common_template

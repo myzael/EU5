@@ -48,7 +48,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_late_era_hair
-				accessory = male_north_german_hair_natural_wig_ponytail
+				accessory = male_german_hair_natural_wig_ponytail
 			}
 		}
 		weight = {
@@ -68,7 +68,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_late_era_hair
-				accessory = male_north_german_hair_powdered_wig_longer_ponytail
+				accessory = male_german_hair_powd_wig_long_ponytail
 			}
 		}
 		weight = {
@@ -96,7 +96,7 @@
 				mode = replace
 				gene = hair_styles
 				template = german_late_era_hair
-				accessory = male_north_german_hair_powdered_wig_longer_ponytail
+				accessory = male_german_hair_powd_wig_long_ponytail
 			}
 		}
 		weight = {

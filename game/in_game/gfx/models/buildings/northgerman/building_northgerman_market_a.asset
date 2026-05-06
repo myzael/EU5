@@ -2,7 +2,7 @@ pdxmesh = {
 	name = "building_northgerman_market_a_mesh"
 	file = "building_northgerman_market_a.mesh"
 
-	scale = 100
+	scale = 130
 
 	lod_percentages = {
 		lod = { index = 1 percent = 12.5 }

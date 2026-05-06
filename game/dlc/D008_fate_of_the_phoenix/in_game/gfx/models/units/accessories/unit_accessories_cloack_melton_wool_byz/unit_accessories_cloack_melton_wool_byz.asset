@@ -1,0 +1,43 @@
+pdxmesh = {
+	name = "unit_accessories_cloack_melton_wool_byz_mesh"
+	file = "unit_accessories_cloack_melton_wool_byz.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.5 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
+	meshsettings = {
+		name = "unit_accessories_cloack_melton_wool_byz_lod0Shape"
+		index = 0
+		texture_diffuse = "unit_accessories_cloack_melton_wool_diffuse.dds"
+		texture_normal = "unit_accessories_cloack_melton_wool_normal.dds"
+		#texture_specular = "unit_accessories_cloack_melton_wool_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_cloack_melton_wool_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_accessories_cloack_melton_wool_byz_lod1Shape"
+		index = 0
+		texture_diffuse = "unit_accessories_cloack_melton_wool_diffuse.dds"
+		texture_normal = "unit_accessories_cloack_melton_wool_normal.dds"
+		#texture_specular = "unit_accessories_cloack_melton_wool_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_cloack_melton_wool_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+
+	meshsettings = {
+		name = "unit_accessories_cloack_melton_wool_byz_lod2Shape"
+		index = 0
+		texture_diffuse = "unit_accessories_cloack_melton_wool_diffuse.dds"
+		texture_normal = "unit_accessories_cloack_melton_wool_normal.dds"
+		#texture_specular = "unit_accessories_cloack_melton_wool_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_accessories_cloack_melton_wool_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}
+

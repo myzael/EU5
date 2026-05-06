@@ -1,0 +1,354 @@
+pdxmesh = {
+	name = "building_wooden_walls_underconstruction_mesh"
+	file = "building_wooden_walls_underconstruction.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
+	scale = 61
+
+	meshsettings = {
+		name = "building_wooden_walls_main_lod0"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	
+
+	meshsettings = {
+		name = "building_wooden_walls_main_aztec_lod0"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_iroquois_lod0"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_lod1"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	
+
+	meshsettings = {
+		name = "building_wooden_walls_main_aztec_lod1"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_iroquois_lod1"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_lod2"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	
+
+	meshsettings = {
+		name = "building_wooden_walls_main_aztec_lod2"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_iroquois_lod2"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "building_wooden_walls_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_lod0"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_ashanti_lod0"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_aztec_lod0"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_iroquois_lod0"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_lod1"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_ashanti_lod1"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_aztec_lod1"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_iroquois_lod1"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_ashanti_lod2"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_aztec_lod2"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_2_iroquois_lod2"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_lod0"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_ashanti_lod0"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_aztec_lod0"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_iroquois_lod0"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_lod1"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_ashanti_lod1"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_aztec_lod1"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_iroquois_lod1"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_lod2"
+		index = 0
+		texture_diffuse = "building_ashanti_noble_atlas_diffuse.dds"
+		texture_normal = "building_ashanti_noble_atlas_normal.dds"
+		texture_specular = "building_ashanti_noble_atlas_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_ashanti_lod2"
+		index = 0
+		texture_diffuse = "ashanti_atlas_master_diffuse.dds"
+		texture_normal = "ashanti_atlas_master_normal.dds"
+		texture_specular = "ashanti_atlas_master_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_aztec_lod2"
+		index = 0
+		texture_diffuse = "atlas_aztec_diffuse.dds"
+		texture_normal = "atlas_aztec_normal.dds"
+		texture_specular = "atlas_aztec_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "building_wooden_walls_main_under_1_iroquois_lod2"
+		index = 0
+		texture_diffuse = "building_iroquois_castles_diffuse.dds"
+		texture_normal = "building_iroquois_castles_normal.dds"
+		texture_specular = "building_iroquois_castles_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+}
+
+entity = {
+	name = "building_wooden_walls_underconstruction_entity"
+	pdxmesh = "building_wooden_walls_underconstruction_mesh"
+}

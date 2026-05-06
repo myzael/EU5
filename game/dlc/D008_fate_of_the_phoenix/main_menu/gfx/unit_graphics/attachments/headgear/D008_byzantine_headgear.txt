@@ -1,0 +1,104 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE headgear
+###############################################
+
+##### BYZANTINE #####
+
+#AGE_1_TRADITIONS
+east_mediterranean_gfx:peasant_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_cap_linen_byz_mesh" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_round_cap_linen_byz_mesh"	 } }
+	1 = {}
+}
+
+east_mediterranean_gfx:age_1_traditions:soldier_hats = {
+    #INFANTRY UNITS
+     1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_helmet_infantry_mesh"	add_tags = "hair_covered" } }
+	 5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_strap_leather_infantry_mesh"	 } }
+    #SOLDIER UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chainmail_iron_mesh"	add_tags = "hair_covered" } }
+}
+
+
+east_mediterranean_gfx:age_1_traditions:noble_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_metal_gold_royal_guard_mesh"	add_tags = "hair_covered" } }
+    #VARANGIAN UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_helmet_chainmail_varangian_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+	1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_metal_helmet_chainmail_varangian_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+    #CATAPHRACTS UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chain_armor_cataphracts_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chain_armor_strips_cataphracts_mesh"	add_tags = "hair_covered" } }	
+}
+
+####  ### LEGIONARY UNITS ###  ###
+east_mediterranean_gfx:legionary_tag:noble_hats = {  
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_helmet_black_steel_legionary_mesh" add_tags = "hair_covered" add_tags = "beard_covered"  } }
+}
+
+# AGE_2_RENAISSANCE
+east_mediterranean_gfx:age_2_renaissance:soldier_hats = {
+ #INFANTRY UNITS
+     5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_helmet_infantry_mesh"	add_tags = "hair_covered" } }
+	 1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_strap_leather_infantry_mesh"	add_tags = "hair_covered" } }
+    #SOLDIER UNITS
+     1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chainmail_iron_mesh"	add_tags = "hair_covered" } }
+}
+
+east_mediterranean_gfx:age_2_renaissance:noble_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_metal_gold_royal_guard_mesh"	add_tags = "hair_covered" } }
+    #VARANGIAN UNITS
+     1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_helmet_chainmail_varangian_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+	 1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_metal_helmet_chainmail_varangian_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+    #CATAPHRACTS UNITS
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chain_armor_cataphracts_mesh"	add_tags = "hair_covered" add_tags = "beard_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chain_armor_strips_cataphracts_mesh"	add_tags = "hair_covered" } }
+	
+}
+
+# AGE_3_DISCOVERY
+east_mediterranean_gfx:age_3_discovery:soldier_hats = {
+    5 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_hardened_leather_byz_mesh" add_tags = "hair_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_round_cap_linen_byz_mesh"add_tags = "hair_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_cap_linen_byz_mesh" add_tags = "hair_covered" } }
+}
+east_mediterranean_gfx:age_3_discovery:polearm_tag:soldier_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chainmail_iron_mesh"	add_tags = "hair_covered" } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_iron_helmet_infantry_mesh"	add_tags = "hair_covered" } }
+}
+
+# AGE_4_REFORMATION
+east_mediterranean_gfx:age_4_reformation:soldier_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_hardened_leather_byz_mesh" add_tags = "hair_covered" } }
+}
+
+east_mediterranean_gfx:age_4_reformation:polearm_tag:soldier_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_chainmail_iron_mesh"	add_tags = "hair_covered" } }    
+}
+
+# AGE_5_ABSOLUTISM
+east_mediterranean_gfx:age_5_absolutism:soldier_hats = {
+    3 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_helmet_mitre_cap_byz_mesh" add_tags = "beard_covered"	 } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_beret_cotton_byz_mesh" add_tags = "beard_covered"	 } }
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_wool_bronze_mesh" add_tags = "hair_covered" add_tags = "beard_covered"  } }
+}
+
+east_mediterranean_gfx:age_5_absolutism:noble_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_wool_bronze_mesh" add_tags = "hair_covered" add_tags = "beard_covered"	 } }
+    
+}
+####  ### LEGIONARY UNITS ###  ###
+east_mediterranean_gfx:age_5_absolutism:legionary_tag:noble_hats = {  
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_wool_bronze_mesh" add_tags = "hair_covered" add_tags = "beard_covered"  } }
+}
+
+# AGE_6_REVOLUTIONS
+IDEAL_UNIFORM:greek_gfx:age_6_revolutions:soldier_hats = {
+    1 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_wool_bronze_mesh" add_tags = "hair_covered" add_tags = "beard_covered" } }
+}
+####  ### LEGIONARY UNITS ###  ###
+east_mediterranean_gfx:age_6_revolutions:legionary_tag:noble_hats = {  
+    10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_hat_helmet_wool_bronze_mesh" add_tags = "hair_covered" add_tags = "beard_covered"  } }
+}
+

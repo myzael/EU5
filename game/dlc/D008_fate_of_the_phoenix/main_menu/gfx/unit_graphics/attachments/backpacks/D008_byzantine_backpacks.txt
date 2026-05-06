@@ -1,0 +1,126 @@
+﻿@dlc = "d008_fate_of_the_phoenix"
+
+###############################################
+# BYZANTINE backpacks
+###############################################
+
+##### BYZANTINE PACK #####
+
+east_mediterranean_gfx:age_1_traditions:heavy_tag:back = {
+	10 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cape_wool_cape_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+            required_tags = "not(legionary)"
+		}
+	}
+	default = {}	
+}
+
+east_mediterranean_gfx:age_1_traditions:legionary_tag:back = {
+	2 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cape_wool_cape_mesh"			 
+			required_tags = "not(UnitWeapon_bow)"
+		} 
+	}
+	10 = {}	
+}
+
+east_mediterranean_gfx:age_1_traditions:medium_tag:back = {
+	10 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cloack_melton_wool_byz_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+            required_tags = "not(torso_has_backpack)"
+		} 
+	}
+    10 = {}	
+		
+}
+
+east_mediterranean_gfx:age_1_traditions:light_tag:back = {
+	10 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cape_hend_woven_byz_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+		} 
+	}
+    
+    10 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cape_wool_pointy_byz_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+		} 
+	}
+    
+    10 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cape_square_long_woven_byz_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+		} 
+	}
+	50 = {}	
+}
+
+east_mediterranean_gfx:age_2_renaissance:medium_tag:back = {
+	25 = { 
+		add_entity = { 
+			node = shared_pose_entity
+			mesh_name = "unit_accessories_cloack_melton_wool_byz_mesh"
+			#required_tags = "not(shield)" 
+			required_tags = "not(UnitWeapon_bow)"
+            #required_tags = "not(torso_has_backpack)"
+		} 
+	}
+    50 = {}	
+		
+}
+
+east_mediterranean_gfx:age_3_discovery:medium_tag:back = {	
+    25 = east_mediterranean_gfx:age_2_renaissance:medium_tag:back    
+    50 = {}			
+}
+
+east_mediterranean_gfx:age_4_reformation:medium_tag:back = {
+	20 = age_3_discovery:backpacks    
+    80 = {}		
+}
+
+east_mediterranean_gfx:age_5_absolutism:medium_tag:back = {
+	20 = age_6_revolutions:soldier_backpacks
+	50 = {}	
+}
+
+east_mediterranean_gfx:age_6_revolutions:medium_tag:back = {
+	20 = age_6_revolutions:soldier_backpacks 
+	50 = {}	
+}
+
+#celtic_gfx:age_2_renaissance:back = {
+	#10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_accessories_cape_wool_scots_mesh"  required_tags = "not(shield)" required_tags = "not(UnitWeapon_bow)" } }
+	#default = {}	
+#}
+#celtic_gfx:age_3_discovery:back = {
+	#10 = { add_entity = { node = shared_pose_entity		mesh_name = "unit_accessories_cape_wool_scots_mesh"  required_tags = "not(shield)" required_tags = "not(UnitWeapon_bow)" } }
+	#default = {}	
+#}
+
+
+#british_gfx:age_5_absolutism:heavy_tag:backpacks = {
+	#10 = { add_entity = { node = Unit_Base_Rig_Spine2			mesh_name = "unit_accessories_backpack_scottish_highland_age_5_mesh"  required_tags = "not(shield)" required_tags = "not(UnitWeapon_bow)" } }
+	#default = {}
+   
+#}
+

@@ -1,0 +1,50 @@
+﻿d008_throne_room = {
+	tag = "throne_room"
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_byzantium.dds"
+		priority = 17
+		scope = character
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= {
+				gfx_culture_applicable = east_mediterranean_gfx 
+				country_rank_level >= 4 # Empire
+			}
+		}
+	}
+
+
+	illustration_image = { #Alpha 0
+		texture_file = "gfx/interface/illustrations/government/throne_rooms/throne_room_byzantium_low_tier.dds"
+		priority = 16
+		scope = character
+		trigger = {
+			has_local_dlc = "d008_fate_of_the_phoenix"
+			OR = {
+				is_ruler = yes
+				is_regent = yes
+				is_heir = yes
+				is_consort = yes
+				is_infant = yes
+				is_child = yes
+				is_adolescent = yes
+				is_courtier = yes
+				is_alive = no
+			}
+			employer ?= { gfx_culture_applicable = east_mediterranean_gfx }
+		}
+	}
+}
+

@@ -1,6 +1,6 @@
 ﻿fade_duration=0.000000
-max_particles=250
-pause_invisible=no
+max_particles=100
+pause_invisible=yes
 graph={
 	nodes={
 		pdxns:3d:YawPitchVectorRotation={

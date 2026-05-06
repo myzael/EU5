@@ -47,3 +47,45 @@ male_headwear_aztec_jewellery_01_jade_mouthpiece = {
 blind_eye_cloth = {
 	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_cloth_entity }
 }
+
+blind_eye_eyepatch_regular = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_regular_entity }
+}
+
+blind_eye_eyepatch_regular_flipped = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_regular_flipped_entity }
+}
+
+blind_eye_eyepatch_regular_female = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_regular_female_entity }
+}
+
+blind_eye_eyepatch_regular_female_flipped = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_regular_female_flipped_entity }
+}
+
+blind_eye_eyepatch_cloth_wrap = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_cloth_wrap_entity }
+}
+
+blind_eye_eyepatch_cloth_wrap_flipped = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = blind_eye_eyepatch_cloth_wrap_flipped_entity }
+}
+
+nose_prosthetic = {
+	entity = {  required_tags = ""          shared_pose_entity = head   entity = nose_prosthetic_entity }
+}
+
+face_disfigured_bandage = {
+	set_tags = "hair_covered,face_covered"
+	entity = {  required_tags = ""          			shared_pose_entity = head   entity = face_disfigured_bandage_entity }
+	entity = {  required_tags = "no_hair"         		shared_pose_entity = head   entity = face_disfigured_bandage_fine_no_top_entity }
+	entity = {  required_tags = "hair_covered"          shared_pose_entity = head   entity = face_disfigured_bandage_fine_no_top_entity }
+}
+
+face_disfigured_bandage_fine = {
+	set_tags = "hair_covered,face_covered"
+	entity = {  required_tags = ""         			 	shared_pose_entity = head   entity = face_disfigured_bandage_fine_no_top_entity }
+	entity = {  required_tags = "no_hair"         		shared_pose_entity = head   entity = face_disfigured_bandage_fine_no_top_entity }
+	entity = {  required_tags = "hair_covered"          shared_pose_entity = head   entity = face_disfigured_bandage_fine_no_top_entity }   
+}

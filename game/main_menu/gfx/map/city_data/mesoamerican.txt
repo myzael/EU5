@@ -275,7 +275,7 @@ mesh_list = {
 
 mesh_list = {
 	name = "aztec_noble_military"
-	scale_settings_small = { bias = 0 min = 0.6 max = 0.7 }
+	scale_settings_small = { bias = 0 min = 0.9 max = 1.0 }
 	building_ashanti_noble_tower_mesh = 1
 	should_spawn_flags = no
 	material_index = 1
