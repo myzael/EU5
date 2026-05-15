@@ -840,6 +840,11 @@ omen = {
 	shown_in_loading_screen = no
 }
 
+offered_omens = {
+	texture = "omens/_default"
+	shown_in_loading_screen = no
+}
+
 avatar = {
 	alias = { avatars }
 	texture = "control_groups/hindu"

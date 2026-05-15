@@ -10,8 +10,7 @@ masDataClimateZone = { limit_min = 0 limit_max = 1 }
 
 masDataCityDensity = { limit_min = 0 limit_max = 1 }
 
-MapHeight = { limit_min = 0 limit_max = 4500 }
-River = { limit_min = 0 limit_max = 1 } 
+mapHeight = { limit_min = 0 limit_max = 4500 }
 
 ####### OLD TO BE DELETED #######
 #masData_desert = { limit_min = 0 limit_max = 1 }
@@ -20,7 +19,7 @@ River = { limit_min = 0 limit_max = 1 }
 #masData_mountain = { limit_min = 0 limit_max = 1 }
 #masData_ocean = { limit_min = 0 limit_max = 1 }
 #masData_lake = { limit_min = 0 limit_max = 1 }
-
+#masData_river = { limit_min = 0 limit_max = 1 }
 #masData_tundra = { limit_min = 0 limit_max = 1 }
 #masData_jungle = { limit_min = 0 limit_max = 1 }
 #masData_wetland = { limit_min = 0 limit_max = 1 }

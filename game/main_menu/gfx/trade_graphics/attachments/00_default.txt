@@ -522,3 +522,10 @@ goods_furniture =
 	weight = 1
     required_tags =  "furniture"
 }
+
+goods_cloves =
+{
+	mesh_name = "cargo_cloves_mesh"
+	weight = 1
+    required_tags =  "cloves"
+}

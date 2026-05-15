@@ -485,15 +485,15 @@ government_reform_slots = {
 }
 
 omens_offered = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder 
+	positive = "gfx/interface/icons/modifier_types/invoke_omen.dds"
 }
 
 omen_time_modifier = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder 
+	positive = "gfx/interface/icons/modifier_types/invoke_omen.dds"
 }
 
 omen_strength_modifier = {
-	positive = "gfx/interface/icons/modifier_types/_default.dds" #  Placeholder 
+	positive = "gfx/interface/icons/modifier_types/invoke_omen.dds"
 }
 
 government_size = {
@@ -4960,7 +4960,19 @@ change_religious_aspect_inti_cost_modifier = {
 }
 
 remove_religious_aspect_inti_cost_modifier = {
-	positive = "gfx/interface/icons/modifier_types/add_religious_aspect_christian_cost_modifier.dds" 
+	positive = "gfx/interface/icons/modifier_types/add_religious_aspect_christian_cost_modifier.dds"
+}
+
+add_religious_aspect_hellenism_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/add_religious_aspect_christian_cost_modifier.dds"
+}
+
+change_religious_aspect_hellenism_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/add_religious_aspect_christian_cost_modifier.dds"
+}
+
+remove_religious_aspect_hellenism_cost_modifier = {
+	positive = "gfx/interface/icons/modifier_types/add_religious_aspect_christian_cost_modifier.dds"
 }
 
 

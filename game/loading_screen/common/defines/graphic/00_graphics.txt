@@ -482,6 +482,8 @@ NBorder = {
 	MAX_ZOOM_STEP_IMPASSABLE = 8# @province_zoomstep_max
 	MAX_ZOOM_STEP_BLOCKADED = -1 # @province_zoomstep_max
 	MAX_ZOOM_STEP_SEA_LANE = 22
+	SPLINE_TESSELATION_MAX_ANGLE = 15.0
+	SPLINE_TESSELATION_MAX_DISTANCE = 10.0
 }
 NTrees = {
 	FADE_FAR = 1.0
@@ -572,6 +574,7 @@ NMapMarker = {
 	ZOOM_STEP_RANGE_CONSTRUCTION = 		{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_OCCUPATION = 		{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_PARLIAMENT = 		{ 0 @province_zoomstep_max }
+	ZOOM_STEP_RANGE_HOLY_SITE = 		{ 0 20 }
 	ZOOM_STEP_RANGE_CABINET_ACTION = 	{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_DIPLOMATIC_ACTION = { 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_BLOCKED_VISION = 	{ 0 7 }

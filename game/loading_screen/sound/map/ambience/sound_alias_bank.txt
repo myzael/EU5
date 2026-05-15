@@ -6,10 +6,6 @@ map_height = {
     event = "silence"
 }
 
-river = {
-    parameter="River"
-    event = "silence"
-}
 
 ##### MAS DATA PARAMETERS #####
 

@@ -3,9 +3,9 @@
 	on_own_nation = yes
 
 	potential = {
+		has_dlc = "d008_fate_of_the_phoenix"
 		scope:actor = {
-			has_or_had_tag = BYZ
-			has_dlc = "d008_fate_of_the_phoenix"
+			succession_law = heir_selection:byzantine_succession
 		}
 	}
 
@@ -67,9 +67,9 @@ blind_character = {
 	on_own_nation = yes
 
 	potential = {
+		has_dlc = "d008_fate_of_the_phoenix"
 		scope:actor = {
-			has_or_had_tag = BYZ
-			has_dlc = "d008_fate_of_the_phoenix"
+			succession_law = heir_selection:byzantine_succession
 		}
 	}
 

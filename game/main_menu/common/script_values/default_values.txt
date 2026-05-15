@@ -633,6 +633,14 @@ cataphracts_unit_limit = {
     }
 }
 
+varangians_unit_limit = {
+    add = {
+        value = 1
+        desc = "SUBUNIT_LIMIT_BASE"
+    }
+    add = modifier:num_of_varangian_units
+}
+
 wagenburg_unit_limit = {
     add = {
         value = 1

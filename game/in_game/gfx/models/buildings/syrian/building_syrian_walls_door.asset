@@ -7,7 +7,7 @@ pdxmesh = {
 		lod = { index = 2 percent = 2.0 }
 	}
 
-	scale = 80
+	scale = 70
 
 
 	meshsettings = {

@@ -157,7 +157,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1827843101	UI_flow_start_new_game			\ev_UI\flow\UI_flow_start_new_game	
 	1853441180	UI_alert_appear_red			\ev_UI\alerts\UI_alert_appear_red	
 	1859653464	UI_unit_hoverOn			\ev_UI\unit_controls\UI_unit_hoverOn	
-	1863796626	situation_ended			\ev_UI\situation\situation_ended	
 	1866827072	UI_panelAux_military_builder_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_military_builder_show	
 	1878216141	UI_button_exit_toMainMenu			\ev_UI\button\UI_button_exit_toMainMenu	
 	1886893979	UI_panel_geopolitics_expansion_show			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_expansion_show	
@@ -223,7 +222,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2483300427	UI_popup_country_message			\ev_UI\popup\popup_type\UI_popup_country_message	
 	2489330806	UI_popup_religion_message			\ev_UI\popup\popup_type\UI_popup_religion_message	
 	2490112630	UI_popup_location_message			\ev_UI\popup\popup_type\UI_popup_location_message	
-	2492750350	disaster_started			\ev_UI\notification\disaster_started	
 	2506117631	UI_event_age_option_diplomatic			\ev_UI\events\UI_event_age_option_diplomatic	hooked only on sound.gui as a template - Leon 18/09/2024
 	2509247896	UI_event_negative			\ev_UI\events\UI_event_negative	
 	2515565625	UI_panelChild_society_people_rebels_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_rebels_show	
@@ -263,7 +261,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2886109600	BRIBE_ESTATE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Estate_bribe\BRIBE_ESTATE	
 	2890747618	UI_map_goto			\ev_UI\map\UI_map_goto	
 	2898280575	UI_event_bg_north_german_clergy_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_interior	
-	2899636785	situation_started			\ev_UI\situation\situation_started	
 	2916084332	UI_panelChild_geopolitics_maritime_coasts_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_coasts_show	
 	2920080030	UI_panelAux_diplomacy_manageSubjects_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_manageSubjects_show	
 	2924931311	UI_cursor_rightclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_aborted	
@@ -290,7 +287,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3193081913	UI_action_production_method_change			\ev_UI\actions\UI_action_production_method_change	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
 	3206315385	GRANT_PRIVILEGE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Privilege_grant\GRANT_PRIVILEGE	
 	3207691944	UI_hover_shield			\ev_UI\mousePointer\UI_hover_shield	hooked only on sound.gui as a template - Leon 18/09/2024
-	3210986517	disaster_ended			\ev_UI\notification\disaster_ended	
 	3212963646	UI_panel_location_show			\ev_UI\panel\panel_right\UI_panel_location_show	
 	3219236936	UI_action_road_build			\ev_UI\actions\UI_action_road_build	
 	3219439502	UI_panel_military_units_show			\ev_UI\panel\panel_left\military\UI_panel_military_units_show	

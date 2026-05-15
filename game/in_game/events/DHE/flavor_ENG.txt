@@ -8501,7 +8501,7 @@ flavor_eng.95 = {
 				start_civil_war = {
 					if = {
 						limit = {
-							root = { at_war = yes }
+							PREV.owner = { at_war = yes }
 						}
 						every_province = {
 							raise_levies = {
@@ -8516,7 +8516,7 @@ flavor_eng.95 = {
 				start_civil_war = {
 					if = {
 						limit = {
-							root = { at_war = yes }
+							PREV.owner = { at_war = yes }
 						}
 						every_province = {
 							raise_levies = {

@@ -2140,7 +2140,6 @@ lat_restoration_of_the_constantinople_patriarchate = {
 	game_data = {
 		category = location
 	}
-	global_pop_conversion_speed = 0.02
 	local_migration_attraction = 0.1
 	local_pop_conversion_speed_modifier = 0.25
 }

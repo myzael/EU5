@@ -767,6 +767,18 @@ remove_religious_aspect_inti = {
 	stability = 50
 }
 
+add_religious_aspect_hellenism = {
+	religious_influence = 50
+}
+
+change_religious_aspect_hellenism = {
+	religious_influence = 50
+}
+
+remove_religious_aspect_hellenism = {
+	stability = 20
+}
+
 demand_church_tax_price = {
 	religious_influence = 50
 }

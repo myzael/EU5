@@ -1,7 +1,7 @@
 pdxmesh = {
 	name = "building_han_walls_door_mesh"
 	file = "building_han_walls_door.mesh"
-	scale = 100
+	scale = 70
 
 
 	meshsettings = {
