@@ -243,8 +243,12 @@ succession_crisis.1 = {
 				is_adult = yes
 				is_alive = yes
 				OR = {
-					is_close_relative = scope:scope_pretender
 					is_spouse_of = scope:scope_pretender
+					AND = {
+						has_dynasty = yes
+						scope:scope_pretender = { has_dynasty = yes }
+						dynasty = scope:scope_pretender.dynasty
+					}
 				}
 				NOR = {
 					is_ruler = yes

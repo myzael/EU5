@@ -142,10 +142,10 @@ war_on_same_religion_cb = {
 }
 
 war_on_same_religion_no_cb = {
-	stability = 30
-	war_exhaustion = 2
-	karma = 20
-	righteousness = 20
+	stability = 15
+	war_exhaustion = 1
+	karma = 10
+	righteousness = 10
 }
 
 war_on_different_religion = {

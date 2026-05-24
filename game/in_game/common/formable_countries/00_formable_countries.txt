@@ -742,7 +742,7 @@ LAT_f = {
 		NOT = { has_variable = lat_reduced_requirements_to_form }
 		religion = religion:catholic
 		is_frankokratia_state = yes
-		NOT = { current_age_or_later = { age = age_4_reformation } }
+		NOT = { current_age_or_later = { age = age_5_absolutism } }
 	}
 
 	allow = {
@@ -1783,18 +1783,22 @@ ROM_f = {
 		caucasus_region
 	}
 	form_effect = {
-		if = { 
-			limit = { 
+		if = {
+			limit = {
 				NOT = { court_language = language:latin_language }
 			}
 			set_court_language = dialect:roman_dialect
 		}
-		if = { 
+		if = {
 			limit = { NOT = { capital = location:rome } }
 			move_capital_event_effect = {
 				from = root.capital
 				to = location:rome
 			}
+		}
+		if = {
+			limit = { has_dlc = "d008_fate_of_the_phoenix" }
+			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
 	}
 }
@@ -1851,6 +1855,10 @@ ROM_BYZ_f = {
 		if = {
 			limit = { has_societal_value = societal_value_type:latinization_vs_hellenization }
 			change_societal_value = { type = latinization_vs_hellenization value = societal_value_huge_move_to_left }
+		}
+		if = {
+			limit = { has_dlc = "d008_fate_of_the_phoenix" }
+			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
 	}
 }
@@ -2359,17 +2367,21 @@ BYZ_f = {
 	}
 	form_effect = {
 		if = {
-			limit = { 
-				NOR = { 
+			limit = {
+				NOR = {
 					capital = location:constantinople
 					capital = location:rome
-				} 
+				}
 			}
 			set_capital = location:constantinople
 		}
 		if = {
 			limit = { country_rank_level < 4 }
 			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+		if = {
+			limit = { has_dlc = "d008_fate_of_the_phoenix" }
+			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
 	}
 }
@@ -2411,6 +2423,10 @@ BYZ_trebizond_f = {
 		if = {
 			limit = { country_rank_level < 4 }
 			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+		if = {
+			limit = { has_dlc = "d008_fate_of_the_phoenix" }
+			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
 	}
 }

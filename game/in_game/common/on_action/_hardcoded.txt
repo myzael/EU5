@@ -474,6 +474,13 @@ on_diplomatic_annex = {
 			}
 			set_variable = annexed_designated_vassal_variable
 		}
+		if = {
+			limit = {
+				has_or_had_tag = BYZ
+				scope:target = { owns = location:venice }
+			}
+			set_variable = venice_acquired_peacefully_variable
+		}
 	}
 }
 # fired before the annexation happens; root =  country doing the annexing ,  scope:target = country being annexed
@@ -2981,7 +2988,6 @@ on_new_ruler = {
 		flavor_mor_maghrebi_wars.1000 #The Ambitious Brother
 		flavor_mor_maghrebi_wars.1100 #The new ruler of the [ShowRegionNameWithNoTooltip('maghreb_region')]
 		flavor_hsa.3
-		flavor_wal.1 # Vlad the Impaler.
 		flavor_nap.119
 		flavor_ara.111
 		flavor_kbo.8 #Mai & Warrior

@@ -18,6 +18,7 @@ flavor_byz.1 = {
 		has_or_had_tag = BYZ
 		owns = location:venice
 		owns = location:constantinople
+		NOT = { has_variable = venice_acquired_peacefully_variable }
 	}
 
 	illustration_tags = {
@@ -927,6 +928,7 @@ flavor_byz.13 = { #https://en.wikipedia.org/wiki/Mystras#Centre_of_learning_and_
 		}
 		if = {
 			limit = {
+				location:mystras = { is_capital = yes }
 				has_advance = arts_academy_advance
 				location:mystras = {
 					NOT = { has_building = building_type:arts_academy }
@@ -946,6 +948,7 @@ flavor_byz.13 = { #https://en.wikipedia.org/wiki/Mystras#Centre_of_learning_and_
 		}
 		else_if = {
 			limit = {
+				location:mystras = { is_capital = yes }
 				has_advance = art_school_advance
 				location:mystras = {
 					NOT = { has_building = building_type:art_school }
@@ -956,6 +959,15 @@ flavor_byz.13 = { #https://en.wikipedia.org/wiki/Mystras#Centre_of_learning_and_
 					building_type = building_type:art_school
 					cost_multiplier = 0
 					cost_multiplier_reason = "game_concept_event"
+				}
+			}
+		}
+		else = {
+			scope:target_province = {
+				add_province_modifier = {
+					modifier = center_of_learning_modifier
+					years = -1
+					mode = replace
 				}
 			}
 		}
@@ -6953,8 +6965,8 @@ flavor_byz.1400 = { #Inviting the Northmen
 	dynamic_historical_event = {
 		tag = BYZ
 		tag = ROM
-		from = 1450.1.1
-		to = 1500.1.1
+		from = 1380.1.1
+		to = 1430.1.1
 		monthly_chance = 1
 	}
 
@@ -7008,7 +7020,7 @@ flavor_byz.1400 = { #Inviting the Northmen
 
 		show_as_tooltip = {
 			transfer_yearly_gold = {
-				value = 0.5
+				value = 0.25
 				target = scope:target_country
 			}
 			add_migration = {
@@ -7020,6 +7032,7 @@ flavor_byz.1400 = { #Inviting the Northmen
 				months = 80
 				type = pop_type:peasants
 			}
+			custom_tooltip = BYZ_VARANGIAN_GUARD_RESTORED_TT
 		}
 		scope:varangian_character = {
 			move_country = root
@@ -7059,7 +7072,7 @@ flavor_byz.1401 = { #Byzantium requests soldiers
 
 		scope:target_country2 = {
 			transfer_yearly_gold = {
-				value = 0.5
+				value = 0.25
 				target = scope:target_country
 			}
 		}
@@ -7105,6 +7118,7 @@ flavor_byz.1402 = { #Response for Byz - Positive
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+		set_variable = byz_varangian_guard_restored
 	}
 
 	option = {
@@ -7112,7 +7126,7 @@ flavor_byz.1402 = { #Response for Byz - Positive
 
 		show_as_tooltip = {
 			transfer_yearly_gold = {
-				value = 0.5
+				value = 0.25
 				target = scope:target_country
 			}
 
@@ -7129,6 +7143,8 @@ flavor_byz.1402 = { #Response for Byz - Positive
 			scope:varangian_character = {
 				move_country = scope:target_country2
 			}
+
+			custom_tooltip = BYZ_VARANGIAN_GUARD_RESTORED_TT
 		}
 	}
 }

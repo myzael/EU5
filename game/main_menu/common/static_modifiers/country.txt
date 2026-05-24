@@ -119,7 +119,7 @@ non_threatening_rivals = {
 	game_data = {
 		category = country
 	}
-	monthly_complacency = 0.03
+	monthly_complacency = 0.015
 	monthly_prestige = -0.025
 }
 
@@ -149,8 +149,8 @@ average_control_50 = {
 		category = country
 	}
 
-	monthly_complacency = -0.1
-	
+	monthly_complacency = -0.2
+
 	research_speed_modifier = 0.25
 	crown_power_from_population = 0.5
 }

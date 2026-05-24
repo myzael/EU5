@@ -2541,7 +2541,7 @@ subject_loyalty = {
 }
 
 subject_territory_connectivity = {
-	texture = "modifier_types/subject_connectivity"
+	texture = "military_stances/territory_connectivity"
 }
 
 subject_type = {

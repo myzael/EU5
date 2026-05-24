@@ -620,7 +620,7 @@ cataphracts_unit_limit = {
     add = {
         desc = "GREEK_CULTURE_PERCENTAGE"
         value = {
-            add = "culture_percentage_in_country(culture:greek_culture)"
+            add = "culture_group_percentage_in_country(culture_group:greek_group)"
             multiply = 20
         }
     }

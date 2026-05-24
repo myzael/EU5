@@ -402,6 +402,17 @@ kephalai_bureaucracy = {
 	}
 
 	allow = {
+		OR = {
+			custom_tooltip = {
+				text = won_fate_of_the_phoenix_disaster_tt
+				has_variable = won_fate_of_the_phoenix_disaster_variable
+			}
+
+			AND = {
+				has_or_had_tag = TRE
+				owns = location:constantinople
+			}
+		}
 	}
 
 	estates_that_like = {

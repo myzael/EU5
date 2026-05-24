@@ -129,6 +129,7 @@ unlock_byzantine_cataphracts_2_advance = {
 	requires = armory_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	unlock_unit = a_byzantine_cataphracts_2
 }
@@ -139,6 +140,7 @@ unlock_byzantine_cataphracts_3_advance = {
 	requires = training_fields_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	unlock_unit = a_byzantine_cataphracts_3
 }
@@ -149,6 +151,7 @@ unlock_byzantine_cataphracts_4_advance = {
 	requires = barracks_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	unlock_unit = a_byzantine_cataphracts_4
 }
@@ -159,6 +162,7 @@ unlock_byzantine_cataphracts_5_advance = {
 	requires = military_revolution_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	unlock_unit = a_byzantine_cataphracts_5
 }
@@ -170,6 +174,7 @@ unlock_byzantine_cataphracts_6_advance = {
 	allow_children	= no
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	unlock_unit = a_byzantine_cataphracts_6
 }

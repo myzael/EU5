@@ -115,7 +115,7 @@ cheap_food_in_location = {
 	game_data = {
 		category = location
 	}
-	local_population_growth = 0.0015
+	local_population_growth = 0.002
 }
 
 #multiplied by relative_raw_material_price
@@ -420,7 +420,7 @@ available_free_land = {
 		category = location
 	}
 	local_migration_attraction = 0.1
-	local_population_growth = 0.0025
+	local_population_growth = 0.004
 }
 
 # when its <10% capacity & <10k
@@ -429,7 +429,7 @@ abundant_free_land = {
 		category = location
 	}
 	local_migration_attraction = 0.2
-	local_population_growth = 0.015
+	local_population_growth = 0.02
 }
 # Scales depending on how much over capacity
 overpopulation = {
