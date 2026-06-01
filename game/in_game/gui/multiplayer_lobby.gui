@@ -6525,7 +6525,7 @@ window = {
 												visible = "[Or(OosWindow.IsLocalOos, OosWindow.IsMultiplayerHost)]"
 												raw_text = "[Localize('MULTIPLAYER_GUI_OOS_MESSAGE_FOLDER')]: [RemoveDirectoryPath(OosData.GetFolder)]"
 
-												onclick = "[OpenFileDirectory(OosData.GetFolder)]"
+												onclick = "[OosData.OpenFileDirectory]"
 												tooltipwidget = { LeftClickButtonTooltip = { blockoverride "onclick_text" { text = "MULTIPLAYER_GUI_OOS_MESSAGE_FOLDER_TT" } } }
 											}
 										}

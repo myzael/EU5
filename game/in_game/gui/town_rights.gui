@@ -232,7 +232,6 @@ lateralview = {
 								using = layoutpolicy_expanding
 								margin = { 10 9 }
 								hbox = {
-									wrap_count = 8
 									spacing = 5
 									datamodel = "[DataModelFirst(TownRightsLateralView.GetTownRightsTypes, '(int32)8')]"
 									item = {
