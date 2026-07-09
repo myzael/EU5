@@ -34,6 +34,7 @@ page = {
 			"shadowmap_resolution"
 			"texture_streaming"
 			"gui_texture_streaming"
+			"icon_scaling_quality"
 			"render_scale"
 			"animated_portraits"
 			"gruesome_portraits_traits_visible"
@@ -42,6 +43,7 @@ page = {
 			"unit_coa_resolution_size"
 			"portraits_ssao"
 			"portrait_multi_sampling"
+			"portraits_unsharp_masking"
 			"upscale"
 			"upscale_quality"
 		}
@@ -264,6 +266,13 @@ page = {
 		name = "SETTING_AUDIO_DEVICE_PROFILE"
 		order = {
 			"audio_device_profile"
+		}
+	}
+	category = {
+		category = "Audio"
+		name = "SETTINGS_CATEGORY_MULTIPLAYER"
+		order = {
+			"mp_chat_sound"
 		}
 	}
 }

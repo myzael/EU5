@@ -8,7 +8,7 @@ integrated_elites = {
 	for = dip
 	requires = renaissance_court
 
-	monthly_diplomats = 0.1
+	monthly_diplomats = 0.2
 }
 
 marcher_lords = {
@@ -77,10 +77,11 @@ experienced_diplomats  = {
 benign_diplomats = {
 	age = age_2_renaissance
 	icon = cultural_acceptance_advance
-	for = dip	
+	for = dip
 	requires = experienced_diplomats
-	
+
 	improve_relation_impact = 0.2
+	subject_opinions = 10
 
 	ai_weight = {
 		if = {
@@ -103,8 +104,9 @@ tribute_system = {
 
 	requires = benign_diplomats
 
-	
+
 	subject_income_modifier = 0.025
+	subject_loyalty = 5
 }
 influence = {
 	age = age_2_renaissance
@@ -213,7 +215,7 @@ merchant_adventures = {
 	icon = global_trade_routes_advance
 	for = dip
 
-	trade_sea_efficiency = 0.2
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 ships_penny = {
@@ -292,7 +294,7 @@ free_colonies = {
 	icon = scholasticism
 	for = dip
 
-	colonial_maintenance_cost = -0.20
+	colonial_maintenance_efficiency = 0.40
 }
 grand_navy = {
 	age = age_4_reformation
@@ -374,7 +376,7 @@ sheltered_ports = {
 	icon = rudimentary_coastal_ship_repair
 	for = dip
 	
-	navy_repair_cost = -0.2
+	navy_repair_efficiency = 0.4
 }
 
 naval_fighting_instruction = {

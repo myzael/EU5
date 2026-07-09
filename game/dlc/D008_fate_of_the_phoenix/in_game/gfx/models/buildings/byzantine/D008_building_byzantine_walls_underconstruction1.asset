@@ -1,0 +1,41 @@
+pdxmesh = {
+	name = "D008_building_byzantine_walls_underconstruction1_mesh"
+	file = "D008_building_byzantine_walls_underconstruction1.mesh"
+
+	meshsettings = {
+		name = "D008_building_byzantine_walls_finalShape"
+		index = 0
+		texture_diffuse = "D008_building_byzantine_atlas_diffuse.dds"
+		texture_normal = "D008_building_byzantine_atlas_normal.dds"
+		texture_specular = "D008_building_byzantine_atlas_palace_properties.dds"
+		shader = "standard_floppy_in_construction_building3"
+		texture = { file = "D008_building_byzantine_wall_main_ao_unique.dds" index = 5 }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "D008_building_byzantine_walls_main_under_2Shape"
+		index = 0
+		texture_diffuse = "D008_building_byzantine_atlas_diffuse.dds"
+		texture_normal = "D008_building_byzantine_atlas_normal.dds"
+		texture_specular = "D008_building_byzantine_atlas_palace_properties.dds"
+		shader = "standard_floppy_in_construction_building2"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "D008_building_byzantine_walls_main_under_1Shape"
+		index = 0
+		texture_diffuse = "D008_building_byzantine_atlas_diffuse.dds"
+		texture_normal = "D008_building_byzantine_atlas_normal.dds"
+		texture_specular = "D008_building_byzantine_atlas_palace_properties.dds"
+		shader = "standard_floppy_in_construction_building1"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+
+entity = {
+	name = "D008_building_byzantine_walls_underconstruction1_entity"
+	pdxmesh = "D008_building_byzantine_walls_underconstruction1_mesh"
+}

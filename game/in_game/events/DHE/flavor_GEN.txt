@@ -358,7 +358,10 @@ flavor_gen.7 = {
 	trigger = {
 		owns = location:kaffa
 		capital.sub_continent = sub_continent:western_europe
-		has_variable = codified_liber_gazerie
+		custom_tooltip = {
+			text = variable_codified_liber_gazerie_tt
+			has_variable = codified_liber_gazerie
+		}
 	}
 	option = {
 		name = flavor_gen.7.a
@@ -713,7 +716,10 @@ flavor_gen.14 = {
 	}	
 	trigger = {
 		owns = location:kaffa
-		has_variable = gen_had_fall_of_constantinople
+		custom_tooltip = {
+			text = variable_gen_had_fall_of_constantinople_tt
+			has_variable = gen_had_fall_of_constantinople
+		}
 		location:constantinople = {
 			owner = {
 				NOT = { religion.group = religion_group:christian }
@@ -848,7 +854,10 @@ flavor_gen.16 = {
 		monthly_chance = 10
 	}
 	trigger = {
-		has_variable = gen_has_maona_event
+		custom_tooltip = {
+			text = variable_gen_has_maona_event_tt
+			has_variable = gen_has_maona_event
+		}
 		country_exists = c:BYZ
 		c:BYZ = {
 			owns = location:chios
@@ -871,6 +880,7 @@ flavor_gen.16 = {
 		location:chios = {
 			change_location_owner = root
 			change_control = control_radical_penalty
+			add_location_modifier = { modifier = vignoso_garrison_modifier years = 5 mode = add_and_extend }
 		}
 		if = {
 			limit = { location:ikaria = { owner = c:BYZ } }
@@ -878,6 +888,7 @@ flavor_gen.16 = {
 			location:ikaria = {
 				change_location_owner = root
 				change_control = control_radical_penalty
+				add_location_modifier = { modifier = vignoso_garrison_modifier years = 5 mode = add_and_extend }
 			}
 		}
 		if = {
@@ -886,6 +897,7 @@ flavor_gen.16 = {
 			location:samos = {
 				change_location_owner = root
 				change_control = control_radical_penalty
+				add_location_modifier = { modifier = vignoso_garrison_modifier years = 5 mode = add_and_extend }
 			}
 		}
 		c:BYZ = {
@@ -1122,6 +1134,7 @@ flavor_gen.19 = {
 		location:bastia = {
 			NOT = { location_rank = location_rank:town }
 			NOT = { location_rank = location_rank:city }
+			NOT = { location_rank = location_rank:megalopolis }
 			NOT = { has_building = building_type:castle }
 		}
 	}
@@ -1130,7 +1143,7 @@ flavor_gen.19 = {
 		name = flavor_gen.19.a
 		historical_option = yes
 		location:bastia = {
-			change_location_rank = location_rank:town
+			change_location_rank_effect = { location_rank = location_rank:town }
 			change_building_level_in_location = {
 				building = building_type:castle
 				value = 1
@@ -1627,7 +1640,10 @@ flavor_gen.26 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 	}
 	trigger = {
-		has_variable = gen_war_of_straits
+		custom_tooltip = {
+			text = variable_gen_war_of_straits_tt
+			has_variable = gen_war_of_straits
+		}
 		country_exists = c:VEN
 		NOT = { is_allied_with = { target = c:VEN } }
 		has_reform = government_reform:merchant_republic
@@ -1834,7 +1850,6 @@ flavor_gen.28 = {
 			owner = {
 				save_scope_as = nice_owner
 			}
-			create_dynasty_from_location = grimaldi_dynasty
 		}
 	}
 	#Let the Grimaldi continue their business.
@@ -2222,7 +2237,10 @@ flavor_gen.34 = {
 		monthly_chance = 1
 	}
 	trigger = {
-		has_variable = corsican_revolt
+		custom_tooltip = {
+			text = variable_corsican_revolt_tt
+			has_variable = corsican_revolt
+		}
 		owns_corsica = yes
 		any_owned_location = {
 			is_corsica = yes
@@ -2326,7 +2344,10 @@ flavor_gen.35 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 	}
 	trigger = {
-		has_variable = corsican_republic
+		custom_tooltip = {
+			text = variable_corsican_republic_tt
+			has_variable = corsican_republic
+		}
 		owns_corsica = yes
 		any_owned_location = {
 			is_corsica = yes
@@ -2787,7 +2808,10 @@ flavor_gen.44 = {
 	}
 	image = "gfx/interface/illustrations/situation/black_death.dds"
 	trigger = {
-		has_variable = genoese_plague_bringer
+		custom_tooltip = {
+			text = variable_genoese_plague_bringer_tt
+			has_variable = genoese_plague_bringer
+		}
 		disease_is_active = disease:bubonic_plague
 	}
 	#The end is nigh...
@@ -2832,7 +2856,10 @@ flavor_gen.45 = {
 		monthly_chance = 10
 	}
 	trigger = {
-		has_variable = exiled_sampieru
+		custom_tooltip = {
+			text = variable_exiled_sampieru_tt
+			has_variable = exiled_sampieru
+		}
 		owns_corsica = yes
 		exists = character:sampieru_corso
 		character:sampieru_corso = { is_alive = yes }
@@ -2967,6 +2994,12 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 				}
 			}
 		}
+		scope:saint_george_bank_tag = {
+			make_subject_of = {
+				target = ROOT
+				type = subject_type:state_bank
+			}
+		}
 		unlock_advance_effect = { type = bank_of_saint_george }
 
 		change_gold_effect = { scale = 2 }
@@ -2974,6 +3007,7 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 
 	option = {
 		name = flavor_gen.46.b
+		high_risk_option = yes
 
 		show_as_tooltip = {
 			scope:saint_george_bank_hq = {
@@ -2982,6 +3016,12 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 					value = 1
 					owner = scope:saint_george_bank_tag
 				}
+			}
+		}
+		scope:saint_george_bank_tag = {
+			make_subject_of = {
+				target = ROOT
+				type = subject_type:state_bank
 			}
 		}
 		unlock_advance_effect = { type = bank_of_saint_george }
@@ -3188,5 +3228,454 @@ flavor_gen.51 = {
 
 	option = {
 		name = flavor_gen.51.a
+	}
+}
+
+flavor_gen.52 = { # The Grimaldi Bank
+	type = country_event
+	title = flavor_gen.52.title
+	desc = flavor_gen.52.desc
+	outcome = neutral
+	historical_info = flavor_gen.52.historical_info
+	fire_only_once = yes
+
+	major = yes
+	dynamic_historical_event = {
+		tag = GEN
+		from = 1500.1.1
+		to = 1550.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		owns = location:genoa
+	}
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+		location:genoa = {
+			save_scope_as = grimaldi_bank_hq
+		}
+		dynasty:grimaldi_dynasty ?= {
+			random_character_in_dynasty = {
+				limit = {
+					is_alive = yes
+					is_adult = yes
+					is_ruler = no
+					is_heir = no
+					is_female = no
+				}
+				save_scope_as = target_character
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:target_character }
+			}
+			create_character = {
+				dynasty = dynasty:grimaldi_dynasty
+				age = { 20 40 }
+				save_scope_as = target_character
+			}
+		}
+
+		scope:grimaldi_bank_hq = {
+			create_building_country_in_location = {
+				name = {
+					name = GRIMALDI
+				}
+				reforms = {
+					banking_country
+				}
+				save_scope_as = grimaldi_bank_tag
+				set_new_ruler = scope:target_character
+
+				hidden_effect = {
+					change_country_flag = GRIMALDI
+					define_unique_country_tag = GRIML
+					change_heir_selection = heir_selection:bank_selection
+					change_government_type = government_type:republic
+				}
+			}
+			scope:grimaldi_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:grimaldi_bank_tag
+				}
+			}
+		}
+		set_local_variable = {
+			name = amount_of_gold_for_grimaldi
+			value = { 250 500 }
+		}
+	}
+
+	option = {
+		name = flavor_gen.52.a
+
+		historical_option = yes
+
+		show_as_tooltip = {
+			scope:grimaldi_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:grimaldi_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+	}
+
+	option = {
+		name = flavor_gen.52.b
+		high_risk_option = yes
+
+		show_as_tooltip = {
+			scope:grimaldi_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:grimaldi_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+
+		change_player = scope:grimaldi_bank_tag
+	}
+
+	after = {
+		scope:grimaldi_bank_tag = {
+			trigger_event_non_silently = flavor_gen.53
+		}
+	}
+}
+
+flavor_gen.53 = { # Starting Event for The Grimaldi Bank
+	type = country_event
+	title = flavor_gen.53.title
+	desc = flavor_gen.53.desc
+	outcome = neutral
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_gen.53.a
+
+		add_gold = local_var:amount_of_gold_for_grimaldi
+	}
+}
+
+flavor_gen.54 = { # The Spinola Bank
+	type = country_event
+	title = flavor_gen.54.title
+	desc = flavor_gen.54.desc
+	outcome = neutral
+	historical_info = flavor_gen.54.historical_info
+	fire_only_once = yes
+
+	major = yes
+	dynamic_historical_event = {
+		tag = GEN
+		from = 1480.1.1
+		to = 1560.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		owns = location:genoa
+	}
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+		location:genoa = {
+			save_scope_as = spinola_bank_hq
+		}
+
+		dynasty:spinola_dynasty ?= {
+			random_character_in_dynasty = {
+				limit = {
+					is_alive = yes
+					is_adult = yes
+					is_ruler = no
+					is_heir = no
+					is_female = no
+				}
+				save_scope_as = target_character
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:target_character }
+			}
+			create_character = {
+				dynasty = dynasty:spinola_dynasty
+				age = { 20 40 }
+				save_scope_as = target_character
+			}
+		}
+
+		scope:spinola_bank_hq = {
+			create_building_country_in_location = {
+				name = {
+					name = SPINOLA
+				}
+				reforms = {
+					banking_country
+				}
+				save_scope_as = spinola_bank_tag
+				set_new_ruler = scope:target_character
+
+				hidden_effect = {
+					change_country_flag = SPINOLA
+					define_unique_country_tag = SPINL
+					change_heir_selection = heir_selection:bank_selection
+					change_government_type = government_type:republic
+				}
+			}
+			scope:spinola_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:spinola_bank_tag
+				}
+			}
+		}
+		set_local_variable = {
+			name = amount_of_gold_for_spinola
+			value = { 250 500 }
+		}
+	}
+
+	option = {
+		name = flavor_gen.54.a
+
+		historical_option = yes
+
+		show_as_tooltip = {
+			scope:spinola_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:spinola_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+	}
+
+	option = {
+		name = flavor_gen.54.b
+		high_risk_option = yes
+
+		show_as_tooltip = {
+			scope:spinola_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:spinola_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+
+		change_player = scope:spinola_bank_tag
+	}
+
+	after = {
+		scope:spinola_bank_tag = {
+			trigger_event_non_silently = flavor_gen.55
+		}
+	}
+}
+
+flavor_gen.55 = { # Starting Event for The Spinola Bank
+	type = country_event
+	title = flavor_gen.55.title
+	desc = flavor_gen.55.desc
+	outcome = neutral
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_gen.55.a
+
+		add_gold = local_var:amount_of_gold_for_spinola
+	}
+}
+
+flavor_gen.56 = { # The Pallavicino Bank
+	type = country_event
+	title = flavor_gen.56.title
+	desc = flavor_gen.56.desc
+	outcome = neutral
+	historical_info = flavor_gen.56.historical_info
+	fire_only_once = yes
+
+	major = yes
+	dynamic_historical_event = {
+		tag = GEN
+		from = 1500.1.1
+		to = 1580.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		owns = location:genoa
+	}
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+		location:genoa = {
+			save_scope_as = pallavicino_bank_hq
+		}
+
+		dynasty:pallavicini_dynasty ?= {
+			random_character_in_dynasty = {
+				limit = {
+					is_alive = yes
+					is_adult = yes
+					is_ruler = no
+					is_heir = no
+					is_female = no
+				}
+				save_scope_as = target_character
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:target_character }
+			}
+			create_character = {
+				dynasty = dynasty:pallavicini_dynasty
+				age = { 20 40 }
+				save_scope_as = target_character
+			}
+		}
+
+		scope:pallavicino_bank_hq = {
+			create_building_country_in_location = {
+				name = {
+					name = PALLAVICINO_BANK
+				}
+				reforms = {
+					banking_country
+				}
+				save_scope_as = pallavicino_bank_tag
+				set_new_ruler = scope:target_character
+
+				hidden_effect = {
+					change_country_flag = PALLAVICINO
+					define_unique_country_tag = PALLV
+					change_heir_selection = heir_selection:bank_selection
+					change_government_type = government_type:republic
+				}
+			}
+			scope:pallavicino_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:pallavicino_bank_tag
+				}
+			}
+		}
+		set_local_variable = {
+			name = amount_of_gold_for_pallavicino
+			value = { 250 500 }
+		}
+	}
+
+	option = {
+		name = flavor_gen.56.a
+
+		historical_option = yes
+
+		show_as_tooltip = {
+			scope:pallavicino_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:pallavicino_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+	}
+
+	option = {
+		name = flavor_gen.56.b
+		high_risk_option = yes
+
+		show_as_tooltip = {
+			scope:pallavicino_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:pallavicino_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+
+		change_player = scope:pallavicino_bank_tag
+	}
+
+	after = {
+		scope:pallavicino_bank_tag = {
+			trigger_event_non_silently = flavor_gen.57
+		}
+	}
+}
+
+flavor_gen.57 = { # Starting Event for The Pallavicino Bank
+	type = country_event
+	title = flavor_gen.57.title
+	desc = flavor_gen.57.desc
+	outcome = neutral
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_gen.57.a
+
+		add_gold = local_var:amount_of_gold_for_pallavicino
 	}
 }

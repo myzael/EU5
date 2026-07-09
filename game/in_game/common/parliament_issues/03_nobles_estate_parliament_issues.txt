@@ -3,7 +3,7 @@ promote_castle_building = {
 	estate = nobles_estate
 
 	modifier_when_in_debate = {
-		global_fort_build_buildings_cost = -0.5
+		global_fort_build_buildings_efficiency = 1.0
 		monthly_towards_defensive = societal_value_huge_monthly_move #moves value by 3 over the duration
 	}
 
@@ -77,7 +77,7 @@ promote_bastion_building = {
 	estate = nobles_estate
 
 	modifier_when_in_debate = {
-		global_fort_build_buildings_cost = -0.5
+		global_fort_build_buildings_efficiency = 1.0
 		monthly_towards_defensive = societal_value_huge_monthly_move #moves value by 3 over the duration
 	}
 
@@ -148,7 +148,7 @@ promote_star_fort_building = {
 	estate = nobles_estate
 
 	modifier_when_in_debate = {
-		global_fort_build_buildings_cost = -0.5
+		global_fort_build_buildings_efficiency = 1.0
 		monthly_towards_defensive = societal_value_huge_monthly_move #moves value by 3 over the duration
 	}
 
@@ -218,7 +218,7 @@ promote_fortress_building = {
 	estate = nobles_estate
 
 	modifier_when_in_debate = {
-		global_fort_build_buildings_cost = -0.5
+		global_fort_build_buildings_efficiency = 1.0
 		monthly_towards_defensive = societal_value_huge_monthly_move #moves value by 3 over the duration
 	}
 
@@ -304,6 +304,7 @@ sponsor_a_opera_house = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 		NOT = {
@@ -358,7 +359,7 @@ sponsor_a_opera_house = {
 			order_by = {
 				value = population
 				if = {
-					limit = { location_rank = location_rank:city }
+					limit = { OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis } }
 					multiply = 5
 				}
 			}
@@ -368,6 +369,7 @@ sponsor_a_opera_house = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -751,6 +753,7 @@ finance_the_armory = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -784,6 +787,7 @@ expand_barracks = {
 			parliament_type = parliament_type:constitutional_parliament
 		}
 		has_advance = barracks_advance
+		NOT = { has_advance = conscription_center_advance }
 		any_owned_non_rural_location = {
 			owner = { has_primary_or_accepted_culture = prev.dominant_culture }
 			NOR = {
@@ -843,6 +847,7 @@ expand_barracks = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {

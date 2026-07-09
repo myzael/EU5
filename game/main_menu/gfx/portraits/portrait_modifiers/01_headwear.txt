@@ -781,6 +781,24 @@
 		}
 	}
 
+	indochina_low_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headwear
+				template = indochina_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				portrait_low_nobility_trigger = { CULTURE_GFX = indochina_gfx }
+			}
+		}
+	}
+
 	chinese_high_nobility = {
 		dna_modifiers = {
 			accessory = {

@@ -1,9 +1,14 @@
-pdxmesh = {
+﻿pdxmesh = {
 	name = "raw_vineyards_mesh"
 	file = "raw_vineyard.mesh"
 
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
 	meshsettings = {
-		name = "raw_wheat|pasted__vegetation_diorama_tree_real_pPlane180|pasted"
+		name = "raw_vineyard|raw_wheat_pasted__vegetation_diorama_tree_real_pPl"
 		index = 0
 		texture_diffuse = "vineyard_field_a_diffuse.dds"
 		texture_normal = "vineyard_field_a_normal.dds"

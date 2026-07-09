@@ -8,6 +8,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	76864608	UI_alert_appear			\ev_UI\alerts\UI_alert_appear	
 	99965767	UI_event_age_3_discovery			\ev_UI\events\UI_event_age_3_discovery	hooked only on eventwindow.gui - Leon 18/09/2024
 	100834342	OMEN_EXPIRED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Hellenic_omens\OMEN_EXPIRED	
+	103038928	construction_building_religion_finished_05			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_05	
+	103038929	construction_building_religion_finished_04			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_04	
+	103038931	construction_building_religion_finished_06			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_06	
+	103038932	construction_building_religion_finished_01			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_01	
+	103038934	construction_building_religion_finished_03			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_03	
+	103038935	construction_building_religion_finished_02			\ev_UI\construction\construction_building_finished\construction_building_religion_finished_02	
 	110231398	UI_action_advances_research_add			\ev_UI\actions\UI_action_advances_research_add	
 	136284562	UI_button_gameNew_confirm			\ev_UI\button\UI_button_gameNew_confirm	hooked in frontend_mainview.gui and frontend_singleplayer.gui with on_action
 	145257136	WE_PERFORM_train_admiral_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\military\WE_PERFORM_train_admiral_ACTION	
@@ -29,7 +35,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	308265597	UI_action_diplomacy_rival_remove			\ev_UI\actions\UI_action_diplomacy_rival_remove	
 	309422112	UI_action_estate_bribe			\ev_UI\actions\UI_action_estate_bribe	
 	325529056	UI_panelChild_diplomacy_relations_currentRelations_show			\ev_UI\panel\panel_left\diplomacy\UI_panelChild_diplomacy_relations_currentRelations_show	
-	340413352	UI_situation_end			\ev_UI\situation\UI_situation_end	
 	353950556	UI_panelAux_diplomacy_subjectType_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_subjectType_show	
 	369211234	UI_button_gameLoad_confirm			\ev_UI\button\UI_button_gameLoad_confirm	hooked in load_save_menu.gui with on_action
 	400741291	UI_popup_goods_message			\ev_UI\popup\popup_type\UI_popup_goods_message	
@@ -41,6 +46,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	483419467	UI_panel_government_modifiers_show			\ev_UI\panel\panel_left\government\UI_panel_government_modifiers_show	
 	516162189	UI_window_hide			\ev_UI\window\UI_window_hide	hooked only on sound.gui as a template - Leon 18/09/2024
 	517651860	UI_gameStart_flag_out			\ev_UI\startgame_sequence\UI_gameStart_flag_out	hooked in animation.gui with start_sound
+	541638914	construction_rgo_forestry			\ev_UI\construction\construction_rgo\construction_rgo_forestry	
 	542387104	UI_button_gameContinue			\ev_UI\button\UI_button_gameContinue	hooked in frontend_mainview.gui with clicksound and on_action
 	556718627	UI_messageLog			\ev_UI\notification\UI_messageLog	hooked only on sound.gui as a template - Leon 18/09/2024
 	562141476	UI_panelAux_recruitmentLocation_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_recruitmentLocation_show	
@@ -60,6 +66,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	732921526	UI_action_character_mission_base_finished			\ev_UI\actions\UI_action_character_mission_base_finished	
 	770510449	PARLIAMENT_ASK_FOR_LARGER_LEVIES			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_request\PARLIAMENT_ASK_FOR_LARGER_LEVIES	
 	780903572	UI_action_religion_aspect_remove			\ev_UI\actions\UI_action_religion_aspect_remove	posted by jomini effect  FILE: general_religion.txt
+	795251168	construction_building_industry_finished_02			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_02	
+	795251169	construction_building_industry_finished_03			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_03	
+	795251171	construction_building_industry_finished_01			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_01	
+	795251172	construction_building_industry_finished_06			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_06	
+	795251174	construction_building_industry_finished_04			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_04	
+	795251175	construction_building_industry_finished_05			\ev_UI\construction\construction_building_finished\construction_building_industry_finished_05	
 	819126853	UI_action_cabinet_character			\ev_UI\actions\UI_action_cabinet_character	
 	830026844	UI_call_parliament			\ev_UI\panel\panel_left\government\UI_call_parliament	
 	831221832	UI_action_character_mission_base_start			\ev_UI\actions\UI_action_character_mission_base_start	
@@ -92,9 +104,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	1074263444	UI_popup_show			\ev_UI\popup\UI_popup_show	hooked only on sound.gui as a template - Leon 18/09/2024
 	1086422815	UI_action_cabinet_generic			\ev_UI\actions\UI_action_cabinet_generic	
 	1096100677	UI_panel_society_people_show			\ev_UI\panel\panel_left\society\UI_panel_society_people_show	
+	1096480296	construction_building_generic_02			\ev_UI\construction\construction_generic\construction_building_generic_02	
+	1096480297	construction_building_generic_03			\ev_UI\construction\construction_generic\construction_building_generic_03	
+	1096480299	construction_building_generic_01			\ev_UI\construction\construction_generic\construction_building_generic_01	
+	1096480300	construction_building_generic_06			\ev_UI\construction\construction_generic\construction_building_generic_06	
+	1096480302	construction_building_generic_04			\ev_UI\construction\construction_generic\construction_building_generic_04	
+	1096480303	construction_building_generic_05			\ev_UI\construction\construction_generic\construction_building_generic_05	
 	1126930679	UI_hoverOff			\ev_UI\mousePointer\UI_hoverOff	hooked only on sound.gui as a template - Leon 18/09/2024
 	1148777658	UI_event_bg_north_german_nobles_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_nobles_interior	
 	1168036015	WE_PERFORM_add_religious_aspect_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Religious_aspect_add\WE_PERFORM_add_religious_aspect_ACTION	
+	1171849529	construction_rgo_generic			\ev_UI\construction\construction_generic\construction_rgo_generic	
 	1177495437	UI_panel_government_select			\ev_UI\panel\panel_left\government\UI_panel_government_select	
 	1179637668	UI_cursor_rightclick_hold_finished			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_finished	
 	1183488787	IMPORTANT_CHAR_DEATH			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Relevant_character_death\IMPORTANT_CHAR_DEATH	
@@ -112,8 +131,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1307813086	UI_action_building_build			\ev_UI\actions\UI_action_building_build	THIS IS A HARDCODED EVENT IN CODE - DO NOT CHANGE NAME  This event triggers when player opts to construct a building (both when selecting buildable position on map, and when choosing a building in the "build" window for a city/town)
 	1317259046	WE_PERFORM_train_general_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\military\WE_PERFORM_train_general_ACTION	
 	1340235632	UI_action_religion_generic			\ev_UI\actions\UI_action_religion_generic	
+	1359377967	construction_rgo_hunting			\ev_UI\construction\construction_rgo\construction_rgo_hunting	
 	1367193261	UI_map_rotate_stop			\ev_UI\map\UI_map_rotate_stop	Should be in as per /CAESAR-16661
 	1368163639	UI_action_government_reform_remove			\ev_UI\actions\UI_action_government_reform_remove	
+	1368845271	construction_rgo_forestry_finished			\ev_UI\construction\construction_rgo\construction_rgo_forestry_finished	
 	1369595247	UI_reject			\ev_UI\button\UI_reject	hooked only on sound.gui as a template - Leon 18/09/2024
 	1389577613	UI_clickRelease			\ev_UI\mousePointer\UI_clickRelease	hooked only on sound.gui as a template - Leon 18/09/2024
 	1390485418	UI_event_main			\ev_UI\events\UI_event_main	
@@ -144,6 +165,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1669785477	UI_hover_flag			\ev_UI\mousePointer\UI_hover_flag	hooked only on sound.gui as a template - Leon 18/09/2024
 	1689358179	UI_map_pan_stop			\ev_UI\map\UI_map_pan_stop	Should be in as per /CAESAR-16661
 	1699203479	UI_panelChild_geopolitics_expansion_exploration_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_expansion_exploration_show	
+	1722809264	construction_building_military_04			\ev_UI\construction\construction_building_started\construction_building_military_04	
+	1722809265	construction_building_military_05			\ev_UI\construction\construction_building_started\construction_building_military_05	
+	1722809266	construction_building_military_06			\ev_UI\construction\construction_building_started\construction_building_military_06	
+	1722809269	construction_building_military_01			\ev_UI\construction\construction_building_started\construction_building_military_01	
+	1722809270	construction_building_military_02			\ev_UI\construction\construction_building_started\construction_building_military_02	
+	1722809271	construction_building_military_03			\ev_UI\construction\construction_building_started\construction_building_military_03	
 	1734456955	UI_speedIncrease			\ev_UI\POTENTIALLY DEPRECATED POOL\UI_speedIncrease	hooked only on game_audio.h - Leon 18/09/2024
 	1749140321	UI_next			\ev_UI\navigation\UI_next	hooked only on sound.gui as a template, USED AS UI_FORWARD - Leon 14/11/2024 - should be changed in the future to the same name for the template
 	1750337625	UI_panel_society_religion_show			\ev_UI\panel\panel_left\society\UI_panel_society_religion_show	
@@ -157,6 +184,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1827843101	UI_flow_start_new_game			\ev_UI\flow\UI_flow_start_new_game	
 	1853441180	UI_alert_appear_red			\ev_UI\alerts\UI_alert_appear_red	
 	1859653464	UI_unit_hoverOn			\ev_UI\unit_controls\UI_unit_hoverOn	
+	1863796626	situation_ended			\ev_UI\situation\situation_ended	
 	1866827072	UI_panelAux_military_builder_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_military_builder_show	
 	1878216141	UI_button_exit_toMainMenu			\ev_UI\button\UI_button_exit_toMainMenu	
 	1886893979	UI_panel_geopolitics_expansion_show			\ev_UI\panel\panel_left\geopolitics\UI_panel_geopolitics_expansion_show	
@@ -178,19 +206,29 @@ Event	ID	Name			Wwise Object Path	Notes
 	1994395019	UI_panel_military_objectives_group_show			\ev_UI\panel\panel_left\military\UI_panel_military_objectives_group_show	
 	2016053992	UI_panel_unitMulti_show			\ev_UI\panel\panel_right\UI_panel_unitMulti_show	
 	2024661996	UI_action_estate_privilege_grant			\ev_UI\actions\UI_action_estate_privilege_grant	
+	2036162782	construction_rgo_generic_finished			\ev_UI\construction\construction_generic\construction_rgo_generic_finished	
 	2037940001	UI_cursor_leftclick_hold_start			\ev_UI\confirm_hold\UI_cursor_leftclick_hold_start	
 	2059158596	UI_hoverOff_alert			\ev_UI\mousePointer\UI_hoverOff_alert	hooked only on sound.gui as a template - Leon 18/09/2024
 	2064035685	UI_action_character_mission_base_finished_failure			\ev_UI\actions\UI_action_character_mission_base_finished_failure	
 	2065889691	REVOKE_PRIVILEGE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Privilege_revoke\REVOKE_PRIVILEGE	
 	2068335985	UI_panel_advances_select			\ev_UI\panel\panel_left\advances\UI_panel_advances_select	
+	2076405162	construction_rgo_gathering_finished			\ev_UI\construction\construction_rgo\construction_rgo_gathering_finished	
 	2077152161	UI_panel_production_select			\ev_UI\panel\panel_left\production\UI_panel_production_select	
 	2089897127	UI_mapmode_transition_default			\ev_UI\map\UI_mapmode_transition_default	Triggered when mapmode changes
 	2093769900	UI_panelAux_selectInteractionTarget_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_selectInteractionTarget_show	
 	2094968236	UI_cursor_leftclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_leftclick_hold_aborted	
 	2118900976	UI_hover			\ev_UI\mousePointer\UI_hover	hooked only on sound.gui as a template - Leon 18/09/2024
 	2126965355	UI_checkbutton_diamond			\ev_UI\button\UI_checkbutton_diamond	hooked on buttons.gui - Leon 18/09/2024
+	2127157424	construction_building_culture_finished_06			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_06	
+	2127157426	construction_building_culture_finished_04			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_04	
+	2127157427	construction_building_culture_finished_05			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_05	
+	2127157428	construction_building_culture_finished_02			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_02	
+	2127157429	construction_building_culture_finished_03			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_03	
+	2127157431	construction_building_culture_finished_01			\ev_UI\construction\construction_building_finished\construction_building_culture_finished_01	
 	2133833785	UI_panel_economy_markets_show			\ev_UI\panel\panel_left\economy\UI_panel_economy_markets_show	
 	2143696834	DECLWAR_ON_SUBJECT			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_ON_SUBJECT	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
+	2146760791	construction_cancel			\ev_UI\construction\construction_generic\construction_cancel	
+	2167451550	construction_rgo_farming			\ev_UI\construction\construction_rgo\construction_rgo_farming	
 	2181272451	UI_action_character_death			\ev_UI\actions\UI_action_character_death	
 	2188861279	UI_popup_war_message			\ev_UI\popup\popup_type\UI_popup_war_message	
 	2189963872	UI_panel_show			\ev_UI\panel\UI_panel_show	
@@ -206,6 +244,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	2291310513	UI_notification_show			\ev_UI\notification\UI_notification_show	
 	2302165565	UI_button_plus			\ev_UI\button\UI_button_plus	hoooked on standard_types.gui and buttons.gui - Leon 18/09/2024
 	2305190939	DECLWAR_WE_JOIN			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_WE_JOIN	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
+	2320816424	construction_building_culture_05			\ev_UI\construction\construction_building_started\construction_building_culture_05	
+	2320816425	construction_building_culture_04			\ev_UI\construction\construction_building_started\construction_building_culture_04	
+	2320816427	construction_building_culture_06			\ev_UI\construction\construction_building_started\construction_building_culture_06	
+	2320816428	construction_building_culture_01			\ev_UI\construction\construction_building_started\construction_building_culture_01	
+	2320816430	construction_building_culture_03			\ev_UI\construction\construction_building_started\construction_building_culture_03	
+	2320816431	construction_building_culture_02			\ev_UI\construction\construction_building_started\construction_building_culture_02	
 	2349945590	UI_event_age_4_reformation			\ev_UI\events\UI_event_age_4_reformation	hooked only on eventwindow.gui - Leon 18/09/2024
 	2353636589	UI_panel_internationalOrganizations_show			\ev_UI\panel\panel_right\UI_panel_internationalOrganizations_show	
 	2366001700	UI_panelChild_advances_research_show			\ev_UI\panel\panel_left\advances\UI_panelChild_advances_research_show	
@@ -226,6 +270,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	2509247896	UI_event_negative			\ev_UI\events\UI_event_negative	
 	2515565625	UI_panelChild_society_people_rebels_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_people_rebels_show	
 	2519197294	UI_close			\ev_UI\navigation\UI_close	hooked only on sound.gui as a template - Leon 18/09/2024
+	2558221921	construction_building_economy_06			\ev_UI\construction\construction_building_started\construction_building_economy_06	
+	2558221922	construction_building_economy_05			\ev_UI\construction\construction_building_started\construction_building_economy_05	
+	2558221923	construction_building_economy_04			\ev_UI\construction\construction_building_started\construction_building_economy_04	
+	2558221924	construction_building_economy_03			\ev_UI\construction\construction_building_started\construction_building_economy_03	
+	2558221925	construction_building_economy_02			\ev_UI\construction\construction_building_started\construction_building_economy_02	
+	2558221926	construction_building_economy_01			\ev_UI\construction\construction_building_started\construction_building_economy_01	
 	2561726404	UI_event_object			\ev_UI\events\UI_event_object	
 	2562777637	UI_action_navy_hire_mercenaries			\ev_UI\actions\UI_action_navy_hire_mercenaries	
 	2581599150	UI_panelAux_diplomacy_selectCountry_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_selectCountry_show	
@@ -246,12 +296,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	2755597554	UI_alert_open_and_cycle			\ev_UI\alerts\UI_alert_open_and_cycle	
 	2787708012	UI_advances_finished			\ev_UI\panel\panel_left\advances\UI_advances_finished	
 	2791106298	UI_cooltip_lock			\ev_UI\tooltip\UI_cooltip_lock	hooked only on sound.gui as a template - Leon 18/09/2024
-	2791656659	UI_situation_start			\ev_UI\situation\UI_situation_start	
 	2792155208	UI_pause			\ev_UI\time\UI_pause	hooked only on game_audio.h - Leon 18/09/2024
 	2803393552	UI_panel_government_missions_show			\ev_UI\panel\panel_left\government\UI_panel_government_missions_show	
 	2806840970	UI_action_navy_build			\ev_UI\actions\UI_action_navy_build	As this is technically a "build" action, it plays UI_action_building_base initially before decor
 	2807573198	UI_missions_start			\ev_UI\panel\panel_left\government\UI_missions_start	
 	2808352893	UI_popup_situation_message			\ev_UI\popup\popup_type\UI_popup_situation_message	
+	2832639336	construction_building_industry_01			\ev_UI\construction\construction_building_started\construction_building_industry_01	
+	2832639338	construction_building_industry_03			\ev_UI\construction\construction_building_started\construction_building_industry_03	
+	2832639339	construction_building_industry_02			\ev_UI\construction\construction_building_started\construction_building_industry_02	
+	2832639340	construction_building_industry_05			\ev_UI\construction\construction_building_started\construction_building_industry_05	
+	2832639341	construction_building_industry_04			\ev_UI\construction\construction_building_started\construction_building_industry_04	
+	2832639343	construction_building_industry_06			\ev_UI\construction\construction_building_started\construction_building_industry_06	
 	2841348048	UI_action_character_grant_cabinet_rights			\ev_UI\actions\UI_action_character_grant_cabinet_rights	posted by jomini effect  FILE: grant_cabinet_right.txt
 	2847972850	UI_map_location_hoverOn			\ev_UI\map\UI_map_location_hoverOn	
 	2848843905	UI_event_bg_north_german_clergy_exterior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_exterior	
@@ -261,6 +316,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2886109600	BRIBE_ESTATE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Estate_bribe\BRIBE_ESTATE	
 	2890747618	UI_map_goto			\ev_UI\map\UI_map_goto	
 	2898280575	UI_event_bg_north_german_clergy_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_clergy_interior	
+	2899636785	situation_started			\ev_UI\situation\situation_started	
 	2916084332	UI_panelChild_geopolitics_maritime_coasts_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_maritime_coasts_show	
 	2920080030	UI_panelAux_diplomacy_manageSubjects_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_diplomacy_manageSubjects_show	
 	2924931311	UI_cursor_rightclick_hold_aborted			\ev_UI\confirm_hold\UI_cursor_rightclick_hold_aborted	
@@ -270,6 +326,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	2963279329	WE_PERFORM_select_omen_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Hellenic_omens\WE_PERFORM_select_omen_ACTION	
 	2972282805	DECLWAR			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	2983903936	UI_action_production_expand_rgo			\ev_UI\actions\UI_action_production_expand_rgo	SHOULD (ASSUMPTION!!!) BE HARD CODED AS PER CAESAR-35593 - MW 251010
+	2992660136	construction_building_religion_04			\ev_UI\construction\construction_building_started\construction_building_religion_04	
+	2992660137	construction_building_religion_05			\ev_UI\construction\construction_building_started\construction_building_religion_05	
+	2992660138	construction_building_religion_06			\ev_UI\construction\construction_building_started\construction_building_religion_06	
+	2992660141	construction_building_religion_01			\ev_UI\construction\construction_building_started\construction_building_religion_01	
+	2992660142	construction_building_religion_02			\ev_UI\construction\construction_building_started\construction_building_religion_02	
+	2992660143	construction_building_religion_03			\ev_UI\construction\construction_building_started\construction_building_religion_03	
 	3000364817	UI_panelChild_government_country_parliament_show			\ev_UI\panel\panel_left\government\UI_panelChild_government_country_parliament_show	
 	3012140585	UI_panelAux_battle_show			\ev_UI\panel\panel_auxiliary\UI_panelAux_battle_show	Used in a blockoverride in battle lateralview (which swaps out the block in "template snd_UI_panel" in sounds.gui) This is under panel_auxiliary structure as at time of adding we're somewhat unsure how this will be used. 
 	3025223725	WEDECLWAR			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\WEDECLWAR	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
@@ -279,6 +341,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	3089862067	DECLWAR_WE_AID			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_WE_AID	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	3117304105	UI_mapmode_terrain_show			\ev_UI\map\UI_mapmode_terrain_show	
 	3118971615	UI_popup_institution_message			\ev_UI\popup\popup_type\UI_popup_institution_message	
+	3122714264	construction_building_military_finished_05			\ev_UI\construction\construction_building_finished\construction_building_military_finished_05	
+	3122714265	construction_building_military_finished_04			\ev_UI\construction\construction_building_finished\construction_building_military_finished_04	
+	3122714267	construction_building_military_finished_06			\ev_UI\construction\construction_building_finished\construction_building_military_finished_06	
+	3122714268	construction_building_military_finished_01			\ev_UI\construction\construction_building_finished\construction_building_military_finished_01	
+	3122714270	construction_building_military_finished_03			\ev_UI\construction\construction_building_finished\construction_building_military_finished_03	
+	3122714271	construction_building_military_finished_02			\ev_UI\construction\construction_building_finished\construction_building_military_finished_02	
+	3129026979	construction_rgo_mining_finished			\ev_UI\construction\construction_rgo\construction_rgo_mining_finished	
 	3132668674	UI_alert_disappear			\ev_UI\alerts\UI_alert_disappear	
 	3142426739	UI_tooltip_lock			\ev_UI\tooltip\UI_tooltip_lock	hooked only on sound.gui as a template - Leon 18/09/2024 # Tooltip lock - Hooked to the moment the lock bar fills up, independent of duration in settings.
 	3146150192	UI_panel_production_buildings_show			\ev_UI\panel\panel_left\production\UI_panel_production_buildings_show	
@@ -302,6 +371,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3307088016	UI_hoverOff_flag			\ev_UI\mousePointer\UI_hoverOff_flag	hooked only on sound.gui as a template - Leon 18/09/2024
 	3321394772	DECLWAR_AS_UNION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\War_Starts_When_Player_Starts_Or_Involved\DECLWAR_AS_UNION	Note that there are other "war" related Messages we used to trigger on listed in War_Starts_When_Player_Starts_Or_Involved folder
 	3327114082	UI_panelChild_military_units_currentNavies_show			\ev_UI\panel\panel_left\military\UI_panelChild_military_units_currentNavies_show	
+	3331903288	construction_rgo_hunting_finished			\ev_UI\construction\construction_rgo\construction_rgo_hunting_finished	
 	3332738749	UI_eventGeneric_option_rewarding			\ev_UI\events\UI_eventGeneric_option_rewarding	hooked only on sound.gui as a template - Leon 18/09/2024
 	3362151704	PARLIAMENT_ISSUE_FAILED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Parliament_issue_failed\PARLIAMENT_ISSUE_FAILED	
 	3362477794	UI_diplomatic_action_base_SEENOTES			\ev_UI\panel\panel_left\diplomacy\UI_diplomatic_action_base_SEENOTES	This is just a container for any behaviour we want from any diplomatic action, not to be implemented as is!
@@ -321,6 +391,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	3485819248	trigger_war			\ev_music\triggers\trigger_war	additional UI_war_stinger added to this event so that the stinger is part of the sfx.  Removed inclusion of trigger_war (as this is not directing the music system, ONLY this spot stinger)
 	3499263738	playerAction_05_very_low			\ev_logic\playerAction_05_very_low	
 	3530492992	UI_eventGeneric_option_evil			\ev_UI\events\UI_eventGeneric_option_evil	hooked only on sound.gui as a template - Leon 18/09/2024
+	3536575425	construction_building_generic_finished_06			\ev_UI\construction\construction_generic\construction_building_generic_finished_06	
+	3536575426	construction_building_generic_finished_05			\ev_UI\construction\construction_generic\construction_building_generic_finished_05	
+	3536575427	construction_building_generic_finished_04			\ev_UI\construction\construction_generic\construction_building_generic_finished_04	
+	3536575428	construction_building_generic_finished_03			\ev_UI\construction\construction_generic\construction_building_generic_finished_03	
+	3536575429	construction_building_generic_finished_02			\ev_UI\construction\construction_generic\construction_building_generic_finished_02	
+	3536575430	construction_building_generic_finished_01			\ev_UI\construction\construction_generic\construction_building_generic_finished_01	
 	3547884932	UI_panel_society_culture_show			\ev_UI\panel\panel_left\society\UI_panel_society_culture_show	
 	3556452064	UI_panelChild_geopolitics_expansion_colonies_show			\ev_UI\panel\panel_left\geopolitics\UI_panelChild_geopolitics_expansion_colonies_show	
 	3573347740	ALL_LOANS_REPAID			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\ALL_LOANS_REPAID	
@@ -330,9 +406,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3613420813	UI_gameStart_flag_in			\ev_UI\startgame_sequence\UI_gameStart_flag_in	hooked in animation.gui with start_sound
 	3648400836	UI_action_parliament_request			\ev_UI\actions\UI_action_parliament_request	
 	3661445043	ALL_LOANS_REPAID_TO_COUNTRY			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Economy_loan_repay\ALL_LOANS_REPAID_TO_COUNTRY	
+	3674534211	construction_rgo_farming_finished			\ev_UI\construction\construction_rgo\construction_rgo_farming_finished	
 	3682485021	UI_notify_building_finished			\ev_UI\notification\UI_notify_building_finished	This notification is triggered when a building, road, or RGO is completed at the time it is completed.  This is not to be confused with the monthly tick variation of the idea of a building being considered completed.  This is a hard-coded trigger  This event also sets the state group MonthlyTickBuildingComplete to "Report_Building_Complete", which allows the relevant monthly tick report switch group actors to play it's corresponding update audio response when monthly_tick event is performed.   Note that monthly_tick event will then reset the state back to "default"
 	3694161739	UI_action_navy_raise_levies			\ev_UI\actions\UI_action_navy_raise_levies	
 	3694329007	UI_unit_select			\ev_UI\unit_controls\UI_unit_select	
+	3717484117	construction_rgo_gathering			\ev_UI\construction\construction_rgo\construction_rgo_gathering	
 	3717619261	UI_action_army_recruit_regulars			\ev_UI\actions\UI_action_army_recruit_regulars	
 	3725839678	WE_PERFORM_change_religious_aspect_ACTION			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Religious_aspect_change\WE_PERFORM_change_religious_aspect_ACTION	
 	3731337767	UI_panelChild_society_culture_worksOfArt_show			\ev_UI\panel\panel_left\society\UI_panelChild_society_culture_worksOfArt_show	
@@ -346,9 +424,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3776757432	UI_flow_ingame_menu_show			\ev_UI\flow\UI_flow_ingame_menu_show	
 	3779715239	MISSION_TASK_COMPLETE			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Mission_task_complete\MISSION_TASK_COMPLETE	
 	3784152269	WE_RIVAL_REMOVED			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Diplomacy_Remove_Rival\WE_RIVAL_REMOVED	
+	3785349850	UI_disaster_ended			\ev_UI\notification\UI_disaster_ended	
 	3811523399	UI_action_character_marry_noble			\ev_UI\actions\UI_action_character_marry_noble	posted by jomini effect  FILE: marry_noble.txt
 	3817302371	UI_window_problematic_show			\ev_UI\window\UI_window_problematic_show	hooked only on sound.gui as a template - Leon 18/09/2024
 	3832622703	UI_panel_production_rawgoods_show			\ev_UI\panel\panel_left\production\UI_panel_production_rawgoods_show	
+	3840022132	UI_alert_appear_black			\ev_UI\alerts\UI_alert_appear_black	
 	3849446927	UI_clickPress			\ev_UI\mousePointer\UI_clickPress	hooked only on sound.gui as a template - Leon 18/09/2024
 	3853755469	UI_popup_mission_task_message			\ev_UI\popup\popup_type\UI_popup_mission_task_message	
 	3866448035	UI_flow_ingame_menu_hide			\ev_UI\flow\UI_flow_ingame_menu_hide	
@@ -378,9 +458,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	4120803256	monthly_tick			\ev_UI\time\monthly_tick	Triggered at the end of every month, much which we're treating much like a "report".  This report is a time notification in essence, though also includes feedback depending on whether buildings have been completed, research has been completed, and whether income was overall positive or negative, all over the course of an in-game month.   After playing research and building completed switches (which have audio feedback enabled from UI_notify_advance_research_complete and UI_notify_building_finished), the corresponding switches are reset back to "default"   Removed inclusion of "balance" as this is no longer something we felt appropriate for monthly update.  Including here our understood difference between "balance" vs "income" Balance: total value minus debts (we're treating this to include assets that might be ov value, while not necessarily feature as an income source) Income: money in minus money out (this is purely a reflection of actual money in vs out and does NOT include assets that might be of value, e.g., built buildings not generating an "income")  No delays are set on this event, and are instead dealt with on the actors triggered    Previous note on this event: THIS ONE SHOULD ACTUALLY BE IMPLEMENTED BY ALEX AS PER CAESAR-25858
 	4144791249	UI_alert_appear_red_diplo			\ev_UI\alerts\UI_alert_appear_red_diplo	
 	4148173346	UI_popup_reject			\ev_UI\popup\UI_popup_reject	#hide problem to be fixed - hooked only on sound.gui as a template  - Leon 18/09/2024
+	4154138558	construction_rgo_mining			\ev_UI\construction\construction_rgo\construction_rgo_mining	
 	4157466671	UI_panel_military_objectives_show			\ev_UI\panel\panel_left\military\UI_panel_military_objectives_show	
 	4169307922	RULER_FAMILY_CHAR_DEATH			\ev_UI\MESSAGES_TRIGGERS DO NOT EDIT NAMES\Relevant_character_death\RULER_FAMILY_CHAR_DEATH	
 	4179692575	UI_dropdown_retract			\ev_UI\window\UI_dropdown_retract	hooked on sound.gui as a template, and setting_types.gui - Leon 18/09/2024
+	4203135433	UI_disaster_started			\ev_UI\notification\UI_disaster_started	
 	4206959319	UI_panel_unitSingle_show			\ev_UI\panel\panel_right\UI_panel_unitSingle_show	
 	4213100483	UI_action_navy_hire_mercenary_leader			\ev_UI\actions\UI_action_navy_hire_mercenary_leader	
 	4214071737	UI_action_diplomacy_rival_select			\ev_UI\actions\UI_action_diplomacy_rival_select	
@@ -390,6 +472,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	4238831049	UI_map_pan_start			\ev_UI\map\UI_map_pan_start	Should be in as per /CAESAR-16661
 	4242637569	playerAction_01_very_hi			\ev_logic\playerAction_01_very_hi	
 	4242677837	UI_military_build_navy			\ev_UI\panel\panel_left\military\UI_military_build_navy	
+	4262884096	construction_building_economy_finished_04			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_04	
+	4262884097	construction_building_economy_finished_05			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_05	
+	4262884098	construction_building_economy_finished_06			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_06	
+	4262884101	construction_building_economy_finished_01			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_01	
+	4262884102	construction_building_economy_finished_02			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_02	
+	4262884103	construction_building_economy_finished_03			\ev_UI\construction\construction_building_finished\construction_building_economy_finished_03	
 	4272977146	UI_event_bg_north_german_peasants_interior			\ev_UI\events\backgrounds\UI_event_bg_north_german_peasants_interior	
 	4292595116	UI_panel_rebels_show			\ev_UI\panel\panel_right\UI_panel_rebels_show	
 
@@ -418,6 +506,9 @@ State	ID	Name	State Group			Notes
 	1400591534	speed_03	Gamestate_Speed			
 	1400591535	speed_02	Gamestate_Speed			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	200151049	CameraHeight			\Camera\CameraHeight	25 min city graphics culled at 190 flatmap/maprom at 930
+
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	108007250	modEnv_CameraWind_GoTo			\mod_ambience_MATTIAS\modEnv_CameraWind_GoTo	
 	420220267	modEnc_economy_income_increase			\mod_ui\modEnc_economy_income_increase	
@@ -436,6 +527,7 @@ Modulator Time	ID	Name			Wwise Object Path	Notes
 	1043713584	modTime_confirm_hold			\mod_ui\modTime_confirm_hold	
 
 Effect plug-ins	ID	Name	Type				Notes
+	564852421	Parametric EQ (Custom)	Wwise Parametric EQ			
 	602431758	Parametric EQ (Custom)	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes

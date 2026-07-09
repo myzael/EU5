@@ -112,7 +112,6 @@ flavor_jap.3 = { #William Adams #PRISON
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1599.1.1
 		to = 1610.1.1
 		monthly_chance = 50
@@ -268,7 +267,6 @@ flavor_jap.6 = { #Kirishitan
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1400.1.1
 		to = 1700.1.1
 		monthly_chance = 10
@@ -414,7 +412,10 @@ flavor_jap.8 = { #Buke Shohatto (daimyo)
 	option = {
 		name = flavor_jap.8.a
 		add_prestige = prestige_mild_penalty
-		add_opinion = { target = c:JAP modifier = opinion_mildly_displeased }
+		if = {
+			limit = { exists = international_organization:japanese_shogunate.leader_country }
+			add_opinion = { target = international_organization:japanese_shogunate.leader_country modifier = opinion_mildly_displeased }
+		}
 	}
 }
 
@@ -769,7 +770,10 @@ flavor_jap.103 = { # Attempted Assination of Moronao by Tadayoshi
 		character:jap_ashikaga_tadayoshi ?= {
 			is_alive = yes
 		}
-		has_variable = jap_tadayoshi_may_rebel
+		custom_tooltip = {
+			text = variable_jap_tadayoshi_may_rebel_tt
+			has_variable = jap_tadayoshi_may_rebel
+		}
 	}
 
 	immediate = {
@@ -846,7 +850,10 @@ flavor_jap.104 = { # Tadayoshi Defects to the South Court
 		character:jap_ashikaga_tadayoshi ?= {
 			is_alive = yes
 		}
-		has_variable = tadayoshi_to_south_court
+		custom_tooltip = {
+			text = variable_tadayoshi_to_south_court_tt
+			has_variable = tadayoshi_to_south_court
+		}
 		country_exists = c:STC
 	}
 
@@ -957,7 +964,10 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 		country_exists = c:YMN
 		c:YMN ?= {
 			has_ruler = yes
-			has_variable = supports_northern_court
+			custom_tooltip = {
+				text = variable_supports_northern_court_tt
+				has_variable = supports_northern_court
+			}
 		}
 		is_situation_active = situation:nanbokuchou
 	}
@@ -1177,7 +1187,10 @@ flavor_jap.111 = { # Kanrei Council System
 	trigger = {
 		has_ruler = yes
 		at_war = no
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 	}
 
 	immediate = {
@@ -1217,7 +1230,10 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 	trigger = {
 		has_ruler = yes
 		at_war = no
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 		country_exists = c:HSK
 		country_exists = c:SBA
 		country_exists = c:HTK
@@ -1296,8 +1312,14 @@ flavor_jap.113 = { # The Shukurō Kaigi Expansion (Expansion of the Senior vassa
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_integrating_the_shugo
-		has_variable = kanrei_council_shugo_dominant_family
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
+		custom_tooltip = {
+			text = variable_kanrei_council_shugo_dominant_family_tt
+			has_variable = kanrei_council_shugo_dominant_family
+		}
 		country_exists = c:OUC
 		country_exists = c:RKK
 		country_exists = c:TKI
@@ -1365,8 +1387,14 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_integrating_the_shugo
-		has_variable = jap_shukuro_kaigi_expanded_clans
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
+		custom_tooltip = {
+			text = variable_jap_shukuro_kaigi_expanded_clans_tt
+			has_variable = jap_shukuro_kaigi_expanded_clans
+		}
 		has_reform = government_reform:shogunate_kanrei_council
 		country_exists = c:IMG
 		international_organization:japanese_shogunate ?= {
@@ -1455,8 +1483,14 @@ flavor_jap.115 = { # Kanrei Council Builds Kinship Among Shugo Lords
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_integrating_the_shugo
-		has_variable = jap_shukuro_kaigi_expanded_clans
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
+		custom_tooltip = {
+			text = variable_jap_shukuro_kaigi_expanded_clans_tt
+			has_variable = jap_shukuro_kaigi_expanded_clans
+		}
 		has_reform = government_reform:shogunate_kanrei_council
 	}
 
@@ -1490,8 +1524,14 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_integrating_the_shugo
-		has_variable = jap_shukuro_kaigi_expanded_clans
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
+		custom_tooltip = {
+			text = variable_jap_shukuro_kaigi_expanded_clans_tt
+			has_variable = jap_shukuro_kaigi_expanded_clans
+		}
 		has_reform = government_reform:shogunate_kanrei_council
 		country_exists = c:SBA
 		international_organization:japanese_shogunate ?= {
@@ -1562,9 +1602,18 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 	trigger = {
 		has_ruler = yes
 		at_war = no
-		has_variable = may_attack_shiba_for_free
-		has_variable = jap_integrating_the_shugo
-		has_variable = jap_shukuro_kaigi_expanded_clans
+		custom_tooltip = {
+			text = variable_may_attack_shiba_for_free_tt
+			has_variable = may_attack_shiba_for_free
+		}
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
+		custom_tooltip = {
+			text = variable_jap_shukuro_kaigi_expanded_clans_tt
+			has_variable = jap_shukuro_kaigi_expanded_clans
+		}
 		has_reform = government_reform:shogunate_kanrei_council
 		country_exists = c:SBA
 		c:SBA ?= {
@@ -1648,7 +1697,12 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 		historical_option = yes
 		set_global_variable = { name = new_kanrei_ruler_if_win_war years = 20 }
 		add_casus_belli = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
-		declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = c:SBA }
+			}
+			declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		}
 		random_current_war = {
 			limit = {
 				or = {
@@ -1690,7 +1744,12 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 		name = flavor_jap.121.b
 		add_prestige = prestige_severe_bonus
 		add_casus_belli = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
-		declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = c:SBA }
+			}
+			declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		}
 	}
 }
 
@@ -1715,7 +1774,10 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_recently_won_against_shiba
+		custom_tooltip = {
+			text = variable_jap_recently_won_against_shiba_tt
+			has_variable = jap_recently_won_against_shiba
+		}
 		at_war = no
 		country_exists = c:HTK
 		country_exists = c:HSK
@@ -1813,7 +1875,10 @@ flavor_jap.123 = { # Growth of Punitive Authority
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_growth_of_punitive_actions
+		custom_tooltip = {
+			text = variable_jap_growth_of_punitive_actions_tt
+			has_variable = jap_growth_of_punitive_actions
+		}
 	}
 
 	immediate = {
@@ -1857,14 +1922,20 @@ flavor_jap.130 = { # Legitimization of the Ashikaga Shogunate
 		character:jap_ashikaga_takauji ?= {
 			is_alive = no
 		}
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 		has_reform = government_reform:shogunate_kanrei_council
 		international_organization:japanese_shogunate ?= {
 			any_international_organization_member = {
 				OR = {
 					has_country_modifier = jap_senior_kanrei_clan_member
 					has_country_modifier = jap_senior_kanrei_clan_member_weakened
-					has_variable = jap_founding_kanrei_member
+					custom_tooltip = {
+						text = variable_jap_founding_kanrei_member_tt
+						has_variable = jap_founding_kanrei_member
+					}
 				}
 			}
 		}
@@ -1972,7 +2043,10 @@ flavor_jap.132 = { # Kyūshū Tandai
 	trigger = {
 		has_ruler = yes
 		at_war = no
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 		international_organization:japanese_shogunate ?= {
 			any_international_organization_member = {
 				NOT = { culture = culture:kyushu_culture }
@@ -2052,7 +2126,10 @@ flavor_jap.133 = { # Development of the Shogunal Army
 
 	trigger = {
 		has_ruler = yes
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 	}
 
 	immediate = {
@@ -2095,7 +2172,10 @@ flavor_jap.134 = { # Shugo Compulsory Residence Within Kyoto
 	trigger = {
 		has_ruler = yes
 		at_war = no
-		has_variable = jap_integrating_the_shugo
+		custom_tooltip = {
+			text = variable_jap_integrating_the_shugo_tt
+			has_variable = jap_integrating_the_shugo
+		}
 	}
 
 	immediate = {
@@ -2176,7 +2256,12 @@ flavor_jap.135 = { # Defiance of Toki
 		historical_option = yes
 		add_stability = stability_severe_penalty
 		add_casus_belli = { target = c:TKI type = casus_belli:cb_shogunate_reassert_authority }
-		declare_war_with_cb = { target = c:TKI type = casus_belli:cb_shogunate_reassert_authority }
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = c:TKI }
+			}
+			declare_war_with_cb = { target = c:TKI type = casus_belli:cb_shogunate_reassert_authority }
+		}
 	}
 	option = { # We will pursue this matter no further
 		name = flavor_jap.135.b
@@ -2235,6 +2320,7 @@ flavor_jap.136 = { # Meitoku Uprising
 		add_honor = honor_mild_bonus
 		add_stability = stability_mild_bonus
 		add_casus_belli = { target = c:YMN type = casus_belli:cb_shogunate_reassert_authority }
+		#Knowingly declaring an illegal war
 		declare_war_with_cb = { target = c:YMN type = casus_belli:cb_shogunate_reassert_authority }
 	}
 	option = { # Yamana is a strong clan, lets avoid conflict with them.
@@ -2308,7 +2394,6 @@ flavor_jap.138 = { # Reestablishment with China
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1401.1.1
 		to = 1430.1.1
 		monthly_chance = 10
@@ -2365,7 +2450,6 @@ flavor_jap.140 = { # Hana no Gosho Palace
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1375.1.1
 		to = 1410.1.1
 		monthly_chance = 6
@@ -2419,7 +2503,6 @@ flavor_jap.141 = { # Construction of Kinkaku-ji
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1395.1.1
 		to = 1420.1.1
 		monthly_chance = 12
@@ -2548,7 +2631,6 @@ flavor_jap.143 = { # Revival of the Ashikaga Gakko Academy
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1432.1.1
 		to = 1470.1.1
 		monthly_chance = 12
@@ -2587,7 +2669,6 @@ flavor_jap.144 = { # Francis Xavier
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1546.1.1
 		to = 1570.1.1 # Passed Xavier historical death, but made plausible
 		monthly_chance = 40
@@ -2605,7 +2686,10 @@ flavor_jap.144 = { # Francis Xavier
 			region = region:japan_region
 		}
 		international_organization:japanese_shogunate ?= {
-			has_variable = nanban_trade
+			custom_tooltip = {
+				text = variable_nanban_trade_tt
+				has_variable = nanban_trade
+			}
 			NOT = { international_organization_has_policy = policy:sakoku_enabled }
 		}
 	}
@@ -2662,7 +2746,6 @@ flavor_jap.145 = { # Construction of Shōkoku-ji
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1382.1.1
 		to = 1420.1.1
 		monthly_chance = 20
@@ -2735,7 +2818,6 @@ flavor_jap.146 = { # Josetsu
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1440.1.1
 		to = 1470.1.1
 		monthly_chance = 20
@@ -2813,7 +2895,6 @@ flavor_jap.147 = { # Tensho Shubun
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1440.1.1
 		to = 1470.1.1
 		monthly_chance = 20
@@ -2890,7 +2971,6 @@ flavor_jap.148 = { # Sesshu Toyo
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1452.1.1
 		to = 1500.1.1
 		monthly_chance = 20
@@ -2969,7 +3049,6 @@ flavor_jap.150 = { # Founding of Kano School
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1460.1.1
 		to = 1500.1.1
 		monthly_chance = 12
@@ -3041,7 +3120,6 @@ flavor_jap.151 = { # Favoring of Noh Theatre
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1388.1.1
 		to = 1500.1.1
 		monthly_chance = 5
@@ -3085,7 +3163,6 @@ flavor_jap.152 = { # Development of Shoin-Zukuri Architecture
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1399.1.1
 		to = 1545.1.1
 		monthly_chance = 5
@@ -3127,7 +3204,6 @@ flavor_jap.153 = { # The Way of Tea # Sen-no-Rikyu and Chanoyu
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = JAP
-		tag = ASK
 		from = 1550.1.1
 		to = 1595.1.1
 		monthly_chance = 12
@@ -3290,7 +3366,10 @@ flavor_jap.156 = { # Construction of Dejima Island
 			international_organization:japanese_shogunate ?= {
 				leader_country ?= root
 				international_organization_has_policy = policy:sakoku_enabled
-				has_variable = nanban_trade
+				custom_tooltip = {
+					text = variable_nanban_trade_tt
+					has_variable = nanban_trade
+				}
 			}
 		}
 		gold > 150
@@ -3361,6 +3440,7 @@ flavor_jap.160 = { # Establishment of Yoshiwara District
 			OR = {
 				location_rank ?= location_rank:town
 				location_rank ?= location_rank:city
+				location_rank ?= location_rank:megalopolis
 			}
 		}
 		gold > 500

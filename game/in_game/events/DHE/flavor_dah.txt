@@ -15,6 +15,8 @@ flavor_dah.1 = { #Founding of Dahomey
 	}
 
 	trigger = {
+		is_real_country = yes
+		country_type = location
 		OR = {
 			AND = {
 				own_entire_province = province_definition:fon_province
@@ -227,6 +229,7 @@ flavor_dah.1 = { #Founding of Dahomey
 
 	option = {
 		name = flavor_dah.1.b
+		high_risk_option = yes
 
 		trigger = {
 			NOT = {

@@ -17,8 +17,55 @@ VertexShader =
 			PDX_MAIN
 			{
 				float3 Position = Input.Position;
+				
+				float Height0 = GetHeight(Position.xz);
+				float Height1 = GetHeight(Position.xz+float2(1.0,0.0));
+				float Height2 = GetHeight(Position.xz+float2(0.0,1.0));
+				float MaxHeight = max(max(max(Position.y,Height0),Height1),Height2);
+				float MinHeight = min(min(min(Position.y,Height0),Height1),Height2);
+				Position.y = Height0; 
 				AdjustFlatMapHeight( Position );
-				VS_OUTPUT_MAPNAME Out = MapNameVertexShader( Input, Position.y, 1.0f );
+
+				VS_OUTPUT_MAPNAME Out;
+			
+				Out.WorldSpacePos = Input.Position.xyz;
+				
+				float4 vPos = float4( Out.WorldSpacePos, 1.0f );
+				vPos.x += OffsetX;
+				float4 vPosDrifted = vPos;
+				vPosDrifted.y+=0.1+(MaxHeight-MinHeight);
+				vPos.xyw= FixProjectionAndMul( ViewProjectionMatrix, vPos ).xyw;
+				vPos.z = FixProjectionAndMul( ViewProjectionMatrix,  vPosDrifted ).z;
+				Out.Position = vPos;
+				
+				Out.TexCoord = Input.TexCoord;
+			
+				return Out;
+			}
+		]]
+	}
+	MainCode MapNameVertexShaderNoDepth
+	{
+		Input = "VS_INPUT_MAPNAME"
+		Output = "VS_OUTPUT_MAPNAME"
+		Code
+		[[
+			PDX_MAIN
+			{
+				float3 Position = Input.Position;
+				
+				AdjustFlatMapHeight( Position );
+
+				VS_OUTPUT_MAPNAME Out;
+			
+				Out.WorldSpacePos = Input.Position.xyz;
+				
+				float4 vPos = float4( Out.WorldSpacePos, 1.0f );
+
+				Out.Position = FixProjectionAndMul( ViewProjectionMatrix, vPos );
+				
+				Out.TexCoord = Input.TexCoord;
+			
 				return Out;
 			}
 		]]
@@ -94,16 +141,23 @@ BlendState BlendState
 RasterizerState RasterizerState
 {
 	frontccw = yes
+	DepthBias = -10000
 }
 
 DepthStencilState DepthStencilState
 {
-	DepthEnable = no
+	DepthEnable = yes
+	DepthWriteEnable = no
 	StencilEnable = yes
 	FrontStencilFunc = not_equal
 	StencilRef = 1
 }
 
+DepthStencilState DepthStencilIgnoreBuildings
+{
+	DepthEnable = no
+	DepthWriteEnable = no
+}
 
 Effect mapname
 {
@@ -111,3 +165,9 @@ Effect mapname
 	PixelShader = "MapNamePixelShader"
 }
 
+Effect mapname_ignore_buildings
+{
+	VertexShader = "MapNameVertexShaderNoDepth"
+	DepthStencilState =  "DepthStencilIgnoreBuildings"
+	PixelShader = "MapNamePixelShader"
+}

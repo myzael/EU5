@@ -588,8 +588,8 @@ sinicization_disaster.100 = {
 				desc = sinicization_disaster.100.desc.c	#We outgrew China
 				trigger = {
 					OR = {
-						great_power_score > {
-							value = c:CHI.great_power_score
+						country_economical_base > {
+							value = c:CHI.country_economical_base
 							multiply = 0.75
 						}
 						societal_value:sinicized_vs_unsinicized > 0
@@ -671,9 +671,14 @@ sinicization_disaster.100 = {
 					limit = { is_ai = yes }
 					random_list = {
 						1 = {
-							declare_war_with_cb = {
-								target = root
-								type = casus_belli:cb_subject_broke_free
+							if = {
+								limit = {
+									can_declare_legal_war_on = { target = root }
+								}
+								declare_war_with_cb = {
+									target = root
+									type = casus_belli:cb_subject_broke_free
+								}
 							}
 						}
 						1 = { }
@@ -688,8 +693,8 @@ sinicization_disaster.100 = {
 
 		trigger = {
 			OR = {
-				great_power_score > {
-					value = c:CHI.great_power_score
+				country_economical_base > {
+					value = c:CHI.country_economical_base
 					multiply = 0.75
 				}
 				societal_value:sinicized_vs_unsinicized > 0
@@ -719,9 +724,32 @@ sinicization_disaster.100 = {
 			change_celestial_authority = { value = celestial_authority_mild_bonus }
 		}
 	}
+
+	option = {
+		name = sinicization_disaster.100.e
+
+		trigger = { var:sovereign_side >= 30 }
+
+		change_societal_value = {
+			type = sinicized_vs_unsinicized
+			value = societal_value_huge_move_to_right
+		}
+
+		add_stability = stability_extreme_bonus
+
+		add_country_modifier = {
+			modifier = sovereign_realm_modifier
+			years = modifier_duration_years_normal
+			mode = replace
+		}
+	}
 	
 	after = {
-		remove_variable = sovereign_side 
+		set_variable = {
+			name = had_sinicization_disaster_variable
+			years = 10
+		}
+		remove_variable = sovereign_side
 		remove_variable = china_side
 		remove_variable = sinicization_attitude_event_variable
 		remove_country_modifier = struggle_against_china_modifier

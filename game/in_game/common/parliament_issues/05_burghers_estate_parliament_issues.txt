@@ -18,6 +18,7 @@ sponsor_a_university = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 			NOT = { has_building = building_type:university }
 		}
@@ -60,7 +61,7 @@ sponsor_a_university = {
 			order_by = {
 				value = population
 				if = {
-					limit = { location_rank = location_rank:city }
+					limit = { OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis } }
 					multiply = 5
 				}
 			}
@@ -70,6 +71,7 @@ sponsor_a_university = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			max = 1
@@ -345,7 +347,7 @@ promote_urbanization = {
 				add = num_buildings
 			}
 			max = 1
-			change_location_rank = location_rank:town
+			change_location_rank_effect = { location_rank = location_rank:town }
 			every_pop = {
 				limit = {
 					owner = root
@@ -383,7 +385,7 @@ grant_city_rights = {
 			location_rank = location_rank:town
 			NOT = {
 				any_neighbor_location = {
-					location_rank = location_rank:city
+					OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis }
 				}
 			}
 		}
@@ -428,7 +430,7 @@ grant_city_rights = {
 				add = num_buildings
 			}
 			max = 1
-			change_location_rank = location_rank:city
+			change_location_rank_effect = { location_rank = location_rank:city }
 			change_development = development_weak_bonus
 			every_pop = {
 				limit = {
@@ -696,6 +698,7 @@ expand_docks = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -781,6 +784,7 @@ expand_dry_docks = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -864,6 +868,7 @@ expand_shipyards = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -945,6 +950,7 @@ expand_grand_shipyards = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -1020,6 +1026,7 @@ expand_naval_bases = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {
@@ -1356,6 +1363,7 @@ sponsor_a_merchant_expedition = {
 					OR = {
 						location_rank = location_rank:town
 						location_rank = location_rank:city
+						location_rank = location_rank:megalopolis
 					}
 					NOT = {
 						OR = {
@@ -1385,7 +1393,7 @@ sponsor_urban_development = {
 	estate = burghers_estate
 
 	modifier_when_in_debate = {
-		global_urban_build_buildings_cost = -0.2
+		global_urban_build_buildings_efficiency = 0.4
 	}
 
 	allow = {

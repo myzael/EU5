@@ -1,4 +1,4 @@
-﻿types ReligionOverview {
+types ReligionOverview {
 
 	type religion_name_and_language = widget {
 		layoutpolicy_horizontal = expanding
@@ -97,18 +97,9 @@
 				layoutpolicy_vertical = expanding
 				name = "balance_overview_scene"
 				scene = "[CountryReligionLateralView.GenerateSceneDesc]"
-				alpha = 0.5
+				alpha = 1
 
-				icon = {
-					size = { 100% 100% }
-					using = color_black_texture
-					alpha = 0.8
-
-					modify_texture = {
-						using = bg_fade_vertical_up_mask_texture
-						blend_mode = alphamultiply
-					}
-				}
+				using = scene_fade_horizontal
 			}
 		}
 
@@ -116,28 +107,6 @@
 
 		hbox = {
 			margin = { 8 0 }
-
-			background = {
-				using = color_black_texture
-				alpha = 0.3
-
-				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
-					blend_mode = alphamultiply
-					alpha = 1
-				}
-			}
-			background = {
-				using = color_black_texture
-				alpha = 0.3
-				mirror = horizontal
-
-				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
-					blend_mode = alphamultiply
-					alpha = 1
-				}
-			}
 
 			### Left data
 			vbox = {
@@ -612,7 +581,10 @@ society_view = {
 					tooltipwidget = {
 						using = TabReligionBreakdownTooltip
 					}
-					onclick = "[CountryReligionLateralView.Vars.Set('subtab','breakdown')]"
+					action_tooltip = {
+						title = "OPEN_TAB"
+						on_action = "[CountryReligionLateralView.Vars.Set('subtab','breakdown')]"
+					}
 					down = "[CountryReligionLateralView.Vars.HasValue('subtab','breakdown')]"
 				}
 
@@ -624,7 +596,10 @@ society_view = {
 					tooltipwidget = {
 						using = TabHolySitesTooltip
 					}
-					onclick = "[CountryReligionLateralView.Vars.Set('subtab','holy_sites')]"
+					action_tooltip = {
+						title = "OPEN_TAB"
+						on_action = "[CountryReligionLateralView.Vars.Set('subtab','holy_sites')]"
+					}
 					down = "[CountryReligionLateralView.Vars.HasValue('subtab','holy_sites')]"
 				}
 			}

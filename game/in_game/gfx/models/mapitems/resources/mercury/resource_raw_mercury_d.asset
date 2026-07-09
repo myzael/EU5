@@ -1,9 +1,24 @@
-pdxmesh = {
+﻿pdxmesh = {
 	name = "resource_raw_mercury_d_mesh"
 	file = "resource_raw_mercury_d.mesh"
 
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
+
 	meshsettings = {
-		name = "decal_raw_mercury_dShape"
+		name = "resource_raw_mercury_d_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_mercury_diffuse.dds"
+		texture_normal = "resource_mercury_normal.dds"
+		texture_specular = "resource_mercury_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_raw_mercury_d_lod0Shape"
 		index = 0
 		texture_diffuse = "resource_raw_mercury_d_decal_diffuse.dds"
 		texture_normal = "resource_raw_mercury_d_decal_normal.dds"
@@ -14,13 +29,45 @@ pdxmesh = {
 	}
 
 	meshsettings = {
-		name = "resource_raw_mercury_dShape"
+		name = "resource_raw_mercury_d_lod1Shape"
 		index = 0
 		texture_diffuse = "resource_mercury_diffuse.dds"
 		texture_normal = "resource_mercury_normal.dds"
 		texture_specular = "resource_mercury_properties.dds"
 		shader = "snap_to_terrain"
 		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_raw_mercury_d_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_raw_mercury_d_decal_diffuse.dds"
+		texture_normal = "resource_raw_mercury_d_decal_normal.dds"
+		texture_specular = "resource_raw_mercury_d_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "resource_raw_mercury_d_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_mercury_diffuse.dds"
+		texture_normal = "resource_mercury_normal.dds"
+		texture_specular = "resource_mercury_properties.dds"
+		shader = "snap_to_terrain"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "decal_raw_mercury_d_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_raw_mercury_d_decal_diffuse.dds"
+		texture_normal = "resource_raw_mercury_d_decal_normal.dds"
+		texture_specular = "resource_raw_mercury_d_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
 	}
 }
 

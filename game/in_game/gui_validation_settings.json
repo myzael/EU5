@@ -11,6 +11,7 @@
 		"art_quality",
 		"build_roads",
 		"building_location",
+		"bureaucracy_type",
 		"cab_area_harbor_capacity",
 		"cabinet_action_name",
 		"cabinet_card_at_select_has_char",
@@ -40,6 +41,7 @@
 		"country_population",
 		"country_rivals",
 		"country_ruler",
+		"country_tax_base",
 		"country_yuan_loyalty_widget",
 		"create_colonial_charter",
 		"culture_name",
@@ -47,6 +49,7 @@
 		"default_text_column",
 		"dialect_language_power",
 		"dialect_name",
+		"employment_system",
 		"estate_card_header_at_privilege_select",
 		"estate_privilege_name",
 		"expected_army_size",
@@ -90,6 +93,7 @@
 		"marry_noble_character_top",
 		"members_size",
 		"mercenary_leader_info",
+		"military_strength",
 		"navy_construction_queue",
 		"navy_size",
 		"parliament_agenda_widget",
@@ -125,6 +129,7 @@
 		"province_location_wealth",
 		"province_tax_base",
 		"province_tribesmen",
+		"province_max_control",
 		"province_peasant_population",
 		"province_peasants_unemployment",
 		"unfilled_jobs_in_province",
@@ -167,6 +172,10 @@
 		"tools_dialog_modal",
 		"tools_dialog",
 		"tools_message_dialog",
-		"tools_progress_dialog"
+		"tools_progress_dialog",
+
+		"barchart",
+		"barslice",
+		"barslice_no_highlight"
 	]
 }

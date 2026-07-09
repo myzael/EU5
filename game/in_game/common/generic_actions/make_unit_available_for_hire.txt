@@ -16,7 +16,7 @@
 		regular_army_size > 2
 	}
 
-	ai_tick = daily
+	ai_tick = never
 	ai_tick_frequency = 90
 
 	automation_tick = daily
@@ -55,6 +55,12 @@
 			}
 			has_mercenaries = no
 			has_levies = no
+			# A ruler-led unit can not be rented out (would send the head of state to lead a
+			# foreign mercenary company); mirrors NUnitUtilities::CanBecomeMercenary.
+			trigger_if = {
+				limit = { exists = leader }
+				leader = { is_ruler = no }
+			}
 		}
 	}
 	
@@ -130,6 +136,7 @@ delist_unit = {
 		scope:actor = {
 			any_rented_out_mercenary = {
 				has_customer = no
+				is_carrying_or_loaded_unit = no
 			}
 		}
 	}
@@ -137,7 +144,7 @@ delist_unit = {
 	allow = {
 	}
 
-	ai_tick = daily
+	ai_tick = never
 	ai_tick_frequency = 90
 
 	ai_prerequisite = {
@@ -159,6 +166,10 @@ delist_unit = {
 		}
 		visible = {
 			has_customer = no
+			# destroy_mercenary tears the embark link and drowns loaded armies;
+			# the C++ CDelistMercenaryCommand path is guarded by NMercenary::CanDelistMercenary,
+			# but this script action calls destroy_mercenary directly and would bypass it.
+			is_carrying_or_loaded_unit = no
 		}
 	}
 	

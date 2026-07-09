@@ -134,11 +134,7 @@ types SelectMenuTypes
 			position = { 10 -10 }
 			size = { 25 25 }
 
-			button_close_alt = {	
-				block "close_button" {
-					visible = no
-				}
-			}
+			button_close_alt = {}
 		}
 	}
 
@@ -268,7 +264,6 @@ types SelectMenuTypes
 		block "effect_text_layout" {
 			hbox = {
 				layoutpolicy_horizontal = expanding
-				block "effect_text_layout_bg" {}
 				margin = { 5 5 }
 				text_multi = {
 					autoresize = yes

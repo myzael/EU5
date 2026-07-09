@@ -202,6 +202,8 @@ types SDK
 							}
 						}
 
+						block "create_account_legal_consent" {}
+
 						sdk_error_textbox = {
 							name = "create_lbl_error_message"
 							multiline = yes

@@ -27,8 +27,8 @@ ConstantBuffer( GradientBorders )
 	float SecondaryColorBorderWidth;
 
 	float SecondaryColorBorderStrenght;
-	float SecondaryColorBorderPadding1;
-	float SecondaryColorBorderPadding2;
+	float SecondaryStripeSmoothMin;
+	float SecondaryStripeSmoothMax;
 	float SecondaryColorBorderPadding3;
 
 	float3	FlatMapColorCoast;

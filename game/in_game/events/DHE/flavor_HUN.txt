@@ -1716,9 +1716,7 @@ flavor_hun.370 = {
 		name = flavor_hun.370.a
 		historical_option = yes
 		add_prestige = prestige_severe_bonus
-		unlock_law_effect = { type = order_of_chivalry_law }
-		add_policy = policy:order_of_saint_george_policy
-		ruler ?= { join_specific_order_of_chivalry = { type = order_of_saint_george } }
+		ruler ?= { join_chivalric_order = chivalric_order:order_of_saint_george }
 		change_gold_effect = { scale = -5 }
 	}
 	option = {
@@ -1853,6 +1851,7 @@ flavor_hun.400 = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 	}
@@ -1901,7 +1900,7 @@ flavor_hun.410 = {
 		monthly_chance = 5
 	}
 	trigger = {
-		has_law = order_of_chivalry_law
+		has_chivalric_order = yes
 		at_war = no
 		exists = ruler
 		has_regent = no
@@ -1941,9 +1940,8 @@ flavor_hun.410 = {
 	option = {
 		name = flavor_hun.410.a
 		historical_option = yes
-		unlock_global_policy_effect = { type = order_of_the_dragon_policy }
-		add_policy = policy:order_of_the_dragon_policy
-		ruler ?= { join_specific_order_of_chivalry = { type = order_of_the_dragon } }
+		set_active_chivalric_order = chivalric_order:order_of_the_dragon
+		ruler ?= { join_chivalric_order = chivalric_order:order_of_the_dragon }
 		change_gold_effect = { scale = -6 }
 		add_prestige = prestige_mild_bonus
 		custom_tooltip = flavor_hun.410.a.tt
@@ -1986,9 +1984,8 @@ flavor_hun.411 = {
 	option = {
 		name = flavor_hun.411.a
 		historical_option = yes
-		unlock_law_effect = { type = order_of_chivalry_law }
-		add_policy = policy:order_of_the_dragon_policy
-		ruler_or_regent ?= { join_specific_order_of_chivalry = { type = order_of_the_dragon } }
+		set_active_chivalric_order = chivalric_order:order_of_the_dragon
+		ruler_or_regent ?= { join_chivalric_order = chivalric_order:order_of_the_dragon }
 		add_prestige = prestige_mild_bonus
 	}
 	option = {
@@ -2177,7 +2174,8 @@ flavor_hun.421 = {
 		monthly_chance = 10
 	}
 	trigger = {
-		has_law = order_of_chivalry_law
+		has_ruler = yes
+		has_chivalric_order = yes
 		any_character = {
 			is_alive = yes
 			is_female = no
@@ -2745,6 +2743,9 @@ flavor_hun.490 = { #Balázs Magyar
 		from = 1435.1.1
 		to = 1450.1.1
 		monthly_chance = 10
+	}
+
+	trigger = {
 		has_advance = hun_found_the_black_army
 	}
 
@@ -2805,6 +2806,9 @@ flavor_hun.500 = { #Pál Kinizsi
 		from = 1460.1.1
 		to = 1470.1.1
 		monthly_chance = 10
+	}
+
+	trigger = {
 		has_advance = hun_found_the_black_army
 	}
 
@@ -3338,7 +3342,7 @@ flavor_hun.580 = { #Evacuation of the Capital
 				limit = {
 					location_rank = location_rank:rural_settlement
 				}
-				change_location_rank = location_rank:town
+				change_location_rank_effect = { location_rank = location_rank:town }
 			}
 			else = {
 				location:bratislava = {

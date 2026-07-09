@@ -13709,19 +13709,19 @@ window = {
 
 													checkbox_square_alt = {
 														onclick = "[GetVariableSystem.Toggle( 'ui_library_toggle_text' )]"
-														checked = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
+														down = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
 														tooltip_enabled = no
 													}
 
 													checkbox_round_alt = {
 														onclick = "[GetVariableSystem.Toggle( 'ui_library_toggle_text' )]"
-														checked = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
+														down = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
 														tooltip_enabled = no
 													}
 
 													checkbox_diamond_alt = {
 														onclick = "[GetVariableSystem.Toggle( 'ui_library_toggle_text' )]"
-														checked = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
+														down = "[GetVariableSystem.Exists( 'ui_library_toggle_text' )]"
 														tooltip_enabled = no
 													}
 												}
@@ -14232,9 +14232,9 @@ window = {
 														button_close = {
 															blockoverride "close_properties" {}
 
-															blockoverride "close_onclick" {
-																onclick = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
-																down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
+															down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
+															blockoverride "close_on_action" {
+																on_action = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
 															}
 														}
 
@@ -14551,10 +14551,8 @@ window = {
 																texture = "gfx/interface/icons/flat_icons/diplomacy_flat_icon.dds"
 															}
 
-															blockoverride "close_onclick" {
-																onclick = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
-																down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
-															}
+															onclick = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
+															down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
 														}
 
 														text_single = {
@@ -18098,6 +18096,119 @@ window = {
 												}
 											}
 
+											vbox_component_entry = { #GUI LEARNING
+												blockoverride "vce_name" {
+													raw_text = "GUI Learning"
+												}
+
+												blockoverride "vce_area" {
+													widget = { # YOU DONT NEED TO TOUCH THIS WIDGET
+														size = { 800 300 }
+
+														widget = {
+															size = { 600 140 }
+															parentanchor = center
+															widgetanchor = center
+															using = bg_paper_card
+
+															hbox = {
+																margin = {5 5}
+																spacing = 10
+
+																background = {
+																	texture = "gfx/interface/component_tiles/cabinet/cabinet_card_frame.dds"
+																	spriteType = Corneredstretched
+																	spriteborder = { 20 20 }
+																	texture_density = 2
+
+																	modify_texture = {
+																		using = color_wood_brown_texture
+																		blend_mode = multiply
+																	}
+																	modify_texture = {
+																		using = overlay_wood_texture
+																		blend_mode = overlay
+																		alpha = 0.3
+																	}
+																}
+
+																background = {
+																	texture = "gfx/interface/component_decoration/bg_corner_flavor_01.dds"
+																	texture_density = 2
+																	spriteType = Corneredstretched
+																	spriteborder = { 35 35 }
+
+																	modify_texture = {
+																		using = color_new_gold_texture
+																		blend_mode = multiply
+																	}
+
+																	modify_texture = {
+																		using = overlay_window_texture
+																		blend_mode = overlay
+																		alpha = 0.3
+																	}
+
+																	modify_texture = {
+																		using = overlay_stone_texture
+																		blend_mode = overlay
+																		alpha = 0.5
+																	}
+																}
+
+																vbox = {
+																	layoutstretchfactor_horizontal = 2
+																	margin = {5 5}
+																	minimumsize = {50 50}
+																	layoutpolicy_horizontal = expanding
+																	layoutpolicy_vertical = expanding
+																	using = bg_square_wood_tile
+
+																	hbox = {
+																		minimumsize = {50 50}
+																		layoutpolicy_horizontal = expanding
+
+																		using = bg_card_header_situation
+																		using = bg_situation_striped_frame
+																	}
+
+																	hbox = {
+																		minimumsize = {50 50}
+																		layoutpolicy_horizontal = expanding
+
+																		using = bg_card_header_situation
+																		using = bg_situation_striped_frame
+																	}
+																}
+
+																hbox = {
+																	layoutstretchfactor_horizontal = 6
+																	minimumsize = {50 50}
+																	maximumsize = {-1 50}
+																	layoutpolicy_horizontal = expanding
+																	using = bg_card_header_01
+
+																	icon = {
+																		texture = "gfx/interface/icons/battle_summary/armies_destroyed.dds"
+																		size = {40 40}
+																	}
+
+																	text_single = {
+																		raw_text = "This is a test text"
+																	}
+
+																	expand = {}
+																}
+															}
+														}
+													}
+												}
+
+												blockoverride "vce_desc" {
+													raw_text = "Add this flavor to your gui elements"
+												}
+											}
+
 											expand = {}
 										}
 
@@ -18147,9 +18258,7 @@ window = {
 			ui_direction_button_holder_right = {}
 
 			button_close_alt = {
-				blockoverride "close_onclick" {
-					onclick = "[ExecuteConsoleCommand('gui.clearwidgets')]"
-				}
+				blockoverride "close_on_action" { on_action = "[ExecuteConsoleCommand('gui.clearwidgets')]" }
 			}
 		}
 
@@ -18231,31 +18340,11 @@ template button_checkbox_square_template_alt {
 
 types UiLibrary
 {
-	type header_pattern = widget {
-		size = { 100 56 }
-
-		background = {
-			using = color_intense_bg_blue_texture
-		}
-
-		text_single = {
-			parentanchor = top|hcenter
-			position = { 0 5 }
-
-			block "header_text" {
-				raw_text = "Header Text"
-			}
-
-			maximumsize = { 400 -1 }
-
-			using = Font_Type_Headers
-			using = Font_Size_Big
-		}
-	}
-
-
-	type button_checkbox_alt = checkbutton {
+	type button_checkbox_alt = button {
+		gfxtype = togglecheckbuttongfx
 		using = button_checkbox_template_alt
+		upframe = 1
+		downframe = 2
 	}
 
 	# type button_checkbox_square_alt = checkbutton {
@@ -18263,8 +18352,11 @@ types UiLibrary
 	# }
 
 	type statebutton_checkbox_square = button {
+		gfxtype = togglecheckbuttongfx
 		using = button_checkbox_square_template_alt
-		frame = 1
+
+		upframe = 1
+		downframe = 2
 	}
 
 	# type button_checkbox_square_frame = checkbutton {
@@ -18291,8 +18383,12 @@ types UiLibrary
 	# 	}
 	# }
 	type statebutton_checkbox_diamond_frame = button {
+		gfxtype = togglecheckbuttongfx
 		using = button_checkbox_square_template_alt
-		frame = 1
+
+		upframe = 1
+		downframe = 2
+
 		blockoverride "color" {
 			texture = "gfx/interface/buttons/checkbox_diamond_frame.dds"
 		}
@@ -18300,11 +18396,15 @@ types UiLibrary
 	}
 	
 
-	type button_checkbox_round = checkbutton {
+	type button_checkbox_round = button {
+		gfxtype = togglecheckbuttongfx
 		texture = "gfx/interface/buttons/checkbox_round.dds"
 		texture_density = 2
 		framesize = { 40 40 }
 		size = { 30 30 }
+
+		upframe = 1
+		downframe = 2
 
 		using = Master_Button_Modify_Texture
 		blockoverride "master_color_frame" {
@@ -18462,10 +18562,8 @@ types UiLibrary
 		round_button_alt = {
 			parentanchor = left|vcenter
 
-			blockoverride "close_onclick" {
-				onclick = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
-				down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
-			}
+			onclick = "[GetVariableSystem.Set( 'test_system', 'closebottom' )]"
+			down = "[GetVariableSystem.HasValue( 'test_system', 'closebottom' )]"
 		}
 	}
 } # END OF "types uilibrary"

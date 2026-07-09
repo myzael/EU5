@@ -469,6 +469,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	536618901	ContextualAmbience_urban_vox_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_vox\ContextualAmbience_urban_vox_04_quietest	
 	538647221	ca_base_int			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_base\ca_base_int	
 	578789266	ContextualAmbience_spots			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots	
+	600500646	ui_notifications			\Default Work Unit\Master Audio Bus\UI\ui_notifications	
 	750320743	ContextualAmbience_urban_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextalAmbience_urban\ContextualAmbience_urban_04_quietest	
 	783822780	mas_sea_quad			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\Ambience_map\MAS_MasterAmbienceSystem\mas_sea_quad	
 	821630201	OnMapUnits			\Default Work Unit\Master Audio Bus\Diegesis\Military\OnMapUnits	
@@ -477,6 +478,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	898491328	ContextualAmbience_nature_04_quietest			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextualAmbience_nature_land\ContextualAmbience_nature_04_quietest	
 	914120420	Diegesis			\Default Work Unit\Master Audio Bus\Diegesis	
 	931874857	ContextalAmbience_nature_water			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextalAmbience_nature_water	
+	972497063	ui_actions			\Default Work Unit\Master Audio Bus\UI\ui_actions	
 	1031089514	Debug			\Default Work Unit\Master Audio Bus\Debug	
 	1036826058	ContextualAmbience_nature			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature	
 	1142545363	ContextualAmbience_nature_birds			\Default Work Unit\Master Audio Bus\Diegesis\Ambience\ContextualAmbience\ContextualAmbience_spots\ContextualAmbience_nature\ContextualAmbience_nature_land\ContextualAmbience_nature_birds	

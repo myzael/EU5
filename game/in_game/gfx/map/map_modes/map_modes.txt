@@ -233,6 +233,7 @@ political = {
 	#flatmap_behaviour = Always
 	
 	enable_rivers = yes
+	enable_snow = yes
 	use_fow = yes
 	
 	enable_water_names = no
@@ -840,6 +841,15 @@ dynasty = {
 	
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus Ruler }
 
+	legend_key = {
+		desc = "LEGEND_KEY_DYNASTY_NO_DYNASTY"
+		color = define:NMapColors|DEFAULT_COLOR
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_DYNASTY_STRIPED"
+		color = define:NMapColors|DEFAULT_COLOR
+	}
+
 }
 
 court_language = {
@@ -1008,7 +1018,24 @@ stability = {
 	}
 	tooltip_key = {
 	}
-	
+
+	legend_key = {
+		desc = "LEGEND_KEY_STABILITY_VERY_LOW"
+		color = define:NMapColors|MAP_COLOR_MIN
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_STABILITY_LOW"
+		color = define:NMapColors|MAP_COLOR_LOW
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_STABILITY_NEUTRAL"
+		color = define:NMapColors|MAP_COLOR_MID
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_STABILITY_HIGH"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
+
 	small_map_names = location
 	medium_map_names = country
 	large_map_names = country
@@ -1827,6 +1854,49 @@ cities = {
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
 
+town_rights = {
+	color_mode = town_rights
+
+	small_map_names = location
+	medium_map_names = country
+	large_map_names = country
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	flatmap_behaviour = Always
+	use_fow = no
+
+	category = economy
+	index = 1
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+		unit_marker = no
+	}
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+	
+	refresh_colors_on_selection_change = yes
+	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
+}
+
 raw_material = {
 	color_mode = raw_material
 	small_map_names = raw_material
@@ -2003,25 +2073,14 @@ control = {
 missing_control = {
 	color_mode = missing_control
 
-	legend_key = {
-		desc = "CURRENT_CONTROL_BELOW_MAX"
-		color = define:NMapColors|MAP_COLOR_HIGH
-	}
-	legend_key = {
-		desc = "CURRENT_CONTROL_ABOVE_MAX"
-		color = define:NMapColors|MAP_COLOR_LOW
-	}
-
-	small_map_names = location_control
-	medium_map_names = location_control
+	small_map_names = location_control_ratio
+	medium_map_names = location_control_ratio
 	large_map_names = province_control
 
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
 	enable_rivers = yes
-	
-	map_lines_mode = ToCapital #experimental
 
 	flatmap_behaviour = Always
 	force_brown_in_flatmap = only_in_rg_colorblind_mode
@@ -2148,48 +2207,6 @@ max_control = {
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
 
-town_rights = {
-	color_mode = town_rights
-
-	small_map_names = location
-	medium_map_names = country
-	large_map_names = country
-
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
-
-	flatmap_behaviour = Always
-	use_fow = no
-
-	category = economy
-	index = 3
-
-	map_markers = {
-		market_marker = no
-		fort_marker = no
-		toll_marker = no
-		unit_marker = no
-	}
-	
-	gradient_parameters = {
-		zoom_step = @zoom_step_near
-
-		gradient_alpha_inside = 	@data_gradient_alpha_inside
-		gradient_alpha_outside = 	@data_gradient_alpha_outside
-		gradient_width = 			@data_gradient_width
-		gradient_color_mult =		@data_gradient_color_mult
-		edge_width = 				@data_edge_width
-		edge_sharpness = 			@data_edge_sharpness
-		edge_alpha = 				@data_edge_alpha
-		edge_color_mult = 			@data_edge_color_mult
-		before_lighting_blend =		@data_before_lighting_blend
-		after_lighting_blend =		@data_after_lighting_blend
-	}
-	
-	refresh_colors_on_selection_change = yes
-	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
-}
 
 generic_locations = {
 	color_mode = generic_locations
@@ -2404,7 +2421,20 @@ market_access = {
 	}
 	tooltip_key = {
 	}
-	
+
+	legend_key = {
+		desc = "LEGEND_KEY_MARKET_ACCESS_LOW"
+		color = define:NMapColors|MAP_COLOR_LOW
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_MARKET_ACCESS_PARTIAL"
+		color = define:NMapColors|MAP_COLOR_MID
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_MARKET_ACCESS_FULL"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
+
 	small_map_names = location
 	medium_map_names = market
 	large_map_names = market
@@ -2589,6 +2619,16 @@ market_food_stockpile = {
 
 trade_range = {
 	color_mode = trade_range
+
+	legend_key = {
+		desc = "LEGEND_KEY_TRADE_RANGE_MARKET_CENTER"
+		color = define:NMapColors|MAP_COLOR_TOP
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_TRADE_RANGE_OUTSIDE"
+		color = define:NMapColors|DEFAULT_COLOR
+	}
+
 	small_map_names = location
 	medium_map_names = market
 	large_map_names = market
@@ -2602,7 +2642,7 @@ trade_range = {
 	use_fow = no
 	enable_water_names = yes
 	force_brown_in_flatmap = yes
-	
+
 	category = economy
 	index = 3
 
@@ -3570,13 +3610,13 @@ graphical_culture = {
 	medium_map_names = graphical_culture
 	large_map_names = graphical_culture
 
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
+	small_tooltip_context = graphical_culture
+	medium_tooltip_context = graphical_culture
+	large_tooltip_context = graphical_culture
 
 	fill_in_impassable = no
 	use_fow = no
-	
+
 	category = debug
 	allow_allocate_hotkey = no
 	index = 1
@@ -4523,6 +4563,46 @@ holy_sites = {
 	color_and_names_refresh_counters = {}
 }
 
+country_own_religion = {
+	color_mode = country_own_religion
+	small_map_names = country
+	medium_map_names = country
+	large_map_names = religion
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = country
+
+	fill_in_impassable = no
+	flatmap_behaviour = Always
+	use_fow = no
+	category = hidden
+	allow_allocate_hotkey = no
+
+	map_markers = {
+		all = no
+		holy_site_marker = yes
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+
+	refresh_colors_on_selection_change = yes
+	color_and_names_refresh_counters = { LocationOwnerChanged ReligionChanged }
+}
+
 works_of_art = {
 	map_color = {
 		if = {
@@ -5000,6 +5080,152 @@ threat = {
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
 
+
+great_power_areas = {
+	color_mode = great_power_areas
+	small_map_names = area
+	medium_map_names = area
+	large_map_names = area
+
+	small_tooltip_context = country
+	medium_tooltip_context = country
+	large_tooltip_context = country
+
+	flatmap_behaviour = Always
+	use_fow = no
+
+	fill_in_impassable = no
+
+	category = diplomacy
+	index = 1
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap
+
+		gradient_alpha_inside = 	@flatmap_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_gradient_alpha_outside
+		gradient_width = 			@flatmap_gradient_width
+		gradient_color_mult =		@flatmap_gradient_color_mult
+		edge_width = 				@flatmap_edge_width
+		edge_sharpness = 			@flatmap_edge_sharpness
+		edge_alpha = 				@flatmap_edge_alpha
+		edge_color_mult = 			@flatmap_edge_color_mult
+		before_lighting_blend =		@flatmap_before_lighting_blend
+		after_lighting_blend =		@flatmap_after_lighting_blend
+	}
+
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap_far
+
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				@flatmap_far_edge_width
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				@flatmap_far_edge_alpha
+		edge_color_mult = 			@flatmap_far_edge_color_mult
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
+}
+
+gp_score_areas = {
+	color_mode = gp_score_areas
+	small_map_names = area
+	medium_map_names = area
+	large_map_names = area
+
+	small_tooltip_context = area
+	medium_tooltip_context = area
+	large_tooltip_context = area
+
+	flatmap_behaviour = Always
+	use_fow = no
+
+	fill_in_impassable = no
+
+	category = diplomacy
+	index = 2
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap
+
+		gradient_alpha_inside = 	@flatmap_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_gradient_alpha_outside
+		gradient_width = 			@flatmap_gradient_width
+		gradient_color_mult =		@flatmap_gradient_color_mult
+		edge_width = 				@flatmap_edge_width
+		edge_sharpness = 			@flatmap_edge_sharpness
+		edge_alpha = 				@flatmap_edge_alpha
+		edge_color_mult = 			@flatmap_edge_color_mult
+		before_lighting_blend =		@flatmap_before_lighting_blend
+		after_lighting_blend =		@flatmap_after_lighting_blend
+	}
+
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap_far
+
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				@flatmap_far_edge_width
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				@flatmap_far_edge_alpha
+		edge_color_mult = 			@flatmap_far_edge_color_mult
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
+}
 
 great_powers = {
 	color_mode = great_powers
@@ -6526,9 +6752,9 @@ rivers = {
 	medium_map_names = none
 	large_map_names = none
 
-	small_tooltip_context = rivers
-	medium_tooltip_context = rivers
-	large_tooltip_context = rivers
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
 
 	flatmap_behaviour = Always
 	enable_rivers = yes
@@ -6866,6 +7092,11 @@ privateering = {
 		else = {
 			value = NO_PRIVATEERING_MAPMODE_TT
 		}
+	}
+
+	legend_key = {
+		desc = "LEGEND_KEY_PRIVATEERING_NONE"
+		color = define:NMapColors|DEFAULT_COLOR
 	}
 
 	small_map_names = location
@@ -7558,9 +7789,9 @@ situation = {
 	medium_map_names = country
 	large_map_names = country
 
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
+	small_tooltip_context = country
+	medium_tooltip_context = country
+	large_tooltip_context = country
 
 	fill_in_impassable = no
 	flatmap_behaviour = Always
@@ -7623,15 +7854,100 @@ situation = {
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
 
+reformation_situation = {
+	color_mode = situation
+	small_map_names = religion_area
+	medium_map_names = religion_region
+	large_map_names = religion
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = no
+	flatmap_behaviour = Always
+	use_fow = no
+
+	category = hidden
+	allow_allocate_hotkey = no
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@filled_near_gradient_alpha_inside
+		gradient_alpha_outside = 	@filled_near_gradient_alpha_outside
+		gradient_width = 			@filled_near_gradient_width
+		gradient_color_mult =		@filled_near_gradient_color_mult
+		edge_width = 				@filled_near_edge_width
+		edge_sharpness = 			@filled_near_edge_sharpness
+		edge_alpha = 				@filled_near_edge_alpha
+		edge_color_mult = 			@filled_near_edge_color_mult
+		before_lighting_blend =		@filled_near_before_lighting_blend
+		after_lighting_blend =		@filled_near_after_lighting_blend
+	}
+	gradient_parameters = {
+		zoom_step = @zoom_step_far
+
+		gradient_alpha_inside = 	@filled_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@filled_far_gradient_alpha_outside
+		gradient_width = 			@filled_far_gradient_width
+		gradient_color_mult =		@filled_far_gradient_color_mult
+		edge_width = 				@filled_far_edge_width
+		edge_sharpness = 			@filled_far_edge_sharpness
+		edge_alpha = 				@filled_far_edge_alpha
+		edge_color_mult = 			@filled_far_edge_color_mult
+		before_lighting_blend =		@filled_far_before_lighting_blend
+		after_lighting_blend =		@filled_far_after_lighting_blend
+	}
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap
+
+		gradient_alpha_inside = 	@flatmap_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_gradient_alpha_outside
+		gradient_width = 			@flatmap_gradient_width
+		gradient_color_mult =		@flatmap_gradient_color_mult
+		edge_width = 				@flatmap_edge_width
+		edge_sharpness = 			@flatmap_edge_sharpness
+		edge_alpha = 				@flatmap_edge_alpha
+		edge_color_mult = 			@flatmap_edge_color_mult
+		before_lighting_blend =		@flatmap_before_lighting_blend
+		after_lighting_blend =		@flatmap_after_lighting_blend
+	}
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap_far
+
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				@flatmap_far_edge_width
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				@flatmap_far_edge_alpha
+		edge_color_mult = 			@flatmap_far_edge_color_mult
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	refresh_colors_on_selection_change = yes
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { LocationOwnerChanged ReligionChanged }
+}
+
 situation_data = {
 	color_mode = situation
 	small_map_names = province
 	medium_map_names = country
 	large_map_names = country
 
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
+	small_tooltip_context = country
+	medium_tooltip_context = country
+	large_tooltip_context = country
 
 	fill_in_impassable = no
 	flatmap_behaviour = Always
@@ -8306,8 +8622,100 @@ international_organization = {
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
 
+imperial_circles = {
+	color_mode = imperial_circles
+	small_map_names = location
+	medium_map_names = country
+	large_map_names = country
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = country
+
+	fill_in_impassable = yes
+	flatmap_behaviour = Always
+
+	use_fow = no
+
+	enable_water_names = no
+	enable_water_names_through = yes
+
+	category = hidden
+	allow_allocate_hotkey = no
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_far
+
+		gradient_alpha_inside = 	@filled_near_gradient_alpha_inside
+		gradient_alpha_outside = 	@filled_near_gradient_alpha_outside
+		gradient_width = 			@filled_near_gradient_width
+		gradient_color_mult =		@filled_near_gradient_color_mult
+		edge_width = 				@filled_near_edge_width
+		edge_sharpness = 			@filled_near_edge_sharpness
+		edge_alpha = 				@filled_near_edge_alpha
+		edge_color_mult = 			@filled_near_edge_color_mult
+		before_lighting_blend =		@filled_near_before_lighting_blend
+		after_lighting_blend =		@filled_near_after_lighting_blend
+	}
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap
+
+		gradient_alpha_inside = 	@flatmap_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_gradient_alpha_outside
+		gradient_width = 			@flatmap_gradient_width
+		gradient_color_mult =		@flatmap_gradient_color_mult
+		edge_width = 				@flatmap_edge_width
+		edge_sharpness = 			@flatmap_edge_sharpness
+		edge_alpha = 				@flatmap_edge_alpha
+		edge_color_mult = 			@flatmap_edge_color_mult
+		before_lighting_blend =		@flatmap_before_lighting_blend
+		after_lighting_blend =		@flatmap_after_lighting_blend
+	}
+	flatmap_gradient_parameters = {
+		zoom_step = @zoom_step_flatmap_far
+
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				@flatmap_far_edge_width
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				@flatmap_far_edge_alpha
+		edge_color_mult = 			@flatmap_far_edge_color_mult
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
+
+}
+
 ai_conquer_desire = {
 	color_mode = ai_conquer_desire
+
+	legend_key = {
+		desc = "LEGEND_KEY_AI_DESIRE_SELF"
+		color = define:NMapColors|AI_DESIRE_SELF
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_AI_DESIRE_LOW"
+		color = define:NMapColors|AI_DESIRE_NEGATIVE
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_AI_DESIRE_NEUTRAL"
+		color = define:NMapColors|AI_DESIRE_NEUTRAL
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_AI_DESIRE_HIGH"
+		color = define:NMapColors|AI_DESIRE_POSITIVE
+	}
+
 	small_map_names = province
 	medium_map_names = country
 	large_map_names = country
@@ -8320,7 +8728,7 @@ ai_conquer_desire = {
 	flatmap_behaviour = Always
 	allow_allocate_hotkey = no
 	use_fow = no
-	
+
 	category = diplomacy
 	index = 1
 
@@ -8913,6 +9321,66 @@ select_target_custom = {
 	refresh_colors_on_selection_change = yes
 	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus }
 }
+select_target_rivals = {
+	color_mode = select_target_land
+	small_map_names = country
+	medium_map_names = country
+	large_map_names = country
+
+	small_tooltip_context = country
+	medium_tooltip_context = country
+	large_tooltip_context = country
+
+	fill_in_impassable = no
+	allow_allocate_hotkey = no
+	flatmap_behaviour = Always
+	use_fow = no
+	
+	category = hidden
+
+	map_markers = {
+		market_marker = no
+		fort_marker = no
+		toll_marker = no
+		unit_marker = no
+	}
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+	
+	refresh_colors_on_selection_change = yes
+	color_and_names_refresh_counters = { LocationOwnerChanged CountryStatus DiplomacyChanged }
+
+	legend_key = {
+		desc = "LEGEND_KEY_RIVALS_THREATENING"
+		color = define:NMapColors|MAP_COLOR_HIGH
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_RIVALS_POTENTIAL"
+		color = define:NMapColors|MAP_COLOR_MID
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_RIVALS_ENEMY"
+		color = define:NMapColors|MAP_COLOR_LOW
+	}
+	legend_key = {
+		desc = "LEGEND_KEY_RIVALS_NOT_ELIGIBLE"
+		color = define:NMapColors|DEFAULT_COLOR
+	}
+}
+
 
 select_target_colonial = {
 	color_mode = select_target_land
@@ -9002,6 +9470,12 @@ assimilation = {
 
 movements = {
 	color_mode = movement
+
+	legend_key = {
+		desc = "LEGEND_KEY_MOVEMENTS_NONE"
+		color = define:NMapColors|MAP_COLOR_POSITIVE_MIN
+	}
+
 	small_map_names = location
 	medium_map_names = location
 	large_map_names = location
@@ -9089,24 +9563,37 @@ ai_disposition_mapmode = {
 		if = {
 			limit = { has_owner = yes }
 			if = {
-				limit = { owner = { has_ai_disposition_toward_player = alarmed } }
+				# the player's own country, distinct from indifferent neighbours
+				limit = { owner = scope:actor }
+				value = map_ai_disp_self
+			}
+			else_if = {
+				limit = { owner = { has_ai_disposition_toward_actor = alarmed } }
 				value = map_ai_disp_alarmed
 			}
 			else_if = {
-				limit = { owner = { has_ai_disposition_toward_player = wary } }
+				limit = { owner = { has_ai_disposition_toward_actor = wary } }
 				value = map_ai_disp_wary
 			}
 			else_if = {
-				limit = { owner = { has_ai_disposition_toward_player = planning_war } }
+				limit = { owner = { has_ai_disposition_toward_actor = planning_war } }
 				value = map_ai_disp_planning_war
 			}
 			else_if = {
-				limit = { owner = { has_ai_disposition_toward_player = covets } }
+				limit = { owner = { has_ai_disposition_toward_actor = covets } }
 				value = map_ai_disp_covets
 			}
 			else_if = {
-				limit = { owner = { has_ai_disposition_toward_player = rivals } }
+				limit = { owner = { has_ai_disposition_toward_actor = domineering } }
+				value = map_ai_disp_domineering
+			}
+			else_if = {
+				limit = { owner = { has_ai_disposition_toward_actor = rivals } }
 				value = map_ai_disp_rivals
+			}
+			else_if = {
+				limit = { owner = { has_ai_disposition_toward_actor = friendly } }
+				value = map_ai_disp_friendly
 			}
 			else = {
 				# indifferent or player's own territory
@@ -9134,6 +9621,10 @@ ai_disposition_mapmode = {
 		color = define:NMapColors|MAP_AI_DISP_COVETS
 	}
 	legend_key = {
+		desc = "AI_DISPOSITION_DOMINEERING"
+		color = define:NMapColors|MAP_AI_DISP_DOMINEERING
+	}
+	legend_key = {
 		desc = "AI_DISPOSITION_WARY"
 		color = define:NMapColors|MAP_AI_DISP_WARY
 	}
@@ -9142,9 +9633,20 @@ ai_disposition_mapmode = {
 		color = define:NMapColors|MAP_AI_DISP_RIVALS
 	}
 	legend_key = {
+		desc = "AI_DISPOSITION_FRIENDLY"
+		color = define:NMapColors|MAP_AI_DISP_FRIENDLY
+	}
+	legend_key = {
 		desc = "AI_DISPOSITION_INDIFFERENT"
 		color = define:NMapColors|MAP_AI_DISP_NEUTRAL
 	}
+	legend_key = {
+		desc = "AI_DISPOSITION_SELF"
+		color = define:NMapColors|MAP_AI_DISP_SELF
+	}
+
+	# Recolor by the selected country's perspective (scope:actor); reverts to the player when nothing is selected.
+	refresh_colors_on_selection_change = yes
 
 	small_map_names = province
 	medium_map_names = country

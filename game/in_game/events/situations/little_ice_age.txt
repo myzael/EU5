@@ -169,24 +169,8 @@ little_ice_age.4 = { #Cold and Wet Fields
 				multiply = -1
 			}
 		}
-		if = {
-			limit = {
-				scope:target_location_1 = { 
-					NOT = { has_road_to = scope:target_location_2 }
-				}
-			}
-			custom_tooltip = due_to_no_road_network_and_distance_tt
-			scope:target_province_1 = {
-				change_province_food = {
-					value = root.var:provider_food_amount_variable
-					multiply = 0.75
-				}
-			}
-		}
-		else = {
-			scope:target_province_1 = {
-				change_province_food = root.var:provider_food_amount_variable
-			}
+		scope:target_province_1 = {
+			change_province_food = root.var:provider_food_amount_variable
 		}
 		scope:target_province_1 = {
 			add_province_modifier = {
@@ -1517,7 +1501,7 @@ little_ice_age.15 = { #Brrr it's getting cold!
 						multiply = 1.5
 					}
 					if = {
-						limit = { building_pop_type = peasants }
+						limit = { building_pop_type = burghers }
 						multiply = 1.75
 					}
 				}
@@ -1525,15 +1509,15 @@ little_ice_age.15 = { #Brrr it's getting cold!
 				max = {
 					value = 1
 					if = {
-						limit = { 
+						limit = {
 							NOT = { has_variable = recent_snowstorm_event_variable }
 						}
 						add = {
 							value = num_buildings
 							divide = 10
-							max = 5
 						}
 					}
+					max = 6
 				}
 				check_range_bounds = no
 				location = { minor_destroy_building_levels_in_location = yes }
@@ -1551,7 +1535,7 @@ little_ice_age.15 = { #Brrr it's getting cold!
 
 	option = {
 		name = winter_events.15.b
-		
+
 		scope:target_location = {
 			ordered_buildings_in_location = {
 				order_by = {
@@ -1561,7 +1545,7 @@ little_ice_age.15 = { #Brrr it's getting cold!
 						multiply = 1.5
 					}
 					if = {
-						limit = { building_pop_type = peasants }
+						limit = { building_pop_type = burghers }
 						multiply = 1.75
 					}
 				}
@@ -1569,26 +1553,18 @@ little_ice_age.15 = { #Brrr it's getting cold!
 				max = {
 					value = 1
 					if = {
-						limit = { 
+						limit = {
 							NOT = { has_variable = recent_snowstorm_event_variable }
 						}
 						add = {
 							value = num_buildings
 							divide = 15
-							max = 3
 						}
 					}
+					max = 4
 				}
 				check_range_bounds = no
 				location = { minor_destroy_building_levels_in_location = yes }
-			}
-			change_prosperity = prosperity_very_weak_penalty
-			province = {
-				add_province_modifier = {
-					modifier = recent_white_storm_modifier
-					years = 1
-					mode = replace
-				}
 			}
 		}
 		add_gold = {

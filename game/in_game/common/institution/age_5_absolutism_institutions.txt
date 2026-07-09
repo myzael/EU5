@@ -18,19 +18,7 @@
 			}
 			AND = {
 				has_game_rule = institution_spawn_plausible
-				has_institution = institution:banking
-
-				OR = {
-					continent = continent:europe
-					sub_continent = sub_continent:north_africa
-				}
-
-				num_pop_type:burghers > 20
-				total_building_levels > 80
-				
-				owner = {
-					societal_value:capital_economy_vs_traditional_economy < -30
-				}
+				manufactories_plausible_location = yes
 			}
 		}
 		
@@ -77,7 +65,8 @@
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late
-	spread_to_market_member = institution_spread_to_market_member_late	
+	spread_to_market_member = institution_spread_to_market_member_late
+	spread_to_market_center = institution_spread_to_market_center	
 	
 }
 
@@ -102,20 +91,7 @@ scientific_revolution = {
 			}
 			AND = {
 				has_game_rule = institution_spawn_plausible
-				has_institution = institution:printing_press
-
-				OR = {
-					continent = continent:europe
-					sub_continent = sub_continent:north_africa
-				}
-
-		
-				has_building = building_type:university	
-				average_location_literacy > 30
-				
-				owner = {
-					societal_value:traditionalist_vs_innovative >= 20
-				}
+				scientific_revolution_plausible_location = yes
 			}
 		}
 		
@@ -142,7 +118,8 @@ scientific_revolution = {
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late
-	spread_to_market_member = institution_spread_to_market_member_late	
+	spread_to_market_member = institution_spread_to_market_member_late
+	spread_to_market_center = institution_spread_to_market_center	
 }
 
 military_revolution = {
@@ -166,20 +143,7 @@ military_revolution = {
 			}
 			AND = {
 				has_game_rule = institution_spawn_plausible
-				has_institution = institution:pike_and_shot
-				has_institution = institution:artillery_institution
-
-				OR = {
-					continent = continent:europe
-					sub_continent = sub_continent:north_africa
-				}
-
-				is_capital = yes
-				population > 30
-				owner = {
-					yearly_manpower > 2
-					societal_value:offensive_vs_defensive < -20
-				}
+				military_revolution_plausible_location = yes
 			}
 		}
 		
@@ -201,7 +165,8 @@ military_revolution = {
 	spread_from_was_possible_spawn = institution_spread_from_was_possible_spawn_late
 	spread_scale_on_control_if_owner_embraced = 2
 	spread_embraced_to_capital = institution_total_embraced_to_capital_late
-	spread_to_market_member = institution_spread_to_market_member_late	
+	spread_to_market_member = institution_spread_to_market_member_late
+	spread_to_market_center = institution_spread_to_market_center	
 }
 
 

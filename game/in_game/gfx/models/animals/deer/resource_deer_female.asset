@@ -1,11 +1,36 @@
-pdxmesh = {
+﻿pdxmesh = {
 	name = "resource_deer_female_mesh"
 	file = "resource_deer_female.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
 
 	animation = { id = "resource_deer_idle_animation" type = "resource_deer_female_resource_deer_idle.anim" }
 
 	meshsettings = {
-		name = "resource_reender_femaleShape"
+		name = "resource_deer_female_lod0Shape"
+		index = 0
+		texture_diffuse = "resource_deer_diffuse.dds"
+		texture_normal = "resource_deer_normal.dds"
+		texture_specular = "resource_deer_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_deer_female_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_deer_diffuse.dds"
+		texture_normal = "resource_deer_normal.dds"
+		texture_specular = "resource_deer_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "resource_deer_female_lod2Shape"
 		index = 0
 		texture_diffuse = "resource_deer_diffuse.dds"
 		texture_normal = "resource_deer_normal.dds"

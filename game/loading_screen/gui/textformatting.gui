@@ -109,6 +109,21 @@ textformatting = {
 	}
 
 	format = {
+		name = color_mustard
+		format = "color:{0.75,0.72,0.1}"
+	}
+
+	format = {
+		name = color_orange
+		format = "color:{0.9,0.55,0.15}"
+	}
+
+	format = {
+		name = color_dark_green
+		format = "color:{0.2,0.65,0.25}"
+	}
+
+	format = {
 		name = color_yellow_dark
 		# format = "color:{0.87, 0.75, 0.53};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
 		format = "color:{0.82, 0.70, 0.49};glow_color:{0.0,0.0,0.0,0.8};glow_offset:{0.5,2.5}"
@@ -552,6 +567,21 @@ textformatting = {
 	format = {
 		name = Y
 		format = "zero_value"
+	}
+
+	format = {
+		name = O
+		format = "color_orange"
+	}
+
+	format = {
+		name = M
+		format = "color_mustard"
+	}
+
+	format = {
+		name = J
+		format = "color_dark_green"
 	}
 
 	# For Buttons etc

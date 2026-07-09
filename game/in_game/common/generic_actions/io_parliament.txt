@@ -185,7 +185,7 @@
 					add = 2
 				}
 				else_if = {
-					limit = { location_rank = location_rank:city }
+					limit = { OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis } }
 					add = 10
 				}
 
@@ -301,10 +301,12 @@ vote_in_organization_parliament = {
 	potential = {
 	}
 	allow = {
-		scope:actor = {
-			NOT = { has_cooldown = vote_in_organization_parliament }
-		}
 	}
+	cooldown = {
+		type = vote_in_organization_parliament 
+		months = 1 
+	}
+
 	select_trigger = {
 		looking_for_a = international_organization
 		source = actor
@@ -366,7 +368,7 @@ vote_in_organization_parliament = {
 						save_temporary_scope_value_as = {
 							name = vote_for_new_law_bias
 							value = {
-								value = "ai_issue_voting_bias(scope:actor|scope:recipient|scope:vote)"
+								value = "ai_issue_voting_bias(scope:actor|scope:recipient|scope:recipient.var:io_law_target)"
 								add = "scope:recipient.var:io_law_target.ai_policy_resolution_vote_bias(scope:actor|scope:recipient)"
 							}
 						}
@@ -440,28 +442,12 @@ vote_in_organization_parliament = {
 						}
 					}
 				}
-				hidden_effect = {
-					scope:actor = { 
-						add_cooldown = {
-							type = vote_in_organization_parliament 
-							months = 1 
-						}
-					}
-				}
 			}
 			else = {
 				scope:actor = {
 					participate_in_parliament = {
 						international_organization = scope:recipient
 						vote = scope:vote
-					}
-				}
-				hidden_effect = {
-					scope:actor = { 
-						add_cooldown = {
-							type = vote_in_organization_parliament 
-							months = 1 
-						}
 					}
 				}
 			}

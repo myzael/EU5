@@ -472,6 +472,18 @@
 			"always_flush_level": "error",
 			"sinks": [
 			]
+		},
+		{
+			"category": "performance_degradation",
+			"always_flush_level": "debug",
+			"sinks": [
+				{
+					"type": "file",
+					"log_level": "debug",
+					"file_name": "performance_degradation",
+					"format_pattern": "%v"
+				}
+			]
 		}
 	]
 }

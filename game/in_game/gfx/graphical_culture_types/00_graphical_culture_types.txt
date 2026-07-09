@@ -1,7 +1,7 @@
 ﻿#fallbacks are just tags used during asset lookup. They don't need to match existing graphical cultures
 
 mediterranean_gfx = {
-	priority = 200 # Subcontinental
+	priority = 220 # Subcontinental
 	culture_tag = mediterranean_gfx
 	ethnicities = {
 		10 = european_mediterranean_ethnicity
@@ -247,7 +247,7 @@ icelandic_gfx = {
 }
 
 finnish_gfx = {
-	priority = 500 # Subregion
+	priority = 450 # Subregion (above swedish 400, below sami 500 for sapmi)
 	culture_tag = finnish_gfx
 	ethnicities = {
 		10 = european_finno_ugric_ethnicity
@@ -297,12 +297,12 @@ russian_gfx = {
 }
 
 east_slavic_gfx = {
-	priority = 300 # regional
+	priority = 350 # sub-regional grouping
 	culture_tag = east_slavic_gfx
 }
 
 west_slavic_gfx = {
-	priority = 300 # regional
+	priority = 350 # sub-regional grouping
 	culture_tag = west_slavic_gfx
 }
 
@@ -395,7 +395,7 @@ egyptian_gfx = {
 }
 
 israelite_gfx = {
-	priority = 400 # Subregion
+	priority = 425 # Subregion (above local regional 400 for diaspora Jewish cultures)
 	culture_tag = jewish_gfx
 	ethnicities = {
 		10 = middle_eastern_jewish_ethnicity
@@ -527,7 +527,7 @@ negrito_gfx = {
 }
 
 indochina_gfx = {
-	priority = 300 # Regional
+	priority = 350 # Regional (above east_african 300 for zafiraminia)
 	culture_tag = indochina_gfx
 	ethnicities = {
 		10 = asian_south_east_ethnicity

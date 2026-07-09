@@ -8,6 +8,8 @@ masDataTopologyCoast = { limit_min = 0 limit_max = 1 }
 masDataTopologyLake = { limit_min = 0 limit_max = 1 }
 masDataClimateZone = { limit_min = 0 limit_max = 1 }
 
+masDataWinterLevel = { limit_min = 0 limit_max = 1 }
+
 masDataCityDensity = { limit_min = 0 limit_max = 1 }
 
 mapHeight = { limit_min = 0 limit_max = 4500 }

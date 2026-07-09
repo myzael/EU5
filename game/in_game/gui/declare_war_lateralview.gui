@@ -262,18 +262,9 @@ lateralview = {
 							layoutpolicy_vertical = expanding
 							name = "balance_overview_scene"
 							scene = "[DeclareWarLateralView.GenerateSceneDesc]"
-							alpha = 0.5
+							alpha = 1
 
-							icon = {
-								size = { 100% 100% }
-								using = color_black_texture
-								alpha = 0.8
-
-								modify_texture = {
-									using = bg_fade_vertical_up_mask_texture
-									blend_mode = alphamultiply
-								}
-							}
+							using = scene_fade_vertical_up
 						}
 					}
 				}
@@ -830,9 +821,9 @@ lateralview = {
 												make_cobeligerent_button = {
 													size = { 100% 100% }
 													visible = "[DeclareWarAlly.IsCallAllyVisible]"
-													enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)))]"
+													enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or3(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked), DeclareWarAlly.ProtectsDefenderDueToIO))]"
 													
-													frame = "[Select_int32(Or(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined)), '(int32)2', '(int32)1')]"
+													down = "[Or3(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined), DeclareWarAlly.ProtectsDefenderDueToIO)]"
 
 													tooltipwidget = {
 														SimpleContextualTooltipType = {
@@ -876,7 +867,8 @@ lateralview = {
 														title = "MARK_COBELLIGERENT"
 														on_action = "[DeclareWarAlly.OnCallAllyClick]"
 														conditions = "[MakeItFailIfLoc(DeclareWarAlly.IsSubject, 'CALLALLY_SUBJECT_T')]"
-														enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)))]"
+														conditions = "[MakeItFailIfLoc(DeclareWarAlly.ProtectsDefenderDueToIO, 'CALLALLY_IO_LEADER_T')]"
+														enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or3(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked), DeclareWarAlly.ProtectsDefenderDueToIO))]"
 													}
 
 													# blockoverride "checked_visible" {
@@ -945,7 +937,7 @@ lateralview = {
 															}
 														}
 													}
-													frame = "[Select_int32(DeclareWarAlly.IsJoiningWar, '(int32)2', '(int32)1')]"
+													down = "[DeclareWarAlly.IsJoiningWar]"
 
 													action_tooltip = {
 														title = "game_concept_call_to_arms"
@@ -1114,7 +1106,7 @@ lateralview = {
 													alwaystransparent = yes
 													parentanchor = center
 													size = {50% 50%}
-													visible = "[Or(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined))]"
+													visible = "[Or3(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined), DeclareWarAlly.ProtectsDefenderDueToIO)]"
 													texture = "gfx/interface/icons/control_groups/country.dds"
 												}
 											
@@ -1122,9 +1114,9 @@ lateralview = {
 												make_cobeligerent_button = {
 													size = { 100% 100% }
 													visible = "[DeclareWarAlly.IsCallAllyVisible]"
-													enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)))]"
+													enabled = "[And3(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)), Not(DeclareWarAlly.ProtectsDefenderDueToIO))]"
 													
-													frame = "[Select_int32(Or(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined)), '(int32)2', '(int32)1')]"
+													down = "[And3(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)), Not(DeclareWarAlly.ProtectsDefenderDueToIO))]"
 
 													tooltipwidget = {
 														SimpleContextualTooltipType = {
@@ -1169,13 +1161,13 @@ lateralview = {
 														title = "MARK_COBELLIGERENT"
 														on_action = "[DeclareWarAlly.OnCallAllyClick]"
 														conditions = "[MakeItFailIfLoc(DeclareWarAlly.IsSubject, 'CALLALLY_SUBJECT_T')]"
-														enabled = "[And(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)))]"
+														enabled = "[And3(DeclareWarAlly.IsCallAllyEnabled, Or(DeclareWarAlly.WillJoinIfCalled, And(DeclareWarAlly.WillJoinBecauseOfLandPromised, DeclareWarAlly.IsPromiseLandChecked)), Not(DeclareWarAlly.ProtectsDefenderDueToIO))]"
 													}
 													# blockoverride "checked_visible" {
 													# 	visible = "[Or(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined))]"
 													# }
 													blockoverride "unchecked_visible" {
-														visible = "[Not(Or(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined)))]"
+														visible = "[Not(Or3(And(Not(DeclareWarAlly.IsSubject), DeclareWarAlly.IsCallAllyCheckedOrAutoJoined), And(DeclareWarAlly.IsSubject, DeclareWarAlly.IsOverlordCallAllyCheckedOrAutoJoined), DeclareWarAlly.ProtectsDefenderDueToIO))]"
 													}
 													onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry( DeclareWarAlly.GetCountry )]"
 												}
@@ -1237,7 +1229,7 @@ lateralview = {
 															}
 														}
 													}
-													frame = "[Select_int32(DeclareWarAlly.IsJoiningWar, '(int32)2', '(int32)1')]"
+													down = "[DeclareWarAlly.IsJoiningWar]"
 
 													action_tooltip = {
 														title = "game_concept_call_to_arms"
@@ -1625,7 +1617,7 @@ types WarGoals {
 					
 	# 				button_checkbox_alt = {
 	# 					size = { 30 30 }
-	# 					checked = "[DeclareWarSelectWarGoal.IsSelected]"
+	# 					down = "[DeclareWarSelectWarGoal.IsSelected]"
 	# 					onclick = "[DeclareWarSelectWarGoal.OnClick]"
 	# 					tooltip = "CHECK_WAR_GOAL"
 	# 				}
@@ -1741,8 +1733,10 @@ types WarGoals {
 										}
 	
 										size = { 100% 100% }
-										onclick = "[DeclareWarAlly.ToggleExpanded]"
-										action_tooltip = { title = "OUTLINER_SETTINGS_TOGGLE_TOOLTIP" }
+										action_tooltip = {
+											title = "OUTLINER_SETTINGS_TOGGLE_TOOLTIP"
+											on_action = "[DeclareWarAlly.ToggleExpanded]"
+										}
 										tooltipwidget = { BasicFunctionalTooltip = {} }
 									}
 								}
@@ -2114,7 +2108,7 @@ types WarGoals {
 	# 									}
 	# 								}
 	# 							}
-	# 							checked = "[DeclareWarAlly.IsPromiseLandChecked]"
+	# 							down = "[DeclareWarAlly.IsPromiseLandChecked]"
 	# 							onclick = "[DeclareWarAlly.OnPromiseLandClick]"
 	# 						}
 	# 					}
@@ -2279,7 +2273,7 @@ types WarGoals {
 	# 									}
 	# 								}
 	# 							}
-	# 							checked = "[Or(DeclareWarAlly.IsCallAllyCheckedOrAutoJoined, Not(DeclareWarAlly.IsCallAllyVisible))]"
+	# 							down = "[Or(DeclareWarAlly.IsCallAllyCheckedOrAutoJoined, Not(DeclareWarAlly.IsCallAllyVisible))]"
 	# 							onclick = "[DeclareWarAlly.OnCallAllyClick]"
 	# 							onmousehierarchyenter = "[PdxGuiWidget.SetHighlightCountry( DeclareWarAlly.GetCountry )]"
 	# 						}
@@ -2492,7 +2486,7 @@ types WarGoals {
 										lowpriotextcontext = "[DeclareWarAlly.GetPromiseLandTooltip]"
 									}
 								}
-								frame = "[Select_int32(DeclareWarAlly.IsPromiseLandChecked, '(int32)2', '(int32)1')]"
+								down = "[DeclareWarAlly.IsPromiseLandChecked]"
 
 								action_tooltip = {
 									title = "PROMISE_LAND"
@@ -2591,7 +2585,7 @@ types WarGoals {
 									using = call_to_arms_tooltip
 								}
 								
-								frame = "[Select_int32(Or(DeclareWarAlly.IsCallAllyCheckedOrAutoJoined, Not(DeclareWarAlly.IsCallAllyVisible)), '(int32)2', '(int32)1')]"
+								down = "[Or(DeclareWarAlly.IsCallAllyCheckedOrAutoJoined, Not(DeclareWarAlly.IsCallAllyVisible))]"
 
 								action_tooltip = {
 									title = "game_concept_call_to_arms"

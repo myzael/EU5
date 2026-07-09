@@ -707,7 +707,10 @@ flavor_maj.13 = {  #Tikus Temple
 		monthly_chance = 2
 	}
 	trigger = {
-		has_variable = maj_had_temples_event_variable
+		custom_tooltip = {
+			text = variable_maj_had_temples_event_variable_tt
+			has_variable = maj_had_temples_event_variable
+		}
 		at_war = no
 		is_during_bankruptcy = no
 		has_ruler = yes
@@ -782,7 +785,10 @@ flavor_maj.14 = {  #Candi Surawana
 		monthly_chance = 10
 	}
 	trigger = {
-		has_variable = maj_had_temples_event_variable
+		custom_tooltip = {
+			text = variable_maj_had_temples_event_variable_tt
+			has_variable = maj_had_temples_event_variable
+		}
 		at_war = no
 		is_during_bankruptcy = no
 		has_ruler = yes
@@ -875,6 +881,9 @@ flavor_maj.15 = {
 
 	option = {
 		name = flavor_maj.15.a
+		trigger = {
+			can_declare_legal_war_on = { target = scope:target_country }
+		}
 
 		ai_chance = {
 			factor = 1
@@ -1461,6 +1470,7 @@ flavor_maj.22 = {
 
 	option = {
 		name = flavor_maj.22.b
+		high_risk_option = yes
 
 		add_prestige = prestige_weak_bonus
 		custom_tooltip = {
@@ -1525,6 +1535,7 @@ flavor_maj.23 = {
 
 	option = {
 		name = flavor_maj.23.b
+		high_risk_option = yes
 
 		ai_chance = {
 			factor = 0
@@ -1614,7 +1625,7 @@ flavor_maj.24 = {
 				limit = {
 					location_rank = location_rank:rural_settlement
 				}
-				change_location_rank = location_rank:town
+				change_location_rank_effect = { location_rank = location_rank:town }
 			}
 		}
 		add_gold = { 300 500 }
@@ -1923,7 +1934,7 @@ flavor_maj.28 = {
 		location:trowulan = {
 			population >= 200
 			development >= 50
-			location_rank = location_rank:city
+			OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis }
 		}
 	}
 

@@ -140,6 +140,8 @@ golden_age_of_piracy.110 = {
 
 		scope:target_location = {
 			create_country_from_location  = { #create_navy_country_in_location
+				overlord = root
+				subject_type = subject_type:vassal
 				unlock_government_reform_effect = { type = pirate_brethren_reform }
 
 				hidden_effect = {
@@ -169,10 +171,6 @@ golden_age_of_piracy.110 = {
 				add_gold = {
 					value = root.monthly_income_trade_and_tax
 					multiply = 4
-				}
-				make_subject_of = {
-					target = root
-					type = subject_type:vassal
 				}
 				change_culture = root.culture
 				change_religion = root.religion
@@ -206,6 +204,7 @@ golden_age_of_piracy.110 = {
 
 	option = {
 		name = golden_age_of_piracy.110.b
+		high_risk_option = yes
 
 		trigger = { is_ai = no }	#Let's avoid weird potential issues...
 		change_player = scope:pirate_tag_scope
@@ -340,6 +339,7 @@ great_pirate_era.1 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 		change_player = scope:target_country #Fun option for cool people
@@ -496,6 +496,7 @@ great_pirate_era.2 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 		change_player = scope:target_country #Fun option for cool people
@@ -659,6 +660,7 @@ great_pirate_era.3 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 		change_player = scope:target_country #Fun option for cool people
@@ -791,6 +793,7 @@ great_pirate_era.4 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 
@@ -932,6 +935,7 @@ great_pirate_era.5 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 		change_player = scope:target_country #Fun option for cool people
@@ -1071,6 +1075,7 @@ great_pirate_era.6 = {
 
 	option = {
 		name = great_pirate_era.1.a
+		high_risk_option = yes
 
 		trigger = { is_human = yes }
 		change_player = scope:target_country #Fun option for cool people

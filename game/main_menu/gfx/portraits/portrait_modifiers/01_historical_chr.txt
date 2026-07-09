@@ -391,7 +391,7 @@
 			}
 			accessory = {
 				mode = add
-				gene = headwear_additive
+				gene = headwear_special_disfigured
 				template = no_nose
 				accessory = nose_prosthetic
 			}
@@ -1021,7 +1021,7 @@
 			}
 			accessory = {
 				mode = add
-				gene = headwear_additive
+				gene = headwear_special_eyes
 				template = eye_cloth
 				accessory = blind_eye_cloth
 			}
@@ -1065,7 +1065,7 @@
 			}
 			accessory = {
 				mode = add
-				gene = headwear_additive
+				gene = headwear_special_eyes
 				template = eye_cloth
 				accessory = blind_eye_cloth
 			}
@@ -1498,7 +1498,7 @@
 		}
 	}
 
-	portugal_afonso_iv = {
+portugal_afonso_iv = {
 		dna_modifiers = {
 			accessory = {
 				mode = replace

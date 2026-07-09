@@ -1051,6 +1051,7 @@ generic_mission_events.15 = {	#Rural Neglect
 							OR = {
 								location_rank ?= location_rank:town
 								location_rank ?= location_rank:city
+								location_rank ?= location_rank:megalopolis
 							}
 						}
 					}
@@ -1255,7 +1256,7 @@ generic_mission_events.17 = {
 
 
 		scope:target_location = {
-			change_location_rank = location_rank:town
+			change_location_rank_effect = { location_rank = location_rank:town }
 			every_pop = {
 				limit = {
 					is_upper_class = yes

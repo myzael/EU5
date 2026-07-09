@@ -946,6 +946,7 @@ flavor_ven.20 = { #Domini di Terraferma
 		c:VER = {
 			NOT = { is_allied_with = { target = ROOT } }
 			NOT = { has_truce_with = ROOT }
+			NOT = { is_at_war_with = ROOT }
 			owns = location:treviso
 			owns = location:conegliano
 		}
@@ -1126,7 +1127,10 @@ flavor_ven.24 = { #The Flooding of Venice
 		location:venice = {
 			owner = ROOT
 		}
-		NOT = { has_variable = flooding_of_venice_var }
+		custom_tooltip = {
+			text = variable_flooding_of_venice_var_tt
+			NOT = { has_variable = flooding_of_venice_var }
+		}
 	}
 
 	option = {
@@ -1316,11 +1320,11 @@ flavor_ven.26 = { #Liberation of Jerusalem
 			}
 			create_country_from_cores_in_our_locations = c:KOJ
 			c:KOJ = {
-				make_subject_of = { target = root type = subject_type:vassal }
 				change_religion = religion:catholic
 				change_religion_for_ruler_and_family = { country = c:KOJ religion = religion:catholic }
 				change_government_type = government_type:monarchy
 				every_owned_location = { add_core = c:KOJ }
+				make_subject_of = { target = root type = subject_type:vassal }
 			}
 		}
 	}
@@ -1338,11 +1342,11 @@ flavor_ven.26 = { #Liberation of Jerusalem
 			}
 			create_country_from_cores_in_our_locations = c:KOJ
 			c:KOJ = {
-				make_subject_of = { target = root type = subject_type:vassal }
 				change_religion = religion:catholic
 				change_religion_for_ruler_and_family = { country = c:KOJ religion = religion:catholic }
 				change_government_type = government_type:monarchy
 				every_owned_location = { add_core = c:KOJ }
+				make_subject_of = { target = root type = subject_type:vassal }
 			}
 		}
 	}
@@ -1896,6 +1900,7 @@ flavor_ven.38 = { #The Loredanian Academy
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 	}
@@ -2142,7 +2147,10 @@ flavor_ven.44 = { #Adrian Willaert
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	trigger = {
-		has_variable = unlocked_venetian_school_of_music_characters
+		custom_tooltip = {
+			text = variable_unlocked_venetian_school_of_music_characters_tt
+			has_variable = unlocked_venetian_school_of_music_characters
+		}
 	}
 
 	immediate = {
@@ -2191,7 +2199,10 @@ flavor_ven.45 = { #Giuseppe Zarlino
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	trigger = {
-		has_variable = unlocked_venetian_school_of_music_characters
+		custom_tooltip = {
+			text = variable_unlocked_venetian_school_of_music_characters_tt
+			has_variable = unlocked_venetian_school_of_music_characters
+		}
 	}
 
 	immediate = {
@@ -2238,7 +2249,10 @@ flavor_ven.46 = { #Baldassare Donato
 	}
 
 	trigger = {
-		has_variable = unlocked_venetian_school_of_music_characters
+		custom_tooltip = {
+			text = variable_unlocked_venetian_school_of_music_characters_tt
+			has_variable = unlocked_venetian_school_of_music_characters
+		}
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2246,7 +2260,7 @@ flavor_ven.46 = { #Baldassare Donato
 	immediate = {
 		create_character = {
 			first_name = name_balthazar
-			last_name = Donato
+			last_name = name_donato
 			birth_date = 1530.4.7
 			birth_location = location:venice
 			estate = estate_type:burghers_estate
@@ -2292,7 +2306,10 @@ flavor_ven.47 = { #Claudio Merulo
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	trigger = {
-		has_variable = unlocked_venetian_school_of_music_characters
+		custom_tooltip = {
+			text = variable_unlocked_venetian_school_of_music_characters_tt
+			has_variable = unlocked_venetian_school_of_music_characters
+		}
 	}
 
 	immediate = {
@@ -2341,7 +2358,10 @@ flavor_ven.48 = { #Giovanni Gabrieli
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	trigger = {
-		has_variable = unlocked_venetian_school_of_music_characters
+		custom_tooltip = {
+			text = variable_unlocked_venetian_school_of_music_characters_tt
+			has_variable = unlocked_venetian_school_of_music_characters
+		}
 	}
 
 	immediate = {
@@ -2457,7 +2477,10 @@ flavor_ven.50 = { #Rebellion of the Callergis
 	}
 
 	trigger = {
-		has_variable = ven_enable_callgeri_revolt
+		custom_tooltip = {
+			text = variable_ven_enable_callgeri_revolt_tt
+			has_variable = ven_enable_callgeri_revolt
+		}
 		country_exists = c:CRT
 		c:CRT = {
 			is_subject_of = ROOT
@@ -3723,20 +3746,129 @@ flavor_ven.72 = { #Magistrato alla Sanità
 	}
 }
 
-flavor_ven.73 = { #Banco del Giro
+flavor_ven.73 = { # The Banco del Giro
 	type = country_event
 	title = flavor_ven.73.title
 	desc = flavor_ven.73.desc
 	outcome = neutral
-
+	historical_info = flavor_ven.73.historical_info
 	fire_only_once = yes
 
+	major = yes
 	dynamic_historical_event = {
 		tag = VEN
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		from = 1610.1.1
+		to = 1660.1.1
+		monthly_chance = 10
 	}
+
+	trigger = {
+		owns = location:venice
+		has_embraced_institution = institution:banking
+	}
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+		location:venice = {
+			save_scope_as = banco_giro_hq
+		}
+
+		scope:banco_giro_hq = {
+			create_building_country_in_location = {
+				name = {
+					name = BANCO_DEL_GIRO
+				}
+				reforms = {
+					banking_country
+				}
+				save_scope_as = banco_giro_tag
+
+				hidden_effect = {
+					change_country_flag = BANCO_DEL_GIRO
+					define_unique_country_tag = BGIRO
+					change_heir_selection = heir_selection:bank_selection
+					change_government_type = government_type:republic
+				}
+			}
+			scope:banco_giro_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:banco_giro_tag
+				}
+			}
+		}
+		set_local_variable = {
+			name = amount_of_gold_for_banco_giro
+			value = { 250 500 }
+		}
+	}
+
+	option = {
+		name = flavor_ven.73.a
+
+		historical_option = yes
+
+		show_as_tooltip = {
+			scope:banco_giro_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:banco_giro_tag
+				}
+			}
+		}
+		scope:banco_giro_tag = {
+			make_subject_of = {
+				target = ROOT
+				type = subject_type:state_bank
+			}
+		}
+		change_gold_effect = { scale = 2 }
+	}
+
+	option = {
+		name = flavor_ven.73.b
+		high_risk_option = yes
+
+		show_as_tooltip = {
+			scope:banco_giro_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:banco_giro_tag
+				}
+			}
+		}
+		scope:banco_giro_tag = {
+			make_subject_of = {
+				target = ROOT
+				type = subject_type:state_bank
+			}
+		}
+		change_gold_effect = { scale = 2 }
+
+		change_player = scope:banco_giro_tag
+	}
+
+	after = {
+		scope:banco_giro_tag = {
+			trigger_event_non_silently = flavor_ven.732
+		}
+	}
+}
+
+
+flavor_ven.732 = { # Starting Event for The Banco del Giro
+	type = country_event
+	title = flavor_ven.732.title
+	desc = flavor_ven.732.desc
+	outcome = neutral
 
 	illustration_tags = {
         10 = regular
@@ -3747,24 +3879,10 @@ flavor_ven.73 = { #Banco del Giro
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 	}
 
-	trigger = {
-		owns = location:venice
-		has_embraced_institution = institution:banking
-	}
-
 	option = {
-		historical_option = yes
-		name = flavor_ven.73.a
-		change_gold_effect = { scale = -12 }
-		location:venice = {
-			change_prosperity = prosperity_very_weak_bonus
-		}
-		add_inflation = inflation_severe_bonus
-	}
+		name = flavor_ven.732.a
 
-	option = {
-		name = flavor_ven.73.b
-		add_inflation = inflation_severe_penalty
+		add_gold = local_var:amount_of_gold_for_banco_giro
 	}
 }
 
@@ -4371,7 +4489,10 @@ flavor_ven.84 = { #A Foscari Doge of Venice
 	}
 
 	trigger = {
-		has_variable = ven_foscari_favor
+		custom_tooltip = {
+			text = variable_ven_foscari_favor_tt
+			has_variable = ven_foscari_favor
+		}
 		has_ruler = yes
 		dynasty_exists = foscari_dynasty
 		ruler.dynasty ?= dynasty:foscari_dynasty
@@ -5573,7 +5694,12 @@ flavor_ven.1000 = {
 		NOT = {	is_rival_of = c:MAM	}
 		NOT = {	is_at_war_with = c:MAM	}
 		location:alexandria = {	owner = c:MAM }
-		c:MAM = { has_variable = MAM_POR_conflict }
+		c:MAM = {
+			custom_tooltip = {
+				text = variable_MAM_POR_conflict_tt
+				has_variable = MAM_POR_conflict
+			}
+		}
 		location:alula.market.most_powerful_merchant = c:POR
 		location:alexandria.market.most_powerful_merchant = c:VEN
 	}

@@ -17,8 +17,8 @@ template default_bridge {
 template under_construction_building {
 	default_variables = {}
 	code [[
-		port = {
-			order = 6
+		under_construction = {
+			order = 30
 			contributors = {
 				has_building_under_construction = 1.0
 				has_rgo_under_construction = 1.0
@@ -43,8 +43,45 @@ template under_construction_building {
 			}
 			mesh_list = @mesh_list
 			
-			filter_func = next_to_anything_filter
-			weight_func = far_from_everything_weights
+			filter_func = use_in_construction_position
+			weight_func = flat_weights
+		}
+	]]
+}
+
+template under_construction_building_large {
+	default_variables = {}
+	code [[
+		under_construction_large = {
+			order = 31
+			size = large
+			contributors = {
+				has_building_under_construction = 1.0
+				has_rgo_under_construction = 1.0
+	
+				is_under_construction:castle = -1.0
+				is_under_construction:fortress = -1.0
+				is_under_construction:star_fort = -1.0
+				is_under_construction:bastion = -1.0
+				
+				is_under_construction:naval_base = -1.0
+				is_under_construction:grand_shipyard = 1.0
+				is_under_construction:venetian_arsenal = -1.0
+				is_under_construction:shipyard = -1.0
+				is_under_construction:dry_dock = -1.0
+				is_under_construction:ribeira_das_naus = -1.0
+				is_under_construction:imperial_halic_shipyards = -1.0
+				is_under_construction:copenhagen_dockyard = -1.0
+				is_under_construction:barcelona_royal_shipyard = -1.0
+				is_under_construction:royal_atarazanas_seville = -1.0
+				is_under_construction:dry_dock = -1.0
+				has_port_building_under_construction = -1.0
+			}
+			mesh_list = @mesh_list
+			
+			filter_func = use_in_construction_position
+			weight_func = flat_weights
+			size = large
 		}
 	]]
 }
@@ -2078,6 +2115,7 @@ template player_buildings {
 		load_template training_fields {mesh_list = @training_fields_meshes}
 		load_template under_construction_port {mesh_list = @under_construction_port_meshes}
 		load_template under_construction_building {mesh_list = @under_contruction_meshes}
+		load_template under_construction_building_large {mesh_list = @under_contruction_meshes}
 		load_template under_construction_fort {mesh_list = @under_construction_fort_meshes}
 		
 		load_template large_city_walls {}

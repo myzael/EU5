@@ -258,6 +258,7 @@ flavor_dlh.2 = {
 
 	option = {
 		name = flavor_dlh.2.c
+		high_risk_option = yes
 		trigger = {
 			is_ai = no
 		}
@@ -466,6 +467,7 @@ flavor_dlh.3 = {
 
 	option = {
 		name = flavor_dlh.3.c
+		high_risk_option = yes
 		trigger = {
 			is_ai = no
 		}
@@ -647,6 +649,7 @@ flavor_dlh.4 = {
 
 	option = {
 		name = flavor_dlh.4.c
+		high_risk_option = yes
 		trigger = {
 			is_ai = no
 		}
@@ -851,6 +854,7 @@ flavor_dlh.5 = {
 
 	option = {
 		name = flavor_dlh.5.c
+		high_risk_option = yes
 		trigger = {
 			is_ai = no
 		}
@@ -1301,7 +1305,8 @@ flavor_dlh.10 = {
 	trigger = {
 		exists = international_organization:middle_kingdom
 		exists = international_organization:middle_kingdom.leader_country
-		ruler ?= character:dlh_muhammad_bin_tughluq	
+		ruler ?= character:dlh_muhammad_bin_tughluq
+		within_diplomatic_range = international_organization:middle_kingdom.leader_country
 	}
 
 	immediate = {
@@ -2986,7 +2991,10 @@ flavor_dlh.34 = {
 		}
 
 		any_cabinet_character ?= {
-			has_variable = dlh_grand_vizier
+			custom_tooltip = {
+				text = variable_dlh_grand_vizier_tt
+				has_variable = dlh_grand_vizier
+			}
 		}
 	}
 
@@ -3151,7 +3159,10 @@ flavor_dlh.35 = {
 			is_starving = yes
 		}
 		any_cabinet_character ?= {
-			has_variable = dlh_grand_vizier
+			custom_tooltip = {
+				text = variable_dlh_grand_vizier_tt
+				has_variable = dlh_grand_vizier
+			}
 		}
 	}
 
@@ -3206,7 +3217,10 @@ flavor_dlh.36 = {
 
 	trigger = {
 		any_cabinet_character ?= {
-			has_variable = dlh_grand_vizier
+			custom_tooltip = {
+				text = variable_dlh_grand_vizier_tt
+				has_variable = dlh_grand_vizier
+			}
 		}	
 	}
 
@@ -3265,7 +3279,10 @@ flavor_dlh.37 = {
 
 	trigger = {
 		any_cabinet_character ?= {
-			has_variable = dlh_grand_vizier
+			custom_tooltip = {
+				text = variable_dlh_grand_vizier_tt
+				has_variable = dlh_grand_vizier
+			}
 		}
 
 		"religion_percentage_in_country(religion:hindu)" > 0.5
@@ -3348,7 +3365,10 @@ flavor_dlh.38 = {
 	trigger = {
 		government_type = government_type:monarchy
 		any_cabinet_character ?= {
-			has_variable = dlh_grand_vizier
+			custom_tooltip = {
+				text = variable_dlh_grand_vizier_tt
+				has_variable = dlh_grand_vizier
+			}
 		}
 
 		"estate_power(estate_type:crown_estate)" < 0.2
@@ -4873,7 +4893,7 @@ flavor_dlh.60 = {
 		is_situation_active = situation:fall_of_delhi
 		area:nepal_area = {
 			any_location_in_area = {
-				percent >= 0.3
+				count >= 18
 				owner ?= ROOT
 			}
 		}
@@ -5194,7 +5214,6 @@ flavor_dlh.65 = {
 	title = flavor_dlh.65.title
 	desc = flavor_dlh.65.desc
 	outcome = neutral
-	randomlog = yes # Tracking Desync 20250825
 
 	trigger = {
 		country_exists = c:CHG
@@ -5493,6 +5512,7 @@ flavor_dlh.1001 = {
 
 	option = {
 		name = flavor_dlh.1001.b
+		high_risk_option = yes
 
 		trigger = {
 			is_ai = no
@@ -5502,7 +5522,7 @@ flavor_dlh.1001 = {
 			target = scope:target_country2
 			type = casus_belli:cb_lodi_claims
 		}
-		
+
 		change_player = scope:target_country2
 	}
 }

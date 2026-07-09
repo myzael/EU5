@@ -122,6 +122,7 @@ types TitusStuff
 	type button_select_arrow = button_icon {
 		size = { 20 20 }
 		texture = "gfx/interface/buttons/flats/button_simple.dds"
+		enabled = "[GuiGameRule.GetRule.IsGameRuleEnabled]"
 		modify_texture = {
 			using = overlay_stone_texture
 			blend_mode = overlay
@@ -146,19 +147,11 @@ types TitusStuff
 				blockoverride "tooltip_content" {
 					TooltipTextBlock = {
 						blockoverride "text" {
-							text = "GAME_RULES_APPLY"
+							text = "[Select_CString(GuiGameRule.GetRule.IsGameRuleEnabled,Localize('GAME_RULES_APPLY'),GuiGameRule.GetRule.GetGameRuleEnabledTooltip)]"
 						}
 					}
 				}
 			}
 		}
 	}
-}
-
-# Standard margins for windows, to get inside the standard decoration gfx around the frame.
-template Window_Margins {
-	margin_left = 35
-	margin_right = 35
-	margin_top = 18
-	margin_bottom = 20
 }

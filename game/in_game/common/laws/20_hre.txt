@@ -390,7 +390,10 @@ military_contribution = {
 			has_currency_to_vote_for_law = { value = imperial_authority_standard_law }
 			international_organization_has_law = law:military_contribution
 			hre_can_select_adjacent_reform_level = { law = law:military_contribution policy = policy:imperial_armory_implementation }
-			has_enabled_currency = gold
+			custom_tooltip = {
+				text = has_enabled_hre_treasury_tt
+				has_enabled_currency = gold
+			}
 		}
 		manpower = yes
 		
@@ -442,7 +445,10 @@ military_contribution = {
 			has_currency_to_vote_for_law = { value = imperial_authority_standard_law }
 			international_organization_has_law = law:military_contribution
 			hre_can_select_adjacent_reform_level = { law = law:military_contribution policy = policy:imperial_armory_expanded }
-			has_enabled_currency = gold
+			custom_tooltip = {
+				text = has_enabled_hre_treasury_tt
+				has_enabled_currency = gold
+			}
 		}
 		manpower = yes
 		
@@ -499,7 +505,10 @@ military_contribution = {
 			has_currency_to_vote_for_law = { value = imperial_authority_controversial_law }
 			international_organization_has_law = law:military_contribution
 			hre_can_select_adjacent_reform_level = { law = law:military_contribution policy = policy:imperial_standing_army }
-			has_enabled_currency = gold
+			custom_tooltip = {
+				text = has_enabled_hre_treasury_tt
+				has_enabled_currency = gold
+			}
 		}
 		manpower = yes
 		
@@ -556,7 +565,10 @@ military_contribution = {
 			has_currency_to_vote_for_law = { value = imperial_authority_opposed_law }
 			international_organization_has_law = law:military_contribution
 			hre_can_select_adjacent_reform_level = { law = law:military_contribution policy = policy:great_imperial_army }
-			has_enabled_currency = gold
+			custom_tooltip = {
+				text = has_enabled_hre_treasury_tt
+				has_enabled_currency = gold
+			}
 		}
 		manpower = yes
 		
@@ -796,12 +808,9 @@ imperial_succession_law = {
 	hre_pragmatic_sanction_policy = {
 		allow = {
 			has_currency_to_vote_for_law = { value = imperial_authority_opposed_law }
-			OR = {
-				international_organization_has_policy = policy:hre_pragmatic_sanction_policy
-				leader_country ?= {
-					heir ?= {
-						is_female = yes
-					}
+			leader_country ?= {
+				heir ?= {
+					is_female = yes
 				}
 			}
 		}
@@ -1463,7 +1472,7 @@ electorate_organization_law = {
 					limit = { "num_countries_with_special_status(special_status:elector)" >= "max_countries_with_special_status(special_status:elector)" }
 					ordered_country_with_special_status_of_type = {
 						type = elector
-						order_by = { value = great_power_score multiply = -1 }
+						order_by = { value = country_economical_base multiply = -1 }
 						check_range_bounds = no
 						max = 1
 						root = { international_organization_remove_special_status = { type = special_status:elector country = prev } }
@@ -1477,7 +1486,7 @@ electorate_organization_law = {
 					limit = { "num_countries_with_special_status(special_status:archbishop_elector)" >= "max_countries_with_special_status(special_status:archbishop_elector)" }
 					ordered_country_with_special_status_of_type = {
 						type = archbishop_elector
-						order_by = { value = great_power_score multiply = -1 }
+						order_by = { value = country_economical_base multiply = -1 }
 						check_range_bounds = no
 						max = 1
 						root = { international_organization_remove_special_status = { type = special_status:archbishop_elector country = prev } }
@@ -1585,9 +1594,6 @@ secularized_electors_law = {
 		}
 		on_deactivate = {
 		}
-		international_organization_modifier = {
-			#nothing changes
-		}
 		country_modifier = {
 			potential_trigger = {
 				# Emperor Modifier
@@ -1635,8 +1641,6 @@ secularized_electors_law = {
 			hre_on_reform_level_passed_effect = { law_imperial_authority_cost = imperial_authority_standard_law }
 			hre_on_reform_level_passed_opinion_effect_all_members = { strength = controversial }
 		}
-		international_organization_modifier = {
-		}
 		country_modifier = {
 			potential_trigger = {
 				# Emperor Modifier
@@ -1647,7 +1651,8 @@ secularized_electors_law = {
 			}
 			monthly_imperial_authority = monthly_imperial_authority_mild_penalty
 			monthly_religious_influence = -0.2
-
+		}
+		country_modifier = {
 			potential_trigger = {
 				# Emperor Modifier
 				is_leader_of_international_organization = scope:recipient
@@ -1916,8 +1921,8 @@ free_city_law = {
 									add = {
 										value = "bias_value(antagonism_broke_subject_union)"
 										multiply = {											
-											value = prev.great_power_score
-											divide = 200
+											value = prev.country_economical_base
+											divide = 2000
 										}
 									}
 								}
@@ -2025,8 +2030,8 @@ free_city_law = {
 									add = {
 										value = "bias_value(antagonism_broke_subject_union)"
 										multiply = {											
-											value = prev.great_power_score
-											divide = 200
+											value = prev.country_economical_base
+											divide = 2000
 										}
 									}
 								}
@@ -2247,7 +2252,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#hurts for all members
-			stability_cost = 0.025
+			stability_cost_efficiency = -0.025
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2309,7 +2314,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.025
+			stability_cost_efficiency = 0.05
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2385,7 +2390,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.05
+			stability_cost_efficiency = 0.1
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2461,7 +2466,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.10
+			stability_cost_efficiency = 0.2
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2540,7 +2545,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.15
+			stability_cost_efficiency = 0.3
 		}
 		# How much the Emperor wants to propose a policy
 		wants_propose_policy = {
@@ -2621,7 +2626,7 @@ landfriede_law = {
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.2
+			stability_cost_efficiency = 0.4
 		}
 		international_organization_modifier = {
 			enforced_internal_peace = yes
@@ -3207,13 +3212,7 @@ power_of_the_emperor_law = {
 				}
 			}
 		}
-		location_modifier = {
-			potential_trigger = {
-				custom_tooltip = {
-					text = hre_location_bonus_tt
-					is_owned_by_international_organization = international_organization:hre
-				}
-			}
+		owned_location_modifier = {
 			#applies to all locations in the hre
 			local_institution_growth_modifier = 0.1
 		}
@@ -3286,19 +3285,13 @@ power_of_the_emperor_law = {
 				}
 			}
 		}
-		location_modifier = {
-			potential_trigger = {
-				custom_tooltip = {
-					text = hre_location_bonus_tt
-					owner = { is_member_of_international_organization = international_organization:hre }
-				}
-			}
+		owned_location_modifier = {
 			#applies to all locations in the hre
 			local_institution_growth_modifier = 0.1
 		}
 		country_modifier = {
 			#benefits for all members
-			stability_cost = -0.2
+			stability_cost_efficiency = 0.4
 		}
 		country_modifier = {
 			potential_trigger = {
@@ -3333,6 +3326,129 @@ power_of_the_emperor_law = {
 				value = 10
 				multiply = scope:recipient.modifier:hre_emperor_comfort_policies_counter
 				multiply = -1
+			}
+		}
+	}
+}
+
+#Imperial Circles Law
+imperial_circles_law = {
+	type = international_organization
+
+	potential = {
+		international_organization_type = international_organization_type:hre
+		hre_has_enabled_all_imperial_laws = yes
+	}
+	allow = {
+		hre_allowed_emperor_reform_proposal = yes
+	}
+	custom_tags = { forbids_no_policy }
+	locked = {
+		custom_description = {
+			text = hre_has_locked_law
+			subject = law:imperial_circles_law
+			OR = {
+				circles_are_active = yes
+				hre_io_is_in_formation_period = yes
+			}
+		}
+	}
+
+	no_imperial_circles = {
+		level = 1
+
+		international_organization_modifier = {
+			pure_tooltip_entry = pte_no_imperial_circles
+		}
+
+		country_modifier = {
+			#Emperor Modifier
+			potential_trigger = {
+				is_leader_of_international_organization = scope:recipient
+			}
+			monthly_imperial_authority = monthly_imperial_authority_mild_bonus
+		}
+
+		# How much the Emperor wants to propose a policy
+		wants_propose_policy = {
+			subtract = {
+				desc = "POLICY_BIAS_LEADER_OPPOSES"
+				value = 200
+			}
+		}
+		# How much the princes want to vote for / against the policy
+		wants_this_policy_bias = {
+			add = {
+				desc = "POLICY_RESPECTS_SOVEREIGNTY"
+				value = 50
+			}
+		}
+	}
+
+	imperial_circles_established = {
+		level = 2
+
+		allow = {
+			hre_allowed_emperor_reform_proposal = yes
+			has_currency_to_vote_for_law = { value = 50 }
+		}
+
+		on_activate = {
+			hre_start_circle_formation = yes
+			hre_on_reform_level_passed_effect = { law_imperial_authority_cost = imperial_authority_standard_law }
+		}
+
+		international_organization_modifier = {
+		}
+
+		country_modifier = {
+			#Emperor Modifier
+			potential_trigger = {
+				is_leader_of_international_organization = scope:recipient
+			}
+			monthly_imperial_authority = monthly_imperial_authority_strong_penalty
+		}
+
+		country_modifier = {
+			#Circle Leader Modifier
+			potential_trigger = {
+				is_imperial_circle_leader = yes
+			}
+			diplomatic_reputation = 1
+			diplomatic_capacity = 1
+		}
+		country_modifier = {
+			#Member Modifier
+			potential_trigger = {
+				is_imperial_circle_leader = no
+				is_member_of_international_organization = scope:recipient
+				NOT = { is_leader_of_international_organization = scope:recipient }
+			}
+			monthly_prestige = monthly_prestige_weak_bonus
+		}
+
+		# How much the Emperor wants to propose a policy
+		wants_propose_policy = {
+			add = {
+				desc = "POLICY_BIAS_LEADER_WANTS"
+				value = 150
+			}
+			add = hre_default_emperor_policy_desire
+		}
+		# How much the princes want to vote for / against the policy
+		wants_this_policy_bias = {
+			add = hre_default_policy_opinion
+			subtract = {
+				desc = "POLICY_POPULARITY_TO_ENACT"
+				value = 25
+			}
+		}
+		# How much the princes want to keep this policy
+		wants_keep_policy = {
+			add = hre_default_keep_policy_opinion
+			add = {
+				desc = "POLICY_POPULARITY_TO_KEEP"
+				value = 10
 			}
 		}
 	}

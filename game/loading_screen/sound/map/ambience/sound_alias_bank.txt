@@ -49,6 +49,10 @@ masDataCityDensity = {
     event = "silence"
 }
 
+masDataWinterLevel = {
+    parameter= "masDataWinterLevel"
+    event = "silence"
+}
 
 
 

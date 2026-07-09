@@ -474,7 +474,7 @@ expand_food_stockpiles = {
 	estate = peasants_estate
 
 	modifier_when_in_debate = {
-		food_purchase_cost = -0.5
+		food_purchase_efficiency = 1
 	}
 
 	allow = {
@@ -484,6 +484,7 @@ expand_food_stockpiles = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 		}
@@ -500,6 +501,7 @@ expand_food_stockpiles = {
 							OR = {
 								location_rank = location_rank:town
 								location_rank = location_rank:city
+								location_rank = location_rank:megalopolis
 							}
 						}
 					}
@@ -533,6 +535,7 @@ expand_food_stockpiles = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			construct_building = {

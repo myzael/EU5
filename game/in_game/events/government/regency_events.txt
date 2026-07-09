@@ -5,12 +5,15 @@ regencies.1 = {
 
 	title = regencies.1.title
 	desc = {
-		triggered_desc = {
-			trigger = { exists = previous_ruler }
-			desc = regencies.1.desc
-		}
-		triggered_desc = {
-			desc = regencies.1.desc.fallback
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = previous_ruler }
+				desc = regencies.1.desc
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = regencies.1.desc.fallback
+			}
 		}
 	}
 	outcome = neutral
@@ -33,6 +36,16 @@ regencies.1 = {
 		}
 		trigger_if = {
 			limit = { has_policy = sharia_law_policy }
+			regent = { is_female = no }
+		}
+		trigger_if = {
+			limit = {
+				government_type = government_type:theocracy
+				NOR = {
+					succession_law = heir_selection:abbess_elective_female
+					succession_law = heir_selection:matrilineal_non_exclusive
+				}
+			}
 			regent = { is_female = no }
 		}
 	}
@@ -101,16 +114,17 @@ regencies.1 = {
 			}
 			exists = scope:target_previous_ruler
 			scope:target_previous_ruler = { has_dynasty = yes }
+			exists = scope:target_character
 			scope:target_character = {
-				OR = { 
+				OR = {
 					has_dynasty = no
 					dynasty != scope:target_previous_ruler.dynasty
 				}
 				#Make sure that the new "parent" is not a descendant of the new "kid"
 				NOT = {
 					any_descendant = {
-						this = scope:target_previous_ruler 
-					} 
+						this = scope:target_previous_ruler
+					}
 				}
 			}
 		}

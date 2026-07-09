@@ -267,6 +267,7 @@ scripted_trigger is_port_valid_for_stay = {
 		is_capital = yes
 		location_rank = location_rank:town
 		location_rank = location_rank:city
+		location_rank = location_rank:megalopolis
 	}
 }
 
@@ -3234,9 +3235,20 @@ flavor_chi.2215 = {
 		}
 		
 		leave_all_wars_with = scope:target_country
-		declare_war_with_cb = {
-			target = scope:target_country
-			type = casus_belli:cb_insulted_us
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = scope:target_country }
+			}
+			declare_war_with_cb = {
+				target = scope:target_country
+				type = casus_belli:cb_insulted_us
+			}
+		}
+		else = {
+			add_casus_belli = {
+				target = scope:target_country
+				type = casus_belli:cb_insulted_us
+			}
 		}
 
 		increase_opinion_of_expedition_greatly = yes

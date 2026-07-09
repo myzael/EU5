@@ -1,7 +1,21 @@
 pdxmesh = {
 	name = "environment_resource_tree_apple_ungathered_mesh"
 	file = "environment_resource_tree_apple_ungathered.mesh"
-	scale = 1.0
+
+	lod_percentages = {
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
+	}
+
+	meshsettings = {
+		name = "environment_resource_tree_apple_ungatheredShape"
+		index = 0
+		texture_diffuse = "apple_tree_diffuse.dds"
+		texture_normal = "apple_tree_normal.dds"
+		texture_specular = "apple_tree_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
 
 	meshsettings = {
 		name = "environment_resource_tree_apple_ungathered_decalShape"
@@ -16,7 +30,7 @@ pdxmesh = {
 	}
 
 	meshsettings = {
-		name = "environment_resource_tree_apple_ungatheredShape"
+		name = "environment_resource_tree_apple_ungathered_01Shape"
 		index = 0
 		texture_diffuse = "apple_tree_diffuse.dds"
 		texture_normal = "apple_tree_normal.dds"
@@ -26,15 +40,26 @@ pdxmesh = {
 	}
 
 	meshsettings = {
-		name = "environment_resource_tree_apple_ungatheredShape"
-		index = 1
-		texture_diffuse = "tree_wood_diffuse.dds"
-		texture_normal = "tree_wood_normal.dds"
-		texture_specular = "tree_wood_properties.dds"
-		shader = "tree"
-		shader_file = "gfx/FX/tree.shader"
+		name = "environment_resource_tree_apple_ungathered_decal_01Shape"
+		index = 0
+		texture_diffuse = "decal_phong_diffuse.dds"
+		texture_diffuse = "resource_tree_apple_decal_diffuse.dds"
+		texture_normal = "resource_tree_apple_decal_normal.dds"
+		texture_specular = "resource_tree_apple_decal_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "Decals"
 	}
 
+	meshsettings = {
+		name = "environment_resource_tree_apple_ungathered_02Shape"
+		index = 0
+		texture_diffuse = "apple_tree_diffuse.dds"
+		texture_normal = "apple_tree_normal.dds"
+		texture_specular = "apple_tree_properties.dds"
+		shader = "snap_to_terrain_alpha_to_coverage"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
 }
 
 entity = {

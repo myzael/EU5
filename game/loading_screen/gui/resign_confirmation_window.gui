@@ -67,8 +67,10 @@ window = {
 					hbox = {
 						spacing = 10
 						button_checkbox = {
-							checked = "[Or( ResignConfirmationWindow.ShouldSave, GameIsIronman )]"
-							onclick = "[GameResignConfirmationWindow.ToggleShouldSaveAndRemember]"
+							down = "[Or( ResignConfirmationWindow.ShouldSave, GameIsIronman )]"
+							action_tooltip = {
+								on_action = "[GameResignConfirmationWindow.ToggleShouldSaveAndRemember]"
+							}
 							enabled = "[Not( GameIsIronman )]"
 							visible = "[Not( GameIsMultiplayer )]"
 							tooltip_enabled = no
@@ -129,10 +131,13 @@ window = {
 						size = { -1 40 }
 
 						text = "CANCEL"
+						action_tooltip = {
+							title = "CANCEL"
+							on_action = "[ResignConfirmationWindow.Cancel]"
+						}
+						tooltipwidget = { BasicFunctionalTooltip = {} }
 						input_action = "close_window"
 						use_global_input_instance = yes
-						tooltip_enabled = no
-						onclick = "[ResignConfirmationWindow.Cancel]"
 						using = snd_UI_reject
 					}
 				}

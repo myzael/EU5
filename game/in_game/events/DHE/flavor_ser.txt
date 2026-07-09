@@ -24,7 +24,10 @@ flavor_ser.10 = { #The Weakness of [ROOT.GetRuler.GetName]
 	}
 
 	trigger = {
-		NOT = { has_variable = had_serbian_disaster_variable }
+		custom_tooltip = {
+			text = variable_had_serbian_disaster_variable_tt
+			NOT = { has_variable = had_serbian_disaster_variable }
+		}
 		government_type = government_type:monarchy
 		has_ruler = yes
 		OR = {
@@ -213,7 +216,10 @@ flavor_ser.11 = { #The Nobility's Bid for Power
 	}
 
 	trigger = {
-		NOT = { has_variable = had_serbian_disaster_variable }
+		custom_tooltip = {
+			text = variable_had_serbian_disaster_variable_tt
+			NOT = { has_variable = had_serbian_disaster_variable }
+		}
 		OR = {
 			"estate_power(estate_type:nobles_estate)" >= 0.5
 			estate_tax_percentage:nobles_estate >= 0.5
@@ -411,7 +417,10 @@ flavor_ser.12 = { #The Fleeting Control of the Crown
 	}
 
 	trigger = {
-		NOT = { has_variable = had_serbian_disaster_variable }
+		custom_tooltip = {
+			text = variable_had_serbian_disaster_variable_tt
+			NOT = { has_variable = had_serbian_disaster_variable }
+		}
 		OR = {
 			ruler ?= {
 				total_abilities <= 100
@@ -751,6 +760,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 					name = seat
 					value = scope:selected_location
 				}
+				apply_independent_patriarchate_default_policies = yes
 			}
 			drop_antagonism_bomb = {
 				target = capital
@@ -1594,7 +1604,10 @@ flavor_ser.91 = { #The Resava School
 		owns = location:jagodina
 		location:jagodina = {
 			has_building_with_at_least_one_level = orthodox_monastery
-			has_variable = manasija_built
+			custom_tooltip = {
+				text = variable_manasija_built_tt
+				has_variable = manasija_built
+			}
 		}
 	}
 
@@ -1619,7 +1632,7 @@ flavor_ser.91 = { #The Resava School
 				limit = {
 					location_rank = location_rank:rural_settlement
 				}
-				change_location_rank = location_rank:town
+				change_location_rank_effect = { location_rank = location_rank:town }
 			}
 		}
 	}
@@ -1700,6 +1713,12 @@ flavor_ser.110 = { #Novo Brdo grows
 	outcome = neutral
 
 	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = SER
+		from = 1337.1.1
+		to = 1400.1.1
+		monthly_chance = 1
+	}
 
 	trigger = {
 		owns = location:novo_brdo
@@ -1708,6 +1727,7 @@ flavor_ser.110 = { #Novo Brdo grows
 			NOR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 	}
@@ -1728,7 +1748,7 @@ flavor_ser.110 = { #Novo Brdo grows
 				limit = {
 					location_rank = location_rank:rural_settlement
 				}
-				change_location_rank = location_rank:town
+				change_location_rank_effect = { location_rank = location_rank:town }
 			}
 			change_development  = development_severe_bonus
 			change_prosperity = prosperity_mild_bonus
@@ -2032,7 +2052,10 @@ flavor_ser.160 = { #Battle of Kosovo
 	}
 
 	trigger = {
-		has_variable = battle_of_kosovo_var
+		custom_tooltip = {
+			text = variable_battle_of_kosovo_var_tt
+			has_variable = battle_of_kosovo_var
+		}
 		is_at_war_with = c:TUR
 	}
 
@@ -2213,7 +2236,10 @@ flavor_ser.200 = { #Vidovdan
 	}
 
 	trigger = {
-		has_variable = vidovdan_variable
+		custom_tooltip = {
+			text = variable_vidovdan_variable_tt
+			has_variable = vidovdan_variable
+		}
 	}
 
 	illustration_tags = {
@@ -2264,6 +2290,7 @@ flavor_ser.210 = { # The Novo Brdo Code
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 		has_advance = serbian_mining
@@ -2576,14 +2603,20 @@ flavor_ser.260 = { #The Secession of Zeta
 			target = c:ZTA
 			type = casus_belli:cb_annex
 		}
-		declare_war_with_cb = {
-			target = c:ZTA
-			type = casus_belli:cb_annex
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = c:ZTA }
+			}
+			declare_war_with_cb = {
+				target = c:ZTA
+				type = casus_belli:cb_annex
+			}
 		}
 	}
-	
+
 	option = {
 		name = flavor_ser.260.c
+		high_risk_option = yes
 		add_stability = stability_severe_penalty
 		add_legitimacy = legitimacy_severe_penalty
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }

@@ -26,6 +26,7 @@ cb_border_war = {
 
 # CB for Emperor against HRE members that refuse religious conformance
 cb_religious_conformance = {
+	years = 25
 	create_visible = {
 		always = no
 	}
@@ -38,6 +39,7 @@ cb_religious_conformance = {
 }
 
 cb_annex = {
+	years = 15
 	create_visible = {
 		 always = no
 	}
@@ -99,11 +101,42 @@ cb_sco_invade_england = {
 }
 
 cb_subjugation = {
+	years = 15
 	create_visible = {
 		always = no
 	}
 	ai_subjugation_desire = 1000
 	ai_cede_location_desire = -1000
 
+	war_goal_type = take_capital_subjugation
+}
+
+cb_scaligeri_war ={
+	create_visible = {
+		always = no
+	}
+
+	additional_war_enthusiasm = 0.5
+
+	cut_down_in_size_cb = yes
+	allow_release_areas = yes
+	allow_separate_peace = no
+
+	war_goal_type = superiority_coalition_scaliger_war
+
+	ai_wait_with_sending_peace = {
+		scope:recipient.capital.controller = scope:recipient
+		calc_true_if = {
+			amount < 2
+			location:brescia.controller = scope:recipient
+			location:treviso.controller = scope:recipient
+			location:lucca.controller = scope:recipient
+		}
+	}
+}
+
+cb_iw_annexation = {
+	create_visible = { always = no }
+	create_enabled = { always = no }
 	war_goal_type = take_capital_subjugation
 }

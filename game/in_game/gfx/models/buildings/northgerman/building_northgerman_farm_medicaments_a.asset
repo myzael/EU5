@@ -1,10 +1,36 @@
 pdxmesh = {
 	name = "building_northgerman_farm_medicaments_a_mesh"
 	file = "building_northgerman_farm_medicaments_a.mesh"
-	scale = 1.2
+
+	lod_percentages = {
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
+	}
 
 	meshsettings = {
-		name = "building_northgerman_farm_medicaments_aShape"
+		name = "|building_northgerman_farm_medicaments_a|LOD_0|building_northge"
+		index = 0
+		texture_diffuse = "building_northgerman_farm_medicaments_diffuse.dds"
+		texture_normal = "building_northgerman_farm_medicaments_normal.dds"
+		texture_specular = "building_northgerman_farm_medicaments_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "|building_northgerman_farm_medicaments_a|LOD_1|building_northge"
+		index = 0
+		texture_diffuse = "building_northgerman_farm_medicaments_diffuse.dds"
+		texture_normal = "building_northgerman_farm_medicaments_normal.dds"
+		texture_specular = "building_northgerman_farm_medicaments_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "|building_northgerman_farm_medicaments_a|LOD_2|building_northge"
 		index = 0
 		texture_diffuse = "building_northgerman_farm_medicaments_diffuse.dds"
 		texture_normal = "building_northgerman_farm_medicaments_normal.dds"

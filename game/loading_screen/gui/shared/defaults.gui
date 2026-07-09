@@ -137,6 +137,19 @@ types Default
 		effectname = "NoHighlight"
 	}
 
+	type barslice = barslice {
+		focuspolicy = click
+		gfxtype = barslicegfx
+		shaderfile = "gfx/FX/pdxgui_piechart.shader"
+		alwaystransparent = no
+		mask = "gfx/interface/default_barchart_mask.dds"
+		using = tooltip_se
+	}
+
+	type barslice_no_highlight = barslice {
+		effectname = "NoHighlight"
+	}
+
 	type button = uberbutton {
 		focuspolicy = click
 		gfxtype = buttongfx
@@ -305,18 +318,32 @@ types Default
 		using = tooltip_se
 	}
 
+	type scrollvbox = scrollvbox {
+		focuspolicy = click
+		scissor = yes
+		using = tooltip_se
+	}
+
 	type piechart = piechart {
+		focuspolicy = click
+		using = tooltip_se
+	}
+
+	type barchart = barchart {
 		focuspolicy = click
 		using = tooltip_se
 	}
 
 	type ecscameracontrolwidget = cameracontrolwidget {
 		gfxtype = ecs_scene_viewer_gfx
-		shaderfile = "gfx/FX/pdxgui_default.shader"
 
-		# effectname = "PdxGuiDefault"
-		# effectname = "PdxGuiPreMultipliedAlpha"
-		effectname = "PdxGuiDefaultNoAlpha"
+		block "camera_shader" {
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+
+			# effectname = "PdxGuiDefault"
+			# effectname = "PdxGuiPreMultipliedAlpha"
+			effectname = "PdxGuiDefaultNoAlpha"
+		}
 
 		block "enabled_input" {
 			enabled_input = no

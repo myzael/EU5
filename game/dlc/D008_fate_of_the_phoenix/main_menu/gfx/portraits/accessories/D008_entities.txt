@@ -181,3 +181,9 @@ female_clothes_byzantine_hellenistic_toga = {
 female_neckwear_byzantine_out_high_plates = {
     entity = { required_tags = ""           shared_pose_entity = torso       entity = female_neckwear_byzantine_out_high_plates_entity }
 }
+
+## Children
+
+girl_clothes_byzantine_noble_delmatikion = {
+    entity = { required_tags = ""           shared_pose_entity = torso       entity = girl_clothes_byzantine_noble_delmatikion_entity }
+}

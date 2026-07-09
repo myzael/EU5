@@ -67,7 +67,7 @@ template large_city_walls_under_construction
 			name = large_city_walls
 			order = -1
 			tower_separation = 7.0
-			area = 140.0
+			area = 120.0
 			contributors = 
 			{
 				is_under_construction_with_graphical_tag:large_city_walls = 1.0
@@ -126,7 +126,7 @@ template small_city_walls_under_construction
 			name = small_city_walls_under__construction
 			order = -1
 			tower_separation = 5.0
-			area = 50.0
+			area = 75.0
 			percentage_built = 1.0
 			contributors = 
 			{

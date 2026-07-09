@@ -108,7 +108,6 @@ flavor_mch.3 = {
 	
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1645.1.1
 		to = 1660.1.1
 		monthly_chance = 5
@@ -153,7 +152,6 @@ flavor_mch.4 = {
 	
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1770.1.1
 		to = 1800.1.1
 		monthly_chance = 5
@@ -259,7 +257,6 @@ flavor_mch.6 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -326,7 +323,10 @@ flavor_mch.7 = {
 		has_ruler = yes
 		ruler = {
 			mil >= 80
-			has_variable = mch_num_of_battles_won
+			custom_tooltip = {
+				text = variable_mch_num_of_battles_won_tt
+				has_variable = mch_num_of_battles_won
+			}
 			var:mch_num_of_battles_won >= 10
 		}
 	}
@@ -363,7 +363,6 @@ flavor_mch.8 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -439,7 +438,6 @@ flavor_mch.9 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -518,7 +516,6 @@ flavor_mch.10 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = MCH
-		tag = CHI
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -537,6 +534,7 @@ flavor_mch.10 = {
 	trigger = {
 		culture ?= { has_culture_group = culture_group:jurchen_group }
 		country_exists = c:KOR
+		NOT = { this = c:KOR }
 		is_leader_of_international_organization = international_organization:middle_kingdom
 		c:KOR = {
 			is_neighbor_of = ROOT
@@ -668,7 +666,6 @@ flavor_mch.12 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -721,7 +718,6 @@ flavor_mch.13 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -766,11 +762,12 @@ flavor_mch.13 = {
 		if = {
 			limit = {
 				scope:target_location = {
-					rank_index < 2
+					NOT = { location_rank = location_rank:city }
+					NOT = { location_rank = location_rank:megalopolis }
 				}
 			}
 			scope:target_location = {
-				change_location_rank = location_rank:city
+				change_location_rank_effect = { location_rank = location_rank:city }
 			}
 		}
 
@@ -797,7 +794,6 @@ flavor_mch.14 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -886,7 +882,6 @@ flavor_mch.15 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -894,7 +889,10 @@ flavor_mch.15 = {
 
 	trigger = {
 		culture ?= { has_culture_group = culture_group:jurchen_group }
-		has_variable = chinese_banners
+		custom_tooltip = {
+			text = variable_chinese_banners_tt
+			has_variable = chinese_banners
+		}
 		2000 <= { #at least 2M pops of chinese culture group in our country
 			value = this.total_population
 			multiply = "culture_group_percentage_in_country(culture_group:chinese_group)"
@@ -947,7 +945,6 @@ flavor_mch.16 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10
@@ -1050,7 +1047,6 @@ flavor_mch.18 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = CHI
-		tag = MCH
 		from = 1337.1.1
 		to = 1821.1.1
 		monthly_chance = 10

@@ -3,7 +3,7 @@ pdxmesh = {
 	file = "building_northgerman_gather_mines_alum.mesh"
 
 	lod_percentages = {
-		lod = { index = 1 percent = 5.0 }
+		lod = { index = 1 percent = 10.0 }
 		lod = { index = 2 percent = 2.0 }
 	}
 

@@ -120,7 +120,6 @@ flavor_fra_sco.101 = {
 }
 
 flavor_fra_sco.102 = { # David II comes of Age
-	randomlog = yes  # Tracking desync 20251121
 	hide_portraits = yes
 	type = country_event
 	title = flavor_fra_sco.102.title
@@ -153,9 +152,15 @@ flavor_fra_sco.102 = { # David II comes of Age
 
 
 	trigger = {
-		has_variable = fra_asylum_for_david_II
+		custom_tooltip = {
+			text = variable_fra_asylum_for_david_II_tt
+			has_variable = fra_asylum_for_david_II
+		}
 		OR = {
-			has_variable = scotland_did_not_extend_regency
+			custom_tooltip = {
+				text = variable_scotland_did_not_extend_regency_tt
+				has_variable = scotland_did_not_extend_regency
+			}
 			character:sco_david_ii = {
 				is_alive = yes
 				owner = ROOT
@@ -805,7 +810,10 @@ flavor_fra_sco.110 = { # Balliol prevails in Scotland ## France
 	trigger = {
 		tag = FRA
 		at_war = no
-		has_variable = balliol_accepts_fra_backing
+		custom_tooltip = {
+			text = variable_balliol_accepts_fra_backing_tt
+			has_variable = balliol_accepts_fra_backing
+		}
 		c:SCO = {
 			has_country_modifier = balliol_claims_to_scotland
 			at_war = no

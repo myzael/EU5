@@ -5,8 +5,13 @@ pdxmesh = {
 	animation = { id = "moving_animation" type = "cow_moving.anim" }
 	animation = { id = "idle_animation" type = "cow_idle.anim" }
 
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
 	meshsettings = {
-		name = "cowShape"
+		name = "LOD_0|cow|cowShape"
 		index = 0
 		texture_diffuse = "cow_brown_diffuse.dds"
 		texture_normal = "european_cow_normal.dds"
@@ -14,6 +19,27 @@ pdxmesh = {
 		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
 		shader = "snap_to_terrain_no_deform"
 	}
+
+	meshsettings = {
+		name = "LOD_1|cow|cowShape"
+		index = 0
+		texture_diffuse = "cow_brown_diffuse.dds"
+		texture_normal = "european_cow_normal.dds"
+		texture_specular = "cow_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_2|cow|cowShape"
+		index = 0
+		texture_diffuse = "cow_brown_diffuse.dds"
+		texture_normal = "european_cow_normal.dds"
+		texture_specular = "cow_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
 }
 
 entity = {

@@ -35,6 +35,7 @@ ConstantBuffer( GameSharedConstants )
 
 	float 		_GCBorderTakeTerraIncognitaIntoAccount;
 	int			_GCMapModeId;
+	float 		_GCTerrainHeightMultiplier;
 };
 
 	Code
@@ -130,6 +131,10 @@ ConstantBuffer( GameSharedConstants )
 		int GetMapModeId(){
 			return _GCMapModeId;
 		}
+
+		float GetTerrainHeightMultiplier(){
+			return _GCTerrainHeightMultiplier;
+		}
 	#else
 			float2 GetMapSize(){
 			return float2(1.0,1.0);
@@ -219,6 +224,9 @@ ConstantBuffer( GameSharedConstants )
 	
 		int GetMapModeId(){
 			return -1;
+		}
+		float GetTerrainHeightMultiplier(){
+			return 1.0;
 		}
 	#endif
 	]]

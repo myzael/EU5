@@ -1077,6 +1077,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3630068797	little_ice_age			\ev_illustrations\situations\little_ice_age	
 	3631085168	tatar_yoke			\ev_illustrations\international_organization_types\tatar_yoke	
 	3631504059	amb_fauna_seal			\ev_amb\on_map\fauna\amb_fauna_seal	
+	3635488664	loading_screen_florence_00			\ev_illustrations_loadingscreens\loading_screen_florence_00	
 	3639351143	byz_peasants_interior			\ev_illustrations\events\backgrounds\interior\byz_peasants_interior	Farm kitchen/workshop hall, tools and pots, wooden rafters and straw roof
 	3643837785	icon_goods_masonry			\ev_illustrations\trade_goods\icon_goods_masonry	
 	3650589018	amb_weather_storm_sea_medium			\ev_amb\on_map\weather\amb_weather_storm_sea_medium	Schematic: sea_storm_01_medium_schematic
@@ -1126,6 +1127,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3752859935	north_german_peasants_angry			\ev_illustrations\characters\peasants\north_german_peasants_angry	
 	3761947465	PANEL_MISSION_TASKS			\ev_amb_panels\full screen panels\PANEL_MISSION_TASKS	FULL SCREEN IMPORTANT Accessed via the Government > Missions Left Panel, then select a mission - either Economy, Politics, or Expansion, then click a mission task (e.g. “Humiliate a Rival” within “Expansion”). This opens a mission tree covering most of the screen.
 	3764976941	amb_weather_storm_sand_medium			\ev_amb\on_map\weather\amb_weather_storm_sand_medium	Schematic: sand_storm_01_medium_schematic
+	3767358077	PANEL_CHARACTER			\ev_amb_panels\PANEL_CHARACTER	
 	3770455060	mediterranean_sparse_ground3			\ev_illustrations_locations\ground3\mediterranean\mediterranean_sparse_ground3	
 	3770455062	mediterranean_sparse_ground1			\ev_illustrations_locations\ground1\mediterranean\mediterranean_sparse_ground1	
 	3771732630	indian_clergy_regular			\ev_illustrations\characters\clergy\indian_clergy_regular	
@@ -1666,6 +1668,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	266349593	EQ_amb_spl_library_quiet	Wwise Parametric EQ			
 	280400564	HamburgHarburgerSee_Slap_01_Stereo	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 2ms 
 	287670102	BlueNoise_Room_02_Org_Ambisonics	Wwise Convolution Reverb			NOTE: Sounds filtered    Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 6ms 
+	313590975	EQ_amb_spl_library_quietest	Wwise Parametric EQ			
 	319664383	HamburgParkhaus_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 4ms  
 	328281677	Flanger (Custom)	Wwise Flanger			
 	335857323	MediumChurch_Org_Ambisonics	Wwise Convolution Reverb			Impulse response created by Pinguin ing.büro © 2010 Pinguin ing.büro.  All rights reserved. IR Pre-delay: 5ms 
@@ -1825,6 +1828,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	853770014	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ambience\Master_Ambience_System_MAS\mas_birds\mas_birds\mas_birds_wetlands\silence\Silence	
 	855685927	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_military\OnMapUnits\Movement\char_move_action\silence\Silence	
 	870226632	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ambience\Ambience\OnMapObjects\Cities\city_pop_type\city_pop_type_clergy\silence\Silence	
+	906847232	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ambience\Ambience\contextual_ambience\loading_screen_bespoke\loading_screen_florence_00\florence_sculptor\florence_sculptor_sequence\florence_sculptor_sequence\mason_chiselling_debris\silence\Silence	
 	997492813	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ambience\Ambience\OnMapObjects\Cities\city_pop_type\city_pop_type_tribesmen\silence\Silence	
 	1019536621	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_military\OnMapUnits\Footsteps\char_move_step_hoof\char_move_step_hoof_horse_FIRSTSTEPTRIGGER\silence\Silence	
 	1028719261	Silence	Wwise Silence		\Actor-Mixer Hierarchy\wu_actor_ambience\Master_Ambience_System_MAS\mas_birds\mas_birds\mas_birds_field\silence\Silence	

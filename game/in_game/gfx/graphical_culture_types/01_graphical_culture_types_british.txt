@@ -1,10 +1,10 @@
 ﻿british_gfx = {
-	priority = 200 # region
+	priority = 220 # region (above western_european 200)
 	culture_tag = british_gfx
 }
 
 celtic_gfx = {
-	priority = 300 # region
+	priority = 350 # region (above french 300 for breton)
 	culture_tag = celtic_gfx
 }
 
@@ -26,8 +26,8 @@ irish_gfx = {
 	}
 }
 
-north_british_gfx = {  
-	priority = 300 # subregion
+north_british_gfx = {
+	priority = 375 # subregion grouping (above celtic 350, below scottish/english 400)
 	culture_tag = north_british_gfx
 }
 

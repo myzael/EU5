@@ -181,6 +181,16 @@ setting = {
 		"ultra" = {setting_value = {  enabled = yes }}
 	}
 	setting = {
+		name = "portraits_unsharp_masking"
+		category = "Graphics"
+		version=0
+		"very_low" = {setting_value = {  enabled = no }}
+		"low" = {setting_value = {  enabled = no }}
+		"medium" = {setting_value = {  enabled = no }}
+		"high" = {setting_value = {  enabled = yes }}
+		"ultra" = {setting_value = {  enabled = yes }}
+	}
+	setting = {
 		name = "gruesome_portraits_traits_visible"
 		category = "Graphics"
 		version=0
@@ -269,7 +279,17 @@ setting = {
 		"medium" = {setting_value = {  enabled = yes }}
 		"high" = {setting_value = {  enabled = yes }}
 		"ultra" = {setting_value = {  enabled = yes }}
-	}	
+	}
+	setting = {
+		name = "icon_scaling_quality"
+		category = "Graphics"
+		version = 1
+		"very_low" = {setting_value = { value = "none" }}
+		"low" = {setting_value = { value = "none" }}
+		"medium" = {setting_value = { value = "sharp" }}
+		"high" = {setting_value = { value = "sharp" }}
+		"ultra" = {setting_value = { value = "sharp" }}
+	}
 	setting = {
 		name = "single_unit_armies"
 		category = "Graphics"

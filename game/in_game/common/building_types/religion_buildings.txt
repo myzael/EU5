@@ -1,4 +1,5 @@
 ﻿monastery = {
+	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
@@ -60,6 +61,7 @@
 }
 
 fortress_church = {
+	audio_tier = 2
 	is_foreign = no
 	pop_type = clergy
 	max_levels = 1
@@ -77,10 +79,11 @@ fortress_church = {
 	country_potential = {
 		OR = {
 			modifier:can_have_monasteries = yes
-			religion = religion:orthodox
+			has_reform = government_reform:shield_of_the_faith_reform
+			religion ?= religion:orthodox
 		}
 	}
-
+	
 	location_potential = {
 		OR = {
 			location_building_level = {
@@ -91,12 +94,20 @@ fortress_church = {
 				building_type = building_type:orthodox_monastery
 				value > 0
 			}
+			owner ?= {
+				has_reform = government_reform:shield_of_the_faith_reform
+			}
 		}
 	}
 	remove_if = {
 		location = {
 			NOT = { has_building = building_type:monastery }
 			NOT = { has_building = building_type:orthodox_monastery }
+			}
+		NOT = {
+			location.owner = {
+				has_reform = government_reform:shield_of_the_faith_reform
+			}
 		}
 	}
 	graphical_tags = { medium_religious }
@@ -121,6 +132,7 @@ fortress_church = {
 }
 
 madrasa = {
+	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
@@ -141,7 +153,9 @@ madrasa = {
 
 	
 	country_potential = {
-		religion.group = religion_group:muslim
+		religion ?= {
+			group = religion_group:muslim
+		}
 	}
 	
 	unique_production_methods = {
@@ -175,6 +189,7 @@ madrasa = {
 }
 
 sufi_lodge = {
+	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
@@ -192,7 +207,9 @@ sufi_lodge = {
 	build_time = religious_building_time
 	
 	country_potential = {
-		religion.group = religion_group:muslim
+		religion ?= {
+			group = religion_group:muslim
+		}
 	}
 
 	allow = {
@@ -215,6 +232,7 @@ sufi_lodge = {
 }
 
 orthodox_monastery = {
+	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
@@ -234,7 +252,7 @@ orthodox_monastery = {
 	price = orthodox_monastery_building
 	
 	country_potential = {
-		religion = religion:orthodox
+		religion ?= religion:orthodox
 	}
 	
 
@@ -256,6 +274,7 @@ orthodox_monastery = {
 }
 
 miaphysite_monastery = {
+	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
@@ -275,7 +294,7 @@ miaphysite_monastery = {
 	price = miaphysite_monastery_building
 	
 	country_potential = {
-		religion = religion:miaphysite
+		religion ?= religion:miaphysite
 	}
 	
 	possible_production_methods = {

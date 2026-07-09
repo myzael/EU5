@@ -1,8 +1,8 @@
 ﻿n_iberian_galleon = {
 	is_special = yes
+	upgrades_to = n_twodecker
 	category = navy_heavy_ship
 	copy_from = n_age_4_reformation_heavy_ship
-	buildable = yes
 
 	hull_size = 10
 	cannons = 20
@@ -17,9 +17,9 @@
 
 n_italian_galleass = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
-	buildable = yes
 
 	movement_speed = 0.75
 
@@ -41,6 +41,7 @@ n_italian_galleass = {
 
 n_turtle_ship = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
 	movement_speed = 1.25
@@ -50,16 +51,18 @@ n_turtle_ship = {
 
 n_panokseon = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
 	movement_speed = 1.25
 	hull_size = 8
-	cannons = 10
+	cannons = 4
 	crew_size = 0.090
 }
 
 n_madurese_gali = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
 	hull_size = 2
@@ -69,6 +72,7 @@ n_madurese_gali = {
 
 n_war_galleon = {
 	is_special = yes
+	upgrades_to = n_twodecker
 	category = navy_heavy_ship
 	copy_from = n_age_4_reformation_heavy_ship
 
@@ -85,10 +89,11 @@ n_war_galleon = {
 
 n_cakradonya = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
-	hull_size = 14
-	cannons = 14
+	hull_size = 6
+	cannons = 6
 	crew_size = 0.110
 	blockade_capacity = 0.1
 
@@ -98,6 +103,7 @@ n_cakradonya = {
 
 n_galiot = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
 
@@ -111,13 +117,14 @@ n_galiot = {
 
 n_atakebune = {
 	is_special = yes
+	upgrades_to = n_xebec
 	category = navy_galley
 	copy_from = n_age_4_reformation_galley
 
 	movement_speed = 3.75
 	hull_size = -1
 	cannons = -2
-	maritime_presence = ship_small_high_maritime
+	maritime_presence = -0.06
 
 	maintenance_demand =  galley_4_maintenance
 	construction_demand = galley_4_construction

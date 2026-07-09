@@ -1,16 +1,41 @@
-pdxmesh = {
+﻿pdxmesh = {
 	name = "animal_wildbeest_mesh"
 	file = "animal_wildbeest.mesh"
 
+	lod_percentages = {
+		lod = { index = 1 percent = 5.0 }
+		lod = { index = 2 percent = 2.0 }
+	}
 
 	meshsettings = {
-		name = "animal_wildbeestShape"
+		name = "animal_wildbeest_lod0Shape"
 		index = 0
 		texture_diffuse = "resource_wildbeest_diffuse.dds"
 		texture_normal = "resource_wildbeest_normal.dds"
 		texture_specular = "resource_european_elk_properties.dds"
 		#texture = { index = 3 srgb = no file = "tiger_mask.dds" }
 		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "animal_wildbeest_lod1Shape"
+		index = 0
+		texture_diffuse = "resource_wildbeest_diffuse.dds"
+		texture_normal = "resource_wildbeest_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "animal_wildbeest_lod2Shape"
+		index = 0
+		texture_diffuse = "resource_wildbeest_diffuse.dds"
+		texture_normal = "resource_wildbeest_normal.dds"
+		texture_specular = "resource_european_elk_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 }
 

@@ -20,7 +20,7 @@ tordesillas_claim_area = { #Used by the Main countries during the "first phase" 
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 
 	automation_tick = never
@@ -261,7 +261,7 @@ tordesillas_free_claim_area = {
 			}
 		}
 		#The are no conflicting areas
-		situation:treaty_of_tordesillas.var:var_east_country = {
+		situation:treaty_of_tordesillas.var:var_east_country ?= {
 			any_owned_location = {
 				count = 0	
 				NOR = {
@@ -278,7 +278,7 @@ tordesillas_free_claim_area = {
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 
 	automation_tick = never
@@ -435,7 +435,7 @@ tordesillas_claim_conflicting_area = {
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 	allow = {
 		trigger_if = {
@@ -649,7 +649,7 @@ tordesillas_revoke_claim = {
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 	
 	allow = {
@@ -877,7 +877,7 @@ tordesillas_push_to_settle_treaty = {
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 
 	automation_tick = never
@@ -960,7 +960,7 @@ tordesillas_move_the_line = {
 			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 
 	automation_tick = never
@@ -1108,12 +1108,21 @@ tordesillas_swap_sides = {
 			has_variable = var_west_country
 			has_variable = var_east_country
 		}
-		OR = {
-			scope:actor = situation:treaty_of_tordesillas.var:var_west_country
-			scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+		trigger_if = {
+			limit = {
+				exists = situation:treaty_of_tordesillas.var:var_west_country
+				exists = situation:treaty_of_tordesillas.var:var_east_country
+			}
+			OR = {
+				scope:actor = situation:treaty_of_tordesillas.var:var_west_country
+				scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+			}
+		}
+		trigger_else = {
+			always = no
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 1.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 1.0
 	}
 
 	ai_tick = monthly
@@ -1274,18 +1283,33 @@ violate_treaty_of_tordesillas = {
 			has_variable = var_east_country
 		}
 		scope:actor ?= {
-			religion = situation:treaty_of_tordesillas.var:var_east_country.religion
+			trigger_if = {
+				limit = {
+					situation:treaty_of_tordesillas = {
+						has_variable = var_east_country
+					}
+				}
+				religion = situation:treaty_of_tordesillas.var:var_east_country.religion
+			}
 			NOT = {
 				has_country_modifier = violate_treaty_of_tordesillas
 			}
-			#Cannot do this action if actor is both east and west country (maybe one annexed the other)			
-			NAND = {
-				scope:actor = situation:treaty_of_tordesillas.var:var_west_country
-				scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+			#Cannot do this action if actor is both east and west country (maybe one annexed the other)
+			trigger_if = {
+				limit = {
+					situation:treaty_of_tordesillas = {
+						has_variable = var_west_country
+						has_variable = var_east_country
+					}
+				}
+				NAND = {
+					scope:actor = situation:treaty_of_tordesillas.var:var_west_country
+					scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+				}
 			}
 		}
 		#Only Phase 2
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 2.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 2.0
 	}
 
 	allow = {
@@ -1363,7 +1387,7 @@ stop_violate_treaty_of_tordesillas = {
 			has_country_modifier = violate_treaty_of_tordesillas
 		}
 		#Only Phase 2
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 2.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 2.0
 	}
 	
 	allow = {
@@ -1461,14 +1485,22 @@ tordesillas_upheld_treaty_relevance = {
 			has_variable = var_west_country
 			has_variable = var_east_country
 		}
-		OR = {
-			scope:actor = situation:treaty_of_tordesillas.var:var_west_country
-			scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+		trigger_if = {
+			limit = {
+				situation:treaty_of_tordesillas = {
+					has_variable = var_west_country
+					has_variable = var_east_country
+				}
+			}
+			OR = {
+				scope:actor = situation:treaty_of_tordesillas.var:var_west_country
+				scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+			}
 		}
 		#Only Phase 1
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 2.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 2.0
 	}
-	
+
 	price = price:tordesillas_upheld_treaty_relevance
 
 	cooldown = {
@@ -1711,14 +1743,22 @@ tordesillas_demand_transfer_colony = {
 			has_variable = var_west_country
 			has_variable = var_east_country
 		}
-		OR = {
-			scope:actor = situation:treaty_of_tordesillas.var:var_west_country
-			scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+		trigger_if = {
+			limit = {
+				situation:treaty_of_tordesillas = {
+					has_variable = var_west_country
+					has_variable = var_east_country
+				}
+			}
+			OR = {
+				scope:actor = situation:treaty_of_tordesillas.var:var_west_country
+				scope:actor = situation:treaty_of_tordesillas.var:var_east_country
+			}
 		}
 		#Only Phase 2
-		situation:treaty_of_tordesillas.var:var_treaty_phase = 2.0
+		situation:treaty_of_tordesillas.var:var_treaty_phase ?= 2.0
 	}
-	
+
 	price = price:tordesillas_demand_transfer_colony
 
 	cooldown = {
@@ -1815,6 +1855,14 @@ tordesillas_demand_transfer_colony = {
 	
 	effect = {
 		#Launch the event that demands the province
+		scope:selected_province_definition = {
+			random_province_in_province_definition = {
+				limit = {
+					owner = scope:selected_country
+				}
+				save_scope_as = selected_province
+			}
+		}
 		scope:selected_country ?= {
 			trigger_event_non_silently = { id = treaty_of_tordesillas.5 days = 7 }
 		}

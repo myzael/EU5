@@ -3,7 +3,24 @@
 
 	allow = {
 		scope:actor = {
-			has_limited_diplomacy = no
+			or = {
+				is_subject = no
+				subject_type = {
+					allow_subject_creation = yes
+				}
+			}
+			custom_tooltip = {
+				text = create_province_subject_union_tt
+				trigger_if = {
+					limit = { exists = union }
+					union ?= {
+						OR = {
+							NOT = { has_active_senior_partner = yes }
+							country_is_senior_partner = { country = scope:actor }
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -41,6 +58,11 @@
 				country = scope:actor
 				where = scope:target_province
 			}
+			scope:target_province = {
+				NOT = {
+					any_location_in_province = { integration_level = colonized }
+				}
+			}
 		}
 		map_color = {
 			if = {
@@ -56,7 +78,7 @@
 	
 	select_trigger = {
 		show_if = {
-			scope:subject_type = {
+			scope:subject_type ?= {
 				has_overlords_ruler = no
 			}
 		}
@@ -84,6 +106,7 @@
 		}
 		enabled = {
 			NOT = { modifier:is_head_of_cabinet = yes }
+			is_eligible_heir = scope:actor #the new subject is going to inherit all its settings from the actor, so one rule for all
 		}
 		map_color = {
 			if = {

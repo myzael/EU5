@@ -351,10 +351,32 @@ throne_room = {
 	}
 
 
+	# commander (ruler)
+	illustration_image = {
+		texture_file = "gfx/interface/illustrations/institutions/professional_armies.dds"
+		priority = 41
+		scope = character
+		trigger = {
+			is_general = yes
+			is_ruler = yes
+			modifier:blocked_from_being_leader = no
+		}
+	}
+	# admiral (ruler)
+	illustration_image = {
+		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_naval_supplies.dds"
+		priority = 41
+		scope = character
+		trigger = {
+			is_admiral = yes
+			is_ruler = yes
+			modifier:blocked_from_being_leader = no
+		}
+	}
 	# commander
 	illustration_image = {
 		texture_file = "gfx/interface/illustrations/institutions/professional_armies.dds"
-		priority = 12
+		priority = 52
 		scope = character
 		trigger = {
 			OR = {
@@ -367,7 +389,7 @@ throne_room = {
 	}
 	illustration_image = {
 		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_naval_supplies.dds"
-		priority = 12
+		priority = 52
 		scope = character
 		trigger = {
 			OR = {
@@ -382,7 +404,7 @@ throne_room = {
 	# artist
 	illustration_image = {
 		texture_file = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
-		priority = 11
+		priority = 51
 		scope = character
 		trigger = {
 			is_ruler = no
@@ -392,7 +414,7 @@ throne_room = {
 	}
 	illustration_image = {
 		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_masonry.dds"
-		priority = 11
+		priority = 51
 		scope = character
 		trigger = {
 			is_ruler = no
@@ -402,7 +424,7 @@ throne_room = {
 	}
 	illustration_image = {
 		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_paper.dds"
-		priority = 11
+		priority = 51
 		scope = character
 		trigger = {
 			is_ruler = no
@@ -418,7 +440,7 @@ throne_room = {
 	}
 	illustration_image = {
 		texture_file = "gfx/interface/icons/trade_goods/illustrations/icon_goods_tools.dds"
-		priority = 11
+		priority = 51
 		scope = character
 		trigger = {
 			is_ruler = no
@@ -428,7 +450,7 @@ throne_room = {
 	}
 	illustration_image = {
 		texture_file = "gfx/interface/illustrations/institutions/renaissance.dds"
-		priority = 10
+		priority = 50
 		scope = character
 		trigger = {
 			is_artist = yes

@@ -50,7 +50,7 @@ flavor_por.1 = { #Christopher Columbus in Portugal
 					capital.sub_continent = sub_continent:western_europe
 					not = { has_variable = turned_down_columbus }
 				}
-				order_by = modifier:great_power_score
+				order_by = country_economical_base
 				max = 1
 				save_scope_as = target_country
 			}
@@ -774,10 +774,12 @@ flavor_por.17 = {
 				NOT = {
 					any_child = {
 						is_female = no
+						is_alive = yes
 					}
 				}
 				any_child = {
 					is_female = yes
+					is_alive = yes
 				}
 			}
 		}
@@ -797,6 +799,7 @@ flavor_por.17 = {
 			random_child = {
 				limit = {
 					is_female = yes
+					is_alive = yes
 				}
 				save_scope_as = heir
 			}
@@ -1007,7 +1010,18 @@ flavor_por.19 = {
 
 		add_government_power = government_power_extreme_penalty
 
-		declare_war_with_cb = {	target = c:SPA	type = casus_belli:cb_independence_war }
+		if = {
+			limit = {
+				can_declare_legal_war_on = { target = c:SPA }
+			}
+			declare_war_with_cb = {	target = c:SPA	type = casus_belli:cb_independence_war }
+		}
+		else = {
+			add_casus_belli = {
+				target = c:SPA
+				type = casus_belli:cb_independence_war
+			}
+		}
 
 		add_opinion = {
 			target = c:SPA
@@ -2891,7 +2905,10 @@ flavor_por.37 = { # Esmeraldo de Situ Orbis
 			is_explorer = yes
 		}
 		has_ruler = yes
-		has_variable = num_of_explorations
+		custom_tooltip = {
+			text = variable_num_of_explorations_tt
+			has_variable = num_of_explorations
+		}
 		var:num_of_explorations >= 15
 	}
 
@@ -3026,7 +3043,10 @@ flavor_por.39 = { # Cronica Geral de Espanha
 			owner = ROOT
 		}
 		c:CAS ?= {
-			has_variable = won_battle_of_rio_salado
+			custom_tooltip = {
+				text = variable_won_battle_of_rio_salado_tt
+				has_variable = won_battle_of_rio_salado
+			}
 		}
 		is_allied_with = {
 			target = c:CAS
@@ -3328,7 +3348,7 @@ flavor_por.43 = { # The Last Troubadour - Livro das Cantigas
 
 		show_as_tooltip = {
 			scope:target_work_of_art = {
-				move_art = scope:target_country.capital
+				move_art_and_owner = { location = scope:target_country.capital country = scope:target_country }
 			}
 		}
 		add_prestige = prestige_severe_bonus
@@ -3371,7 +3391,7 @@ flavor_por.44 = {
 		name = flavor_por.44.a
 
 		scope:target_work_of_art = {
-			move_art = scope:target_country.capital
+			move_art_and_owner = { location = scope:target_country.capital country = scope:target_country }
 		}
 		culture = {
 			add_cultural_tradition = cultural_tradition_severe_bonus
@@ -4110,8 +4130,10 @@ flavor_por.55 = { #Feitoria of Arguin
 
 	trigger = {
 		location:arguin = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4169,8 +4191,10 @@ flavor_por.56 = { #Feitoria of Macau
 
 	trigger = {
 		location:xiangshan_xinhui = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4236,8 +4260,10 @@ flavor_por.57 = { #Feitoria of Goa
 
 	trigger = {
 		location:goa = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4315,8 +4341,10 @@ flavor_por.58 = { #Feitoria of Hormuz
 
 	trigger = {
 		location:hormuz = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4393,8 +4421,10 @@ flavor_por.59 = { #Feitoria of Malacca
 
 	trigger = {
 		location:malacca = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4721,8 +4751,10 @@ flavor_por.64 = { #Feitoria in the Gold Coast
 
 	trigger = {
 		location:anomansah = {
-			top_owner ?= root
+			has_owner = yes
 			owner != root
+			within_colonial_range_of = root
+			is_discovered_by = root
 			NOT = {
 				has_building = building_type:por_feitoria
 			}
@@ -4774,6 +4806,140 @@ flavor_por.64 = { #Feitoria in the Gold Coast
 		else = {
 			add_prestige = prestige_weak_bonus
 		}
+	}
+}
+
+flavor_por.65 = { # The House of Mendes
+	type = country_event
+	title = flavor_por.65.title
+	desc = flavor_por.65.desc
+	outcome = neutral
+	historical_info = flavor_por.65.historical_info
+	fire_only_once = yes
+
+	major = yes
+	dynamic_historical_event = {
+		tag = POR
+		from = 1510.1.1
+		to = 1575.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		owns = location:lisbon
+	}
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+		location:lisbon = {
+			save_scope_as = mendes_bank_hq
+			create_dynasty_from_location = Mendes
+			last_dynasty_in_location = { save_scope_as = target_dynasty }
+		}
+		create_character = {
+			dynasty = scope:target_dynasty
+			age = { 20 40 }
+			save_scope_as = target_character
+		}
+
+		scope:mendes_bank_hq = {
+			create_building_country_in_location = {
+				name = {
+					name = MENDES
+				}
+				reforms = {
+					banking_country
+				}
+				save_scope_as = mendes_bank_tag
+				set_new_ruler = scope:target_character
+
+				hidden_effect = {
+					change_country_flag = MENDES
+					define_unique_country_tag = MNDES
+					change_heir_selection = heir_selection:bank_selection
+					change_government_type = government_type:republic
+				}
+			}
+			scope:mendes_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:mendes_bank_tag
+				}
+			}
+		}
+		set_local_variable = {
+			name = amount_of_gold_for_mendes
+			value = { 250 500 }
+		}
+	}
+
+	option = {
+		name = flavor_por.65.a
+
+		historical_option = yes
+
+		show_as_tooltip = {
+			scope:mendes_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:mendes_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+	}
+
+	option = {
+		name = flavor_por.65.b
+		high_risk_option = yes
+
+		show_as_tooltip = {
+			scope:mendes_bank_hq = {
+				change_building_level_in_location = {
+					building = building_type:banking_office
+					value = 1
+					owner = scope:mendes_bank_tag
+				}
+			}
+		}
+		change_gold_effect = { scale = 2 }
+
+		change_player = scope:mendes_bank_tag
+	}
+
+	after = {
+		scope:mendes_bank_tag = {
+			trigger_event_non_silently = flavor_por.66
+		}
+	}
+}
+
+flavor_por.66 = { # Starting Event for The House of Mendes
+	type = country_event
+	title = flavor_por.66.title
+	desc = flavor_por.66.desc
+	outcome = neutral
+
+	illustration_tags = {
+        10 = regular
+        10 = interior
+    }
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
+	}
+
+	option = {
+		name = flavor_por.66.a
+
+		add_gold = local_var:amount_of_gold_for_mendes
 	}
 }
 

@@ -3,8 +3,8 @@ pdxmesh = {
 	file = "resource_dyes_gathered.mesh"
 
 	lod_percentages = {
-		lod = { index = 1 percent = 5.0 }
-		lod = { index = 2 percent = 2.0 }
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
 	}
 
 	meshsettings = {

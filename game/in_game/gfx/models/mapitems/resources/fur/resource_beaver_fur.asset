@@ -5,8 +5,34 @@ pdxmesh = {
 	animation = { id = "idle_animation" type = "resource_beaver_fur_idle.anim" }
 	animation = { id = "moving_animation" type = "resource_beaver_fur_moving.anim" }
 
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
 	meshsettings = {
-		name = "resource_beaver_furShape"
+		name = "LOD_0|resource_beaver_fur|resource_beaver_furShape"
+		index = 0
+		texture_diffuse = "raw_resources_fur_diffuse.dds"
+		texture_normal = "raw_resources_fur_normal.dds"
+		texture_specular = "raw_resources_fur_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|resource_beaver_fur|resource_beaver_furShape"
+		index = 0
+		texture_diffuse = "raw_resources_fur_diffuse.dds"
+		texture_normal = "raw_resources_fur_normal.dds"
+		texture_specular = "raw_resources_fur_properties.dds"
+		shader = "snap_to_terrain_no_deform"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|resource_beaver_fur|resource_beaver_furShape"
 		index = 0
 		texture_diffuse = "raw_resources_fur_diffuse.dds"
 		texture_normal = "raw_resources_fur_normal.dds"

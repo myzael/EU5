@@ -26,6 +26,14 @@ Code
 #elif MIP_STRATEGY == MIP_STRATEGY_3D
 		// log2 of distance to sample
 		float3 LodVector = WorldSpacePosition - _LodPosition;
+		#ifdef TERRAIN_WRAP_X
+			LodVector.x = abs(LodVector.x );
+			LodVector.x = min(min(LodVector.x, LodVector.x + _TerrainSize.x), abs(LodVector.x - _TerrainSize.x));
+		#endif
+		#ifdef TERRAIN_WRAP_Y
+			LodVector.y = abs(LodVector.y );
+			LodVector.y = min(min(LodVector.y, LodVector.y + _TerrainSize.y), abs(LodVector.y - _TerrainSize.y));
+		#endif
 		float DistanceSqr = dot( LodVector, LodVector ); // We can avoid doing a square root by taking advantage of the log properties log(sqrt(a)) = log(a)* 1/2
 		MipUnclamped = max( 0.0f, log2( DistanceSqr * LayerConstants._LodScale * LayerConstants._LodScale ) * 0.5 + 1.0 );
 #elif MIP_STRATEGY == MIP_STRATEGY_HIGHEST

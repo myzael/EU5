@@ -206,7 +206,7 @@
 				1 = male_clothes_byzantine_common_roukhon
 			}
 			girl = {
-				1 = female_clothes_byzantine_common_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl
@@ -227,7 +227,7 @@
 				1 = male_clothes_byzantine_low_noble_roukhon
 			}
 			girl = {
-				1 = female_clothes_byzantine_low_noble_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl
@@ -248,7 +248,7 @@
 				1 = male_clothes_byzantine_high_noble_roukhon
 			}
 			girl = {
-				1 = female_clothes_byzantine_high_noble_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl
@@ -269,7 +269,7 @@
 				1 = male_clothes_byzantine_imperial_loros
 			}
 			girl = {
-				1 = female_clothes_byzantine_imperial_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl
@@ -292,7 +292,7 @@
 				1 = male_clothes_byzantine_mirror_armor_high
 			}
 			girl = {
-				1 = female_clothes_byzantine_high_noble_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl
@@ -317,7 +317,7 @@
 				1 = male_clothes_byzantine_clergy_patriarch
 			}
 			girl = {
-				1 = female_clothes_byzantine_low_noble_delmatikion
+				1 = girl_clothes_byzantine_noble_delmatikion
 			}
 			adolescent_boy = boy
 			adolescent_girl = girl

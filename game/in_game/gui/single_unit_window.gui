@@ -1333,7 +1333,7 @@ types SingleUnitWindowTypes
 						}
 						
 						header_button_left = {
-							# visible = "[And(Not(IsInSameWarAsSiegeOwner(Siege.Self)), And(Not(ObjectsEqual(Siege.GetBesieger.GetCountry, Player.Self)), Not(ObjectsEqual(Siege.GetLocation.GetOwner, Player.Self))))]"
+							visible = "[And(Not(IsInSameWarAsSiegeOwner(Siege.Self)), And(Not(ObjectsEqual(Siege.GetBesieger.GetCountry, Player.Self)), Not(ObjectsEqual(Siege.GetLocation.GetOwner, Player.Self))))]"
 							size = { 25 25 }
 							enabled = "[CanTakeOverSiege(Siege.Self)]"
 							action_tooltip = {
@@ -2577,18 +2577,6 @@ types SingleUnitWindowTypes
 										allow_outside = yes
 										size = { 39 39 }
 
-										#Needed to perform single action when the keyboard shortcut is pressed
-										button = {
-											size = { 0 1 }
-											tooltip_enabled = no
-											alwaystransparent = yes
-											visible = "[Not(UnitActionItem.IsToggleAction)]"
-											enabled = "[And(UnitActionItem.HasSingleLeftAction, UnitActionItem.CanSingleLeftClick)]"
-											onclick = "[UnitActionItem.SingleLeftClick]"
-											input_action = "[UnitActionItem.GetShortcut]"
-											use_global_input_instance = yes
-										}
-
 										# navigational_button_alt = {
 										# 	visible = "[Not(UnitActionItem.IsToggleAction)]"
 										# 	parentanchor = bottom|left
@@ -2836,15 +2824,12 @@ types SingleUnitWindowTypes
 									
 									name = "button_pin"
 							
-									onclick = "[PinCollection.Toggle( UnitActionItem.GetKey )]"
-									checked = "[PinCollection.IsPinnedWithDefaultValue( UnitActionItem.GetKey, UnitActionItem.IsPinnedByDefault )]"
-									tooltipwidget = { 
-										LeftClickButtonTooltip = {
-											blockoverride "onclick_text" { 
-												text = "[SelectLocalization(PinCollection.IsPinnedWithDefaultValue( UnitActionItem.GetKey, UnitActionItem.IsPinnedByDefault ), 'UNPIN_ACTION', 'PIN_ACTION')]"
-											}
-										}
+									action_tooltip = {
+										title = "[SelectLocalization(PinCollection.IsPinnedWithDefaultValue( UnitActionItem.GetKey, UnitActionItem.IsPinnedByDefault ), 'UNPIN_ACTION', 'PIN_ACTION')]"
+										on_action = "[PinCollection.Toggle( UnitActionItem.GetKey )]"
 									}
+									tooltipwidget = { BasicFunctionalTooltip = {} }
+									down = "[PinCollection.IsPinnedWithDefaultValue( UnitActionItem.GetKey, UnitActionItem.IsPinnedByDefault )]"
 								}
 							}
 						}
@@ -3361,6 +3346,26 @@ lateralview = {
 
 	blockoverride "lateralview_topbuttons_extra" {
 		widget = {
+			parentanchor = vcenter
+			size = { 40 40 }
+			position = { 30 0 }
+			button_minimize = {
+				size = { 25 25 }
+				parentanchor = vcenter
+
+				blockoverride "button_texture" {
+					texture = "gfx/interface/buttons/flats/rename_new.dds"					
+					texture_density = 2
+				}
+				
+				action_tooltip = {
+					title = "RENAME_UNIT"
+					on_action = "[SingleUnitWindow.Vars.Toggle('edit_name')]"
+				}
+			}
+		}
+
+		widget = {
 			parentanchor = right|vcenter
 			size = { 40 40 }
 			position = { -30 0 }
@@ -3407,7 +3412,14 @@ lateralview = {
 					button = {
 						using = layoutpolicy_expanding
 						enabled = "[SingleUnitWindow.CanRenameUnit]"
-						onclick = "[SingleUnitWindow.Vars.Toggle('edit_name')]"
+
+						action_tooltip = {
+							cursor = "text"
+							enabled = "[SingleUnitWindow.CanRenameUnit]"
+							title = "RENAME_UNIT"
+							on_action = "[SingleUnitWindow.Vars.Toggle('edit_name')]"
+						}
+
 						tooltipwidget = {
 							ContextualTooltipType = {
 								blockoverride "title_icon" {
@@ -3429,13 +3441,6 @@ lateralview = {
 									TooltipTextBlock = {
 										blockoverride "text" {
 											text = "UNIT_NAME_TT"
-										}
-									}
-									TooltipFunctionalBlock = {
-										using = tooltip_left_click_template
-
-										blockoverride "action_left_text" {
-											text = "RENAME_UNIT"
 										}
 									}
 								}
@@ -4098,6 +4103,13 @@ lateralview = {
 										text = "[artillery_barrage|e]"
 									}
 									blockoverride "tooltip_content" {
+										TooltipScrolledStringPairList = {
+											blockoverride "block_scrollarea" { maximumsize = { -1 300 } minimumsize = { -1 30 } }
+											blockoverride "block_title" {
+												text = "ARTILLERY_BONUS_BY_FORT_LEVEL"
+											}
+											textcontext = "[SingleUnitWindow.GetSelectedUnit.GetArtilleryBonusFortFortsTooltip]"
+										}
 										TooltipScrolledStringPairList = {
 											blockoverride "block_scrollarea" { maximumsize = { -1 300 } minimumsize = { -1 30 } }
 											blockoverride "block_title" {
@@ -5133,10 +5145,7 @@ select_menu_left = {
 		name = "single_unit_select_unit"
 	}
 
-	blockoverride "close_button" {
-		onclick = "[SingleUnitSelectUnit.OnClose]"
-	}
-
+	blockoverride "close_on_action" { on_action = "[SingleUnitSelectUnit.OnClose]" }
 	blockoverride "select_content" {
 		select_menu_header = {
 			blockoverride "select_menu_header_extra" {

@@ -3,8 +3,8 @@ pdxmesh = {
 	file = "resource_vegetables_legumes_gather_a.mesh"
 
 	lod_percentages = {
-		lod = { index = 1 percent = 5.0 }
-		lod = { index = 2 percent = 2.0 }
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
 	}
 
 	meshsettings = {
@@ -39,7 +39,7 @@ pdxmesh = {
 	}
 
 	meshsettings = {
-		name = "resource_vegetables_legumes_gather_a_decal_LOD1Shape"
+		name = "resource_vegetables_legumes_gather_a_decal_LODShape1"
 		index = 0
 		texture_diffuse = "resource_vegetables_legumes_gather_a_decal_diffuse.dds"
 		texture_normal = "resource_vegetables_legumes_gather_a_decal_normal.dds"
@@ -57,17 +57,6 @@ pdxmesh = {
 		texture_specular = "resource_vegetables_legumes_properties.dds"
 		shader = "snap_to_terrain_alpha_to_coverage"
 		shader_file = "gfx/FX/pdxmesh.shader"
-	}
-
-	meshsettings = {
-		name = "resource_vegetables_legumes_gather_a_decal_LOD2Shape"
-		index = 0
-		texture_diffuse = "resource_vegetables_legumes_gather_a_decal_diffuse.dds"
-		texture_normal = "resource_vegetables_legumes_gather_a_decal_normal.dds"
-		texture_specular = "resource_vegetables_legumes_gather_a_decal_properties.dds"
-		shader = "decal_local"
-		shader_file = "gfx/FX/pdxmesh_decal.shader"
-		subpass = "LocalDecals"
 	}
 }
 

@@ -198,6 +198,8 @@ PixelShader =
 		Output = "PS_OUTPUT"
 		Code
 		[[
+
+			
 			void ApplyIce( inout SWaterOutput Water, in VS_OUTPUT_WATER_EXT Input )
 			{
 				float WinternessWater = GetSnowAmountForWater( Water._Normal, Input.WorldSpacePos, ClimateMap );
@@ -277,49 +279,63 @@ PixelShader =
 				SSeaCurrentLocationData SeaCurrentLocationData = CalcSeaCurrent(FlatMapCoords) ;
 				if(SeaCurrentLocationData._RotationData != 0)
 				{
-					float Noise = PdxTex2DLod0( TerrainBlendNoise, Input.WorldSpacePos.xz / max( 1.0f, GetFlatMapNoiseSize() ) ).r;
-										float Time = GetGlobalTime() * _SeaCurrentsAnimationSpeed3D;
+					float Noise = PdxTex2DLod0( TerrainBlendNoise, 4*Input.WorldSpacePos.xz / max( 1.0f, GetFlatMapNoiseSize() ) ).r;
+					Noise *= lerp(0.2,1.25,saturate((CameraPosition.y-50)/700));
+					float Time = GetGlobalTime() * _SeaCurrentsAnimationSpeed3D;
 					float2 UV = Input.WorldSpacePos.xz - SeaCurrentLocationData._LocationPosition;
 					float2 RotatedUVs = RotateUV(UV* _SeaCurrentsUVScale3D,vec2(0.0f), SeaCurrentLocationData._RotationData+PI*0.5);
-					RotatedUVs +=  SeaCurrentLocationData._LocationPosition + Noise*0.75;
+					RotatedUVs +=  SeaCurrentLocationData._LocationPosition + Noise;
 					RotatedUVs.y += Time;
 					float TotalSeaCurrentSeparation = _SeaCurrentsWavesSeparation3D + 1.0;
 					float2 RUVdivSeparation = RotatedUVs/TotalSeaCurrentSeparation;
 					float2 RotatedUvsFrac = (frac(RUVdivSeparation )) * TotalSeaCurrentSeparation;
-
-					float Noise2 = PdxTex2DLod0( TerrainBlendNoise, floor(RotatedUVs)* 0.241 + float2(0.4154,0.663) / max( 1.0f, GetFlatMapNoiseSize() * 1.115 ) ).r-0.5;
-
-					RotatedUvsFrac += Noise2*TotalSeaCurrentSeparation;
-					if(RotatedUvsFrac.x> TotalSeaCurrentSeparation)
-					{
-						RotatedUvsFrac.x -= TotalSeaCurrentSeparation;
-					}
-					if(RotatedUvsFrac.y> TotalSeaCurrentSeparation)
-					{
-						RotatedUvsFrac.y -= TotalSeaCurrentSeparation;
-					}
 					
-					float2 RandomSeed = floor(RUVdivSeparation*2 );
-					
-					if(_SeaCurrentsDisappearenceDebug3D||(RotatedUvsFrac.x < 1.0 && RotatedUvsFrac.y < 1.0 && CalcRandom(RandomSeed)<_SeaCurrentsSpawnChance3D))
+					float2 RandomSeed = floor(RUVdivSeparation );
+					float4 SeededNoise  = float4(CalcRandom(RandomSeed.x*1.1245+RandomSeed.y),
+												 CalcRandom(RandomSeed.x*0.7335+RandomSeed.y*1.2345),
+												 CalcRandom(RandomSeed.x*0.597+RandomSeed.y*1.4925),
+												 CalcRandom(RandomSeed.x*2.7335+RandomSeed.y*0.5445)
+												 );
+					float2 ToCheckUV = RotatedUvsFrac;
+					float2 MultipliyerUV =  vec2(1.0)+(SeededNoise.zw-vec2(0.5))*_SeaCurrentsUVScaleDistorsion3D;
+					ToCheckUV-=SeededNoise.xy*(_SeaCurrentsWavesSeparation3D);
+					ToCheckUV*=MultipliyerUV;
+					float TotalRandom =  SeededNoise.x+SeededNoise.y+SeededNoise.z+SeededNoise.w;
+					if(  _SeaCurrentsDisappearenceDebug3D||( TotalRandom > 1.8 &&ToCheckUV.x > 0.0 && ToCheckUV.y > 0.0 && ToCheckUV.x < 1.0 && ToCheckUV.y < 1.0 && CalcRandom(RandomSeed)<_SeaCurrentsSpawnChance3D))
 					{
-						RotatedUvsFrac*=0.5;
-						RotatedUvsFrac+=float2(0.5 *(0.5>CalcRandom(RandomSeed.x*1.5748)>0.5) ,0.5 * (CalcRandom(RandomSeed.y*1.6987)>0.5));
-						WaterSeaCurrentInterference = PdxTex2D(SeaCurrentWaves,RotatedUvsFrac);
+						float2 FinalUvsFrac=ToCheckUV*0.5;
+						
+						FinalUvsFrac+=float2(0.5 *(0.5>CalcRandom(RandomSeed.x*1.5748)>0.5) ,0.5 * (CalcRandom(RandomSeed.y*1.6987)>0.5));//randomize between 1 of 4 diferent waves
+						WaterSeaCurrentInterference = PdxTex2D(SeaCurrentWaves,FinalUvsFrac);
 						float2 LocalPosition= RotateUV(UV, vec2(0.0), SeaCurrentLocationData._RotationData);
 						LocalPosition *= _SeaCurrentsDisappearenceUvScale3D;
-						LocalPosition.x+=Time*0.5;
+						LocalPosition.x+=Time;
 						float2 LocalPositionSin = sin(LocalPosition.x+sin(LocalPosition.y+Time)*0.125);
 						float Value =dot(LocalPositionSin,LocalPositionSin);
-						float Dissapear=(Value-_SeaCurrentsDisappearenceThresshold3D)*_SeaCurrentsDisappearenceDissapearanceSpeed3D+_SeaCurrentsDisappearenceThressholdCorrection3D;
-						WaterSeaCurrentInterference.a *= saturate(Dissapear);
+						float Dissapear = saturate(Value-_SeaCurrentsDisappearenceThresshold3D)*_SeaCurrentsDisappearenceDissapearanceSpeed3D+_SeaCurrentsDisappearenceThressholdCorrection3D;
+						float DissapearPow=1.0+4*saturate(1.0-Dissapear);
+						WaterSeaCurrentInterference.a=pow(WaterSeaCurrentInterference.a*Dissapear, DissapearPow);
+						WaterSeaCurrentInterference.a *= CalcSeaCurrentLocationForce(FlatMapCoords,Input.WorldSpacePos.xz, SeaCurrentLocationData);
+						WaterSeaCurrentInterference.rgb = vec3(WaterSeaCurrentInterference.a);
 						if(_SeaCurrentsDisappearenceDebug3D)
 						{
-							
 							WaterSeaCurrentInterference.a=1.0;
 							WaterSeaCurrentInterference.rgb= lerp( WaterSeaCurrentInterference.rgb, vec3(saturate(Dissapear)),_SeaCurrentsDisappearenceDebug3D);
 						}
+						
 					}
+					// if(RotatedUvsFrac.x<= 0.01 || RotatedUvsFrac.x+0.01>=TotalSeaCurrentSeparation) //Debug code to check chunk borders
+					// {
+					// 	WaterSeaCurrentInterference.a=1.0;
+					// 	WaterSeaCurrentInterference.rgb =  float3(0.0,1.0,0.0);
+					// }
+					// if(RotatedUvsFrac.y<= 0.01 || RotatedUvsFrac.y+0.01>=TotalSeaCurrentSeparation)
+					// {
+					// 	WaterSeaCurrentInterference.a=1.0;
+					// 	WaterSeaCurrentInterference.rgb =  float3(0.0,1.0,0.0);
+					// }
+					//WaterSeaCurrentInterference.a=1.0;
+					//WaterSeaCurrentInterference.rgb =  float3(0.0,1.0,0.0);
 				}
 				float2 HeightmapCoordinate = Input.WorldSpacePos.xz;
 				#ifdef JOMINIWATER_BORDER_LERP
@@ -334,14 +350,15 @@ PixelShader =
 				Params._Depth = Input.WorldSpacePos.y - Height;
 				Params._NoiseScale = 0.05f;
 				Params._WaveSpeedScale = 1.0f;
-				Params._WaveNoiseFlattenMult = 1.0f;
+				Params._WaveNoiseFlattenMult = lerp(1.0f,2.0f,saturate(WaterSeaCurrentInterference.a));
 				Params._FlowNormal = CalcFlow( FlowMapTexture, FlowNormalTexture, Params._WorldUV, Params._WorldSpacePos.xz, Params._FlowFoamMask );
-				Params._FlowNormal = lerp(Params._FlowNormal,float3(0.0,1.0,0.0), WaterSeaCurrentInterference.a*0.5);
+				Params._FlowNormal = lerp(Params._FlowNormal,float3(0.0,1.0,0.0), saturate(WaterSeaCurrentInterference.a*4));
 				//Material._FlowNormal = float3(1.0,0.0f,0.0f);
 				SWaterOutput Water = CalcWater( Params );
 				ApplyIce( Water, Input );
-				Water._Color.rgb = lerp(Water._Color.rgb, WaterSeaCurrentInterference.rgb, WaterSeaCurrentInterference.a*WaterSeaCurrentInterference.a*0.25);
-				Water._Normal = lerp(Params._FlowNormal,float3(0.0,1.0,0.0), WaterSeaCurrentInterference.a*0.5);
+				Water._Color.rgb += WaterSeaCurrentInterference.a*WaterSeaCurrentInterference.rgb*0.25;
+				//Water._Color.rgb = lerp(Water._Color.rgb, WaterSeaCurrentInterference.rgb, WaterSeaCurrentInterference.a*WaterSeaCurrentInterference.a*0.25);
+				Water._Normal = lerp(Params._FlowNormal,float3(0.0,1.0,0.0),  saturate(WaterSeaCurrentInterference.a*4));
 				
 				#if  defined(WATER_COLOR_OVERLAY)
 				
@@ -349,7 +366,7 @@ PixelShader =
 					float3 BorderColor;
 					float BorderPreLightingBlend;
 					float BorderPostLightingBlend;
-					Custom( ColorMapCoords, BorderColor, BorderPreLightingBlend, BorderPostLightingBlend );
+					GetProvinceOverlayAndBlendCustom( ColorMapCoords, BorderColor, BorderPreLightingBlend, BorderPostLightingBlend );
 
 					// Make border colors visible only below the sea level
 					float AccurateHeight = GetHeight( ColorMapCoords );
@@ -452,6 +469,7 @@ Effect water
 	Defines = {
 		"SHADOWS_ENABLED"
 		"SHADOWS_INTENSITY 0.5" # Values between 0.0 and 1.0, with 0.5 being the default intensity.
+		"WATER_COLOR_OVERLAY"
 	}
 
 	BlendStates = { "BlendState" "GBufferBlendState" "GBufferBlendState" "GBufferBlendState" }

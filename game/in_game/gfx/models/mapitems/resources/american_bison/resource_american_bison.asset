@@ -7,15 +7,40 @@ pdxmesh = {
 	animation = { id = "moving_animation" type = "resource_american_bison_moving.anim" }
 	animation = { id = "idle_animation" type = "resource_american_bison_idle.anim" }
 
+
+	lod_percentages = {
+		lod = { index = 1 percent = 3.0 }
+		lod = { index = 2 percent = 1.5 }
+	}
+
 	meshsettings = {
-		name = "resource_american_bisonShape"
+		name = "LOD_0|resource_american_bison|resource_american_bisonShape"
 		index = 0
 		texture_diffuse = "resource_american_bison_diffuse.dds"
 		texture_normal = "resource_american_bison_normal.dds"
 		texture_specular = "resource_dromedary_camel_a_properties.dds"
 		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
-		shader = "snap_to_terrain_no_deform"		
-		
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_1|resource_american_bison|resource_american_bisonShape"
+		index = 0
+		texture_diffuse = "resource_american_bison_diffuse.dds"
+		texture_normal = "resource_american_bison_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
+	}
+
+	meshsettings = {
+		name = "LOD_2|resource_american_bison|resource_american_bisonShape"
+		index = 0
+		texture_diffuse = "resource_american_bison_diffuse.dds"
+		texture_normal = "resource_american_bison_normal.dds"
+		texture_specular = "resource_dromedary_camel_a_properties.dds"
+		texture = { index = 3 srgb = no file = "tiger_mask.dds" }
+		shader = "snap_to_terrain_no_deform"
 	}
 }
 

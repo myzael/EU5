@@ -1558,6 +1558,36 @@ texticon = {
 		offset = { 3 3 }
 		fontsize = 16
 	}
+}
+
+texticon = {
+	icon = tolerated_culture
+	iconsize = {
+		texture = "gfx/interface/icons/culture/tolerated_culture.dds"
+		size = { 18 18 }
+		offset = { 3 3 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = discriminated_culture
+	iconsize = {
+		texture = "gfx/interface/icons/culture/discriminated_culture.dds"
+		size = { 18 18 }
+		offset = { 3 3 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = creditworthiness
+	iconsize = {
+		texture = "gfx/interface/icons/flat_icons/balance/creditworthiness.dds"
+		size = { 18 18 }
+		offset = { 3 3 }
+		fontsize = 16
+	}
 } 
 
 ####################################
@@ -1600,6 +1630,93 @@ texticon = {
 		texture = "gfx/interface/icons/flat_icons/balance/diplomacy.dds"
 		size = { 22 22 }
 		offset = { 0 4 }
+		fontsize = 16
+	}
+}
+
+####################################
+# AI Dispositions
+# Inline @disposition_<key>! icons for the EAiDisposition enum, reusing the existing
+# ai_dispositions icon art. Used icon-only in the foreign-country "Notable Stances" block.
+# NOTE: domineering and friendly have no dedicated art yet and fall back to _default.dds.
+####################################
+
+texticon = {
+	icon = disposition_alarmed
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/alarmed.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_wary
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/wary.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_planning_war
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/planning_war.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_covets
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/covets.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_domineering
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/_default.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_rivals
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/rivals.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_indifferent
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/indifferent.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = disposition_friendly
+	iconsize = {
+		texture = "gfx/interface/icons/ai_dispositions/_default.dds"
+		size = { 22 22 }
+		offset = { 0 5 }
 		fontsize = 16
 	}
 }
@@ -3117,6 +3234,26 @@ texticon = {
 }
 
 texticon = {
+	icon = cannot_assimilate
+	iconsize = {
+		texture = "gfx/interface/icons/location_icons/new/cannot_assimilate.dds"
+		size = { 20 20 }
+		offset = { 0 4 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = cannot_convert
+	iconsize = {
+		texture = "gfx/interface/icons/location_icons/new/cannot_convert.dds"
+		size = { 20 20 }
+		offset = { 0 4 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = religious_unity
 	iconsize = {
 		texture = "gfx/interface/icons/flat_icons/religious_unity.dds"
@@ -3140,6 +3277,16 @@ texticon = {
 	icon = annexation_cost
 	iconsize = {
 		texture = "gfx/interface/icons/modifier_types/diplomatic_annexation_cost.dds"
+		size = { 20 20 }
+		offset = { 0 4 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = annexation_speed
+	iconsize = {
+		texture = "gfx/interface/icons/modifier_types/annexation_speed.dds"
 		size = { 20 20 }
 		offset = { 0 4 }
 		fontsize = 16

@@ -21,7 +21,7 @@
 	modifier = {
 		monthly_towards_centralization = societal_value_significant_monthly_move
 		monthly_rebel_growth = 0.005
-		diplomatic_annexation_cost = -0.25
+		annexation_speed_modifier = 0.5
 	}
 	
 	on_start = {

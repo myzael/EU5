@@ -878,9 +878,9 @@ types TooltipCharacterTypes
 						}
 					}
 
-					widget = {
+					vbox = {
 						layoutpolicy_horizontal = expanding
-						size = { -1 30 }
+						minimumsize = { -1 30 }
 
 						background = {
 							using = tile_background_squared_texture
@@ -891,6 +891,7 @@ types TooltipCharacterTypes
 						}
 
 						character_abilities = {
+							layoutpolicy_horizontal = expanding
 							visible = "[Not(Character.IsArtist)]"
 							blockoverride "ability_icon_size" {
 								size = { 25 25 }
@@ -898,6 +899,7 @@ types TooltipCharacterTypes
 						}
 
 						artist_abilities = {
+							layoutpolicy_horizontal = expanding
 							visible = "[Character.IsArtist]"
 							blockoverride "ability_icon_size" {
 								size = { 25 25 }
@@ -1499,10 +1501,9 @@ template Character_tooltip {
 								}
 							}
 
-							textbox = {
+							text_single = {
 								align = nobaseline
 								autoresize = yes
-								using = text_multi_template
 								elide = right
 								using = tooltip_max_width_title_wide
 								text = "[Character.GetRelationToCountryInfo]"
@@ -1528,10 +1529,9 @@ template Character_tooltip {
 								}
 							}
 
-							textbox = {
+							text_single = {
 								align = nobaseline
 								autoresize = yes
-								using = text_multi_template
 								elide = right
 								using = tooltip_max_width_title_wide
 								text = "[Character.GetDeathAndAgeInfo]"
@@ -1552,10 +1552,9 @@ template Character_tooltip {
 								texture = "gfx/interface/icons/character_roles/blood_related.dds"
 							}
 
-							textbox = {
+							text_single = {
 								align = nobaseline
 								autoresize = yes
-								using = text_multi_template
 								elide = right
 								using = tooltip_max_width_title_wide
 								text = "[Character.GetRelationToRulerInfo]"
@@ -1585,12 +1584,10 @@ template Character_tooltip {
 				}
 			}
 
-			TooltipRowList = {
+			TooltipScrolledRowList = {
 				visible = "[And(Not(Character.IsAlive), DataModelHasItems(Character.GetAllTitles))]"
-				
 				textcontext =  "[Character.GetRulerTermsTooltip]"
-				
-				
+
 				blockoverride "block_title" {
 					text = "RULER_TITLE_HISTORY_HEADER"
 				}
@@ -1622,115 +1619,116 @@ template Character_tooltip {
 			}
 
 			TooltipListBase = {
-				TooltipListRowContent = {
-					TooltipManualTableField = {
-						# don't show this unless they're yours or you can use it to cheat
-						visible = "[And(Character.HasCourtCountry, Character.CanSelectUnit)]"
-						blockoverride "field_content" {
-							text_single = {
-								raw_text = "[location|e]"
-							}
+				TooltipManualTableField = {
+					# don't show this unless they're yours or you can use it to cheat
+					visible = "[And(Character.HasCourtCountry, Character.CanSelectUnit)]"
+					blockoverride "field_content" {
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							autoresize = no
+							raw_text = "[location|e]"
+						}
 
-							expand = {}
-
-							text_single = {
-								text = "[Character.GetLocation.GetName]"
-							}
+						text_single = {
+							autoresize = yes
+							text = "[Character.GetLocation.GetName]"
 						}
 					}
+				}
 
-					TooltipManualTableField = {
-						visible = "[DataModelHasItems(Character.GetSpouses)]"
+				TooltipManualTableField = {
+					visible = "[DataModelHasItems(Character.GetSpouses)]"
 
-						blockoverride "field_content" {
-							text_single = {
-								raw_text = "[spouses|e]"
-							}
+					blockoverride "field_content" {
+						text_single = {
+							raw_text = "[spouses|e]"
+						}
 
-							expand = {}
+						expand = {}
 
-							hbox = {
-								datamodel = "[DataModelSubSpan(Character.GetSpouses, '(int32)0', '(int32)10')]"
-								item = {
-									ListOfCharactersItem = {
-										visible = "[Character.IsValid]"
-										size = { 25 25 }
-									}
-								}
-							}
-
-							text_single = {
-								margin = { 10 0 }
-								visible = "[GreaterThan_int32(GetDataModelSize(Character.GetSpouses), '(int32)10')]"
-								text = "[GetDataModelSize(Character.GetSpouses)|L]"
-
-								tooltipwidget = {
-									using = CharacterSpousesList_tooltip
+						hbox = {
+							datamodel = "[DataModelSubSpan(Character.GetSpouses, '(int32)0', '(int32)10')]"
+							item = {
+								ListOfCharactersItem = {
+									visible = "[Character.IsValid]"
+									size = { 25 25 }
 								}
 							}
 						}
-					}
 
-					TooltipManualTableField = {
-						visible = "[DataModelHasItems(Character.GetChildren)]"
+						text_single = {
+							margin = { 10 0 }
+							visible = "[GreaterThan_int32(GetDataModelSize(Character.GetSpouses), '(int32)10')]"
+							text = "[GetDataModelSize(Character.GetSpouses)|L]"
 
-						blockoverride "field_content" {
-							text_single = {
-								raw_text = "[children|e]"
-							}
-
-							expand = {}
-
-							hbox = {
-								datamodel = "[DataModelSubSpan(Character.GetChildren, '(int32)0', '(int32)10')]"
-								item = {
-									ListOfCharactersItem = {
-										size = { 25 25 }
-									}
-								}
-							}
-
-							text_single = {
-								margin = { 10 0 }
-								visible = "[GreaterThan_int32(GetDataModelSize(Character.GetChildren), '(int32)10')]"
-								text = "[GetDataModelSize(Character.GetChildren)|L]"
-
-								tooltipwidget = {
-									using = CharacterChildrenList_tooltip 
-								}
+							tooltipwidget = {
+								using = CharacterSpousesList_tooltip
 							}
 						}
 					}
+				}
 
-					TooltipManualTableField = {
-						visible = "[Character.HasRebel]"
-						blockoverride "field_content" {
-							text_single = {
-								raw_text = "[rebel|e]"
+				TooltipManualTableField = {
+					visible = "[DataModelHasItems(Character.GetChildren)]"
+
+					blockoverride "field_content" {
+						text_single = {
+							raw_text = "[children|e]"
+						}
+
+						expand = {}
+
+						hbox = {
+							datamodel = "[DataModelSubSpan(Character.GetChildren, '(int32)0', '(int32)10')]"
+							item = {
+								ListOfCharactersItem = {
+									size = { 25 25 }
+								}
 							}
+						}
 
-							expand = {}
+						text_single = {
+							margin = { 10 0 }
+							visible = "[GreaterThan_int32(GetDataModelSize(Character.GetChildren), '(int32)10')]"
+							text = "[GetDataModelSize(Character.GetChildren)|L]"
 
-							text_single = {
-								text = "[Character.GetRebel.GetName]"
+							tooltipwidget = {
+								using = CharacterChildrenList_tooltip 
 							}
 						}
 					}
+				}
 
-					TooltipManualTableField = {
-						visible = "[And(Character.IsAlive, DataModelHasItems(Character.GetAllTitles))]"
-						blockoverride "field_content" {
-							text_single = {
-								raw_text = "[title_history|e]"
-							}
+				TooltipManualTableField = {
+					visible = "[Character.HasRebel]"
+					blockoverride "field_content" {
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							autoresize = no
+							raw_text = "[rebel|e]"
+						}
 
-							expand = {}
+						text_single = {
+							autoresize = yes
+							text = "[Character.GetRebel.GetName]"
+						}
+					}
+				}
 
-							text_single = {
-								text = "[GetDataModelSize(Character.GetAllTitles)|L]"
-								tooltipwidget = {
-									using = CharacterRulingHistory_tooltip
-								}
+				TooltipManualTableField = {
+					visible = "[And(Character.IsAlive, DataModelHasItems(Character.GetAllTitles))]"
+					blockoverride "field_content" {
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							autoresize = no
+							raw_text = "[title_history|e]"
+						}
+
+						text_single = {
+							autoresize = yes
+							text = "[GetDataModelSize(Character.GetAllTitles)|L]"
+							tooltipwidget = {
+								using = CharacterRulingHistory_tooltip
 							}
 						}
 					}
@@ -1891,6 +1889,11 @@ template Trait_tooltip {
 		}
 
 		blockoverride "tooltip_content" {
+			TooltipDebugTextBlock = {
+				blockoverride "text" {
+					debug_text = "[Trait.GetDebugText]"
+				}
+			}
 			TooltipStringPairList = {
 				textcontext = "[Trait.GetTooltip]"
 			}
@@ -2249,6 +2252,13 @@ template Dynasty_tooltip {
 
 			TooltipDynastyHeader = {}
 
+			TooltipTextBlock = {
+				block "striped_explanation_visible" { visible = no }
+				blockoverride "text" {
+					text = "LEGEND_KEY_DYNASTY_STRIPED"
+				}
+			}
+
 			TooltipListBase = {
 				visible = "[And(Dynasty.HasDynastyHead, Not(IsDataModelEmpty(Dynasty.GetCurrentRuledCountries)))]"
 				
@@ -2351,12 +2361,13 @@ template Dynasty_tooltip {
 
 					TooltipManualTableField = {
 						text_single = {
+							layoutpolicy_horizontal = expanding
+							autoresize = no
 							text = "DYNASTY_TT_LIVING_MEMBERS"
 						}
 
-						expand = {}
-
 						text_single = {
+							autoresize = yes
 							text = "[GetDataModelSize(Dynasty.GetLivingCharacters)|L]"
 							tooltipwidget = {
 								using = DynastyMembers_Tooltip
@@ -2366,12 +2377,13 @@ template Dynasty_tooltip {
 
 					TooltipManualTableField = {
 						text_single = {
+							layoutpolicy_horizontal = expanding
+							autoresize = no
 							text = "[ShowModifier('dynasty_seat')]"
 						}
 
-						expand = {}
-
 						text_single = {
+							autoresize = yes
 							text = "[location_icon][Dynasty.GetHome.GetName]"
 						}
 					}

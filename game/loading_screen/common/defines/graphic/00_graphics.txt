@@ -3,6 +3,7 @@
 @location_zoomstep_min = 4
 @location_mapname_zoomstep_min = 2
 @location_zoomstep_max = 5
+@construction_mapmarkers_max = 7
 @province_zoomstep_min = 8
 @province_zoomstep_max = 10
 @country_zoomstep_min = 11
@@ -25,7 +26,7 @@
 @max_relation_items_in_ui = 8
 @max_rivers_zoomstep = 10
 @max_reform_items_in_ui = 11
-@max_estate_privilige_items_in_ui = 9
+@max_estate_privilige_items_in_ui = 10
 
 NJominiMapGraphics = {
 	MAP_OBJECT_CELL_COUNT = 200
@@ -78,6 +79,8 @@ NGraphics = {
 	SECONDARY_COLOR_BORDER_COLOR = {0.0 0.0 0.0};
 	SECONDARY_COLOR_BORDER_WIDTH = 0.15;
 	SECONDARY_COLOR_BORDER_STRENGHT = 2.0;
+	SECONDARY_STRIPE_SMOOTH_MIN = 0.55;	# diagonal stripe smoothstep window for secondary country colour (cos threshold where transition begins)
+	SECONDARY_STRIPE_SMOOTH_MAX = 0.85;	# cos threshold where the stripe is fully solid; higher = thinner stripe
 	
 	FLAT_MAP_HEIGHT = 3.92
 	FLAT_MAP_FADE_SPEED = 2	# How fast to fade to/from flat map state
@@ -182,8 +185,8 @@ NGraphics = {
 	RIVERS_CLEARING_ZONE_THICKNESS = 1.5 								# The thickness of the clearing zone around river's splines, removing excess vegetation
 	DISABLE_SHADOWS_ZOOM_LEVEL = 6
 
-	TRADE_WAGONS_OPACITY_START_STEP = 5
-	TRADE_WAGONS_OPACITY_ZOOM_STEP = 0.25
+	TRADE_WAGONS_OPACITY_START_STEP_LAND = 5
+	TRADE_WAGONS_OPACITY_START_STEP_WATER = 8
 }
 
 NMapColors = {
@@ -228,6 +231,7 @@ NMapColors = {
 	MAP_COLOR_HIGH = { 0.31 0.9 0.6	} #green
 	MAP_COLOR_MAX = { 0.31 1.0 1.0	} #light-green
 	MAP_COLOR_TOP = { 0.49 1.0 1.0 } #light blue
+	MAP_ANTAGONISM_ORANGE = { 0.08 0.85 0.90 } #light orange (antagonism coalition threshold pivot)
 	MAP_COLOR_PROXIMITY_BUILDING = { 0.0 0.0 1.0 } #white
 
 	# Current Weather map mode (clear / weak…strong interpolation)
@@ -248,8 +252,11 @@ NMapColors = {
 	MAP_AI_DISP_WARY         = { 0.147 0.470 0.902 }
 	MAP_AI_DISP_PLANNING_WAR = { 0.009 0.812 1.000 }
 	MAP_AI_DISP_COVETS       = { 0.765 0.435 0.659 }
+	MAP_AI_DISP_DOMINEERING  = { 0.510 1.000 0.667 }
 	MAP_AI_DISP_RIVALS       = { 0.03 1.0 0.7 }
 	MAP_AI_DISP_NEUTRAL      = { 0.000 0.000 0.812 }
+	MAP_AI_DISP_SELF         = { 0.118 0.882 0.294 }
+	MAP_AI_DISP_FRIENDLY     = { 1.000 0.843 0.000 }
 
 	MAP_COLOR_SATURATION_RANGE = { 0.0 1.0 }
 	MAP_COLOR_VALUE_RANGE = { 0.0 1.0 } # { 0.38 1.0 }
@@ -305,13 +312,16 @@ NMapColors = {
 	OFFER_PEACE_AVAILABLE_COLOR = 		{ 0.0	0.9		0.8  }
 	OFFER_PEACE_UNAVAILABLE_COLOR =		{ 0.0	0.5		0.3  }
 	OFFER_PEACE_BECOME_SUBJECT_COLOR =	{ 0.333	0.8		0.7  }
-	OFFER_PEACE_CANCEL_SUBJECT_COLOR =	{ 0.666	0.8 	0.7  }
+	OFFER_PEACE_CANCEL_SUBJECT_COLOR =	{ 0.0	0.0		1.0  }
 	OFFER_PEACE_FORM_UNION_COLOR =		{ 0.666	0.8		0.7  }
 	OFFER_PEACE_RELEASE_NATION_COLOR =	{ 0.833	0.8 	0.7  }
+	OFFER_PEACE_ANNUL_TREATIES_COLOR =	{ 0.0	0.0		0.0  }
 
 	CREATE_MILITARY_OBJECTIVE_SELECTED =	{ 0.11	0.9	1.0  }
 	CREATE_MILITARY_OBJECTIVE_AVAILABLE =	{ 0.05	0.6	0.67  }
 	CREATE_MILITARY_OBJECTIVE_SECONDARY_HIGHLIGHT = { 0.11 0.9 0.5 }
+
+	SETUP_TRADE_ORIGIN_COLOR =				{ 0.617	0.75	0.85 }
 	
 	TACTICAL_0_COLOR = { 0 0.638 0.34 } #red
 	TACTICAL_1_COLOR = { 0.13 0.713 0.75 } #yellow
@@ -373,6 +383,7 @@ NMapColors = {
 	DISEASE_MAPMODE_TIER_SYNTHETIC_HIGH = 0.88
 	DISEASE_MAPMODE_MIN_PRESENCE_TO_PAINT = 0.001
 	DISEASE_MAPMODE_MIN_PRESENCE_FOR_STRIPE = 0.02
+	DISEASE_MAPMODE_MIN_ENDEMIC_RATE_TO_PAINT = 0.07
 
 	INTERNATIONAL_ORGANIZATION_LEADER_COLOR = 		{ 0.14	0.81	1.0		} # 0.592	0.962	0.91
 	INTERNATIONAL_ORGANIZATION_MEMBER_COLOR = 		{ 0.4	0.61	0.7 	}
@@ -571,13 +582,14 @@ NMapMarker = {
 	ZOOM_STEP_RANGE_STATE_CAPITAL = 	{  0 @location_zoomstep_max }
 
 	#Visible in the "province" and "state" zoom levels
-	ZOOM_STEP_RANGE_CONSTRUCTION = 		{ 0 @province_zoomstep_max }
+	ZOOM_STEP_RANGE_CONSTRUCTION = 		{ 0 @construction_mapmarkers_max }
 	ZOOM_STEP_RANGE_OCCUPATION = 		{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_PARLIAMENT = 		{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_HOLY_SITE = 		{ 0 20 }
 	ZOOM_STEP_RANGE_CABINET_ACTION = 	{ 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_DIPLOMATIC_ACTION = { 0 @province_zoomstep_max }
 	ZOOM_STEP_RANGE_BLOCKED_VISION = 	{ 0 7 }
+	ZOOM_STEP_RANGE_WINTER_BLOCKED = 	{ 0 7 }
 
 	#Visible in the "state" zoom level
 	ZOOM_STEP_RANGE_COUNTRY_CAPITAL = 	{ @province_zoomstep_min @province_zoomstep_max }
@@ -825,6 +837,7 @@ NGameIcons = {
 	PARLIAMENT_TYPES_ICON_PATH = "gfx/interface/icons/parliament_types"
 	CABINET_ACTION_ICON_PATH = "gfx/interface/icons/cabinet_actions"
 	GENERIC_ACTION_ICON_PATH = "gfx/interface/icons/generic_actions"
+	EMPLOYMENT_SYSTEM_ICON_PATH = "gfx/interface/icons/employment_systems"
 	CHARACTER_INTERACTION_ICON_PATH = "gfx/interface/icons/character_interactions"
 	COUNTRY_INTERACTION_ICON_PATH = "gfx/interface/icons/country_interactions"
 	BUILDINGS_ICON_PATH = "gfx/interface/icons/buildings"
@@ -862,6 +875,7 @@ NGameIcons = {
 	BUREAUCRACY_ICON_PATH = "gfx/interface/icons/bureaucracy"
 	ADVANCE_ICON_PATH = "gfx/interface/advance"
 	CHECK_ADVANCE_ICONS_ERRORS = 0
+	CHIVALRIC_ORDER_ICON_PATH = "gfx/interface/icons/chivalric_orders"
 	LAW_ICON_PATH = "gfx/interface/icons/laws"
 	LAW_CATEGORY_ICON_PATH = "gfx/interface/icons/laws/categories"
 	LAW_CATEGORY_COLOR_PATH = "gfx/interface/icons/laws/categories/colors"
@@ -995,6 +1009,7 @@ NMapLines = {
   RIVER_DIRECTION = "line_trade_yellow"
   UNIT_LOGISTICS = "line_trade_green" # TODO: create a new one. unit supply looking
   ROAD_BUILDER = "line_road_builder"
+  ROAD_BUILDER_CONSTRUCTION = "line_road_construction"
   PROXIMITY_FROZEN = "line_pop_movement_red"
   PROXIMITY_LAKE = "line_trade_blue"
   PROXIMITY_LAND = "line_pop_movement_red"
@@ -1071,6 +1086,8 @@ NCityGraphics = {
 	IMPOSTOR_MOVING_STEP = 1.0f;
 	
 	ZOOM_OUT_STEP = 9;
+	
+	INVISIBLE_CITY_TIME_THRESHOLD =  600.0f;
 	
 	WALL_HALF_WIDTH = 0.4
 	WALL_BEZIER_POWER = 0.35
@@ -1289,16 +1306,17 @@ NSeaCurrents = {
 	MAX_ALPHA = 0.4
 	UV_SCALE = 0.033
 	
-	UV_SCALE_3D = 0.06
+	UV_SCALE_3D = 0.12
 	ANIMATION_SPEED_3D = 0.25;
-	WAVES_SEPARATION_3D = 2.3;
+	WAVES_SEPARATION_3D = 3.8;
 	WAVES_SPAWN_CHANCE_3D = 1.0;
+	WAVES_UV_SCALE_DISTORTION_3D = {0.6 0.5};
 	
-	DISAPPEARANCE_DEBUG_3D = 0;
+	DISAPPEARANCE_DEBUG_3D = 0.0;
 
-	DISAPPEARANCE_UV_SCALE_3D = {0.025 0.1};
-	DISAPPEARENCE_TRHESSHOLD_3D = 0.25;
-	DISAPPEARENCE_TRHESSHOLD_CORRECTION_3D = 0.5;
+	DISAPPEARANCE_UV_SCALE_3D = {0.05 0.2};
+	DISAPPEARENCE_TRHESSHOLD_3D = 1.0;
+	DISAPPEARENCE_TRHESSHOLD_CORRECTION_3D = 0.25;
 
 	DISAPPEARENCE_STATE_SWITCH_SPEED_3D = 1.5;
 }
@@ -1310,6 +1328,7 @@ NGameLocators = {
 	AVOID_CITY_RADIUS = 3.0
 	AVOID_COMBAT_LAND_RADIUS = 2.5
 	AVOID_COMBAT_SEA_RADIUS = 15.0
+	AVOID_DOCK_SEA_PLACING_RADIUS = 15.0
 	SEA_ZONE_RECT_SCALE = 3.0f
 	OUT_OF_BOUNDS_BADNESS = 5000
 	NEAR_OUT_OF_BOUND_BADNESS = 2500

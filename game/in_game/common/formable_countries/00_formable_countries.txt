@@ -342,60 +342,127 @@ IRE_f = {
 	required_locations_fraction = 0.75
 	rule = historical
 
+	# Generic path. Mutually exclusive with the two IO variants: only shows when the country
+	# belongs to neither the High Kingship nor the Lordship of Ireland.
 	potential = {
 		OR = {
 			culture = { has_culture_group = culture_group:hibernian_group }
 			tag = PLE
 		}
+		NOT = { is_member_of_international_organization_of_type = { type = high_kingship } }
+		NOT = { is_member_of_international_organization = international_organization:lordship_of_ireland }
 	}
 
 	allow = {
-		OR = {
-			AND = {
-				#allow if they're the leader of a high_kingship in the Ireland region
-				is_member_of_international_organization_of_type = { type = high_kingship }
-				any_international_organizations_member_of = {
-					count = all
-					filter = {
-						international_organization_type = international_organization_type:high_kingship
-						has_variable = high_kingship_region
-						var:high_kingship_region = region:ireland_region
-					}
-					leader_country ?= root
-				}
-			}
-			custom_tooltip = {
-				text = neither_highkingship_nor_lordship_exist_tt
-				NOT = {
-					any_international_organization = {
-						OR = {
-							international_organization_type = international_organization_type:lordship_of_ireland
-							international_organization_type = international_organization_type:high_kingship
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				#allow if they're the sole remaining member of the Ireland High Kingship
-				text = IRE_f_sole_high_kingship_tt
-				is_member_of_international_organization_of_type = { type = high_kingship }
-				any_international_organizations_member_of = {
-					count = all
-					filter = {
-						international_organization_type = international_organization_type:high_kingship
-						has_variable = high_kingship_region
-						var:high_kingship_region = region:ireland_region
-					}
-					total_members = 1
-				}
-			}
-		}
 		custom_tooltip = {
-			text = IRE_f_lordship_tt
-			not = { is_member_of_international_organization = international_organization:lordship_of_ireland }
+			text = neither_highkingship_nor_lordship_exist_tt
+			NOT = {
+				any_international_organization = {
+					OR = {
+						international_organization_type = international_organization_type:lordship_of_ireland
+						international_organization_type = international_organization_type:high_kingship
+					}
+				}
+			}
 		}
 	}
-	
+
+	name = IRE
+	flag = IRE
+	adjective = IRE_ADJ
+	tag = IRE
+	color = map_IRE
+
+	regions = {
+		ireland_region
+	}
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 3 }
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+	}
+}
+
+IRE_high_kingship_f = {
+
+	level = 2
+	required_locations_fraction = 0.5
+	rule = historical
+
+	capital_required = no
+	potential_requires_own = no
+
+	# Shown only to High Kingship members. The leader-of-the-IO check lives in allow.
+	potential = {
+		is_member_of_international_organization_of_type = { type = high_kingship }
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = IRE_high_kingship_f_leader_tt
+			any_international_organizations_member_of = {
+				count = all
+				filter = {
+					international_organization_type = international_organization_type:high_kingship
+					has_variable = high_kingship_region
+					var:high_kingship_region = region:ireland_region
+				}
+				leader_country ?= root
+			}
+		}
+	}
+
+	name = IRE
+	flag = IRE
+	adjective = IRE_ADJ
+	tag = IRE
+	color = map_IRE
+
+	regions = {
+		ireland_region
+	}
+	form_effect = {
+		# Leave the High Kingship before rank change to avoid block_from_change_to_kingdom_rank
+		every_international_organizations_member_of = {
+			limit = {
+				international_organization_type = international_organization_type:high_kingship
+				has_variable = high_kingship_region
+				var:high_kingship_region = region:ireland_region
+			}
+			remove_country_from_international_organization = root
+		}
+
+		if = {
+			limit = { country_rank_level < 3 }
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+	}
+}
+
+IRE_lordship_of_ireland_f = {
+
+	level = 2
+	required_locations_fraction = 0.5
+	rule = historical
+
+	capital_required = no
+	potential_requires_own = no
+
+	potential = {
+		is_member_of_international_organization = international_organization:lordship_of_ireland
+	}
+
+	# You are the Lord of Ireland — the Anglo-Norman path to a sovereign Irish kingdom.
+	allow = {
+		custom_tooltip = {
+			text = IRE_lordship_of_ireland_f_leader_tt
+			international_organization:lordship_of_ireland = {
+				leader_country ?= root
+			}
+		}
+	}
+
 	name = IRE
 	flag = IRE
 	adjective = IRE_ADJ
@@ -411,24 +478,10 @@ IRE_f = {
 			destroy_international_organization = { target = international_organization:lordship_of_ireland }
 		}
 
-		# Leave the High Kingship before rank change to avoid block_from_change_to_kingdom_rank
-		if = {
-			limit = { is_member_of_international_organization_of_type = { type = high_kingship } }
-			every_international_organizations_member_of = {
-				limit = {
-					international_organization_type = international_organization_type:high_kingship
-					has_variable = high_kingship_region
-					var:high_kingship_region = region:ireland_region
-				}
-				remove_country_from_international_organization = root
-			}
-		}
-
 		if = {
 			limit = { country_rank_level < 3 }
 			set_country_rank_effect = { rank = country_rank:rank_kingdom }
 		}
-
 	}
 }
 
@@ -463,7 +516,7 @@ MTH_f = {
 }
 
 MCM_f = {
-	level = 2
+	level = 1
 	required_locations_fraction = 0.75
 	rule = historical
 
@@ -1035,7 +1088,7 @@ SAR_f = {
 	capital_required = no
 
 	potential = {
-		culture = { has_culture_group = culture_group:italian_group }
+		culture = culture:sardinian
 	}
 
 	allow = {
@@ -1045,13 +1098,53 @@ SAR_f = {
 	flag = SAR
 	adjective = SAR_ADJ
 	tag = SAR
-	color = map_sardinia
+	color = map_sardinian
 	
 	areas = {
 		sardinia_area
 	}
 	form_effect = {
-		set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		if = {
+			limit = {
+				NOT = { is_member_of_international_organization = international_organization:hre }
+			}
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+	}
+}
+
+SAR_piedmont_f = { 
+
+	level = 2
+	required_locations_fraction = 0.85
+	rule = historical
+
+	capital_required = no
+
+	potential = {
+		culture = { has_culture_group = culture_group:italian_group }
+	}
+
+	allow = {
+	}
+	
+	name = SAR_piedmont
+	flag = SAR_piedmont
+	adjective = SAR_piedmont_ADJ
+	tag = SAR_piedmont
+	color = map_sardinia
+	
+	areas = {
+		sardinia_area
+		piemonte_area
+	}
+	form_effect = {
+		if = {
+			limit = {
+				NOT = { is_member_of_international_organization = international_organization:hre }
+			}
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
 	}
 }
 
@@ -1266,14 +1359,14 @@ SAX_f = { # Saxony
 	}
 
 	allow = {
-		international_organization:hre = {
+		international_organization:hre ?= {
 			country_has_special_status = {
 				type = special_status:elector
 				country = root
 			}
 		}
 	}
-	
+
 	name = SAX
 	flag = SAX
 	adjective = SAX_ADJ
@@ -1471,7 +1564,7 @@ LVA_f = { # Baltic
 GER_f = {
 
 	level = 4
-	required_locations_fraction = 0.66
+	required_locations_fraction = 0.6
 	rule = plausible
 	potential = {
 		culture = { has_culture_group = culture_group:german_group }
@@ -1649,7 +1742,12 @@ PLC_f = {
 				OR = {
 					tag = POL
 					NOT = { country_exists = c:POL }
-					c:POL = { is_subject_or_below_of = root }
+					c:POL = { 
+						OR = {
+							is_subject_or_below_of = root
+							in_union_with = root
+						}
+					}
 				}			
 			}
 		}
@@ -1663,7 +1761,12 @@ PLC_f = {
 				OR = {
 					tag = LIT
 					NOT = { country_exists = c:LIT }
-					c:LIT = { is_subject_or_below_of = root }
+					c:LIT = {
+						OR = {
+							is_subject_or_below_of = root
+							in_union_with = root
+						}
+					}
 				}			
 			}
 		}
@@ -2098,9 +2201,17 @@ ITA_f = {
 	}
 
 	allow = {
-		owns = location:milano
-		owns = location:florence
-		owns = location:naples
+		OR = {
+			AND = {
+				owns = location:milano
+				owns = location:florence
+				owns = location:naples
+			}
+			custom_tooltip = {
+				text = gag_guelphs_winner_may_form_italy_without_location_requirements_tt
+				has_variable = gag_guelphs_winner_may_form_italy_without_location_requirements
+			}
+		}
 	}
 	
 	name = ITA
@@ -2242,20 +2353,26 @@ TWS_f = {
 		# 3 Cases
 		trigger_if = {
 			limit = { tag = SIC }
-			c:NAP = { 
-				NOT = { has_presence_in = region:italy_region }
+			OR = {
+				NOT = { country_exists = c:NAP }
+				c:NAP = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 		trigger_else_if = {
 			limit = { tag = NAP }
-			c:SIC ?= { 
-				NOT = { has_presence_in = region:italy_region }
+			OR = {
+				NOT = { country_exists = c:SIC }
+				c:SIC = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 		trigger_else = {
-			NOR = {
-				c:NAP ?= { has_presence_in = region:italy_region }
-				c:SIC ?= { has_presence_in = region:italy_region }
+			OR = {
+				NOT = { country_exists = c:NAP }
+				c:NAP = { NOT = { has_presence_in = region:italy_region } }
+			}
+			OR = {
+				NOT = { country_exists = c:SIC }
+				c:SIC = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 	}
@@ -2424,8 +2541,18 @@ BYZ_trebizond_f = {
 			limit = { country_rank_level < 4 }
 			set_country_rank_effect = { rank = country_rank:rank_empire }
 		}
+
+		# Unlock BYZ content
+		unlock_government_reform_effect = { type = kritai_katholikoi_reformed }
+		unlock_government_reform_effect = { type = modern_imperial_army }
+		unlock_policy_effect = { type = stavraton_coin_policy }
+		unlock_policy_effect = { type = komnenian_formalization }
+		unlock_policy_effect = { type = palaeologan_hereditary_transition }
+		unlock_policy_effect = { type = reformed_pronoia_system }
+
 		if = {
 			limit = { has_dlc = "d008_fate_of_the_phoenix" }
+			research_advance = advance_type:byz_bureaucracy_advance
 			unlock_casus_belli_effect = { type = cb_restore_roman_borders }
 		}
 	}
@@ -4613,6 +4740,7 @@ CIR_f = { # Circassia
 	rule = historical
 
 	potential = {
+		culture = culture:circassian_culture
 	}
 	allow = {
 		
@@ -4716,7 +4844,7 @@ PON_f = {
 }
 
 TUR_f = {
-	level = 3
+	level = 4
 	rule = historical
 
 	potential = {
@@ -4859,6 +4987,58 @@ CSH_f = {
 	color = map_CSH
 
 	regions = {
+	}
+	form_effect = {
+	}
+}
+
+OCC_f = { #Occitania
+	level = 3
+	rule = plausible
+	required_locations_fraction = 0.75
+
+	potential = {
+		OR = {
+			culture.dialect = dialect:occitan_dialect
+			culture.dialect = dialect:gascon_dialect
+		}
+	}
+
+	allow = {
+	}
+
+	tag = OCC
+	name = OCC
+	adjective = OCC_ADJ
+	flag = OCC
+	color = map_OCC
+
+	areas = {
+		provence_area
+		languedoc_area
+	}
+	provinces = {
+		valentinois_province
+		agenais_province
+		bazadais_province
+		perigord_province
+		quercy_province
+		rouergue_province
+		turenne_province
+		limousin_province
+		lower_auvergne_province
+		combraille_province
+		upper_auvergne_province
+		armagnac_province
+		bearn_bigorre_province
+		comminges_province
+		tursan_province
+	}
+	locations = {
+		briancon gap
+		bordeaux benauges castelnau_de_medoc la_teste_de_buch lesparre_medoc
+		gueret aubusson bellac bourganeuf rochechouart
+		cuneo saluzzo pinerolo pragelato la_mure romans vielha chabanais
 	}
 	form_effect = {
 	}

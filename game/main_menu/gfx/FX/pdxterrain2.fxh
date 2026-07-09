@@ -135,7 +135,9 @@ VertexShader =
 					#else
 						AdjustFlatMapHeight( Vertex._WorldSpacePos );
 					#endif
-
+					
+					Vertex._WorldSpacePos.y*=GetTerrainHeightMultiplier();
+					
 					return Vertex;
 			}
 	]]

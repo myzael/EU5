@@ -16,7 +16,7 @@ aztec_coa_gfx = {
 }
 
 sinaloa_coa_gfx = {
-	priority = 1 # coa
+	priority = 2 # coa (wins over pueblo for mayo)
 	culture_tag = sinaloa_coa_gfx
 }
 
@@ -31,7 +31,7 @@ purepecha_coa_gfx = {
 }
 
 mixtec_coa_gfx = {
-	priority = 1 # coa
+	priority = 2 # coa (wins over aztec for popoloca)
 	culture_tag = mixtec_coa_gfx
 }
 
@@ -46,7 +46,7 @@ huastec_coa_gfx = {
 }
 
 chichimec_coa_gfx = {
-	priority = 1 # coa
+	priority = 2 # coa (wins over aztec for chichimec cultures)
 	culture_tag = chichimec_coa_gfx
 }
 
@@ -63,7 +63,7 @@ gulf_mississippi_coa_gfx = {
 
 # Eastern Coast, Woodlands & Great Lakes
 eastern_woodlands_coa_gfx = {
-	priority = 1 # coa
+	priority = 2 # coa (wins over gulf_mississippi for east-coast cultures)
 	culture_tag = eastern_woodlands_coa_gfx
 }
 
@@ -89,7 +89,7 @@ tungusic_coa_gfx = {
 }
 
 mongolian_coa_gfx = {
-	priority = 1 # coa
+	priority = 2 # coa (wins over altai for mongolian cultures)
 	culture_tag = mongolian_coa_gfx
 }
 

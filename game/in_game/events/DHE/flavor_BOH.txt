@@ -863,7 +863,6 @@ flavor_boh.17 = { #The First Congress of Visegrad
 		add_casus_belli = {
 			target = c:POL
 			type = casus_belli:cb_claim_throne
-			years = 15
 		}
 		custom_tooltip = boh_every_neighboring_country_tt
 		hidden_effect = {
@@ -1874,6 +1873,7 @@ flavor_boh.31 = { #The Crown of Bohemia
 
 scripted_trigger is_valid_luxembourg_heir = {
 	is_alive = yes
+	is_adult = yes
 	is_ruler = no
 	is_heir = no
 	is_female = no

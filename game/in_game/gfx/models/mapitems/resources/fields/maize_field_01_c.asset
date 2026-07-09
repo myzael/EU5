@@ -2,19 +2,13 @@ pdxmesh = {
 	name = "maize_field_01_c_mesh"
 	file = "maize_field_01_c.mesh"
 
-	meshsettings = {
-		name = "maize_field_01_c|pasted__decal|pasted__decalShape"
-		index = 0
-		texture_diffuse =	"decal_wheatfield_01_c_diffuse.dds"
-		texture_normal =	"decal_wheatfield_01_c_normal.dds"
-		texture_specular =	"decal_wheatfield_01_c_properties.dds"
-		shader = "decal_local"
-		shader_file = "gfx/FX/pdxmesh_decal.shader"
-		subpass = "LocalDecals"
+	lod_percentages = {
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
 	}
 
 	meshsettings = {
-		name = "vegetation_diorama_tree_real_pPlane113Shape"
+		name = "LOD_0|vegetation_diorama_tree_real_pPlane113|vegetation_diorama"
 		index = 0
 		texture_diffuse =	"billboard_maize_01_a_diffuse.dds"
 		texture_normal =	"billboard_maize_01_a_normal.dds"
@@ -26,6 +20,53 @@ pdxmesh = {
 		additional_shader_defines = { "BILLBOARD_DISABLE_TINT" }
 	}
 
+	meshsettings = {
+		name = "LOD_0|maize_field_01_c_pasted__decal_pasted__decal|maize_field_"
+		index = 0
+		texture_diffuse =	"decal_wheatfield_01_c_diffuse.dds"
+		texture_normal =	"decal_wheatfield_01_c_normal.dds"
+		texture_specular =	"decal_wheatfield_01_c_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_1|vegetation_diorama_tree_real_pPlane113|vegetation_diorama"
+		index = 0
+		texture_diffuse =	"billboard_maize_01_a_diffuse.dds"
+		texture_normal =	"billboard_maize_01_a_normal.dds"
+		texture_specular =	"billboard_maize_01_a_properties.dds"
+		shader = "billboard_test"
+		shader_file = "gfx/FX/tree.shader"
+		additional_shader_defines = { "TEXTURE_TILE_ROWS 2" "TEXTURE_TILE_COLUMNS 2" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" }
+		additional_shader_defines = { "BILLBOARD_DISABLE_TINT" }
+	}
+
+	meshsettings = {
+		name = "LOD_1|maize_field_01_c_pasted__decal_pasted__decal|maize_field_"
+		index = 0
+		texture_diffuse =	"decal_wheatfield_01_c_diffuse.dds"
+		texture_normal =	"decal_wheatfield_01_c_normal.dds"
+		texture_specular =	"decal_wheatfield_01_c_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+
+	meshsettings = {
+		name = "LOD_2|vegetation_diorama_tree_real_pPlane113|vegetation_diorama"
+		index = 0
+		texture_diffuse =	"billboard_maize_01_a_diffuse.dds"
+		texture_normal =	"billboard_maize_01_a_normal.dds"
+		texture_specular =	"billboard_maize_01_a_properties.dds"
+		shader = "billboard_test"
+		shader_file = "gfx/FX/tree.shader"
+		additional_shader_defines = { "TEXTURE_TILE_ROWS 2" "TEXTURE_TILE_COLUMNS 2" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" }
+		additional_shader_defines = { "BILLBOARD_DISABLE_TINT" }
+	}
 }
 
 entity = {

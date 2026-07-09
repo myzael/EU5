@@ -23,6 +23,7 @@ baronial_burghs_rights = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			
@@ -78,6 +79,7 @@ ecclesiastical_burghs_rights = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 			}
 			
@@ -414,7 +416,7 @@ dlh_famine_reductions = {
 	estate = peasants_estate
 
 	modifier_when_in_debate = {
-		food_purchase_cost = -0.25
+		food_purchase_efficiency = 0.5
 	}
 	allow = {
 		OR = {

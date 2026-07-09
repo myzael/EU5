@@ -138,6 +138,7 @@ scripted_effect minor_earthquake_damage = {
 	}
 	ordered_buildings_in_location = {
 		order_by = building_level
+		check_range_bounds = no
 		max = {
 			value = 1
 			add = {
@@ -3154,6 +3155,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3209,6 +3216,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3266,6 +3279,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3321,6 +3340,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3378,6 +3403,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3433,6 +3464,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3490,6 +3527,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3545,6 +3588,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3602,6 +3651,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3657,6 +3712,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3714,6 +3775,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3769,6 +3836,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3826,6 +3899,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3881,6 +3960,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -3938,6 +4023,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -3993,6 +4084,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4050,6 +4147,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4105,6 +4208,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4162,6 +4271,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4218,6 +4333,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4273,6 +4394,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4331,6 +4458,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4386,6 +4519,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4443,6 +4582,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4498,6 +4643,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4555,6 +4706,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4610,6 +4767,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -4667,6 +4830,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  					}
  					change_location_rank = location_rank:town
  				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
+ 				}
  			}
  		}
  	}
@@ -4722,6 +4891,12 @@ earthquake_events.1 = { #Earthquake in Constantinople
  						location_rank = location_rank:city
  					}
  					change_location_rank = location_rank:town
+ 				}
+ 				else_if = {
+ 					limit = {
+ 						location_rank = location_rank:megalopolis
+ 					}
+ 					change_location_rank = location_rank:city
  				}
  			}
  		}
@@ -5018,6 +5193,12 @@ earthquake_events.92 = { #generic catastrophic earthquake
 				}
 				change_location_rank = location_rank:town
 			}
+			else_if = {
+				limit = {
+					location_rank = location_rank:megalopolis
+				}
+				change_location_rank = location_rank:city
+			}
 		}
 	}
 	
@@ -5072,6 +5253,12 @@ earthquake_events.93 = { #https://es.wikipedia.org/wiki/Terremoto_del_Cabo_de_Sa
 						location_rank = location_rank:city
 					}
 					change_location_rank = location_rank:town
+				}
+				else_if = {
+					limit = {
+						location_rank = location_rank:megalopolis
+					}
+					change_location_rank = location_rank:city
 				}
 			}
 		}

@@ -78,6 +78,12 @@ current_date = {
 }
 
 
+current_day = {
+	none = current_day_trigger
+	global = current_day_trigger
+	first = current_day_trigger
+}
+
 current_month = {
 	none = current_month_trigger
 	global = current_month_trigger
@@ -427,11 +433,7 @@ character_modifier_strength = {
 	first = FIRST_MODIFIER_STRENGTH_TRIGGER
 	third = THIRD_MODIFIER_STRENGTH_TRIGGER
 }
-mercenary_modifier_strength = {
-	global = MODIFIER_STRENGTH_TRIGGER
-	first = FIRST_MODIFIER_STRENGTH_TRIGGER
-	third = THIRD_MODIFIER_STRENGTH_TRIGGER
-}
+
 international_organization_modifier_strength = {
 	global = MODIFIER_STRENGTH_TRIGGER
 	first = FIRST_MODIFIER_STRENGTH_TRIGGER

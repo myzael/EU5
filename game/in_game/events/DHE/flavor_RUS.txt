@@ -1381,10 +1381,16 @@ flavor_rus.16 = {
 
 	trigger = {
 
-		has_variable = grand_embassy
+		custom_tooltip = {
+			text = variable_grand_embassy_tt
+			has_variable = grand_embassy
+		}
 
 		NOT = {
-			has_variable = incognito_travels_in_progress
+			custom_tooltip = {
+				text = variable_incognito_travels_in_progress_tt
+				has_variable = incognito_travels_in_progress
+			}
 		}
 
 	}
@@ -2566,7 +2572,10 @@ flavor_rus.28 = {
 	}
 
 	trigger = {
-		has_variable = rus_pugachev_uprising
+		custom_tooltip = {
+			text = variable_rus_pugachev_uprising_tt
+			has_variable = rus_pugachev_uprising
+		}
 
 		NOT = { exists = scope:pugatchev_uprising }
 		NOT = {
@@ -3778,6 +3787,7 @@ flavor_rus.42 = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 
@@ -4057,6 +4067,7 @@ flavor_rus.44 = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 
@@ -4286,7 +4297,10 @@ flavor_rus.46 = {
 		}
 
 		OR = {
-			has_variable = the_first_vedomosti
+			custom_tooltip = {
+				text = variable_the_first_vedomosti_tt
+				has_variable = the_first_vedomosti
+			}
 			societal_value:individualism_vs_communalism > 0
 		}
 	}
@@ -4595,7 +4609,10 @@ flavor_rus.49 = {
 			OR = {
 				adm < 25
 				has_trait = babbling_buffoon
-				has_variable = rus_manifesto_of_freedom
+				custom_tooltip = {
+					text = variable_rus_manifesto_of_freedom_tt
+					has_variable = rus_manifesto_of_freedom
+				}
 			}
 		}
 
@@ -4801,6 +4818,7 @@ flavor_rus.50 = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 		}
 
@@ -4923,6 +4941,7 @@ flavor_rus.51 = {
 			OR = {
 				location_rank = location_rank:town
 				location_rank = location_rank:city
+				location_rank = location_rank:megalopolis
 			}
 			has_institution = institution:enlightenment
 		}
@@ -5062,7 +5081,10 @@ flavor_rus.52 = {
 				owner = root
 				controller = root
 				has_building = building_type:university
-				has_variable = shuvalov_the_teacher
+				custom_tooltip = {
+					text = variable_shuvalov_the_teacher_tt
+					has_variable = shuvalov_the_teacher
+				}
 			}
 		}
 
@@ -5558,6 +5580,7 @@ flavor_rus.55 = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 				has_institution = institution:enlightenment
 			}
@@ -5593,6 +5616,7 @@ flavor_rus.55 = {
 				OR = {
 					location_rank = location_rank:town
 					location_rank = location_rank:city
+					location_rank = location_rank:megalopolis
 				}
 				has_institution = institution:enlightenment
 			}
@@ -5971,6 +5995,7 @@ flavor_rus.58 = {
 			OR = {
 				location_rank = location_rank:city
 				location_rank = location_rank:town
+				location_rank = location_rank:megalopolis
 			}
 		}
 	}
@@ -7275,7 +7300,10 @@ flavor_rus.68 = {
 
 	trigger = {
 
-		has_variable = alexander_pushkin
+		custom_tooltip = {
+			text = variable_alexander_pushkin_tt
+			has_variable = alexander_pushkin
+		}
 
 		location:moscow = {
 			owner = root
@@ -7944,7 +7972,10 @@ flavor_rus.74 = {
 			owner = root
 			controller = root
 			has_building = building_type:university
-			has_variable = moscow_gazette
+			custom_tooltip = {
+				text = variable_moscow_gazette_tt
+				has_variable = moscow_gazette
+			}
 		}
 	}
 

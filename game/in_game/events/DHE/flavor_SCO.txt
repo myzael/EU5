@@ -418,7 +418,6 @@ flavor_sco.7 = {
 
 	dynamic_historical_event = {
 		tag = SCO
-		tag = GBR
 		from = 1725.1.1
 		to = 1800.1.1
 		monthly_chance = 5
@@ -768,11 +767,18 @@ flavor_sco.13 = { # We are diverse.... or?
 
 	option = { # Aye we are diverse
 		name = flavor_sco.13.a
+		historical_option = yes
 		culture = { add_cultural_tradition = cultural_tradition_radical_bonus }
+		ai_chance = {
+			factor = 0.75
+		}
 	}
 
 	option = { # Nay we are Lowlanders
 		name = flavor_sco.13.b
+		ai_chance = {
+			factor = 0.2
+		}
 		if = {
 			limit = { NOT = { culture = culture:scottish } }
 			change_culture = culture:scottish
@@ -800,6 +806,9 @@ flavor_sco.13 = { # We are diverse.... or?
 
 	option = { # Nay we are Highlanders
 		name = flavor_sco.13.c
+		ai_chance = {
+			factor = 0.05
+		}
 		if = {
 			limit = { NOT = { culture = culture:highland } }
 			change_culture = culture:highland
@@ -807,6 +816,7 @@ flavor_sco.13 = { # We are diverse.... or?
 		}
 		if = {
 			limit = { NOT = { has_reform = government_reform:celtic_traditions_reform } }
+			remove_current_major_government_reform = yes
 			add_reform = government_reform:celtic_traditions_reform
 		}
 		every_primary_or_accepted_culture = {
@@ -865,6 +875,10 @@ flavor_sco.14 = { # raising David II
 
 	option = {
 		name = flavor_sco.14.a
+		historical_option = yes
+		ai_chance = {
+			factor = 0.9
+		}
 		add_legitimacy = legitimacy_mild_bonus
 		scope:young_king_david = {
 			if = {
@@ -886,6 +900,9 @@ flavor_sco.14 = { # raising David II
 
 	option = {
 		name = flavor_sco.14.b
+		ai_chance = {
+			factor = 0.05
+		}
 		add_legitimacy = legitimacy_mild_bonus
 		scope:young_king_david = {
 			if = {
@@ -907,6 +924,9 @@ flavor_sco.14 = { # raising David II
 
 	option = {
 		name = flavor_sco.14.c
+		ai_chance = {
+			factor = 0.05
+		}
 		add_prestige = prestige_mild_bonus
 		scope:young_king_david = {
 			if = {
@@ -1096,7 +1116,6 @@ flavor_sco.17 = { # Robert Burns
 
 	dynamic_historical_event = {
 		tag = SCO
-		tag = GBR
 		from = 1770.1.1
 		to = 1800.1.1
 		monthly_chance = 2
@@ -1163,6 +1182,7 @@ flavor_sco.17 = { # Robert Burns
 					OR = {
 						location_rank = location_rank:town
 						location_rank = location_rank:city
+						location_rank = location_rank:megalopolis
 					}
 				}
 			}
@@ -1173,6 +1193,7 @@ flavor_sco.17 = { # Robert Burns
 					OR = {
 						location_rank = location_rank:town
 						location_rank = location_rank:city
+						location_rank = location_rank:megalopolis
 					}
 				}
 				save_scope_as = destination
@@ -1782,6 +1803,7 @@ flavor_sco.105 = { # Rise of the Stewarts (Stuart)
 		at_war = no
 		character:sco_robert_ii ?= {
 			is_alive = yes
+			this != root.ruler
 		}
  	}
 
@@ -1852,11 +1874,17 @@ flavor_sco.106 = { # Ascension of the Stewarts
  	trigger = {
 		has_ruler = yes
 		ruler = {
-			NOT = { has_variable = designated_stewart_heir }
-			NOT = { has_variable = sco_stewart_heir }
+			custom_tooltip = {
+				text = variable_designated_stewart_heir_tt
+				NOT = { has_variable = designated_stewart_heir }
+			}
+			custom_tooltip = {
+				text = variable_sco_stewart_heir_tt
+				NOT = { has_variable = sco_stewart_heir }
+			}
 		}
 		at_war = no
-		has_variable = sco_went_stewarts_route
+		hidden_trigger = { has_variable = sco_went_stewarts_route }
 		character:sco_robert_ii ?= {
 			is_alive = yes
 		}
@@ -2578,7 +2606,6 @@ flavor_sco.204 = { # Founding of Aberdeen University
 
 	dynamic_historical_event = {
 		tag = SCO
-		tag = GBR
 		from = 1485.1.1
 		to = 1510.1.1
 		monthly_chance = 20
@@ -3031,7 +3058,6 @@ flavor_sco.302 = { # True Law and Basilikon
 
 	dynamic_historical_event = {
 		tag = SCO
-		tag = GBR
 		from = 1597.1.1
 		to = 1612.1.1
 		monthly_chance = 10
@@ -3281,7 +3307,6 @@ flavor_sco.401 = { # David Hume, Treatise of Human Nature
 	dynamic_historical_event = {
 		tag = SCO
 		tag = ENG
-		tag = GBR
 		from = 1733.1.1
 		to = 1775.1.1
 		monthly_chance = 20
@@ -4076,11 +4101,17 @@ flavor_sco.1202 = {
 
 	trigger = {
 		has_ruler = yes
-		any_character = {
-			is_sibling_of = c:ENG.ruler
-			is_female = yes
-			is_married = no
+		trigger_if = {
+			limit = {
+				exists = c:ENG.ruler
+			}
+			any_character = {
+				is_sibling_of = c:ENG.ruler
+				is_female = yes
+				is_married = no
+			}
 		}
+		
 
 		has_trust = { modifier = trust_treaty_of_perpetual_peace target = c:SCO }
 

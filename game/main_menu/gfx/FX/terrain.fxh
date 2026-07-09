@@ -43,7 +43,7 @@ ConstantBuffer( SeaCurrentsConstats )
 	float _SeaCurrentsDisappearenceThressholdCorrection3D;
 	
 	float _SeaCurrentsDisappearenceDissapearanceSpeed3D;
-
+	float2 _SeaCurrentsUVScaleDistorsion3D;
 }
 
 BufferTexture CurrentAngles
@@ -74,8 +74,8 @@ PixelShader =
 		float t = 3.14159 / 8.0;
 		float w = 24000;			  // larger value gives smaller width
 		
-		float StripeMask = cos( ( UV.x * cos( t ) * w ) + ( UV.y * sin( t ) * w ) + Offset ); 
-		StripeMask = smoothstep(0.0, 1.0, StripeMask * 2.2f );
+		float StripeMask = cos( ( UV.x * cos( t ) * w ) + ( UV.y * sin( t ) * w ) + Offset );
+		StripeMask = smoothstep( SecondaryStripeSmoothMin, SecondaryStripeSmoothMax, StripeMask );
 		return StripeMask;
 	}	
 		
@@ -242,19 +242,46 @@ PixelShader =
 		{
 			float _RotationData;
 			float2 _LocationPosition;
+			int2 _ColorIndex;
 		};
 
 		SSeaCurrentLocationData CalcSeaCurrent( in float2 ColorMapCoords)
 		{
 			SSeaCurrentLocationData LocationData;
-			int2 ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords ).rg * IndirectionMapDepth + vec2(0.5f) );
+			int2 ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords+_WorldSpaceToTerrain0To1*0.5 ).rg * IndirectionMapDepth + vec2(0.5f) );
 			float2 ColorTextureSize;
 			PdxTex2DSize( ProvinceColorTexture, ColorTextureSize );
 			int  BufferTextureColorIndex = ColorIndex.r + ColorIndex.g * ColorTextureSize.r;
 			float4 BufferData = PdxReadBuffer4(CurrentAngles, BufferTextureColorIndex);
 			LocationData._RotationData =  BufferData.z;
 			LocationData._LocationPosition = BufferData.xy;
+			LocationData._ColorIndex = ColorIndex;
 			return LocationData;
+		}
+
+		float CalcSeaCurrentLocationForce( in float2 ColorMapCoords, in float2 WorldSpaceCoords, in SSeaCurrentLocationData LocationData)
+		{
+			bool4 SameColorIndex;
+			int2 ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords + float2( 0.0,  0.0)).rg * IndirectionMapDepth + vec2(0.5f) );
+			SameColorIndex.x = (ColorIndex.x == LocationData._ColorIndex.x && ColorIndex.y == ColorIndex.y);
+			ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords + float2( 0.0,   _WorldSpaceToTerrain0To1.y)).rg * IndirectionMapDepth + vec2(0.5f) );
+			SameColorIndex.y = (ColorIndex.x == LocationData._ColorIndex.x && ColorIndex.y == ColorIndex.y);
+			ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords + float2(  _WorldSpaceToTerrain0To1.x,  0.0)).rg * IndirectionMapDepth + vec2(0.5f) );
+			SameColorIndex.z =  (ColorIndex.x == LocationData._ColorIndex.x && ColorIndex.y == ColorIndex.y);
+			ColorIndex = int2(PdxTex2D( ProvinceColorIndirectionTexture, ColorMapCoords + float2(  _WorldSpaceToTerrain0To1.x,   _WorldSpaceToTerrain0To1.y)).rg * IndirectionMapDepth + vec2(0.5f) );
+			SameColorIndex.w =  (ColorIndex.x == LocationData._ColorIndex.x && ColorIndex.y == ColorIndex.y);
+			float4 BilinearSampling;
+			BilinearSampling.x = SameColorIndex.x;
+			BilinearSampling.y = SameColorIndex.y - SameColorIndex.x;
+			BilinearSampling.z = SameColorIndex.z - SameColorIndex.x;
+			BilinearSampling.w = SameColorIndex.w - SameColorIndex.y - SameColorIndex.z + SameColorIndex.x;
+			float Strength = 0;
+			float2 WorldSpaceCoordsFrac =  frac(WorldSpaceCoords);
+			
+			Strength = BilinearSampling.x+BilinearSampling.y*WorldSpaceCoordsFrac.y+BilinearSampling.z*WorldSpaceCoordsFrac.x+BilinearSampling.w*WorldSpaceCoordsFrac.x*WorldSpaceCoordsFrac.y;
+	
+			return Strength*Strength;
+			return 1.0;
 		}
 
 		float2 AdjustWorldWrap(in float2 WorldWrap, in float2 CenterPos)

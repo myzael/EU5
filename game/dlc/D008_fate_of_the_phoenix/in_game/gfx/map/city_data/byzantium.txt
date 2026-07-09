@@ -36,7 +36,7 @@ template haga_sophia
 	code = [[
 		haga_sophia = {
 			only_in_location = constantinople
-			order = 0
+			order = 0w
 			size = large
 			limit =
 			{
@@ -422,7 +422,7 @@ mesh_list = {
 
 mesh_list = {
 	name = "byzantine_wall_underconstruction"
-	d008_building_byzantine_walls_underconstruction_mesh = 1
+	D008_building_byzantine_walls_underconstruction1_mesh = 1
 }
 
 ## Constantinople (large_city_walls — Constantinople only, via constantinople_city_walls template)

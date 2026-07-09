@@ -327,6 +327,8 @@ mesh_list = {
 mesh_list = {
 	name = "under_contruction_meshes"
 	scale_settings_small = { bias = 0 min = 1.0 max = 1.0 }
+	scale_settings_large = { bias = 0 min = 1.0 max = 1.0 }
+	
 	building_northgerman_underconstruction_medium_schematic = 1
 }
 mesh_list = {

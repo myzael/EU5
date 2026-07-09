@@ -1,11 +1,10 @@
 ﻿n_catalan_galley = {
 	is_special = yes
+	upgrades_to = n_mediterrannean_galley
 	category = navy_galley
 	copy_from = n_age_1_traditions_galley
-	buildable = yes
 
 	hull_size = 1
-	cannons = 2
 	crew_size = 0.03
 
 	maintenance_demand = galley_1_maintenance
@@ -14,7 +13,7 @@
 
 
 	location_potential = {
-		unit_iberian_ship_location_trigger = yes
+		unit_catalan_ship_location_trigger = yes
 	}
 
 	gfx_tags = { mediterranean_galley_tag }
@@ -25,11 +24,10 @@ n_early_iberian_caravel = {
 	category = navy_light_ship
 	copy_from = n_age_1_traditions_light_ship
 	upgrades_to = n_iberian_caravel
-	buildable = yes
 
 	movement_speed = 2
 	hull_size = 2
-	cannons = 4
+	cannons = 3
 	crew_size = 0.020
 
 	maintenance_demand =  light_ship_1_maintenance
@@ -43,13 +41,13 @@ n_early_iberian_caravel = {
 
 n_genoese_galley = {
 	is_special = yes
+	upgrades_to = n_mediterrannean_galley
 	category = navy_galley
 	copy_from = n_age_1_traditions_galley
-	buildable = yes
 
 	movement_speed = 1
 
-	cannons = 4
+	cannons = 2
 
 	crew_size = 0.03
 
@@ -68,13 +66,13 @@ n_genoese_galley = {
 
 n_hanseatic_cog = {
 	is_special = yes
-	category = navy_light_ship
-	copy_from = n_age_1_traditions_light_ship
-	buildable = yes
+	upgrades_to = n_hulk
+	category = navy_transport
+	copy_from = n_age_1_traditions_transport
 
 
 	hull_size = 2
-	cannons = 2
+	cannons = 1
 	crew_size = 0.010
 	blockade_capacity = 0.25
 
@@ -87,38 +85,38 @@ n_hanseatic_cog = {
 
 n_mtepe = {
 	is_special = yes
+	upgrades_to = n_barque
 	category = navy_light_ship
 	copy_from = n_age_1_traditions_light_ship
-	buildable = yes
 }
 
 n_kabang = {
 	is_special = yes
+	upgrades_to = n_hulk
 	category = navy_transport
 	copy_from = n_age_1_traditions_transport
-	buildable = yes
-	transport_capacity = -0.15
+	transport_capacity = 0.10
 	crew_size = 0.010
 }
 
 n_jong = {
 	is_special = yes
+	upgrades_to = n_barque
 	category = navy_light_ship
 	copy_from = n_age_1_traditions_light_ship
-	buildable = yes
-	maritime_presence = ship_small_high_maritime
+	maritime_presence = ship_tiny_maritime
 	transport_capacity = 0.05
 	country_potential = { has_or_had_tag = MAJ }
 }
 
 n_dhow = {
 	is_special = yes
+	upgrades_to = n_barque
 	category = navy_light_ship
 	copy_from = n_age_1_traditions_light_ship
-	buildable = yes
 
 	hull_size = -1
-	maritime_presence = ship_small_mid_maritime
+	maritime_presence = ship_neglible_maritime
 
 	maintenance_demand =  light_ship_1_maintenance
 	construction_demand = light_ship_1_construction
@@ -144,11 +142,11 @@ n_birlinn = { # light, levy version of n_long_fada
 
 n_long_fada = {
 	is_special = yes
+	upgrades_to = n_long_fada_2
 	category = navy_galley
 	copy_from = n_age_1_traditions_galley
-	buildable = yes
 	transport_capacity = 0.020
-	maritime_presence = ship_tiny_mid_maritime
+	maritime_presence = -0.02
 	movement_speed = 1
 	hull_size = -2
 	cannons = -4
@@ -160,11 +158,11 @@ n_long_fada = {
 
 n_long_fada_2 = {
 	is_special = yes
+	upgrades_to = n_war_galley
 	category = navy_galley
 	copy_from = n_age_2_renaissance_galley
-	buildable = yes
 	transport_capacity = 0.030
-	maritime_presence = ship_very_small_maritime
+	maritime_presence = -0.04
 	movement_speed = 1
 	hull_size = -2
 	cannons = -3

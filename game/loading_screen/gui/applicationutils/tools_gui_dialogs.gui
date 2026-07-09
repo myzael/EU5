@@ -32,8 +32,8 @@ types ToolsTypes
 			ui_direction_button_holder_right = {}
 	
 			button_close_alt = {
-				blockoverride "close_onclick" {
-					onclick = [ToolDialog.Cancel]
+				blockoverride "close_on_action" {
+					on_action = "[ToolDialog.Cancel]"
 				}
 			}
 		}
