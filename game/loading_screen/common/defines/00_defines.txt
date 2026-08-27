@@ -243,9 +243,9 @@ NCountry = {
 	CAPITAL_MOVE_BASE_DAYS = 180
 	CAPITAL_MOVE_DISTANCE_FACTOR = 0.05
 	
-	MERCHANT_DISTANCE_COST_DIVISOR = 800
+	MERCHANT_DISTANCE_COST_DIVISOR = 1200
 
-	MERCHANT_MAINTENANCE_COST = 0.5
+	MERCHANT_MAINTENANCE_COST = 0.25
 	
 	NEGATIVE_CULTURE_OPINION_ON_COUNTRY = 10
 	NEGATIVE_RELIGION_OPINION_ON_COUNTRY = 10
@@ -303,7 +303,7 @@ NMercenary = {
 	MERCENARY_MAX_DURATION_IN_MONTHS = 120
 	MERCENARY_DEFAULT_DURATION_IN_MONTHS = 24
 	MERCENARY_CONTRACT_ALERT_MONTHS = 3
-	MERCENARY_MANPOWER_REPLENISH_TIME_DAYS = 360 # how many days for population to fully drift into an area's mercenary pool (was 7200 / 240 months, far too slow to recover or to see pops moving once availability is paid for out of population)
+	MERCENARY_MANPOWER_REPLENISH_TIME_DAYS = 3600 # how many days for population to fully drift into an area's mercenary pool (was 7200 / 240 months, far too slow to recover or to see pops moving once availability is paid for out of population)
 	MERCENARY_ARMY_UNIT_MAX_SIZE = 150
 	MERCENARY_NAVY_UNIT_MAX_SIZE = 25
 	MERCENARY_POOL_AVAILABILITY_SCALE_ARMY = 0.1 # multiplier on how much of a location's population can become recruitable land mercenaries; lower means fewer available
